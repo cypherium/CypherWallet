@@ -36,8 +36,8 @@ export class AboutPage implements OnInit {
             })
         } else {
             this.version = '1.0.0';
-            this.packageName = "com.poc.www";
-            this.name = "POC";
+            this.packageName = "com.cph.www";
+            this.name = "CPH";
         }
     }
 

@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PocSendPage } from './poc-send.page';
+import { PocSendPage } from './cph-send.page';
 import { PipesModule } from '../../pipes/pipes.module';
 import { ComponentsModule } from '../../components/components.module';
 import { TranslateModule } from "@ngx-translate/core";

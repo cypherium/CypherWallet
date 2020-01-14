@@ -5,7 +5,7 @@ import { Storage } from "@ionic/storage";
     providedIn: 'root'
 })
 
-// let projectName = 'POC'
+// let projectName = 'CPH'
 export class GlobalService {
     public gWalletList = [];
     vibrationDuration = 100;
@@ -19,7 +19,7 @@ export class GlobalService {
 
     static errorCode = {};
     static showLog = false;
-    static projectName = "POC";
+    static projectName = "CPH";
 
     projectName = GlobalService.projectName;
 

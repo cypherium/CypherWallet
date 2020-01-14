@@ -7,9 +7,9 @@ import { Web3Service } from '../../providers/web3/web3.service';
 import { NativeService } from '../../providers/native/native.service';
 
 @Component({
-    selector: 'app-poc-send',
-    templateUrl: './poc-send.page.html',
-    styleUrls: ['./poc-send.page.scss'],
+    selector: 'app-cph-send',
+    templateUrl: './cph-send.page.html',
+    styleUrls: ['./cph-send.page.scss'],
 })
 export class PocSendPage implements OnInit {
     range = 25;
@@ -144,7 +144,7 @@ export class PocSendPage implements OnInit {
     }
 
     async transfer(privatekey) {
-        let address = this.receiveAddress.toLowerCase().replace('poc', '0x');
+        let address = this.receiveAddress.toLowerCase().replace('cph', '0x');
         this.web3.transferPoc(this.wallet.addr, address, this.payAmount, this.range, privatekey, async (err, tx) => {
             console.log("Transaction callback.......", err, tx);
             if (err === null) {

@@ -79,7 +79,7 @@ export class HelperService {
             method = matches[3],
             params = matches[4];
         console.log(`scheme:${scheme}, object:${object}, method:${method},params:${params}`);
-        if (scheme == 'poc') {
+        if (scheme == 'cph') {
             if (object == 'account') {
                 if (method == 'import') {
                     let url = decodeURIComponent(params);
@@ -97,14 +97,14 @@ export class HelperService {
         // if (index == -1) {
         //     addr = str.toLowerCase();
         // } else {
-        //     addr = "poc" + str.toLowerCase().slice(0, index);
+        //     addr = "cph" + str.toLowerCase().slice(0, index);
         // }
         // let params: NavigationExtras = {
         //     state: {
         //         address: addr
         //     }
         // };
-        // this.router.navigate(['poc-send'], params);
+        // this.router.navigate(['cph-send'], params);
 
     }
 

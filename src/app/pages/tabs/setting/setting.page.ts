@@ -58,7 +58,7 @@ export class SettingPage implements OnInit {
     }
 
     goBrowser() {
-        window.open('http://scan.poc.com');
+        window.open('http://scan.cph.com');
     }
 
     goWalletToolPage() {

@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PocReceivePage } from './poc-receive.page';
+import { PocReceivePage } from './cph-receive.page';
 import { ComponentsModule } from '../../components/components.module';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { TranslateModule } from "@ngx-translate/core";

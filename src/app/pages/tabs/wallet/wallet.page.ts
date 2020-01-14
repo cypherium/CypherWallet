@@ -120,18 +120,18 @@ export class WalletPage implements OnInit {
                             address: url,
                         }
                     };
-                    this.router.navigate(['poc-send'], navigationExtras);
+                    this.router.navigate(['cph-send'], navigationExtras);
                 }
             })
         })
     }
 
     goPocSend() {
-        this.router.navigate(['poc-send']);
+        this.router.navigate(['cph-send']);
     }
 
     goPocReceive() {
-        this.router.navigate(['poc-receive']);
+        this.router.navigate(['cph-receive']);
     }
 
     confirmCallback() {

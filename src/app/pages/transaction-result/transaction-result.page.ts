@@ -40,34 +40,34 @@ export class TransactionResultPage implements OnInit {
         this.detail = await this.web3.getTxDetail(this.tx);
         console.log("Transaction detail：" + JSON.stringify(this.detail));
         this.miningFee = this.detail.gas * this.detail.gasPrice;
-        this.detail.from = this.detail.from.replace(/^0x/, 'poc');
-        this.detail.to = this.detail.to.replace(/^0x/, 'poc');
+        this.detail.from = this.detail.from.replace(/^0x/, 'cph');
+        this.detail.to = this.detail.to.replace(/^0x/, 'cph');
     }
 
     goHashPage() {
         if (this.status != 1) {
-            let url = "http://scan.poc.com/#/txhash/" + this.tx;
+            let url = "http://scan.cph.com/#/txhash/" + this.tx;
             this.native.openUrlBySystemBrowser(url);
         }
     }
 
     goHash(hash) {
         if (this.status != 1) {
-            let url = "http://scan.poc.com/#/txhash/" + this.tx;
+            let url = "http://scan.cph.com/#/txhash/" + this.tx;
             this.native.openUrlBySystemBrowser(url);
         }
     }
 
     goAddress(addr) {
         if (this.status != 1) {
-            let url = "http://scan.poc.com/#/address/" + addr;
+            let url = "http://scan.cph.com/#/address/" + addr;
             this.native.openUrlBySystemBrowser(url);
         }
     }
 
     goHeight(height) {
         if (this.status != 1) {
-            let url = "http://scan.poc.com/#/block/" + height;
+            let url = "http://scan.cph.com/#/block/" + height;
             this.native.openUrlBySystemBrowser(url);
         }
     }

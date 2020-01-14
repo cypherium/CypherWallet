@@ -43,7 +43,7 @@ export class Web3Service {
             return -1;
         }
         addr = addr.toLowerCase();
-        if (!addr.startsWith('poc')) {
+        if (!addr.startsWith('cph')) {
             return -2;
         }
         let result = await this.web3.utils.isAddress('0x' + addr.slice(3));

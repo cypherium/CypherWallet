@@ -7,9 +7,9 @@ import { Storage } from '@ionic/storage';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 
 @Component({
-    selector: 'app-poc-receive',
-    templateUrl: './poc-receive.page.html',
-    styleUrls: ['./poc-receive.page.scss'],
+    selector: 'app-cph-receive',
+    templateUrl: './cph-receive.page.html',
+    styleUrls: ['./cph-receive.page.scss'],
 })
 export class PocReceivePage implements OnInit {
     qrcode = "";
@@ -39,7 +39,7 @@ export class PocReceivePage implements OnInit {
         // var qr = qrcode(16, "L");
         let addr = this.helper.convertAddr(this.wallet.addr);
         this.addr = addr;
-        this.qrcode = "poc://account/transfer/" + this.wallet.addr;
+        this.qrcode = "cph://account/transfer/" + this.wallet.addr;
         // this.addr = addr;
         // qr.addData(addr);
         // qr.make();

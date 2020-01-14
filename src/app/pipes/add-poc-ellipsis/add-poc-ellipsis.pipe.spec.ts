@@ -1,4 +1,4 @@
-import { AddPocEllipsisPipe } from './add-poc-ellipsis.pipe';
+import { AddPocEllipsisPipe } from './add-cph-ellipsis.pipe';
 
 describe('AddPocEllipsisPipe', () => {
   it('create an instance', () => {

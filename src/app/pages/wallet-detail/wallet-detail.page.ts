@@ -66,11 +66,11 @@ export class WalletDetailPage implements OnInit {
     }
 
     goTransferPage() {
-        this.router.navigate(['poc-send']);
+        this.router.navigate(['cph-send']);
     }
 
     goReceivePage() {
-        this.router.navigate(['poc-receive']);
+        this.router.navigate(['cph-receive']);
     }
 
     async getTransactionList() {
