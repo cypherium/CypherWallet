@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PocReceivePage } from './cph-receive.page';
+import { CphReceivePage } from './cph-receive.page';
 
-describe('PocReceivePage', () => {
-  let component: PocReceivePage;
-  let fixture: ComponentFixture<PocReceivePage>;
+describe('CphReceivePage', () => {
+  let component: CphReceivePage;
+  let fixture: ComponentFixture<CphReceivePage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [PocReceivePage],
+      declarations: [CphReceivePage],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PocReceivePage);
+    fixture = TestBed.createComponent(CphReceivePage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -11,7 +11,7 @@ import { NativeService } from '../../providers/native/native.service';
     templateUrl: './cph-send.page.html',
     styleUrls: ['./cph-send.page.scss'],
 })
-export class PocSendPage implements OnInit {
+export class CphSendPage implements OnInit {
     range = 25;
     wallet: any = {};
     amount = 0;
@@ -40,7 +40,7 @@ export class PocSendPage implements OnInit {
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
         console.log(this.global.gWalletList, this.global.currentWalletIndex)
         //获取余额
-        this.amount = await this.web3.getPocBalance(this.wallet.addr);
+        this.amount = await this.web3.getCphBalance(this.wallet.addr);
         let state = this.router.getCurrentNavigation();
         if (state) {
             let obj = state.extras.state;
@@ -53,7 +53,7 @@ export class PocSendPage implements OnInit {
             console.log("SCAN RESULT：", res);
             this.helper.handleText(res.text, async (url, method) => {
                 if (method == 'transfer') {
-                    let result = await this.web3.isPocAddr(url);
+                    let result = await this.web3.isCphAddr(url);
                     if (result == 0) {
                         this.receiveAddress = res;
                     } else {
@@ -116,7 +116,7 @@ export class PocSendPage implements OnInit {
     async checkAddr() {
         this.addressError = "";
 
-        let result = await this.web3.isPocAddr(this.receiveAddress.toLowerCase());
+        let result = await this.web3.isCphAddr(this.receiveAddress.toLowerCase());
         if (result == -1) {
             let message = await this.helper.getTranslate('ADDRESS_EMPTY');
             this.addressError = message;
@@ -145,7 +145,7 @@ export class PocSendPage implements OnInit {
 
     async transfer(privatekey) {
         let address = this.receiveAddress.toLowerCase().replace('cph', '0x');
-        this.web3.transferPoc(this.wallet.addr, address, this.payAmount, this.range, privatekey, async (err, tx) => {
+        this.web3.transferCph(this.wallet.addr, address, this.payAmount, this.range, privatekey, async (err, tx) => {
             console.log("Transaction callback.......", err, tx);
             if (err === null) {
                 // resolve(tx);

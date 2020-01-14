@@ -41,7 +41,7 @@ export class WalletDetailPage implements OnInit {
         this.blockHeight = await this.web3.getBlockHeight();
         this.getTransactionList();
 
-        this.amount = await this.web3.getPocBalance(this.wallet.addr);
+        this.amount = await this.web3.getCphBalance(this.wallet.addr);
         //获取汇率信息
         this.http.get(this.global.api['getRateInfo']).subscribe(res => {
             console.log("汇率：", res.rates);

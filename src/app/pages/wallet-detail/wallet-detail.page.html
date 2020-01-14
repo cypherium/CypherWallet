@@ -47,7 +47,7 @@
             (click)="goResultPage(transaction)">
             <div class="info">
                 <div class="receiver" *ngIf="transaction.tx_type != 3 && transaction.tx_type != 4">
-                    {{ (transaction.tx_type != 2 ? transaction.to : transaction.from) | addPocEllipsis }}</div>
+                    {{ (transaction.tx_type != 2 ? transaction.to : transaction.from) | addCphEllipsis }}</div>
 
                 <div class="receiver" *ngIf="transaction.tx_type == 3 || transaction.tx_type == 4">
                     {{ transaction.to }}</div>
@@ -58,7 +58,7 @@
                 <div class="amount"
                     [ngClass]="(transaction.tx_type == 1 || transaction.tx_type == 3 )? 'send' : 'receive'">
                     {{ (transaction.tx_type == 1 || transaction.tx_type == 3 )? '-' : '+' }}{{ transaction.displayValue | coinDisplay }}
-                    Poc</div>
+                    Cph</div>
                 <div class="status">{{ transaction.blockHeight }}</div>
             </div>
         </div>

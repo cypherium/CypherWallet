@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PocReceivePage } from './cph-receive.page';
+import { CphReceivePage } from './cph-receive.page';
 import { ComponentsModule } from '../../components/components.module';
 import { NgxQRCodeModule } from 'ngx-qrcode2';
 import { TranslateModule } from "@ngx-translate/core";
@@ -13,7 +13,7 @@ import { TranslateModule } from "@ngx-translate/core";
 const routes: Routes = [
   {
     path: '',
-    component: PocReceivePage
+    component: CphReceivePage
   }
 ];
 
@@ -27,6 +27,6 @@ const routes: Routes = [
     TranslateModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [PocReceivePage]
+  declarations: [CphReceivePage]
 })
-export class PocReceivePageModule { }
+export class CphReceivePageModule { }

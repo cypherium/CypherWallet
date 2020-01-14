@@ -19,11 +19,11 @@
         <div class="info-list">
             <div class="info">
                 <div class="key" translate>TRSACTION_AMOUNT</div>
-                <div class="value">{{ detail.value | coinDisplay }} Poc</div>
+                <div class="value">{{ detail.value | coinDisplay }} Cph</div>
             </div>
             <div class="info">
                 <div class="key" translate>MINER_FEE</div>
-                <div class="value">{{ miningFee | coinDisplay }} Poc</div>
+                <div class="value">{{ miningFee | coinDisplay }} Cph</div>
             </div>
             <div class="info address" tappable (click)="goAddress(detail.from)">
                 <div class="key" translate>SEND_ADDRESS</div>
@@ -40,7 +40,7 @@
         <div class="info-list">
             <div class="info focus" (click)="goHash(detail.hash)">
                 <div class="key" translate>TRANSACTION_HASH</div>
-                <div class="value">{{ detail.hash | addPocEllipsis }}</div>
+                <div class="value">{{ detail.hash | addCphEllipsis }}</div>
             </div>
 
             <div class="info" [ngClass]="status != 1 ? 'focus' : ''" tappable (click)="goHeight(detail.blockNumber)">

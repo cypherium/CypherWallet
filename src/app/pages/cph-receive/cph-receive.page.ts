@@ -11,7 +11,7 @@ import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
     templateUrl: './cph-receive.page.html',
     styleUrls: ['./cph-receive.page.scss'],
 })
-export class PocReceivePage implements OnInit {
+export class CphReceivePage implements OnInit {
     qrcode = "";
     wallet: any = "";
     addr = '';

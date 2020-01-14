@@ -38,7 +38,7 @@ export class Web3Service {
 
     }
 
-    async isPocAddr(addr) {
+    async isCphAddr(addr) {
         if (!addr) {
             return -1;
         }
@@ -65,7 +65,7 @@ export class Web3Service {
         }
     }
 
-    async getPocBalance(userAddr, pending = true) {
+    async getCphBalance(userAddr, pending = true) {
         // let value = await this.web3.eth.getBlockNumber();
         let value = await this.web3.eth.getBalance(userAddr, pending ? 'pending' : 'latest');
         // console.log("调用参数:", userAddr, value);
@@ -99,24 +99,24 @@ export class Web3Service {
             gasPrice = this.web3.utils.toWei(20, 'gwei');
         }
         let params = type == 'mortgage' ? [from, amount] : [amount];
-        let tx = await this.generatePocTx(from, this.config.pledgeContractAddr, '0x0', gasPrice, privateKey, 'pledgeContract', type, params);
+        let tx = await this.generateCphTx(from, this.config.pledgeContractAddr, '0x0', gasPrice, privateKey, 'pledgeContract', type, params);
         const serializedTx = tx.serialize();
         this.web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'), callback); //调起合约
         // this.web3.eth.sendSignedTransaction(tx.rawTransaction, callback); //调起合约
     }
 
-    async transferPoc(from, to, value, gasPrice, privateKey, callback) {
+    async transferCph(from, to, value, gasPrice, privateKey, callback) {
         console.log(`发起转账----from:${from},to:${to},value:${value}`);
         value = this.web3.utils.toWei(value, 'ether');
         gasPrice = this.web3.utils.toWei(gasPrice + "", 'gwei');
-        let tx = await this.generatePocTx(from, to, value, gasPrice, privateKey);
+        let tx = await this.generateCphTx(from, to, value, gasPrice, privateKey);
         console.log("交易签名：", tx)
         const serializedTx = tx.serialize();
         this.web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'), callback); //调起合约
         // this.web3.eth.sendSignedTransaction(tx.rawTransaction, callback); //调起合约
     }
 
-    async generatePocTx(
+    async generateCphTx(
         from,
         to,
         value,

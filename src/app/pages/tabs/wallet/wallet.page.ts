@@ -126,11 +126,11 @@ export class WalletPage implements OnInit {
         })
     }
 
-    goPocSend() {
+    goCphSend() {
         this.router.navigate(['cph-send']);
     }
 
-    goPocReceive() {
+    goCphReceive() {
         this.router.navigate(['cph-receive']);
     }
 
@@ -157,7 +157,7 @@ export class WalletPage implements OnInit {
 
     async copyAddr() {
         console.log("开始拷贝钱包地址....");
-        let wallet = 'Poc' + this.wallet.addr.replace('0x', '');
+        let wallet = 'Cph' + this.wallet.addr.replace('0x', '');
         console.log("Addr:" + wallet);
         this.native.copy(wallet);
         let message = await this.helper.getTranslate('COPY_WALLET_SUCCEED');
@@ -165,8 +165,8 @@ export class WalletPage implements OnInit {
     }
 
     async getWalletInfo(addr) {
-        this.amount = await this.web3.getPocBalance(addr);
-        // this.web3.getPocBalance(addr);
+        this.amount = await this.web3.getCphBalance(addr);
+        // this.web3.getCphBalance(addr);
     }
 
     toggleWallet(index, wallet) {

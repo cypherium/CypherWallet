@@ -1,22 +1,22 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PocSendPage } from './cph-send.page';
+import { CphSendPage } from './cph-send.page';
 
-describe('PocSendPage', () => {
-  let component: PocSendPage;
-  let fixture: ComponentFixture<PocSendPage>;
+describe('CphSendPage', () => {
+  let component: CphSendPage;
+  let fixture: ComponentFixture<CphSendPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [PocSendPage],
+      declarations: [CphSendPage],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PocSendPage);
+    fixture = TestBed.createComponent(CphSendPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

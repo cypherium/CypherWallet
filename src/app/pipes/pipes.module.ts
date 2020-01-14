@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
-import { AddPocEllipsisPipe } from "./add-cph-ellipsis/add-cph-ellipsis.pipe";
+import { AddCphEllipsisPipe } from "./add-cph-ellipsis/add-cph-ellipsis.pipe";
 import { CoinDisplayPipe } from './coin-display/coin-display.pipe';
 import { TimeDisplayPipe } from './time-display/time-display.pipe';
 
 @NgModule({
-	declarations: [AddPocEllipsisPipe, CoinDisplayPipe, TimeDisplayPipe],
+	declarations: [AddCphEllipsisPipe, CoinDisplayPipe, TimeDisplayPipe],
 	imports: [],
-	exports: [AddPocEllipsisPipe, CoinDisplayPipe, TimeDisplayPipe]
+	exports: [AddCphEllipsisPipe, CoinDisplayPipe, TimeDisplayPipe]
 })
 export class PipesModule { }

@@ -1,9 +1,9 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-    name: 'addPocEllipsis'
+    name: 'addCphEllipsis'
 })
-export class AddPocEllipsisPipe implements PipeTransform {
+export class AddCphEllipsisPipe implements PipeTransform {
 
     transform(value: any, ...args: any[]): any {
         console.log(value)
@@ -11,7 +11,7 @@ export class AddPocEllipsisPipe implements PipeTransform {
             return '';
         }
         value = value.replace('0x', '');
-        return 'Poc' + value.slice(0, 8) + '...' + value.slice(-8);
+        return 'Cph' + value.slice(0, 8) + '...' + value.slice(-8);
     }
 
 }

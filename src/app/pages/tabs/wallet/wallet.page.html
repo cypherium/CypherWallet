@@ -15,18 +15,18 @@
                     <div class="fraction">.{{ amountInOtherFraction }}</div>
                 </div>
                 <div class="wallet">
-                    <p class="text">{{ wallet.addr | addPocEllipsis }}</p>
+                    <p class="text">{{ wallet.addr | addCphEllipsis }}</p>
                     <div class="copy" tappable (click)="copyAddr()"></div>
                 </div>
             </div>
         </div>
 
         <div class="btns">
-            <div class="money transfer" (click)="goPocSend()" tappable>
+            <div class="money transfer" (click)="goCphSend()" tappable>
                 <div class="icon"></div>
                 <p class="text" translate>SEND</p>
             </div>
-            <div class="money receive" (click)="goPocReceive()" tappable>
+            <div class="money receive" (click)="goCphReceive()" tappable>
                 <div class="icon"></div>
                 <p class="text" translate>RECEIVE</p>
             </div>
@@ -35,7 +35,7 @@
         <div class="wallet-list" tappable (click)="goWalletDetail()">
             <div class="wallet">
                 <div class="icon"></div>
-                <div class="name">Poc</div>
+                <div class="name">Cph</div>
                 <div class="amount">
                     <p class="value">{{ amount | coinDisplay }}</p>
                     <p class="money-amount">≈{{ amountInOtherDisplay }}</p>
@@ -59,7 +59,7 @@
             <div class="wallet" tappable (click)="toggleWallet(i, wallet)"
                 [ngClass]="this.wallet.walletAddr == wallet.walletAddr ? 'selected' : ''">
                 <div class="wallet-name">{{ wallet.name }}</div>
-                <div class="address">{{ wallet.addr | addPocEllipsis }}</div>
+                <div class="address">{{ wallet.addr | addCphEllipsis }}</div>
             </div>
         </div>
     </div>

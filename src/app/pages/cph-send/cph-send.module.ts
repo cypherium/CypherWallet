@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PocSendPage } from './cph-send.page';
+import { CphSendPage } from './cph-send.page';
 import { PipesModule } from '../../pipes/pipes.module';
 import { ComponentsModule } from '../../components/components.module';
 import { TranslateModule } from "@ngx-translate/core";
@@ -13,7 +13,7 @@ import { TranslateModule } from "@ngx-translate/core";
 const routes: Routes = [
   {
     path: '',
-    component: PocSendPage
+    component: CphSendPage
   }
 ];
 
@@ -27,6 +27,6 @@ const routes: Routes = [
     TranslateModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [PocSendPage]
+  declarations: [CphSendPage]
 })
-export class PocSendPageModule { }
+export class CphSendPageModule { }

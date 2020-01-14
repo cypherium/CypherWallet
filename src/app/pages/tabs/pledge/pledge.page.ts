@@ -60,7 +60,7 @@ export class PledgePage implements OnInit {
     }
 
     async updateWalletInfo() {
-        this.walletAmount = await this.web3.getPocBalance(this.wallet.addr);
+        this.walletAmount = await this.web3.getCphBalance(this.wallet.addr);
         //获取抵押余额
         this.pledgeAmount = await this.web3.getMortage(this.wallet.addr);
         this.getTimes();
