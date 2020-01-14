@@ -72,6 +72,9 @@
     "tslib": "^1.9.0",
     "web3": "^1.2.4",
     "web3-cypher": "^0.10.0",
+    "salty-keys": "git+https://github.com/ankurdaharwal/salty-keys.git",
+    "jssha": "^2.3.1",
+    "@stablelib/ed25519": "^0.11.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {

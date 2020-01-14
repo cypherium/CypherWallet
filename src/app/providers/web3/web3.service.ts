@@ -158,7 +158,7 @@ export class Web3Service {
         // return this.web3.eth.accounts.signTransaction(txParams, privateKey);
 
         const tx = new EthereumTx.Transaction(txParams, {
-            chain: "pocnet"
+            chain: "cphnet"
         });
         let privateKeyBuffer = Buffer.from(privateKey, 'hex');
         tx.sign(privateKeyBuffer);
