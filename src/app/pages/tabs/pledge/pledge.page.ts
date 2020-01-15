@@ -4,6 +4,7 @@ import { HelperService } from '../../../providers/helper/helper.service';
 import { Storage } from '@ionic/storage';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { Web3Service } from '../../../providers/web3/web3.service';
+import { environment } from '../../../../environments/environment';
 
 @Component({
     selector: 'app-pledge',
@@ -37,7 +38,7 @@ export class PledgePage implements OnInit {
     ) { }
 
     ngOnInit() {
-        this.pledgeContractAddr = this.web3.config.pledgeContractAddr.replace('0x', '');
+        this.pledgeContractAddr = environment.cypherium.pledgeContractAddr.replace('0x', '');
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
         this.updateWalletInfo();
         this.interval = setInterval(() => {

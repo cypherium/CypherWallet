@@ -5,8 +5,13 @@
 export const environment = {
     production: false,
     requestTimeout: 15000,
-    // appServerUrl: "http://192.168.0.31:8359"
-    appServerUrl: "http://scan.cph.com/api"
+    appServerUrl: "http://localhost:16002", //APPServer API
+    cypherium: {
+        provider: 'http://localhost:18002',
+        pledgeContractAddr: '0x0000000000000000000000000000000000000081',
+        pledgeContractAbi: null,
+        privateKey: ''
+    }
 };
 
 /*
