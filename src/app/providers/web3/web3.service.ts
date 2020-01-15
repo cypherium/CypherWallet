@@ -43,7 +43,12 @@ export class Web3Service {
     }
 
     async getBlockHeight() {
-        let height = await this.web3.cph.getBlockNumber();
+        let height = await this.web3.cph.txBlockNumber;
+        return height;
+    }
+
+    async getKeyBlockHeight() {
+        let height = await this.web3.cph.keyBlockNumber;
         return height;
     }
 
