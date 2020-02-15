@@ -148,7 +148,7 @@ export class HelperService {
             if (privateKey) {
                 return {
                     flag: true,
-                    address: wallet.getAddress().toString('hex'),
+                    address: wallet.getAddress(),
                     privateKey: privateKey,
                     publicKey: publicKey,
                     keystore: keystore
@@ -254,12 +254,13 @@ export class HelperService {
             };
             buttons.unshift(cancelBtn);
         }
-        this.alertController.create({
-            header: header,
-            message: message,
-            backdropDismiss: false,
-            buttons: buttons
-        }).then(alert => alert.present());
+        //暂时忽略http请求失败
+        // this.alertController.create({
+        //     header: header,
+        //     message: message,
+        //     backdropDismiss: false,
+        //     buttons: buttons
+        // }).then(alert => alert.present());
     }
 
     hideAlert() {

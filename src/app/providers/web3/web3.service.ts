@@ -63,11 +63,12 @@ export class Web3Service {
     }
 
     async getCphBalance(userAddr, pending = false) {
+        console.log('getCphBalance');
         // let valuex = this.web3.cph.keyBlockNumber;
         // console.log(valuex);
         // userAddr = '0x55B08041EEA3E359C2C7BAE249E3054EEDB8C3B2';
         let value = await this.web3.cph.getBalance(userAddr, pending ? 'pending' : 'latest');
-        // console.log("调用参数:", userAddr, value);
+        console.log("调用参数:-----------------------------------", userAddr, value);
 
         console.log(`钱包${userAddr}的余额是${value}`);
         value = this.web3.fromWei(value, 'cpher');
@@ -111,7 +112,8 @@ export class Web3Service {
         let tx = await this.generateCphTx(from, to, value, gasPrice, privateKey);
         console.log("交易签名：", tx)
         const serializedTx = tx.serialize();
-        this.web3.cph.sendSignedTransaction('0x' + serializedTx.toString('hex'), callback); //调起合约
+        this.web3.cph.sendRawTransaction('0x' + serializedTx.toString('hex'), callback);
+        // this.web3.cph.sendSignedTransaction('0x' + serializedTx.toString('hex'), callback); //调起合约
         // this.web3.cph.sendSignedTransaction(tx.rawTransaction, callback); //调起合约
     }
 
@@ -131,36 +133,45 @@ export class Web3Service {
             data = thisobj.apply(thisobj, params).encodeABI(); //将参数封装成合约参数形式
         }
 
-        var nonce = await this.web3.cph.getTransactionCount(from, 'pending'); //获取用户钱包地址的nonce
-        console.log("Nonce为" + nonce);
-        let gasLimit = await this.web3.cph.estimateGas({
-            "from": from,
-            "nonce": nonce,
-            "to": to,
-            "data": data
-        })
+        // var nonce = await this.web3.cph.getTransactionCount('0x' + from, 'pending'); //获取用户钱包地址的nonce
+        var nonce = await this.web3.cph.getTransactionCount('0x' + from); //获取用户钱包地址的nonce
 
-        let chainId = await this.web3.cph.net.getId();
-        console.log("chainId:", chainId);
+        console.log("Nonce为" + nonce);
+        // let gasLimit = await this.web3.cph.estimateGas({
+        //     "from": '0x'+from,
+        //     "nonce": nonce,
+        //     "to": to,
+        //     "data": data
+        // })
+
+        // let chainId = await this.web3.cph.net.getId();
+        // console.log("chainId:", chainId);
         const txParams = {
+            version: '0x122',
+            senderKey: '0x' + privateKey.substring(64, 128),
             from: from,
             nonce: nonce,
-            gas: this.convert10to16(gasLimit),
+            // gas: this.convert10to16(gasLimit),
+            gasLimit: '0x271000',
             gasPrice: this.convert10to16(gasPrice),
             to: to,
             data: data,
-            value: this.convert10to16(value),
-            chainId: chainId
+            value: this.convert10to16(value)
+            // chainId: chainId
         };
 
         console.log("转账参数：" + JSON.stringify(txParams));
         // return this.web3.cph.accounts.signTransaction(txParams, privateKey);
 
         const tx = new EthereumTx.Transaction(txParams, {
-            chain: "cphnet"
+            // chain: "cphnet"
         });
-        let privateKeyBuffer = Buffer.from(privateKey, 'hex');
-        tx.sign(privateKeyBuffer);
+        // let privateKeyBuffer = Buffer.from(privateKey, 'hex');
+        // tx.sign(privateKeyBuffer);
+
+        var p = new Uint8Array(this._hexStringToBytes(privateKey));
+        var k = new Uint8Array(this._hexStringToBytes(privateKey.substring(64, 128)));
+        tx.signWith25519(p, k);
         return tx;
     }
 
@@ -218,6 +229,21 @@ export class Web3Service {
             return n;
         }
         return this.web3.toHex(n);
+    }
+
+    _hexStringToBytes(hexStr) {
+        let result = [];
+        while (hexStr.length >= 2) {
+            result.push(parseInt(hexStr.substring(0, 2), 16));
+            hexStr = hexStr.substring(2, hexStr.length);
+        }
+        return result;
+    }
+
+    _bytesToHexString(byteArray) {
+        return Array.prototype.map.call(byteArray, function (byte) {
+            return ('0' + (byte & 0xFF).toString(16)).slice(-2);
+        }).join('');
     }
 
 }

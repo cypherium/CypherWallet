@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import * as ethers from "ethers";
 import { GlobalService } from '../../providers/global/global.service';
 import { HelperService } from '../../providers/helper/helper.service';
+import { WalletService } from '../../providers/wallet/wallet.service';
 
 @Component({
     selector: 'app-wallet-create',
@@ -22,7 +23,8 @@ export class WalletCreatePage implements OnInit {
     constructor(
         private router: Router,
         private helper: HelperService,
-        private global: GlobalService
+        private global: GlobalService,
+        public Wallet: WalletService
     ) { }
 
     ngOnInit() {
@@ -63,7 +65,8 @@ export class WalletCreatePage implements OnInit {
             this.passwordError1 = message
             return
         }
-        let wallet = ethers.Wallet.createRandom();
+        // let wallet = ethers.Wallet.createRandom();
+        let wallet = this.Wallet.createRandom();
         let navigationExtras: NavigationExtras = {
             state: {
                 wallet: wallet,

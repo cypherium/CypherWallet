@@ -39,10 +39,12 @@
     "@ionic/storage": "^2.2.0",
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
+    "@stablelib/ed25519": "^0.11.0",
     "@types/bn.js": "^4.11.5",
-    "cordova-android": "7.1.4",
+    "bip39": "2.5.0",
+    "cordova-android": "^8.1.0",
     "cordova-clipboard": "1.3.0",
-    "cordova-ios": "5.1.1",
+    "cordova-ios": "^5.1.1",
     "cordova-open-native-settings": "1.5.2",
     "cordova-plugin-add-swift-support": "^2.0.2",
     "cordova-plugin-app-version": "0.1.9",
@@ -63,18 +65,20 @@
     "ethereumjs-tx": "^2.1.1",
     "ethereumjs-wallet": "^0.6.3",
     "ethers": "^4.0.37",
+    "jssha": "^2.3.1",
     "ngx-qrcode2": "0.0.9",
     "phonegap-plugin-barcodescanner": "8.1.0",
     "qrcode-generator": "^1.4.4",
+    "ripemd160": "2.0.2",
     "rxjs": "^6.5.3",
     "safe-buffer": "^5.2.0",
+    "salty-keys": "git+https://github.com/ankurdaharwal/salty-keys.git",
     "secp256k1": "^3.7.1",
+    "sharp": "^0.24.0",
     "tslib": "^1.9.0",
+    "tweetnacl": "^1.0.0",
     "web3": "^1.2.4",
     "web3-cypher": "^0.10.0",
-    "salty-keys": "git+https://github.com/ankurdaharwal/salty-keys.git",
-    "jssha": "^2.3.1",
-    "@stablelib/ed25519": "^0.11.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
@@ -127,8 +131,8 @@
       }
     },
     "platforms": [
-      "android",
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }

@@ -1,8 +1,13 @@
+ion-header ion-toolbar {
+    overflow: hidden;
+    --background: var(--ion-color-primary);
+}
+
 $headerHeight: 44px;
 $pagePadding: 18px;
 
 .header {
-    background: var(--ion-color-secondary);
+    background: var(--ion-color-primary);
     border-radius: 0px 0px 25px 25px;
     height: 212px;
     // padding-top: 44px;

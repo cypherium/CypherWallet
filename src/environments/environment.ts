@@ -5,9 +5,9 @@
 export const environment = {
     production: false,
     requestTimeout: 15000,
-    appServerUrl: "http://localhost:16002", //APPServer API
+    appServerUrl: "http://127.0.0.1:8359", //APPServer API
     cypherium: {
-        provider: 'http://localhost:18002',
+        provider: 'http://127.0.0.1:18002',
         pledgeContractAddr: '0x0000000000000000000000000000000000000081',
         pledgeContractAbi: null,
         privateKey: ''

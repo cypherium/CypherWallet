@@ -16,7 +16,7 @@
     6.13.4
 ```
 
-来测试是否安装成功。
+来测试是否安装成功,node 必须v10版本！！
 
 2. ionic, cordova 的安装
 
@@ -37,6 +37,19 @@
 3. Android Studio 的安装。请前往[Android Studio 官网](https://developer.android.com/studio/?&gclid=EAIaIQobChMI4Zegt8nj5QIVjamWCh38FQLjEAAYASAAEgL6Q_D_BwE)下载并安装，打开后，点击菜单 Tools => SDK Manager，下载并安装 Android-28 的 SDK。
 
 4. Xcode 的安装，直接在应用商店搜索 xcode 即可。
+5. 调试前修改IP地址，src/environments/environment.prod.ts。
+export const environment = {
+  production: true,
+  requestTimeout: 15000,
+  appServerUrl: "", //APPServer API。
+  cypherium: {
+    provider: 'http://127.0.0.1:18002',//改为blockchain服务器地址和端口号
+    pledgeContractAddr: '0x0000000000000000000000000000000000000081',
+    pledgeContractAbi: null,
+    privateKey: ''
+  }
+};
+
 
 # 工程调试
 
