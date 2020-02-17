@@ -58,7 +58,7 @@
                 <div class="amount"
                     [ngClass]="(transaction.tx_type == 1 || transaction.tx_type == 3 )? 'send' : 'receive'">
                     {{ (transaction.tx_type == 1 || transaction.tx_type == 3 )? '-' : '+' }}{{ transaction.displayValue | coinDisplay }}
-                    Cph</div>
+                    CPH</div>
                 <div class="status">{{ transaction.blockHeight }}</div>
             </div>
         </div>

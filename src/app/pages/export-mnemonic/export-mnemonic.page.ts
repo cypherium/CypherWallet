@@ -72,7 +72,7 @@ export class ExportMnemonicPage implements OnInit {
         this.promptDesc = error
         setTimeout(() => {
             this.enabled = true;
-        }, 3000);
+        }, 500);
 
         if (this.askForPassword) {
             setTimeout(() => {

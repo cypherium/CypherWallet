@@ -38,7 +38,7 @@
             <div class="error-text" *ngIf="passwordError">{{ passwordError }}</div>
 
             <div class="input-password-wrapper">
-                <div class="label" translate>NEW_PASSWORD</div>
+                <div class="label" translate>REPEAT_PASSWORD</div>
                 <div class="input-wrapper">
                     <input (blur)="checkPassword1()" [type]="ifEyeOpen1 ? 'text' : 'password'" [(ngModel)]="password1"
                         placeholder="{{ 'CONFIRM_PASSWORD' | translate }}">

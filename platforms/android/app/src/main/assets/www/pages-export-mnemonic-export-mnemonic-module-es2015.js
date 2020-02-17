@@ -158,7 +158,7 @@ let ExportMnemonicPage = class ExportMnemonicPage {
             this.promptDesc = error;
             setTimeout(() => {
                 this.enabled = true;
-            }, 3000);
+            }, 500);
             if (this.askForPassword) {
                 setTimeout(() => {
                     //需要用户输入密码

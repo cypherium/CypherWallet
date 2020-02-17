@@ -157,7 +157,7 @@ export class WalletPage implements OnInit {
 
     async copyAddr() {
         console.log("开始拷贝钱包地址....");
-        let wallet = 'Cph' + this.wallet.addr.replace('0x', '');
+        let wallet = 'CPH' + this.wallet.addr.replace('0x', '');
         console.log("Addr:" + wallet);
         this.native.copy(wallet);
         let message = await this.helper.getTranslate('COPY_WALLET_SUCCEED');

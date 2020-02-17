@@ -19,11 +19,11 @@
         <div class="info-list">
             <div class="info">
                 <div class="key" translate>TRSACTION_AMOUNT</div>
-                <div class="value">{{ detail.value | coinDisplay }} Cph</div>
+                <div class="value">{{ detail.value | coinDisplay }} CPH</div>
             </div>
             <div class="info">
                 <div class="key" translate>MINER_FEE</div>
-                <div class="value">{{ miningFee | coinDisplay }} Cph</div>
+                <div class="value">{{ miningFee | coinDisplay }} CPH</div>
             </div>
             <div class="info address" tappable (click)="goAddress(detail.from)">
                 <div class="key" translate>SEND_ADDRESS</div>

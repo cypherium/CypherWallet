@@ -31,13 +31,13 @@ export class AboutPage implements OnInit {
             this.native.getAppVersionInfo().subscribe(res => {
                 console.log("Get version：" + JSON.stringify(res));
                 this.version = res.versionNumber;
-                this.name = res.name;
+                this.name = res.name + 'Wallet';
                 this.packageName = res.packageName;
             })
         } else {
             this.version = '1.0.0';
             this.packageName = "com.cph.www";
-            this.name = "CPH";
+            this.name = "light Wallet";
         }
     }
 

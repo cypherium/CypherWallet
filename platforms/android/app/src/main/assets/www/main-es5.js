@@ -4738,7 +4738,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
 
             var wallet = {
-              name: w.walletName || this.global.projectName + '-wallet-' + w.address.slice(-4),
+              // name: w.walletName || this.global.projectName + '-wallet-' + w.address.slice(-4),
+              name: w.walletName + this.global.projectName + w.address.slice(-4),
               addr: w.address,
               keystore: w.keystore
             };
@@ -4969,7 +4970,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }, {
           key: "convertAddr",
           value: function convertAddr(addr) {
-            return 'Cph' + addr.replace('0x', '');
+            return 'CPH' + addr.replace('0x', '');
           }
           /**
            * tip 开发中
@@ -5177,7 +5178,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       requestTimeout: 15000,
       appServerUrl: "http://127.0.0.1:8359",
       cypherium: {
-        provider: 'http://127.0.0.1:18002',
+        provider: 'http://104.198.19.227:8000',
         pledgeContractAddr: '0x0000000000000000000000000000000000000081',
         pledgeContractAbi: null,
         privateKey: ''
