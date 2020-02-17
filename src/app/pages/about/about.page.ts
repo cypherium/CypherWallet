@@ -45,7 +45,7 @@ export class AboutPage implements OnInit {
         if (this.platform.is('android')) {
             window.open(`market://details?id=${this.packageName}`, '_system');
         } else {
-            window.open(`https://itunes.apple.com/cn/app/id1466591583?mt=8`);
+            window.open(`https://itunes.apple.com/id??`);
         }
     }
 }
