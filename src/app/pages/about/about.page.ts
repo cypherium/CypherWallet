@@ -48,4 +48,28 @@ export class AboutPage implements OnInit {
             window.open(`https://itunes.apple.com/id??`);
         }
     }
+
+    openWebsite() {
+        window.open(`https://www.cypherium.io`);
+    }
+
+    opentEmail() {
+        window.open(`mailto:contact@cypherium.io`);
+    }
+
+    openTwitter() {
+        window.open(`https://twitter.com/cypheriumchain`);
+    }
+
+    openGithub() {
+        window.open(`https://www.github.com/cypherium`);
+    }
+
+    openFacebook() {
+        window.open(`https://www.facebook.com/CypheriumChain`);
+    }
+
+    openTelegram() {
+        window.open(`https://t.me/cypherium_supergroup`);
+    }
 }

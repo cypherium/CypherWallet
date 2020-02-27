@@ -53,6 +53,8 @@
     <author email="hi@ionicframework.com" href="http://ionicframework.com/">CPH Development Team</author>
     <content src="index.html" />
     <access origin="*" />
+    <access launch-external="yes" origin="tel:*" />
+    <access launch-external="yes" origin="mailto:*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />

@@ -5,6 +5,7 @@ import { Storage } from '@ionic/storage';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { Web3Service } from '../../providers/web3/web3.service';
 import { NativeService } from '../../providers/native/native.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
     selector: 'app-cph-send',
@@ -33,19 +34,32 @@ export class CphSendPage implements OnInit {
         private global: GlobalService,
         private storage: Storage,
         private web3: Web3Service,
+        public nav: NavController,
         private native: NativeService
-    ) { }
+    ) { 
+        let state = this.router.getCurrentNavigation().extras.state;
+        console.log("state" + state)
+        if (state) {
+            // let obj = state.extras.state;
+            this.receiveAddress = state.address;
+        }
+    }
+
+    back() {
+        this.nav.navigateBack('/wallet');
+    }
 
     async ngOnInit() {
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
         console.log(this.global.gWalletList, this.global.currentWalletIndex)
         //获取余额
         this.amount = await this.web3.getCphBalance(this.wallet.addr);
-        let state = this.router.getCurrentNavigation();
-        if (state) {
-            let obj = state.extras.state;
-            this.receiveAddress = obj.address;
-        }
+        // let state = this.router.getCurrentNavigation().extras.state;
+        // console.log("state" + state)
+        // if (state) {
+        //     // let obj = state.extras.state;
+        //     this.receiveAddress = state.address;
+        // }
     }
 
     scan() {
@@ -55,7 +69,7 @@ export class CphSendPage implements OnInit {
                 if (method == 'transfer') {
                     let result = await this.web3.isCphAddr(url);
                     if (result == 0) {
-                        this.receiveAddress = res;
+                        this.receiveAddress = url;
                     } else {
                         let message = await this.helper.getTranslate('UNKNOWN_RESULT');
                         this.helper.toast(message);

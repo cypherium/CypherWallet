@@ -11,12 +11,12 @@
     <div class="main">
         <div class="tips" translate="">CLICK_MNEMONIC</div>
         <div class="textarea clear">
-            <div class="word" *ngFor="let mnemonic of backupList">{{ mnemonic }}</div>
+            <div class="word" *ngFor="let item of backupList">{{ item.mnemonic }}</div>
         </div>
 
         <div class="mnemonic-grid clear">
-            <div class="grid" tappable (click)="selectMnemonic(mnemonic)"
-                [ngClass]="backupList.indexOf(mnemonic) > -1 ? 'active' : ''" *ngFor="let mnemonic of mnemonicList">
+            <div class="grid" tappable (click)="selectMnemonic(mnemonic, i)"
+                [ngClass]="isSelect(mnemonic, i) > -1 ? 'active' : ''" *ngFor="let mnemonic of mnemonicList; let i = index">
                 {{mnemonic}}</div>
         </div>
     </div>

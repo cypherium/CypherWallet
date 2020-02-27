@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>{{ 'SEND' | translate }}</ion-title>\n        <ion-buttons slot=\"end\">\n            <ion-button tappable (click)=\"scan()\">\n                <ion-icon size=\"small\" slot=\"icon-only\" src=\"assets/imgs/scan.svg\"></ion-icon>\n            </ion-button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div class=\"main\">\n        <div class=\"input-text-wrapper\">\n            <div class=\"label\">\n                <div class=\"desc\">{{ 'SEND_AMOUNT' | translate }}</div>\n                <div class=\"amount\">\n                    <span class=\"tip\">{{ 'BALANCE' | translate }}</span> {{ amount | coinDisplay }} Cph\n                </div>\n            </div>\n            <div class=\"input-wrapper\">\n                <input type=\"tel\" (keyup)=\"checkAmount()\" [(ngModel)]=\"payAmount\"\n                    placeholder=\"{{ 'INPUT_AMOUNT_TIPS' | translate }}\">\n            </div>\n        </div>\n        <div class=\"error-text\" *ngIf=\"amountError\">{{ amountError }}</div>\n\n        <div class=\"input-text-wrapper\">\n            <div class=\"label\" translate>RECEIVE_ADDRESS</div>\n            <div class=\"input-wrapper\">\n                <input type=\"text\" (keyup)=\"checkAddr()\" [(ngModel)]=\"receiveAddress\"\n                    placeholder=\"{{ 'INPUT_ADDR_TIPS' | translate }}\">\n            </div>\n        </div>\n        <div class=\"error-text\" *ngIf=\"addressError\">{{ addressError }}</div>\n\n        <div class=\"range-wrapper\">\n            <div class=\"label\">\n                <div class=\"desc\" translate>MINER_FEE</div>\n                <div class=\"amount\">\n                    <span class=\"tip\">{{ (range * 21000 / 1000000000) | coinDisplay }} Cph</span>\n                </div>\n            </div>\n\n            <div class=\"range\">\n                <ion-range mode=\"ios\" pin=\"true\" (ionChange)=\"changeRange($event)\" [(ngModel)]=\"range\" [min]=\"min\"\n                    [max]=\"max\"></ion-range>\n                <ion-label class=\"desc\">\n                    <p translate>QUICK</p>\n                    <p translate>SLOW</p>\n                </ion-label>\n            </div>\n\n        </div>\n    </div>\n\n    <div class=\"confirm-button bottom-button hide-when-keyboard-shown\"\n        [ngClass]=\"(addressError || amountError || !receiveAddress || !amount) ? 'disabled' : ''\"\n        (click)=\"transferConfirm()\" translate=\"\">\n        CONFIRM</div>\n</ion-content>\n\n<app-generate-privatekey *ngIf=\"ifShowPasswordPrompt\" promptDesc=\"{{ 'INPUT_PASSWORD_TIPS' | translate }}\"\n    cancelText=\"{{ 'CANCEL' | translate }}\" confirmText=\"{{ 'CONFIRM' | translate }}\" (cancel)=\"cancelPrompt()\"\n    (confirm)=\"confirmPrompt($event)\"></app-generate-privatekey>\n\n<app-alert [title]=\"alertTitle\" [desc]=\"alertDesc\" *ngIf=\"ifShowAlert\" cancelText=\"{{ 'CANCEL' | translate }}\"\n    (cancel)=\"cancelAlert()\" confirmText=\"{{ 'CONFIRM' | translate }}\" (confirm)=\"confirmAlert()\">\n</app-alert>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar>\n        <!-- <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons> -->\n        <ion-buttons slot=\"start\">\n            <ion-button (click)=\"back()\">\n                <ion-icon slot=\"icon-only\" name=\"arrow-back\"></ion-icon>\n            </ion-button>\n        </ion-buttons>\n        <ion-title>{{ 'SEND' | translate }}</ion-title>\n        <ion-buttons slot=\"end\">\n            <ion-button tappable (click)=\"scan()\">\n                <ion-icon size=\"small\" slot=\"icon-only\" src=\"assets/imgs/scan.svg\"></ion-icon>\n            </ion-button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div class=\"main\">\n        <div class=\"input-text-wrapper\">\n            <div class=\"label\">\n                <div class=\"desc\">{{ 'SEND_AMOUNT' | translate }}</div>\n                <div class=\"amount\">\n                    <span class=\"tip\">{{ 'BALANCE' | translate }}</span> {{ amount | coinDisplay }} CPH\n                </div>\n            </div>\n            <div class=\"input-wrapper\">\n                <input type=\"tel\" (keyup)=\"checkAmount()\" [(ngModel)]=\"payAmount\"\n                    placeholder=\"{{ 'INPUT_AMOUNT_TIPS' | translate }}\">\n            </div>\n        </div>\n        <div class=\"error-text\" *ngIf=\"amountError\">{{ amountError }}</div>\n\n        <div class=\"input-text-wrapper\">\n            <div class=\"label\" translate>RECEIVE_ADDRESS</div>\n            <div class=\"input-wrapper\">\n                <input type=\"text\" (keyup)=\"checkAddr()\" [(ngModel)]=\"receiveAddress\"\n                    placeholder=\"{{ 'INPUT_ADDR_TIPS' | translate }}\">\n            </div>\n        </div>\n        <div class=\"error-text\" *ngIf=\"addressError\">{{ addressError }}</div>\n\n        <div class=\"range-wrapper\">\n            <div class=\"label\">\n                <div class=\"desc\" translate>MINER_FEE</div>\n                <div class=\"amount\">\n                    <span class=\"tip\">{{ (range * 21000 / 1000000000) | coinDisplay }} CPH</span>\n                </div>\n            </div>\n\n            <div class=\"range\">\n                <ion-range mode=\"ios\" pin=\"true\" (ionChange)=\"changeRange($event)\" [(ngModel)]=\"range\" [min]=\"min\"\n                    [max]=\"max\"></ion-range>\n                <ion-label class=\"desc\">\n                    <p translate>QUICK</p>\n                    <p translate>SLOW</p>\n                </ion-label>\n            </div>\n\n        </div>\n    </div>\n\n    <div class=\"confirm-button bottom-button hide-when-keyboard-shown\"\n        [ngClass]=\"(addressError || amountError || !receiveAddress || !amount) ? 'disabled' : ''\"\n        (click)=\"transferConfirm()\" translate=\"\">\n        CONFIRM</div>\n</ion-content>\n\n<app-generate-privatekey *ngIf=\"ifShowPasswordPrompt\" promptDesc=\"{{ 'INPUT_PASSWORD_TIPS' | translate }}\"\n    cancelText=\"{{ 'CANCEL' | translate }}\" confirmText=\"{{ 'CONFIRM' | translate }}\" (cancel)=\"cancelPrompt()\"\n    (confirm)=\"confirmPrompt($event)\"></app-generate-privatekey>\n\n<app-alert [title]=\"alertTitle\" [desc]=\"alertDesc\" *ngIf=\"ifShowAlert\" cancelText=\"{{ 'CANCEL' | translate }}\"\n    (cancel)=\"cancelAlert()\" confirmText=\"{{ 'CONFIRM' | translate }}\" (confirm)=\"confirmAlert()\">\n</app-alert>\n");
 
 /***/ }),
 
@@ -101,6 +101,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../providers/web3/web3.service */ "./src/app/providers/web3/web3.service.ts");
 /* harmony import */ var _providers_native_native_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../providers/native/native.service */ "./src/app/providers/native/native.service.ts");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+
 
 
 
@@ -112,12 +114,13 @@ __webpack_require__.r(__webpack_exports__);
 let CphSendPage = class CphSendPage {
     constructor(router, 
     // private clipboard: Clipboard,
-    helper, global, storage, web3, native) {
+    helper, global, storage, web3, nav, native) {
         this.router = router;
         this.helper = helper;
         this.global = global;
         this.storage = storage;
         this.web3 = web3;
+        this.nav = nav;
         this.native = native;
         this.range = 25;
         this.wallet = {};
@@ -132,6 +135,9 @@ let CphSendPage = class CphSendPage {
         this.ifShowAlert = false;
         this.alertTitle = "";
         this.alertDesc = "";
+    }
+    back() {
+        this.nav.navigateBack('/wallet');
     }
     ngOnInit() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
@@ -276,6 +282,7 @@ CphSendPage.ctorParameters = () => [
     { type: _providers_global_global_service__WEBPACK_IMPORTED_MODULE_2__["GlobalService"] },
     { type: _ionic_storage__WEBPACK_IMPORTED_MODULE_4__["Storage"] },
     { type: _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_6__["Web3Service"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["NavController"] },
     { type: _providers_native_native_service__WEBPACK_IMPORTED_MODULE_7__["NativeService"] }
 ];
 CphSendPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -289,6 +296,7 @@ CphSendPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         _providers_global_global_service__WEBPACK_IMPORTED_MODULE_2__["GlobalService"],
         _ionic_storage__WEBPACK_IMPORTED_MODULE_4__["Storage"],
         _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_6__["Web3Service"],
+        _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["NavController"],
         _providers_native_native_service__WEBPACK_IMPORTED_MODULE_7__["NativeService"]])
 ], CphSendPage);
 

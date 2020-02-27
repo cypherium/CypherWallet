@@ -63,14 +63,18 @@ export class BackupMnemonicPage implements OnInit {
     ngOnInit() {
     }
 
-    selectMnemonic(mnemonic) {
-        let index = this.backupList.indexOf(mnemonic);
+    selectMnemonic(mnemonic, i) {
+        // let index = this.backupList.indexOf(mnemonic);
+        let index = this.isSelect(mnemonic, i);
         if (index > -1) {
             this.backupList.splice(index, 1);
         } else {
-            this.backupList.push(mnemonic);
+            this.backupList.push({mnemonic,i});
         }
         console.log(this.backupList)
+    }
+    isSelect(mnemonic, i){
+        return this.backupList.findIndex(item => item.mnemonic === mnemonic && item.i === i);
     }
 
     async verifyNmemonic() {
@@ -78,7 +82,7 @@ export class BackupMnemonicPage implements OnInit {
         let flag = true;
         let mnemonicList = this.wallet.mnemonic.split(' ');
         for (let i = 0; i < mnemonicList.length; i++) {
-            if (mnemonicList[i] != this.backupList[i]) {
+            if (mnemonicList[i] != this.backupList[i].mnemonic) {
                 flag = false;
                 break;
             }

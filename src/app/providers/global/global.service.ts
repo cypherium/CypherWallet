@@ -12,7 +12,7 @@ export class GlobalService {
     paymentPassword = "";
     walletName = "";
     currentWalletIndex = -1;
-    maxWalletNum = 3;
+    maxWalletNum = 20;
     selectedRate: any = {};
 
     // currentWallet = {};

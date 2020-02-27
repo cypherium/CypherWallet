@@ -252,7 +252,10 @@ $headerHeight: 44px;
       display: block;
       padding: 0;
     }
-
+    .wallet-item {
+      border-radius: 10px;
+      color: var(--main-color);   
+    }
     .wallet {
       margin-top: 10px;
       background: rgba(0, 176, 0, 0.1);
@@ -282,3 +285,28 @@ $headerHeight: 44px;
     }
   }
 }
+
+$categories: (
+  ionic: var(--ion-color-primary),
+  angular: #ac282b,
+  communication: #8e8d93,
+  tooling: #fe4c52,
+  services: #fd8b2d,
+  design: #fed035,
+  workshop: #69bb7b,
+  food: #3bc7c4,
+  documentation: #b16be3,
+  navigation: #6600cc
+);
+
+// @each $track, $value in map-remove($categories) {
+//   ion-item-sliding[track='#{$track}'] ion-label {
+//     border-left: 2px solid $value;
+//     padding-left: 10px;
+//   }
+// }
+
+.wallet-label {
+    border-left: 2px solid #f1f1f0;
+    padding-left: 10px;
+   }

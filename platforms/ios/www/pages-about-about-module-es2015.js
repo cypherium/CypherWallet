@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>{{ 'ABOUTUS' | translate }}</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content class=\"gray-content\">\n    <div class=\"main\">\n        <div class=\"title\">\n            <div class=\"logo\">\n                <img src=\"assets/imgs/cypherium-full-logo.svg\" alt=\"\">\n                <p class=\"name\">{{ name }}</p>\n                <p class=\"version\">V {{ version }}</p>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"item-list\">\n        <div class=\"item\">\n            <div class=\"label\">Website</div>\n            <div class=\"content\">www.cph.org</div>\n            <div class=\"next\"></div>\n        </div>\n        <div class=\"item\" (click)=\"update()\" tappable>\n            <div class=\"label\" translate=\"\">VERSION_UPDATE</div>\n        </div>\n    </div>\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>{{ 'ABOUTUS' | translate }}</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content class=\"gray-content\">\n    <div class=\"main\">\n        <div class=\"title\">\n            <div class=\"logo\">\n                <img src=\"assets/imgs/cypherium-full-logo.svg\" alt=\"\">\n                <p class=\"name\">{{ name }}</p>\n                <p class=\"version\">V {{ version }}</p>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"item-list\">\n        <div class=\"item\" (click)=\"openWebsite()\">\n            <div class=\"label\">Website</div>\n            <div class=\"content\">www.cypherium.io</div>\n            <div class=\"next\"></div>\n        </div>\n        <div class=\"item\">\n            <div class=\"label\">Email</div>\n            <!-- <div class=\"content\">contact@cypherium.io</div> -->\n            <div><a href=\"mailto:contact@cypherium.io\">contact@cypherium.io</a></div>\n            <div class=\"next\"></div>\n        </div>\n        <div class=\"item\" (click)=\"openTwitter()\">\n            <div class=\"label\">Twitter</div>\n            <div class=\"content\">twitter.com/cypheriumchain</div>\n            <div class=\"next\"></div>\n        </div>\n        <div class=\"item\" (click)=\"openGithub()\">\n            <div class=\"label\">Github</div>\n            <div class=\"content\">github.com/cypherium</div>\n            <div class=\"next\"></div>\n        </div>\n        <div class=\"item\" (click)=\"openFacebook()\">\n            <div class=\"label\">Facebook</div>\n            <div class=\"content\">facebook.com/CypheriumChain</div>\n            <div class=\"next\"></div>\n        </div>\n        <div class=\"item\" (click)=\"openTelegram()\">\n            <div class=\"label\">Telegram</div>\n            <div class=\"content\">t.me/cypherium_supergroup</div>\n            <div class=\"next\"></div>\n        </div>        \n        <div class=\"item\" (click)=\"update()\" tappable>\n            <div class=\"label\" translate=\"\">VERSION_UPDATE</div>\n        </div>\n    </div>\n</ion-content>\n");
 
 /***/ }),
 
@@ -122,14 +122,14 @@ let AboutPage = class AboutPage {
             this.native.getAppVersionInfo().subscribe(res => {
                 console.log("Get version：" + JSON.stringify(res));
                 this.version = res.versionNumber;
-                this.name = res.name;
+                this.name = res.name + 'Wallet';
                 this.packageName = res.packageName;
             });
         }
         else {
             this.version = '1.0.0';
             this.packageName = "com.cph.www";
-            this.name = "CPH";
+            this.name = "light Wallet";
         }
     }
     update() {
@@ -137,8 +137,26 @@ let AboutPage = class AboutPage {
             window.open(`market://details?id=${this.packageName}`, '_system');
         }
         else {
-            window.open(`https://itunes.apple.com/cn/app/id1466591583?mt=8`);
+            window.open(`https://itunes.apple.com/id??`);
         }
+    }
+    openWebsite() {
+        window.open(`https://www.cypherium.io`);
+    }
+    opentEmail() {
+        window.open(`mailto:contact@cypherium.io`);
+    }
+    openTwitter() {
+        window.open(`https://twitter.com/cypheriumchain`);
+    }
+    openGithub() {
+        window.open(`https://www.github.com/cypherium`);
+    }
+    openFacebook() {
+        window.open(`https://www.facebook.com/CypheriumChain`);
+    }
+    openTelegram() {
+        window.open(`https://t.me/cypherium_supergroup`);
     }
 };
 AboutPage.ctorParameters = () => [

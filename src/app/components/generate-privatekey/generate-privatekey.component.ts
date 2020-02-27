@@ -37,15 +37,16 @@ export class GeneratePrivatekeyComponent implements OnInit {
         this.cancel.emit();
     }
 
-    confirmPrompt() {
+    async confirmPrompt() {
         let keystore = this.global.gWalletList[this.global.currentWalletIndex].keystore;
         this.promptError = "";
         if (!this.paymentPassword) {
-            this.promptError = "安全密码不能为空";
+            let error = await this.helper.getTranslate('PASSWORD_EMPTY');
+            this.promptError = error;
             return;
         }
         this.ifShowLoading = true;
-        setTimeout(() => {
+        setTimeout(async() => {
             //解码
             let ret = this.helper.decryptPrivateKey(keystore, this.paymentPassword);
             if (ret.flag) {
@@ -55,7 +56,8 @@ export class GeneratePrivatekeyComponent implements OnInit {
                 return;
             } else {
                 this.ifShowLoading = false;
-                this.promptError = "请输入正确的安全密码";
+                let error = await this.helper.getTranslate('PASSEORD_ERROR');
+                this.promptError = error;
             }
         }, 100);
     }

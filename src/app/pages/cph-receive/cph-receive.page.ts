@@ -5,6 +5,7 @@ import { GlobalService } from '../../providers/global/global.service';
 import { HelperService } from '../../providers/helper/helper.service';
 import { Storage } from '@ionic/storage';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
+import { NavController } from '@ionic/angular';
 
 @Component({
     selector: 'app-cph-receive',
@@ -21,8 +22,13 @@ export class CphReceivePage implements OnInit {
         private clipboard: Clipboard,
         private helper: HelperService,
         public global: GlobalService,
+        public nav: NavController,
         private storage: Storage,
     ) { }
+
+    back() {
+        this.nav.navigateBack('/wallet');
+    }
 
     ngOnInit() {
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
@@ -39,7 +45,7 @@ export class CphReceivePage implements OnInit {
         // var qr = qrcode(16, "L");
         let addr = this.helper.convertAddr(this.wallet.addr);
         this.addr = addr;
-        this.qrcode = "cph://account/transfer/" + this.wallet.addr;
+        this.qrcode = "cph://account/transfer/" + 'cph'+ this.wallet.addr;
         // this.addr = addr;
         // qr.addData(addr);
         // qr.make();

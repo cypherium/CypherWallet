@@ -87,6 +87,7 @@ export class HelperService {
                     callback && callback(url, method);
                 } else if (method == 'transfer') {
                     let url = decodeURIComponent(params);
+                    console.log("url" + url);
                     callback && callback(url, method);
                 }
             }

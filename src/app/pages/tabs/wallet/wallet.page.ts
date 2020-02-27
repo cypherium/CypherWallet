@@ -41,6 +41,7 @@ export class WalletPage implements OnInit {
         private native: NativeService,
         private events: Events,
         private zone: NgZone,
+        private navCtrl: NavController,
     ) {
         console.log("Wallet constructor...");
     }
@@ -120,6 +121,7 @@ export class WalletPage implements OnInit {
                             address: url,
                         }
                     };
+                    console.log("navigationExtras" + navigationExtras.state.address);
                     this.router.navigate(['cph-send'], navigationExtras);
                 }
             })
@@ -175,6 +177,27 @@ export class WalletPage implements OnInit {
             this.global.currentWalletIndex = index;
             this.storage.set('localwalletindex', this.global.currentWalletIndex);
             this.wallet = wallet;
+            // this.global.currentWallet = wallet;
+            this.computeValue();
+        }
+    }
+    deletWallet(index, wallet){
+        // 如果账号只有一个或为空，直接删除，然后跳转到创建新账号
+        if (this.global.gWalletList.length < 2) {
+            this.storage.remove('localwallet');
+            this.storage.remove('localwalletindex');
+            this.navCtrl.navigateRoot('/wallet-create');
+        }else{
+            // 1.删除列表
+            this.global.gWalletList.splice(index, 1);
+            this.storage.set('localwallet', JSON.stringify(this.global.gWalletList));
+            if (this.wallet.name != wallet.name) {
+                this.global.currentWalletIndex = this.global.gWalletList.indexOf(this.wallet);
+            }else{
+                this.global.currentWalletIndex = 0;
+            }
+            this.storage.set('localwalletindex', this.global.currentWalletIndex);
+            this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
             // this.global.currentWallet = wallet;
             this.computeValue();
         }

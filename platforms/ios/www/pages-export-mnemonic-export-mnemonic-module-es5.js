@@ -270,7 +270,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     this.promptDesc = error;
                     setTimeout(function () {
                       _this.enabled = true;
-                    }, 3000);
+                    }, 500);
 
                     if (this.askForPassword) {
                       setTimeout(function () {
