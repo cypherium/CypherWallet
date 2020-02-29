@@ -8,7 +8,7 @@ const routes: Routes = [
     //     redirectTo: '/wallet-create',
     //     pathMatch: 'full'
     // },
-    { path: '', redirectTo: 'wallet-create', pathMatch: 'full' },
+    { path: '', redirectTo: 'wallet', pathMatch: 'full' },
     // { path: '', canActivate: [AuthGuardService], loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
     { path: 'wallet', canActivate: [AuthGuardService], loadChildren: './pages/tabs/wallet/wallet.module#WalletPageModule' },
     { path: 'pledge', canActivate: [AuthGuardService], loadChildren: './pages/tabs/pledge/pledge.module#PledgePageModule' },

@@ -4,6 +4,7 @@ import { GlobalService } from '../../providers/global/global.service';
 import { HelperService } from '../../providers/helper/helper.service';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { Platform, NavController } from '@ionic/angular';
+import { WalletService } from '../../providers/wallet/wallet.service';
 
 @Component({
     selector: 'app-wallet-import',
@@ -30,6 +31,7 @@ export class WalletImportPage implements OnInit {
         private helper: HelperService,
         private global: GlobalService,
         private navCtrl: NavController,
+        public Wallet: WalletService,
     ) { }
 
     toggleEyeOpen() {
@@ -97,7 +99,7 @@ export class WalletImportPage implements OnInit {
     importMnemonicWallet() {
         let mnemonic = this.mnemonic.replace(/^\s+|\s+$/, '');
         mnemonic = mnemonic.replace(/\s{2,}/g, ' '); //替换多个空格为1个
-        let wallet = ethers.Wallet.fromMnemonic(mnemonic);
+        let wallet = this.Wallet.fromMnemonic(mnemonic);
         return wallet;
     }
 
@@ -108,9 +110,11 @@ export class WalletImportPage implements OnInit {
         }
         let mnemonic = this.mnemonic.replace(/^\s+|\s+$/, '');
         let mnemonicList = mnemonic.split(/\s+/);
-        if (mnemonicList.length !== 24) {
+        if (mnemonicList.length !== 12) {
             let error = await this.helper.getTranslate('MNEMONIC_LENGTH_ERROR');
             this.mnemonicError = error
+        }else{
+            this.mnemonicError = "";
         }
 
         if (this.mnemonicError) {

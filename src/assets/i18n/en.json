@@ -9,6 +9,7 @@
 	"INPUT_PASSWORD_TIPS": "Please insert your payment password.",
 	"PASSWORD_RULE": "Numbers and letters included, min 6 - max 18.",
 	"CONFIRM_PASSWORD": "Confirm your password",
+	"WALLET_RULE": "Choose a new password",
 	"START_IMPORT": "Start to Import",
 	"PASSWORD_EMPTY": "Password should not be empty.",
 	"KEYSTORE_ERROR": "Illegal keystore file or incorrect payment password.",

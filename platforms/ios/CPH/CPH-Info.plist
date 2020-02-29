@@ -29,8 +29,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>To scan barcodes</string>
 	<key>NSMainNibFile~ipad</key>
-	<string/>
+	<string></string>
 	<key>UIInterfaceOrientation</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -49,7 +51,5 @@
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
-	<key>NSCameraUsageDescription</key>
-	<string>To scan barcodes</string>
 </dict>
 </plist>

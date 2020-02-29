@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		000D50C2DED7404AAABD7C3A /* CDVWKWebViewEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = E033B38738EA461FB16DBACC /* CDVWKWebViewEngine.m */; };
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
@@ -358,7 +359,7 @@
 				LastUpgradeCheck = 510;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = QR929NXHL6;
+						DevelopmentTeam = 8XNA5B8LAP;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -496,7 +497,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
-				DEVELOPMENT_TEAM = QR929NXHL6;
+				DEVELOPMENT_TEAM = 8XNA5B8LAP;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -506,7 +507,7 @@
 				INFOPLIST_FILE = "CPH/CPH-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cph.mobile;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cph.mobile.wallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -525,7 +526,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
-				DEVELOPMENT_TEAM = QR929NXHL6;
+				DEVELOPMENT_TEAM = 8XNA5B8LAP;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CPH/CPH-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
@@ -533,7 +534,7 @@
 				INFOPLIST_FILE = "CPH/CPH-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.cph.mobile;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cph.mobile.wallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

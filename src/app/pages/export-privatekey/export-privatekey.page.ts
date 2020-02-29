@@ -31,9 +31,10 @@ export class ExportPrivatekeyPage implements OnInit {
         }, 500)
     }
 
-    copyKeystore() {
+    async copyKeystore() {
         this.native.copy(this.privateKey);
-        this.helper.toast("Keystore已经复制到剪贴板");
+        let info = await this.helper.getTranslate('KEYSTORE_COPYIED_SUCCRRF');
+        this.helper.toast(info);
     }
 
     exportKeystoreToMiner() {

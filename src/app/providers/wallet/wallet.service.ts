@@ -37,6 +37,19 @@ export class WalletService {
       publicKey: keyPair.publicKey
     };
   }
+  fromMnemonic(mnemonic) {
+    let seed = this.generateSeed(mnemonic);
+    let keyPair = this.generateKeyPair(seed);
+    let address = this.getCPHAddressFromPubKey(keyPair.publicKey);
+
+    return {
+      address: address,
+      mnemonic: mnemonic,
+      path: "m/44'/60'/0'/0/0",
+      privateKey: keyPair.privateKey,
+      publicKey: keyPair.publicKey
+    };
+  }
   /**
    *  Create a new instance of this Wallet connected to provider.
    */
