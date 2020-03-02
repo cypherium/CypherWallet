@@ -45,7 +45,7 @@ export class HelperService {
         }
         let wallet = {
             // name: w.walletName || this.global.projectName + '-wallet-' + w.address.slice(-4),
-            name: this.global.projectName + '-' + w.address.slice(-4) || w.name,
+            name: w.name || this.global.projectName + '-' + w.address.slice(-4),
             addr: w.address,
             keystore: w.keystore
         };

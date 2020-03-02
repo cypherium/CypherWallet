@@ -9,6 +9,7 @@
 	"INPUT_PASSWORD_TIPS": "请输入安全密码",
 	"PASSWORD_RULE": "6-18位，须同时包含字母和数字",
 	"CONFIRM_PASSWORD": "确认密码",
+	"WALLET_RULE": "选择新密码",
 	"START_IMPORT": "开始导入",
 	"PASSWORD_EMPTY": "安全密码不能为空",
 	"KEYSTORE_ERROR": "keystore文件不合法或者安全密码错误",
