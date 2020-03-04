@@ -52,6 +52,9 @@ export class GeneratePrivatekeyComponent implements OnInit {
             if (ret.flag) {
                 this.ifShowLoading = false;
                 this.paymentPassword = '';
+                let prv = this.global.gWalletList[this.global.currentWalletIndex].privateKey;
+                console.log(ret.privateKey, prv);
+                //privateKey暂时从缓存取，后续修改ethereumjs-wallet？
                 this.confirm.emit(ret.privateKey);
                 return;
             } else {

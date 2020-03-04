@@ -163,50 +163,45 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var ethers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-    /*! ethers */
-    "./node_modules/ethers/dist/ethers.min.js");
-    /* harmony import */
-
-
-    var ethers__WEBPACK_IMPORTED_MODULE_2___default =
-    /*#__PURE__*/
-    __webpack_require__.n(ethers__WEBPACK_IMPORTED_MODULE_2__);
-    /* harmony import */
-
-
-    var _providers_global_global_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    var _providers_global_global_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
     /*! ../../providers/global/global.service */
     "./src/app/providers/global/global.service.ts");
     /* harmony import */
 
 
-    var _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    var _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
     /*! ../../providers/helper/helper.service */
     "./src/app/providers/helper/helper.service.ts");
     /* harmony import */
 
 
-    var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! @angular/router */
     "./node_modules/@angular/router/fesm2015/router.js");
     /* harmony import */
 
 
-    var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! @ionic/angular */
     "./node_modules/@ionic/angular/dist/fesm5.js");
+    /* harmony import */
+
+
+    var _providers_wallet_wallet_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ../../providers/wallet/wallet.service */
+    "./src/app/providers/wallet/wallet.service.ts");
 
     var WalletImportPage =
     /*#__PURE__*/
     function () {
-      function WalletImportPage(router, helper, global, navCtrl) {
+      function WalletImportPage(router, helper, global, navCtrl, Wallet) {
         _classCallCheck(this, WalletImportPage);
 
         this.router = router;
         this.helper = helper;
         this.global = global;
         this.navCtrl = navCtrl;
+        this.Wallet = Wallet;
         this.mnemonic = "";
         this.password = "";
         this.password1 = "";
@@ -358,7 +353,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var mnemonic = this.mnemonic.replace(/^\s+|\s+$/, '');
           mnemonic = mnemonic.replace(/\s{2,}/g, ' '); //替换多个空格为1个
 
-          var wallet = ethers__WEBPACK_IMPORTED_MODULE_2__["Wallet"].fromMnemonic(mnemonic);
+          var wallet = this.Wallet.fromMnemonic(mnemonic);
           return wallet;
         }
       }, {
@@ -389,8 +384,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     mnemonic = this.mnemonic.replace(/^\s+|\s+$/, '');
                     mnemonicList = mnemonic.split(/\s+/);
 
-                    if (!(mnemonicList.length !== 24)) {
-                      _context3.next = 12;
+                    if (!(mnemonicList.length !== 12)) {
+                      _context3.next = 14;
                       break;
                     }
 
@@ -400,62 +395,67 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   case 10:
                     _error2 = _context3.sent;
                     this.mnemonicError = _error2;
+                    _context3.next = 15;
+                    break;
 
-                  case 12:
+                  case 14:
+                    this.mnemonicError = "";
+
+                  case 15:
                     if (!this.mnemonicError) {
-                      _context3.next = 14;
+                      _context3.next = 17;
                       break;
                     }
 
                     return _context3.abrupt("return", false);
 
-                  case 14:
+                  case 17:
                     if (this.password) {
-                      _context3.next = 20;
+                      _context3.next = 23;
                       break;
                     }
 
-                    _context3.next = 17;
+                    _context3.next = 20;
                     return this.helper.getTranslate('PASSWORD_EMPTY');
 
-                  case 17:
+                  case 20:
                     _error3 = _context3.sent;
                     this.passwordError = _error3;
                     return _context3.abrupt("return", false);
 
-                  case 20:
+                  case 23:
                     if (this.password1) {
-                      _context3.next = 26;
+                      _context3.next = 29;
                       break;
                     }
 
-                    _context3.next = 23;
+                    _context3.next = 26;
                     return this.helper.getTranslate('PASSWORD_EMPTY');
 
-                  case 23:
+                  case 26:
                     _error4 = _context3.sent;
                     this.passwordError1 = _error4;
                     return _context3.abrupt("return", false);
 
-                  case 26:
+                  case 29:
                     if (!(this.password1 != this.password)) {
-                      _context3.next = 32;
+                      _context3.next = 35;
                       break;
                     }
 
-                    _context3.next = 29;
+                    _context3.next = 32;
                     return this.helper.getTranslate('PASSEORD_DIFFERENT');
 
-                  case 29:
+                  case 32:
                     _error5 = _context3.sent;
                     this.passwordError1 = _error5;
                     return _context3.abrupt("return", false);
 
-                  case 32:
+                  case 35:
                     this.mnemonicError = "";
                     return _context3.abrupt("return", true);
 
-                  case 34:
+                  case 37:
                   case "end":
                     return _context3.stop();
                 }
@@ -699,13 +699,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     WalletImportPage.ctorParameters = function () {
       return [{
-        type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]
+        type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]
       }, {
-        type: _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_4__["HelperService"]
+        type: _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__["HelperService"]
       }, {
-        type: _providers_global_global_service__WEBPACK_IMPORTED_MODULE_3__["GlobalService"]
+        type: _providers_global_global_service__WEBPACK_IMPORTED_MODULE_2__["GlobalService"]
       }, {
-        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["NavController"]
+        type: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["NavController"]
+      }, {
+        type: _providers_wallet_wallet_service__WEBPACK_IMPORTED_MODULE_6__["WalletService"]
       }];
     };
 
@@ -717,7 +719,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./wallet-import.page.scss */
       "./src/app/pages/wallet-import/wallet-import.page.scss")).default]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_4__["HelperService"], _providers_global_global_service__WEBPACK_IMPORTED_MODULE_3__["GlobalService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["NavController"]])], WalletImportPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__["HelperService"], _providers_global_global_service__WEBPACK_IMPORTED_MODULE_2__["GlobalService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["NavController"], _providers_wallet_wallet_service__WEBPACK_IMPORTED_MODULE_6__["WalletService"]])], WalletImportPage);
     /***/
   }
 }]);

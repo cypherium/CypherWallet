@@ -29,7 +29,7 @@ export class WalletPage implements OnInit {
     ifShowPasswordPrompt = false;
     cancelPrompt = null;
     confirmPrompt = null;
-
+    interval = null;
 
     constructor(
         private router: Router,
@@ -53,7 +53,13 @@ export class WalletPage implements OnInit {
     async ionViewDidEnter() {
         console.log("wallet ngoninit +++++++++...");
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex || 0] || {};
-        console.log(this.wallet)
+        console.log(this.wallet);
+        this.interval = setInterval(() => {
+            // this.getWalletInfo(this.wallet.addr);
+            this.web3.getCphBalance(this.wallet.addr).then(amount => {
+                this.amount = amount;
+            });
+        }, 10000);
         this.computeValue();
     }
 
@@ -168,7 +174,20 @@ export class WalletPage implements OnInit {
 
     async getWalletInfo(addr) {
         this.amount = await this.web3.getCphBalance(addr);
-        // this.web3.getCphBalance(addr);
+    }
+
+    ngOnDestroy() {
+        if (this.interval) {
+            clearInterval(this.interval);
+            this.interval = null;
+        }
+    }
+
+    ionViewWillLeave() {
+        if (this.interval) {
+            clearInterval(this.interval);
+            this.interval = null;
+        }
     }
 
     toggleWallet(index, wallet) {

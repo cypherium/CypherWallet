@@ -47,6 +47,8 @@ export class HelperService {
             // name: w.walletName || this.global.projectName + '-wallet-' + w.address.slice(-4),
             name: w.name || this.global.projectName + '-' + w.address.slice(-4),
             addr: w.address,
+            mnemonic: w.mnemonic,
+            privateKey: w.privateKey,
             keystore: w.keystore
         };
         this.global.gWalletList.unshift(wallet);
@@ -274,7 +276,7 @@ export class HelperService {
      * 显示提示信息
      * 建议优先调用 NativeService.toast
      */
-    toast(message: string = '操作成功', duration: number = 2500, position: 'top' | 'bottom' | 'middle' = 'middle'): void {
+    toast(message: string = '操作成功', duration: number = 2500, position: 'top' | 'bottom' | 'middle' = 'bottom'): void {
         const opts = {
             message, duration,
             color: 'dark',

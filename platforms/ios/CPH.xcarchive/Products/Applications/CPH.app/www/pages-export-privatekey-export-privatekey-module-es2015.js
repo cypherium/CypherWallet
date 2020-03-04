@@ -122,8 +122,11 @@ let ExportPrivatekeyPage = class ExportPrivatekeyPage {
         }, 500);
     }
     copyKeystore() {
-        this.native.copy(this.privateKey);
-        this.helper.toast("Keystore已经复制到剪贴板");
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            this.native.copy(this.privateKey);
+            let info = yield this.helper.getTranslate('KEYSTORE_COPYIED_SUCCRRF');
+            this.helper.toast(info);
+        });
     }
     exportKeystoreToMiner() {
         this.ifShowPasswordPrompt = false;

@@ -119,8 +119,8 @@ export class ExportMnemonicPage implements OnInit {
             if (ret.flag) {
                 this.ifShowPasswordPrompt = false;
                 this.ifShowLoading = false;
-                //根据私钥生成助记词    
-                this.wallet = this.helper.generateMnemonicWallet(ret.privateKey);
+                //根据私钥生成助记词，暂时从本地缓存取，后续修改ethereumjs-wallet
+                // this.wallet = this.helper.generateMnemonicWallet(ret.privateKey);
                 this.mnemonicList = this.wallet.mnemonic.split(" ");
                 return;
             } else {

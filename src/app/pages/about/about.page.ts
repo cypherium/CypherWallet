@@ -70,6 +70,8 @@ export class AboutPage implements OnInit {
     }
 
     openTelegram() {
-        window.open(`https://t.me/cypherium_supergroup`);
+        // window.open(`https://t.me/cypherium_supergroup`);
+        this.native.openUrlBySystemBrowser("https://t.me/cypherium_supergroup");
+        // this.native.openUrlBySystemBrowser("tg://resolve?domain=cypherium_supergroup");
     }
 }

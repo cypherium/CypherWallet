@@ -226,8 +226,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "copyKeystore",
         value: function copyKeystore() {
-          this.native.copy(this.privateKey);
-          this.helper.toast("Keystore已经复制到剪贴板");
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
+          /*#__PURE__*/
+          regeneratorRuntime.mark(function _callee() {
+            var info;
+            return regeneratorRuntime.wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    this.native.copy(this.privateKey);
+                    _context.next = 3;
+                    return this.helper.getTranslate('KEYSTORE_COPYIED_SUCCRRF');
+
+                  case 3:
+                    info = _context.sent;
+                    this.helper.toast(info);
+
+                  case 5:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee, this);
+          }));
         }
       }, {
         key: "exportKeystoreToMiner",

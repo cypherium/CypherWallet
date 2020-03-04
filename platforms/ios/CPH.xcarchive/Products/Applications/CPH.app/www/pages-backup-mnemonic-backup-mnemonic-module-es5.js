@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>{{ 'BACKUP_MNEMONIC' | translate }}</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div class=\"main\">\n        <div class=\"tips\" translate=\"\">CLICK_MNEMONIC</div>\n        <div class=\"textarea clear\">\n            <div class=\"word\" *ngFor=\"let mnemonic of backupList\">{{ mnemonic }}</div>\n        </div>\n\n        <div class=\"mnemonic-grid clear\">\n            <div class=\"grid\" tappable (click)=\"selectMnemonic(mnemonic)\"\n                [ngClass]=\"backupList.indexOf(mnemonic) > -1 ? 'active' : ''\" *ngFor=\"let mnemonic of mnemonicList\">\n                {{mnemonic}}</div>\n        </div>\n    </div>\n\n    <div class=\"confirm-button bottom-button\" tappable (click)=\"verifyNmemonic()\"\n        [ngClass]=\"backupList.length == mnemonicList.length ? '' : 'disabled'\" translate>VERIFY\n    </div>\n\n</ion-content>";
+    __webpack_exports__["default"] = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>{{ 'BACKUP_MNEMONIC' | translate }}</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div class=\"main\">\n        <div class=\"tips\" translate=\"\">CLICK_MNEMONIC</div>\n        <div class=\"textarea clear\">\n            <div class=\"word\" *ngFor=\"let item of backupList\">{{ item.mnemonic }}</div>\n        </div>\n\n        <div class=\"mnemonic-grid clear\">\n            <div class=\"grid\" tappable (click)=\"selectMnemonic(mnemonic, i)\"\n                [ngClass]=\"isSelect(mnemonic, i) > -1 ? 'active' : ''\" *ngFor=\"let mnemonic of mnemonicList; let i = index\">\n                {{mnemonic}}</div>\n        </div>\n    </div>\n\n    <div class=\"confirm-button bottom-button\" tappable (click)=\"verifyNmemonic()\"\n        [ngClass]=\"backupList.length == mnemonicList.length ? '' : 'disabled'\" translate>VERIFY\n    </div>\n\n</ion-content>";
     /***/
   },
 
@@ -247,16 +247,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ngOnInit() {}
       }, {
         key: "selectMnemonic",
-        value: function selectMnemonic(mnemonic) {
-          var index = this.backupList.indexOf(mnemonic);
+        value: function selectMnemonic(mnemonic, i) {
+          // let index = this.backupList.indexOf(mnemonic);
+          var index = this.isSelect(mnemonic, i);
 
           if (index > -1) {
             this.backupList.splice(index, 1);
           } else {
-            this.backupList.push(mnemonic);
+            this.backupList.push({
+              mnemonic: mnemonic,
+              i: i
+            });
           }
 
           console.log(this.backupList);
+        }
+      }, {
+        key: "isSelect",
+        value: function isSelect(mnemonic, i) {
+          return this.backupList.findIndex(function (item) {
+            return item.mnemonic === mnemonic && item.i === i;
+          });
         }
       }, {
         key: "verifyNmemonic",
@@ -280,7 +291,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       break;
                     }
 
-                    if (!(mnemonicList[i] != this.backupList[i])) {
+                    if (!(mnemonicList[i] != this.backupList[i].mnemonic)) {
                       _context.next = 8;
                       break;
                     }

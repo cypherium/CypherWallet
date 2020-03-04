@@ -71,7 +71,7 @@
         <param name="ios-package" value="CDVBarcodeScanner" />
     </feature>
     <name>CPH</name>
-    <description>CPH Mining</description>
+    <description>CPH Wallet</description>
     <author email="hi@ionicframework.com" href="http://ionicframework.com/">CPH Development Team</author>
     <content src="index.html" />
     <access origin="*" />
@@ -84,6 +84,8 @@
     <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
         <string>To scan barcodes</string>
     </edit-config>
+    <access launch-external="yes" origin="tel:*" />
+    <access launch-external="yes" origin="mailto:*" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <icon height="57" src="resources/ios/icon/icon.png" width="57" />

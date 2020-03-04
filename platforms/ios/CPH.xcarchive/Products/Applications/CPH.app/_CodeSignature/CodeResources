@@ -6,15 +6,15 @@
 	<dict>
 		<key>AppIcon60x60@2x.png</key>
 		<data>
-		kZUV+n05Yf4NRTZ2d7cSGbj3LQ8=
+		YIXd05GW/oHi9o9DXJvUyNMW9Ys=
 		</data>
 		<key>AppIcon76x76@2x~ipad.png</key>
 		<data>
-		ETwhS9Ge97uKaequakwyEf41Yfc=
+		nMnfXA5YXjNbPvna7F8LmJPnL3g=
 		</data>
 		<key>Assets.car</key>
 		<data>
-		jhN9gtAbEpu6COdfvPz562r7ad4=
+		FJ1tb924neKpwRiekZkN8WBYp2w=
 		</data>
 		<key>CDVBarcodeScanner.bundle/beep.caf</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib</key>
 		<data>
-		9Hhx9stRc1PdDNr7pPtItEKWUjc=
+		ay2JZecyf9kTAFSSKq4sjthv6yA=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib</key>
 		<data>
-		PQJZTW7ZB+xbQvuvLkCNLaAYqUY=
+		l7ni8FmLV0EzjK35tYHfd2POg6Q=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -46,15 +46,15 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-13.0+.nib</key>
 		<data>
-		Djpn7feVyhmUz348JgROcBS1d9c=
+		Qq457cj6hioMtUXr/R+ZpkrTJ3g=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib</key>
 		<data>
-		VBSbnL62o7VCbYB8LnDO2JA8eCw=
+		Hiy848iHtjkFfsyoNMnlMDnTAcc=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		TiqkAB5HwegiOEALdNHOOH/Fcy4=
+		LdUOAmgciWC43BjTUTo8404dpUc=
 		</data>
 		<key>LaunchImage-1100-Landscape-2436h@3x.png</key>
 		<data>
@@ -130,11 +130,11 @@
 		</data>
 		<key>MainViewController.nib/objects-13.0+.nib</key>
 		<data>
-		mGQ+i24FS9Ei0CqqxcoJ8PS0Wac=
+		Cstekz91hWkpvjNVqGgDnE3GE58=
 		</data>
 		<key>MainViewController.nib/runtime.nib</key>
 		<data>
-		KVYCx7qJW+j2MoivHK8VEU3oqsM=
+		SjwmWOBjMBNprCkSnbUb35uhqyg=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -142,19 +142,19 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		0OZdDiZeAYdTFasOIGMIDQanK1M=
+		GoKlAB0jA6oB+BtOo5yhBPeRjRM=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		XUAEubSRqrE51EIlVAxVy+RdhSk=
+		PmxkxGCfgBlgvYf6oF7n8HkauRQ=
 		</data>
 		<key>scannerOverlay.nib/objects-13.0+.nib</key>
 		<data>
-		ytDjTWPuB7fSR9fd20JjTkT/dCI=
+		qseaOfUKfK++cJo/gMpXyY0Kw80=
 		</data>
 		<key>scannerOverlay.nib/runtime.nib</key>
 		<data>
-		OLg3gIITMBBPHbSh3e1kNLuwyVk=
+		aswb504sxoHB1ZobjDfi/32EnTE=
 		</data>
 		<key>www/0-es2015.js</key>
 		<data>
@@ -1414,11 +1414,11 @@
 		</data>
 		<key>www/assets/i18n/cn.json</key>
 		<data>
-		KHrNts2OvunYrGUalURDiMkTqhM=
+		NTGnKGIo+iVlYQM2gyOOKRfLv4g=
 		</data>
 		<key>www/assets/i18n/en.json</key>
 		<data>
-		tep4kv+cPHLZSTzF1roRyXA+leo=
+		OjuLYK4qWuI7z5S9un0HLUJFxXY=
 		</data>
 		<key>www/assets/icon/favicon.png</key>
 		<data>
@@ -1434,7 +1434,7 @@
 		</data>
 		<key>www/assets/imgs/back.svg</key>
 		<data>
-		C44bwLfk8NdziAAnXoynmnmtdGo=
+		b6cQ/uZ3OqIlJdV9S6YTtBRdmUA=
 		</data>
 		<key>www/assets/imgs/browser.svg</key>
 		<data>
@@ -1482,7 +1482,7 @@
 		</data>
 		<key>www/assets/imgs/logo.svg</key>
 		<data>
-		x3/2Zm97re6OoSDgZnB0+YbpGr8=
+		bFzCtk0y0gD3jZTnZASsDGaMqUs=
 		</data>
 		<key>www/assets/imgs/menu.svg</key>
 		<data>
@@ -1574,7 +1574,7 @@
 		</data>
 		<key>www/back.svg</key>
 		<data>
-		C44bwLfk8NdziAAnXoynmnmtdGo=
+		b6cQ/uZ3OqIlJdV9S6YTtBRdmUA=
 		</data>
 		<key>www/browser.svg</key>
 		<data>
@@ -1686,15 +1686,15 @@
 		</data>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84-es2015.js</key>
 		<data>
-		7wCdAAkgJ5BQvDmHByUU7TbWGSA=
+		7iElqT/3h5bA7vK/6iBrjGXJOTQ=
 		</data>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84-es2015.js.map</key>
 		<data>
-		sLi/NtkNO4E7CR6gsO5pkjwIj4w=
+		FHGjsVsYiZapmfOPBYabU86rCGg=
 		</data>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84-es5.js</key>
 		<data>
-		Rv2tl5jQbJCdheH34xaCBzcuGHE=
+		mGWwBdj0c/P4piN76YA00S2p/vQ=
 		</data>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84-es5.js.map</key>
 		<data>
@@ -1715,6 +1715,22 @@
 		<key>www/default~pages-export-keystore-export-keystore-module~pages-export-privatekey-export-privatekey-modul~7daa9f50-es5.js.map</key>
 		<data>
 		HTrPBQ7fy8hcxHKpLnTgVx31g0o=
+		</data>
+		<key>www/default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module-es2015.js</key>
+		<data>
+		+Qu9zb1uXPCosTt24ikq+7+xSXI=
+		</data>
+		<key>www/default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module-es2015.js.map</key>
+		<data>
+		Fg6YWSK15tnXhS1R2fBbtTpnlz8=
+		</data>
+		<key>www/default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module-es5.js</key>
+		<data>
+		jdC7cWzn83RnqAVMH7IJ2wA7yfo=
+		</data>
+		<key>www/default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module-es5.js.map</key>
+		<data>
+		yLVG7Cx2GiWOAI/cGhdyo8TlzSY=
 		</data>
 		<key>www/dollar.svg</key>
 		<data>
@@ -1858,19 +1874,19 @@
 		</data>
 		<key>www/main-es2015.js</key>
 		<data>
-		es8WnW2cw+TiU60ZxR46bc74OH4=
+		BePeTEGPa9dBm4mDLHroGo2CafM=
 		</data>
 		<key>www/main-es2015.js.map</key>
 		<data>
-		A+iPhFs5Yv12ORyuNJKW2N9DlGk=
+		NY+n0xIFGQEVXy9v9E1jW8JWSrg=
 		</data>
 		<key>www/main-es5.js</key>
 		<data>
-		8jTDAm3MQ+cLO94iJ7JOVohTHfI=
+		nXWv/2Kd4zXhTvA9hUG9TSsTC0k=
 		</data>
 		<key>www/main-es5.js.map</key>
 		<data>
-		To3bMi41ZL5nY5gCrk9auSxmLe4=
+		1ez1/24YNJKZLKoxtsXhAy2tX1E=
 		</data>
 		<key>www/md-transition-f444ed6d-js-es2015.js</key>
 		<data>
@@ -1898,35 +1914,35 @@
 		</data>
 		<key>www/pages-about-about-module-es2015.js</key>
 		<data>
-		kfjli7B7SauWkSDagtHBQ3Z5cPQ=
+		gAaAvzrvuJTXeRN1eiPEGprQQLo=
 		</data>
 		<key>www/pages-about-about-module-es2015.js.map</key>
 		<data>
-		8kOfixqsBtz8gsghAX3FJQyfVdY=
+		SYeeXNOCPtEbaFeaUVhPno7rTjM=
 		</data>
 		<key>www/pages-about-about-module-es5.js</key>
 		<data>
-		ut4sMblQMMjy3OGyFWjqQyrt6sw=
+		h6ADQyhPyxSFIg1xCt7vvW6jpKc=
 		</data>
 		<key>www/pages-about-about-module-es5.js.map</key>
 		<data>
-		/5EDz5XCS4XSK57G6ILZA5QMKmg=
+		8I4IRDUxRFn6M/9S/BOgwgDeTU8=
 		</data>
 		<key>www/pages-backup-mnemonic-backup-mnemonic-module-es2015.js</key>
 		<data>
-		3xw1Ecvlos1M9k3/DmyDE/qj7rw=
+		VdnLDFgY5qom/IZpoIKi7zjTlqM=
 		</data>
 		<key>www/pages-backup-mnemonic-backup-mnemonic-module-es2015.js.map</key>
 		<data>
-		APXqwW1d3haheEalXAS2iDi5tSc=
+		RBjSWjopT8vqMO9qZbe5RV+dOkE=
 		</data>
 		<key>www/pages-backup-mnemonic-backup-mnemonic-module-es5.js</key>
 		<data>
-		bqwYGZ0FgebQXejmGPQfKrDsuAw=
+		ULXEssITwViS3qsJ/+UdEP/pT9g=
 		</data>
 		<key>www/pages-backup-mnemonic-backup-mnemonic-module-es5.js.map</key>
 		<data>
-		iGrZrvBt3RuBi7ykyqT/oLYKRxQ=
+		SCn6dG69wGt2evYaGgjDyVhXM1s=
 		</data>
 		<key>www/pages-change-password-change-password-module-es2015.js</key>
 		<data>
@@ -1946,35 +1962,35 @@
 		</data>
 		<key>www/pages-cph-receive-cph-receive-module-es2015.js</key>
 		<data>
-		0cIaZbLuM1uZlt+1Qv4hGQOuHLo=
+		a4DlYOxehkAoM219Uk3SrTtHccY=
 		</data>
 		<key>www/pages-cph-receive-cph-receive-module-es2015.js.map</key>
 		<data>
-		YC+fotR923FaI/xD2+yVvU+kvuA=
+		ITMYIlQr16mcPrxTtoI+ZIKHcW4=
 		</data>
 		<key>www/pages-cph-receive-cph-receive-module-es5.js</key>
 		<data>
-		CPiFQ3XezlPOl3cScDW1dAei7+M=
+		koG8UI4i/dMCgtQytKFAh5t6ppQ=
 		</data>
 		<key>www/pages-cph-receive-cph-receive-module-es5.js.map</key>
 		<data>
-		VwmgnW/E9CFt8hVHWWO8JwJTQnA=
+		wOuomKMkeMcaYJbRLWcxk/sIWG4=
 		</data>
 		<key>www/pages-cph-send-cph-send-module-es2015.js</key>
 		<data>
-		afyHXhcBlkkgLPPJapareA3/uRA=
+		rvl0a0OR9w4ABsFHyAFhXwZWWl4=
 		</data>
 		<key>www/pages-cph-send-cph-send-module-es2015.js.map</key>
 		<data>
-		I6Aujh33mR3h+jsMWaDig6OWVbc=
+		6OXGpsLe6P/6XeEoxHP7wTkP2XU=
 		</data>
 		<key>www/pages-cph-send-cph-send-module-es5.js</key>
 		<data>
-		tpmq5bXjrZJa17zoeUb1/I4nfPA=
+		zoEbKpbQU8pPMJN9K2CY9ZLztAg=
 		</data>
 		<key>www/pages-cph-send-cph-send-module-es5.js.map</key>
 		<data>
-		ORDWXh6vv94WWFt0V9lPChdxi+g=
+		hzl+iy+NWD0S0hUgEq4ukbo9Js8=
 		</data>
 		<key>www/pages-export-keystore-export-keystore-module-es2015.js</key>
 		<data>
@@ -1994,35 +2010,35 @@
 		</data>
 		<key>www/pages-export-mnemonic-export-mnemonic-module-es2015.js</key>
 		<data>
-		mOR0iYAya0mFoCCTr1BIf8vN6so=
+		CT+pmI/8yucpw/jD7MZsDixOir8=
 		</data>
 		<key>www/pages-export-mnemonic-export-mnemonic-module-es2015.js.map</key>
 		<data>
-		qDgEPHbUGZKyr+jwb7a6gzrM9P0=
+		i70q3LL0HGGEEQidvZ4hQ67/KxQ=
 		</data>
 		<key>www/pages-export-mnemonic-export-mnemonic-module-es5.js</key>
 		<data>
-		P9kjAnUlXl7igs2al2niRH/eQmY=
+		+hUKE3eqU48GLVx+xB44SQS0nb4=
 		</data>
 		<key>www/pages-export-mnemonic-export-mnemonic-module-es5.js.map</key>
 		<data>
-		483GmNIEYACokVNDPdJegd+ScX4=
+		4XZ8MQCh9HW9K+Y3vpZlTTDYcqU=
 		</data>
 		<key>www/pages-export-privatekey-export-privatekey-module-es2015.js</key>
 		<data>
-		XnN/Nc7JVzluGSJi9EbAIV3dEqc=
+		AFVcoEYKkqJSfXiKMkAixs2uAZk=
 		</data>
 		<key>www/pages-export-privatekey-export-privatekey-module-es2015.js.map</key>
 		<data>
-		HfwYU+UrDzvMcOUwdSUJLA8rlWo=
+		3GmYL3HATUIHk18X0VJrAu11iTs=
 		</data>
 		<key>www/pages-export-privatekey-export-privatekey-module-es5.js</key>
 		<data>
-		mHz4++R4RDDq/32s8j6xDIm5lbE=
+		T6YUM5cG9qTolL6kL4gvlsCv9zU=
 		</data>
 		<key>www/pages-export-privatekey-export-privatekey-module-es5.js.map</key>
 		<data>
-		lVhrWShwPNsTwSewX+5Q4SoZIUE=
+		Re4DNiGPryjvXJWEfgV7GIXQ8qs=
 		</data>
 		<key>www/pages-language-toggle-language-toggle-module-es2015.js</key>
 		<data>
@@ -2090,35 +2106,35 @@
 		</data>
 		<key>www/pages-tabs-wallet-wallet-module-es2015.js</key>
 		<data>
-		CoJSmtDJQK/EUezmzF65fEyzZEU=
+		rs9qMbmVP1HDrYm/dXV1v1j7hbA=
 		</data>
 		<key>www/pages-tabs-wallet-wallet-module-es2015.js.map</key>
 		<data>
-		Hvdqw1WijirLrhP+qucMMZR0ga4=
+		4GCiF/ATg2Hef995SjZ1lxJc7zM=
 		</data>
 		<key>www/pages-tabs-wallet-wallet-module-es5.js</key>
 		<data>
-		+uuXxkmKAa8cQSKTskmJwKh29q4=
+		3kLD6XCWzDb2s9nOZIGqVv+KRmo=
 		</data>
 		<key>www/pages-tabs-wallet-wallet-module-es5.js.map</key>
 		<data>
-		zOWCZv2kwLa2Jskm5pEayp4fVIs=
+		tvSZHDq9mab5zznyePoZdJ+AoP0=
 		</data>
 		<key>www/pages-transaction-result-transaction-result-module-es2015.js</key>
 		<data>
-		8IxVqvX1rvI+giCb+BoTyCxDbOY=
+		hwnddYE7yFP4YGmirRP3RIkEW9E=
 		</data>
 		<key>www/pages-transaction-result-transaction-result-module-es2015.js.map</key>
 		<data>
-		OYmMV76PsA+N9SwEhmdDQvjxdqk=
+		Yh9PLXCih1SROF+ylZN/Wo1lyyI=
 		</data>
 		<key>www/pages-transaction-result-transaction-result-module-es5.js</key>
 		<data>
-		UbTwXTvz++0juJqf5LBAo2bcj3Y=
+		3Vzqd11W54lxF2TUUFFsW0ONvac=
 		</data>
 		<key>www/pages-transaction-result-transaction-result-module-es5.js.map</key>
 		<data>
-		nTqgEEM8KSHAaalzAT/6vfVBsaU=
+		vMKVDximgJ+qzbeRons3wziPrCQ=
 		</data>
 		<key>www/pages-value-unit-value-unit-module-es2015.js</key>
 		<data>
@@ -2154,51 +2170,51 @@
 		</data>
 		<key>www/pages-wallet-create-wallet-create-module-es2015.js</key>
 		<data>
-		hUxKsdZ/PUJvXutM41trBypzc+4=
+		VtojclIhVUiukFTtfcW1G0Oo7Hc=
 		</data>
 		<key>www/pages-wallet-create-wallet-create-module-es2015.js.map</key>
 		<data>
-		yktaYSLt6GVM4k1Vs73IieNNHcY=
+		0+Qzly+OWE8v+YRGEZupLIoowds=
 		</data>
 		<key>www/pages-wallet-create-wallet-create-module-es5.js</key>
 		<data>
-		vIDH1Z+rJfAGkXKPSEEkSufk9aU=
+		Wm1f5zlMQB4IxD1pKRgoeSxef2k=
 		</data>
 		<key>www/pages-wallet-create-wallet-create-module-es5.js.map</key>
 		<data>
-		+lA1zUJ3EHqCYnFC/qgHFsPnP70=
+		yxGoHhcOYPy/tFOldX3lJOYAupk=
 		</data>
 		<key>www/pages-wallet-detail-wallet-detail-module-es2015.js</key>
 		<data>
-		+lypAVUkwcRF90J8XN6E54uwJn4=
+		Sm2yyMsaHqdQWUEveshj9AnRFyY=
 		</data>
 		<key>www/pages-wallet-detail-wallet-detail-module-es2015.js.map</key>
 		<data>
-		nYbhtfSOpEDn3Z5FGDRYv8a5Fww=
+		hN3IUmTSJrso2RITTG8pD7Apw6g=
 		</data>
 		<key>www/pages-wallet-detail-wallet-detail-module-es5.js</key>
 		<data>
-		bkUoBEHgN7HHUAKM6abGkH6zYyo=
+		smh7nyCDAVvRDz+dNahTBW5BWC0=
 		</data>
 		<key>www/pages-wallet-detail-wallet-detail-module-es5.js.map</key>
 		<data>
-		y7+ZTD2ubtYAcvJD8PjtXerBz7c=
+		ztYk983nq1smEfDM+1YFgQnPFgk=
 		</data>
 		<key>www/pages-wallet-import-wallet-import-module-es2015.js</key>
 		<data>
-		mpZF9ObDzbnNJ2edfH4XJH2alqY=
+		Qfv89/04ZJP4HTWF4Bm6NtZpzrU=
 		</data>
 		<key>www/pages-wallet-import-wallet-import-module-es2015.js.map</key>
 		<data>
-		4e56vkNmygO2qhAY/9W8YmooHjo=
+		DnhlHO4+LydoQ4ERjCHzYFxVfe4=
 		</data>
 		<key>www/pages-wallet-import-wallet-import-module-es5.js</key>
 		<data>
-		p5aOrh0eFQKF8+CGBrPfYRPSE7A=
+		G/1oXJwPAAcVo0JB0tbZ6vjJgT0=
 		</data>
 		<key>www/pages-wallet-import-wallet-import-module-es5.js.map</key>
 		<data>
-		QA0RwHRLyzS7yhFcanczObbNYYs=
+		Rov9MVthhpbdh7kNOyLX5xpZ/e4=
 		</data>
 		<key>www/pages-wallet-name-wallet-name-module-es2015.js</key>
 		<data>
@@ -2318,19 +2334,19 @@
 		</data>
 		<key>www/runtime-es2015.js</key>
 		<data>
-		zFdK2yp3qYV36dsduT+0DuQeIcQ=
+		BgiJfDcA1DpSjsrI5q5FTZs3AKY=
 		</data>
 		<key>www/runtime-es2015.js.map</key>
 		<data>
-		X7rr90HLM5R3QewT1yt850IOeKM=
+		BV/FsU/tkSDKR+7gDNFSdIfgBb4=
 		</data>
 		<key>www/runtime-es5.js</key>
 		<data>
-		E/Jy5z9+wKVBV1Vg+w6zUkRBWgM=
+		Ze04TnUaGbZeFdiRlV1bWyakeqg=
 		</data>
 		<key>www/runtime-es5.js.map</key>
 		<data>
-		aLrD+aFzceYaRJona+/aarGWj+Y=
+		dVcIHiaXWgJbWWq7+XCO7jbEvAQ=
 		</data>
 		<key>www/scan-white.svg</key>
 		<data>
@@ -5283,21 +5299,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			T8ZqKdtAhjP4Iqy0vO1SSd2isgt4k7Loe7ftlzl1bkY=
+			xH5NLxdS3TKS1PagehQKu+8Q2Oi1yO0CNQnyRiwa1fo=
 			</data>
 		</dict>
 		<key>AppIcon76x76@2x~ipad.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			T2Y6BvFL0vIjltDi2efoP2f5OgW3aoqg97u4u77/9SQ=
+			aCQHGxIAHjD4vVZHc6QzlY+WG4vRAOxSp+TV0AIWpxs=
 			</data>
 		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4rGabueXZcN8+rQKIe3CQBgDlu4Ckt2XFXVyEhjRGqE=
+			76Z+0H+LWaBHYd0RlmU3maQuD1YaMd3mSaJky11oSv4=
 			</data>
 		</dict>
 		<key>CDVBarcodeScanner.bundle/beep.caf</key>
@@ -5332,14 +5348,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KunTOf5HUW33QPq41utbQqdS7NTNPMYmcRCX9dh8UXM=
+			qF9G8Lng8LwrKp4iEUuCdc1lJetxTcjCX+FcCH8HmN4=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			X8u35lh2acL0cmDZfu09pVT1FFEXNAUcWycybmMEwZQ=
+			GSKJYrWxWxvZhpt5dxdxAHx0rXqfI4Z3MCdbqputNIg=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -5353,14 +5369,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			DwaBIowHoH0TUTm+gJ6YqEAjwwfKaEvJPFLw7XRisfQ=
+			CG7qzI1XJrKu2lOWR04evyRD11iPRCEtT0jFRxRo0LA=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gNJJFWFcSZzl+RGL+AsrF+7bXKm6Fv1J2r4isPU20Aw=
+			uj/WsvrFL+aNnMowRz6lL3XUXxBcw0/ST1Fpw5bXddo=
 			</data>
 		</dict>
 		<key>LaunchImage-1100-Landscape-2436h@3x.png</key>
@@ -5493,42 +5509,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			tQIoV+e580RYQFT4+PUV0vO+HSMs8qgkKr67vqhXXe8=
+			UmBmqPiwUJRT7TBSvk8qn1G1guuIxyvAMLGIZ7PutHE=
 			</data>
 		</dict>
 		<key>MainViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HBPf2myVaWZnIvIMsEvbm6AHv9euqhJYzypuxRu+N58=
+			swKymIzmBNcjIlWthqceCxy4Oc6W6OJdTYL0X107x7Y=
 			</data>
 		</dict>
 		<key>config.xml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4Q62OAMCeKOElynXdjosB85E3DJvg/5JSGmGBE/fdug=
+			Vy3f8hBXUysBA0rP5sdVsmb45hxMT46cASyHBgRgfoQ=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iZU6jq8Lx8/dzmgYDfQyf1YoHduihD9rrDFnJTi2vFc=
+			9S/46uVKCbLAHiauHOtN0EnFflanH397yxqs9Ng9N8Q=
 			</data>
 		</dict>
 		<key>scannerOverlay.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IYgL4MxVHWu15r1ldEYIc4bZNpJZogHte9bjqgj2m9g=
+			h5pXn6/UnL5AJHffxUCr828fSSvcAVt1+PjYeUkvb3U=
 			</data>
 		</dict>
 		<key>scannerOverlay.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6lC4igvXTGyuUDOZFEj3HRySZcm7naMQ2gfV27knUKU=
+			gWs5EHOlgEyRaxrezEXCioYcASlbmXyVlnXFE4/WUXY=
 			</data>
 		</dict>
 		<key>www/0-es2015.js</key>
@@ -7733,14 +7749,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kUcbGbOZhhDX8DUgfhTlAnBDqjot3NH3EO4k9SVfP48=
+			DRHNwbjOmH9Ohme9EhBjqmS48QUhAngRg6HrCf75m1Q=
 			</data>
 		</dict>
 		<key>www/assets/i18n/en.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			P3/jl8FmPvi7n7mGhSuFeD/4cxBURLRtz3mKNF/hKQ4=
+			TTcX3M48kyyF31Jf0qhD8so9A1438HEg5m64rk4jO2c=
 			</data>
 		</dict>
 		<key>www/assets/icon/favicon.png</key>
@@ -7768,7 +7784,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/zq3uC7v5N0I1K6WMRi6aBNoGrWQx+eQVFHY5pjZvMw=
+			imOtxKFjE1FJyoxSaz7eXpxywH3RaXhqoXw71yAaJ1g=
 			</data>
 		</dict>
 		<key>www/assets/imgs/browser.svg</key>
@@ -7852,7 +7868,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AHdZrlE6ioNLNK42nugIIks3g0zl4hVENzAPYJeOgNo=
+			e47lWKOMqE38mVhoOKUHMbzwhyGf8xI2JcvdCs67i5Q=
 			</data>
 		</dict>
 		<key>www/assets/imgs/menu.svg</key>
@@ -8013,7 +8029,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/zq3uC7v5N0I1K6WMRi6aBNoGrWQx+eQVFHY5pjZvMw=
+			imOtxKFjE1FJyoxSaz7eXpxywH3RaXhqoXw71yAaJ1g=
 			</data>
 		</dict>
 		<key>www/browser.svg</key>
@@ -8209,21 +8225,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yEyV2/PRHsZQIlLrTap5hTOcqjF8CvNeADRIe4O+oaw=
+			zgsVTTBb1j8NVXNSM6oRgvXpFsrAQ+H5gAnEULvSrms=
 			</data>
 		</dict>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V8Gbmr7/WApCel1q+P7rg0//Zd0pMR+kh7AP2QSOv58=
+			i1JS9NKKdDPu4QT6S8+m/34kcG9xlDi4KaggOBEnOAE=
 			</data>
 		</dict>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WahQrptw2ipuOh94OwUmsFvu5qRyvY/IxnUGGHxq5dY=
+			msb2hhD2ShZuWirG/dXKyoa+XzwE0jfpHO1b7Rt0eKc=
 			</data>
 		</dict>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84-es5.js.map</key>
@@ -8259,6 +8275,34 @@
 			<key>hash2</key>
 			<data>
 			5mqie3GXsakkIAjF6w+vXFV2PCyOmmmN5pehSjdTTxw=
+			</data>
+		</dict>
+		<key>www/default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module-es2015.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8YkGPUuf/EGTJs7IjJswExbPL/4Gr0VeqbfEAzkJgKQ=
+			</data>
+		</dict>
+		<key>www/default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module-es2015.js.map</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8LGFUiRGKIyz7r7WL2V0V5IAuWI5kmqOVi7ubL263ak=
+			</data>
+		</dict>
+		<key>www/default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module-es5.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Xd8Ce3pmAOEQqHxtHetMf3k1DNOOVE3TXf87HN5xjdA=
+			</data>
+		</dict>
+		<key>www/default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module-es5.js.map</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			W/2oEjmOST6D4xWnTlucULa4DFcgHpnt2o0ZoQI0wvM=
 			</data>
 		</dict>
 		<key>www/dollar.svg</key>
@@ -8510,28 +8554,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RZL3KUSymSr/1HfDylzMZ5k5uuzZKT8zY2G3Epe4CY8=
+			GF+QMPhBuAVEsGVJclT3lvlL6sOn+/whN60QrnUdQt0=
 			</data>
 		</dict>
 		<key>www/main-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gY+5RbdCGUJNfemE0b8/DppXbU6W5nbrMyCmKTNM0lQ=
+			b3pybucN9RwdBCMjy9qltRzc9cmBzfSMrKSAn8FVzFc=
 			</data>
 		</dict>
 		<key>www/main-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+/CIY6UNZM9ZElTV6BglFmEir3O61vznMyx36Et3/vg=
+			l+Ief3zn2tO4tk/gCtHBlW0AK4UEfOTm8G8vv3K8rFs=
 			</data>
 		</dict>
 		<key>www/main-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fxHnAjEuoVi/1L+H5ec+NXo5Jiv1hhxhoYhFWARfUyw=
+			RQunNd8qr53bXkEb0doEuNVBv3QjYsqjcKqYBQoorQ4=
 			</data>
 		</dict>
 		<key>www/md-transition-f444ed6d-js-es2015.js</key>
@@ -8580,56 +8624,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cCBeYGK1WGH9u0pF+GGKRLM3vVILtZVZzcmDbnsR4NI=
+			RACkcvPV3bgbU7W42A7Qjzju70bssWNkxBm1UX3dx5Q=
 			</data>
 		</dict>
 		<key>www/pages-about-about-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZT9fTQPJDu8LrmSPxq9Y96er8nKhdhFzhVVm9gj5LuY=
+			f8UFQPUQMYTetM2e2RIkTKPIAaxjrAIv+7+MTzaEajw=
 			</data>
 		</dict>
 		<key>www/pages-about-about-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XAcQdZEzECpFmDvddrtbBLorIaHhlXbea9ZLzMTNf9Y=
+			SFY+qq6o5PiyHk6UXqEOcylw5QK3QGVHAyqGJD175G8=
 			</data>
 		</dict>
 		<key>www/pages-about-about-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cVxCh6QbNP876idlvAwTMc7eMsRjKMa0Nguofrf9DsQ=
+			2p1fcwSuWxoQ73o0FdnPuCLR/IkhdJ+d6tXUbpBjb9E=
 			</data>
 		</dict>
 		<key>www/pages-backup-mnemonic-backup-mnemonic-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lTDfmXqz0eTEpEHaZnP2UZXBX+Ry5BVsJKDHT1XdrBE=
+			zZtmhsCM1TiPjxy+ujmQR+YT6EW9Gdz4SA6no7sziiM=
 			</data>
 		</dict>
 		<key>www/pages-backup-mnemonic-backup-mnemonic-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ENFKV6hRifUyJXsVnjzaiCbLwomCyRWoyowuNmDZSdA=
+			+P6AhJve+5nb2kgV3LdgEybXhJz4T9xOmLys3bt5amE=
 			</data>
 		</dict>
 		<key>www/pages-backup-mnemonic-backup-mnemonic-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wTupPjDGBK+RZ9QhCzl2th0XH/BRF0uVD07HSW6DazM=
+			Q8xIYxe0aAi3URWO6tsmK17aEip3d9GLT9ggooCXTlE=
 			</data>
 		</dict>
 		<key>www/pages-backup-mnemonic-backup-mnemonic-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fcGqn3wu/hJKSmmPmO+JgR9vI3QQE7zsJ55UgLndZxs=
+			E4IS6ZEMVdpQFXLHg94yh9vCLBXefA14CKB8SGjSu7o=
 			</data>
 		</dict>
 		<key>www/pages-change-password-change-password-module-es2015.js</key>
@@ -8664,56 +8708,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			TgLi/xozqF1SLWI53NakpQeY8lLv7S7nTsayhM+LXc8=
+			Hhy3kaM1MRaol2d6In7pjf5wjKMJIaglHtkzoe6ToTc=
 			</data>
 		</dict>
 		<key>www/pages-cph-receive-cph-receive-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nmcLIXZ2wVGA1RObaQGRNNqjf8Uyx4rti77LmXcyQs8=
+			OCxA0jRby43u8u9mAyxUoSvZacrN3V9JuW8rqGR/MOM=
 			</data>
 		</dict>
 		<key>www/pages-cph-receive-cph-receive-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+5akJIgggtHi0mCUI4pYmVw1hFnw4CDDYWMDyP1wZq8=
+			H7mjTmrOVbgGffVbclXO5AjCC8qcAewWq17M15ZOgfI=
 			</data>
 		</dict>
 		<key>www/pages-cph-receive-cph-receive-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pz6B54UTerfG2v+tdpgeAm3EanePtwCe0uyhjSUbvwY=
+			gXOl5Kd2w4Fb4PZzJeKhDGvE+jEKkNd+UfaWJ4XAluA=
 			</data>
 		</dict>
 		<key>www/pages-cph-send-cph-send-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UrI45KnME7HpBJI0pa4Aj7Vntc6f5qdqnXV+ysrt9OY=
+			KNDnU92K+HBR1pWT1+oCMYctKPBbdm1vmCLKasBNpIg=
 			</data>
 		</dict>
 		<key>www/pages-cph-send-cph-send-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			n4Ebi0QZThzyETI+m+fSsmIx0u4+9qo6ehIuEdC8WSA=
+			K2Krl/8dmAvxmbBQOM42qAL5evwIkINgGOy4+ria/fc=
 			</data>
 		</dict>
 		<key>www/pages-cph-send-cph-send-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZfnuvsNXeMqLDnOsNGKxS6L+7Zut7Wjskzy6Y7JTz3w=
+			i9Z/eWSNHdymeo5IIdZDHBFDjTbotP2chB1Y/BXPdEY=
 			</data>
 		</dict>
 		<key>www/pages-cph-send-cph-send-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mlGcMaojw5DpN1t2T9w7Lkh7P/zy+RkGAG/SvobyJ0w=
+			NMAtqlnMv0428lipUA/J+qSDJZYV773ieXuJijPqn3I=
 			</data>
 		</dict>
 		<key>www/pages-export-keystore-export-keystore-module-es2015.js</key>
@@ -8748,56 +8792,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MCnXiTiMWw0fqn6s7ShB3DgoY0rugJEEWbOX3TNdnmw=
+			zAHq8hMs7aDqcDwlZKOi4nnRrScNgnoZvBzyXEh8vjY=
 			</data>
 		</dict>
 		<key>www/pages-export-mnemonic-export-mnemonic-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iOXH/T3hsCA6ZxcqU3mvqdjlyFNQPmsnw7gbXaD9sJA=
+			2gMqRSgwQWN/NwSWlYR9GyHYpzmF11UgpQ3VUw8XRxY=
 			</data>
 		</dict>
 		<key>www/pages-export-mnemonic-export-mnemonic-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7ADXUzYRYjfEU5UFvgYMtDCeh20HAY2nt6h6oAvfGPE=
+			34ipFulbby0H0nL4XNzwxOa84Z7HQL6CXQbIGrPqQ34=
 			</data>
 		</dict>
 		<key>www/pages-export-mnemonic-export-mnemonic-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D2nxZ286L2BCiC1CQ71xZpB+9Gqn2QNRrjSZHxA4j6o=
+			jGxC93I0+BnmxOwTP5z7YSn8nw1J2Y8KZ7xIO62pFDs=
 			</data>
 		</dict>
 		<key>www/pages-export-privatekey-export-privatekey-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z5xWrW4c9dcSy4ZoWp9C0WX2qjERGrxzDPE5Xrs2lXo=
+			e3nl3TAhppqjw4lqiOe0HOIcyZ+QqafTm2pc/Y3ETbc=
 			</data>
 		</dict>
 		<key>www/pages-export-privatekey-export-privatekey-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2Df/gVfGK2ZaUVANGq0iHnYU9cQN2XuB80C3FjMmaC0=
+			GqJq2RP/OEdjQ9NuTJFES3M1xv/tetV5wLqS6AN6b38=
 			</data>
 		</dict>
 		<key>www/pages-export-privatekey-export-privatekey-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WaqYC1G1U+bPKFAtn2Xr0Q8iBhF20tJD5vEdPZCyVpw=
+			w4S0GjMBS8llKDsIK/RzyOIjzpMEI5xh7l8S2aTQAWU=
 			</data>
 		</dict>
 		<key>www/pages-export-privatekey-export-privatekey-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9HH5MdB5ranE60eEzJ4f1vObt4hgcX8VyAuc3RxdENc=
+			MKcocJK8ngwWXWYYqiAIOu7n1bcqiu+M9KAG4eIh/Ec=
 			</data>
 		</dict>
 		<key>www/pages-language-toggle-language-toggle-module-es2015.js</key>
@@ -8916,56 +8960,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6F6liI9NDbxL5gu+rLk6Hx3o0ke07fF5pGQ9HxRV8jg=
+			KKUjWq0kPsaHj+OCZC6nOPe6y1clM3ErVLHj7/bzIMw=
 			</data>
 		</dict>
 		<key>www/pages-tabs-wallet-wallet-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gydxHqpIx5vBn162f+Nhm7KLX0x+p9eea2VrFk0wt30=
+			ETK7q+MudXoF3s3HoLeTPlmE8bY7GCAMkoUkZskrdsA=
 			</data>
 		</dict>
 		<key>www/pages-tabs-wallet-wallet-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3jj4WuHVCOaF3xm8mRD9+XxaIMgeQZvIDkHc59UPKEQ=
+			afAaQ7vPKRVG6TIBNJ6Ov+gAcDiTrDymkfHTnmJhc1o=
 			</data>
 		</dict>
 		<key>www/pages-tabs-wallet-wallet-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZKOtdObUpvPJHCB5Q57IEup1JSbwmvJeR2brpHvz/JU=
+			oVBb2X5I2xo2+jrVWhpE0EJHtaZOXnleLsbxp9gjc4w=
 			</data>
 		</dict>
 		<key>www/pages-transaction-result-transaction-result-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DGfD/TVnJcUJlv8YD6cG0Km7/jRDaRrd5HWwge6xSS8=
+			zuSozJGUR3YM7xxOS/IyEIbNTP3HrJi7Xsur1r+oewI=
 			</data>
 		</dict>
 		<key>www/pages-transaction-result-transaction-result-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WhXQMB23lgCbrrb8g9pGATurx+DHdnFYlNounR3rdXo=
+			64kUbSPcjwkn9yYeydlVfM8sCu/GzoGXLKFP/CeaeaI=
 			</data>
 		</dict>
 		<key>www/pages-transaction-result-transaction-result-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			W489v5+dqPtqRz8UqE7iuoLQ1khQP/zdI/mUQGZD6cY=
+			H0NfK/WgptFgISDdVuxlMVwLEwxGGekvOuXfV2Zzzy0=
 			</data>
 		</dict>
 		<key>www/pages-transaction-result-transaction-result-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+nt9qPbh/NVgOxJjbyW55a6Fjo3wsKGHM6KxRgHG2x8=
+			Bswxe9U4NrCgaRIM8AKr+36BBsQDDjIItgCShq9nGXE=
 			</data>
 		</dict>
 		<key>www/pages-value-unit-value-unit-module-es2015.js</key>
@@ -9028,84 +9072,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fApubz0H5VsVoex6/GAZI9DoqY1YXm/XMK9LmZAhtBg=
+			/R3T4xCpZErIMU6IZuBpOkAa7gDG6/6E1FX8L3e/5mE=
 			</data>
 		</dict>
 		<key>www/pages-wallet-create-wallet-create-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1Z6vQFpIFRTY4675lA6eM1t6n8PP1O/6INYg8NB4K3Q=
+			h2uXQQWz4uyxCv7AKKZWIaVpk9k7NZCmHDCLGs3GVrM=
 			</data>
 		</dict>
 		<key>www/pages-wallet-create-wallet-create-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			M0rijarNVhKBxox+d8PuOStaigDpRX46h48IA+Pg+Pw=
+			dMFXV/F2W4kMX4j0i+YgsfDmLqzba7nRoE0LVDZf+Uo=
 			</data>
 		</dict>
 		<key>www/pages-wallet-create-wallet-create-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SdzAm4ZRgQ53ZovicMaR2WQRarsxxQOAqN9RC9CUO6w=
+			XbBOYduLWQk6E0mZWOsEt8V2mRu4pSMDpZS1/2CECWA=
 			</data>
 		</dict>
 		<key>www/pages-wallet-detail-wallet-detail-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			G8+jpJ3zcLTABw3kL9G6/zOBNXP+N/wlqQQq46BI0s8=
+			GbFy2Xwi48YxXSr4OL6TjSfDeJ2RWdUuGroHgQTKxZU=
 			</data>
 		</dict>
 		<key>www/pages-wallet-detail-wallet-detail-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZudFWZCl4kNLXZKiagcvyRq3GOjfBwAA9dG0XRiGB8Q=
+			pHElVDe5O9Plzz4g55nZ98r2WUkwjSDcXnXKVSM/hiw=
 			</data>
 		</dict>
 		<key>www/pages-wallet-detail-wallet-detail-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4qxhJYKB8MMPsgXtX5HPMCrLugODs1rrXUvzallenEs=
+			5Gfdck6f6mFzsztr7F8lDduplQwigVAzo74eEwY7MJ4=
 			</data>
 		</dict>
 		<key>www/pages-wallet-detail-wallet-detail-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YXyHUMzjIAqGU5+SV1HLTBXuwQn7Vn64nV8ewVCGUUM=
+			KoropihHQFXkJ31WqZ7l/6ZyVfCo/74B/ZaAh3lZNu8=
 			</data>
 		</dict>
 		<key>www/pages-wallet-import-wallet-import-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			H14biBB+RcH5iQztb0FX6lYGTmJq5Yw+TtgbBAqgYxk=
+			fqsWCuWrZcsyHPW+le3rejqbv5upUvUwdXLspIReBbU=
 			</data>
 		</dict>
 		<key>www/pages-wallet-import-wallet-import-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			BVXy37VUpyScIVf+eZ6MDTTTUj8lQZ7sbNEGWZ0/VYM=
+			XUQKJ0Qb3Kqzx41TqKA2LC7AiZl8Qtvn6Y2KZlB+G2M=
 			</data>
 		</dict>
 		<key>www/pages-wallet-import-wallet-import-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			b3NtsvBh/cm2MWJbEXzNT22EMnss2UN8RrRG2qOKFAU=
+			C/Fo+Ucwum+KDcdE5F0/fDbc9dDucvfX/QBslDcSMZs=
 			</data>
 		</dict>
 		<key>www/pages-wallet-import-wallet-import-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hF1ONG+XcdilBKP7ReIsPz5MWxw2xdIUwgpZawZ/KaM=
+			jtMuvTpqUj8F3JurNR2p6YtXUTb4wQk71VGZLqMjn30=
 			</data>
 		</dict>
 		<key>www/pages-wallet-name-wallet-name-module-es2015.js</key>
@@ -9315,28 +9359,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			l9M/RJKZwwIdwqMZHk1SskdjyIcqQyPo7UMKbahvEHk=
+			i/bzGGTXSCGNRHVgIzaWY3KGr4TS9eS7QmFwAe7VUig=
 			</data>
 		</dict>
 		<key>www/runtime-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Uq8KgOadGS5y5dCMYecR2nXrE4V2l8Xc7KmTn6cNg2g=
+			pu7gtciUSXwEs3oaZrr8pCF4LWGK6DWc8yxiLiTmDT0=
 			</data>
 		</dict>
 		<key>www/runtime-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Z9LU2xj6RdYy/Qs867O0hhAzEMxhhv/FvpqF6IMNyu4=
+			ro2FyvFiFwQQHXf83kDHulnuycFdPX0MpOxcgIfJumI=
 			</data>
 		</dict>
 		<key>www/runtime-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZzJhmqaWpwKUnZbrOJeIyONq7u5X2efEhBX0+3AFXrM=
+			oMFQxoHVOzGC/+4Xyz62qC7UjR1DkQcy4FjO3jcsHMQ=
 			</data>
 		</dict>
 		<key>www/scan-white.svg</key>

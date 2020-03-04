@@ -49,7 +49,7 @@
         <param name="android-package" value="com.ionicframework.cordova.webview.IonicWebView" />
     </feature>
     <name>CPH</name>
-    <description>CPH Mining</description>
+    <description>CPH Wallet</description>
     <author email="hi@ionicframework.com" href="http://ionicframework.com/">CPH Development Team</author>
     <content src="index.html" />
     <access origin="*" />

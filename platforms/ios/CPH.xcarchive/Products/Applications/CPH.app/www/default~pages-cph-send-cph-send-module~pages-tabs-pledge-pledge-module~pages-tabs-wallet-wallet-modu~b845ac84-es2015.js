@@ -19818,7 +19818,7 @@ let AddCphEllipsisPipe = class AddCphEllipsisPipe {
             return '';
         }
         value = value.replace('0x', '');
-        return 'Cph' + value.slice(0, 8) + '...' + value.slice(-8);
+        return 'CPH' + value.slice(0, 8) + '...' + value.slice(-8);
     }
 };
 AddCphEllipsisPipe = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([

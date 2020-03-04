@@ -22,6 +22,7 @@ export class WalletDetailPage implements OnInit {
     blockHeight: any = "";
     more = false;
     loading = true;
+    interval = null;
 
     constructor(
         private global: GlobalService,
@@ -34,6 +35,25 @@ export class WalletDetailPage implements OnInit {
     ngOnInit() {
 
     }
+     getWalletInfo(addr) {
+         this.web3.getCphBalance(addr).then(amount => {
+             this.amount = amount;
+         });
+    }
+
+    ngOnDestroy() {
+        if (this.interval) {
+            clearInterval(this.interval);
+            this.interval = null;
+        }
+    }
+
+    ionViewWillLeave() {
+        if (this.interval) {
+            clearInterval(this.interval);
+            this.interval = null;
+        }
+    }
 
     async ionViewDidEnter() {
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
@@ -42,6 +62,9 @@ export class WalletDetailPage implements OnInit {
         this.getTransactionList();
 
         this.amount = await this.web3.getCphBalance(this.wallet.addr);
+        this.interval = setInterval(() => {
+            this.getWalletInfo(this.wallet.addr);
+        }, 10000);
         //获取汇率信息
         this.http.get(this.global.api['getRateInfo']).subscribe(res => {
             console.log("汇率：", res.rates);
@@ -136,6 +159,10 @@ export class WalletDetailPage implements OnInit {
     }
 
     toggleType(type) {
+        this.helper.getTranslate('COMING_SOON').then(msg => {
+            this.helper.toast(msg);
+        });
+
         if (this.type != type) {
             this.type = type;
             this.pageno = 1;

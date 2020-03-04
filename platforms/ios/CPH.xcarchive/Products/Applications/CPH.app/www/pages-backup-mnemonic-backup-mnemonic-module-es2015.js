@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>{{ 'BACKUP_MNEMONIC' | translate }}</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div class=\"main\">\n        <div class=\"tips\" translate=\"\">CLICK_MNEMONIC</div>\n        <div class=\"textarea clear\">\n            <div class=\"word\" *ngFor=\"let mnemonic of backupList\">{{ mnemonic }}</div>\n        </div>\n\n        <div class=\"mnemonic-grid clear\">\n            <div class=\"grid\" tappable (click)=\"selectMnemonic(mnemonic)\"\n                [ngClass]=\"backupList.indexOf(mnemonic) > -1 ? 'active' : ''\" *ngFor=\"let mnemonic of mnemonicList\">\n                {{mnemonic}}</div>\n        </div>\n    </div>\n\n    <div class=\"confirm-button bottom-button\" tappable (click)=\"verifyNmemonic()\"\n        [ngClass]=\"backupList.length == mnemonicList.length ? '' : 'disabled'\" translate>VERIFY\n    </div>\n\n</ion-content>");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>{{ 'BACKUP_MNEMONIC' | translate }}</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div class=\"main\">\n        <div class=\"tips\" translate=\"\">CLICK_MNEMONIC</div>\n        <div class=\"textarea clear\">\n            <div class=\"word\" *ngFor=\"let item of backupList\">{{ item.mnemonic }}</div>\n        </div>\n\n        <div class=\"mnemonic-grid clear\">\n            <div class=\"grid\" tappable (click)=\"selectMnemonic(mnemonic, i)\"\n                [ngClass]=\"isSelect(mnemonic, i) > -1 ? 'active' : ''\" *ngFor=\"let mnemonic of mnemonicList; let i = index\">\n                {{mnemonic}}</div>\n        </div>\n    </div>\n\n    <div class=\"confirm-button bottom-button\" tappable (click)=\"verifyNmemonic()\"\n        [ngClass]=\"backupList.length == mnemonicList.length ? '' : 'disabled'\" translate>VERIFY\n    </div>\n\n</ion-content>");
 
 /***/ }),
 
@@ -146,15 +146,19 @@ let BackupMnemonicPage = class BackupMnemonicPage {
     }
     ngOnInit() {
     }
-    selectMnemonic(mnemonic) {
-        let index = this.backupList.indexOf(mnemonic);
+    selectMnemonic(mnemonic, i) {
+        // let index = this.backupList.indexOf(mnemonic);
+        let index = this.isSelect(mnemonic, i);
         if (index > -1) {
             this.backupList.splice(index, 1);
         }
         else {
-            this.backupList.push(mnemonic);
+            this.backupList.push({ mnemonic, i });
         }
         console.log(this.backupList);
+    }
+    isSelect(mnemonic, i) {
+        return this.backupList.findIndex(item => item.mnemonic === mnemonic && item.i === i);
     }
     verifyNmemonic() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
@@ -162,7 +166,7 @@ let BackupMnemonicPage = class BackupMnemonicPage {
             let flag = true;
             let mnemonicList = this.wallet.mnemonic.split(' ');
             for (let i = 0; i < mnemonicList.length; i++) {
-                if (mnemonicList[i] != this.backupList[i]) {
+                if (mnemonicList[i] != this.backupList[i].mnemonic) {
                     flag = false;
                     break;
                 }

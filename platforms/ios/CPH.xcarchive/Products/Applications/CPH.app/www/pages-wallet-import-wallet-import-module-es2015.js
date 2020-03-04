@@ -89,12 +89,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WalletImportPage", function() { return WalletImportPage; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ethers */ "./node_modules/ethers/dist/ethers.min.js");
-/* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(ethers__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _providers_global_global_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../providers/global/global.service */ "./src/app/providers/global/global.service.ts");
-/* harmony import */ var _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../providers/helper/helper.service */ "./src/app/providers/helper/helper.service.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _providers_global_global_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../providers/global/global.service */ "./src/app/providers/global/global.service.ts");
+/* harmony import */ var _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../providers/helper/helper.service */ "./src/app/providers/helper/helper.service.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _providers_wallet_wallet_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../providers/wallet/wallet.service */ "./src/app/providers/wallet/wallet.service.ts");
 
 
 
@@ -103,11 +102,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let WalletImportPage = class WalletImportPage {
-    constructor(router, helper, global, navCtrl) {
+    constructor(router, helper, global, navCtrl, Wallet) {
         this.router = router;
         this.helper = helper;
         this.global = global;
         this.navCtrl = navCtrl;
+        this.Wallet = Wallet;
         this.mnemonic = "";
         this.password = "";
         this.password1 = "";
@@ -181,7 +181,7 @@ let WalletImportPage = class WalletImportPage {
     importMnemonicWallet() {
         let mnemonic = this.mnemonic.replace(/^\s+|\s+$/, '');
         mnemonic = mnemonic.replace(/\s{2,}/g, ' '); //替换多个空格为1个
-        let wallet = ethers__WEBPACK_IMPORTED_MODULE_2__["Wallet"].fromMnemonic(mnemonic);
+        let wallet = this.Wallet.fromMnemonic(mnemonic);
         return wallet;
     }
     checkMnemonic() {
@@ -192,9 +192,12 @@ let WalletImportPage = class WalletImportPage {
             }
             let mnemonic = this.mnemonic.replace(/^\s+|\s+$/, '');
             let mnemonicList = mnemonic.split(/\s+/);
-            if (mnemonicList.length !== 24) {
+            if (mnemonicList.length !== 12) {
                 let error = yield this.helper.getTranslate('MNEMONIC_LENGTH_ERROR');
                 this.mnemonicError = error;
+            }
+            else {
+                this.mnemonicError = "";
             }
             if (this.mnemonicError) {
                 return false;
@@ -298,10 +301,11 @@ let WalletImportPage = class WalletImportPage {
     }
 };
 WalletImportPage.ctorParameters = () => [
-    { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"] },
-    { type: _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_4__["HelperService"] },
-    { type: _providers_global_global_service__WEBPACK_IMPORTED_MODULE_3__["GlobalService"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["NavController"] }
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"] },
+    { type: _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__["HelperService"] },
+    { type: _providers_global_global_service__WEBPACK_IMPORTED_MODULE_2__["GlobalService"] },
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["NavController"] },
+    { type: _providers_wallet_wallet_service__WEBPACK_IMPORTED_MODULE_6__["WalletService"] }
 ];
 WalletImportPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -309,10 +313,11 @@ WalletImportPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! raw-loader!./wallet-import.page.html */ "./node_modules/raw-loader/dist/cjs.js!./src/app/pages/wallet-import/wallet-import.page.html")).default,
         styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(/*! ./wallet-import.page.scss */ "./src/app/pages/wallet-import/wallet-import.page.scss")).default]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"],
-        _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_4__["HelperService"],
-        _providers_global_global_service__WEBPACK_IMPORTED_MODULE_3__["GlobalService"],
-        _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["NavController"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"],
+        _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__["HelperService"],
+        _providers_global_global_service__WEBPACK_IMPORTED_MODULE_2__["GlobalService"],
+        _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["NavController"],
+        _providers_wallet_wallet_service__WEBPACK_IMPORTED_MODULE_6__["WalletService"]])
 ], WalletImportPage);
 
 

@@ -32,9 +32,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       "./pages/transaction-result/transaction-result.module": ["./src/app/pages/transaction-result/transaction-result.module.ts", "default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84", "pages-transaction-result-transaction-result-module"],
       "./pages/value-unit/value-unit.module": ["./src/app/pages/value-unit/value-unit.module.ts", "default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970", "default~pages-export-keystore-export-keystore-module~pages-export-privatekey-export-privatekey-modul~7daa9f50", "pages-value-unit-value-unit-module"],
       "./pages/wallet-admin/wallet-admin.module": ["./src/app/pages/wallet-admin/wallet-admin.module.ts", "pages-wallet-admin-wallet-admin-module"],
-      "./pages/wallet-create/wallet-create.module": ["./src/app/pages/wallet-create/wallet-create.module.ts", "pages-wallet-create-wallet-create-module"],
+      "./pages/wallet-create/wallet-create.module": ["./src/app/pages/wallet-create/wallet-create.module.ts", "default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module", "pages-wallet-create-wallet-create-module"],
       "./pages/wallet-detail/wallet-detail.module": ["./src/app/pages/wallet-detail/wallet-detail.module.ts", "default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970", "default~pages-export-keystore-export-keystore-module~pages-export-privatekey-export-privatekey-modul~7daa9f50", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84", "pages-wallet-detail-wallet-detail-module"],
-      "./pages/wallet-import/wallet-import.module": ["./src/app/pages/wallet-import/wallet-import.module.ts", "pages-wallet-import-wallet-import-module"],
+      "./pages/wallet-import/wallet-import.module": ["./src/app/pages/wallet-import/wallet-import.module.ts", "default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module", "pages-wallet-import-wallet-import-module"],
       "./pages/wallet-name/wallet-name.module": ["./src/app/pages/wallet-name/wallet-name.module.ts", "pages-wallet-name-wallet-name-module"]
     };
 
@@ -2650,7 +2650,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"tabs\">\n    <div class=\"tab\" [ngClass]=\"tab == 'wallet' ? 'active' : ''\" tappable (click)=\"toggleTab('wallet')\">\n        <div class=\"icon icon-wallet\">\n        </div>\n        <div class=\"label\">{{ 'WALLET' | translate }}</div>\n    </div>\n\n    <div class=\"tab\" [ngClass]=\"tab == 'pledge' ? 'active' : ''\" tappable (click)=\"toggleTab('pledge')\">\n        <div class=\"icon icon-pledge\"></div>\n        <div class=\"label\">{{ 'PLEDGE' | translate }}</div>\n    </div>\n\n    <div class=\"tab\" [ngClass]=\"tab == 'setting' ? 'active' : ''\" tappable (click)=\"toggleTab('setting')\">\n        <div class=\"icon icon-settings\"></div>\n        <div class=\"label\">{{ 'MINE' | translate }}</div>\n    </div>\n</div>";
+    __webpack_exports__["default"] = "<div class=\"tabs\">\n    <div class=\"tab\" [ngClass]=\"tab == 'wallet' ? 'active' : ''\" tappable (click)=\"toggleTab('wallet')\">\n        <div class=\"icon icon-wallet\">\n        </div>\n        <div class=\"label\">{{ 'WALLET' | translate }}</div>\n    </div>\n<!-- \n    <div class=\"tab\" [ngClass]=\"tab == 'pledge' ? 'active' : ''\" tappable (click)=\"toggleTab('pledge')\">\n        <div class=\"icon icon-pledge\"></div>\n        <div class=\"label\">{{ 'PLEDGE' | translate }}</div>\n    </div> -->\n\n    <div class=\"tab\" [ngClass]=\"tab == 'setting' ? 'active' : ''\" tappable (click)=\"toggleTab('setting')\">\n        <div class=\"icon icon-settings\"></div>\n        <div class=\"label\">{{ 'MINE' | translate }}</div>\n    </div>\n</div>";
     /***/
   },
 
@@ -3294,7 +3294,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     // },
     {
       path: '',
-      redirectTo: 'wallet-create',
+      redirectTo: 'wallet',
       pathMatch: 'full'
     }, // { path: '', canActivate: [AuthGuardService], loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
     {
@@ -4107,33 +4107,82 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "confirmPrompt",
         value: function confirmPrompt() {
-          var _this2 = this;
+          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
+          /*#__PURE__*/
+          regeneratorRuntime.mark(function _callee2() {
+            var _this2 = this;
 
-          var keystore = this.global.gWalletList[this.global.currentWalletIndex].keystore;
-          this.promptError = "";
+            var keystore, error;
+            return regeneratorRuntime.wrap(function _callee2$(_context2) {
+              while (1) {
+                switch (_context2.prev = _context2.next) {
+                  case 0:
+                    keystore = this.global.gWalletList[this.global.currentWalletIndex].keystore;
+                    this.promptError = "";
 
-          if (!this.paymentPassword) {
-            this.promptError = "安全密码不能为空";
-            return;
-          }
+                    if (this.paymentPassword) {
+                      _context2.next = 8;
+                      break;
+                    }
 
-          this.ifShowLoading = true;
-          setTimeout(function () {
-            //解码
-            var ret = _this2.helper.decryptPrivateKey(keystore, _this2.paymentPassword);
+                    _context2.next = 5;
+                    return this.helper.getTranslate('PASSWORD_EMPTY');
 
-            if (ret.flag) {
-              _this2.ifShowLoading = false;
-              _this2.paymentPassword = '';
+                  case 5:
+                    error = _context2.sent;
+                    this.promptError = error;
+                    return _context2.abrupt("return");
 
-              _this2.confirm.emit(ret.privateKey);
+                  case 8:
+                    this.ifShowLoading = true;
+                    setTimeout(function () {
+                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this2, void 0, void 0,
+                      /*#__PURE__*/
+                      regeneratorRuntime.mark(function _callee() {
+                        var ret, _error;
 
-              return;
-            } else {
-              _this2.ifShowLoading = false;
-              _this2.promptError = "请输入正确的安全密码";
-            }
-          }, 100);
+                        return regeneratorRuntime.wrap(function _callee$(_context) {
+                          while (1) {
+                            switch (_context.prev = _context.next) {
+                              case 0:
+                                //解码
+                                ret = this.helper.decryptPrivateKey(keystore, this.paymentPassword);
+
+                                if (!ret.flag) {
+                                  _context.next = 8;
+                                  break;
+                                }
+
+                                this.ifShowLoading = false;
+                                this.paymentPassword = '';
+                                this.confirm.emit(ret.privateKey);
+                                return _context.abrupt("return");
+
+                              case 8:
+                                this.ifShowLoading = false;
+                                _context.next = 11;
+                                return this.helper.getTranslate('PASSEORD_ERROR');
+
+                              case 11:
+                                _error = _context.sent;
+                                this.promptError = _error;
+
+                              case 13:
+                              case "end":
+                                return _context.stop();
+                            }
+                          }
+                        }, _callee, this);
+                      }));
+                    }, 100);
+
+                  case 10:
+                  case "end":
+                    return _context2.stop();
+                }
+              }
+            }, _callee2, this);
+          }));
         }
       }]);
 
@@ -4587,7 +4636,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       this.paymentPassword = "";
       this.walletName = "";
       this.currentWalletIndex = -1;
-      this.maxWalletNum = 3;
+      this.maxWalletNum = 20;
       this.selectedRate = {};
       this.projectName = GlobalService_1.projectName;
       this.settings = {
@@ -4738,7 +4787,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
 
             var wallet = {
-              name: w.walletName || this.global.projectName + '-wallet-' + w.address.slice(-4),
+              // name: w.walletName || this.global.projectName + '-wallet-' + w.address.slice(-4),
+              name: w.name || this.global.projectName + '-' + w.address.slice(-4),
               addr: w.address,
               keystore: w.keystore
             };
@@ -4751,15 +4801,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           value: function getTranslate(key) {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
             /*#__PURE__*/
-            regeneratorRuntime.mark(function _callee() {
+            regeneratorRuntime.mark(function _callee3() {
               var _this3 = this;
 
               var value;
-              return regeneratorRuntime.wrap(function _callee$(_context) {
+              return regeneratorRuntime.wrap(function _callee3$(_context3) {
                 while (1) {
-                  switch (_context.prev = _context.next) {
+                  switch (_context3.prev = _context3.next) {
                     case 0:
-                      _context.next = 2;
+                      _context3.next = 2;
                       return new Promise(function (resolve, reject) {
                         _this3.translateService.get(key).subscribe(function (value) {
                           resolve(value);
@@ -4767,15 +4817,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       });
 
                     case 2:
-                      value = _context.sent;
-                      return _context.abrupt("return", value);
+                      value = _context3.sent;
+                      return _context3.abrupt("return", value);
 
                     case 4:
                     case "end":
-                      return _context.stop();
+                      return _context3.stop();
                   }
                 }
-              }, _callee);
+              }, _callee3);
             }));
           }
         }, {
@@ -4783,22 +4833,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           value: function handleText(res, callback) {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
             /*#__PURE__*/
-            regeneratorRuntime.mark(function _callee2() {
+            regeneratorRuntime.mark(function _callee4() {
               var matches, scheme, object, method, params, url, _url;
 
-              return regeneratorRuntime.wrap(function _callee2$(_context2) {
+              return regeneratorRuntime.wrap(function _callee4$(_context4) {
                 while (1) {
-                  switch (_context2.prev = _context2.next) {
+                  switch (_context4.prev = _context4.next) {
                     case 0:
                       // this.native.scan().then((res: any) => {
                       console.log("扫描结果：" + res);
 
                       if (res) {
-                        _context2.next = 3;
+                        _context4.next = 3;
                         break;
                       }
 
-                      return _context2.abrupt("return");
+                      return _context4.abrupt("return");
 
                     case 3:
                       res = res.toLowerCase(); //获取scheme, 对象，方法，参数
@@ -4806,11 +4856,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       matches = res.match(/(.+)\:\/\/([^/]+)\/([^/]+)\/([^/]+)/);
 
                       if (res) {
-                        _context2.next = 7;
+                        _context4.next = 7;
                         break;
                       }
 
-                      return _context2.abrupt("return");
+                      return _context4.abrupt("return");
 
                     case 7:
                       scheme = matches[1], object = matches[2], method = matches[3], params = matches[4];
@@ -4823,6 +4873,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                             callback && callback(url, method);
                           } else if (method == 'transfer') {
                             _url = decodeURIComponent(params);
+                            console.log("url" + _url);
                             callback && callback(_url, method);
                           }
                         }
@@ -4845,10 +4896,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                     case 10:
                     case "end":
-                      return _context2.stop();
+                      return _context4.stop();
                   }
                 }
-              }, _callee2);
+              }, _callee4);
             }));
           }
         }, {
@@ -4969,7 +5020,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }, {
           key: "convertAddr",
           value: function convertAddr(addr) {
-            return 'Cph' + addr.replace('0x', '');
+            return 'CPH' + addr.replace('0x', '');
           }
           /**
            * tip 开发中
@@ -5028,16 +5079,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               };
               buttons.unshift(cancelBtn);
             } //暂时忽略http请求失败
+            // this.alertController.create({
+            //     header: header,
+            //     message: message,
+            //     backdropDismiss: false,
+            //     buttons: buttons
+            // }).then(alert => alert.present());
 
-
-            this.alertController.create({
-              header: header,
-              message: message,
-              backdropDismiss: false,
-              buttons: buttons
-            }).then(function (alert) {
-              return alert.present();
-            });
           }
         }, {
           key: "hideAlert",
@@ -5178,9 +5226,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var environment = {
       production: false,
       requestTimeout: 15000,
-      appServerUrl: "http://127.0.0.1:8359",
+      appServerUrl: "http://localhost:8359",
       cypherium: {
-        provider: 'http://127.0.0.1:18002',
+        provider: 'http://34.68.99.122:8000',
         pledgeContractAddr: '0x0000000000000000000000000000000000000081',
         pledgeContractAbi: null,
         privateKey: ''

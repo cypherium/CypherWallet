@@ -13,7 +13,7 @@ import { NavController } from '@ionic/angular';
     styleUrls: ['./cph-send.page.scss'],
 })
 export class CphSendPage implements OnInit {
-    range = 25;
+    range = 18;     //let price = await this.web3.cph.gasPrice(); price/1e9;
     wallet: any = {};
     amount = 0;
     receiveAddress = "";
@@ -26,7 +26,8 @@ export class CphSendPage implements OnInit {
     ifShowAlert = false;
     alertTitle = "";
     alertDesc = "";
-
+    interval = null;
+    
     constructor(
         private router: Router,
         // private clipboard: Clipboard,
@@ -43,10 +44,33 @@ export class CphSendPage implements OnInit {
             // let obj = state.extras.state;
             this.receiveAddress = state.address;
         }
+        this.interval = setInterval(() => {
+            this.updateWalletInfo();
+        }, 10000);
     }
 
     back() {
         this.nav.navigateBack('/wallet');
+    }
+
+    ngOnDestroy() {
+        if (this.interval) {
+            clearInterval(this.interval);
+            this.interval = null;
+        }
+    }
+
+    ionViewWillLeave() {
+        if (this.interval) {
+            clearInterval(this.interval);
+            this.interval = null;
+        }
+    }
+
+    updateWalletInfo() {
+        this.web3.getCphBalance(this.wallet.addr).then(amount => {
+            this.amount = amount; 
+        });
     }
 
     async ngOnInit() {
@@ -116,6 +140,11 @@ export class CphSendPage implements OnInit {
         let amount = +this.payAmount;
         if (amount <= 0) {
             let message = await this.helper.getTranslate('AMOUNT_ILLEGAL');
+            this.amountError = message;
+            return;
+        }
+        if (amount <= 0.0001) {
+            let message = await this.helper.getTranslate('AMOUNT_SMALL');
             this.amountError = message;
             return;
         }

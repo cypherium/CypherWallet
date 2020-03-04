@@ -152,7 +152,7 @@ export class Web3Service {
             from: from,
             nonce: nonce,
             // gas: this.convert10to16(gasLimit),
-            gasLimit: '0x271000',
+            gasLimit: '0x5208',
             gasPrice: this.convert10to16(gasPrice),
             to: to,
             data: data,

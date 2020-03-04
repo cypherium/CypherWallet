@@ -92,6 +92,7 @@ var map = {
 	],
 	"./pages/wallet-create/wallet-create.module": [
 		"./src/app/pages/wallet-create/wallet-create.module.ts",
+		"default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module",
 		"pages-wallet-create-wallet-create-module"
 	],
 	"./pages/wallet-detail/wallet-detail.module": [
@@ -103,6 +104,7 @@ var map = {
 	],
 	"./pages/wallet-import/wallet-import.module": [
 		"./src/app/pages/wallet-import/wallet-import.module.ts",
+		"default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module",
 		"pages-wallet-import-wallet-import-module"
 	],
 	"./pages/wallet-name/wallet-name.module": [
@@ -2889,7 +2891,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"tabs\">\n    <div class=\"tab\" [ngClass]=\"tab == 'wallet' ? 'active' : ''\" tappable (click)=\"toggleTab('wallet')\">\n        <div class=\"icon icon-wallet\">\n        </div>\n        <div class=\"label\">{{ 'WALLET' | translate }}</div>\n    </div>\n\n    <div class=\"tab\" [ngClass]=\"tab == 'pledge' ? 'active' : ''\" tappable (click)=\"toggleTab('pledge')\">\n        <div class=\"icon icon-pledge\"></div>\n        <div class=\"label\">{{ 'PLEDGE' | translate }}</div>\n    </div>\n\n    <div class=\"tab\" [ngClass]=\"tab == 'setting' ? 'active' : ''\" tappable (click)=\"toggleTab('setting')\">\n        <div class=\"icon icon-settings\"></div>\n        <div class=\"label\">{{ 'MINE' | translate }}</div>\n    </div>\n</div>");
+/* harmony default export */ __webpack_exports__["default"] = ("<div class=\"tabs\">\n    <div class=\"tab\" [ngClass]=\"tab == 'wallet' ? 'active' : ''\" tappable (click)=\"toggleTab('wallet')\">\n        <div class=\"icon icon-wallet\">\n        </div>\n        <div class=\"label\">{{ 'WALLET' | translate }}</div>\n    </div>\n<!-- \n    <div class=\"tab\" [ngClass]=\"tab == 'pledge' ? 'active' : ''\" tappable (click)=\"toggleTab('pledge')\">\n        <div class=\"icon icon-pledge\"></div>\n        <div class=\"label\">{{ 'PLEDGE' | translate }}</div>\n    </div> -->\n\n    <div class=\"tab\" [ngClass]=\"tab == 'setting' ? 'active' : ''\" tappable (click)=\"toggleTab('setting')\">\n        <div class=\"icon icon-settings\"></div>\n        <div class=\"label\">{{ 'MINE' | translate }}</div>\n    </div>\n</div>");
 
 /***/ }),
 
@@ -3177,7 +3179,7 @@ const routes = [
     //     redirectTo: '/wallet-create',
     //     pathMatch: 'full'
     // },
-    { path: '', redirectTo: 'wallet-create', pathMatch: 'full' },
+    { path: '', redirectTo: 'wallet', pathMatch: 'full' },
     // { path: '', canActivate: [AuthGuardService], loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
     { path: 'wallet', canActivate: [_providers_auto_guard_auth_guard_service__WEBPACK_IMPORTED_MODULE_3__["AuthGuardService"]], loadChildren: './pages/tabs/wallet/wallet.module#WalletPageModule' },
     { path: 'pledge', canActivate: [_providers_auto_guard_auth_guard_service__WEBPACK_IMPORTED_MODULE_3__["AuthGuardService"]], loadChildren: './pages/tabs/pledge/pledge.module#PledgePageModule' },
@@ -3669,27 +3671,31 @@ let GeneratePrivatekeyComponent = class GeneratePrivatekeyComponent {
         this.cancel.emit();
     }
     confirmPrompt() {
-        let keystore = this.global.gWalletList[this.global.currentWalletIndex].keystore;
-        this.promptError = "";
-        if (!this.paymentPassword) {
-            this.promptError = "安全密码不能为空";
-            return;
-        }
-        this.ifShowLoading = true;
-        setTimeout(() => {
-            //解码
-            let ret = this.helper.decryptPrivateKey(keystore, this.paymentPassword);
-            if (ret.flag) {
-                this.ifShowLoading = false;
-                this.paymentPassword = '';
-                this.confirm.emit(ret.privateKey);
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            let keystore = this.global.gWalletList[this.global.currentWalletIndex].keystore;
+            this.promptError = "";
+            if (!this.paymentPassword) {
+                let error = yield this.helper.getTranslate('PASSWORD_EMPTY');
+                this.promptError = error;
                 return;
             }
-            else {
-                this.ifShowLoading = false;
-                this.promptError = "请输入正确的安全密码";
-            }
-        }, 100);
+            this.ifShowLoading = true;
+            setTimeout(() => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+                //解码
+                let ret = this.helper.decryptPrivateKey(keystore, this.paymentPassword);
+                if (ret.flag) {
+                    this.ifShowLoading = false;
+                    this.paymentPassword = '';
+                    this.confirm.emit(ret.privateKey);
+                    return;
+                }
+                else {
+                    this.ifShowLoading = false;
+                    let error = yield this.helper.getTranslate('PASSEORD_ERROR');
+                    this.promptError = error;
+                }
+            }), 100);
+        });
     }
 };
 GeneratePrivatekeyComponent.ctorParameters = () => [
@@ -3989,7 +3995,7 @@ class GlobalService {
         this.paymentPassword = "";
         this.walletName = "";
         this.currentWalletIndex = -1;
-        this.maxWalletNum = 3;
+        this.maxWalletNum = 20;
         this.selectedRate = {};
         this.projectName = GlobalService_1.projectName;
         this.settings = {
@@ -4079,7 +4085,8 @@ let HelperService = class HelperService {
             w.keystore = JSON.stringify(this.exportKeystore(w.privateKey.replace('0x', ''), password));
         }
         let wallet = {
-            name: w.walletName || this.global.projectName + '-wallet-' + w.address.slice(-4),
+            // name: w.walletName || this.global.projectName + '-wallet-' + w.address.slice(-4),
+            name: w.name || this.global.projectName + '-' + w.address.slice(-4),
             addr: w.address,
             keystore: w.keystore
         };
@@ -4120,6 +4127,7 @@ let HelperService = class HelperService {
                     }
                     else if (method == 'transfer') {
                         let url = decodeURIComponent(params);
+                        console.log("url" + url);
                         callback && callback(url, method);
                     }
                 }
@@ -4231,7 +4239,7 @@ let HelperService = class HelperService {
         }
     }
     convertAddr(addr) {
-        return 'Cph' + addr.replace('0x', '');
+        return 'CPH' + addr.replace('0x', '');
     }
     /**
      * tip 开发中
@@ -4275,12 +4283,12 @@ let HelperService = class HelperService {
             buttons.unshift(cancelBtn);
         }
         //暂时忽略http请求失败
-        this.alertController.create({
-            header: header,
-            message: message,
-            backdropDismiss: false,
-            buttons: buttons
-        }).then(alert => alert.present());
+        // this.alertController.create({
+        //     header: header,
+        //     message: message,
+        //     backdropDismiss: false,
+        //     buttons: buttons
+        // }).then(alert => alert.present());
     }
     hideAlert() {
         this.alertController.dismiss();
@@ -4380,9 +4388,9 @@ __webpack_require__.r(__webpack_exports__);
 const environment = {
     production: false,
     requestTimeout: 15000,
-    appServerUrl: "http://127.0.0.1:8359",
+    appServerUrl: "http://localhost:8359",
     cypherium: {
-        provider: 'http://127.0.0.1:18002',
+        provider: 'http://34.68.99.122:8000',
         pledgeContractAddr: '0x0000000000000000000000000000000000000081',
         pledgeContractAbi: null,
         privateKey: ''

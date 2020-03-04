@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="input-wrapper">
-                <input type="tel" (keyup)="checkAmount()" [(ngModel)]="payAmount"
+                <input type="number" (keyup)="checkAmount()" [(ngModel)]="payAmount"
                     placeholder="{{ 'INPUT_AMOUNT_TIPS' | translate }}">
             </div>
         </div>
@@ -54,8 +54,8 @@
                 <ion-range mode="ios" pin="true" (ionChange)="changeRange($event)" [(ngModel)]="range" [min]="min"
                     [max]="max"></ion-range>
                 <ion-label class="desc">
-                    <p translate>QUICK</p>
                     <p translate>SLOW</p>
+                    <p translate>QUICK</p>
                 </ion-label>
             </div>
 

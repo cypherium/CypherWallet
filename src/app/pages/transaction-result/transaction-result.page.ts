@@ -3,7 +3,7 @@ import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { Web3Service } from "../../providers/web3/web3.service";
 import { NativeService } from "../../providers/native/native.service";
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
-
+import { GlobalService } from '../../providers/global/global.service';
 
 @Component({
     selector: 'app-transaction-result',
@@ -16,11 +16,13 @@ export class TransactionResultPage implements OnInit {
     detail: any = {};
     miningFee: any = '';
     time = '';
+    wallet: any = "";
 
     constructor(
         private router: Router,
         private activatedRoute: ActivatedRoute,
         private web3: Web3Service,
+        public global: GlobalService,
         private native: NativeService
     ) {
         let state = this.router.getCurrentNavigation().extras.state;
@@ -33,6 +35,7 @@ export class TransactionResultPage implements OnInit {
                 this.getDetailByTx();
             }
         }
+        this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
     }
 
     async getDetailByTx() {
@@ -40,8 +43,10 @@ export class TransactionResultPage implements OnInit {
         this.detail = await this.web3.getTxDetail(this.tx);
         console.log("Transaction detail：" + JSON.stringify(this.detail));
         this.miningFee = this.detail.gas * this.detail.gasPrice;
-        this.detail.from = this.detail.from.replace(/^0x/, 'cph');
-        this.detail.to = this.detail.to.replace(/^0x/, 'cph');
+        this.detail.from = this.wallet.addr.toLowerCase();//this.detail.from;
+        this.detail.to = this.detail.to;
+        // this.detail.from = this.detail.senderKey.replace(/^0x/, 'cph');
+        // this.detail.to = this.detail.to.replace(/^0x/, 'cph');
     }
 
     goHashPage() {
