@@ -35,10 +35,8 @@ export class WalletDetailPage implements OnInit {
     ngOnInit() {
 
     }
-     getWalletInfo(addr) {
-         this.web3.getCphBalance(addr).then(amount => {
-             this.amount = amount;
-         });
+    async getWalletInfo(addr) {
+        this.amount = await this.web3.getCphBalance(addr);
     }
 
     ngOnDestroy() {

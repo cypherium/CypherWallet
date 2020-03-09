@@ -30,7 +30,7 @@ export class WalletPage implements OnInit {
     cancelPrompt = null;
     confirmPrompt = null;
     interval = null;
-
+    
     constructor(
         private router: Router,
         private helper: HelperService,
@@ -55,10 +55,7 @@ export class WalletPage implements OnInit {
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex || 0] || {};
         console.log(this.wallet);
         this.interval = setInterval(() => {
-            // this.getWalletInfo(this.wallet.addr);
-            this.web3.getCphBalance(this.wallet.addr).then(amount => {
-                this.amount = amount;
-            });
+            this.getWalletInfo(this.wallet.addr);
         }, 10000);
         this.computeValue();
     }

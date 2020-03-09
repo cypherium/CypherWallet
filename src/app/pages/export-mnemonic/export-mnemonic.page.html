@@ -17,7 +17,7 @@
     </div>
 
     <div class="confirm-button bottom-button" tappable (click)="goNext()" [ngClass]="enabled ? '' : 'disabled'"
-        translate="">NEXT
+        *ngIf="!askForPassword" translate="">NEXT
     </div>
 
 </ion-content>

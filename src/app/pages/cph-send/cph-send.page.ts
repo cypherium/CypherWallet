@@ -67,10 +67,8 @@ export class CphSendPage implements OnInit {
         }
     }
 
-    updateWalletInfo() {
-        this.web3.getCphBalance(this.wallet.addr).then(amount => {
-            this.amount = amount; 
-        });
+    async updateWalletInfo() {
+        this.amount = await this.web3.getCphBalance(this.wallet.addr);
     }
 
     async ngOnInit() {
