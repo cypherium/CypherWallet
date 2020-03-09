@@ -85,12 +85,32 @@ export class WalletCreatePage implements OnInit {
     checkWalletName() {
     }
 
-    checkPassword() {
-
+    async checkPassword() {
+        if (this.password.length < 6 || this.password.length > 18) {
+            let message = await this.helper.getTranslate('PASSWORD_RULE');
+            this.passwordError = message;
+            return;
+        } else {
+            this.passwordError = "";
+        }
+        let regx = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/;
+        if (this.password.match(regx) == null) {
+            let message = await this.helper.getTranslate('PASSWORD_RULE');
+            this.passwordError = message
+            return;
+        } else {
+            this.passwordError = "";
+        }
     }
 
-    checkPassword1() {
-
+    async checkPassword1() {
+        if (this.password1 != this.password) {
+            let message = await this.helper.getTranslate('PASSEORD_DIFFERENT');
+            this.passwordError1 = message
+            return
+        } else {
+            this.passwordError1 = "";
+        }
     }
 
 }

@@ -64,7 +64,7 @@
 	"INPUT_ADDR_TIPS": "Please insert your CPH wallet address",
 	"RECEIVE_ADDRESS": "Receive Address",
 	"MINER_FEE": "Estimated Transaction Fee",
-	"QUICK": "Quick",
+	"QUICK": "Fast",
 	"SLOW": "Slow",
 	"TRANSACTION_FAILED": "Transaction failure",
 	"BALANCE_INFFICIENT": "Amount not enough",

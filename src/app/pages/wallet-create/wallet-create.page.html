@@ -27,7 +27,7 @@
             <div class="input-password-wrapper">
                 <div class="label" translate>NEW_PASSWORD</div>
                 <div class="input-wrapper">
-                    <input (blur)="checkPassword()" [type]="ifEyeOpen ? 'text' : 'password'" [(ngModel)]="password"
+                    <input (keyup)="checkPassword()" [type]="ifEyeOpen ? 'text' : 'password'" [(ngModel)]="password"
                         placeholder="{{ 'WALLET_RULE' | translate }}">
                 </div>
 
@@ -40,7 +40,7 @@
             <div class="input-password-wrapper">
                 <div class="label" translate>REPEAT_PASSWORD</div>
                 <div class="input-wrapper">
-                    <input (blur)="checkPassword1()" [type]="ifEyeOpen1 ? 'text' : 'password'" [(ngModel)]="password1"
+                    <input (keyup)="checkPassword1()" [type]="ifEyeOpen1 ? 'text' : 'password'" [(ngModel)]="password1"
                         placeholder="{{ 'CONFIRM_PASSWORD' | translate }}">
                 </div>
                 <div class="eye" tappable (click)="toggleEyeOpen1()" [ngClass]="ifEyeOpen1 ? 'eye-open' : 'eye-close'">
