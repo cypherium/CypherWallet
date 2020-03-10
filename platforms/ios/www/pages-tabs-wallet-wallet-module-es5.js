@@ -514,27 +514,42 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "deletWallet",
         value: function deletWallet(index, wallet) {
-          // 如果账号只有一个或为空，直接删除，然后跳转到创建新账号
-          if (this.global.gWalletList.length < 2) {
-            this.storage.remove('localwallet');
-            this.storage.remove('localwalletindex');
-            this.navCtrl.navigateRoot('/wallet-create');
-          } else {
-            // 1.删除列表
-            this.global.gWalletList.splice(index, 1);
-            this.storage.set('localwallet', JSON.stringify(this.global.gWalletList));
+          var _this4 = this;
 
-            if (this.wallet.name != wallet.name) {
-              this.global.currentWalletIndex = this.global.gWalletList.indexOf(this.wallet);
+          this.ifShowPasswordPrompt = true;
+
+          this.cancelPrompt = function () {
+            _this4.ifShowPasswordPrompt = false;
+          };
+
+          this.confirmPrompt = function () {
+            _this4.ifShowPasswordPrompt = false; // 如果账号只有一个或为空，直接删除，然后跳转到创建新账号
+
+            if (_this4.global.gWalletList.length < 2) {
+              _this4.storage.remove('localwallet');
+
+              _this4.storage.remove('localwalletindex');
+
+              _this4.navCtrl.navigateRoot('/wallet-create');
             } else {
-              this.global.currentWalletIndex = 0;
+              // 1.删除列表
+              _this4.global.gWalletList.splice(index, 1);
+
+              _this4.storage.set('localwallet', JSON.stringify(_this4.global.gWalletList));
+
+              if (_this4.wallet.name != wallet.name) {
+                _this4.global.currentWalletIndex = _this4.global.gWalletList.indexOf(_this4.wallet);
+              } else {
+                _this4.global.currentWalletIndex = 0;
+              }
+
+              _this4.storage.set('localwalletindex', _this4.global.currentWalletIndex);
+
+              _this4.wallet = _this4.global.gWalletList[_this4.global.currentWalletIndex]; // this.global.currentWallet = wallet;
+
+              _this4.computeValue();
             }
-
-            this.storage.set('localwalletindex', this.global.currentWalletIndex);
-            this.wallet = this.global.gWalletList[this.global.currentWalletIndex]; // this.global.currentWallet = wallet;
-
-            this.computeValue();
-          }
+          };
         }
       }]);
 

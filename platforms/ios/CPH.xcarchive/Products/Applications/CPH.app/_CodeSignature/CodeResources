@@ -14,7 +14,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		8Sxet3TrtqqWEXCED4roEa6+KBY=
+		TokGssSEbO0zfD0Ks13WYiflJtc=
 		</data>
 		<key>CDVBarcodeScanner.bundle/beep.caf</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib</key>
 		<data>
-		pfgxJNq5mo3MVM+EUxt7FEU9LHE=
+		3n3zUaqmW/wIc5OMoWKAB+gyQjE=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib</key>
 		<data>
-		pmBsSZsA1Kqhul4gHoxQzb8j7TU=
+		+Ok7bSvgBCKjn2POAxW8uGfwNGU=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-13.0+.nib</key>
 		<data>
-		DyBSxsSmCPNi7fckfVacUPZgba4=
+		z0oDAodOsOY4sbO0J0Xq7/sl9Bk=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib</key>
 		<data>
-		/O/iEFO0qA6bD/9beW4Ro3Gb0OU=
+		HBvKrAf/QS1V+nfVPSPT+JXNht4=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -130,11 +130,11 @@
 		</data>
 		<key>MainViewController.nib/objects-13.0+.nib</key>
 		<data>
-		KlpX38RVh3FwvDdO1+Emytfs+D8=
+		HJtPpzGIklXVzJ5Z0GWhksG0Piw=
 		</data>
 		<key>MainViewController.nib/runtime.nib</key>
 		<data>
-		QTB/aUuv2fVoH23DLLAL3RR6ZFU=
+		vCmgTH9ca7jSb1w6yIiOFArmPPw=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -146,15 +146,15 @@
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		PmxkxGCfgBlgvYf6oF7n8HkauRQ=
+		d2MUfzCVlIvPa5pYZkvgRSHgp6U=
 		</data>
 		<key>scannerOverlay.nib/objects-13.0+.nib</key>
 		<data>
-		ZuHs2Z8kF2hFeYTsdBmBXACR2O4=
+		7AudJs02UOA972mSAKUaT9ATpP4=
 		</data>
 		<key>scannerOverlay.nib/runtime.nib</key>
 		<data>
-		txBntPcmmMBO6HicdM/V0tOk5M8=
+		IeE1vq5WCGjn1vTxWyj34V1v1tk=
 		</data>
 		<key>www/0-es2015.js</key>
 		<data>
@@ -1418,7 +1418,7 @@
 		</data>
 		<key>www/assets/i18n/en.json</key>
 		<data>
-		VHw00hYum30+oblL6Wgne82EqV8=
+		zJcXRVu+D9Xu92QOKBKPI/+BMaI=
 		</data>
 		<key>www/assets/icon/favicon.png</key>
 		<data>
@@ -2106,35 +2106,35 @@
 		</data>
 		<key>www/pages-tabs-wallet-wallet-module-es2015.js</key>
 		<data>
-		/28kA5PXkfl8gYMhQNQfz1a7zTc=
+		SEogryGDSzbGewZDLUYBaaVUcuE=
 		</data>
 		<key>www/pages-tabs-wallet-wallet-module-es2015.js.map</key>
 		<data>
-		SwrJLOJeg9ysYyjfviE4xN3yl+A=
+		vmPB6lliPgTtAyBx7k1M1QC9GUo=
 		</data>
 		<key>www/pages-tabs-wallet-wallet-module-es5.js</key>
 		<data>
-		rRGfJl8JImxTAvdE9UmoFteUDj0=
+		9h+NUg7ECgtFEvoUEH4XLnWMQuM=
 		</data>
 		<key>www/pages-tabs-wallet-wallet-module-es5.js.map</key>
 		<data>
-		qAXXgO2gMAfFlxtnpzGnMrUefb8=
+		Q43qyQHsYPx0sxjNAyo/749Q4C8=
 		</data>
 		<key>www/pages-transaction-result-transaction-result-module-es2015.js</key>
 		<data>
-		yX5DM0Vi07bQmgIZp4hrnKIYxNU=
+		OeRoJ8n9ZnMbGV4g1e02JCVyWHI=
 		</data>
 		<key>www/pages-transaction-result-transaction-result-module-es2015.js.map</key>
 		<data>
-		NaK+KAMU7jam4FU/ZIGJDgL4UwQ=
+		sU6I2iw8teThQ+wQY+NNdjaXHd4=
 		</data>
 		<key>www/pages-transaction-result-transaction-result-module-es5.js</key>
 		<data>
-		SrJ0gbptmijX/gxFIE6+l6AcfWw=
+		kNJAeKi8/wtWOP46GSXOHzTPiU8=
 		</data>
 		<key>www/pages-transaction-result-transaction-result-module-es5.js.map</key>
 		<data>
-		lBFr0G0S5VYLCsULdIDhTP00rjA=
+		y3q+tLsaMzmmjqSA1yNEjt1p4LE=
 		</data>
 		<key>www/pages-value-unit-value-unit-module-es2015.js</key>
 		<data>
@@ -2170,19 +2170,19 @@
 		</data>
 		<key>www/pages-wallet-create-wallet-create-module-es2015.js</key>
 		<data>
-		tLLCwiVzKcdqUDNBN7Fn6/n9++A=
+		4NeAkw70CbunfTun9qMFelrKE04=
 		</data>
 		<key>www/pages-wallet-create-wallet-create-module-es2015.js.map</key>
 		<data>
-		PADh2FL8R/MbbyaCd8/0uz8xHlc=
+		4NF8rkCnNldn3N9Z1T/loZnd48Q=
 		</data>
 		<key>www/pages-wallet-create-wallet-create-module-es5.js</key>
 		<data>
-		wyQka97qTijBbzi0tlhVzxfDzB0=
+		vadysglbhE1WfVH4Mk/YxCMo87I=
 		</data>
 		<key>www/pages-wallet-create-wallet-create-module-es5.js.map</key>
 		<data>
-		HZsVgUKOEYa7VADluw3PBeoiGoc=
+		5KeGp8ZQ9NS8EYCurxDuuwjZw1o=
 		</data>
 		<key>www/pages-wallet-detail-wallet-detail-module-es2015.js</key>
 		<data>
@@ -5313,7 +5313,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zf2SgUjZ3wtiNDdjimusaUxDxR/vlz/2FbDyXCb0S3o=
+			psyW/FDvQF6AuWiuJOE8+8JmucqaekiabWBK20DBybY=
 			</data>
 		</dict>
 		<key>CDVBarcodeScanner.bundle/beep.caf</key>
@@ -5348,14 +5348,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JbAP8EVjsdfDeEGs6I9j5M8I1lF9k6xEjgewOB6zXvk=
+			DVnTEuM0SOkNfi3SBCum8tjoLgy5Sfe4tItBXTbYDzA=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			H28y7zkXJv4jwZGFidCtZMzmC4EMLbwFBxwv/FKqACc=
+			rAo8WtwaGuEZhp+N+75zf0EEYfZMc1skHJuiXHv5unQ=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -5369,14 +5369,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OvDkLmC+0CW0OCNC1nBdyNUGiAc14857mT46OqWd4QM=
+			Cd9Qe9yD+QTd8ZTznmYG5GP5ztvkflLGckV2LCEd2e4=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			M2MSF+2AscMCVCwbz5VrghUT7rhhe84HdYcqhtLPoYA=
+			gc2SvvrrrEQvHiQMGalHqlVVVpvCvVID2CexG3TgAKE=
 			</data>
 		</dict>
 		<key>LaunchImage-1100-Landscape-2436h@3x.png</key>
@@ -5509,14 +5509,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yUVLKi3YI0n1VSoPAkl5tcgj+vtFiLjieNlQ3s4OszU=
+			m0eSoNpNWh7PP2uhsIMKd8TOrHx+u6kzoA9OlQIrSR0=
 			</data>
 		</dict>
 		<key>MainViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iRxMxdJNEg5emboRX9J0oZ77Nw1kH3zwDZSJkNDvjpY=
+			jMY5UauMdvZBLcuGjDFn1xOy6iY5EdcKlnao4DenPIU=
 			</data>
 		</dict>
 		<key>config.xml</key>
@@ -5530,21 +5530,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9S/46uVKCbLAHiauHOtN0EnFflanH397yxqs9Ng9N8Q=
+			eXVAfJ9T7TGAAtNW0W5TGfKVjmg44frqeTChOU+PHAk=
 			</data>
 		</dict>
 		<key>scannerOverlay.nib/objects-13.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IatKBKG7OGISNZQozJeQlJ0DRjuEA5DGzHOGMsTbsI0=
+			tZMPtXO3Y8O0ZlTd5AH744gTSbUYkOhIgsk21acmumE=
 			</data>
 		</dict>
 		<key>scannerOverlay.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rmX+X8w0YqRwOvUASWKJ6NoBbQIvyR+IRevnDeiB1LE=
+			AanJl4hTdZ+Unwj71J7ICBeyfzxvM4CYhupggu+VTUE=
 			</data>
 		</dict>
 		<key>www/0-es2015.js</key>
@@ -7756,7 +7756,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LUUdbcmoY2Qyq+jvjW/5iZuEqdJyxUSRGaZIXYbgA0Y=
+			bPyzpyQLqGpPgPusKiXAtIDWnZK30vy1cTsWI+8fWYo=
 			</data>
 		</dict>
 		<key>www/assets/icon/favicon.png</key>
@@ -8960,56 +8960,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qr3Be+7epHGODRiATH1bH3Nfm3a/Lgl+ZZbiscd1kSA=
+			NVD9VOQTN4KWOgElHqhOYqf2Ma8lnFOVKLOaxfowj4M=
 			</data>
 		</dict>
 		<key>www/pages-tabs-wallet-wallet-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MqyxDUcgitBBygFa7bY4gwa7lopcb3RtQuwAtROyroE=
+			8/Qok7ayenZmau9mVdYIKpsFqN/BEmq3ABrFQiCK8zc=
 			</data>
 		</dict>
 		<key>www/pages-tabs-wallet-wallet-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			G83wgd9Zh75VqGgfoz+EX4dsRWUVZN2T/6IIDYzyDM8=
+			DwWWUdqoJE7qYto455Uim/O3uhMeehcM9Wl9FIAAsgo=
 			</data>
 		</dict>
 		<key>www/pages-tabs-wallet-wallet-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			tYa9GE5DHty7enQsee64WX/abXnkJ1HDqe5XPMUlfbE=
+			Hux+UUAdp7p9lXfl2cyZAE54wVL/Wq2iKhTYdqnbwyI=
 			</data>
 		</dict>
 		<key>www/pages-transaction-result-transaction-result-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HkQFeQGBXF81oEYfofiMMsHG8FAHkim/px/WbGPVNQw=
+			e74xHfBbUz7e5GPbasdn7E+vNwz3o9Bv0Mh1vOmmXcg=
 			</data>
 		</dict>
 		<key>www/pages-transaction-result-transaction-result-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wiq7jy2OKc6vhodJBNrJXo3SDzSVBPm9zFdQr3F3sJ0=
+			4HkwtPXzIfv0X38O+ZL6x6oiZGZNIxX/GyY0eBBPBuc=
 			</data>
 		</dict>
 		<key>www/pages-transaction-result-transaction-result-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IErX7OlVaDf6aE0pd/3xj0y0IStlSiMWThYKbc7OYfA=
+			psCXKvpnYsN66OPx0YLtnWFcXObi8nzhWppW7NiRg90=
 			</data>
 		</dict>
 		<key>www/pages-transaction-result-transaction-result-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ieGWYEpQG0eRZzZ/KFsUEQrqj4mAwB/KKOXXTapbCBc=
+			6aIuSiNXvfmIM7GmjfUAXBOhlA3YBAaRQQNTV/fiD+8=
 			</data>
 		</dict>
 		<key>www/pages-value-unit-value-unit-module-es2015.js</key>
@@ -9072,28 +9072,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FN+ZkAH/lRCTAHZVEKNM4hfIOYtI/newxtzU28JXySo=
+			D9h9lTeoSQTMIdZnhY+hBfQqmp1WgxlbPNcnDrpMVvc=
 			</data>
 		</dict>
 		<key>www/pages-wallet-create-wallet-create-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N1doYUs+ovN8fnQsZaKVs/h8TPihTx0dkO8/52h7kQk=
+			QdjtAhRGLHXzWmGo4TdQn4UynSGvUWPgbPOvzOAyeQI=
 			</data>
 		</dict>
 		<key>www/pages-wallet-create-wallet-create-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			k7YQH1K/vhwcbNgnBruh+SrLabk3SCV+KaUgSSB5YH0=
+			J+r04httU28K7RNk6FR1F3FM0Ij2Bubcuo59we/NWvw=
 			</data>
 		</dict>
 		<key>www/pages-wallet-create-wallet-create-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OrOwBb5Aea4kuBSId/8MK8K8+YJQaDSyeLZmxqE66QQ=
+			Tsk554rxWI/B6+0DejyaP9B32Q4142RgNOPjM/53uH4=
 			</data>
 		</dict>
 		<key>www/pages-wallet-detail-wallet-detail-module-es2015.js</key>

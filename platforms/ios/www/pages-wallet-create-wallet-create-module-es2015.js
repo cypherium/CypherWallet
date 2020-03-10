@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header no-border>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div class=\"full-content\">\n        <div class=\"header\">\n            <img src=\"./assets/imgs/cypherium-full-logo.svg\" alt=\"\">\n            <p class=\"title\" translate>CREATE_WALLET</p>\n        </div>\n\n        <div class=\"container\">\n            <div class=\"input-text-wrapper\">\n                <div class=\"label\" translate>WALLET_NAME</div>\n                <div class=\"input-wrapper\">\n                    <input type=\"text\" (blur)=\"checkWalletName()\" [(ngModel)]=\"walletName\"\n                        placeholder=\"{{ 'INPUT_WALLET_NAME' | translate }}\">\n                </div>\n            </div>\n\n            <div class=\"error-text\" *ngIf=\"walletNameError\">{{ walletNameError }}</div>\n\n            <div class=\"input-password-wrapper\">\n                <div class=\"label\" translate>NEW_PASSWORD</div>\n                <div class=\"input-wrapper\">\n                    <input (blur)=\"checkPassword()\" [type]=\"ifEyeOpen ? 'text' : 'password'\" [(ngModel)]=\"password\"\n                        placeholder=\"{{ 'WALLET_RULE' | translate }}\">\n                </div>\n\n                <div class=\"eye\" tappable (click)=\"toggleEyeOpen()\" [ngClass]=\"ifEyeOpen ? 'eye-open' : 'eye-close'\">\n                </div>\n            </div>\n\n            <div class=\"error-text\" *ngIf=\"passwordError\">{{ passwordError }}</div>\n\n            <div class=\"input-password-wrapper\">\n                <div class=\"label\" translate>REPEAT_PASSWORD</div>\n                <div class=\"input-wrapper\">\n                    <input (blur)=\"checkPassword1()\" [type]=\"ifEyeOpen1 ? 'text' : 'password'\" [(ngModel)]=\"password1\"\n                        placeholder=\"{{ 'CONFIRM_PASSWORD' | translate }}\">\n                </div>\n                <div class=\"eye\" tappable (click)=\"toggleEyeOpen1()\" [ngClass]=\"ifEyeOpen1 ? 'eye-open' : 'eye-close'\">\n                </div>\n            </div>\n\n            <div class=\"error-text\" *ngIf=\"passwordError1\">{{ passwordError1 }}</div>\n\n            <div class=\"buttons\">\n                <div class=\"confirm-button\" (click)=\"createWallet()\" translate>NEXT</div>\n                <div class=\"confirm-button\" tappable (click)=\"importWallet()\" translate>IMPORT_WALLET\n                </div>\n            </div>\n        </div>\n    </div>\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header no-border>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div class=\"full-content\">\n        <div class=\"header\">\n            <img src=\"./assets/imgs/cypherium-full-logo.svg\" alt=\"\">\n            <p class=\"title\" translate>CREATE_WALLET</p>\n        </div>\n\n        <div class=\"container\">\n            <div class=\"input-text-wrapper\">\n                <div class=\"label\" translate>WALLET_NAME</div>\n                <div class=\"input-wrapper\">\n                    <input type=\"text\" (blur)=\"checkWalletName()\" [(ngModel)]=\"walletName\"\n                        placeholder=\"{{ 'INPUT_WALLET_NAME' | translate }}\">\n                </div>\n            </div>\n\n            <div class=\"error-text\" *ngIf=\"walletNameError\">{{ walletNameError }}</div>\n\n            <div class=\"input-password-wrapper\">\n                <div class=\"label\" translate>NEW_PASSWORD</div>\n                <div class=\"input-wrapper\">\n                    <input (keyup)=\"checkPassword()\" [type]=\"ifEyeOpen ? 'text' : 'password'\" [(ngModel)]=\"password\"\n                        placeholder=\"{{ 'WALLET_RULE' | translate }}\">\n                </div>\n\n                <div class=\"eye\" tappable (click)=\"toggleEyeOpen()\" [ngClass]=\"ifEyeOpen ? 'eye-open' : 'eye-close'\">\n                </div>\n            </div>\n\n            <div class=\"error-text\" *ngIf=\"passwordError\">{{ passwordError }}</div>\n\n            <div class=\"input-password-wrapper\">\n                <div class=\"label\" translate>REPEAT_PASSWORD</div>\n                <div class=\"input-wrapper\">\n                    <input (keyup)=\"checkPassword1()\" [type]=\"ifEyeOpen1 ? 'text' : 'password'\" [(ngModel)]=\"password1\"\n                        placeholder=\"{{ 'CONFIRM_PASSWORD' | translate }}\">\n                </div>\n                <div class=\"eye\" tappable (click)=\"toggleEyeOpen1()\" [ngClass]=\"ifEyeOpen1 ? 'eye-open' : 'eye-close'\">\n                </div>\n            </div>\n\n            <div class=\"error-text\" *ngIf=\"passwordError1\">{{ passwordError1 }}</div>\n\n            <div class=\"buttons\">\n                <div class=\"confirm-button\" (click)=\"createWallet()\" translate>NEXT</div>\n                <div class=\"confirm-button\" tappable (click)=\"importWallet()\" translate>IMPORT_WALLET\n                </div>\n            </div>\n        </div>\n    </div>\n</ion-content>\n");
 
 /***/ }),
 
@@ -169,8 +169,37 @@ let WalletCreatePage = class WalletCreatePage {
     checkWalletName() {
     }
     checkPassword() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            if (this.password.length < 6 || this.password.length > 18) {
+                let message = yield this.helper.getTranslate('PASSWORD_RULE');
+                this.passwordError = message;
+                return;
+            }
+            else {
+                this.passwordError = "";
+            }
+            let regx = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/;
+            if (this.password.match(regx) == null) {
+                let message = yield this.helper.getTranslate('PASSWORD_RULE');
+                this.passwordError = message;
+                return;
+            }
+            else {
+                this.passwordError = "";
+            }
+        });
     }
     checkPassword1() {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            if (this.password1 != this.password) {
+                let message = yield this.helper.getTranslate('PASSEORD_DIFFERENT');
+                this.passwordError1 = message;
+                return;
+            }
+            else {
+                this.passwordError1 = "";
+            }
+        });
     }
 };
 WalletCreatePage.ctorParameters = () => [
