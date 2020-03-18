@@ -52,7 +52,7 @@
                 <div class="receiver" *ngIf="transaction.tx_type == 3 || transaction.tx_type == 4">
                     {{ transaction.to }}</div>
 
-                <div class="date">{{ transaction.timestamp | timeDisplay }}</div>
+                <div class="date">{{ transaction.timestamp/1000000 | timeDisplay }}</div>
             </div>
             <div class="detail">
                 <div class="amount"

@@ -54,14 +54,16 @@ export class WalletPage implements OnInit {
         console.log("wallet ngoninit +++++++++...");
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex || 0] || {};
         console.log(this.wallet);
-        this.interval = setInterval(() => {
-            this.getWalletInfo(this.wallet.addr);
-        }, 10000);
+        this.amount = this.wallet.amount || 0;
         this.computeValue();
+        this.interval = setInterval(() => {
+            this.computeValue();
+        }, 10000);
+
     }
 
-    async computeValue() {
-        await this.getWalletInfo(this.wallet.addr);
+    computeValue() {
+        this.getWalletInfo(this.wallet.addr);
         //获取汇率信息
         this.http.get(this.global.api['getRateInfo']).subscribe(res => {
             console.log("汇率：", res.rates);
@@ -169,8 +171,14 @@ export class WalletPage implements OnInit {
         this.helper.toast(message);
     }
 
-    async getWalletInfo(addr) {
-        this.amount = await this.web3.getCphBalance(addr);
+    getWalletInfo(addr) {
+        this.web3.getCphBalance(addr, (v) => {
+            if (this.amount.toString() !== v.toString() && v !== undefined) {
+                this.amount = v;
+                this.global.gWalletList[this.global.currentWalletIndex].amount = this.amount;
+                this.helper.saveWallet();
+            }
+        });
     }
 
     ngOnDestroy() {

@@ -62,17 +62,36 @@ export class Web3Service {
         }
     }
 
-    async getCphBalance(userAddr, pending = false) {
-        console.log('getCphBalance');
-        // let valuex = this.web3.cph.keyBlockNumber;
-        // console.log(valuex);
-        // userAddr = '0x55B08041EEA3E359C2C7BAE249E3054EEDB8C3B2';
-        let value = await this.web3.cph.getBalance(userAddr, pending ? 'pending' : 'latest');
-        console.log("调用参数:-----------------------------------", userAddr, value);
+    // async getCphBalance(userAddr, pending = false) {
+    //     console.log('getCphBalance');
+    //     let value = await this.web3.cph.getBalance(userAddr, pending ? 'pending' : 'latest');
+    //     console.log("调用参数:-----------------------------------", userAddr, value);
 
-        console.log(`钱包${userAddr}的余额是${value}`);
-        value = this.web3.fromWei(value, 'cpher');
-        return value;
+    //     console.log(`钱包${userAddr}的余额是${value}`);
+    //     value = this.web3.fromWei(value, 'cpher');
+    //     return value;
+    // }
+
+    getCphBalance(userAddr, callback, pending = false) {
+        console.log('getCphBalance');
+        this.web3.cph.getBalance(userAddr, pending ? 'pending' : 'latest', (e,v) => {
+            if (!e) {
+                console.log("调用参数:-----------------------------------", userAddr, v);
+                console.log(`钱包${userAddr}的余额是${v}`);
+                let value = this.web3.fromWei(v, 'cpher');
+                callback(value);
+            } else {
+                //读取余额本地缓存
+                if (this.global.currentWalletIndex != undefined) {
+                    callback(this.global.gWalletList[this.global.currentWalletIndex].amount);
+                } else {
+                    callback(0);
+                }
+                // let error = await this.helper.getTranslate('MNEMONIC_WRONG');
+                // this.helper.toast(error);
+
+            }
+        });
     }
 
     getMortage(from) {

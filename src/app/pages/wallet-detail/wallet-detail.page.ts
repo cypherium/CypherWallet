@@ -30,13 +30,28 @@ export class WalletDetailPage implements OnInit {
         private web3: Web3Service,
         private helper: HelperService,
         private router: Router
-    ) { }
+    ) { 
+        this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
+        console.log("钱包：" + JSON.stringify(this.wallet));
+        this.amount = this.wallet.amount || 0;
+        this.getWalletInfo(this.wallet.addr);
+        this.interval = setInterval(() => {
+            this.getWalletInfo(this.wallet.addr);
+        }, 10000);
+    }
 
     ngOnInit() {
 
     }
-    async getWalletInfo(addr) {
-        this.amount = await this.web3.getCphBalance(addr);
+
+    getWalletInfo(addr) {
+        this.web3.getCphBalance(addr, (v) => {
+            if (this.amount.toString() !== v.toString() && v !== undefined) {
+                this.amount = v;
+                this.global.gWalletList[this.global.currentWalletIndex].amount = this.amount;
+                this.helper.saveWallet();
+            }
+        });
     }
 
     ngOnDestroy() {
@@ -54,15 +69,8 @@ export class WalletDetailPage implements OnInit {
     }
 
     async ionViewDidEnter() {
-        this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
-        console.log("钱包：" + JSON.stringify(this.wallet));
         this.blockHeight = await this.web3.getBlockHeight();
         this.getTransactionList();
-
-        this.amount = await this.web3.getCphBalance(this.wallet.addr);
-        this.interval = setInterval(() => {
-            this.getWalletInfo(this.wallet.addr);
-        }, 10000);
         //获取汇率信息
         this.http.get(this.global.api['getRateInfo']).subscribe(res => {
             console.log("汇率：", res.rates);
@@ -113,15 +121,15 @@ export class WalletDetailPage implements OnInit {
                 if (res.transactions) {
                     res.transactions.forEach(item => {
                         if (item.tx_type == 1 || item.tx_type == 2) {
-                            item.displayValue = this.web3.web3.utils.fromWei(item.value, 'ether');
+                            item.displayValue = this.web3.web3.fromWei(item.value, 'cpher');
                         } else {
-                            item.displayValue = this.web3.web3.utils.fromWei(item.tx_type_ext, 'ether');
+                            item.displayValue = this.web3.web3.fromWei(item.tx_type_ext, 'cpher');
                         }
                         let height = this.blockHeight - item.block_number;
                         if (item.block_number == -2) {
                             item.blockHeight = "pending";
-                        } else if (height < 12) {
-                            item.blockHeight = height + "/12";
+                        } else if (height < 1) {
+                            item.blockHeight = height + "/1";
                         } else {
                             item.blockHeight = finished;
                         }
@@ -149,7 +157,8 @@ export class WalletDetailPage implements OnInit {
         let navigationExtras = {
             state: {
                 tx: transaction.tx_hash,
-                status: 0 //0-成功，1:打包中，2:失败
+                status: 0, //0-成功，1:打包中，2:失败
+                time: transaction.timestamp / 1000000
             }
         };
         //前往交易结果页
@@ -157,9 +166,9 @@ export class WalletDetailPage implements OnInit {
     }
 
     toggleType(type) {
-        this.helper.getTranslate('COMING_SOON').then(msg => {
-            this.helper.toast(msg);
-        });
+        // this.helper.getTranslate('COMING_SOON').then(msg => {
+        //     this.helper.toast(msg);
+        // });
 
         if (this.type != type) {
             this.type = type;

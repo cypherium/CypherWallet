@@ -22,7 +22,7 @@
                 <div class="value">{{ detail.value | coinDisplay }} CPH</div>
             </div>
             <div class="info">
-                <div class="key" translate>MINER_FEE</div>
+                <div class="key" translate>{{ {'0': ('FINISHED_FEE' | translate), '1': ('MINER_FEE' | translate), '2': ('MINER_FEE' | translate)}[status] }}</div>
                 <div class="value">{{ miningFee | coinDisplay }} CPH</div>
             </div>
 

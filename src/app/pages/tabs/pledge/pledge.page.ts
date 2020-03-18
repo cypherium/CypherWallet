@@ -61,7 +61,14 @@ export class PledgePage implements OnInit {
     }
 
     async updateWalletInfo() {
-        this.walletAmount = await this.web3.getCphBalance(this.wallet.addr);
+        // this.walletAmount = await this.web3.getCphBalance(this.wallet.addr);
+        this.web3.getCphBalance(this.wallet.addr, (v) => {
+            if (this.walletAmount.toString() !== v.toString() && v !== undefined) {
+                this.walletAmount = v;
+                this.global.gWalletList[this.global.currentWalletIndex].amount = this.walletAmount;
+                this.helper.saveWallet();
+            }
+        });
         //获取抵押余额
         this.pledgeAmount = await this.web3.getMortage(this.wallet.addr);
         this.getTimes();

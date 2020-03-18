@@ -39,11 +39,12 @@ export class CphSendPage implements OnInit {
         private native: NativeService
     ) { 
         let state = this.router.getCurrentNavigation().extras.state;
-        console.log("state" + state)
         if (state) {
-            // let obj = state.extras.state;
             this.receiveAddress = state.address;
         }
+        this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
+        this.amount = this.wallet.amount || 0;
+        this.updateWalletInfo();
         this.interval = setInterval(() => {
             this.updateWalletInfo();
         }, 10000);
@@ -68,14 +69,18 @@ export class CphSendPage implements OnInit {
     }
 
     async updateWalletInfo() {
-        this.amount = await this.web3.getCphBalance(this.wallet.addr);
+        this.web3.getCphBalance(this.wallet.addr, (v) => {
+            if (this.amount.toString() !== v.toString() && v !== undefined) {
+                this.amount = v;
+                this.global.gWalletList[this.global.currentWalletIndex].amount = this.amount;
+                this.helper.saveWallet();
+            }
+        });
     }
 
     async ngOnInit() {
-        this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
-        console.log(this.global.gWalletList, this.global.currentWalletIndex)
+        // console.log(this.global.gWalletList, this.global.currentWalletIndex);
         //获取余额
-        this.amount = await this.web3.getCphBalance(this.wallet.addr);
         // let state = this.router.getCurrentNavigation().extras.state;
         // console.log("state" + state)
         // if (state) {
