@@ -137,11 +137,12 @@ let CphSendPage = class CphSendPage {
         this.alertDesc = "";
         this.interval = null;
         let state = this.router.getCurrentNavigation().extras.state;
-        console.log("state" + state);
         if (state) {
-            // let obj = state.extras.state;
             this.receiveAddress = state.address;
         }
+        this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
+        this.amount = this.wallet.amount || 0;
+        this.updateWalletInfo();
         this.interval = setInterval(() => {
             this.updateWalletInfo();
         }, 10000);
@@ -163,15 +164,19 @@ let CphSendPage = class CphSendPage {
     }
     updateWalletInfo() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            this.amount = yield this.web3.getCphBalance(this.wallet.addr);
+            this.web3.getCphBalance(this.wallet.addr, (v) => {
+                if (this.amount.toString() !== v.toString() && v !== undefined) {
+                    this.amount = v;
+                    this.global.gWalletList[this.global.currentWalletIndex].amount = this.amount;
+                    this.helper.saveWallet();
+                }
+            });
         });
     }
     ngOnInit() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
-            console.log(this.global.gWalletList, this.global.currentWalletIndex);
+            // console.log(this.global.gWalletList, this.global.currentWalletIndex);
             //获取余额
-            this.amount = yield this.web3.getCphBalance(this.wallet.addr);
             // let state = this.router.getCurrentNavigation().extras.state;
             // console.log("state" + state)
             // if (state) {

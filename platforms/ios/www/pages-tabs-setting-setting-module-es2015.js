@@ -97,6 +97,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm2015/ionic-storage.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _providers_http_http_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../providers/http/http.service */ "./src/app/providers/http/http.service.ts");
+/* harmony import */ var _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic-native/http/ngx */ "./node_modules/@ionic-native/http/ngx/index.js");
+
 
 
 
@@ -105,12 +107,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let SettingPage = class SettingPage {
-    constructor(router, global, storage, helper, http, activeRouter) {
+    constructor(router, global, storage, helper, http, httpn, activeRouter) {
         this.router = router;
         this.global = global;
         this.storage = storage;
         this.helper = helper;
         this.http = http;
+        this.httpn = httpn;
         this.activeRouter = activeRouter;
         this.displayValue = {};
         this.rateList = [];
@@ -120,6 +123,18 @@ let SettingPage = class SettingPage {
             let unit = this.global.settings.valueUnit;
             this.rateList = res.rates;
         });
+        // this.httpn.get(environment.appServerUrl + this.global.api['getRateInfo'], {}, {})
+        //     .then(data => {
+        //         console.log(data.status);
+        //         console.log(data.data); // data received by server
+        //         console.log(data.headers);
+        //         this.rateList = JSON.parse(data.data).rates;
+        //     })
+        //     .catch(error => {
+        //         console.log(error.status);
+        //         console.log(error.error); // error message as string
+        //         console.log(error.headers);
+        //     });
     }
     getCurrency() {
         if (this.rateList.length > 0) {
@@ -147,7 +162,10 @@ let SettingPage = class SettingPage {
         this.router.navigate(['about']);
     }
     goBrowser() {
-        window.open('http://scan.cph.com');
+        this.helper.getTranslate('COMING_SOON').then(msg => {
+            this.helper.toast(msg);
+        });
+        // window.open('https://cypherium.io');
     }
     goWalletToolPage() {
         this.router.navigate(['wallet-admin']);
@@ -162,6 +180,7 @@ SettingPage.ctorParameters = () => [
     { type: _ionic_storage__WEBPACK_IMPORTED_MODULE_4__["Storage"] },
     { type: _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__["HelperService"] },
     { type: _providers_http_http_service__WEBPACK_IMPORTED_MODULE_6__["HttpService"] },
+    { type: _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_7__["HTTP"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] }
 ];
 SettingPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -175,6 +194,7 @@ SettingPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         _ionic_storage__WEBPACK_IMPORTED_MODULE_4__["Storage"],
         _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__["HelperService"],
         _providers_http_http_service__WEBPACK_IMPORTED_MODULE_6__["HttpService"],
+        _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_7__["HTTP"],
         _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"]])
 ], SettingPage);
 

@@ -4,6 +4,8 @@ import { HelperService } from '../../../providers/helper/helper.service';
 import { Storage } from '@ionic/storage';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { HttpService } from "../../../providers/http/http.service";
+import { HTTP } from '@ionic-native/http/ngx';
+import { environment } from '../../../../environments/environment';
 
 @Component({
     selector: 'app-setting',
@@ -19,6 +21,7 @@ export class SettingPage implements OnInit {
         private storage: Storage,
         private helper: HelperService,
         private http: HttpService,
+        private httpn: HTTP,
         public activeRouter: ActivatedRoute,
     ) { }
 
@@ -27,6 +30,22 @@ export class SettingPage implements OnInit {
             let unit = this.global.settings.valueUnit;
             this.rateList = res.rates;
         })
+        // this.httpn.get(environment.appServerUrl + this.global.api['getRateInfo'], {}, {})
+        //     .then(data => {
+
+        //         console.log(data.status);
+        //         console.log(data.data); // data received by server
+        //         console.log(data.headers);
+        //         this.rateList = JSON.parse(data.data).rates;
+
+        //     })
+        //     .catch(error => {
+
+        //         console.log(error.status);
+        //         console.log(error.error); // error message as string
+        //         console.log(error.headers);
+
+        //     });
     }
 
     getCurrency() {
@@ -58,7 +77,10 @@ export class SettingPage implements OnInit {
     }
 
     goBrowser() {
-        window.open('http://scan.cph.com');
+        this.helper.getTranslate('COMING_SOON').then(msg => {
+            this.helper.toast(msg);
+        });
+        // window.open('https://cypherium.io');
     }
 
     goWalletToolPage() {

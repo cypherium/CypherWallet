@@ -274,12 +274,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     console.log("wallet ngoninit +++++++++...");
                     this.wallet = this.global.gWalletList[this.global.currentWalletIndex || 0] || {};
                     console.log(this.wallet);
-                    this.interval = setInterval(function () {
-                      _this.getWalletInfo(_this.wallet.addr);
-                    }, 10000);
+                    this.amount = this.wallet.amount || 0;
                     this.computeValue();
+                    this.interval = setInterval(function () {
+                      _this.computeValue();
+                    }, 10000);
 
-                  case 5:
+                  case 6:
                   case "end":
                     return _context.stop();
                 }
@@ -290,54 +291,36 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "computeValue",
         value: function computeValue() {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee2() {
-            var _this2 = this;
+          var _this2 = this;
 
-            return regeneratorRuntime.wrap(function _callee2$(_context2) {
-              while (1) {
-                switch (_context2.prev = _context2.next) {
-                  case 0:
-                    _context2.next = 2;
-                    return this.getWalletInfo(this.wallet.addr);
+          this.getWalletInfo(this.wallet.addr); //获取汇率信息
 
-                  case 2:
-                    //获取汇率信息
-                    this.http.get(this.global.api['getRateInfo']).subscribe(function (res) {
-                      console.log("汇率：", res.rates);
-                      var unit = _this2.global.settings.valueUnit || "USD";
-                      var value = res.rates.find(function (item) {
-                        return item.currency == unit;
-                      });
+          this.http.get(this.global.api['getRateInfo']).subscribe(function (res) {
+            console.log("汇率：", res.rates);
+            var unit = _this2.global.settings.valueUnit || "USD";
+            var value = res.rates.find(function (item) {
+              return item.currency == unit;
+            });
 
-                      if (!value) {
-                        value = res.rates[0];
-                      }
+            if (!value) {
+              value = res.rates[0];
+            }
 
-                      _this2.global.selectedRate = value; //计算当前金额的估算
+            _this2.global.selectedRate = value; //计算当前金额的估算
 
-                      _this2.amountInOther = _this2.amount * value.rate;
-                      _this2.amountInOtherInterger = Math.floor(_this2.amountInOther);
-                      var mod = Math.floor(Math.pow(10, value.significand));
-                      var amountInOtherFraction = Math.floor(_this2.amountInOther * mod) % mod;
-                      amountInOtherFraction = amountInOtherFraction + "";
+            _this2.amountInOther = _this2.amount * value.rate;
+            _this2.amountInOtherInterger = Math.floor(_this2.amountInOther);
+            var mod = Math.floor(Math.pow(10, value.significand));
+            var amountInOtherFraction = Math.floor(_this2.amountInOther * mod) % mod;
+            amountInOtherFraction = amountInOtherFraction + "";
 
-                      while (amountInOtherFraction.length < value.significand) {
-                        amountInOtherFraction = amountInOtherFraction + '0';
-                      }
+            while (amountInOtherFraction.length < value.significand) {
+              amountInOtherFraction = amountInOtherFraction + '0';
+            }
 
-                      _this2.amountInOtherFraction = amountInOtherFraction;
-                      _this2.amountInOtherDisplay = _this2.amountInOtherInterger + '.' + _this2.amountInOtherFraction;
-                    });
-
-                  case 3:
-                  case "end":
-                    return _context2.stop();
-                }
-              }
-            }, _callee2, this);
-          }));
+            _this2.amountInOtherFraction = amountInOtherFraction;
+            _this2.amountInOtherDisplay = _this2.amountInOtherInterger + '.' + _this2.amountInOtherFraction;
+          });
         }
       }, {
         key: "cancelAlert",
@@ -433,54 +416,44 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function copyAddr() {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee3() {
+          regeneratorRuntime.mark(function _callee2() {
             var wallet, message;
-            return regeneratorRuntime.wrap(function _callee3$(_context3) {
+            return regeneratorRuntime.wrap(function _callee2$(_context2) {
               while (1) {
-                switch (_context3.prev = _context3.next) {
+                switch (_context2.prev = _context2.next) {
                   case 0:
                     console.log("开始拷贝钱包地址....");
                     wallet = 'CPH' + this.wallet.addr.replace('0x', '');
                     console.log("Addr:" + wallet);
                     this.native.copy(wallet);
-                    _context3.next = 6;
+                    _context2.next = 6;
                     return this.helper.getTranslate('COPY_WALLET_SUCCEED');
 
                   case 6:
-                    message = _context3.sent;
+                    message = _context2.sent;
                     this.helper.toast(message);
 
                   case 8:
                   case "end":
-                    return _context3.stop();
+                    return _context2.stop();
                 }
               }
-            }, _callee3, this);
+            }, _callee2, this);
           }));
         }
       }, {
         key: "getWalletInfo",
         value: function getWalletInfo(addr) {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee4() {
-            return regeneratorRuntime.wrap(function _callee4$(_context4) {
-              while (1) {
-                switch (_context4.prev = _context4.next) {
-                  case 0:
-                    _context4.next = 2;
-                    return this.web3.getCphBalance(addr);
+          var _this4 = this;
 
-                  case 2:
-                    this.amount = _context4.sent;
+          this.web3.getCphBalance(addr, function (v) {
+            if (_this4.amount.toString() !== v.toString() && v !== undefined) {
+              _this4.amount = v;
+              _this4.global.gWalletList[_this4.global.currentWalletIndex].amount = _this4.amount;
 
-                  case 3:
-                  case "end":
-                    return _context4.stop();
-                }
-              }
-            }, _callee4, this);
-          }));
+              _this4.helper.saveWallet();
+            }
+          });
         }
       }, {
         key: "ngOnDestroy",
@@ -514,40 +487,40 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "deletWallet",
         value: function deletWallet(index, wallet) {
-          var _this4 = this;
+          var _this5 = this;
 
           this.ifShowPasswordPrompt = true;
 
           this.cancelPrompt = function () {
-            _this4.ifShowPasswordPrompt = false;
+            _this5.ifShowPasswordPrompt = false;
           };
 
           this.confirmPrompt = function () {
-            _this4.ifShowPasswordPrompt = false; // 如果账号只有一个或为空，直接删除，然后跳转到创建新账号
+            _this5.ifShowPasswordPrompt = false; // 如果账号只有一个或为空，直接删除，然后跳转到创建新账号
 
-            if (_this4.global.gWalletList.length < 2) {
-              _this4.storage.remove('localwallet');
+            if (_this5.global.gWalletList.length < 2) {
+              _this5.storage.remove('localwallet');
 
-              _this4.storage.remove('localwalletindex');
+              _this5.storage.remove('localwalletindex');
 
-              _this4.navCtrl.navigateRoot('/wallet-create');
+              _this5.navCtrl.navigateRoot('/wallet-create');
             } else {
               // 1.删除列表
-              _this4.global.gWalletList.splice(index, 1);
+              _this5.global.gWalletList.splice(index, 1);
 
-              _this4.storage.set('localwallet', JSON.stringify(_this4.global.gWalletList));
+              _this5.storage.set('localwallet', JSON.stringify(_this5.global.gWalletList));
 
-              if (_this4.wallet.name != wallet.name) {
-                _this4.global.currentWalletIndex = _this4.global.gWalletList.indexOf(_this4.wallet);
+              if (_this5.wallet.name != wallet.name) {
+                _this5.global.currentWalletIndex = _this5.global.gWalletList.indexOf(_this5.wallet);
               } else {
-                _this4.global.currentWalletIndex = 0;
+                _this5.global.currentWalletIndex = 0;
               }
 
-              _this4.storage.set('localwalletindex', _this4.global.currentWalletIndex);
+              _this5.storage.set('localwalletindex', _this5.global.currentWalletIndex);
 
-              _this4.wallet = _this4.global.gWalletList[_this4.global.currentWalletIndex]; // this.global.currentWallet = wallet;
+              _this5.wallet = _this5.global.gWalletList[_this5.global.currentWalletIndex]; // this.global.currentWallet = wallet;
 
-              _this4.computeValue();
+              _this5.computeValue();
             }
           };
         }

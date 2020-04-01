@@ -36,7 +36,7 @@ export class HelperService {
         public toastController: ToastController) {
         this.IsMobile = this.platform.is('cordova');
 
-        console.log("Helper construction...");
+        console.log("Helper construction...IsMobile:"+this.IsMobile);
     }
 
     addWallet(w, password) {
@@ -259,12 +259,12 @@ export class HelperService {
             buttons.unshift(cancelBtn);
         }
         //暂时忽略http请求失败
-        // this.alertController.create({
-        //     header: header,
-        //     message: message,
-        //     backdropDismiss: false,
-        //     buttons: buttons
-        // }).then(alert => alert.present());
+        this.alertController.create({
+            header: header,
+            message: message,
+            backdropDismiss: false,
+            buttons: buttons
+        }).then(alert => alert.present());
     }
 
     hideAlert() {

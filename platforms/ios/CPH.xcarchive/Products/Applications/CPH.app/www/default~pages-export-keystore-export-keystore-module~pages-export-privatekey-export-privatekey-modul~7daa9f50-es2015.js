@@ -15,10 +15,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _storage_storage_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../storage/storage.service */ "./src/app/providers/storage/storage.service.ts");
 /* harmony import */ var _logger_logger_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../logger/logger.service */ "./src/app/providers/logger/logger.service.ts");
 /* harmony import */ var _helper_helper_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../helper/helper.service */ "./src/app/providers/helper/helper.service.ts");
-/* harmony import */ var _global_global_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../global/global.service */ "./src/app/providers/global/global.service.ts");
 
 var HttpHelperService_1;
-
 
 
 
@@ -54,7 +52,8 @@ let HttpHelperService = HttpHelperService_1 = class HttpHelperService {
     }
     requestBefore(options, setting) {
         this.showLoading(setting);
-        if (this.helper.isMobile && _global_global_service__WEBPACK_IMPORTED_MODULE_5__["GlobalService"].showLog) {
+        // if (this.helper.isMobile() && GlobalService.showLog) {
+        if (this.helper.isMobile()) {
             console.log("Before request:" + JSON.stringify(options));
         }
         else {
@@ -63,7 +62,8 @@ let HttpHelperService = HttpHelperService_1 = class HttpHelperService {
     }
     requestSuccess(options) {
         this.hideLoading();
-        if (this.helper.isMobile && _global_global_service__WEBPACK_IMPORTED_MODULE_5__["GlobalService"].showLog) {
+        // if (this.helper.isMobile() && GlobalService.showLog) {
+        if (this.helper.isMobile()) {
             console.log("Request succeed for:" + options.url);
         }
         else {
@@ -72,7 +72,8 @@ let HttpHelperService = HttpHelperService_1 = class HttpHelperService {
     }
     requestError(options) {
         this.hideLoading();
-        if (this.helper.isMobile && _global_global_service__WEBPACK_IMPORTED_MODULE_5__["GlobalService"].showLog) {
+        // if (this.helper.isMobile() && GlobalService.showLog) {
+        if (this.helper.isMobile()) {
             console.log("Request error for:" + options.url);
         }
         else {
@@ -215,7 +216,15 @@ let HttpService = class HttpService extends _http_helper_http_helper_service__WE
         });
     }
     request(ops, set) {
-        const options = Object.assign({ url: '', method: 'POST', body: null, params: null, urlWithParams: false, headers: null, reportProgress: false, withCredentials: false, responseType: 'json' }, ops);
+        const options = Object.assign({ url: '', method: 'POST', body: null, params: null, urlWithParams: false, headers: null, reportProgress: false, withCredentials: false, responseType: 'json', header: {
+                "Content-Type": "application/json",
+                'Accept': 'application/json, text/plain',
+                "cache-control": "no-cache",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token, Accept, Authorization, X-Request-With, Access-Control-Request-Method, Access-Control-Request-Headers",
+                "Access-Control-Allow-Credentials": "true",
+                "Access-Control-Allow-Methods": "GET, POST, DELETE, PUT, OPTIONS, TRACE, PATCH, CONNECT",
+            } }, ops);
         const setting = _http_helper_http_helper_service__WEBPACK_IMPORTED_MODULE_10__["HttpHelperService"].getDefaultSetting(set);
         options.url = _util_util_service__WEBPACK_IMPORTED_MODULE_5__["UtilService"].formatUrl(options.url);
         console.log(JSON.stringify(set));

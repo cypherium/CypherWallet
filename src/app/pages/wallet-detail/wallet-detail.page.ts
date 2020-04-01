@@ -144,10 +144,17 @@ export class WalletDetailPage implements OnInit {
                     } else {
                         this.allTransactionList = this.allTransactionList.concat(res.transactions || []);
                     }
-                    this.more = (this.allTransactionList.length < res.count);
+                    // this.more = (this.allTransactionList.length < res.count);
+                    this.more = true;
                     console.log(this.allTransactionList.length, res.count);
                 } else {
-                    this.allTransactionList = [];
+                    if (this.pageno > 1) {
+                        this.pageno--;
+                    }else {
+                        this.allTransactionList = [];
+                    }
+                    this.more = false;
+
                 }
             }
         })

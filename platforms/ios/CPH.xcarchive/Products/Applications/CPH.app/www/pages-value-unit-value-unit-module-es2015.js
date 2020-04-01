@@ -95,6 +95,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _providers_http_http_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../providers/http/http.service */ "./src/app/providers/http/http.service.ts");
+/* harmony import */ var _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic-native/http/ngx */ "./node_modules/@ionic-native/http/ngx/index.js");
+
 
 
 
@@ -104,7 +106,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let ValueUnitPage = class ValueUnitPage {
-    constructor(router, global, storage, helper, navCtrl, activeRouter, http) {
+    constructor(router, global, storage, helper, navCtrl, activeRouter, http, httpn) {
         this.router = router;
         this.global = global;
         this.storage = storage;
@@ -112,12 +114,26 @@ let ValueUnitPage = class ValueUnitPage {
         this.navCtrl = navCtrl;
         this.activeRouter = activeRouter;
         this.http = http;
+        this.httpn = httpn;
         this.rateList = [];
     }
     ngOnInit() {
         this.http.get(this.global.api['getRateInfo']).subscribe(res => {
             this.rateList = res.rates;
         });
+        // this.httpn.get(environment.appServerUrl + this.global.api['getRateInfo'], {}, {})
+        //     .then(data => {
+        //         console.log(data.status);
+        //         console.log(data.data); // data received by server
+        //         console.log(data.headers);
+        //         console.log(JSON.parse(data.data));
+        //         this.rateList = JSON.parse(data.data).rates;
+        //     })
+        //     .catch(error => {
+        //         console.log(error.status);
+        //         console.log(error.error); // error message as string
+        //         console.log(error.headers);
+        //     });
     }
     toggleValueUnit(unit) {
         if (unit != this.global.settings.valueUnit) {
@@ -134,7 +150,8 @@ ValueUnitPage.ctorParameters = () => [
     { type: _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__["HelperService"] },
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["NavController"] },
     { type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"] },
-    { type: _providers_http_http_service__WEBPACK_IMPORTED_MODULE_7__["HttpService"] }
+    { type: _providers_http_http_service__WEBPACK_IMPORTED_MODULE_7__["HttpService"] },
+    { type: _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_8__["HTTP"] }
 ];
 ValueUnitPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -148,7 +165,8 @@ ValueUnitPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__["HelperService"],
         _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["NavController"],
         _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"],
-        _providers_http_http_service__WEBPACK_IMPORTED_MODULE_7__["HttpService"]])
+        _providers_http_http_service__WEBPACK_IMPORTED_MODULE_7__["HttpService"],
+        _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_8__["HTTP"]])
 ], ValueUnitPage);
 
 

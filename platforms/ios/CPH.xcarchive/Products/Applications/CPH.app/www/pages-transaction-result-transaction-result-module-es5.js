@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>{{ 'TRANSACTION_DETAIL' | translate }}</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div class=\"main\">\n        <div class=\"header\">\n            <div class=\"logo\" [ngClass]=\"{'0': 'success', '1': 'warning', '2': ''}[status]\"></div>\n            <p class=\"label\">\n                {{ {'0': ('TRSACTION_SUCCEED' | translate), '1': ('TRSACTION_PACKAGING' | translate), '2': ('TRSACTION_FAILURE' | translate)}[status] }}\n            </p>\n        </div>\n\n        <div class=\"info-list\">\n            <div class=\"info\">\n                <div class=\"key\" translate>TRSACTION_AMOUNT</div>\n                <div class=\"value\">{{ detail.value | coinDisplay }} CPH</div>\n            </div>\n            <div class=\"info\">\n                <div class=\"key\" translate>MINER_FEE</div>\n                <div class=\"value\">{{ miningFee | coinDisplay }} CPH</div>\n            </div>\n\n            <div class=\"split\"></div>\n\n            <div class=\"info focus\" tappable (click)=\"goAddress(detail.from)\">\n                <div class=\"key\" translate>SEND_ADDRESS</div>\n                <div class=\"value\">{{ detail.from | addCphEllipsis }}</div>\n            </div>\n            <div class=\"info focus\" tappable (click)=\"goAddress(detail.to)\">\n                <div class=\"key\" translate>RECEIVER_ADDRESS</div>\n                <div class=\"value\">{{ detail.to | addCphEllipsis }}</div>\n            </div>\n        </div>\n\n        <div class=\"split\"></div>\n\n        <div class=\"info-list\">\n            <div class=\"info focus\" (click)=\"goHash(detail.hash)\">\n                <div class=\"key\" translate>TRANSACTION_HASH</div>\n                <div class=\"value\">{{ detail.hash | addCphEllipsis }}</div>\n            </div>\n\n            <div class=\"info\" [ngClass]=\"status != 1 ? 'focus' : ''\" tappable (click)=\"goHeight(detail.blockNumber)\">\n                <div class=\"key\" translate>BLOCKCHAIN_HEIGHT</div>\n                <div class=\"value\">{{ status !== 1 ? detail.blockNumber : ('TRSACTION_PROCESSING' | translate) }}</div>\n            </div>\n\n            <div class=\"info\">\n                <div class=\"key\" translate>TRANSACTION_TIME</div>\n                <div class=\"value\">{{ time | timeDisplay }}</div>\n            </div>\n        </div>\n    </div>\n</ion-content>\n";
+    __webpack_exports__["default"] = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>{{ 'TRANSACTION_DETAIL' | translate }}</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div class=\"main\">\n        <div class=\"header\">\n            <div class=\"logo\" [ngClass]=\"{'0': 'success', '1': 'warning', '2': ''}[status]\"></div>\n            <p class=\"label\">\n                {{ {'0': ('TRSACTION_SUCCEED' | translate), '1': ('TRSACTION_PACKAGING' | translate), '2': ('TRSACTION_FAILURE' | translate)}[status] }}\n            </p>\n        </div>\n\n        <div class=\"info-list\">\n            <div class=\"info\">\n                <div class=\"key\" translate>TRSACTION_AMOUNT</div>\n                <div class=\"value\">{{ detail.value | coinDisplay }} CPH</div>\n            </div>\n            <div class=\"info\">\n                <div class=\"key\" translate>{{ {'0': ('FINISHED_FEE' | translate), '1': ('MINER_FEE' | translate), '2': ('MINER_FEE' | translate)}[status] }}</div>\n                <div class=\"value\">{{ miningFee | coinDisplay }} CPH</div>\n            </div>\n\n            <div class=\"split\"></div>\n\n            <div class=\"info focus\" tappable (click)=\"goAddress(detail.from)\">\n                <div class=\"key\" translate>SEND_ADDRESS</div>\n                <div class=\"value\">{{ detail.from | addCphEllipsis }}</div>\n            </div>\n            <div class=\"info focus\" tappable (click)=\"goAddress(detail.to)\">\n                <div class=\"key\" translate>RECEIVER_ADDRESS</div>\n                <div class=\"value\">{{ detail.to | addCphEllipsis }}</div>\n            </div>\n        </div>\n\n        <div class=\"split\"></div>\n\n        <div class=\"info-list\">\n            <div class=\"info focus\" (click)=\"goHash(detail.hash)\">\n                <div class=\"key\" translate>TRANSACTION_HASH</div>\n                <div class=\"value\">{{ detail.hash | addCphEllipsis }}</div>\n            </div>\n\n            <div class=\"info\" [ngClass]=\"status != 1 ? 'focus' : ''\" tappable (click)=\"goHeight(detail.blockNumber)\">\n                <div class=\"key\" translate>BLOCKCHAIN_HEIGHT</div>\n                <div class=\"value\">{{ status !== 1 ? detail.blockNumber : ('TRSACTION_PROCESSING' | translate) }}</div>\n            </div>\n\n            <div class=\"info\">\n                <div class=\"key\" translate>TRANSACTION_TIME</div>\n                <div class=\"value\">{{ time | timeDisplay }}</div>\n            </div>\n        </div>\n    </div>\n</ion-content>\n";
     /***/
   },
 
@@ -190,17 +190,24 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _providers_global_global_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
     /*! ../../providers/global/global.service */
     "./src/app/providers/global/global.service.ts");
+    /* harmony import */
+
+
+    var _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ../../providers/helper/helper.service */
+    "./src/app/providers/helper/helper.service.ts");
 
     var TransactionResultPage =
     /*#__PURE__*/
     function () {
-      function TransactionResultPage(router, activatedRoute, web3, global, native) {
+      function TransactionResultPage(router, activatedRoute, web3, global, helper, native) {
         _classCallCheck(this, TransactionResultPage);
 
         this.router = router;
         this.activatedRoute = activatedRoute;
         this.web3 = web3;
         this.global = global;
+        this.helper = helper;
         this.native = native;
         this.status = 0;
         this.tx = "";
@@ -256,34 +263,50 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "goHashPage",
         value: function goHashPage() {
-          if (this.status != 1) {
-            var url = "http://scan.cph.com/#/txhash/" + this.tx;
-            this.native.openUrlBySystemBrowser(url);
-          }
+          var _this = this;
+
+          this.helper.getTranslate('COMING_SOON').then(function (msg) {
+            _this.helper.toast(msg);
+          }); // if (this.status != 1) {
+          //     let url = "http://scan.cph.com/#/txhash/" + this.tx;
+          //     this.native.openUrlBySystemBrowser(url);
+          // }
         }
       }, {
         key: "goHash",
         value: function goHash(hash) {
-          if (this.status != 1) {
-            var url = "http://scan.cph.com/#/txhash/" + this.tx;
-            this.native.openUrlBySystemBrowser(url);
-          }
+          var _this2 = this;
+
+          this.helper.getTranslate('COMING_SOON').then(function (msg) {
+            _this2.helper.toast(msg);
+          }); // if (this.status != 1) {
+          //     let url = "http://scan.cph.com/#/txhash/" + this.tx;
+          //     this.native.openUrlBySystemBrowser(url);
+          // }
         }
       }, {
         key: "goAddress",
         value: function goAddress(addr) {
-          if (this.status != 1) {
-            var url = "http://scan.cph.com/#/address/" + addr;
-            this.native.openUrlBySystemBrowser(url);
-          }
+          var _this3 = this;
+
+          this.helper.getTranslate('COMING_SOON').then(function (msg) {
+            _this3.helper.toast(msg);
+          }); // if (this.status != 1) {
+          //     let url = "http://scan.cph.com/#/address/" + addr;
+          //     this.native.openUrlBySystemBrowser(url);
+          // }
         }
       }, {
         key: "goHeight",
         value: function goHeight(height) {
-          if (this.status != 1) {
-            var url = "http://scan.cph.com/#/block/" + height;
-            this.native.openUrlBySystemBrowser(url);
-          }
+          var _this4 = this;
+
+          this.helper.getTranslate('COMING_SOON').then(function (msg) {
+            _this4.helper.toast(msg);
+          }); // if (this.status != 1) {
+          //     let url = "http://scan.cph.com/#/block/" + height;
+          //     this.native.openUrlBySystemBrowser(url);
+          // }
         }
       }, {
         key: "ngOnInit",
@@ -303,6 +326,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         type: _providers_global_global_service__WEBPACK_IMPORTED_MODULE_5__["GlobalService"]
       }, {
+        type: _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_6__["HelperService"]
+      }, {
         type: _providers_native_native_service__WEBPACK_IMPORTED_MODULE_4__["NativeService"]
       }];
     };
@@ -315,7 +340,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./transaction-result.page.scss */
       "./src/app/pages/transaction-result/transaction-result.page.scss")).default]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_3__["Web3Service"], _providers_global_global_service__WEBPACK_IMPORTED_MODULE_5__["GlobalService"], _providers_native_native_service__WEBPACK_IMPORTED_MODULE_4__["NativeService"]])], TransactionResultPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["ActivatedRoute"], _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_3__["Web3Service"], _providers_global_global_service__WEBPACK_IMPORTED_MODULE_5__["GlobalService"], _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_6__["HelperService"], _providers_native_native_service__WEBPACK_IMPORTED_MODULE_4__["NativeService"]])], TransactionResultPage);
     /***/
   }
 }]);

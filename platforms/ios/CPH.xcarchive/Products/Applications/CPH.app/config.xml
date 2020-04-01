@@ -70,9 +70,16 @@
     <feature name="BarcodeScanner">
         <param name="ios-package" value="CDVBarcodeScanner" />
     </feature>
+    <feature name="File">
+        <param name="ios-package" value="CDVFile" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="CordovaHttpPlugin">
+        <param name="ios-package" value="CordovaHttpPlugin" />
+    </feature>
     <name>CPH</name>
     <description>CPH Wallet</description>
-    <author email="hi@ionicframework.com" href="http://ionicframework.com/">CPH Development Team</author>
+    <author email="sky@cypheriumm.io" href="https://cypherium.io/">Cypherium Development Team</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />

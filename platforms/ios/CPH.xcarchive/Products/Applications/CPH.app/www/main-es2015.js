@@ -4081,7 +4081,7 @@ let HelperService = class HelperService {
         this.win = window;
         this.readPermitted = false;
         this.IsMobile = this.platform.is('cordova');
-        console.log("Helper construction...");
+        console.log("Helper construction...IsMobile:" + this.IsMobile);
     }
     addWallet(w, password) {
         if (!w.keystore) {
@@ -4288,12 +4288,12 @@ let HelperService = class HelperService {
             buttons.unshift(cancelBtn);
         }
         //暂时忽略http请求失败
-        // this.alertController.create({
-        //     header: header,
-        //     message: message,
-        //     backdropDismiss: false,
-        //     buttons: buttons
-        // }).then(alert => alert.present());
+        this.alertController.create({
+            header: header,
+            message: message,
+            backdropDismiss: false,
+            buttons: buttons
+        }).then(alert => alert.present());
     }
     hideAlert() {
         this.alertController.dismiss();
@@ -4393,10 +4393,10 @@ __webpack_require__.r(__webpack_exports__);
 const environment = {
     production: false,
     requestTimeout: 15000,
-    appServerUrl: "http://localhost:8359",
+    appServerUrl: "http://35.232.249.84:8359",
     cypherium: {
         provider: 'http://34.66.103.10:8000',
-        // provider: 'http://192.168.0.188:18002',
+        // provider: 'http://127.0.0.1:18004',
         pledgeContractAddr: '0x0000000000000000000000000000000000000081',
         pledgeContractAbi: null,
         privateKey: ''

@@ -2,7 +2,7 @@
 <widget android-versionCode="100" id="com.cph.mobile" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>CPH</name>
     <description>CPH Wallet</description>
-    <author email="hi@ionicframework.com" href="http://ionicframework.com/">CPH Development Team</author>
+    <author email="sky@cypheriumm.io" href="https://cypherium.io/">Cypherium Development Team</author>
     <content src="index.html" />
     <access origin="*" />
     <access launch-external="yes" origin="tel:*" />

@@ -108,6 +108,15 @@ export class HttpService extends HttpHelperService {
             reportProgress: false,
             withCredentials: false,
             responseType: 'json',
+            header: {
+                "Content-Type": "application/json",
+                'Accept': 'application/json, text/plain',
+                "cache-control": "no-cache",
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token, Accept, Authorization, X-Request-With, Access-Control-Request-Method, Access-Control-Request-Headers",
+                "Access-Control-Allow-Credentials": "true",
+                "Access-Control-Allow-Methods": "GET, POST, DELETE, PUT, OPTIONS, TRACE, PATCH, CONNECT",
+            },
             ...ops
         };
         const setting = HttpHelperService.getDefaultSetting(set);

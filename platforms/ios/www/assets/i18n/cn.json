@@ -62,6 +62,7 @@
 	"INPUT_ADDR_TIPS": "输入CPH钱包地址",
 	"RECEIVE_ADDRESS": "接收地址",
 	"MINER_FEE": "手续费预估",
+	"FINISHED_FEE": "手续费",
 	"QUICK": "快",
 	"SLOW": "慢",
 	"TRANSACTION_FAILED": "交易失败",

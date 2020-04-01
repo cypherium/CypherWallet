@@ -20690,7 +20690,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           }
 
           value = value.replace('0x', '');
-          return 'CPH' + value.slice(0, 8) + '...' + value.slice(-8);
+          return 'CPH' + value.slice(0, 8).toUpperCase() + '...' + value.slice(-8).toUpperCase();
         }
       }]);
 
@@ -21106,51 +21106,52 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               console.log("合约初始化成功:", name, addr);
               return this[name];
             }
-          }
+          } // async getCphBalance(userAddr, pending = false) {
+          //     console.log('getCphBalance');
+          //     let value = await this.web3.cph.getBalance(userAddr, pending ? 'pending' : 'latest');
+          //     console.log("调用参数:-----------------------------------", userAddr, value);
+          //     console.log(`钱包${userAddr}的余额是${value}`);
+          //     value = this.web3.fromWei(value, 'cpher');
+          //     return value;
+          // }
+
         }, {
           key: "getCphBalance",
-          value: function getCphBalance(userAddr) {
-            var pending = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-            /*#__PURE__*/
-            regeneratorRuntime.mark(function _callee4() {
-              var value;
-              return regeneratorRuntime.wrap(function _callee4$(_context4) {
-                while (1) {
-                  switch (_context4.prev = _context4.next) {
-                    case 0:
-                      console.log('getCphBalance'); // let valuex = this.web3.cph.keyBlockNumber;
-                      // console.log(valuex);
-                      // userAddr = '0x55B08041EEA3E359C2C7BAE249E3054EEDB8C3B2';
+          value: function getCphBalance(userAddr, callback) {
+            var _this3 = this;
 
-                      _context4.next = 3;
-                      return this.web3.cph.getBalance(userAddr, pending ? 'pending' : 'latest');
+            var pending = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+            console.log('getCphBalance');
+            this.web3.cph.getBalance(userAddr, pending ? 'pending' : 'latest', function (e, v) {
+              if (!e) {
+                console.log("调用参数:-----------------------------------", userAddr, v);
+                console.log("\u94B1\u5305".concat(userAddr, "\u7684\u4F59\u989D\u662F").concat(v));
 
-                    case 3:
-                      value = _context4.sent;
-                      console.log("调用参数:-----------------------------------", userAddr, value);
-                      console.log("\u94B1\u5305".concat(userAddr, "\u7684\u4F59\u989D\u662F").concat(value));
-                      value = this.web3.fromWei(value, 'cpher');
-                      return _context4.abrupt("return", value);
+                var value = _this3.web3.fromWei(v, 'cpher');
 
-                    case 8:
-                    case "end":
-                      return _context4.stop();
-                  }
-                }
-              }, _callee4, this);
-            }));
+                callback(value);
+              } else {
+                //读取余额本地缓存
+                if (_this3.global.currentWalletIndex != undefined) {
+                  callback(_this3.global.gWalletList[_this3.global.currentWalletIndex].amount);
+                } else {
+                  callback(0);
+                } // let error = await this.helper.getTranslate('MNEMONIC_WRONG');
+                // this.helper.toast(error);
+
+              }
+            });
           }
         }, {
           key: "getMortage",
           value: function getMortage(from) {
-            var _this3 = this;
+            var _this4 = this;
 
             // let value = await this.pledgeContract.methods.mortgageOf(from).call({ from: from });
             // value = this.web3.fromWei(value + "", 'cpher');
             // return value;
             return new Promise(function (resolve, reject) {
-              _this3.pledgeContract.methods.mortgageOf(from).call({
+              _this4.pledgeContract.methods.mortgageOf(from).call({
                 from: from
               }, function (err, result) {
                 if (err) {
@@ -21158,7 +21159,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                 } else {
                   console.log("抵押", result);
 
-                  var value = _this3.web3.fromWei(result + "", 'cpher');
+                  var value = _this4.web3.fromWei(result + "", 'cpher');
 
                   resolve(value);
                 }
@@ -21170,39 +21171,39 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           value: function pledge(type, from, amount, privateKey, callback) {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
             /*#__PURE__*/
-            regeneratorRuntime.mark(function _callee5() {
+            regeneratorRuntime.mark(function _callee4() {
               var gasPrice, params, tx, serializedTx;
-              return regeneratorRuntime.wrap(function _callee5$(_context5) {
+              return regeneratorRuntime.wrap(function _callee4$(_context4) {
                 while (1) {
-                  switch (_context5.prev = _context5.next) {
+                  switch (_context4.prev = _context4.next) {
                     case 0:
                       amount = this.web3.toWei(amount + "", 'cpher');
-                      _context5.next = 3;
+                      _context4.next = 3;
                       return this.web3.cph.getGasPrice();
 
                     case 3:
-                      gasPrice = _context5.sent;
+                      gasPrice = _context4.sent;
 
                       if (!gasPrice || gasPrice == '0') {
                         gasPrice = this.web3.toWei(20, 'gwei');
                       }
 
                       params = type == 'mortgage' ? [from, amount] : [amount];
-                      _context5.next = 8;
+                      _context4.next = 8;
                       return this.generateCphTx(from, _environments_environment__WEBPACK_IMPORTED_MODULE_7__["environment"].cypherium.pledgeContractAddr, '0x0', gasPrice, privateKey, 'pledgeContract', type, params);
 
                     case 8:
-                      tx = _context5.sent;
+                      tx = _context4.sent;
                       serializedTx = tx.serialize();
                       this.web3.cph.sendSignedTransaction('0x' + serializedTx.toString('hex'), callback); //调起合约
                       // this.web3.cph.sendSignedTransaction(tx.rawTransaction, callback); //调起合约
 
                     case 11:
                     case "end":
-                      return _context5.stop();
+                      return _context4.stop();
                   }
                 }
-              }, _callee5, this);
+              }, _callee4, this);
             }));
           }
         }, {
@@ -21210,20 +21211,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           value: function transferCph(from, to, value, gasPrice, privateKey, callback) {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
             /*#__PURE__*/
-            regeneratorRuntime.mark(function _callee6() {
+            regeneratorRuntime.mark(function _callee5() {
               var tx, serializedTx;
-              return regeneratorRuntime.wrap(function _callee6$(_context6) {
+              return regeneratorRuntime.wrap(function _callee5$(_context5) {
                 while (1) {
-                  switch (_context6.prev = _context6.next) {
+                  switch (_context5.prev = _context5.next) {
                     case 0:
                       console.log("\u53D1\u8D77\u8F6C\u8D26----from:".concat(from, ",to:").concat(to, ",value:").concat(value));
                       value = this.web3.toWei(value, 'cpher');
                       gasPrice = this.web3.toWei(gasPrice + "", 'gwei');
-                      _context6.next = 5;
+                      _context5.next = 5;
                       return this.generateCphTx(from, to, value, gasPrice, privateKey);
 
                     case 5:
-                      tx = _context6.sent;
+                      tx = _context5.sent;
                       console.log("交易签名：", tx);
                       serializedTx = tx.serialize();
                       this.web3.cph.sendRawTransaction('0x' + serializedTx.toString('hex'), callback); // this.web3.cph.sendSignedTransaction('0x' + serializedTx.toString('hex'), callback); //调起合约
@@ -21231,10 +21232,10 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                     case 9:
                     case "end":
-                      return _context6.stop();
+                      return _context5.stop();
                   }
                 }
-              }, _callee6, this);
+              }, _callee5, this);
             }));
           }
         }, {
@@ -21245,11 +21246,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             var params = arguments.length > 7 && arguments[7] !== undefined ? arguments[7] : null;
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
             /*#__PURE__*/
-            regeneratorRuntime.mark(function _callee7() {
+            regeneratorRuntime.mark(function _callee6() {
               var data, thisobj, nonce, txParams, tx, p, k;
-              return regeneratorRuntime.wrap(function _callee7$(_context7) {
+              return regeneratorRuntime.wrap(function _callee6$(_context6) {
                 while (1) {
-                  switch (_context7.prev = _context7.next) {
+                  switch (_context6.prev = _context6.next) {
                     case 0:
                       data = "";
 
@@ -21260,11 +21261,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       } // var nonce = await this.web3.cph.getTransactionCount('0x' + from, 'pending'); //获取用户钱包地址的nonce
 
 
-                      _context7.next = 4;
+                      _context6.next = 4;
                       return this.web3.cph.getTransactionCount('0x' + from);
 
                     case 4:
-                      nonce = _context7.sent;
+                      nonce = _context6.sent;
                       //获取用户钱包地址的nonce
                       console.log("Nonce为" + nonce); // let gasLimit = await this.web3.cph.estimateGas({
                       //     "from": '0x'+from,
@@ -21297,14 +21298,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       p = new Uint8Array(this._hexStringToBytes(privateKey));
                       k = new Uint8Array(this._hexStringToBytes(privateKey.substring(64, 128)));
                       tx.signWith25519(p, k);
-                      return _context7.abrupt("return", tx);
+                      return _context6.abrupt("return", tx);
 
                     case 13:
                     case "end":
-                      return _context7.stop();
+                      return _context6.stop();
                   }
                 }
-              }, _callee7, this);
+              }, _callee6, this);
             }));
           }
         }, {
@@ -21312,27 +21313,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           value: function getTxDetail(tx) {
             return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
             /*#__PURE__*/
-            regeneratorRuntime.mark(function _callee8() {
+            regeneratorRuntime.mark(function _callee7() {
               var result;
-              return regeneratorRuntime.wrap(function _callee8$(_context8) {
+              return regeneratorRuntime.wrap(function _callee7$(_context7) {
                 while (1) {
-                  switch (_context8.prev = _context8.next) {
+                  switch (_context7.prev = _context7.next) {
                     case 0:
-                      _context8.next = 2;
+                      _context7.next = 2;
                       return this.web3.cph.getTransaction(tx);
 
                     case 2:
-                      result = _context8.sent;
+                      result = _context7.sent;
                       result.value = this.web3.fromWei(result.value, 'cpher');
                       result.gasPrice = this.web3.fromWei(result.gasPrice, 'cpher');
-                      return _context8.abrupt("return", result);
+                      return _context7.abrupt("return", result);
 
                     case 6:
                     case "end":
-                      return _context8.stop();
+                      return _context7.stop();
                   }
                 }
-              }, _callee8, this);
+              }, _callee7, this);
             }));
           }
         }, {

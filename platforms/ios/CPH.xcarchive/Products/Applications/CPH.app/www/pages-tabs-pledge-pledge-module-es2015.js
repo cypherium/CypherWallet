@@ -155,7 +155,14 @@ let PledgePage = class PledgePage {
     }
     updateWalletInfo() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            this.walletAmount = yield this.web3.getCphBalance(this.wallet.addr);
+            // this.walletAmount = await this.web3.getCphBalance(this.wallet.addr);
+            this.web3.getCphBalance(this.wallet.addr, (v) => {
+                if (this.walletAmount.toString() !== v.toString() && v !== undefined) {
+                    this.walletAmount = v;
+                    this.global.gWalletList[this.global.currentWalletIndex].amount = this.walletAmount;
+                    this.helper.saveWallet();
+                }
+            });
             //获取抵押余额
             this.pledgeAmount = yield this.web3.getMortage(this.wallet.addr);
             this.getTimes();

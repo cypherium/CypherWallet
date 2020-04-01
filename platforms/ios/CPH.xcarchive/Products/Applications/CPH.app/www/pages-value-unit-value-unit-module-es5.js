@@ -196,11 +196,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _providers_http_http_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
     /*! ../../providers/http/http.service */
     "./src/app/providers/http/http.service.ts");
+    /* harmony import */
+
+
+    var _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! @ionic-native/http/ngx */
+    "./node_modules/@ionic-native/http/ngx/index.js");
 
     var ValueUnitPage =
     /*#__PURE__*/
     function () {
-      function ValueUnitPage(router, global, storage, helper, navCtrl, activeRouter, http) {
+      function ValueUnitPage(router, global, storage, helper, navCtrl, activeRouter, http, httpn) {
         _classCallCheck(this, ValueUnitPage);
 
         this.router = router;
@@ -210,6 +216,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.navCtrl = navCtrl;
         this.activeRouter = activeRouter;
         this.http = http;
+        this.httpn = httpn;
         this.rateList = [];
       }
 
@@ -220,7 +227,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.http.get(this.global.api['getRateInfo']).subscribe(function (res) {
             _this.rateList = res.rates;
-          });
+          }); // this.httpn.get(environment.appServerUrl + this.global.api['getRateInfo'], {}, {})
+          //     .then(data => {
+          //         console.log(data.status);
+          //         console.log(data.data); // data received by server
+          //         console.log(data.headers);
+          //         console.log(JSON.parse(data.data));
+          //         this.rateList = JSON.parse(data.data).rates;
+          //     })
+          //     .catch(error => {
+          //         console.log(error.status);
+          //         console.log(error.error); // error message as string
+          //         console.log(error.headers);
+          //     });
         }
       }, {
         key: "toggleValueUnit",
@@ -252,6 +271,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"]
       }, {
         type: _providers_http_http_service__WEBPACK_IMPORTED_MODULE_7__["HttpService"]
+      }, {
+        type: _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_8__["HTTP"]
       }];
     };
 
@@ -263,7 +284,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./value-unit.page.scss */
       "./src/app/pages/value-unit/value-unit.page.scss")).default]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _providers_global_global_service__WEBPACK_IMPORTED_MODULE_2__["GlobalService"], _ionic_storage__WEBPACK_IMPORTED_MODULE_4__["Storage"], _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__["HelperService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["NavController"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"], _providers_http_http_service__WEBPACK_IMPORTED_MODULE_7__["HttpService"]])], ValueUnitPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _providers_global_global_service__WEBPACK_IMPORTED_MODULE_2__["GlobalService"], _ionic_storage__WEBPACK_IMPORTED_MODULE_4__["Storage"], _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__["HelperService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_6__["NavController"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"], _providers_http_http_service__WEBPACK_IMPORTED_MODULE_7__["HttpService"], _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_8__["HTTP"]])], ValueUnitPage);
     /***/
   }
 }]);

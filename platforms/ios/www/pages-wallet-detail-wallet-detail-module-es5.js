@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header no-border>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button color=\"white\"></ion-back-button>\n        </ion-buttons>\n        <ion-title>{{ wallet.name }}</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <!-- <div class=\"my-content\"> -->\n    <div class=\"header\">\n        <div class=\"info\">\n            <div class=\"amount\">{{ amount | coinDisplay }}</div>\n            <div class=\"money\">≈ {{ amountInOtherDisplay }}</div>\n        </div>\n    </div>\n\n    <div class=\"btns\">\n        <div class=\"money transfer\" tappable (click)=\"goTransferPage()\">\n            <div class=\"icon\"></div>\n            <p class=\"text\" translate>SEND</p>\n        </div>\n        <div class=\"money receive\" (click)=\"goReceivePage()\">\n            <div class=\"icon\"></div>\n            <p class=\"text\" translate>RECEIVE</p>\n        </div>\n    </div>\n\n    <div class=\"tabs\">\n        <div class=\"tab\" [ngClass]=\"type == 0 ? 'focus' : ''\" (click)=\"toggleType(0)\">\n            <div class=\"label\" translate>ALL</div>\n        </div>\n        <div class=\"tab\" [ngClass]=\"type == 1 ? 'focus' : ''\" (click)=\"toggleType(1)\">\n            <div class=\"label\" translate>SEND</div>\n        </div>\n        <div class=\"tab\" [ngClass]=\"type == 2 ? 'focus' : ''\" (click)=\"toggleType(2)\">\n            <div class=\"label\" translate>RECEIVE</div>\n        </div>\n        <div class=\"tab\" [ngClass]=\"type == 5 ? 'focus' : ''\" (click)=\"toggleType(5)\">\n            <div class=\"label\" translate>OTHERS</div>\n        </div>\n    </div>\n\n    <div class=\"transactions\">\n        <div class=\"transaction\" *ngFor=\"let transaction of allTransactionList\" tappable\n            (click)=\"goResultPage(transaction)\">\n            <div class=\"info\">\n                <div class=\"receiver\" *ngIf=\"transaction.tx_type != 3 && transaction.tx_type != 4\">\n                    {{ (transaction.tx_type != 2 ? transaction.to : transaction.from) | addCphEllipsis }}</div>\n\n                <div class=\"receiver\" *ngIf=\"transaction.tx_type == 3 || transaction.tx_type == 4\">\n                    {{ transaction.to }}</div>\n\n                <div class=\"date\">{{ transaction.timestamp | timeDisplay }}</div>\n            </div>\n            <div class=\"detail\">\n                <div class=\"amount\"\n                    [ngClass]=\"(transaction.tx_type == 1 || transaction.tx_type == 3 )? 'send' : 'receive'\">\n                    {{ (transaction.tx_type == 1 || transaction.tx_type == 3 )? '-' : '+' }}{{ transaction.displayValue | coinDisplay }}\n                    CPH</div>\n                <div class=\"status\">{{ transaction.blockHeight }}</div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"no-more\" *ngIf=\"!loading\" translate>NOMORE</div>\n    <!-- </div> -->\n\n\n    <ion-infinite-scroll (ionInfinite)=\"getMore($event)\">\n        <ion-infinite-scroll-content></ion-infinite-scroll-content>\n    </ion-infinite-scroll>\n</ion-content>\n";
+    __webpack_exports__["default"] = "<ion-header no-border>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button color=\"white\"></ion-back-button>\n        </ion-buttons>\n        <ion-title>{{ wallet.name }}</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <!-- <div class=\"my-content\"> -->\n    <div class=\"header\">\n        <div class=\"info\">\n            <div class=\"amount\">{{ amount | coinDisplay }}</div>\n            <div class=\"money\">≈ {{ amountInOtherDisplay }}</div>\n        </div>\n    </div>\n\n    <div class=\"btns\">\n        <div class=\"money transfer\" tappable (click)=\"goTransferPage()\">\n            <div class=\"icon\"></div>\n            <p class=\"text\" translate>SEND</p>\n        </div>\n        <div class=\"money receive\" (click)=\"goReceivePage()\">\n            <div class=\"icon\"></div>\n            <p class=\"text\" translate>RECEIVE</p>\n        </div>\n    </div>\n\n    <div class=\"tabs\">\n        <div class=\"tab\" [ngClass]=\"type == 0 ? 'focus' : ''\" (click)=\"toggleType(0)\">\n            <div class=\"label\" translate>ALL</div>\n        </div>\n        <div class=\"tab\" [ngClass]=\"type == 1 ? 'focus' : ''\" (click)=\"toggleType(1)\">\n            <div class=\"label\" translate>SEND</div>\n        </div>\n        <div class=\"tab\" [ngClass]=\"type == 2 ? 'focus' : ''\" (click)=\"toggleType(2)\">\n            <div class=\"label\" translate>RECEIVE</div>\n        </div>\n        <div class=\"tab\" [ngClass]=\"type == 5 ? 'focus' : ''\" (click)=\"toggleType(5)\">\n            <div class=\"label\" translate>OTHERS</div>\n        </div>\n    </div>\n\n    <div class=\"transactions\">\n        <div class=\"transaction\" *ngFor=\"let transaction of allTransactionList\" tappable\n            (click)=\"goResultPage(transaction)\">\n            <div class=\"info\">\n                <div class=\"receiver\" *ngIf=\"transaction.tx_type != 3 && transaction.tx_type != 4\">\n                    {{ (transaction.tx_type != 2 ? transaction.to : transaction.from) | addCphEllipsis }}</div>\n\n                <div class=\"receiver\" *ngIf=\"transaction.tx_type == 3 || transaction.tx_type == 4\">\n                    {{ transaction.to }}</div>\n\n                <div class=\"date\">{{ transaction.timestamp/1000000 | timeDisplay }}</div>\n            </div>\n            <div class=\"detail\">\n                <div class=\"amount\"\n                    [ngClass]=\"(transaction.tx_type == 1 || transaction.tx_type == 3 )? 'send' : 'receive'\">\n                    {{ (transaction.tx_type == 1 || transaction.tx_type == 3 )? '-' : '+' }}{{ transaction.displayValue | coinDisplay }}\n                    CPH</div>\n                <div class=\"status\">{{ transaction.blockHeight }}</div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"no-more\" *ngIf=\"!loading\" translate>NOMORE</div>\n    <!-- </div> -->\n\n\n    <ion-infinite-scroll (ionInfinite)=\"getMore($event)\">\n        <ion-infinite-scroll-content></ion-infinite-scroll-content>\n    </ion-infinite-scroll>\n</ion-content>\n";
     /***/
   },
 
@@ -201,6 +201,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*#__PURE__*/
     function () {
       function WalletDetailPage(global, http, web3, helper, router) {
+        var _this = this;
+
         _classCallCheck(this, WalletDetailPage);
 
         this.global = global;
@@ -220,6 +222,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.more = false;
         this.loading = true;
         this.interval = null;
+        this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
+        console.log("钱包：" + JSON.stringify(this.wallet));
+        this.amount = this.wallet.amount || 0;
+        this.getWalletInfo(this.wallet.addr);
+        this.interval = setInterval(function () {
+          _this.getWalletInfo(_this.wallet.addr);
+        }, 10000);
       }
 
       _createClass(WalletDetailPage, [{
@@ -228,26 +237,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "getWalletInfo",
         value: function getWalletInfo(addr) {
-          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
-          /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee() {
-            return regeneratorRuntime.wrap(function _callee$(_context) {
-              while (1) {
-                switch (_context.prev = _context.next) {
-                  case 0:
-                    _context.next = 2;
-                    return this.web3.getCphBalance(addr);
+          var _this2 = this;
 
-                  case 2:
-                    this.amount = _context.sent;
+          this.web3.getCphBalance(addr, function (v) {
+            if (_this2.amount.toString() !== v.toString() && v !== undefined) {
+              _this2.amount = v;
+              _this2.global.gWalletList[_this2.global.currentWalletIndex].amount = _this2.amount;
 
-                  case 3:
-                  case "end":
-                    return _context.stop();
-                }
-              }
-            }, _callee, this);
-          }));
+              _this2.helper.saveWallet();
+            }
+          });
         }
       }, {
         key: "ngOnDestroy",
@@ -270,33 +269,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function ionViewDidEnter() {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee2() {
-            var _this = this;
+          regeneratorRuntime.mark(function _callee() {
+            var _this3 = this;
 
-            return regeneratorRuntime.wrap(function _callee2$(_context2) {
+            return regeneratorRuntime.wrap(function _callee$(_context) {
               while (1) {
-                switch (_context2.prev = _context2.next) {
+                switch (_context.prev = _context.next) {
                   case 0:
-                    this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
-                    console.log("钱包：" + JSON.stringify(this.wallet));
-                    _context2.next = 4;
+                    _context.next = 2;
                     return this.web3.getBlockHeight();
 
-                  case 4:
-                    this.blockHeight = _context2.sent;
-                    this.getTransactionList();
-                    _context2.next = 8;
-                    return this.web3.getCphBalance(this.wallet.addr);
-
-                  case 8:
-                    this.amount = _context2.sent;
-                    this.interval = setInterval(function () {
-                      _this.getWalletInfo(_this.wallet.addr);
-                    }, 10000); //获取汇率信息
+                  case 2:
+                    this.blockHeight = _context.sent;
+                    this.getTransactionList(); //获取汇率信息
 
                     this.http.get(this.global.api['getRateInfo']).subscribe(function (res) {
                       console.log("汇率：", res.rates);
-                      var unit = _this.global.settings.valueUnit || "USD";
+                      var unit = _this3.global.settings.valueUnit || "USD";
                       var value = res.rates.find(function (item) {
                         return item.currency == unit;
                       });
@@ -305,27 +294,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         value = res.rates[0];
                       }
 
-                      _this.global.selectedRate = value; //计算当前金额的估算
+                      _this3.global.selectedRate = value; //计算当前金额的估算
 
-                      _this.amountInOther = _this.amount * value.rate;
-                      var amountInOtherInterger = Math.floor(_this.amountInOther);
+                      _this3.amountInOther = _this3.amount * value.rate;
+                      var amountInOtherInterger = Math.floor(_this3.amountInOther);
                       var mod = Math.floor(Math.pow(10, value.significand));
-                      var amountInOtherFraction = Math.floor(_this.amountInOther * mod) % mod;
+                      var amountInOtherFraction = Math.floor(_this3.amountInOther * mod) % mod;
                       amountInOtherFraction = amountInOtherFraction + "";
 
                       while (amountInOtherFraction.length < value.significand) {
                         amountInOtherFraction = amountInOtherFraction + '0';
                       }
 
-                      _this.amountInOtherDisplay = amountInOtherInterger + '.' + amountInOtherFraction;
+                      _this3.amountInOtherDisplay = amountInOtherInterger + '.' + amountInOtherFraction;
                     });
 
-                  case 11:
+                  case 5:
                   case "end":
-                    return _context2.stop();
+                    return _context.stop();
                 }
               }
-            }, _callee2, this);
+            }, _callee, this);
           }));
         }
       }, {
@@ -343,55 +332,55 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function getTransactionList() {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee3() {
-            var _this2 = this;
+          regeneratorRuntime.mark(function _callee2() {
+            var _this4 = this;
 
             var pledge, drawback, finished, url;
-            return regeneratorRuntime.wrap(function _callee3$(_context3) {
+            return regeneratorRuntime.wrap(function _callee2$(_context2) {
               while (1) {
-                switch (_context3.prev = _context3.next) {
+                switch (_context2.prev = _context2.next) {
                   case 0:
-                    _context3.next = 2;
+                    _context2.next = 2;
                     return this.helper.getTranslate('PLEDGE_CONTRACT_MINING');
 
                   case 2:
-                    pledge = _context3.sent;
-                    _context3.next = 5;
+                    pledge = _context2.sent;
+                    _context2.next = 5;
                     return this.helper.getTranslate('DRAWBACK_CONTRACT_MINING');
 
                   case 5:
-                    drawback = _context3.sent;
-                    _context3.next = 8;
+                    drawback = _context2.sent;
+                    _context2.next = 8;
                     return this.helper.getTranslate('FINISHED');
 
                   case 8:
-                    finished = _context3.sent;
+                    finished = _context2.sent;
                     this.loading = true; //获取交易列表
 
                     url = this.global.api['getTransList'];
-                    return _context3.abrupt("return", this.http.post(url, {
+                    return _context2.abrupt("return", this.http.post(url, {
                       addr: '0x' + this.wallet.addr.replace('0x', ''),
                       txType: this.type,
                       pageIndex: this.pageno,
                       pageSize: this.pageSize
                     }).subscribe(function (res) {
                       if (res.err_no == 0) {
-                        _this2.loading = false;
+                        _this4.loading = false;
 
                         if (res.transactions) {
                           res.transactions.forEach(function (item) {
                             if (item.tx_type == 1 || item.tx_type == 2) {
-                              item.displayValue = _this2.web3.web3.utils.fromWei(item.value, 'ether');
+                              item.displayValue = _this4.web3.web3.fromWei(item.value, 'cpher');
                             } else {
-                              item.displayValue = _this2.web3.web3.utils.fromWei(item.tx_type_ext, 'ether');
+                              item.displayValue = _this4.web3.web3.fromWei(item.tx_type_ext, 'cpher');
                             }
 
-                            var height = _this2.blockHeight - item.block_number;
+                            var height = _this4.blockHeight - item.block_number;
 
                             if (item.block_number == -2) {
                               item.blockHeight = "pending";
-                            } else if (height < 12) {
-                              item.blockHeight = height + "/12";
+                            } else if (height < 1) {
+                              item.blockHeight = height + "/1";
                             } else {
                               item.blockHeight = finished;
                             }
@@ -403,26 +392,33 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                             }
                           });
 
-                          if (_this2.pageno == 1) {
-                            _this2.allTransactionList = res.transactions || [];
+                          if (_this4.pageno == 1) {
+                            _this4.allTransactionList = res.transactions || [];
                           } else {
-                            _this2.allTransactionList = _this2.allTransactionList.concat(res.transactions || []);
+                            _this4.allTransactionList = _this4.allTransactionList.concat(res.transactions || []);
+                          } // this.more = (this.allTransactionList.length < res.count);
+
+
+                          _this4.more = true;
+                          console.log(_this4.allTransactionList.length, res.count);
+                        } else {
+                          if (_this4.pageno > 1) {
+                            _this4.pageno--;
+                          } else {
+                            _this4.allTransactionList = [];
                           }
 
-                          _this2.more = _this2.allTransactionList.length < res.count;
-                          console.log(_this2.allTransactionList.length, res.count);
-                        } else {
-                          _this2.allTransactionList = [];
+                          _this4.more = false;
                         }
                       }
                     }));
 
                   case 12:
                   case "end":
-                    return _context3.stop();
+                    return _context2.stop();
                 }
               }
-            }, _callee3, this);
+            }, _callee2, this);
           }));
         }
       }, {
@@ -431,8 +427,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var navigationExtras = {
             state: {
               tx: transaction.tx_hash,
-              status: 0 //0-成功，1:打包中，2:失败
-
+              status: 0,
+              time: transaction.timestamp / 1000000
             }
           }; //前往交易结果页
 
@@ -441,12 +437,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "toggleType",
         value: function toggleType(type) {
-          var _this3 = this;
-
-          this.helper.getTranslate('COMING_SOON').then(function (msg) {
-            _this3.helper.toast(msg);
-          });
-
+          // this.helper.getTranslate('COMING_SOON').then(msg => {
+          //     this.helper.toast(msg);
+          // });
           if (this.type != type) {
             this.type = type;
             this.pageno = 1;
@@ -458,23 +451,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function getMore(infiniteScroll) {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
           /*#__PURE__*/
-          regeneratorRuntime.mark(function _callee4() {
-            return regeneratorRuntime.wrap(function _callee4$(_context4) {
+          regeneratorRuntime.mark(function _callee3() {
+            return regeneratorRuntime.wrap(function _callee3$(_context3) {
               while (1) {
-                switch (_context4.prev = _context4.next) {
+                switch (_context3.prev = _context3.next) {
                   case 0:
                     if (this.more) {
-                      _context4.next = 3;
+                      _context3.next = 3;
                       break;
                     }
 
                     infiniteScroll.target.complete();
-                    return _context4.abrupt("return", false);
+                    return _context3.abrupt("return", false);
 
                   case 3:
                     this.pageno++;
                     this.loading = true;
-                    _context4.next = 7;
+                    _context3.next = 7;
                     return this.getTransactionList();
 
                   case 7:
@@ -483,10 +476,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 9:
                   case "end":
-                    return _context4.stop();
+                    return _context3.stop();
                 }
               }
-            }, _callee4, this);
+            }, _callee3, this);
           }));
         }
       }]);

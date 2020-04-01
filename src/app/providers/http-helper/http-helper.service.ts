@@ -63,7 +63,8 @@ export class HttpHelperService {
 
     requestBefore(options, setting: RequestSetting) {
         this.showLoading(setting);
-        if (this.helper.isMobile && GlobalService.showLog) {
+        // if (this.helper.isMobile() && GlobalService.showLog) {
+        if (this.helper.isMobile()) {
             console.log("Before request:" + JSON.stringify(options));
         } else {
             LoggerService.log('Before request:', '#3880ff', 'options:', options);
@@ -72,7 +73,8 @@ export class HttpHelperService {
 
     requestSuccess(options) {
         this.hideLoading();
-        if (this.helper.isMobile && GlobalService.showLog) {
+        // if (this.helper.isMobile() && GlobalService.showLog) {
+        if (this.helper.isMobile()) {
             console.log("Request succeed for:" + options.url);
         } else {
             LoggerService.log('Request succeed:', '#10dc60', 'options:', options);
@@ -81,7 +83,8 @@ export class HttpHelperService {
 
     requestError(options) {
         this.hideLoading();
-        if (this.helper.isMobile && GlobalService.showLog) {
+        // if (this.helper.isMobile() && GlobalService.showLog) {
+        if (this.helper.isMobile()) {
             console.log("Request error for:" + options.url);
         } else {
             LoggerService.log('Request failed:', '#f04141', 'options:', options);

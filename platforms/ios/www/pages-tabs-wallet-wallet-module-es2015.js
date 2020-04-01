@@ -150,36 +150,35 @@ let WalletPage = class WalletPage {
             console.log("wallet ngoninit +++++++++...");
             this.wallet = this.global.gWalletList[this.global.currentWalletIndex || 0] || {};
             console.log(this.wallet);
-            this.interval = setInterval(() => {
-                this.getWalletInfo(this.wallet.addr);
-            }, 10000);
+            this.amount = this.wallet.amount || 0;
             this.computeValue();
+            this.interval = setInterval(() => {
+                this.computeValue();
+            }, 10000);
         });
     }
     computeValue() {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            yield this.getWalletInfo(this.wallet.addr);
-            //获取汇率信息
-            this.http.get(this.global.api['getRateInfo']).subscribe(res => {
-                console.log("汇率：", res.rates);
-                let unit = this.global.settings.valueUnit || "USD";
-                let value = res.rates.find(item => item.currency == unit);
-                if (!value) {
-                    value = res.rates[0];
-                }
-                this.global.selectedRate = value;
-                //计算当前金额的估算
-                this.amountInOther = this.amount * value.rate;
-                this.amountInOtherInterger = Math.floor(this.amountInOther);
-                let mod = Math.floor(Math.pow(10, value.significand));
-                let amountInOtherFraction = Math.floor(this.amountInOther * mod) % mod;
-                amountInOtherFraction = amountInOtherFraction + "";
-                while (amountInOtherFraction.length < value.significand) {
-                    amountInOtherFraction = amountInOtherFraction + '0';
-                }
-                this.amountInOtherFraction = amountInOtherFraction;
-                this.amountInOtherDisplay = this.amountInOtherInterger + '.' + this.amountInOtherFraction;
-            });
+        this.getWalletInfo(this.wallet.addr);
+        //获取汇率信息
+        this.http.get(this.global.api['getRateInfo']).subscribe(res => {
+            console.log("汇率：", res.rates);
+            let unit = this.global.settings.valueUnit || "USD";
+            let value = res.rates.find(item => item.currency == unit);
+            if (!value) {
+                value = res.rates[0];
+            }
+            this.global.selectedRate = value;
+            //计算当前金额的估算
+            this.amountInOther = this.amount * value.rate;
+            this.amountInOtherInterger = Math.floor(this.amountInOther);
+            let mod = Math.floor(Math.pow(10, value.significand));
+            let amountInOtherFraction = Math.floor(this.amountInOther * mod) % mod;
+            amountInOtherFraction = amountInOtherFraction + "";
+            while (amountInOtherFraction.length < value.significand) {
+                amountInOtherFraction = amountInOtherFraction + '0';
+            }
+            this.amountInOtherFraction = amountInOtherFraction;
+            this.amountInOtherDisplay = this.amountInOtherInterger + '.' + this.amountInOtherFraction;
         });
     }
     cancelAlert() {
@@ -258,8 +257,12 @@ let WalletPage = class WalletPage {
         });
     }
     getWalletInfo(addr) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            this.amount = yield this.web3.getCphBalance(addr);
+        this.web3.getCphBalance(addr, (v) => {
+            if (this.amount.toString() !== v.toString() && v !== undefined) {
+                this.amount = v;
+                this.global.gWalletList[this.global.currentWalletIndex].amount = this.amount;
+                this.helper.saveWallet();
+            }
         });
     }
     ngOnDestroy() {

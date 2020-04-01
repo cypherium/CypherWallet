@@ -5,7 +5,8 @@ import { Storage } from '@ionic/storage';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { Platform, NavController } from '@ionic/angular';
 import { HttpService } from "../../providers/http/http.service";
-
+import { HTTP } from '@ionic-native/http/ngx';
+import { environment } from '../../../environments/environment';
 
 @Component({
     selector: 'app-value-unit',
@@ -21,13 +22,31 @@ export class ValueUnitPage implements OnInit {
         private helper: HelperService,
         private navCtrl: NavController,
         public activeRouter: ActivatedRoute,
-        private http: HttpService
+        private http: HttpService,
+        private httpn: HTTP,
     ) { }
 
     ngOnInit() {
         this.http.get(this.global.api['getRateInfo']).subscribe(res => {
             this.rateList = res.rates;
         })
+        // this.httpn.get(environment.appServerUrl + this.global.api['getRateInfo'], {}, {})
+        //     .then(data => {
+
+        //         console.log(data.status);
+        //         console.log(data.data); // data received by server
+        //         console.log(data.headers);
+        //         console.log(JSON.parse(data.data));
+        //         this.rateList = JSON.parse(data.data).rates;
+
+        //     })
+        //     .catch(error => {
+
+        //         console.log(error.status);
+        //         console.log(error.error); // error message as string
+        //         console.log(error.headers);
+
+        //     });
     }
 
     toggleValueUnit(unit) {

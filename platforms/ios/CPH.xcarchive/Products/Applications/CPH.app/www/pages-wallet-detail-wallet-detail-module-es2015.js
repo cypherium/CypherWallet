@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header no-border>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button color=\"white\"></ion-back-button>\n        </ion-buttons>\n        <ion-title>{{ wallet.name }}</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <!-- <div class=\"my-content\"> -->\n    <div class=\"header\">\n        <div class=\"info\">\n            <div class=\"amount\">{{ amount | coinDisplay }}</div>\n            <div class=\"money\">≈ {{ amountInOtherDisplay }}</div>\n        </div>\n    </div>\n\n    <div class=\"btns\">\n        <div class=\"money transfer\" tappable (click)=\"goTransferPage()\">\n            <div class=\"icon\"></div>\n            <p class=\"text\" translate>SEND</p>\n        </div>\n        <div class=\"money receive\" (click)=\"goReceivePage()\">\n            <div class=\"icon\"></div>\n            <p class=\"text\" translate>RECEIVE</p>\n        </div>\n    </div>\n\n    <div class=\"tabs\">\n        <div class=\"tab\" [ngClass]=\"type == 0 ? 'focus' : ''\" (click)=\"toggleType(0)\">\n            <div class=\"label\" translate>ALL</div>\n        </div>\n        <div class=\"tab\" [ngClass]=\"type == 1 ? 'focus' : ''\" (click)=\"toggleType(1)\">\n            <div class=\"label\" translate>SEND</div>\n        </div>\n        <div class=\"tab\" [ngClass]=\"type == 2 ? 'focus' : ''\" (click)=\"toggleType(2)\">\n            <div class=\"label\" translate>RECEIVE</div>\n        </div>\n        <div class=\"tab\" [ngClass]=\"type == 5 ? 'focus' : ''\" (click)=\"toggleType(5)\">\n            <div class=\"label\" translate>OTHERS</div>\n        </div>\n    </div>\n\n    <div class=\"transactions\">\n        <div class=\"transaction\" *ngFor=\"let transaction of allTransactionList\" tappable\n            (click)=\"goResultPage(transaction)\">\n            <div class=\"info\">\n                <div class=\"receiver\" *ngIf=\"transaction.tx_type != 3 && transaction.tx_type != 4\">\n                    {{ (transaction.tx_type != 2 ? transaction.to : transaction.from) | addCphEllipsis }}</div>\n\n                <div class=\"receiver\" *ngIf=\"transaction.tx_type == 3 || transaction.tx_type == 4\">\n                    {{ transaction.to }}</div>\n\n                <div class=\"date\">{{ transaction.timestamp | timeDisplay }}</div>\n            </div>\n            <div class=\"detail\">\n                <div class=\"amount\"\n                    [ngClass]=\"(transaction.tx_type == 1 || transaction.tx_type == 3 )? 'send' : 'receive'\">\n                    {{ (transaction.tx_type == 1 || transaction.tx_type == 3 )? '-' : '+' }}{{ transaction.displayValue | coinDisplay }}\n                    CPH</div>\n                <div class=\"status\">{{ transaction.blockHeight }}</div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"no-more\" *ngIf=\"!loading\" translate>NOMORE</div>\n    <!-- </div> -->\n\n\n    <ion-infinite-scroll (ionInfinite)=\"getMore($event)\">\n        <ion-infinite-scroll-content></ion-infinite-scroll-content>\n    </ion-infinite-scroll>\n</ion-content>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header no-border>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button color=\"white\"></ion-back-button>\n        </ion-buttons>\n        <ion-title>{{ wallet.name }}</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <!-- <div class=\"my-content\"> -->\n    <div class=\"header\">\n        <div class=\"info\">\n            <div class=\"amount\">{{ amount | coinDisplay }}</div>\n            <div class=\"money\">≈ {{ amountInOtherDisplay }}</div>\n        </div>\n    </div>\n\n    <div class=\"btns\">\n        <div class=\"money transfer\" tappable (click)=\"goTransferPage()\">\n            <div class=\"icon\"></div>\n            <p class=\"text\" translate>SEND</p>\n        </div>\n        <div class=\"money receive\" (click)=\"goReceivePage()\">\n            <div class=\"icon\"></div>\n            <p class=\"text\" translate>RECEIVE</p>\n        </div>\n    </div>\n\n    <div class=\"tabs\">\n        <div class=\"tab\" [ngClass]=\"type == 0 ? 'focus' : ''\" (click)=\"toggleType(0)\">\n            <div class=\"label\" translate>ALL</div>\n        </div>\n        <div class=\"tab\" [ngClass]=\"type == 1 ? 'focus' : ''\" (click)=\"toggleType(1)\">\n            <div class=\"label\" translate>SEND</div>\n        </div>\n        <div class=\"tab\" [ngClass]=\"type == 2 ? 'focus' : ''\" (click)=\"toggleType(2)\">\n            <div class=\"label\" translate>RECEIVE</div>\n        </div>\n        <div class=\"tab\" [ngClass]=\"type == 5 ? 'focus' : ''\" (click)=\"toggleType(5)\">\n            <div class=\"label\" translate>OTHERS</div>\n        </div>\n    </div>\n\n    <div class=\"transactions\">\n        <div class=\"transaction\" *ngFor=\"let transaction of allTransactionList\" tappable\n            (click)=\"goResultPage(transaction)\">\n            <div class=\"info\">\n                <div class=\"receiver\" *ngIf=\"transaction.tx_type != 3 && transaction.tx_type != 4\">\n                    {{ (transaction.tx_type != 2 ? transaction.to : transaction.from) | addCphEllipsis }}</div>\n\n                <div class=\"receiver\" *ngIf=\"transaction.tx_type == 3 || transaction.tx_type == 4\">\n                    {{ transaction.to }}</div>\n\n                <div class=\"date\">{{ transaction.timestamp/1000000 | timeDisplay }}</div>\n            </div>\n            <div class=\"detail\">\n                <div class=\"amount\"\n                    [ngClass]=\"(transaction.tx_type == 1 || transaction.tx_type == 3 )? 'send' : 'receive'\">\n                    {{ (transaction.tx_type == 1 || transaction.tx_type == 3 )? '-' : '+' }}{{ transaction.displayValue | coinDisplay }}\n                    CPH</div>\n                <div class=\"status\">{{ transaction.blockHeight }}</div>\n            </div>\n        </div>\n    </div>\n\n    <div class=\"no-more\" *ngIf=\"!loading\" translate>NOMORE</div>\n    <!-- </div> -->\n\n\n    <ion-infinite-scroll (ionInfinite)=\"getMore($event)\">\n        <ion-infinite-scroll-content></ion-infinite-scroll-content>\n    </ion-infinite-scroll>\n</ion-content>\n");
 
 /***/ }),
 
@@ -123,12 +123,23 @@ let WalletDetailPage = class WalletDetailPage {
         this.more = false;
         this.loading = true;
         this.interval = null;
+        this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
+        console.log("钱包：" + JSON.stringify(this.wallet));
+        this.amount = this.wallet.amount || 0;
+        this.getWalletInfo(this.wallet.addr);
+        this.interval = setInterval(() => {
+            this.getWalletInfo(this.wallet.addr);
+        }, 10000);
     }
     ngOnInit() {
     }
     getWalletInfo(addr) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            this.amount = yield this.web3.getCphBalance(addr);
+        this.web3.getCphBalance(addr, (v) => {
+            if (this.amount.toString() !== v.toString() && v !== undefined) {
+                this.amount = v;
+                this.global.gWalletList[this.global.currentWalletIndex].amount = this.amount;
+                this.helper.saveWallet();
+            }
         });
     }
     ngOnDestroy() {
@@ -145,14 +156,8 @@ let WalletDetailPage = class WalletDetailPage {
     }
     ionViewDidEnter() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
-            console.log("钱包：" + JSON.stringify(this.wallet));
             this.blockHeight = yield this.web3.getBlockHeight();
             this.getTransactionList();
-            this.amount = yield this.web3.getCphBalance(this.wallet.addr);
-            this.interval = setInterval(() => {
-                this.getWalletInfo(this.wallet.addr);
-            }, 10000);
             //获取汇率信息
             this.http.get(this.global.api['getRateInfo']).subscribe(res => {
                 console.log("汇率：", res.rates);
@@ -199,17 +204,17 @@ let WalletDetailPage = class WalletDetailPage {
                     if (res.transactions) {
                         res.transactions.forEach(item => {
                             if (item.tx_type == 1 || item.tx_type == 2) {
-                                item.displayValue = this.web3.web3.utils.fromWei(item.value, 'ether');
+                                item.displayValue = this.web3.web3.fromWei(item.value, 'cpher');
                             }
                             else {
-                                item.displayValue = this.web3.web3.utils.fromWei(item.tx_type_ext, 'ether');
+                                item.displayValue = this.web3.web3.fromWei(item.tx_type_ext, 'cpher');
                             }
                             let height = this.blockHeight - item.block_number;
                             if (item.block_number == -2) {
                                 item.blockHeight = "pending";
                             }
-                            else if (height < 12) {
-                                item.blockHeight = height + "/12";
+                            else if (height < 1) {
+                                item.blockHeight = height + "/1";
                             }
                             else {
                                 item.blockHeight = finished;
@@ -227,11 +232,18 @@ let WalletDetailPage = class WalletDetailPage {
                         else {
                             this.allTransactionList = this.allTransactionList.concat(res.transactions || []);
                         }
-                        this.more = (this.allTransactionList.length < res.count);
+                        // this.more = (this.allTransactionList.length < res.count);
+                        this.more = true;
                         console.log(this.allTransactionList.length, res.count);
                     }
                     else {
-                        this.allTransactionList = [];
+                        if (this.pageno > 1) {
+                            this.pageno--;
+                        }
+                        else {
+                            this.allTransactionList = [];
+                        }
+                        this.more = false;
                     }
                 }
             });
@@ -241,16 +253,17 @@ let WalletDetailPage = class WalletDetailPage {
         let navigationExtras = {
             state: {
                 tx: transaction.tx_hash,
-                status: 0 //0-成功，1:打包中，2:失败
+                status: 0,
+                time: transaction.timestamp / 1000000
             }
         };
         //前往交易结果页
         this.router.navigate(['transaction-result'], navigationExtras);
     }
     toggleType(type) {
-        this.helper.getTranslate('COMING_SOON').then(msg => {
-            this.helper.toast(msg);
-        });
+        // this.helper.getTranslate('COMING_SOON').then(msg => {
+        //     this.helper.toast(msg);
+        // });
         if (this.type != type) {
             this.type = type;
             this.pageno = 1;

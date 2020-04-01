@@ -196,11 +196,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _providers_http_http_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! ../../../providers/http/http.service */
     "./src/app/providers/http/http.service.ts");
+    /* harmony import */
+
+
+    var _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! @ionic-native/http/ngx */
+    "./node_modules/@ionic-native/http/ngx/index.js");
 
     var SettingPage =
     /*#__PURE__*/
     function () {
-      function SettingPage(router, global, storage, helper, http, activeRouter) {
+      function SettingPage(router, global, storage, helper, http, httpn, activeRouter) {
         _classCallCheck(this, SettingPage);
 
         this.router = router;
@@ -208,6 +214,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.storage = storage;
         this.helper = helper;
         this.http = http;
+        this.httpn = httpn;
         this.activeRouter = activeRouter;
         this.displayValue = {};
         this.rateList = [];
@@ -221,7 +228,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.http.get(this.global.api['getRateInfo']).subscribe(function (res) {
             var unit = _this.global.settings.valueUnit;
             _this.rateList = res.rates;
-          });
+          }); // this.httpn.get(environment.appServerUrl + this.global.api['getRateInfo'], {}, {})
+          //     .then(data => {
+          //         console.log(data.status);
+          //         console.log(data.data); // data received by server
+          //         console.log(data.headers);
+          //         this.rateList = JSON.parse(data.data).rates;
+          //     })
+          //     .catch(error => {
+          //         console.log(error.status);
+          //         console.log(error.error); // error message as string
+          //         console.log(error.headers);
+          //     });
         }
       }, {
         key: "getCurrency",
@@ -262,7 +280,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "goBrowser",
         value: function goBrowser() {
-          window.open('http://scan.cph.com');
+          var _this2 = this;
+
+          this.helper.getTranslate('COMING_SOON').then(function (msg) {
+            _this2.helper.toast(msg);
+          }); // window.open('https://cypherium.io');
         }
       }, {
         key: "goWalletToolPage",
@@ -291,6 +313,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         type: _providers_http_http_service__WEBPACK_IMPORTED_MODULE_6__["HttpService"]
       }, {
+        type: _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_7__["HTTP"]
+      }, {
         type: _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"]
       }];
     };
@@ -303,7 +327,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./setting.page.scss */
       "./src/app/pages/tabs/setting/setting.page.scss")).default]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _providers_global_global_service__WEBPACK_IMPORTED_MODULE_2__["GlobalService"], _ionic_storage__WEBPACK_IMPORTED_MODULE_4__["Storage"], _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__["HelperService"], _providers_http_http_service__WEBPACK_IMPORTED_MODULE_6__["HttpService"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"]])], SettingPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _providers_global_global_service__WEBPACK_IMPORTED_MODULE_2__["GlobalService"], _ionic_storage__WEBPACK_IMPORTED_MODULE_4__["Storage"], _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__["HelperService"], _providers_http_http_service__WEBPACK_IMPORTED_MODULE_6__["HttpService"], _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_7__["HTTP"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["ActivatedRoute"]])], SettingPage);
     /***/
   }
 }]);

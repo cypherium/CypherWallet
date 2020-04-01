@@ -19818,7 +19818,7 @@ let AddCphEllipsisPipe = class AddCphEllipsisPipe {
             return '';
         }
         value = value.replace('0x', '');
-        return 'CPH' + value.slice(0, 8) + '...' + value.slice(-8);
+        return 'CPH' + value.slice(0, 8).toUpperCase() + '...' + value.slice(-8).toUpperCase();
     }
 };
 AddCphEllipsisPipe = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -20016,17 +20016,34 @@ let Web3Service = class Web3Service {
             return this[name];
         }
     }
-    getCphBalance(userAddr, pending = false) {
-        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            console.log('getCphBalance');
-            // let valuex = this.web3.cph.keyBlockNumber;
-            // console.log(valuex);
-            // userAddr = '0x55B08041EEA3E359C2C7BAE249E3054EEDB8C3B2';
-            let value = yield this.web3.cph.getBalance(userAddr, pending ? 'pending' : 'latest');
-            console.log("调用参数:-----------------------------------", userAddr, value);
-            console.log(`钱包${userAddr}的余额是${value}`);
-            value = this.web3.fromWei(value, 'cpher');
-            return value;
+    // async getCphBalance(userAddr, pending = false) {
+    //     console.log('getCphBalance');
+    //     let value = await this.web3.cph.getBalance(userAddr, pending ? 'pending' : 'latest');
+    //     console.log("调用参数:-----------------------------------", userAddr, value);
+    //     console.log(`钱包${userAddr}的余额是${value}`);
+    //     value = this.web3.fromWei(value, 'cpher');
+    //     return value;
+    // }
+    getCphBalance(userAddr, callback, pending = false) {
+        console.log('getCphBalance');
+        this.web3.cph.getBalance(userAddr, pending ? 'pending' : 'latest', (e, v) => {
+            if (!e) {
+                console.log("调用参数:-----------------------------------", userAddr, v);
+                console.log(`钱包${userAddr}的余额是${v}`);
+                let value = this.web3.fromWei(v, 'cpher');
+                callback(value);
+            }
+            else {
+                //读取余额本地缓存
+                if (this.global.currentWalletIndex != undefined) {
+                    callback(this.global.gWalletList[this.global.currentWalletIndex].amount);
+                }
+                else {
+                    callback(0);
+                }
+                // let error = await this.helper.getTranslate('MNEMONIC_WRONG');
+                // this.helper.toast(error);
+            }
         });
     }
     getMortage(from) {

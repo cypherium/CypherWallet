@@ -1,7 +1,8 @@
 {
     "WebKit.framework": 1,
-    "SystemConfiguration.framework": 1,
+    "SystemConfiguration.framework": 2,
     "CoreTelephony.framework": 1,
     "AudioToolbox.framework": 2,
-    "AVFoundation.framework": 1
+    "AVFoundation.framework": 1,
+    "Security.framework": 1
 }

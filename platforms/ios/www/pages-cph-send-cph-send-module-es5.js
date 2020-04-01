@@ -247,13 +247,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.alertDesc = "";
         this.interval = null;
         var state = this.router.getCurrentNavigation().extras.state;
-        console.log("state" + state);
 
         if (state) {
-          // let obj = state.extras.state;
           this.receiveAddress = state.address;
         }
 
+        this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
+        this.amount = this.wallet.amount || 0;
+        this.updateWalletInfo();
         this.interval = setInterval(function () {
           _this.updateWalletInfo();
         }, 10000);
@@ -286,17 +287,22 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
           /*#__PURE__*/
           regeneratorRuntime.mark(function _callee() {
+            var _this2 = this;
+
             return regeneratorRuntime.wrap(function _callee$(_context) {
               while (1) {
                 switch (_context.prev = _context.next) {
                   case 0:
-                    _context.next = 2;
-                    return this.web3.getCphBalance(this.wallet.addr);
+                    this.web3.getCphBalance(this.wallet.addr, function (v) {
+                      if (_this2.amount.toString() !== v.toString() && v !== undefined) {
+                        _this2.amount = v;
+                        _this2.global.gWalletList[_this2.global.currentWalletIndex].amount = _this2.amount;
 
-                  case 2:
-                    this.amount = _context.sent;
+                        _this2.helper.saveWallet();
+                      }
+                    });
 
-                  case 3:
+                  case 1:
                   case "end":
                     return _context.stop();
                 }
@@ -314,33 +320,23 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               while (1) {
                 switch (_context2.prev = _context2.next) {
                   case 0:
-                    this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
-                    console.log(this.global.gWalletList, this.global.currentWalletIndex); //获取余额
-
-                    _context2.next = 4;
-                    return this.web3.getCphBalance(this.wallet.addr);
-
-                  case 4:
-                    this.amount = _context2.sent;
-
-                  case 5:
                   case "end":
                     return _context2.stop();
                 }
               }
-            }, _callee2, this);
+            }, _callee2);
           }));
         }
       }, {
         key: "scan",
         value: function scan() {
-          var _this2 = this;
+          var _this3 = this;
 
           this.native.scan().then(function (res) {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this2, void 0, void 0,
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this3, void 0, void 0,
             /*#__PURE__*/
             regeneratorRuntime.mark(function _callee4() {
-              var _this3 = this;
+              var _this4 = this;
 
               return regeneratorRuntime.wrap(function _callee4$(_context4) {
                 while (1) {
@@ -348,7 +344,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     case 0:
                       console.log("SCAN RESULT：", res);
                       this.helper.handleText(res.text, function (url, method) {
-                        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this3, void 0, void 0,
+                        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this4, void 0, void 0,
                         /*#__PURE__*/
                         regeneratorRuntime.mark(function _callee3() {
                           var result, message;
@@ -609,7 +605,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
           /*#__PURE__*/
           regeneratorRuntime.mark(function _callee9() {
-            var _this4 = this;
+            var _this5 = this;
 
             var address;
             return regeneratorRuntime.wrap(function _callee9$(_context9) {
@@ -618,7 +614,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   case 0:
                     address = this.receiveAddress.toLowerCase().replace('cph', '0x');
                     this.web3.transferCph(this.wallet.addr, address, this.payAmount, this.range, privatekey, function (err, tx) {
-                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this4, void 0, void 0,
+                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this5, void 0, void 0,
                       /*#__PURE__*/
                       regeneratorRuntime.mark(function _callee8() {
                         var navigationExtras, message;

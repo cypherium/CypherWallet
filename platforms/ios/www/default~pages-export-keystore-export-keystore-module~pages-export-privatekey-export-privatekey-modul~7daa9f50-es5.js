@@ -64,12 +64,6 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     var _helper_helper_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
     /*! ../helper/helper.service */
     "./src/app/providers/helper/helper.service.ts");
-    /* harmony import */
-
-
-    var _global_global_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-    /*! ../global/global.service */
-    "./src/app/providers/global/global.service.ts");
 
     var HttpHelperService_1;
     /**
@@ -88,9 +82,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       _createClass(HttpHelperService, [{
         key: "requestBefore",
         value: function requestBefore(options, setting) {
-          this.showLoading(setting);
+          this.showLoading(setting); // if (this.helper.isMobile() && GlobalService.showLog) {
 
-          if (this.helper.isMobile && _global_global_service__WEBPACK_IMPORTED_MODULE_5__["GlobalService"].showLog) {
+          if (this.helper.isMobile()) {
             console.log("Before request:" + JSON.stringify(options));
           } else {
             _logger_logger_service__WEBPACK_IMPORTED_MODULE_3__["LoggerService"].log('Before request:', '#3880ff', 'options:', options);
@@ -99,9 +93,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "requestSuccess",
         value: function requestSuccess(options) {
-          this.hideLoading();
+          this.hideLoading(); // if (this.helper.isMobile() && GlobalService.showLog) {
 
-          if (this.helper.isMobile && _global_global_service__WEBPACK_IMPORTED_MODULE_5__["GlobalService"].showLog) {
+          if (this.helper.isMobile()) {
             console.log("Request succeed for:" + options.url);
           } else {
             _logger_logger_service__WEBPACK_IMPORTED_MODULE_3__["LoggerService"].log('Request succeed:', '#10dc60', 'options:', options);
@@ -110,9 +104,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       }, {
         key: "requestError",
         value: function requestError(options) {
-          this.hideLoading();
+          this.hideLoading(); // if (this.helper.isMobile() && GlobalService.showLog) {
 
-          if (this.helper.isMobile && _global_global_service__WEBPACK_IMPORTED_MODULE_5__["GlobalService"].showLog) {
+          if (this.helper.isMobile()) {
             console.log("Request error for:" + options.url);
           } else {
             _logger_logger_service__WEBPACK_IMPORTED_MODULE_3__["LoggerService"].log('Request failed:', '#f04141', 'options:', options);
@@ -403,7 +397,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             headers: null,
             reportProgress: false,
             withCredentials: false,
-            responseType: 'json'
+            responseType: 'json',
+            header: {
+              "Content-Type": "application/json",
+              'Accept': 'application/json, text/plain',
+              "cache-control": "no-cache",
+              "Access-Control-Allow-Origin": "*",
+              "Access-Control-Allow-Headers": "Origin, Content-Type, X-Auth-Token, Accept, Authorization, X-Request-With, Access-Control-Request-Method, Access-Control-Request-Headers",
+              "Access-Control-Allow-Credentials": "true",
+              "Access-Control-Allow-Methods": "GET, POST, DELETE, PUT, OPTIONS, TRACE, PATCH, CONNECT"
+            }
           }, ops);
 
           var setting = _http_helper_http_helper_service__WEBPACK_IMPORTED_MODULE_10__["HttpHelperService"].getDefaultSetting(set);

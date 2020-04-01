@@ -4,6 +4,7 @@ import { Web3Service } from "../../providers/web3/web3.service";
 import { NativeService } from "../../providers/native/native.service";
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { GlobalService } from '../../providers/global/global.service';
+import { HelperService } from '../../providers/helper/helper.service';
 
 @Component({
     selector: 'app-transaction-result',
@@ -23,6 +24,7 @@ export class TransactionResultPage implements OnInit {
         private activatedRoute: ActivatedRoute,
         private web3: Web3Service,
         public global: GlobalService,
+        private helper: HelperService,
         private native: NativeService
     ) {
         let state = this.router.getCurrentNavigation().extras.state;
@@ -50,31 +52,43 @@ export class TransactionResultPage implements OnInit {
     }
 
     goHashPage() {
-        if (this.status != 1) {
-            let url = "http://scan.cph.com/#/txhash/" + this.tx;
-            this.native.openUrlBySystemBrowser(url);
-        }
+        this.helper.getTranslate('COMING_SOON').then(msg => {
+            this.helper.toast(msg);
+        });
+        // if (this.status != 1) {
+        //     let url = "http://scan.cph.com/#/txhash/" + this.tx;
+        //     this.native.openUrlBySystemBrowser(url);
+        // }
     }
 
     goHash(hash) {
-        if (this.status != 1) {
-            let url = "http://scan.cph.com/#/txhash/" + this.tx;
-            this.native.openUrlBySystemBrowser(url);
-        }
+        this.helper.getTranslate('COMING_SOON').then(msg => {
+            this.helper.toast(msg);
+        });
+        // if (this.status != 1) {
+        //     let url = "http://scan.cph.com/#/txhash/" + this.tx;
+        //     this.native.openUrlBySystemBrowser(url);
+        // }
     }
 
     goAddress(addr) {
-        if (this.status != 1) {
-            let url = "http://scan.cph.com/#/address/" + addr;
-            this.native.openUrlBySystemBrowser(url);
-        }
+        this.helper.getTranslate('COMING_SOON').then(msg => {
+            this.helper.toast(msg);
+        });
+        // if (this.status != 1) {
+        //     let url = "http://scan.cph.com/#/address/" + addr;
+        //     this.native.openUrlBySystemBrowser(url);
+        // }
     }
 
     goHeight(height) {
-        if (this.status != 1) {
-            let url = "http://scan.cph.com/#/block/" + height;
-            this.native.openUrlBySystemBrowser(url);
-        }
+        this.helper.getTranslate('COMING_SOON').then(msg => {
+            this.helper.toast(msg);
+        });
+        // if (this.status != 1) {
+        //     let url = "http://scan.cph.com/#/block/" + height;
+        //     this.native.openUrlBySystemBrowser(url);
+        // }
     }
 
     ngOnInit() {

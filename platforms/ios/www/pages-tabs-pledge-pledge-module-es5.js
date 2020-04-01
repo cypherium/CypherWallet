@@ -271,23 +271,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
           /*#__PURE__*/
           regeneratorRuntime.mark(function _callee() {
+            var _this2 = this;
+
             return regeneratorRuntime.wrap(function _callee$(_context) {
               while (1) {
                 switch (_context.prev = _context.next) {
                   case 0:
-                    _context.next = 2;
-                    return this.web3.getCphBalance(this.wallet.addr);
+                    // this.walletAmount = await this.web3.getCphBalance(this.wallet.addr);
+                    this.web3.getCphBalance(this.wallet.addr, function (v) {
+                      if (_this2.walletAmount.toString() !== v.toString() && v !== undefined) {
+                        _this2.walletAmount = v;
+                        _this2.global.gWalletList[_this2.global.currentWalletIndex].amount = _this2.walletAmount;
 
-                  case 2:
-                    this.walletAmount = _context.sent;
-                    _context.next = 5;
+                        _this2.helper.saveWallet();
+                      }
+                    }); //获取抵押余额
+
+                    _context.next = 3;
                     return this.web3.getMortage(this.wallet.addr);
 
-                  case 5:
+                  case 3:
                     this.pledgeAmount = _context.sent;
                     this.getTimes();
 
-                  case 7:
+                  case 5:
                   case "end":
                     return _context.stop();
                 }
@@ -415,7 +422,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
           /*#__PURE__*/
           regeneratorRuntime.mark(function _callee4() {
-            var _this2 = this;
+            var _this3 = this;
 
             var business;
             return regeneratorRuntime.wrap(function _callee4$(_context4) {
@@ -425,7 +432,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     //执行抵押
                     business = this.businessType == 'pledge' ? 'mortgage' : 'redeem';
                     this.web3.pledge(business, this.wallet.addr, +this.businessAmount, privateKey, function (err, result) {
-                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this2, void 0, void 0,
+                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this3, void 0, void 0,
                       /*#__PURE__*/
                       regeneratorRuntime.mark(function _callee3() {
                         var pledgeSuccess, drawbackSuccess, pledgeFailure, drawbackFailure, message, info, _info;

@@ -11,7 +11,7 @@ export class AddCphEllipsisPipe implements PipeTransform {
             return '';
         }
         value = value.replace('0x', '');
-        return 'CPH' + value.slice(0, 8) + '...' + value.slice(-8);
+        return 'CPH' + value.slice(0, 8).toUpperCase() + '...' + value.slice(-8).toUpperCase();
     }
 
 }
