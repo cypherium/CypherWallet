@@ -168,6 +168,9 @@ export class WalletDetailPage implements OnInit {
                 time: transaction.timestamp / 1000000
             }
         };
+        if (transaction.blockHeight === "pending") {
+            navigationExtras.state.status = 1;
+        }
         //前往交易结果页
         this.router.navigate(['transaction-result'], navigationExtras);
     }
