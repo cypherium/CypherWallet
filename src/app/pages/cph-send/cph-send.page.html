@@ -1,13 +1,13 @@
 <ion-header>
     <ion-toolbar>
-        <!-- <ion-buttons slot="start">
-            <ion-back-button></ion-back-button>
-        </ion-buttons> -->
         <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <!-- <ion-buttons slot="start">
             <ion-button (click)="back()">
                 <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
             </ion-button>
-        </ion-buttons>
+        </ion-buttons> -->
         <ion-title>{{ 'SEND' | translate }}</ion-title>
         <ion-buttons slot="end">
             <ion-button tappable (click)="scan()">
@@ -51,7 +51,7 @@
             </div>
 
             <div class="range">
-                <ion-range mode="ios" pin="true" (ionChange)="changeRange($event)" [(ngModel)]="range" [min]="min"
+                <ion-range mode="ios" (ionChange)="changeRange($event)" [(ngModel)]="range" [min]="min"
                     [max]="max"></ion-range>
                 <ion-label class="desc">
                     <p translate>SLOW</p>

@@ -259,12 +259,13 @@ export class HelperService {
             buttons.unshift(cancelBtn);
         }
         //暂时忽略http请求失败
-        this.alertController.create({
-            header: header,
-            message: message,
-            backdropDismiss: false,
-            buttons: buttons
-        }).then(alert => alert.present());
+        // this.alertController.create({
+        //     header: header,
+        //     message: message,
+        //     backdropDismiss: false,
+        //     buttons: buttons
+        // }).then(alert => alert.present());
+        console.log('http requset error:' + message);
     }
 
     hideAlert() {

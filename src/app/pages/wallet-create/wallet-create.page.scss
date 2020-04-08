@@ -8,6 +8,10 @@ ion-toolbar {
     }
 }
 
+ion-content {
+    --background: #00ace1;
+}
+
 .header {
     padding-top: 20px;
     height: 212px;
@@ -33,7 +37,7 @@ ion-toolbar {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.10);
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    margin-top: -20px;
+    // margin-top: -20px;
 }
 
 .buttons {

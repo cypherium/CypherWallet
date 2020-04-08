@@ -5,6 +5,7 @@ import { NativeService } from "../../providers/native/native.service";
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { GlobalService } from '../../providers/global/global.service';
 import { HelperService } from '../../providers/helper/helper.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
     selector: 'app-transaction-result',
@@ -25,6 +26,7 @@ export class TransactionResultPage implements OnInit {
         private web3: Web3Service,
         public global: GlobalService,
         private helper: HelperService,
+        public nav: NavController,
         private native: NativeService
     ) {
         let state = this.router.getCurrentNavigation().extras.state;
@@ -59,6 +61,10 @@ export class TransactionResultPage implements OnInit {
         //     let url = "http://scan.cph.com/#/txhash/" + this.tx;
         //     this.native.openUrlBySystemBrowser(url);
         // }
+    }
+
+    back() {
+        this.nav.navigateBack('/wallet-detail');
     }
 
     goHash(hash) {

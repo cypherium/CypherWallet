@@ -56,7 +56,7 @@
 	"DISPLAY_LANGUAGE": "Language",
 	"RECEIVE": "Receive",
 	"SEND": "Send",
-	"RECEIVE_ADDR": "Attention: This address supports {{value}} only, any other assets transfered, may get lost！",
+	"RECEIVE_ADDR": "Warning: This address supports {{value}} only, any other assets transfered, may get lost！",
 	"COPY_WALLET_SUCCEED": "Wallet address copyied to clipboard successfully!",
 	"SEND_AMOUNT": "Amount To Send",
 	"BALANCE": "Your Balance",
