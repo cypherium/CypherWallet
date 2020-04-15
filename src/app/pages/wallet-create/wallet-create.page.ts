@@ -4,6 +4,7 @@ import * as ethers from "ethers";
 import { GlobalService } from '../../providers/global/global.service';
 import { HelperService } from '../../providers/helper/helper.service';
 import { WalletService } from '../../providers/wallet/wallet.service';
+import { Keyboard } from '@ionic-native/keyboard/ngx';
 
 @Component({
     selector: 'app-wallet-create',
@@ -24,6 +25,7 @@ export class WalletCreatePage implements OnInit {
         private router: Router,
         private helper: HelperService,
         private global: GlobalService,
+        private keyboard: Keyboard,
         public Wallet: WalletService
     ) { }
 
@@ -110,6 +112,12 @@ export class WalletCreatePage implements OnInit {
             return
         } else {
             this.passwordError1 = "";
+        }
+    }
+
+    hideKeyboard(e) {
+        if (e && (e.key === "Enter" || e.key === "Return")) {
+            this.keyboard.hide();
         }
     }
 

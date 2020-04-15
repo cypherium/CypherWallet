@@ -3,7 +3,7 @@ import { GlobalService } from '../../providers/global/global.service';
 import { HelperService } from '../../providers/helper/helper.service';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { Platform, NavController } from '@ionic/angular';
-
+import { Keyboard } from '@ionic-native/keyboard/ngx';
 
 @Component({
     selector: 'app-wallet-name',
@@ -17,6 +17,7 @@ export class WalletNamePage implements OnInit {
     constructor(
         private global: GlobalService,
         private helper: HelperService,
+        private keyboard: Keyboard,
         private navCtrl: NavController,
     ) {
 
@@ -41,6 +42,11 @@ export class WalletNamePage implements OnInit {
         this.helper.saveWallet();
         this.navCtrl.pop();
     }
-
+    
+    hideKeyboard(e) {
+        if (e && (e.key === "Enter" || e.key === "Return")) {
+            this.keyboard.hide();
+        }
+    }
 
 }

@@ -47,7 +47,7 @@ export class TransactionResultPage implements OnInit {
         this.detail = await this.web3.getTxDetail(this.tx);
         console.log("Transaction detail：" + JSON.stringify(this.detail));
         this.miningFee = this.detail.gas * this.detail.gasPrice;
-        this.detail.from = this.wallet.addr.toLowerCase();//this.detail.from;
+        this.detail.from = this.detail.from;
         this.detail.to = this.detail.to;
         // this.detail.from = this.detail.senderKey.replace(/^0x/, 'cph');
         // this.detail.to = this.detail.to.replace(/^0x/, 'cph');
@@ -68,9 +68,11 @@ export class TransactionResultPage implements OnInit {
     }
 
     goHash(hash) {
-        this.helper.getTranslate('COMING_SOON').then(msg => {
-            this.helper.toast(msg);
-        });
+        hash = hash.replace('0x', '');
+        this.helper.toast('CPH' + hash.toUpperCase());
+        // this.helper.getTranslate('COMING_SOON').then(msg => {
+        //     this.helper.toast(msg);
+        // });
         // if (this.status != 1) {
         //     let url = "http://scan.cph.com/#/txhash/" + this.tx;
         //     this.native.openUrlBySystemBrowser(url);
@@ -78,9 +80,11 @@ export class TransactionResultPage implements OnInit {
     }
 
     goAddress(addr) {
-        this.helper.getTranslate('COMING_SOON').then(msg => {
-            this.helper.toast(msg);
-        });
+        addr = addr.replace('0x', '');
+        this.helper.toast('CPH' + addr.toUpperCase());
+        // this.helper.getTranslate('COMING_SOON').then(msg => {
+        //     this.helper.toast(msg);
+        // });
         // if (this.status != 1) {
         //     let url = "http://scan.cph.com/#/address/" + addr;
         //     this.native.openUrlBySystemBrowser(url);

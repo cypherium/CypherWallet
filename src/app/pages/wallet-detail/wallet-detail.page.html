@@ -63,8 +63,17 @@
             </div>
         </div>
     </div>
-
-    <div class="no-more" *ngIf="!loading" translate>NOMORE</div>
+    <div class="lds-css ng-scope" *ngIf="loading">
+        <div class="lds-wrapper">
+            <div class="lds-flickr">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <!-- <div class="progress">{{ rate }}%</div> -->
+        </div>
+    </div>
+    <div class="no-more" *ngIf="!more" translate>NOMORE</div>
     <!-- </div> -->
 
 

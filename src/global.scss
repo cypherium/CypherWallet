@@ -26,11 +26,11 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 .gray-content {
-    --background: var(--input-background-color);
+    --background: #FBFBFB;
 }
 
 ion-content {
-    --background: #FAFAFA;
+    --background: #FBFBFB;
 }
 
 h2,
@@ -55,6 +55,18 @@ p {
     &.outline-button {
         background: #0cb3e63c;
         color: #00ace1;
+    }
+
+    margin: 20px var(--page-padding);
+    width: calc(100% - 36px);
+    bottom: 30px;
+
+    div {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 

@@ -5,7 +5,8 @@ import { Storage } from '@ionic/storage';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { Web3Service } from '../../providers/web3/web3.service';
 import { NativeService } from '../../providers/native/native.service';
-import { NavController } from '@ionic/angular';
+import { Platform, NavController } from '@ionic/angular';
+import { Keyboard } from '@ionic-native/keyboard/ngx';
 
 @Component({
     selector: 'app-cph-send',
@@ -36,6 +37,8 @@ export class CphSendPage implements OnInit {
         private storage: Storage,
         private web3: Web3Service,
         public nav: NavController,
+        private platform: Platform,
+        private keyboard: Keyboard,
         private native: NativeService
     ) { 
         let state = this.router.getCurrentNavigation().extras.state;
@@ -156,6 +159,12 @@ export class CphSendPage implements OnInit {
             let message = await this.helper.getTranslate('BALANCE_INFFICIENT');
             this.amountError = message;
             return;
+        }
+    }
+
+    hideKeyboard(e) {
+        if (e && (e.key === "Enter" || e.key === "Return")) {
+            this.keyboard.hide();
         }
     }
 

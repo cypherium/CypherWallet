@@ -5,6 +5,7 @@ import { HelperService } from '../../providers/helper/helper.service';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { Platform, NavController } from '@ionic/angular';
 import { WalletService } from '../../providers/wallet/wallet.service';
+import { Keyboard } from '@ionic-native/keyboard/ngx';
 
 @Component({
     selector: 'app-wallet-import',
@@ -31,6 +32,7 @@ export class WalletImportPage implements OnInit {
         private helper: HelperService,
         private global: GlobalService,
         private navCtrl: NavController,
+        private keyboard: Keyboard,
         public Wallet: WalletService,
     ) { }
 
@@ -215,6 +217,12 @@ export class WalletImportPage implements OnInit {
             // this.router.navigate(['tabs']);
             this.navCtrl.navigateRoot('wallet');
         })
+    }
+
+    hideKeyboard(e) {
+        if (e && (e.key === "Enter" || e.key === "Return")) {
+            this.keyboard.hide();
+        }
     }
 
 }

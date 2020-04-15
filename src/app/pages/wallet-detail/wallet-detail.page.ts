@@ -13,15 +13,15 @@ import { HelperService } from '../../providers/helper/helper.service';
 export class WalletDetailPage implements OnInit {
     allTransactionList = [];
     pageno = 1;
-    pageSize = 10;
+    pageSize = 20;
     type = 0;
     wallet: any = {};
     amount: any = "";
     amountInOther: any = "";
     amountInOtherDisplay: any = "";
     blockHeight: any = "";
-    more = false;
-    loading = true;
+    more = true;
+    loading = false;
     interval = null;
 
     constructor(
@@ -69,7 +69,7 @@ export class WalletDetailPage implements OnInit {
     }
 
     async ionViewDidEnter() {
-        this.blockHeight = await this.web3.getBlockHeight();
+        // this.blockHeight = await this.web3.getBlockHeight();
         this.getTransactionList();
         //获取汇率信息
         this.http.get(this.global.api['getRateInfo']).subscribe(res => {
@@ -116,8 +116,9 @@ export class WalletDetailPage implements OnInit {
             pageIndex: this.pageno,
             pageSize: this.pageSize
         }).subscribe(res => {
+            this.loading = false;
             if (res.err_no == 0) {
-                this.loading = false;
+                this.blockHeight = this.web3.getBlockHeight();
                 if (res.transactions) {
                     res.transactions.forEach(item => {
                         if (item.tx_type == 1 || item.tx_type == 2) {
@@ -145,7 +146,11 @@ export class WalletDetailPage implements OnInit {
                         this.allTransactionList = this.allTransactionList.concat(res.transactions || []);
                     }
                     // this.more = (this.allTransactionList.length < res.count);
-                    this.more = true;
+                    if (Object.keys(res.transactions).length == this.pageSize) {
+                        this.more = true;
+                    }else {
+                        this.more = false;  
+                    }
                     console.log(this.allTransactionList.length, res.count);
                 } else {
                     if (this.pageno > 1) {
@@ -193,9 +198,9 @@ export class WalletDetailPage implements OnInit {
             return false;
         }
         this.pageno++;
-        this.loading = true;
+        // this.loading = true;
         await this.getTransactionList();
-        this.loading = false;
+        // this.loading = false;
         infiniteScroll.target.complete();
 
     }

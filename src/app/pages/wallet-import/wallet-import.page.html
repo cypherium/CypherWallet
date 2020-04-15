@@ -42,7 +42,7 @@
             <div class="label" *ngIf="type == 'mnemonic'" translate>SETUP_PASSWORD_TIPS</div>
             <div class="label" *ngIf="type != 'mnemonic'" translate>INPUT_PASSWORD_TIPS</div>
             <div class="input-wrapper">
-                <input name="password" (blur)="checkPassword()" [type]="ifEyeOpen ? 'text' : 'password'"
+                <input name="password" (blur)="checkPassword()" (keypress)= "hideKeyboard($event)" [type]="ifEyeOpen ? 'text' : 'password'"
                     [(ngModel)]="password" placeholder="{{ 'PASSWORD_RULE' | translate }}">
             </div>
 
@@ -55,7 +55,7 @@
         <div class="input-password-wrapper" *ngIf="type == 'mnemonic'">
             <div class="label" translate>CONFIRM_PASSWORD</div>
             <div class="input-wrapper">
-                <input name="password1" (blur)="checkPassword1()" [type]="ifEyeOpen ? 'text' : 'password'"
+                <input name="password1" (blur)="checkPassword1()" (keypress)= "hideKeyboard($event)" [type]="ifEyeOpen ? 'text' : 'password'"
                     [(ngModel)]="password1" placeholder="{{ 'CONFIRM_PASSWORD' | translate }}">
             </div>
 
@@ -65,8 +65,8 @@
 
         <div class="error-text" *ngIf="passwordError1 && type == 'mnemonic'">{{ passwordError1 }}</div>
 
-        <div class="buttons bottom-button">
-            <div class="confirm-button" (click)="importWallet()" translate>START_IMPORT</div>
+        <div class="buttons">
+            <div class="confirm-button" [ngClass]="((mnemonicError || keystoreError) || passwordError ) ? 'disabled' : ''" (click)="importWallet()" translate>START_IMPORT</div>
         </div>
     </div>
 

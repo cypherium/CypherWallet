@@ -16,7 +16,7 @@
 
 	"MNEMONIC_EMPTY": "Mnemonic should not be empty.",
 	"MNEMONIC_LENGTH_ERROR": "Mnemonic length is incorrect",
-	"PASSEORD_DIFFERENT": "The password is not consistent.",
+	"PASSEORD_DIFFERENT": "Passwords don't match.",
 	"KEYSTORE_EMPTY": "The keystore should not be empty.",
 	"KEYSTORE_REPLICATE": "The keystore has been imported.",
 	"MNEMONIC_REPLICATE": "The mnemonic has been imported.",

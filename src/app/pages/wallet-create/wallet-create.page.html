@@ -6,7 +6,7 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content forceOverscroll="false">
+<ion-content>
     <div class="full-content">
         <div class="header">
             <img src="./assets/imgs/cypherium-full-logo.svg" alt="">
@@ -17,7 +17,7 @@
             <div class="input-text-wrapper">
                 <div class="label" translate>WALLET_NAME</div>
                 <div class="input-wrapper">
-                    <input type="text" (blur)="checkWalletName()" [(ngModel)]="walletName"
+                    <input type="text" (blur)="checkWalletName()" (keypress)= "hideKeyboard($event)" [(ngModel)]="walletName"
                         placeholder="{{ 'INPUT_WALLET_NAME' | translate }}">
                 </div>
             </div>
@@ -27,7 +27,7 @@
             <div class="input-password-wrapper">
                 <div class="label" translate>NEW_PASSWORD</div>
                 <div class="input-wrapper">
-                    <input (keyup)="checkPassword()" [type]="ifEyeOpen ? 'text' : 'password'" [(ngModel)]="password"
+                    <input (keyup)="checkPassword()" (keypress)= "hideKeyboard($event)" [type]="ifEyeOpen ? 'text' : 'password'" [(ngModel)]="password"
                         placeholder="{{ 'WALLET_RULE' | translate }}">
                 </div>
 
@@ -40,7 +40,7 @@
             <div class="input-password-wrapper">
                 <div class="label" translate>REPEAT_PASSWORD</div>
                 <div class="input-wrapper">
-                    <input (keyup)="checkPassword1()" [type]="ifEyeOpen1 ? 'text' : 'password'" [(ngModel)]="password1"
+                    <input (keyup)="checkPassword1()" (keypress)= "hideKeyboard($event)" [type]="ifEyeOpen1 ? 'text' : 'password'" [(ngModel)]="password1"
                         placeholder="{{ 'CONFIRM_PASSWORD' | translate }}">
                 </div>
                 <div class="eye" tappable (click)="toggleEyeOpen1()" [ngClass]="ifEyeOpen1 ? 'eye-open' : 'eye-close'">

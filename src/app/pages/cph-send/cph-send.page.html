@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="input-wrapper">
-                <input type="number" (keyup)="checkAmount()" [(ngModel)]="payAmount"
+                <input type="number" (keyup)="checkAmount($event)" (keypress)= "hideKeyboard($event)" [(ngModel)]="payAmount"
                     placeholder="{{ 'INPUT_AMOUNT_TIPS' | translate }}">
             </div>
         </div>
@@ -36,7 +36,7 @@
         <div class="input-text-wrapper">
             <div class="label" translate>RECEIVE_ADDRESS</div>
             <div class="input-wrapper">
-                <input type="text" (keyup)="checkAddr()" [(ngModel)]="receiveAddress"
+                <input type="text" (keyup)="checkAddr()" (keypress)= "hideKeyboard($event)" [(ngModel)]="receiveAddress"
                     placeholder="{{ 'INPUT_ADDR_TIPS' | translate }}">
             </div>
         </div>
@@ -62,8 +62,8 @@
         </div>
     </div>
 
-    <div class="confirm-button bottom-button hide-when-keyboard-shown"
-        [ngClass]="(addressError || amountError || !receiveAddress || !amount) ? 'disabled' : ''"
+    <div class="confirm-button"
+        [ngClass]="(!payAmount || addressError || amountError || !receiveAddress || !amount) ? 'disabled' : ''"
         (click)="transferConfirm()" translate="">
         CONFIRM</div>
 </ion-content>
