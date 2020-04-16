@@ -4,13 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
-
-import { PinCodePage } from './pin-code.page';
-
+import { PincodeModalPage } from './pincode-modal.page';
+import { ComponentsModule } from '../../components/components.module';
+// import { KeypadComponent } from '../../components/keypad/keypad.component';
 const routes: Routes = [
   {
     path: '',
-    component: PinCodePage
+    component: PincodeModalPage
   }
 ];
 
@@ -19,8 +19,10 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    ComponentsModule,
+    // KeypadComponent,
     RouterModule.forChild(routes)
   ],
-  declarations: [PinCodePage]
+  declarations: [PincodeModalPage]
 })
-export class PinCodePageModule {}
+export class PincodeModalPageModule {}

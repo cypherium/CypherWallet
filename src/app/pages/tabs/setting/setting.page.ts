@@ -6,6 +6,7 @@ import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { HttpService } from "../../../providers/http/http.service";
 import { HTTP } from '@ionic-native/http/ngx';
 import { environment } from '../../../../environments/environment';
+import { Events, NavController } from '@ionic/angular';
 
 @Component({
     selector: 'app-setting',
@@ -15,6 +16,10 @@ import { environment } from '../../../../environments/environment';
 export class SettingPage implements OnInit {
     displayValue: any = {};
     rateList = [];
+    ifShowPasswordPrompt = false;
+    confirmPrompt = null;
+    cancelPrompt = null;
+
     constructor(
         private router: Router,
         public global: GlobalService,
@@ -23,6 +28,7 @@ export class SettingPage implements OnInit {
         private http: HttpService,
         private httpn: HTTP,
         public activeRouter: ActivatedRoute,
+        private navCtrl: NavController,
     ) { }
 
     ngOnInit() {
@@ -89,6 +95,17 @@ export class SettingPage implements OnInit {
 
     goChangePassword() {
         this.router.navigate(['change-password']);
+    }
+
+    goChangePaymentPassword() {
+        this.ifShowPasswordPrompt = true;
+        this.cancelPrompt = () => {
+            this.ifShowPasswordPrompt = false;
+        };
+        this.confirmPrompt = () => {
+            this.ifShowPasswordPrompt = false;
+            this.router.navigate(['payment-password']);
+        };
     }
 
 }

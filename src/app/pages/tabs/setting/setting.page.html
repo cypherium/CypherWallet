@@ -30,6 +30,12 @@
         </div>
         <div class="item" tappable (click)="goChangePassword()">
             <div class="icon icon-password"></div>
+            <div class="label" translate>PRIVATE_KEY_PASSWORD</div>
+            <div class="content"></div>
+            <div class="next"></div>
+        </div>
+        <div class="item" tappable (click)="goChangePaymentPassword()">
+            <div class="icon icon-payment"></div>
             <div class="label" translate>PAYMENT_PASSWORD</div>
             <div class="content"></div>
             <div class="next"></div>
@@ -53,6 +59,10 @@
             <div class="next"></div>
         </div>
     </div>
+
+    <app-generate-privatekey *ngIf="ifShowPasswordPrompt" promptDesc="{{ 'INPUT_PASSWORD_TIPS' | translate }}"
+        cancelText="{{ 'CANCEL' | translate }}" confirmText="{{ 'CONFIRM' | translate }}" (cancel)="cancelPrompt()"
+        (confirm)="confirmPrompt($event)"></app-generate-privatekey>
 </ion-content>
 
 <app-my-tabs tab="setting"></app-my-tabs>

@@ -7,6 +7,8 @@ import { Web3Service } from '../../providers/web3/web3.service';
 import { NativeService } from '../../providers/native/native.service';
 import { Platform, NavController } from '@ionic/angular';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
+import { ModalController } from '@ionic/angular';
+import { PincodeModalPage } from '../pincode-modal/pincode-modal.page';
 
 @Component({
     selector: 'app-cph-send',
@@ -28,7 +30,7 @@ export class CphSendPage implements OnInit {
     alertTitle = "";
     alertDesc = "";
     interval = null;
-    
+
     constructor(
         private router: Router,
         // private clipboard: Clipboard,
@@ -39,7 +41,8 @@ export class CphSendPage implements OnInit {
         public nav: NavController,
         private platform: Platform,
         private keyboard: Keyboard,
-        private native: NativeService
+        private native: NativeService,
+        public modalController: ModalController
     ) { 
         let state = this.router.getCurrentNavigation().extras.state;
         if (state) {
@@ -126,6 +129,25 @@ export class CphSendPage implements OnInit {
         this.ifShowPasswordPrompt = false;
     }
 
+    async presentModal() {
+        let title = await this.helper.getTranslate('PAYMENT_PASSWORD');
+        const modal = await this.modalController.create({
+            component: PincodeModalPage,
+            cssClass: "pincode-modal",
+            componentProps: {
+                'title': title,
+            }
+        });
+        await modal.present();
+        modal.onDidDismiss().then((s) => {
+            if (s) {
+                if (s === '111111') {
+                    console.log('111111');
+                }
+            }
+        });
+    }
+
     confirmPrompt(privateKey) {
         console.log("Private key...", privateKey);
         this.ifShowPasswordPrompt = false;
@@ -195,7 +217,9 @@ export class CphSendPage implements OnInit {
             return;
         }
         //引导用户输入密码
-        this.ifShowPasswordPrompt = true;
+        // this.ifShowPasswordPrompt = true;
+        //引导用户输入支付密码
+        this.presentModal();
     }
 
     async transfer(privatekey) {

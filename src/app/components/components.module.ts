@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from "@ngx-translate/core";
+// import { KeypadComponent } from './keypad/keypad.component';
 
 @NgModule({
 	declarations: [
@@ -17,6 +18,7 @@ import { TranslateModule } from "@ngx-translate/core";
 		InputPasswordComponent,
 		GeneratePrivatekeyComponent,
 		MyTabsComponent,
+		// KeypadComponent,
 	],
 	imports: [
 		CommonModule,
@@ -30,6 +32,7 @@ import { TranslateModule } from "@ngx-translate/core";
 		InputPasswordComponent,
 		GeneratePrivatekeyComponent,
 		MyTabsComponent,
+		// KeypadComponent,
 	]
 })
 export class ComponentsModule { }
