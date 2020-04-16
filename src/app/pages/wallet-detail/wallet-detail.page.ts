@@ -140,10 +140,23 @@ export class WalletDetailPage implements OnInit {
                             item.to = drawback;
                         }
                     })
-                    if (this.pageno == 1) {
-                        this.allTransactionList = res.transactions || [];
+                    // process sent to same adddress
+                    let transactionsRes = [];
+                    res.transactions.forEach(item => {
+                        if (item.tx_type === 1 && item.from === item.to && this.type === 2) {
+                            item.tx_type = 2;
+                        } else if (item.tx_type === 1 && item.from === item.to && this.type === 0) {
+                            let newItem = Object.assign({}, item);
+                            newItem.tx_type = 2;
+                            transactionsRes = transactionsRes.concat(newItem);
+                        }
+                        transactionsRes = transactionsRes.concat(item);
+                    });
+
+                    if (this.pageno === 1) {
+                        this.allTransactionList = transactionsRes || [];
                     } else {
-                        this.allTransactionList = this.allTransactionList.concat(res.transactions || []);
+                        this.allTransactionList = this.allTransactionList.concat(transactionsRes || []);
                     }
                     // this.more = (this.allTransactionList.length < res.count);
                     if (Object.keys(res.transactions).length == this.pageSize) {
@@ -181,9 +194,8 @@ export class WalletDetailPage implements OnInit {
     }
 
     toggleType(type) {
-        // this.helper.getTranslate('COMING_SOON').then(msg => {
-        //     this.helper.toast(msg);
-        // });
+        //update 
+        this.getWalletInfo(this.wallet.addr);
 
         if (this.type != type) {
             this.type = type;

@@ -102,9 +102,14 @@ export class SettingPage implements OnInit {
         this.cancelPrompt = () => {
             this.ifShowPasswordPrompt = false;
         };
-        this.confirmPrompt = () => {
+        this.confirmPrompt = (prv) => {
             this.ifShowPasswordPrompt = false;
-            this.router.navigate(['payment-password']);
+            let navigationExtras: NavigationExtras = {
+                state: {
+                    privateKey: prv,
+                }
+            };
+            this.router.navigate(['payment-password'], navigationExtras);
         };
     }
 

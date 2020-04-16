@@ -5,7 +5,7 @@ import { Storage } from '@ionic/storage';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { Web3Service } from '../../providers/web3/web3.service';
 import { NativeService } from '../../providers/native/native.service';
-import { Platform, NavController } from '@ionic/angular';
+import { Platform, NavController, AlertController } from '@ionic/angular';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
 import { ModalController } from '@ionic/angular';
 import { PincodeModalPage } from '../pincode-modal/pincode-modal.page';
@@ -42,18 +42,52 @@ export class CphSendPage implements OnInit {
         private platform: Platform,
         private keyboard: Keyboard,
         private native: NativeService,
-        public modalController: ModalController
+        public modalController: ModalController,
+        public alertController: AlertController,
     ) { 
         let state = this.router.getCurrentNavigation().extras.state;
         if (state) {
             this.receiveAddress = state.address;
         }
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
+        if (!this.wallet.payment) {
+            this.presentAlertConfirm();
+        }
         this.amount = this.wallet.amount || 0;
         this.updateWalletInfo();
         this.interval = setInterval(() => {
             this.updateWalletInfo();
         }, 10000);
+    }
+
+    async presentAlertConfirm() {
+        let header = await this.helper.getTranslate('PAYMENT_PASSWORD');
+        let message = await this.helper.getTranslate('PAYMENT_PASSWORD_M');
+        let comfirm = await this.helper.getTranslate('CONFIRM');
+        let cancel = await this.helper.getTranslate('CANCEL');
+
+        const alert = await this.alertController.create({
+            header: header,
+            message: message,
+            buttons: [
+                {
+                    text: cancel,
+                    role: 'cancel',
+                    cssClass: 'secondary',
+                    handler: () => {
+                        this.nav.pop();
+                    }
+                },
+                {
+                    text: comfirm,
+                    handler: () => {
+                        this.router.navigate(['/setting']);
+                    }
+                }
+            ]
+        });
+
+        await alert.present();
     }
 
     back() {
@@ -140,10 +174,18 @@ export class CphSendPage implements OnInit {
         });
         await modal.present();
         modal.onDidDismiss().then((s) => {
-            if (s) {
-                if (s === '111111') {
-                    console.log('111111');
-                }
+            if (s.data.dismissed !== false) {
+                //获取私钥
+                setTimeout(async () => {
+                    let ret = this.helper.decryptPrivateKey(this.wallet.payment, s.data.dismissed);
+                    if (ret.flag) {
+                        this.transfer(ret.privateKey);
+                    } else {
+                        //密码错误
+                        let error = await this.helper.getTranslate('PAYMENT_PASSWORD_ERROR');
+                        this.helper.toast(error);
+                    }
+                }, 50);
             }
         });
     }

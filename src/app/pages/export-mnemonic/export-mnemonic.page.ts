@@ -37,8 +37,6 @@ export class ExportMnemonicPage implements OnInit {
         if (this.router.getCurrentNavigation().extras.state) {
             this.wallet = this.router.getCurrentNavigation().extras.state.wallet;
             this.action = this.router.getCurrentNavigation().extras.state.action;
-            console.log(this.wallet.privateKey)
-
             //获取助记词
             this.mnemonicList = this.wallet.mnemonic.split(" ");
 

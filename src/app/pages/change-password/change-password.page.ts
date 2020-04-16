@@ -111,7 +111,6 @@ export class ChangePasswordPage implements OnInit {
                 this.helper.saveWallet();
                 setTimeout(async () => {
                     let error = await this.helper.getTranslate('CHANGE_PASSWORD_SUCCEED');
-
                     this.helper.toast(error);
                 }, 50);
                 setTimeout(() => {

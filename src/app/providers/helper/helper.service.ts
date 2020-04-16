@@ -41,14 +41,13 @@ export class HelperService {
 
     addWallet(w, password) {
         if (!w.keystore) {
-            w.keystore = JSON.stringify(this.exportKeystore(w.privateKey.replace('0x', ''), password));
+            w.keystore = JSON.stringify(this.exportKeystore(w.privateKey, password));
         }
         let wallet = {
             // name: w.walletName || this.global.projectName + '-wallet-' + w.address.slice(-4),
             name: w.name || this.global.projectName + '-' + w.address.slice(-4),
             addr: w.address,
             mnemonic: w.mnemonic,
-            privateKey: w.privateKey,
             keystore: w.keystore
         };
         this.global.gWalletList.unshift(wallet);
@@ -125,6 +124,7 @@ export class HelperService {
     }
 
     exportKeystore(privateKey, password) {
+        privateKey = privateKey.replace('0x', '');
         if (typeof privateKey == 'string') {
             privateKey = Buffer.from(privateKey, 'hex');
         }

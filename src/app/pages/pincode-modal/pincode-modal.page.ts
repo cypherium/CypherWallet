@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { Router } from '@angular/router';
+import { Router, NavigationExtras } from '@angular/router';
 
 @Component({
   selector: 'app-pincode-modal',
@@ -34,9 +34,14 @@ export class PincodeModalPage implements OnInit {
     this.cancelPrompt = () => {
       this.ifShowPasswordPrompt = false;
     };
-    this.confirmPrompt = () => {
+    this.confirmPrompt = (prv) => {
       this.ifShowPasswordPrompt = false;
-      this.router.navigate(['payment-password']);
+      let navigationExtras: NavigationExtras = {
+        state: {
+          privateKey: prv,
+        }
+      };
+      this.router.navigate(['payment-password'], navigationExtras);
       this.dismiss(false);
     };
   }

@@ -199,23 +199,30 @@ export class WalletImportPage implements OnInit {
         }).then(async (wallet: any) => {
             console.log("Wallet import succeed...", wallet);
             if (!wallet) {
+                // this.navCtrl.pop();
                 return;
             }
             //检测钱包是否重复
-            if (this.global.gWalletList.find(item => item.address == wallet.address)) {
+            let found = this.global.gWalletList.find(item => item.addr === wallet.address);
+            if (found) {
                 if (this.type == 'keystore') {
                     let error = await this.helper.getTranslate('KEYSTORE_REPLICATE');
-
                     this.keystoreError = error;
                 } else {
                     let error = await this.helper.getTranslate('MNEMONIC_REPLICATE');
                     this.mnemonicError = error;
                 }
+                // this.navCtrl.pop();
                 return;
             }
             this.helper.addWallet(wallet, this.password);
-            // this.router.navigate(['tabs']);
-            this.navCtrl.navigateRoot('wallet');
+            let navigationExtras: NavigationExtras = {
+                state: {
+                    privateKey: wallet.privateKey,
+                    action: 'create'
+                }
+            };
+            this.navCtrl.navigateRoot('payment-password', navigationExtras);
         })
     }
 

@@ -25,7 +25,6 @@ export class BackupMnemonicPage implements OnInit {
     ) {
         if (this.router.getCurrentNavigation().extras.state) {
             this.wallet = this.router.getCurrentNavigation().extras.state.wallet;
-            console.log(this.wallet.privateKey)
 
             console.log(this.wallet.mnemonic)
             //获取助记词
@@ -95,7 +94,13 @@ export class BackupMnemonicPage implements OnInit {
             this.helper.addWallet(this.wallet, this.global.paymentPassword);
             this.global.walletName = "";
             //前往首页
-            this.navCtrl.navigateRoot('wallet');
+            let navigationExtras: NavigationExtras = {
+                state: {
+                    privateKey: this.wallet.privateKey,
+                    action: 'create'
+                }
+            };
+            this.navCtrl.navigateRoot('payment-password', navigationExtras);
         } else {
             let error = await this.helper.getTranslate('MNEMONIC_WRONG');
             this.helper.toast(error);

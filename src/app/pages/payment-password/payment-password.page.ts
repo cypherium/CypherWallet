@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HelperService } from '../../providers/helper/helper.service';
 import { GlobalService } from '../../providers/global/global.service';
 import { Platform, NavController } from '@ionic/angular';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-payment-password',
   templateUrl: './payment-password.page.html',
@@ -23,12 +25,21 @@ export class PaymentPasswordPage implements OnInit {
   ifShowLoading = false;
 
   wallet: any = {};
+  privateKey: any;
+  action: any;
 
   constructor(
     private helper: HelperService,
     private navCtrl: NavController,
     private global: GlobalService,
-  ) { }
+    private router: Router,
+  ) { 
+    let state = this.router.getCurrentNavigation().extras.state;
+    if (state) {
+      this.privateKey = state.privateKey;
+      this.action = state.action;
+    }
+  }
 
   ngOnInit() {
     this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
@@ -99,17 +110,34 @@ export class PaymentPasswordPage implements OnInit {
     this.ifShowLoading = true;
 
     setTimeout(async () => {
-
         this.ifShowLoading = false;
-      this.wallet.payment = this.password1;
-      this.helper.saveWallet();
-        setTimeout(async () => {
-          let error = await this.helper.getTranslate('CHANGE_PASSWORD_SUCCEED');
+        //计算新的payment-keystore
+        if (this.privateKey) {
+          let keystore = this.helper.exportKeystore(this.privateKey, this.password1);
+          this.wallet.payment = keystore;
+          this.helper.saveWallet();
+          setTimeout(async () => {
+            let error = await this.helper.getTranslate('CHANGE_PASSWORD_SUCCEED');
+            this.helper.toast(error);
+          }, 50);
+          setTimeout(() => {
+            if (this.action !== 'create') {
+              this.navCtrl.pop();
+            }else {
+              this.navCtrl.navigateRoot('wallet');
+            }
+
+          }, 1000);
+        } else {
+          //密码错误
+          this.ifShowLoading = false;
+          let error = await this.helper.getTranslate('PASSWORD_ERROR');
+          // this.passwordError = error;
           this.helper.toast(error);
-        }, 50);
-        setTimeout(() => {
-          this.navCtrl.pop();
-        }, 1000)
+          setTimeout(() => {
+            this.navCtrl.pop();
+          }, 1000);
+        }
     }, 50);
   }
 
