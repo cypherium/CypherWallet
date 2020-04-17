@@ -122,7 +122,7 @@
 	"WALLET_NAME": "钱包名称",
 	"INPUT_WALLET_NAME": "请输入您的钱包名称",
 	"CREATE_WALLET": "创建CPH钱包",
-	"WALLET_NAME_EMPTY": "钱包名字不能为空",
+	"WALLET_NAME_EMPTY": "名字不能为空，只字母或数字，长度不能超20",
 	"ALL": "全部",
 	"OTHERS": "其他",
 	"NOMORE": "没有更多数据",

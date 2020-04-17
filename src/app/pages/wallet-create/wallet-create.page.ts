@@ -41,31 +41,14 @@ export class WalletCreatePage implements OnInit {
     }
 
     async createWallet() {
-        this.walletNameError = "";
-        this.passwordError = "";
-        this.passwordError1 = "";
-        if (!this.walletName) {
-            let message = await this.helper.getTranslate('WALLET_NAME_EMPTY');
-            this.walletNameError = message
-            return
+        if (await this.checkWalletName() !== "") {
+            return;
         }
-        if (!this.password) {
-            let message = await this.helper.getTranslate('PASSWORD_EMPTY');
-
-            this.passwordError = message
-            return
+        if (await this.checkPassword() !== "") {
+            return;
         }
-        if (!this.password1) {
-            let message = await this.helper.getTranslate('PASSWORD_EMPTY');
-
-            this.passwordError1 = message
-            return
-        }
-        if (this.password1 != this.password) {
-            let message = await this.helper.getTranslate('PASSEORD_DIFFERENT');
-
-            this.passwordError1 = message
-            return
+        if (await this.checkPassword1() !== "") {
+            return;
         }
         // let wallet = ethers.Wallet.createRandom();
         let wallet = this.Wallet.createRandom();
@@ -84,17 +67,17 @@ export class WalletCreatePage implements OnInit {
         this.router.navigate(['wallet-import']);
     }
 
-    checkWalletName() {
+    async checkWalletName() {
+        let regx = /^[0-9a-zA-Z]{1,20}$/;
+        if (this.walletName.match(regx) == null) {
+            this.walletNameError = await this.helper.getTranslate('WALLET_NAME_EMPTY');
+        } else {
+            this.walletNameError = "";
+        }
+        return this.walletNameError;
     }
 
     async checkPassword() {
-        if (this.password.length < 6 || this.password.length > 18) {
-            let message = await this.helper.getTranslate('PASSWORD_RULE');
-            this.passwordError = message;
-            return;
-        } else {
-            this.passwordError = "";
-        }
         let regx = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/;
         if (this.password.match(regx) == null) {
             let message = await this.helper.getTranslate('PASSWORD_RULE');
@@ -103,6 +86,7 @@ export class WalletCreatePage implements OnInit {
         } else {
             this.passwordError = "";
         }
+        return this.passwordError;
     }
 
     async checkPassword1() {
@@ -113,6 +97,7 @@ export class WalletCreatePage implements OnInit {
         } else {
             this.passwordError1 = "";
         }
+        return this.passwordError1;
     }
 
     hideKeyboard(e) {

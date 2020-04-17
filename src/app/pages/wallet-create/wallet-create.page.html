@@ -17,7 +17,7 @@
             <div class="input-text-wrapper">
                 <div class="label" translate>WALLET_NAME</div>
                 <div class="input-wrapper">
-                    <input type="text" (blur)="checkWalletName()" (keypress)= "hideKeyboard($event)" [(ngModel)]="walletName"
+                    <input type="text" (keyup)="checkWalletName()" (keypress)= "hideKeyboard($event)" [(ngModel)]="walletName"
                         placeholder="{{ 'INPUT_WALLET_NAME' | translate }}">
                 </div>
             </div>

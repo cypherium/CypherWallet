@@ -124,7 +124,7 @@
 	"WALLET_NAME": "Wallet Name",
 	"INPUT_WALLET_NAME": "Please enter your wallet name",
 	"CREATE_WALLET": "Create a new CPH wallet",
-	"WALLET_NAME_EMPTY": "The wallet name should not be empty",
+	"WALLET_NAME_EMPTY": "The name cannot be empty, only letters or numbers, and the length cannot exceed 20.",
 	"ALL": "All",
 	"OTHERS": "Others",
 	"NOMORE": "NO MORE DATA",

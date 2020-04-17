@@ -30,24 +30,6 @@ export class BackupMnemonicPage implements OnInit {
             //获取助记词
             let mnemonicList = this.wallet.mnemonic.split(" ");
             this.mnemonicList = this.shuffle(mnemonicList);
-            // console.log(Buffer)
-            // try {
-            //     var key = Buffer.from(this.wallet.privateKey.replace('0x', ''), 'hex');
-            //     console.log(key)
-            //     this.keystore = JSON.stringify(EthereumWallet.fromPrivateKey(key).toV3("123456", {
-            //         n: 1024
-            //     }));
-            //     console.log(this.keystore)
-            // } catch (e) {
-            //     console.log(e.message)
-            // }
-
-            // this.wallet.encrypt("123456").then(res => {
-            //     console.log("aaaaaa" + res)
-            //     this.keystore = res;
-            // }).catch(e => {
-            //     console.log("sdfsdfds")
-            // })
         }
     }
 
@@ -72,6 +54,7 @@ export class BackupMnemonicPage implements OnInit {
         }
         console.log(this.backupList)
     }
+    
     isSelect(mnemonic, i){
         return this.backupList.findIndex(item => item.mnemonic === mnemonic && item.i === i);
     }

@@ -39,25 +39,6 @@ export class ExportMnemonicPage implements OnInit {
             this.action = this.router.getCurrentNavigation().extras.state.action;
             //获取助记词
             this.mnemonicList = this.wallet.mnemonic.split(" ");
-
-            // console.log(Buffer)
-            // try {
-            //     var key = Buffer.from(this.wallet.privateKey.replace('0x', ''), 'hex');
-            //     console.log(key)
-            //     this.keystore = JSON.stringify(EthereumWallet.fromPrivateKey(key).toV3("123456", {
-            //         n: 1024
-            //     }));
-            //     console.log(this.keystore)
-            // } catch (e) {
-            //     console.log(e.message)
-            // }
-
-            // this.wallet.encrypt("123456").then(res => {
-            //     console.log("aaaaaa" + res)
-            //     this.keystore = res;
-            // }).catch(e => {
-            //     console.log("sdfsdfds")
-            // })
         } else {
             //导出助记词
             this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
