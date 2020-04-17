@@ -45,35 +45,89 @@ export class WalletImportPage implements OnInit {
     }
 
     toggleImportType(type) {
+        this.mnemonic = "";
+        this.password = "";
+        this.password1 = "";
+        this.passwordError = "";
+        this.passwordError1 = "";
+        this.ifEyeOpen1 = false;
+        this.ifEyeOpen = false;
+        this.mnemonicError = "";
+        this.keystore = "";
+        this.keystoreError = "";
+
         this.type = type;
     }
 
     ngOnInit() {
     }
 
-    importMnemonic() {
-        let result = this.checkMnemonic();
-
-        if (!result) {
-            return null;
-        } else {
-            return this.importMnemonicWallet();
+    async checkMnemonic() {
+        if (!this.mnemonic) {
+            let error = await this.helper.getTranslate('MNEMONIC_EMPTY');
+            this.mnemonicError = error
+            return false;
         }
+
+        let mnemonic = this.mnemonic.replace(/^\s+|\s+$/, '');
+        let mnemonicList = mnemonic.split(/\s+/);
+        if (mnemonicList.length !== 12) {
+            let error = await this.helper.getTranslate('MNEMONIC_LENGTH_ERROR');
+            this.mnemonicError = error
+            return false;
+        }
+
+        if(!this.Wallet.validateMnemonic(mnemonic)) {
+            let error = await this.helper.getTranslate('MNEMONIC_ERROR');
+            this.mnemonicError = error
+            return false;
+        }
+        this.mnemonicError = "";
+        return true;
+    }
+
+    async checkKeystore() {
+        if (!this.keystore) {
+            let error = await this.helper.getTranslate('KEYSTORE_EMPTY');
+            this.keystoreError = error
+            return false;
+        }
+        this.keystoreError = "";
+        return true;
+    }
+
+    async checkPassword() {
+        //为兼容旧版的密码设置规则
+        if (this.type == 'keystore') {
+            if (!this.password) {
+                let message = await this.helper.getTranslate('PASSWORD_EMPTY');
+                this.passwordError = message
+                return;
+            } 
+            this.passwordError = "";
+            return this.passwordError;            
+        }
+        let regx = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/;
+        if (this.password.match(regx) == null) {
+            let message = await this.helper.getTranslate('PASSWORD_RULE');
+            this.passwordError = message
+            return;
+        }
+        this.passwordError = "";
+        return this.passwordError;
+    }
+
+    async checkPassword1() {
+        if (this.password1 != this.password) {
+            let message = await this.helper.getTranslate('PASSEORD_DIFFERENT');
+            this.passwordError1 = message
+            return
+        }
+        this.passwordError1 = "";
+        return this.passwordError1;
     }
 
     async importKeystore() {
-        let result = await this.checkKeystore();
-        if (!result) {
-            return Promise.resolve(null);
-        }
-
-        console.log("check password...");
-        if (!this.password) {
-            let error = await this.helper.getTranslate('PASSWORD_EMPTY');
-            this.passwordError = error;
-            return Promise.resolve(null);
-        }
-
         let json = this.keystore;
 
         console.log("showloading...");
@@ -105,103 +159,45 @@ export class WalletImportPage implements OnInit {
         return wallet;
     }
 
-    async checkMnemonic() {
-        if (!this.mnemonic) {
-            let error = await this.helper.getTranslate('MNEMONIC_EMPTY');
-            this.mnemonicError = error
-        }
-        let mnemonic = this.mnemonic.replace(/^\s+|\s+$/, '');
-        let mnemonicList = mnemonic.split(/\s+/);
-        if (mnemonicList.length !== 12) {
-            let error = await this.helper.getTranslate('MNEMONIC_LENGTH_ERROR');
-            this.mnemonicError = error
-        }else{
-            this.mnemonicError = "";
-        }
-
-        if (this.mnemonicError) {
-            return false;
-        }
-
-        if (!this.password) {
-            let error = await this.helper.getTranslate('PASSWORD_EMPTY');
-            this.passwordError = error
-            return false;
-        }
-        if (!this.password1) {
-            let error = await this.helper.getTranslate('PASSWORD_EMPTY');
-            this.passwordError1 = error
-            return false;
-        }
-        if (this.password1 != this.password) {
-            let error = await this.helper.getTranslate('PASSEORD_DIFFERENT');
-            this.passwordError1 = error
-            return false;
-        }
-        this.mnemonicError = "";
-        return true;
-    }
-
-    async checkKeystore() {
-        console.log("check keystore...");
-        this.keystoreError = "";
-        this.passwordError = "";
-
-        if (!this.keystore) {
-            let error = await this.helper.getTranslate('KEYSTORE_EMPTY');
-            this.keystoreError = error
-        }
-        if (this.keystoreError) {
-            return false;
-        }
-        return true;
-    }
-
-    async checkPassword() {
-        if (!this.password) {
-            let error = await this.helper.getTranslate('PASSWORD_EMPTY');
-            this.passwordError = error
-        } else {
-            this.passwordError = "";
-        }
-    }
-
-    async checkPassword1() {
-        if (!this.password1) {
-            let error = await this.helper.getTranslate('PASSWORD_EMPTY');
-
-            this.passwordError1 = error
-            return
-        }
-        if (this.password && this.password1 != this.password) {
-            let error = await this.helper.getTranslate('PASSEORD_DIFFERENT');
-
-            this.passwordError1 = error
-        }
-        this.passwordError1 = "";
-    }
-
     async importWallet() {
-        this.mnemonicError = "";
-        this.passwordError = "";
-        this.passwordError1 = "";
+        let check = true;
+        if (await this.checkPassword() !== "") {
+            check = false;
+        }
+
+        if (this.type == 'mnemonic') {
+            if (await this.checkMnemonic() !== true) {
+                check = false;
+            }
+            if (await this.checkPassword1() !== "") {
+                check = false;
+            }                       
+        } else {
+            if (await this.checkKeystore() !== true) {
+                check = false;
+            }
+        }
+        if (!check) {
+            return;
+        }
 
         let wallet;
 
         new Promise((resolve, reject) => {
             if (this.type == 'mnemonic') {
-                wallet = this.importMnemonic();
-                //为了一致，这里需要生成keystore
+                wallet = this.importMnemonicWallet();
                 resolve(wallet);
             } else if (this.type == 'keystore') {
                 this.importKeystore().then(resolve)
             }
         }).then(async (wallet: any) => {
-            console.log("Wallet import succeed...", wallet);
             if (!wallet) {
-                // this.navCtrl.pop();
+                let error = await this.helper.getTranslate('WALLET_IMPORT_FAILED');
+                this.keystoreError = error;
+                this.mnemonicError = error;
                 return;
             }
+            console.log("Wallet import succeed...", wallet);
             //检测钱包是否重复
             let found = this.global.gWalletList.find(item => item.addr === wallet.address);
             if (found) {
@@ -212,7 +208,6 @@ export class WalletImportPage implements OnInit {
                     let error = await this.helper.getTranslate('MNEMONIC_REPLICATE');
                     this.mnemonicError = error;
                 }
-                // this.navCtrl.pop();
                 return;
             }
             this.helper.addWallet(wallet, this.password);

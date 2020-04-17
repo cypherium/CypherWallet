@@ -25,6 +25,7 @@ export class WalletPage implements OnInit {
     amountInOtherDisplay: any = '';
     alertTitle = "";
     alertDesc = "";
+    needIndex: any;
 
     ifShowPasswordPrompt = false;
     cancelPrompt = null;
@@ -207,6 +208,7 @@ export class WalletPage implements OnInit {
     }
 
     deletWallet(index, wallet) {
+        this.needIndex = index;
         this.ifShowPasswordPrompt = true;
         this.cancelPrompt = () => {
             this.ifShowPasswordPrompt = false;
@@ -215,6 +217,7 @@ export class WalletPage implements OnInit {
             this.ifShowPasswordPrompt = false;
             // 如果账号只有一个或为空，直接删除，然后跳转到创建新账号
             if (this.global.gWalletList.length < 2) {
+                this.global.gWalletList.splice(index, 1);
                 this.storage.remove('localwallet');
                 this.storage.remove('localwalletindex');
                 this.navCtrl.navigateRoot('/wallet-create');

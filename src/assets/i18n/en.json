@@ -17,10 +17,12 @@
 
 	"MNEMONIC_EMPTY": "Mnemonic should not be empty.",
 	"MNEMONIC_LENGTH_ERROR": "Mnemonic length is incorrect",
+	"MNEMONIC_ERROR": "Illegal Mnemonic",
 	"PASSEORD_DIFFERENT": "Passwords don't match.",
 	"KEYSTORE_EMPTY": "The keystore should not be empty.",
 	"KEYSTORE_REPLICATE": "The keystore has been imported.",
 	"MNEMONIC_REPLICATE": "The mnemonic has been imported.",
+	"WALLET_IMPORT_FAILED": "Wallet import failed.",
 
 	"ABOUTUS": "About Us",
 	"VERSION_UPDATE": "Version Update",
@@ -39,7 +41,7 @@
 	"CANCEL": "Cancel",
 	"NEW_PASSWORD_EMPTY": "The new password should not be empty.",
 	"ORIGINAL_PASSWORD_EMPTY": "The original private key password should not be empty.",
-	"CHANGE_PASSWORD_SUCCEED": "Change password successfully!",
+	"CHANGE_PASSWORD_SUCCEED": "Set password successfully!",
 	"PASSWORD_ERROR": "The private key password is incorrent, please check!",
 	"PAYMENT_PASSWORD_ERROR": "The payment password is incorrent, please check!",
 	"EXPORT_KEYSTORE": "Export Keystore",

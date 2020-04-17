@@ -14,6 +14,7 @@ export class GeneratePrivatekeyComponent implements OnInit {
     paymentPassword: string = "";
     ifShowLoading = false;
 
+    @Input() needIndex: any;
     @Input() cancelText: string = "";
     @Input() confirmText: string = "";
     @Input() promptDesc: string = "";
@@ -38,7 +39,14 @@ export class GeneratePrivatekeyComponent implements OnInit {
     }
 
     async confirmPrompt() {
-        let keystore = this.global.gWalletList[this.global.currentWalletIndex].keystore;
+        let keystore: any;
+
+        if (this.needIndex) {
+            keystore = this.global.gWalletList[this.needIndex].keystore;
+        }else {
+            keystore = this.global.gWalletList[this.global.currentWalletIndex].keystore;
+        }
+
         this.promptError = "";
         if (!this.paymentPassword) {
             let error = await this.helper.getTranslate('PASSWORD_EMPTY');

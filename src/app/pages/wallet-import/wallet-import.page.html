@@ -21,7 +21,7 @@
 
         <div class="mnemonic" *ngIf="type == 'mnemonic'">
             <div class="tips" translate="">INPUT_MNEMONIC_TIPS</div>
-            <textarea name="mnemonic" (blur)="checkMnemonic()" class="textarea" [(ngModel)]="mnemonic">
+            <textarea name="mnemonic" (keyup)="checkMnemonic()" (keypress)= "hideKeyboard($event)" class="textarea" [(ngModel)]="mnemonic">
             </textarea>
         </div>
 
@@ -31,7 +31,7 @@
         <div class="mnemonic keystore" *ngIf="type == 'keystore'">
             <div class="tips" translate="">COPY_KEYSTORE_TIPS</div>
             <div class="input-wrapper">
-                <textarea name="keystore" (blur)="checkKeystore()" class="textarea" [(ngModel)]="keystore">
+                <textarea name="keystore" (keyup)="checkKeystore()" (keypress)= "hideKeyboard($event)" class="textarea" [(ngModel)]="keystore">
                 </textarea>
             </div>
         </div>
@@ -42,8 +42,10 @@
             <div class="label" *ngIf="type == 'mnemonic'" translate>SETUP_PASSWORD_TIPS</div>
             <div class="label" *ngIf="type != 'mnemonic'" translate>INPUT_PASSWORD_TIPS</div>
             <div class="input-wrapper">
-                <input name="password" (blur)="checkPassword()" (keypress)= "hideKeyboard($event)" [type]="ifEyeOpen ? 'text' : 'password'"
+                <input name="password" *ngIf="type == 'mnemonic'" (keyup)="checkPassword()" (keypress)= "hideKeyboard($event)" [type]="ifEyeOpen ? 'text' : 'password'"
                     [(ngModel)]="password" placeholder="{{ 'PASSWORD_RULE' | translate }}">
+                 <input name="password" *ngIf="type != 'mnemonic'" (keyup)="checkPassword()" (keypress)= "hideKeyboard($event)" [type]="ifEyeOpen ? 'text' : 'password'"
+                    [(ngModel)]="password" placeholder="{{ 'INPUT_PASSWORD_TIPS' | translate }}">
             </div>
 
             <div class="eye" tappable (click)="toggleEyeOpen()" [ngClass]="ifEyeOpen ? 'eye-open' : 'eye-close'">
@@ -55,7 +57,7 @@
         <div class="input-password-wrapper" *ngIf="type == 'mnemonic'">
             <div class="label" translate>CONFIRM_PASSWORD</div>
             <div class="input-wrapper">
-                <input name="password1" (blur)="checkPassword1()" (keypress)= "hideKeyboard($event)" [type]="ifEyeOpen ? 'text' : 'password'"
+                <input name="password1" (keyup)="checkPassword1()" (keypress)= "hideKeyboard($event)" [type]="ifEyeOpen ? 'text' : 'password'"
                     [(ngModel)]="password1" placeholder="{{ 'CONFIRM_PASSWORD' | translate }}">
             </div>
 
@@ -66,12 +68,16 @@
         <div class="error-text" *ngIf="passwordError1 && type == 'mnemonic'">{{ passwordError1 }}</div>
 
         <div class="buttons">
-            <div class="confirm-button" [ngClass]="((mnemonicError || keystoreError) || passwordError ) ? 'disabled' : ''" (click)="importWallet()" translate>START_IMPORT</div>
+            <div class="confirm-button" *ngIf="type == 'mnemonic'" 
+            [ngClass]="(mnemonicError || password1Error || passwordError || !mnemonic || !password1 || !password || (password1 != password)) ? 'disabled' : ''" (click)="importWallet()" 
+            translate>START_IMPORT
+            </div>
+            <div class="confirm-button" *ngIf="type == 'keystore'" 
+            [ngClass]="(keystoreError || passwordError || !keystore || !password) ? 'disabled' : ''" (click)="importWallet()" 
+            translate>START_IMPORT
+            </div>
         </div>
     </div>
-
-
-
 </ion-content>
 
 <div class="lds-css ng-scope" *ngIf="ifShowLoading">

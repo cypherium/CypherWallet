@@ -100,6 +100,6 @@
     (cancel)="cancelAlert()" confirmText="{{ 'CONFIRM' | translate }}" (confirm)="confirmAlert()">
 </app-alert>
 
-<app-generate-privatekey *ngIf="ifShowPasswordPrompt" promptDesc="{{ 'INPUT_PASSWORD_TIPS' | translate }}"
+<app-generate-privatekey [needIndex] = "needIndex" *ngIf="ifShowPasswordPrompt" promptDesc="{{ 'INPUT_PASSWORD_TIPS' | translate }}"
     cancelText="{{ 'CANCEL' | translate }}" confirmText="{{ 'CONFIRM' | translate }}" (cancel)="cancelPrompt()"
     (confirm)="confirmPrompt($event)"></app-generate-privatekey>
