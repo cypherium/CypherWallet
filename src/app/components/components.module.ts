@@ -9,7 +9,8 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { TranslateModule } from "@ngx-translate/core";
-// import { KeypadComponent } from './keypad/keypad.component';
+import { KeypadComponent } from './keypad/keypad.component';
+import { IonicModule } from '@ionic/angular';
 
 @NgModule({
 	declarations: [
@@ -18,12 +19,13 @@ import { TranslateModule } from "@ngx-translate/core";
 		InputPasswordComponent,
 		GeneratePrivatekeyComponent,
 		MyTabsComponent,
-		// KeypadComponent,
+		KeypadComponent,
 	],
 	imports: [
 		CommonModule,
 		FormsModule,
 		TranslateModule,
+		IonicModule,
 		// DirectivesModule
 	],
 	exports: [
@@ -32,7 +34,7 @@ import { TranslateModule } from "@ngx-translate/core";
 		InputPasswordComponent,
 		GeneratePrivatekeyComponent,
 		MyTabsComponent,
-		// KeypadComponent,
+		KeypadComponent,
 	]
 })
 export class ComponentsModule { }

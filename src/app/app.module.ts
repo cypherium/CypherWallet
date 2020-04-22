@@ -28,17 +28,18 @@ import { HTTP } from '@ionic-native/http/ngx';
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { PincodeModalPage } from './pages/pincode-modal/pincode-modal.page';
-import { KeypadComponent } from './components/keypad/keypad.component';
+// import { PincodeModalPageModule } from './pages/pincode-modal/pincode-modal.module';
+// import { KeypadComponent } from './components/keypad/keypad.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
 @NgModule({
-    declarations: [AppComponent, PincodeModalPage, KeypadComponent],
-    entryComponents: [PincodeModalPage, KeypadComponent],
+    declarations: [AppComponent],
+    entryComponents: [],
     imports: [
         HttpClientModule,
+        // PincodeModalPageModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,

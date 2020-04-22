@@ -5,6 +5,7 @@ import * as bip39 from 'bip39';
 import * as RIPEMD160 from 'ripemd160';
 import * as util from 'ethereumjs-util';
 import * as jsSHA from 'jssha';
+import * as ed25519 from '@stablelib/ed25519';
 
 const TYPE_ED25519 = '01';
 const PUBKEY_PREFIX = '0120';//0x01   0x20 = 32 
@@ -37,6 +38,7 @@ export class WalletService {
       publicKey: keyPair.publicKey
     };
   }
+
   fromMnemonic(mnemonic) {
     let seed = this.generateSeed(mnemonic);
     let keyPair = this.generateKeyPair(seed);
@@ -45,6 +47,19 @@ export class WalletService {
     return {
       address: address,
       mnemonic: mnemonic,
+      path: "m/44'/60'/0'/0/0",
+      privateKey: keyPair.privateKey,
+      publicKey: keyPair.publicKey
+    };
+  }
+
+  fromPrivateKey(privateKey) {
+    let keyPair = this.generateKeyPairFromPrivate(privateKey);
+    let address = this.getCPHAddressFromPubKey(keyPair.publicKey);
+
+    return {
+      address: address,
+      // mnemonic: mnemonic,
       path: "m/44'/60'/0'/0/0",
       privateKey: keyPair.privateKey,
       publicKey: keyPair.publicKey
@@ -80,6 +95,14 @@ export class WalletService {
     return {
       publicKey: this._bytesToHexString(keyPair.publicKey).toUpperCase(),
       privateKey: this._bytesToHexString(keyPair.secretKey).toUpperCase(),
+    };
+  }
+
+  generateKeyPairFromPrivate(prv) {
+    this._isHexString(prv, PRIVKEY_NAME, PRIVKEY_LENGTH);
+    return {
+      publicKey: prv.substring(64, 128).toUpperCase(),
+      privateKey: prv.toUpperCase(),
     };
   }
 
@@ -129,6 +152,16 @@ export class WalletService {
 
   validateMnemonic(mnemonic) {
     return bip39.validateMnemonic(mnemonic);
+  }
+
+  validatePrivate(privateKey) {
+    this._isHexString(privateKey, PRIVKEY_NAME, PRIVKEY_LENGTH);
+    let p = new Uint8Array(this._hexStringToBytes(privateKey));
+    let k = new Uint8Array(this._hexStringToBytes(privateKey.substring(64, 128)));
+    let pubKey = privateKey.substring(64, 128);
+    let sig25519 = ed25519.sign(p, new Uint8Array([1, 2, 3]));
+    let ok = ed25519.verify(k, new Uint8Array([1, 2, 3]), sig25519);
+    return ok === true;
   }
 
   validateAddress(publicKey, address) {

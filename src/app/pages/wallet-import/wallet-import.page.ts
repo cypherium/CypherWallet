@@ -14,6 +14,7 @@ import { Keyboard } from '@ionic-native/keyboard/ngx';
 })
 export class WalletImportPage implements OnInit {
     mnemonic = "";
+    private = "";
     password = "";
     password1 = "";
     passwordError = "";
@@ -21,6 +22,7 @@ export class WalletImportPage implements OnInit {
     ifEyeOpen1 = false;
     ifEyeOpen = false;
     mnemonicError = "";
+    privateError = "";
     type = 'mnemonic';
     keystore = "";
     keystoreError = "";
@@ -46,6 +48,7 @@ export class WalletImportPage implements OnInit {
 
     toggleImportType(type) {
         this.mnemonic = "";
+        this.private = "";
         this.password = "";
         this.password1 = "";
         this.passwordError = "";
@@ -53,6 +56,7 @@ export class WalletImportPage implements OnInit {
         this.ifEyeOpen1 = false;
         this.ifEyeOpen = false;
         this.mnemonicError = "";
+        this.privateError = "";
         this.keystore = "";
         this.keystoreError = "";
 
@@ -86,10 +90,30 @@ export class WalletImportPage implements OnInit {
         return true;
     }
 
+    async checkPrivate() {
+        if (!this.private || this.private.replace(/^\s+|\s+$/, '').length !== 128) {
+            let error = await this.helper.getTranslate('PRIVATE_EMPTY');
+            this.privateError = error;
+            return false;
+        }
+        if (!this.Wallet.validatePrivate(this.private.replace(/^\s+|\s+$/, ''))) {
+            let error = await this.helper.getTranslate('PRIVATE_ERROR');
+            this.privateError = error;
+            return false;
+        }
+        this.privateError = "";
+        return true;
+    }
+
     async checkKeystore() {
         if (!this.keystore) {
             let error = await this.helper.getTranslate('KEYSTORE_EMPTY');
             this.keystoreError = error
+            return false;
+        }
+        if (!this.helper.validateKeystore(this.keystore)) {
+            let error = await this.helper.getTranslate('KEYSTORE_FILE_ERROR');
+            this.keystoreError = error;
             return false;
         }
         this.keystoreError = "";
@@ -105,7 +129,7 @@ export class WalletImportPage implements OnInit {
                 return;
             } 
             this.passwordError = "";
-            return this.passwordError;            
+            return this.passwordError;
         }
         let regx = /^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,18}$/;
         if (this.password.match(regx) == null) {
@@ -135,7 +159,7 @@ export class WalletImportPage implements OnInit {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve();
-            }, 50)
+            }, 50);
         }).then(async () => {
             let wallet = this.helper.decryptPrivateKey(this.keystore, this.password);
             setTimeout(() => {
@@ -154,24 +178,37 @@ export class WalletImportPage implements OnInit {
 
     importMnemonicWallet() {
         let mnemonic = this.mnemonic.replace(/^\s+|\s+$/, '');
-        mnemonic = mnemonic.replace(/\s{2,}/g, ' '); //替换多个空格为1个
+        mnemonic = mnemonic.replace(/\s{2,}/g, ' '); // 替换多个空格为1个
         let wallet = this.Wallet.fromMnemonic(mnemonic);
+        return wallet;
+    }
+
+    importPrivateKeyWallet() {
+        let privateKey = this.private.replace(/^\s+|\s+$/, '').replace(/[\r\n]/g, '');
+        let wallet = this.Wallet.fromPrivateKey(privateKey);
         return wallet;
     }
 
     async importWallet() {
         let check = true;
-        if (await this.checkPassword() !== "") {
+        if (await this.checkPassword() !== '') {
             check = false;
         }
 
-        if (this.type == 'mnemonic') {
+        if (this.type === 'mnemonic') {
             if (await this.checkMnemonic() !== true) {
                 check = false;
             }
-            if (await this.checkPassword1() !== "") {
+            if (await this.checkPassword1() !== '') {
                 check = false;
-            }                       
+            }
+        } else if (this.type === 'private') {
+            if (await this.checkPrivate() !== true) {
+                check = false;
+            }
+            if (await this.checkPassword1() !== '') {
+                check = false;
+            }
         } else {
             if (await this.checkKeystore() !== true) {
                 check = false;
@@ -184,29 +221,36 @@ export class WalletImportPage implements OnInit {
         let wallet;
 
         new Promise((resolve, reject) => {
-            if (this.type == 'mnemonic') {
+            if (this.type === 'mnemonic') {
                 wallet = this.importMnemonicWallet();
                 resolve(wallet);
-            } else if (this.type == 'keystore') {
+            } else if (this.type === 'keystore') {
                 this.importKeystore().then(resolve)
+            } else if (this.type === 'private') {
+                wallet = this.importPrivateKeyWallet();
+                resolve(wallet);
             }
         }).then(async (wallet: any) => {
             if (!wallet) {
                 let error = await this.helper.getTranslate('WALLET_IMPORT_FAILED');
-                this.keystoreError = error;
-                this.mnemonicError = error;
+                this.keystoreError = this.keystoreError || error;
+                this.mnemonicError = this.mnemonicError || error;
                 return;
             }
             console.log("Wallet import succeed...", wallet);
             //检测钱包是否重复
             let found = this.global.gWalletList.find(item => item.addr === wallet.address);
             if (found) {
-                if (this.type == 'keystore') {
+                if (this.type === 'keystore') {
                     let error = await this.helper.getTranslate('KEYSTORE_REPLICATE');
                     this.keystoreError = error;
-                } else {
+                } else if (this.type === 'mnemonic') {
                     let error = await this.helper.getTranslate('MNEMONIC_REPLICATE');
                     this.mnemonicError = error;
+                } else {
+                    // this.type === 'private'
+                    let error = await this.helper.getTranslate('MNEMONIC_REPLICATE');
+                    this.privateError = error;
                 }
                 return;
             }

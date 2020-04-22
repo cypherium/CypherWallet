@@ -82,7 +82,7 @@ export class Web3Service {
                 callback(value);
             } else {
                 //读取余额本地缓存
-                if (this.global.currentWalletIndex != undefined) {
+                if (this.global.currentWalletIndex !== undefined) {
                     callback(this.global.gWalletList[this.global.currentWalletIndex].amount);
                 } else {
                     callback(0);

@@ -31,7 +31,7 @@ const routes: Routes = [
     { path: 'export-privatekey', loadChildren: './pages/export-privatekey/export-privatekey.module#ExportPrivatekeyPageModule' },
     { path: 'scan', loadChildren: './pages/scan/scan.module#ScanPageModule' },
   { path: 'payment-password', loadChildren: './pages/payment-password/payment-password.module#PaymentPasswordPageModule' },
-  { path: 'pincode-modal', loadChildren: './pages/pincode-modal/pincode-modal.module#PincodeModalPageModule' },
+//   { path: 'pincode-modal', loadChildren: './pages/pincode-modal/pincode-modal.module#PincodeModalPageModule' },
 ];
 @NgModule({
     imports: [

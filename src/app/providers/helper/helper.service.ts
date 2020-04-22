@@ -170,6 +170,17 @@ export class HelperService {
         }
     }
 
+    validateKeystore(keystore) {
+        try {
+            Wallet.validateKeystore(keystore, true);
+        }
+        catch (error) {
+            console.log(error);
+            return false;
+        }
+        return true;
+    }
+
 
 
     /**
