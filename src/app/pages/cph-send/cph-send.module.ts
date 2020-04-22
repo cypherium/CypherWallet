@@ -9,6 +9,7 @@ import { CphSendPage } from './cph-send.page';
 import { PipesModule } from '../../pipes/pipes.module';
 import { ComponentsModule } from '../../components/components.module';
 import { TranslateModule } from "@ngx-translate/core";
+import { PincodeModalPageModule } from '../pincode-modal/pincode-modal.module';
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
     PipesModule,
     ComponentsModule,
     TranslateModule,
+    PincodeModalPageModule,
     RouterModule.forChild(routes)
   ],
   declarations: [CphSendPage]

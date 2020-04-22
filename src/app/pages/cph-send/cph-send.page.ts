@@ -174,7 +174,7 @@ export class CphSendPage implements OnInit {
         });
         await modal.present();
         modal.onDidDismiss().then((s) => {
-            if (s.data.dismissed !== false) {
+            if (typeof(s.data) !== 'undefined' && s.data.dismissed !== false) {
                 //获取私钥
                 setTimeout(async () => {
                     let ret = this.helper.decryptPrivateKey(this.wallet.payment, s.data.dismissed);
