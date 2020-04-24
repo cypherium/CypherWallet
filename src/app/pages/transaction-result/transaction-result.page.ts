@@ -65,6 +65,7 @@ export class TransactionResultPage implements OnInit {
 
     back() {
         this.nav.navigateBack('/wallet-detail');
+        // this.nav.pop().then(() => this.nav.pop());
     }
 
     goHash(hash) {

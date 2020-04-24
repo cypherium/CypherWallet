@@ -153,8 +153,11 @@ export class Web3Service {
         }
 
         // var nonce = await this.web3.cph.getTransactionCount('0x' + from, 'pending'); //获取用户钱包地址的nonce
-        var nonce = await this.web3.cph.getTransactionCount('0x' + from); //获取用户钱包地址的nonce
-
+        try {
+            var nonce = await this.web3.cph.getTransactionCount('0x' + from, 'pending'); //获取用户钱包地址的nonce
+        } catch (error) {
+            var nonce = await this.web3.cph.getTransactionCount('0x' + from); //获取用户钱包地址的nonce 
+        }
         console.log("Nonce为" + nonce);
         // let gasLimit = await this.web3.cph.estimateGas({
         //     "from": '0x'+from,

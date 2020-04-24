@@ -90,9 +90,9 @@ export class CphSendPage implements OnInit {
         await alert.present();
     }
 
-    back() {
-        this.nav.navigateBack('/wallet');
-    }
+    // back() {
+    //     this.nav.navigateBack('/wallet');
+    // }
 
     ngOnDestroy() {
         if (this.interval) {

@@ -41,13 +41,11 @@ export class ExportKeystorePage implements OnInit {
 
     cancelPrompt() {
         this.ifShowPasswordPrompt = false;
-
         this.navCtrl.pop();
     }
 
     confirmPrompt(privateKey) {
         this.ifShowPasswordPrompt = false;
-
         this.keystore = this.wallet.keystore;
     }
 

@@ -9,10 +9,16 @@
         "parents": {
           "NSCameraUsageDescription": [
             {
-              "xml": "<string>To scan barcodes</string>",
+              "xml": "<string>Scan QR code</string>",
               "count": 1,
               "mode": "merge",
               "id": "config.xml"
+            }
+          ],
+          "ITSAppUsesNonExemptEncryption": [
+            {
+              "xml": "<false />",
+              "count": 1
             }
           ]
         }

@@ -4,6 +4,8 @@ import { HttpService } from '../../providers/http/http.service';
 import { Web3Service } from '../../providers/web3/web3.service';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { HelperService } from '../../providers/helper/helper.service';
+import { NativeService } from '../../providers/native/native.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
     selector: 'app-wallet-detail',
@@ -23,12 +25,17 @@ export class WalletDetailPage implements OnInit {
     more = true;
     loading = false;
     interval = null;
+    ifShowPasswordPrompt = false;
+    cancelPrompt = null;
+    confirmPrompt = null;
 
     constructor(
         private global: GlobalService,
         private http: HttpService,
         private web3: Web3Service,
         private helper: HelperService,
+        private native: NativeService,
+        public nav: NavController,
         private router: Router
     ) { 
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
@@ -42,6 +49,44 @@ export class WalletDetailPage implements OnInit {
 
     ngOnInit() {
 
+    }
+    // back() {
+    //     this.nav.navigateBack('/wallet');
+    // }
+    scan() {
+        this.native.scan().then((res: any) => {
+            console.log("scan succeed。。。" + JSON.stringify(res));
+            // this.handleText(res.text);
+            this.helper.handleText(res.text, (url, method) => {
+                if (method == 'import') {
+                    this.ifShowPasswordPrompt = true;
+                    this.cancelPrompt = () => {
+                        this.ifShowPasswordPrompt = false;
+                    };
+                    this.confirmPrompt = () => {
+                        this.ifShowPasswordPrompt = false;
+                        //密码校验成功,开始传输keystore
+                        setTimeout(() => {
+                            this.http.post(url, {
+                                keystore: this.wallet.keystore
+                            }, {
+                                ignoreError: true
+                            }).subscribe(res => {
+                                console.log("keystore transfered：" + res);
+                            })
+                        }, 100);
+                    };
+                } else if (method == 'transfer') {
+                    let navigationExtras: NavigationExtras = {
+                        state: {
+                            address: url,
+                        }
+                    };
+                    console.log("navigationExtras" + navigationExtras.state.address);
+                    this.router.navigate(['cph-send'], navigationExtras);
+                }
+            })
+        })
     }
 
     getWalletInfo(addr) {
