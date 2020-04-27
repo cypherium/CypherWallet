@@ -14,7 +14,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		H0hQIdtiTKetM9/ULhHpyelZlCg=
+		Y7B6NqWrykBSlWCL8EVXRbJodi8=
 		</data>
 		<key>CDVBarcodeScanner.bundle/beep.caf</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		lFrdggB0AvOanOdf0R5/ZEVIPOo=
+		F7fAa1gAu3VDJPc+Z2cOfml/keU=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		JphH1Zdhzg5H18imTgxgPm0U5G4=
+		h8tNdOSC6CE9Y7uy9tYmDkKR7eQ=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		ox7VtzbkYr3iHxAnTVWgjetn1vE=
+		lK4KtSSo66G7uQu+1JnUcJ9XLWQ=
 		</data>
 		<key>LaunchImage-1100-Landscape-2436h@3x.png</key>
 		<data>
@@ -122,7 +122,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		xnsGi5m4G+pJdS45AGawsxP4xRQ=
+		uZ6qGU3Dcw3VHgP46Odaqp7qEbQ=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -130,7 +130,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		xkq3fQYwE0f8njwWuk9z8GXTCNI=
+		fQNaK1HBeAwzJ5etNuiDJWx82rk=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -138,7 +138,7 @@
 		</data>
 		<key>scannerOverlay.nib</key>
 		<data>
-		QZmO9uFRIK5h7/ZY6M6nneyRkmw=
+		HyPz6e2WTCm6R3iPTWHMhJqbZkg=
 		</data>
 		<key>www/0-es2015.js</key>
 		<data>
@@ -1674,19 +1674,19 @@
 		</data>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84-es2015.js</key>
 		<data>
-		txlmStPo+B7HEfU6Gid2oW5sP2U=
+		RhIqUAEZvOKHyYTmxs4yaEfuks8=
 		</data>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84-es2015.js.map</key>
 		<data>
-		szzNR+FaZerG56O5TCOUFxtGtJs=
+		Qx554B7R5yjg2nw1JV6xsoU0XnA=
 		</data>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84-es5.js</key>
 		<data>
-		rZTGMJ/9RKqWRHaBbOY6ia28264=
+		C9c5tjyaOnK5vG9XJXgtQWVm9IQ=
 		</data>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84-es5.js.map</key>
 		<data>
-		XGLRsTkllSN4Ddd02znNsQ3XrdM=
+		IBSElXbRE6FBXjjKiQbZT97zEi0=
 		</data>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~c2b07ca8-es2015.js</key>
 		<data>
@@ -1950,51 +1950,51 @@
 		</data>
 		<key>www/pages-change-password-change-password-module-es2015.js</key>
 		<data>
-		Ld3OabekmXrxshdYC3SfSfoSNHM=
+		JCrV1G22FXbxixvwb9PqMKtWfo0=
 		</data>
 		<key>www/pages-change-password-change-password-module-es2015.js.map</key>
 		<data>
-		iWjs06NXoBAmQU4WlXZrrtBYcik=
+		/DD8Cct7G41oScdEZKvEFijgFIw=
 		</data>
 		<key>www/pages-change-password-change-password-module-es5.js</key>
 		<data>
-		0S4FfgGsPxrtO1BxHH5j3Yizd+o=
+		OLNg86kuuDKKMvOLBjaOgne70WQ=
 		</data>
 		<key>www/pages-change-password-change-password-module-es5.js.map</key>
 		<data>
-		kmHJqzFwAtn+IxGYrgh/XJPTZrM=
+		Przll18VH0eKfBEgZVBiXBIPmCM=
 		</data>
 		<key>www/pages-cph-receive-cph-receive-module-es2015.js</key>
 		<data>
-		5Akh4XTtup/NrI1p/bJ0XRWLG8Y=
+		TWlCR5qUviTcvyi7rp8AH38kIT4=
 		</data>
 		<key>www/pages-cph-receive-cph-receive-module-es2015.js.map</key>
 		<data>
-		Ag0f+077LvZLlBT0gIsOLbU2vZM=
+		EmGZf90VcX2OL9Ioh1TEmCHeads=
 		</data>
 		<key>www/pages-cph-receive-cph-receive-module-es5.js</key>
 		<data>
-		ZTrpCSNGC/CGo2FlDY1T12z2tkI=
+		X0VQ97qV327a195QPYJv3+5GIQM=
 		</data>
 		<key>www/pages-cph-receive-cph-receive-module-es5.js.map</key>
 		<data>
-		yoD9c5opFgHd03DPq5AGgrnLdYU=
+		SO1RO8xyD3nopcKoy7SPEx5nczw=
 		</data>
 		<key>www/pages-cph-send-cph-send-module-es2015.js</key>
 		<data>
-		NF88yZD7dgIZzK60wgXlGB/n6Qs=
+		NkpexdUXMELzDhgXfWe/3nhmdVA=
 		</data>
 		<key>www/pages-cph-send-cph-send-module-es2015.js.map</key>
 		<data>
-		L8ceqxzzSQqgyK92Cosun9ZDfdo=
+		+nqbChNn9Wp4Wy0PS7bgMpXSWuQ=
 		</data>
 		<key>www/pages-cph-send-cph-send-module-es5.js</key>
 		<data>
-		Yz3VgJYsq7/5Dp6RJkkod5YwQ+4=
+		IGdLBCytu4z8RD/uXPwXju8Vs8I=
 		</data>
 		<key>www/pages-cph-send-cph-send-module-es5.js.map</key>
 		<data>
-		QXof8qaFYZ87teZQdOme+N2yNb0=
+		N8ir6+n+RY5UMhAq7rsJLaPkpok=
 		</data>
 		<key>www/pages-export-keystore-export-keystore-module-es2015.js</key>
 		<data>
@@ -2142,19 +2142,19 @@
 		</data>
 		<key>www/pages-transaction-result-transaction-result-module-es2015.js</key>
 		<data>
-		d4SL4hszf75Ed9rU7gjioAUQKdE=
+		ELjQ7+/UlNve7oNifiW1zJbjcKc=
 		</data>
 		<key>www/pages-transaction-result-transaction-result-module-es2015.js.map</key>
 		<data>
-		XAYNyseh/0s4bGuq2UEEqlhDDDQ=
+		EbNHrgIVasIITl04uFrAsUUOUys=
 		</data>
 		<key>www/pages-transaction-result-transaction-result-module-es5.js</key>
 		<data>
-		7bKlLptfIDfuD86gM+LppeFeMFs=
+		tsqsnft1N/CiFLSSpjJNvR0oRAI=
 		</data>
 		<key>www/pages-transaction-result-transaction-result-module-es5.js.map</key>
 		<data>
-		k1pkYKicLju7p5NhAXKiAzE25hE=
+		pE0x36F9hM3reJlDEOKnEYDnJ9M=
 		</data>
 		<key>www/pages-value-unit-value-unit-module-es2015.js</key>
 		<data>
@@ -2206,19 +2206,19 @@
 		</data>
 		<key>www/pages-wallet-detail-wallet-detail-module-es2015.js</key>
 		<data>
-		QXV+4OUwvzKY0mINjW1nEpVLNwc=
+		G04+nyLwW+rw8TXSaYYcuiwnUyc=
 		</data>
 		<key>www/pages-wallet-detail-wallet-detail-module-es2015.js.map</key>
 		<data>
-		OHC4KprLt/3+wemnxA7/VxAlgXY=
+		Z19x92UQK1N+SDM1S/llmExZDH8=
 		</data>
 		<key>www/pages-wallet-detail-wallet-detail-module-es5.js</key>
 		<data>
-		oNGT5ZT/gyzASnxp32g3dzYlGIA=
+		7ykbRxX/qBGZlR/NZAtyAQ0ehNE=
 		</data>
 		<key>www/pages-wallet-detail-wallet-detail-module-es5.js.map</key>
 		<data>
-		a+6lGgTqVsIbstYFGf62qykSyF4=
+		HMNP9xeCWVH/2E2TmBjmgld9DlM=
 		</data>
 		<key>www/pages-wallet-import-wallet-import-module-es2015.js</key>
 		<data>
@@ -5481,7 +5481,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			luLxCVLelVFibt94RqkAAvx6NnMsvpwndTr4eMKFOCA=
+			jHi6ejBhJurcxfDyaMzrxFvT6IUjOmiltP9jJFf7Rto=
 			</data>
 		</dict>
 		<key>CDVBarcodeScanner.bundle/beep.caf</key>
@@ -5516,7 +5516,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JfC5S4h2iJYex6Ae6BA1OExm4zmbj5CuYp/jf+9jutc=
+			CrRXyZxTINfa7aFbWc9F8dyqfMbKyd8UgSqqA86UVj4=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -5530,7 +5530,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rgtfV7/lVf/vf4WAT7O8JC/+0IGRdoEFtGfz71gtSn8=
+			xkFC/YmQDbAES4pJghJplqhLOFdY9aRnuPYgs11B16Y=
 			</data>
 		</dict>
 		<key>LaunchImage-1100-Landscape-2436h@3x.png</key>
@@ -5663,14 +5663,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pgawxS8Lj1G+kPpZxhsZHC3ULovp1NYGISlimtPkzyI=
+			OLdjV4FiFyjTn4ful2MvXOB3Bb1iw3dEfjeItWPWM24=
 			</data>
 		</dict>
 		<key>config.xml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bujkapknv3BUxSF3ImPpBLQeeZztpjY+BAj57NSDpWE=
+			RJUzMfBv575QlbVUF97tLHIPmc1E1Q3CMlFdveubxGk=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
@@ -5684,7 +5684,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zCLGlka/lHQ+BfVbwwM55/NQhQs68a94hzdpLMrt2L4=
+			kaKatTTTBVG/mlnXsBrdQflX8GVcnQT9ADnjrak94m8=
 			</data>
 		</dict>
 		<key>www/0-es2015.js</key>
@@ -8372,28 +8372,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			grOgY9DTpbrt+apQS5/8cG7+QeBu2vnCXavp/u59ocM=
+			lUy8orEi1TcnjES5R7RHH6LJqzGfORS7CSh2MrGwJkM=
 			</data>
 		</dict>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xb54MCJBdtCh+VfKxTGAEH9/nSL8rzGC2Dc8uXnSzXc=
+			DeFSbzgcn613e9TzBaooYt+sHYDpda41LWIShQPUMwU=
 			</data>
 		</dict>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GOIIHia2aeFs4mAFhoNeqxkyTuP1ghjLVt1TqnbLpNc=
+			vgASiTodQ9fQsZ3u/0u5sR+joflKDwkQZwlZSgfvkCY=
 			</data>
 		</dict>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			X8nzekNv3KKc+SrrBoJdre22T2+vSp/45gSjFhzbxfY=
+			oijlgd09EJ9XE6MKtqQOwM9newhFRMWgc5T38d6bdUQ=
 			</data>
 		</dict>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~c2b07ca8-es2015.js</key>
@@ -8855,84 +8855,84 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9s65dt3z7lUOOoUXkmkitMVvDy8Q+swgxkrk4RK2xnk=
+			y+zkDDj3kEIh3Oe6njQ5uQZdMF4RSQ8FVdvi52lzyb4=
 			</data>
 		</dict>
 		<key>www/pages-change-password-change-password-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XB4oFYvwp6JNMJWHoZLRHAe4pkJlcQ2B+3M6K5VSsx4=
+			soy+RWkPtC48k0WrcW8ZKP6vAqYi/UMSiN81VJsTCPY=
 			</data>
 		</dict>
 		<key>www/pages-change-password-change-password-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wSZ+mRedetJb9jQTzmFgV3p71v2fM6VV/AW/DmjSdZA=
+			7pgNJr23KXl+l3j1iQKPwDcfn+hdpKQ0uq2ZeJyPTEE=
 			</data>
 		</dict>
 		<key>www/pages-change-password-change-password-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iq8SU+njdoYehv71DgN+lEcEY9TCmZvK7tho8Pgyro8=
+			i6tkuynkU1HTmBGC4RdbVczDu1AWWyucV9lt40+2vK4=
 			</data>
 		</dict>
 		<key>www/pages-cph-receive-cph-receive-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XLRZ1E+VcsOR6sEPy7S/IZQk5cursudoaNILW6qGWIk=
+			YHlzZrwKLrX0NJArIqzHRwoHcUcrLJr4s+58InGHkvg=
 			</data>
 		</dict>
 		<key>www/pages-cph-receive-cph-receive-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IsvmfhPbW7HVMq5WK1mvFq7mVHB+8b9SWkZ850t6jlM=
+			kpBnH2BLWdL1P+kjqUI3bniNIJcoOEDWSOHJ2kuKa24=
 			</data>
 		</dict>
 		<key>www/pages-cph-receive-cph-receive-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kGnS9hy6njlODo0YMS7K1GWSy3GieQ3UQohlBDWqwuc=
+			17Jz9D+hwC7RZSGhiYambt7u/SW36jomYyLEasYkhZE=
 			</data>
 		</dict>
 		<key>www/pages-cph-receive-cph-receive-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xbHhJ23+4J423RxFSz07a+HJdRsV6K4k+kVTqqHtVs8=
+			4wp5FOBu/D7FqRXpK/YFZSqq7e7MXPVYi+NaKNU2KTg=
 			</data>
 		</dict>
 		<key>www/pages-cph-send-cph-send-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cBWxn5QG7pyeSptOKCx2V9nCu1t+AwjS323Dak7Qrj0=
+			1qLa/PC+MCYDPTMg7Gqzi4MT3LXwSMuXaja9gPGrX18=
 			</data>
 		</dict>
 		<key>www/pages-cph-send-cph-send-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			mnSfqDXWoGaw8Tosh8E2cmELrrjsIe6wuSDWfF7f9wA=
+			Vc2SvAfiz9D8B4xo/9o2Bh1qO/SDVWZg0uz7K2WT3Dw=
 			</data>
 		</dict>
 		<key>www/pages-cph-send-cph-send-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			70wbEi8dfo+tqAuhag0uI9wzJqWEHSFAQw1sC3ViBPU=
+			7qQMr/+YMoku4znaDHut4EV5EHk9Xpj4M6FtbOmt82o=
 			</data>
 		</dict>
 		<key>www/pages-cph-send-cph-send-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			K8t5PcT2yd3TqfYknXOv+7o0fZM4GPTmTUzz9zbsdE0=
+			nG9fB11VGI392b/dAHLjLIoiS8GVwbU3sGdJyY6FUEU=
 			</data>
 		</dict>
 		<key>www/pages-export-keystore-export-keystore-module-es2015.js</key>
@@ -9191,28 +9191,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			XIxi1+XBxIFCz0e+lkV48Cu163IlibxBmj5zhLxw1HY=
+			ajMU3Zf2LEK/mlLCXw2nxlJ9kob93rrBg6N/9aB5XIA=
 			</data>
 		</dict>
 		<key>www/pages-transaction-result-transaction-result-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GK0A1gjdkpAHJj9H/Mop1AYy8GX6FoSJqbs8YizZUhE=
+			LI3be263TqMjDfXZ7U3y+XxQvvhbJqZ1tZJR/+iDbmo=
 			</data>
 		</dict>
 		<key>www/pages-transaction-result-transaction-result-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9zLPRkbC8X+Q6outure6Jx/wVZFvfzYtQmbO+xD09Z0=
+			+/kPuI3hO1DezxY/XtJ45TgwdKIfRAaXAtFRZDOSHG8=
 			</data>
 		</dict>
 		<key>www/pages-transaction-result-transaction-result-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gwnomIwgInO36xHX4z/px7uXk3idWk9Z6kL0dgB6A9o=
+			I9xFqTz/R58r4EiMGzcOofbnSQP7yps/2NCt9K49+Es=
 			</data>
 		</dict>
 		<key>www/pages-value-unit-value-unit-module-es2015.js</key>
@@ -9303,28 +9303,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HdY2Q/I/xvh888+Tw+dkKVpV+diHQ+u1VD+FrodPaLI=
+			PMNZM3qc0aSB+uBwet8L1NRuYT7JpAXi9SltbqmGc/M=
 			</data>
 		</dict>
 		<key>www/pages-wallet-detail-wallet-detail-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jtgy65OKpm5GquEAMykHHcVq0Njb0Sy9odvip2OzzPw=
+			q5CVg0lpuXEmDkmhi2HsnMygjX9HdS7Vo89Us4XjOoQ=
 			</data>
 		</dict>
 		<key>www/pages-wallet-detail-wallet-detail-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			iK2tR4V9giiY9OdFjkyq7u74V2vkoNLzJ9avaTXbls8=
+			NSJR7dPzFAh8ZxL1EAR/3EUsx1eSB6/o60TpJKnt+00=
 			</data>
 		</dict>
 		<key>www/pages-wallet-detail-wallet-detail-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ldYoVou8Ss1SfuZDuAKUZgOdH/hHta4HhUVCYJ7rE5g=
+			hHDmJO+SBFDphiPEhLEcZXOkCXboIIoUr0DWzGr4KVs=
 			</data>
 		</dict>
 		<key>www/pages-wallet-import-wallet-import-module-es2015.js</key>

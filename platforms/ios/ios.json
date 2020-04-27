@@ -18,7 +18,7 @@
           "ITSAppUsesNonExemptEncryption": [
             {
               "xml": "<false />",
-              "count": 1
+              "count": 4
             }
           ]
         }

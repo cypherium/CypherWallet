@@ -123,7 +123,7 @@ export class PaymentPasswordPage implements OnInit {
           setTimeout(() => {
             if (this.action !== 'create') {
               this.navCtrl.pop();
-            }else {
+            } else {
               this.navCtrl.navigateRoot('wallet');
             }
 

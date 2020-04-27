@@ -5,7 +5,7 @@
 export const environment = {
     production: false,
     requestTimeout: 30000,
-    appServerUrl: "http://35.232.249.84:8359", //APPServer API
+    appServerUrl: "http://13.68.232.189:8359", //APPServer API
     cypherium: {
         provider: 'http://35.222.150.144:8000',
         // provider: 'http://127.0.0.1:18004',
