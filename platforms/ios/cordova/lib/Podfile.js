@@ -418,6 +418,9 @@ Podfile.prototype.install = function (requirementsCheckerFunction) {
         })
         .then(function () { // done
             events.emit('verbose', '==== pod install end ====\n');
+        })
+        .fail(function (error) {
+            throw error;
         });
 };
 

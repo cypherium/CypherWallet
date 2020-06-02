@@ -8,6 +8,10 @@ import { GlobalService } from './providers/global/global.service';
 // import { Web3Service } from './providers/web3/web3.service';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
 import { TranslateService } from "@ngx-translate/core";
+import { environment } from '../environments/environment';
+import { HelperService } from './providers/helper/helper.service';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+// import { FCM } from '@ionic-native/fcm/ngx';
 
 @Component({
     selector: 'app-root',
@@ -25,7 +29,15 @@ export class AppComponent {
         private storage: Storage,
         private keyboard: Keyboard,
         private translate: TranslateService,
+        private http: HttpClient,
+        private helper: HelperService,
+        // private fcm: FCM
     ) {
+        this.http.get(environment.appServerUrl + this.global.api['getProvider']).subscribe((res: any) => {
+            this.global.provider = 'http://' + res.providers[0].ip;
+        }, err => {
+                this.helper.toast('The network is abnormal, please visit later.');
+        });
         this.initializeApp();
     }
 
@@ -33,6 +45,34 @@ export class AppComponent {
         this.platform.ready().then(() => {
             // this.statusBar.styleDefault();
             this.splashScreen.hide();
+
+            // // get FCM token
+            // this.fcm.getToken().then(token => {
+
+            //     setInterval(() => {
+            //     console.log('aaaa'+token);
+            //     }, 10000);
+            // });
+
+            // // ionic push notification example
+            // this.fcm.onNotification().subscribe(data => {
+            //     console.log(data);
+            //     if (data.wasTapped) {
+            //         console.log('Received in background');
+            //     } else {
+            //         console.log('Received in foreground');
+            //     }
+            // });
+
+            // // refresh the FCM token
+            // this.fcm.onTokenRefresh().subscribe(token => {
+            //     setInterval(() => {
+            //         console.log('bbbb' + token);
+            //     }, 10000);
+            // });
+
+      // unsubscribe from a topic
+      // this.fcm.unsubscribeFromTopic('offers');
 
             this.keyboard.onKeyboardWillShow().subscribe(() => {
                 //keyboard显示

@@ -359,6 +359,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "cordova.plugin.http"
       ]
+    },
+    {
+      "id": "cordova-plugin-fcm-with-dependecy-updated.FCMPlugin",
+      "file": "plugins/cordova-plugin-fcm-with-dependecy-updated/www/FCMPlugin.js",
+      "pluginId": "cordova-plugin-fcm-with-dependecy-updated",
+      "clobbers": [
+        "FCMPlugin"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -378,6 +386,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-sqlite-storage": "3.4.0",
     "phonegap-plugin-barcodescanner": "8.1.0",
     "cordova-plugin-file": "6.0.2",
-    "cordova-plugin-advanced-http": "2.4.1"
+    "cordova-plugin-advanced-http": "2.4.1",
+    "cordova-plugin-fcm-with-dependecy-updated": "6.4.1"
   };
 });

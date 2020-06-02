@@ -220,7 +220,10 @@ export class WalletDetailPage implements OnInit {
 
                 }
             }
-        })
+        }, e => {
+                this.loading = false;
+                this.helper.toast("The network is abnormal, please visit later.");
+        });
     }
 
     goResultPage(transaction) {

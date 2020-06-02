@@ -21,7 +21,7 @@ export class Web3Service {
         private http: HttpClient,
         private global: GlobalService
     ) {
-        this.web3 = new Web3(new Web3.providers.HttpProvider(environment.cypherium.provider));
+        this.web3 = new Web3(new Web3.providers.HttpProvider(this.global.provider || environment.cypherium.provider));
         this.http.get('assets/json/pledge.abi.json').subscribe((abi: any) => {
             console.log("abi文件加载成功" + JSON.stringify(abi));
             // this.pledgeContract = this.web3.cph.contract(abi).at(environment.cypherium.pledgeContractAddr);
