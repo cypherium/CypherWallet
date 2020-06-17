@@ -4,5 +4,5 @@ platform :ios, '11.0'
 
 target 'CPH' do
 	project 'CPH.xcodeproj'
-
+	pod 'OneSignal', '2.13.1'
 end

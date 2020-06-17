@@ -72,7 +72,7 @@
     "v8_use_snapshot": 1,
     "want_separate_host_toolset": 0,
     "xcode_version": "8.0",
-    "nodedir": "/Users/wss/Library/Caches/node-gyp/12.13.1",
+    "nodedir": "/Users/cypher01/Library/Caches/node-gyp/12.13.1",
     "standalone_static_library": 1
   }
 }

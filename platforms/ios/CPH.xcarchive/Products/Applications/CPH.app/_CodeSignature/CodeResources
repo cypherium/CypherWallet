@@ -14,11 +14,27 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		XHkh0b5RpwpK/97QRSoliBElN4k=
+		0+dKLCyuvQjTMRdWYtEAeYwiRjs=
+		</data>
+		<key>CDVBarcodeScanner.bundle/beep.caf</key>
+		<data>
+		n1wlp+nz0IyIf+ijW5tP91UI+x0=
+		</data>
+		<key>CDVBarcodeScanner.bundle/torch.png</key>
+		<data>
+		mYWzuFJCMsJIhwSNCTbYr/pw8d0=
+		</data>
+		<key>CDVBarcodeScanner.bundle/torch@2x.png</key>
+		<data>
+		CVe1Jr1OtHA5BjC37Jmll1AI9VA=
+		</data>
+		<key>CDVBarcodeScanner.bundle/torch@3x.png</key>
+		<data>
+		oh3qPwRm+DuBEovNszjn/0P9z1U=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		HVi2nYYOBvfvnU91b/bk7pZJRYA=
+		pWdr4J8JuEZvub4WdW8X5igjXBc=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -26,11 +42,11 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		vHrX9hcT9tZX3xQtKFr3EUHd40w=
+		APnou3ATCHfJFGwACWktgND6J98=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		Yd2y5rpaD4ovVyRLZ1lT2lmoOb8=
+		6jAXiFs4QGqk4hkDh4VHVD9jtd4=
 		</data>
 		<key>LaunchImage-1100-Landscape-2436h@3x.png</key>
 		<data>
@@ -106,7 +122,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		/xIKNMepwe3+JrTDJhT8BwSMw64=
+		8XjOQON24uXtuIorfXSVwQkHhBg=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -114,11 +130,15 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		iT/M/2b1SewW9U+mye/N+9QRxbU=
+		cSniDFwS5Vpx4Km7q8gABOVpMrc=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		AULsS7efquw2bkeMfweTxli+9cw=
+		DPwFkqSSmTXhIqjkh1RsNmMZebY=
+		</data>
+		<key>scannerOverlay.nib</key>
+		<data>
+		9q/e4nsQSUM0iNVi9AjVFJAAtao=
 		</data>
 		<key>www/0-es2015.js</key>
 		<data>
@@ -1590,15 +1610,15 @@
 		</data>
 		<key>www/cordova.js</key>
 		<data>
-		RPYEshqRBtRYP/kAjXtd+hgeoTs=
+		zkGBP5BqnYb/LhC0NbaL7+sS0Vc=
 		</data>
 		<key>www/cordova.js.map</key>
 		<data>
-		9RDNXlxdvnkOMhqp1j6A8b7L1AA=
+		ITIikDta8w4Jdb6+lF77iFZAYUs=
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		75wMk61e/X1dJ82CWWp2cqgAIN4=
+		Ld+MJJFGNtmkUeb0G5dzk5224PE=
 		</data>
 		<key>www/core-js-js-es2015.js</key>
 		<data>
@@ -1706,7 +1726,7 @@
 		</data>
 		<key>www/default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module-es2015.js.map</key>
 		<data>
-		vwh6ey4KUtmj35m0b1P2JIM6fD4=
+		6LxJ8YrlzpyPeZ2dCVCPr2BE6y8=
 		</data>
 		<key>www/default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module-es5.js</key>
 		<data>
@@ -1714,7 +1734,7 @@
 		</data>
 		<key>www/default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module-es5.js.map</key>
 		<data>
-		krNv1tU8i2BxKrbSu57/BWbIl8w=
+		I61NNSBU6/ZOUgF6tPQU910JImY=
 		</data>
 		<key>www/dollar.svg</key>
 		<data>
@@ -1858,19 +1878,19 @@
 		</data>
 		<key>www/main-es2015.js</key>
 		<data>
-		VP68VPIe0is7Hw07pyJ//P0E6Mw=
+		tfy9AlNZCbYqkwBOPOjVh+P95Fw=
 		</data>
 		<key>www/main-es2015.js.map</key>
 		<data>
-		jTvLWIJSw+qBRIPUBb0vFkbsrGY=
+		QU6mXP1zDj0xjNEZeCGOuXjt80A=
 		</data>
 		<key>www/main-es5.js</key>
 		<data>
-		X0bI4hy/HzQuGY6xa1Bn/apGTrQ=
+		bLm3JGaCxXun68Aft4Oas03SLBE=
 		</data>
 		<key>www/main-es5.js.map</key>
 		<data>
-		2Dwsw4H0qkomtX0tN1BhUwSH+Ww=
+		hrQF76VPqh/kFEQwc6/C6HDBHSw=
 		</data>
 		<key>www/md-transition-f444ed6d-js-es2015.js</key>
 		<data>
@@ -1898,99 +1918,99 @@
 		</data>
 		<key>www/pages-about-about-module-es2015.js</key>
 		<data>
-		gAaAvzrvuJTXeRN1eiPEGprQQLo=
+		n7qc8TnjtypAevSe3QRR087Ld64=
 		</data>
 		<key>www/pages-about-about-module-es2015.js.map</key>
 		<data>
-		SYeeXNOCPtEbaFeaUVhPno7rTjM=
+		ag+G/Og3tHtMb9yICQITPjF79sI=
 		</data>
 		<key>www/pages-about-about-module-es5.js</key>
 		<data>
-		h6ADQyhPyxSFIg1xCt7vvW6jpKc=
+		dNhWBqLXh3/h3CMzAkEZWpit4SY=
 		</data>
 		<key>www/pages-about-about-module-es5.js.map</key>
 		<data>
-		8I4IRDUxRFn6M/9S/BOgwgDeTU8=
+		AFezWwgtFQ+gNy/ZTk1T5/9mXJQ=
 		</data>
 		<key>www/pages-backup-mnemonic-backup-mnemonic-module-es2015.js</key>
 		<data>
-		XZL2c8hoq//dT5Dm3SERlPMmG2I=
+		mGqANxid2u3Gwvwven/uFiyPTmI=
 		</data>
 		<key>www/pages-backup-mnemonic-backup-mnemonic-module-es2015.js.map</key>
 		<data>
-		A0R9UHXbYJUhvO9lg/RIcQjoj0s=
+		XdmPZN34xfhKnaqATScrZAVdw2w=
 		</data>
 		<key>www/pages-backup-mnemonic-backup-mnemonic-module-es5.js</key>
 		<data>
-		NLAk1/Hs9N82g+EeRB/2wF1gzTE=
+		1cYqZkTReplxGMoaeraeU1hWY9A=
 		</data>
 		<key>www/pages-backup-mnemonic-backup-mnemonic-module-es5.js.map</key>
 		<data>
-		tpL8e2Z6xqcs8kZWtSj4O5zRy4Q=
+		a4tZTlBSvtWEUe5899MLZb6vGM4=
 		</data>
 		<key>www/pages-change-password-change-password-module-es2015.js</key>
 		<data>
-		JCrV1G22FXbxixvwb9PqMKtWfo0=
+		Av54Qh09opjoAory7SYG73O/Tio=
 		</data>
 		<key>www/pages-change-password-change-password-module-es2015.js.map</key>
 		<data>
-		/DD8Cct7G41oScdEZKvEFijgFIw=
+		ZJEueslf0tsjJnfNivLl7vp2yik=
 		</data>
 		<key>www/pages-change-password-change-password-module-es5.js</key>
 		<data>
-		OLNg86kuuDKKMvOLBjaOgne70WQ=
+		+5tb+kYJz3a25IqqGHuw6VZFLHE=
 		</data>
 		<key>www/pages-change-password-change-password-module-es5.js.map</key>
 		<data>
-		Przll18VH0eKfBEgZVBiXBIPmCM=
+		nUHMLWWf1Lrz+j6HwXUlwtwIDCY=
 		</data>
 		<key>www/pages-cph-receive-cph-receive-module-es2015.js</key>
 		<data>
-		TWlCR5qUviTcvyi7rp8AH38kIT4=
+		/PK/Sp+aMPi9SwXjuo7k7fBTC+w=
 		</data>
 		<key>www/pages-cph-receive-cph-receive-module-es2015.js.map</key>
 		<data>
-		EmGZf90VcX2OL9Ioh1TEmCHeads=
+		AX8o2yZJtlyKaUjcSMyghCK4vKU=
 		</data>
 		<key>www/pages-cph-receive-cph-receive-module-es5.js</key>
 		<data>
-		X0VQ97qV327a195QPYJv3+5GIQM=
+		hKwm6vecF4hdoXBLdlJU3gJ3K44=
 		</data>
 		<key>www/pages-cph-receive-cph-receive-module-es5.js.map</key>
 		<data>
-		SO1RO8xyD3nopcKoy7SPEx5nczw=
+		nCzARNejXf8kXK1SVBFVKT6Q7u4=
 		</data>
 		<key>www/pages-cph-send-cph-send-module-es2015.js</key>
 		<data>
-		ds3wpK10mZP0PKOeUpgoJvXMEj8=
+		9y2niAaXcrOzQnp6Zl9Ob7A94QM=
 		</data>
 		<key>www/pages-cph-send-cph-send-module-es2015.js.map</key>
 		<data>
-		lIQ2s9TW73zkju+3bQvMO0eA4Bk=
+		E8+mu4F6xHg4nGsgjS7T5KhqT+4=
 		</data>
 		<key>www/pages-cph-send-cph-send-module-es5.js</key>
 		<data>
-		aB9QklTploqYQ6ksBAbk+MYjfnQ=
+		Z1SI1b8WStl4iiUu/CAph17GCNo=
 		</data>
 		<key>www/pages-cph-send-cph-send-module-es5.js.map</key>
 		<data>
-		nkOBPrdffjcC7m4fpg2VjeLfZLA=
+		qMFEclPgqXNzuelPAouSDutswuk=
 		</data>
 		<key>www/pages-export-keystore-export-keystore-module-es2015.js</key>
 		<data>
-		GnVfhlMD1a8ynOiB8UYmoWDWN98=
+		bqi8W0/mIDJza72/Lv6msMMYSAo=
 		</data>
 		<key>www/pages-export-keystore-export-keystore-module-es2015.js.map</key>
 		<data>
-		VfgNBiB7P6D0806LfKFjhrPtaRI=
+		fruaY+/9qRn07BTUXNknCrqDiIw=
 		</data>
 		<key>www/pages-export-keystore-export-keystore-module-es5.js</key>
 		<data>
-		a6eLUDvaH32riJ83PSrFQjxD+JI=
+		+N0HzpfNnwbox0Wx2ru1REIY0zI=
 		</data>
 		<key>www/pages-export-keystore-export-keystore-module-es5.js.map</key>
 		<data>
-		Aco08s1YVWhvpSHSHRtcsrKVZfc=
+		iefUsm6ZI0FI+kl/G3LrCXU77l0=
 		</data>
 		<key>www/pages-export-mnemonic-export-mnemonic-module-es2015.js</key>
 		<data>
@@ -2010,19 +2030,19 @@
 		</data>
 		<key>www/pages-export-privatekey-export-privatekey-module-es2015.js</key>
 		<data>
-		+6geisEDGzQLGG/NdGZDEESsSxQ=
+		tFjiW+IyM1nl0A581NUAu+UdiA4=
 		</data>
 		<key>www/pages-export-privatekey-export-privatekey-module-es2015.js.map</key>
 		<data>
-		8c85vugCddS7gwfPYlc0POS1IdA=
+		lOOq/4ChBQ0ZhKvhGGr5VQSJsvc=
 		</data>
 		<key>www/pages-export-privatekey-export-privatekey-module-es5.js</key>
 		<data>
-		CYsdoaUqpUaUWr05OFJTzobcm7Y=
+		i0MPqEApGAaQRqu5hpqb7EGGnZg=
 		</data>
 		<key>www/pages-export-privatekey-export-privatekey-module-es5.js.map</key>
 		<data>
-		cA+SIRgZRr/d/2U+etU/sM1vsoU=
+		4e1Mk7vrGNj4+0lfF5Ctrj1w4aI=
 		</data>
 		<key>www/pages-language-toggle-language-toggle-module-es2015.js</key>
 		<data>
@@ -2042,99 +2062,99 @@
 		</data>
 		<key>www/pages-payment-password-payment-password-module-es2015.js</key>
 		<data>
-		QY8B6Bw5YCiyPBRXHcfI9oFR9qU=
+		fyO2HoOcz+kTiJCemphhToN8omE=
 		</data>
 		<key>www/pages-payment-password-payment-password-module-es2015.js.map</key>
 		<data>
-		U0B6HkDcowm2YxIhyJdh1X+8sIs=
+		kmr1CSN4O2RS7LjUN1Bs4HpnYrA=
 		</data>
 		<key>www/pages-payment-password-payment-password-module-es5.js</key>
 		<data>
-		QaY/O9It0wE4B+oqZXtYyJ8n1Dc=
+		6Ccl7fK9XwGj4SrUQcwLBfEjvlA=
 		</data>
 		<key>www/pages-payment-password-payment-password-module-es5.js.map</key>
 		<data>
-		4GxY9vxb1dj/9A5NuHFHzaj1y4Y=
+		wSd2AiPIxu9PMmdFAelOtB4OQU8=
 		</data>
 		<key>www/pages-scan-scan-module-es2015.js</key>
 		<data>
-		458tJBi3DimZ7jSGYNOl3P8hVYQ=
+		OhKf+GAvKd1wuMg8qLAr+XbvRW0=
 		</data>
 		<key>www/pages-scan-scan-module-es2015.js.map</key>
 		<data>
-		uBPZsVC2ESUvDYapSSFqfA57Jlw=
+		HkfJfHDPmdoxWWzA7NqfbEbdgag=
 		</data>
 		<key>www/pages-scan-scan-module-es5.js</key>
 		<data>
-		UAA0DSmd/W9T1N1+0JtgH6G9arM=
+		7pzD/eIsR+MZXxTOOpr4rRCwH0A=
 		</data>
 		<key>www/pages-scan-scan-module-es5.js.map</key>
 		<data>
-		E/tB6LuuAS2dGlePfneldpsukaM=
+		eAYFnhY57lIuF95nFTwL95NAh5Y=
 		</data>
 		<key>www/pages-tabs-pledge-pledge-module-es2015.js</key>
 		<data>
-		/QuxBQDWTYaxvv0Pql3QYcTuCz0=
+		32GBKc0lY0VNJytBOnqctmbxBrM=
 		</data>
 		<key>www/pages-tabs-pledge-pledge-module-es2015.js.map</key>
 		<data>
-		OGPBxfXXc30jWcgq4pP+eBrb3iE=
+		D/GVr/XBiug5MT9SwTX8kRsfXuk=
 		</data>
 		<key>www/pages-tabs-pledge-pledge-module-es5.js</key>
 		<data>
-		JEviayAvVaFb6NC5AQicpeEnwK8=
+		RVDqBa76DK2aUc2+Jy/dRxpeFjY=
 		</data>
 		<key>www/pages-tabs-pledge-pledge-module-es5.js.map</key>
 		<data>
-		DoH0B3xcWc5VYcuY3MRxcLNzPI4=
+		Ll38wqn3F9CKWpCX1EghHbWzHdQ=
 		</data>
 		<key>www/pages-tabs-setting-setting-module-es2015.js</key>
 		<data>
-		da/f/p2uScBvWY17isQA8EQ60E4=
+		IGzyREllz4b2n/hmhSJrhxW4OgY=
 		</data>
 		<key>www/pages-tabs-setting-setting-module-es2015.js.map</key>
 		<data>
-		Vh81XZL4mx/L7A2MXvJKcEcTmNU=
+		CovLLPK636VTqgXME3qBXqt1HNk=
 		</data>
 		<key>www/pages-tabs-setting-setting-module-es5.js</key>
 		<data>
-		s3HAyDZoTE/Arb7zeM3sgz2ICAQ=
+		Uj1xg6YGmFshIwWDoyN+F00mXPk=
 		</data>
 		<key>www/pages-tabs-setting-setting-module-es5.js.map</key>
 		<data>
-		81XEtACHvOehsYUhj3Cmz8y1u7M=
+		6MuAsvvNlSE+yGncP3ViYRBQpP8=
 		</data>
 		<key>www/pages-tabs-wallet-wallet-module-es2015.js</key>
 		<data>
-		bBrfisZ7mdVFucbYMYbGlUxMslE=
+		TsYBsQr7hyG58JE7SgOGzGhUjSc=
 		</data>
 		<key>www/pages-tabs-wallet-wallet-module-es2015.js.map</key>
 		<data>
-		k+1SGRAlDKbNBxYrdmAalEW2aXw=
+		nk+gbopX+SYSSZgAX2CqQT9BP9s=
 		</data>
 		<key>www/pages-tabs-wallet-wallet-module-es5.js</key>
 		<data>
-		UXSGeBrlP0PsmIvFMkivxD46B4E=
+		k9IVQFGLxV6GfcgsZRWWGVbNzDA=
 		</data>
 		<key>www/pages-tabs-wallet-wallet-module-es5.js.map</key>
 		<data>
-		cOlPXbwn0NldQmrbPU/JJiYvP/Q=
+		nReXfhxIOQ2cOw2zm4B9yyigPjc=
 		</data>
 		<key>www/pages-transaction-result-transaction-result-module-es2015.js</key>
 		<data>
-		ELjQ7+/UlNve7oNifiW1zJbjcKc=
+		lfVtu4c2sgV/CFmLS+adttKxiIM=
 		</data>
 		<key>www/pages-transaction-result-transaction-result-module-es2015.js.map</key>
 		<data>
-		EbNHrgIVasIITl04uFrAsUUOUys=
+		OkUddAkwz8DUhWbn9ULI89VjWCM=
 		</data>
 		<key>www/pages-transaction-result-transaction-result-module-es5.js</key>
 		<data>
-		tsqsnft1N/CiFLSSpjJNvR0oRAI=
+		1or9WV/6NXNIybo+0caUSgqig0s=
 		</data>
 		<key>www/pages-transaction-result-transaction-result-module-es5.js.map</key>
 		<data>
-		pE0x36F9hM3reJlDEOKnEYDnJ9M=
+		uWSD4C95uVAF5Xj9yv53NrGo1WU=
 		</data>
 		<key>www/pages-value-unit-value-unit-module-es2015.js</key>
 		<data>
@@ -2170,67 +2190,67 @@
 		</data>
 		<key>www/pages-wallet-create-wallet-create-module-es2015.js</key>
 		<data>
-		6qM6QTo7CsVSVE4xBjAn0ZkBUzI=
+		ZZtgO5VQtcPEOgqnOFIw07fY7r8=
 		</data>
 		<key>www/pages-wallet-create-wallet-create-module-es2015.js.map</key>
 		<data>
-		4DPtTG8zI5XZKblLt5A+yG5Dk+o=
+		TSNew9fRtCcJvhjnfYEvR8Rd+ks=
 		</data>
 		<key>www/pages-wallet-create-wallet-create-module-es5.js</key>
 		<data>
-		5Qa24XQoxmRlI8oh+NKeUBrhF6k=
+		THyMq3m7Ix4LQjDLSAPZg5SancQ=
 		</data>
 		<key>www/pages-wallet-create-wallet-create-module-es5.js.map</key>
 		<data>
-		NH2no1UGtBlusixj5AohaattPnA=
+		7JZEGK255bojVmtvisCa76ACjaM=
 		</data>
 		<key>www/pages-wallet-detail-wallet-detail-module-es2015.js</key>
 		<data>
-		qhM4sLyHvn4fYBrRHMS9/IsWCaM=
+		4DoBfO0HgeZ02yDZkRMYQ/qPglo=
 		</data>
 		<key>www/pages-wallet-detail-wallet-detail-module-es2015.js.map</key>
 		<data>
-		HLlbYPKXE42wh7wl5IO/aov6TS4=
+		n87mrNMwDxVStp1w9xnfMkOvT9c=
 		</data>
 		<key>www/pages-wallet-detail-wallet-detail-module-es5.js</key>
 		<data>
-		EerER14Km0ZfwjAnS8Wu9jkj2p8=
+		Wq8kW+277XKujOPb9+7v5IuQnbc=
 		</data>
 		<key>www/pages-wallet-detail-wallet-detail-module-es5.js.map</key>
 		<data>
-		9L0n6Eae10zJHeKrSG1VXMyorsA=
+		RyGQkSqa4Bnp6TPL4NPUMdOAHr8=
 		</data>
 		<key>www/pages-wallet-import-wallet-import-module-es2015.js</key>
 		<data>
-		fEZH9RvNjGnyZ9jRhcIa8OG9/QE=
+		E5P+JxbFP8iS1VBPBc7boWknGEg=
 		</data>
 		<key>www/pages-wallet-import-wallet-import-module-es2015.js.map</key>
 		<data>
-		2Q+UGdRTku9xQjZO+pzhWeFuzWY=
+		ZFkG9cer+8STwFElxn57dknQ+C0=
 		</data>
 		<key>www/pages-wallet-import-wallet-import-module-es5.js</key>
 		<data>
-		djjegYYR+D9nKZuoHx3eMnsXu4U=
+		YrJcRKI6YY+U5pusqSvUS8bHrBE=
 		</data>
 		<key>www/pages-wallet-import-wallet-import-module-es5.js.map</key>
 		<data>
-		dDEEX/0iYUAshmj5dHdvjH9n6qA=
+		GYUbUUnwo4x2D/dQ1Vsoniwz7uw=
 		</data>
 		<key>www/pages-wallet-name-wallet-name-module-es2015.js</key>
 		<data>
-		UuicXAzF89kXhLt4rRFDbHO9Ad4=
+		tOwz06BHlZqic9xVp8lScosOmJQ=
 		</data>
 		<key>www/pages-wallet-name-wallet-name-module-es2015.js.map</key>
 		<data>
-		16+cXhDvzYA4kgK/9BMUuVQOCXA=
+		rxjGObVVg3J7d4RE06bKXDDZChM=
 		</data>
 		<key>www/pages-wallet-name-wallet-name-module-es5.js</key>
 		<data>
-		GVRTapOieOdtxqZlL+y7tYfhgsk=
+		9v6r46JBpzG8La1yICNl39Exafk=
 		</data>
 		<key>www/pages-wallet-name-wallet-name-module-es5.js.map</key>
 		<data>
-		cQvE36DfC1REETrHtIfKM0ZTUYk=
+		Mdq4IPky+hGSKulDY6egdWk8Dgk=
 		</data>
 		<key>www/password.svg</key>
 		<data>
@@ -2252,6 +2272,182 @@
 		<data>
 		IRZiTP4vaQzgQ5K6AkMA1rLubAg=
 		</data>
+		<key>www/plugins/cordova-clipboard/www/clipboard.js</key>
+		<data>
+		iYxuGb1ZCR4jjxu39dCDBxwfG7U=
+		</data>
+		<key>www/plugins/cordova-open-native-settings/www/settings.js</key>
+		<data>
+		Tew4qCHq/D5cn2KgkE41bzsLCRg=
+		</data>
+		<key>www/plugins/cordova-plugin-advanced-http/www/advanced-http.js</key>
+		<data>
+		sdEqpZS5J6h88bMC+h30MI75wlQ=
+		</data>
+		<key>www/plugins/cordova-plugin-advanced-http/www/cookie-handler.js</key>
+		<data>
+		oigj9UWbSZ7wilh4lNqA+/0zRi8=
+		</data>
+		<key>www/plugins/cordova-plugin-advanced-http/www/dependency-validator.js</key>
+		<data>
+		1F4qXcw//BtO5a6KyfR9QyEYnc0=
+		</data>
+		<key>www/plugins/cordova-plugin-advanced-http/www/error-codes.js</key>
+		<data>
+		5VouVSRM84LiyuzxCmEC2DMwfts=
+		</data>
+		<key>www/plugins/cordova-plugin-advanced-http/www/global-configs.js</key>
+		<data>
+		on11EqlCJXmxELeXuLpMjxXAoN4=
+		</data>
+		<key>www/plugins/cordova-plugin-advanced-http/www/helpers.js</key>
+		<data>
+		9JwUFuWz7UgGcb8tSkSx/kpIxsw=
+		</data>
+		<key>www/plugins/cordova-plugin-advanced-http/www/js-util.js</key>
+		<data>
+		ldOaL4o50B21y4c9CMQjApuK2Do=
+		</data>
+		<key>www/plugins/cordova-plugin-advanced-http/www/local-storage-store.js</key>
+		<data>
+		p5IMJuPpith0Jwn3Aqe/dHDHvpA=
+		</data>
+		<key>www/plugins/cordova-plugin-advanced-http/www/lodash.js</key>
+		<data>
+		UYDd8AwVTHEkAY2Vuqarw4qHqNU=
+		</data>
+		<key>www/plugins/cordova-plugin-advanced-http/www/messages.js</key>
+		<data>
+		P3aZeENwNQ+NJ16x+A8mOyqXkJM=
+		</data>
+		<key>www/plugins/cordova-plugin-advanced-http/www/ponyfills.js</key>
+		<data>
+		dE8wZwxzlcaercIa/tB2EN0HR5M=
+		</data>
+		<key>www/plugins/cordova-plugin-advanced-http/www/public-interface.js</key>
+		<data>
+		ewhnEaRf5h9de2wHo4yKYJRdUpU=
+		</data>
+		<key>www/plugins/cordova-plugin-advanced-http/www/umd-tough-cookie.js</key>
+		<data>
+		LdGHCdPTclRj5d2Fie8n45Zrqos=
+		</data>
+		<key>www/plugins/cordova-plugin-advanced-http/www/url-util.js</key>
+		<data>
+		09a/If3TGPR46gxmzbSwdbcSvBc=
+		</data>
+		<key>www/plugins/cordova-plugin-app-version/www/AppVersionPlugin.js</key>
+		<data>
+		V7Ywjbu2Kj4wesp8mWW2lF5aDpE=
+		</data>
+		<key>www/plugins/cordova-plugin-appminimize/www/AppMinimize.js</key>
+		<data>
+		K6mDhsAUjG8Z4mfPvbVBKhPFOKE=
+		</data>
+		<key>www/plugins/cordova-plugin-badge/www/badge.js</key>
+		<data>
+		h//6K1YQS+L8Z1BtpfkSQVUFodI=
+		</data>
+		<key>www/plugins/cordova-plugin-device/www/device.js</key>
+		<data>
+		1GfO/IDwwyLde/veo05ABQB5yTk=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/DirectoryEntry.js</key>
+		<data>
+		9BG1PRAVfskBKfTqRqUcFP0XF9c=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/DirectoryReader.js</key>
+		<data>
+		55JSYGGn83vzv0lzH64YGshyORE=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/Entry.js</key>
+		<data>
+		ApUt9yA8EFcC9lNWD2XthcwuD90=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/File.js</key>
+		<data>
+		0LUBfKUsBSQvmUgurtpKYgJ9hTc=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileEntry.js</key>
+		<data>
+		ihG+3x+RWP1Qk72v0C0MZRzRpBM=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileError.js</key>
+		<data>
+		ybFlxPqO/jPqMsmoDwkc2rpE4pk=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileReader.js</key>
+		<data>
+		L5sKPsNlBpVIEJtZOnDhtA1g05M=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileSystem.js</key>
+		<data>
+		DmfGhjz4PYPDj99FWJ3nDLQzZFU=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileUploadOptions.js</key>
+		<data>
+		4mPbde3/XqIbBp41y0kN00aYZl4=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileUploadResult.js</key>
+		<data>
+		4CNnib6yO4/uwX7VyIeJgpFLHFU=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/FileWriter.js</key>
+		<data>
+		XZ1qSV9Fc75z3HHWO97PtjpliEI=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/Flags.js</key>
+		<data>
+		Ysk6KgwRoqjZINAl/q0VjlC2vmA=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/LocalFileSystem.js</key>
+		<data>
+		kJtPgG7aLCq5neelEB+/sObHR1w=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/Metadata.js</key>
+		<data>
+		sNBGG0nAD0xDLoOYeaiDlfLVBBM=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/ProgressEvent.js</key>
+		<data>
+		blyr1jNE9lOGJJOyQkWfS+CB+7o=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/browser/isChrome.js</key>
+		<data>
+		kJss0svUOyBP7TX8Sax3xSJdLz0=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/fileSystemPaths.js</key>
+		<data>
+		RhbxeeiCkMHVAnWLOaEFTyx3fVk=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/fileSystems-roots.js</key>
+		<data>
+		GmVyseYxcYNp/n9ZHjmy97oioXw=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/fileSystems.js</key>
+		<data>
+		GjxvyRube37zK13yXu3TWWdWPpQ=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/ios/FileSystem.js</key>
+		<data>
+		3ueSGiRIUcEFNSxl7V3z1JdmqWA=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/requestFileSystem.js</key>
+		<data>
+		ZVeb2nnbn/aetQV5ipRWH7M+Q9c=
+		</data>
+		<key>www/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js</key>
+		<data>
+		p7A9a+/7es1E4aKJPkx0j6eQwuw=
+		</data>
+		<key>www/plugins/cordova-plugin-inappbrowser/www/inappbrowser.js</key>
+		<data>
+		TuTJMLkc2Lod8+TvrcfiL0kPCSM=
+		</data>
+		<key>www/plugins/cordova-plugin-ionic-keyboard/www/ios/keyboard.js</key>
+		<data>
+		6JdC+Uj8WGgTUUgnYZTTulQGBlo=
+		</data>
 		<key>www/plugins/cordova-plugin-ionic-webview/src/www/ios/ios-wkwebview-exec.js</key>
 		<data>
 		fLiT+kGPwfq4A5GtscG/eZoGTIU=
@@ -2260,9 +2456,41 @@
 		<data>
 		oItJ1J1tn6Oo82/WVzOJacSm+mU=
 		</data>
+		<key>www/plugins/cordova-plugin-network-information/www/Connection.js</key>
+		<data>
+		eFkXRtFkv02NAgFnyI+/4nqBHjM=
+		</data>
+		<key>www/plugins/cordova-plugin-network-information/www/network.js</key>
+		<data>
+		lbbWdv+iqfYJ9YIXXbdxSn8svrQ=
+		</data>
+		<key>www/plugins/cordova-plugin-splashscreen/www/splashscreen.js</key>
+		<data>
+		n2E0W8B/grOxM2ORx/haAYOWIcA=
+		</data>
+		<key>www/plugins/cordova-plugin-statusbar/www/statusbar.js</key>
+		<data>
+		hDT++3ZaOTp3t16AAFAibxtovj0=
+		</data>
+		<key>www/plugins/cordova-plugin-vibration/www/vibration.js</key>
+		<data>
+		60ltPTxWdSzFTKttc5RPw3oJXbw=
+		</data>
+		<key>www/plugins/cordova-sqlite-storage/www/SQLitePlugin.js</key>
+		<data>
+		BwXJGmF2i+jfVe0Sy7yWjLtqFIE=
+		</data>
+		<key>www/plugins/onesignal-cordova-plugin/www/OneSignal.js</key>
+		<data>
+		kopIcWY1lpt0IAJWyjWn6X+zC+Q=
+		</data>
+		<key>www/plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js</key>
+		<data>
+		haJXivDxwB2BCbPcMrODx5ojVqQ=
+		</data>
 		<key>www/polyfills-es2015.js</key>
 		<data>
-		cGyp9GHn9IpmJgNmVyTRqUplNGI=
+		ATAD22b1hq0y1YFwCulDAOQuj3c=
 		</data>
 		<key>www/polyfills-es2015.js.map</key>
 		<data>
@@ -2270,7 +2498,7 @@
 		</data>
 		<key>www/polyfills-es5.js</key>
 		<data>
-		uIk/D8rNqV8hgZ+JaNxRhmJ8rbA=
+		YZ4yts+N0ZOMsOLmVipXZiZNrRM=
 		</data>
 		<key>www/polyfills-es5.js.map</key>
 		<data>
@@ -2350,19 +2578,19 @@
 		</data>
 		<key>www/styles-es2015.js</key>
 		<data>
-		Ku3fo9Tns7A8SDnUU/opoY5OrwI=
+		+a8yeliLblhIWSjou74MVZ5gAwI=
 		</data>
 		<key>www/styles-es2015.js.map</key>
 		<data>
-		lvWBrjlB0mgM8uQTw27Lo9xkBl8=
+		Io8oNWFkdGBTzrJs3C3AJHPO4Ig=
 		</data>
 		<key>www/styles-es5.js</key>
 		<data>
-		xawfhTAPkGENhzX5GxefZuAQdV0=
+		3cxu0xC5FDuB53E+2wyWdQJHPg0=
 		</data>
 		<key>www/styles-es5.js.map</key>
 		<data>
-		HYJOmal2JZ/zY0zQJlXV2EO0g+k=
+		9udDJcdn2G1oltthueRHZ5O7PmY=
 		</data>
 		<key>www/success.svg</key>
 		<data>
@@ -5210,19 +5438,19 @@
 		</data>
 		<key>www/vendor-es2015.js</key>
 		<data>
-		3MTPvGU+pMyIk9IN3QrnwSbO9NU=
+		RTjbFvY3b1jg0doamOvLfVlpc+Q=
 		</data>
 		<key>www/vendor-es2015.js.map</key>
 		<data>
-		DeoSu6S2tt0d4RbRWsJS//FLaO4=
+		z73JXKDaNRdEAdDksrgNsHibzi8=
 		</data>
 		<key>www/vendor-es5.js</key>
 		<data>
-		yeNpqPSNOllqi+HvnKYUBZYrEgA=
+		6/cvufXbslK6NeVTu3kZSYdSz1U=
 		</data>
 		<key>www/vendor-es5.js.map</key>
 		<data>
-		QzL+EROIe+YDMDb8O+JfiA0nEVw=
+		KaUPYxvvPzboKq+Hencv/GTKOls=
 		</data>
 		<key>www/wallet-active.svg</key>
 		<data>
@@ -5261,14 +5489,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KXFjLRGZ2tlEzZixHEUGGZeocEzbZk5g/m065rANH2o=
+			Qf+uy8fU+TovfKElHPHe+8Uzuapj4L1Aqt29b6AKk+E=
+			</data>
+		</dict>
+		<key>CDVBarcodeScanner.bundle/beep.caf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NN7HB8+IcBwGLL11Xktd4ifwAZDSoNs8hKwROCcXamo=
+			</data>
+		</dict>
+		<key>CDVBarcodeScanner.bundle/torch.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YBOo9aq0DkdCyPDUfovzqb28RDxhETooGasgESTO7h8=
+			</data>
+		</dict>
+		<key>CDVBarcodeScanner.bundle/torch@2x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZJjK832+YjToJzjslWS6RFl3QAwpQ4P6Zu/+nftv9Os=
+			</data>
+		</dict>
+		<key>CDVBarcodeScanner.bundle/torch@3x.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+atwPqV7gjdNiqOUmw7i2B/yfFZFh+BVUEXDVKRMVP8=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			cL76Tj62Cx1IMAc3LrpRHGXUpAMSNEBF9or3DSbhABE=
+			Xy9U0Dx50GRbQGBwRznor3eIzbSJi+owFObIMlLP4pc=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -5282,7 +5538,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			J3uXKUNKVYLAGGfCJEd9R5CqHXwAkCETzmofRQXDlnI=
+			qYDZd1POKjKOMAcS5t8lf/qATIS/8Ih2srpgeCG/GnQ=
 			</data>
 		</dict>
 		<key>LaunchImage-1100-Landscape-2436h@3x.png</key>
@@ -5415,21 +5671,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fKTvQgkH9mG2GrHztJ4Fl1ZoCFK8qWtkxK/yOJa1NIw=
+			x9elchCmC3XvwD+LOWt8ZVC1WeMJAu6ARq+SXtR6tZ4=
 			</data>
 		</dict>
 		<key>config.xml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ADBaXpif+zUnpCstkgr1aMVgwG5bfaF8wv7woV2FYE8=
+			n8lJno9rWBOdrhwMNL+FLEx/uOYcrULONIUGCO364jA=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ouo019zfwAk9lGLPcolPP0sl9JyvQkJCW8y12RaGRC4=
+			WiBG44stZD5H3YRzwd7ZcyD/ZrJfwWgTmXfP3RQxoik=
+			</data>
+		</dict>
+		<key>scannerOverlay.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Rax/hRVHq2Hi3nVG5K2H/t+Ei9fD6fMC9du9JJPWZ0Q=
 			</data>
 		</dict>
 		<key>www/0-es2015.js</key>
@@ -8005,21 +8268,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			X5xS5vOUzKZ5CmiYi9Mw5++Izi5YFELRYkzmhUfi4EI=
+			hSuRswDpOa+IHWbHALZFBTnZ52h29CPUcZng8Op0FE8=
 			</data>
 		</dict>
 		<key>www/cordova.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NsUC/i0zvQsVVXJ54pss+PzJSCqSNhQOjszr5dQ+l3E=
+			xohHN/FmYpR+6pTobUaaATyPWlkiivWpYnbqd4AP+yQ=
 			</data>
 		</dict>
 		<key>www/cordova_plugins.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lsqRUNo5CHzglUHNgDcpHlG2p7tV4t42Rn6dYuBk3Mk=
+			ZhSRExSy4mn0sTm0cpXzdKePh/yv9SwV9/jdqpd15Ow=
 			</data>
 		</dict>
 		<key>www/core-js-js-es2015.js</key>
@@ -8208,7 +8471,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nFB0cZhq2txc2+olhc65T2d431Au0mkD8wxaDau2+LY=
+			q5+cCiT0h2sEgS63kojsFmiLoMROiuOcHxXDk+L/dlU=
 			</data>
 		</dict>
 		<key>www/default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module-es5.js</key>
@@ -8222,7 +8485,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			L6y3uG/4O5khSGYNfBSRTGEKZ7Xg7ip20SmE11D327k=
+			3hG0DUat4Ldd51NeLxS+PB/+kkO0RFMialfBnEKSrm0=
 			</data>
 		</dict>
 		<key>www/dollar.svg</key>
@@ -8474,28 +8737,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			f0NYDFguPbm5axguePCtakG/4xKEMyxr81OwEUNRQ4o=
+			MhFd1h9BvODgQpLtVCKA23Nw3vcgumfIih6/61GCRB4=
 			</data>
 		</dict>
 		<key>www/main-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+ujSu/qAXITr66uM6/txcBClTKAqo7pxGS727W/hfw0=
+			IkJ/gEn0+TtUAX2wxoVPpGkElMsVIHlCD5mMMqpHNXc=
 			</data>
 		</dict>
 		<key>www/main-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CdgEb/NwnTXtDOQ0pV3Jy0Jo8yN3u0UjvHnWgMpl6aA=
+			+4nnEJzRKZLKC4Mwo4BY5bkC22XyF3rc9IWcxsOKEoQ=
 			</data>
 		</dict>
 		<key>www/main-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KdKiUE/rV2G5mz0XokQEOGrZNAZIjQqxBT7o/r3r2vg=
+			HAapps09+7Iuo5R4bfNuCOngZa9tVGtRJsORmGtruyU=
 			</data>
 		</dict>
 		<key>www/md-transition-f444ed6d-js-es2015.js</key>
@@ -8544,168 +8807,168 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RACkcvPV3bgbU7W42A7Qjzju70bssWNkxBm1UX3dx5Q=
+			J6oDwjh49V5W+BCz0dx61hCbxc4Y56HmN6xX0hx5lio=
 			</data>
 		</dict>
 		<key>www/pages-about-about-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f8UFQPUQMYTetM2e2RIkTKPIAaxjrAIv+7+MTzaEajw=
+			JDMY4cM+x4QFIOY6djtkmJU21WCCEUKb36AcXH+M5jc=
 			</data>
 		</dict>
 		<key>www/pages-about-about-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SFY+qq6o5PiyHk6UXqEOcylw5QK3QGVHAyqGJD175G8=
+			sw9YaSU8ZMJDlHai6QL6iDwR4ysC+g+kJ4/oDDPdPss=
 			</data>
 		</dict>
 		<key>www/pages-about-about-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2p1fcwSuWxoQ73o0FdnPuCLR/IkhdJ+d6tXUbpBjb9E=
+			y433BuCFAJeC3r7yXKJ4tr+ue6b+k0rx+rz+2NfU480=
 			</data>
 		</dict>
 		<key>www/pages-backup-mnemonic-backup-mnemonic-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qs4FqWDBnP47/EZA+VsbTiUzTXPrpEgKy3mXjh42FbU=
+			2DQ8vt0Mci5n6F5xCq3ojCurOTKYgk4Wqs3It3s0wqM=
 			</data>
 		</dict>
 		<key>www/pages-backup-mnemonic-backup-mnemonic-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aFgDtTLJLwbfmmslcQGdI8mCMbOq2bX+Gjv7KZUgQio=
+			UCn1+FSAm50zL870nmUNQ6HDTOMVlKAySKAu0x8dNHE=
 			</data>
 		</dict>
 		<key>www/pages-backup-mnemonic-backup-mnemonic-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GnydNJ+LzYC1QCuYNU+pQPzCNyONof27cG2tOLKCBM8=
+			4LjTErxV0GKUMy4L0an1Ct5gmtsx91yoG56kNs9zwGU=
 			</data>
 		</dict>
 		<key>www/pages-backup-mnemonic-backup-mnemonic-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lTNk6UZPs1GCngYHX7uBXg2sMKFeXtoG81Oif+VUY0E=
+			wSDsLKBP3shTmTnUkN34t9J9PfgnKO7N9/RTEP14bwQ=
 			</data>
 		</dict>
 		<key>www/pages-change-password-change-password-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			y+zkDDj3kEIh3Oe6njQ5uQZdMF4RSQ8FVdvi52lzyb4=
+			r98ULR8fqaxJ56r2alBd0Oi9ABbXu4Nk8yZsGGAkrvk=
 			</data>
 		</dict>
 		<key>www/pages-change-password-change-password-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			soy+RWkPtC48k0WrcW8ZKP6vAqYi/UMSiN81VJsTCPY=
+			fOamuTwXwXcCqtv7RX7Cp0yXIg22QLMupZgloEombgg=
 			</data>
 		</dict>
 		<key>www/pages-change-password-change-password-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7pgNJr23KXl+l3j1iQKPwDcfn+hdpKQ0uq2ZeJyPTEE=
+			OI5LVyEkSJO4vdpA4+xzoSf/ZtZfxFwexVejEmpZvus=
 			</data>
 		</dict>
 		<key>www/pages-change-password-change-password-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			i6tkuynkU1HTmBGC4RdbVczDu1AWWyucV9lt40+2vK4=
+			XzA1qdV3pqx1CM+BJ8ru6wUDdcvEtsvIHFW8dvPQi10=
 			</data>
 		</dict>
 		<key>www/pages-cph-receive-cph-receive-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			YHlzZrwKLrX0NJArIqzHRwoHcUcrLJr4s+58InGHkvg=
+			wYAAVtZZW9zqDXe86/lTzylFAN23nddTMISE05TH4+A=
 			</data>
 		</dict>
 		<key>www/pages-cph-receive-cph-receive-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kpBnH2BLWdL1P+kjqUI3bniNIJcoOEDWSOHJ2kuKa24=
+			F4kv3pVEupahMgeXuSgqK2kAIUQX6s210q7tW9PzzHA=
 			</data>
 		</dict>
 		<key>www/pages-cph-receive-cph-receive-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			17Jz9D+hwC7RZSGhiYambt7u/SW36jomYyLEasYkhZE=
+			WWPjPAXkSfgbG4KYNF5TEZ9M8GqTmsbX5bLQgnAbW/o=
 			</data>
 		</dict>
 		<key>www/pages-cph-receive-cph-receive-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			4wp5FOBu/D7FqRXpK/YFZSqq7e7MXPVYi+NaKNU2KTg=
+			6iRiwW/+6eSBNYaNvcVdaOfIzXR6a+va/Ux+/RoCv9s=
 			</data>
 		</dict>
 		<key>www/pages-cph-send-cph-send-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			k3hGf8KJR6y5Xjm7go6a2chnWHCzN6uOX51BYcQHq2Q=
+			zLyBpjbAlxaXioqc2mLBRiaP0N5zSzxag9L+NyEZ8bc=
 			</data>
 		</dict>
 		<key>www/pages-cph-send-cph-send-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			G7ngSG3k4dRcXtQRsJjE93T7xMbAHSJC8UfaephygU8=
+			shhRX7Me+tvVUyeNpkOkyCbheQ9fV2yGFBCdx9z/UU8=
 			</data>
 		</dict>
 		<key>www/pages-cph-send-cph-send-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bn+0LhLEW32hUpOBWlGE1buEBd0NV9jFpij6hTHRmn4=
+			5atANc11Lr+3BHpyi/ZAmPqOLVJu5JpLZlFqQBo9Mp4=
 			</data>
 		</dict>
 		<key>www/pages-cph-send-cph-send-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ruM+zsxzhSqTJrO+tuSSsbJHFgEv9kR3Jv/nNvZAzfU=
+			h98yQ1Rgpx9p4lP2t5hshSfN/60bFkY5VWU25T98g2s=
 			</data>
 		</dict>
 		<key>www/pages-export-keystore-export-keystore-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0psYimZvh+OFQiWgHm9Ye/a26mczZkCY5ZgY53NfDxk=
+			rDP352jCLK0eqr6Brdql9URda6AdT3tEv1XxXW7rJQs=
 			</data>
 		</dict>
 		<key>www/pages-export-keystore-export-keystore-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9tIYRs6AK3JD7PuCn+hWO/1apWjWWHnloa3VbrCBcgE=
+			1GgwZmWAQJD0KL7Fo4tUHZiymuHT9El+QsNwTCHueys=
 			</data>
 		</dict>
 		<key>www/pages-export-keystore-export-keystore-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6/zxBC+HSjBdwlA/DTfmQnKbi/9lvUjAWjEmGp5qrq0=
+			lJfGKIGdAge25gdvLAm4uaUH4o8cXTr5BwT61GCooKU=
 			</data>
 		</dict>
 		<key>www/pages-export-keystore-export-keystore-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			c01MaYhReMaXe3vMyj+cVz/g6luD/Fag1lvYspeS27M=
+			44ood9NZRO2xLpDrfy8uzR4bymPIFmWk+Pr8Ght/2Ds=
 			</data>
 		</dict>
 		<key>www/pages-export-mnemonic-export-mnemonic-module-es2015.js</key>
@@ -8740,28 +9003,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			sY4EY16iJp3n4pd7kVZfoUMx5V1JxlgeY7gKcTGBvzg=
+			5xyLE/gFuHJVfcLSzpWLvjtvVcv+qgK3EQLyFDyESg8=
 			</data>
 		</dict>
 		<key>www/pages-export-privatekey-export-privatekey-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bsWxvI2HxqzcfIEeCx7HxG7Iky1ADtBFuU8r696bkjE=
+			1NdFmAo5Op0LzBAOFyMRNn9i3ZcT8KQQ7z3ebUjR6Z4=
 			</data>
 		</dict>
 		<key>www/pages-export-privatekey-export-privatekey-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1ikoaGGNZwI23IexAVWjKuPEM5mc4c1/ygyGxI7licE=
+			p2X6mc5mt5NXGs2n6qzSL0T68PKdQ2CYqOICDUR95+Q=
 			</data>
 		</dict>
 		<key>www/pages-export-privatekey-export-privatekey-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pu4f/KH1z423Ce5kUakqK4eE9bY6yBlOof0JBrI/Eic=
+			gXNdLnXU/FS/6nsXYS/ASoEBlPkF23udhEOvAwhpsC0=
 			</data>
 		</dict>
 		<key>www/pages-language-toggle-language-toggle-module-es2015.js</key>
@@ -8796,168 +9059,168 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pKfHZVygyoGWzaMqQyH7/SLkv6Qp5+qfTHKPHaLRLXg=
+			0/C3p/kBCJrss2FlEzZaPp+WUUpzASVQpkgB07Y8ctQ=
 			</data>
 		</dict>
 		<key>www/pages-payment-password-payment-password-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SzqVQ2b3h86F9WBKkTQ5Abjo8TcRTnuHaZkwEJnt3fw=
+			4J7qsNFm2iy20OMuEgbEuKAx2JxJJta9QteP3hpmtVQ=
 			</data>
 		</dict>
 		<key>www/pages-payment-password-payment-password-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LW5wyri8qaSuaCtQUpxm7kS58Ydn2FA1RPPlF1x5zkI=
+			Y/uni54l6LQFEEk2MfqPzRH7pRPocXyMGmZrKW7AK78=
 			</data>
 		</dict>
 		<key>www/pages-payment-password-payment-password-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bfTcr79Sq2tB/2v8BjD47vFS7OBhKO8ENcxBK4/Zf94=
+			DecnbV5iIIN2SOvoq7COj4Qnl4qsYf4iUNR9W8FXDGI=
 			</data>
 		</dict>
 		<key>www/pages-scan-scan-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vmKI/EJbHlIS76dWM4pVqEBvEqnI75DzPB6sz5DGr7Y=
+			XRtP6+nub2nX0M+krxAeAG1b1Q0I+w8iWCGHLCiKDi8=
 			</data>
 		</dict>
 		<key>www/pages-scan-scan-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QsvxAEENKrm/bF4LJAXCJVcmCgl52iA9vVNyKu6KMnI=
+			Y/RQy77U5Yl2wX4CqMEC8fRCeIDcrSmWdYi/Cem+Eqk=
 			</data>
 		</dict>
 		<key>www/pages-scan-scan-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			v52i5r4ZCmK5D9QwehgvfGHVRYDhjpa6M5vW+fo047A=
+			/Qz2rz2kkPACSc5AhKkm3AUtG7IhO0UyCZ2hSiAUjgo=
 			</data>
 		</dict>
 		<key>www/pages-scan-scan-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KOrf/v6o+h2712kv6bS4M8fvzfN1oVcGgqfINfegdSA=
+			qHZOPzVehuMMK32H35E43RqsB1hbisSXfkYh5/BYKHI=
 			</data>
 		</dict>
 		<key>www/pages-tabs-pledge-pledge-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ToUkb3ifSARUautPFKPBTkvHkf6KSZyTbWM/2ynIIEo=
+			WVSwFx21FTsF36duondBLCOV8acbwbKKHVIzs7qUkNs=
 			</data>
 		</dict>
 		<key>www/pages-tabs-pledge-pledge-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AvZ0NH5sOLncBl/I50zQrKkA6D2pvtGCmChQH1tYvTs=
+			P5Um6gMi4NEhIye8/N3YJZrw2KgNilWOjOdRCM/hZ8Q=
 			</data>
 		</dict>
 		<key>www/pages-tabs-pledge-pledge-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+m80cRuGbkw+S10IH9h77Tjqj8cXI2oCfm4VURqCtCk=
+			Knjmcsiep5wCotZvVUqeAaoT+kEUTGAJLws99CAegao=
 			</data>
 		</dict>
 		<key>www/pages-tabs-pledge-pledge-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			uprdriFBOFVR8iV7/O0aHNgPA2LY/f9LkHnruMdiz3s=
+			9UZ0fVz2JwQPII8Mtw2fbKQ0q+k+h0KzVk1dF5IPfaA=
 			</data>
 		</dict>
 		<key>www/pages-tabs-setting-setting-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t2Giqg2wRpp6/P18XHYfaEg00aTdNfDEtmy4I/n7ZF4=
+			f5jmC0CXueRjGrWzh37i882C1x2ssyJfzWd3Bb9z6NA=
 			</data>
 		</dict>
 		<key>www/pages-tabs-setting-setting-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Wvyl4RoIXcelQc3CAn5c79iuwn8wSnu+dY9NZpmTTP8=
+			LgRE5Vrq2mClWq3KJAEbtHjfiRtCctRBrBxcIcmKg44=
 			</data>
 		</dict>
 		<key>www/pages-tabs-setting-setting-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5BpTw5W2SDvZs0kBayLhao6UHael0RmMPxAnDEUyIjQ=
+			To57weJ5SOlLHC6anlLx1X8h9fsGXHBApVEwGp1q4HY=
 			</data>
 		</dict>
 		<key>www/pages-tabs-setting-setting-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			UVkQvDTzhc6ax+9cZoAX0a6uXoLaqQmOwm6IW71vgqw=
+			kijdaIn/vbBIP/a4riELQB4axdscg7LVnCtfmvRK4+s=
 			</data>
 		</dict>
 		<key>www/pages-tabs-wallet-wallet-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WHQTsv+KzlIlMTu+XDBVw7/PUbP2mp8G64aoBX/5Dzc=
+			M67mxJg82tqUe4TzBxH8OceEIGlxup5cTCvWQ3kHOns=
 			</data>
 		</dict>
 		<key>www/pages-tabs-wallet-wallet-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5dL/ft01o5iTfUsp0kMYwNmM8LnyX7H4W1eFapC5iJs=
+			sE/CZFOyAL8+W9KslSBfLa9H0FnaMtL9iu+cDyYG/i4=
 			</data>
 		</dict>
 		<key>www/pages-tabs-wallet-wallet-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			b7TVOfTrIV6TKsl3uavMavbekYIt5lgdlAqXApVnFOo=
+			2gijF15xTi62TzWNN1HlnHqFzlg+1K9wDRidnXbaDSk=
 			</data>
 		</dict>
 		<key>www/pages-tabs-wallet-wallet-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			eZjBZqyZiUgMXqSCTqHQVX7kxWxDlI+z88iSdNE/w7I=
+			135Fe/RzeAeBNkB7yIInFc3Tl4PEgTnYEiPoyEbuEiQ=
 			</data>
 		</dict>
 		<key>www/pages-transaction-result-transaction-result-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ajMU3Zf2LEK/mlLCXw2nxlJ9kob93rrBg6N/9aB5XIA=
+			ZozMMvepP+L2hoUoTZUsTBjbek202Rxu6WNyeeN7Hc0=
 			</data>
 		</dict>
 		<key>www/pages-transaction-result-transaction-result-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LI3be263TqMjDfXZ7U3y+XxQvvhbJqZ1tZJR/+iDbmo=
+			cUsNq7jRkytoOge/i1lGWrX8zRENlKXpyMh//koWdAw=
 			</data>
 		</dict>
 		<key>www/pages-transaction-result-transaction-result-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+/kPuI3hO1DezxY/XtJ45TgwdKIfRAaXAtFRZDOSHG8=
+			h+OmIZjqRBo1SpgeczcNGj4ZIHOgTsWEEH0uXDfJD5g=
 			</data>
 		</dict>
 		<key>www/pages-transaction-result-transaction-result-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			I9xFqTz/R58r4EiMGzcOofbnSQP7yps/2NCt9K49+Es=
+			n1cIZ7/zpCOelD4ICcrmuVGX2IVttKzVTM7RwpnvnqI=
 			</data>
 		</dict>
 		<key>www/pages-value-unit-value-unit-module-es2015.js</key>
@@ -9020,112 +9283,112 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			C2e/KidP5p7zMZ4vgiP5WNBBXgKjiFYZmRajuDWsg0s=
+			aPhI5P84yRVo8GTfKT2SUpxdw2TTKQ+uL+T7x+cVyB4=
 			</data>
 		</dict>
 		<key>www/pages-wallet-create-wallet-create-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vTZee2T9+qDXU3lOmaaa2zOpJBUHw8L+tnKRO5gILss=
+			ghOfuDHKC3YbRyLulKLKM5HCGYkontPCOl6J/aiBehg=
 			</data>
 		</dict>
 		<key>www/pages-wallet-create-wallet-create-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			st1ykbsWbgS+KY4o2JNujFERHDRcrYKHaCYJ0X5bTdM=
+			jjz+DAE3YiHd+pcpIA8yYKhhMqbTnFo0ZPpoDzP+wtI=
 			</data>
 		</dict>
 		<key>www/pages-wallet-create-wallet-create-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fFhNd5W4heq2gGJEnTJWtBM1o7wcMll7uQwsK08hyL0=
+			foxBdt7DgjAExDxF0iWWgnBjE/d0lAW5Mf4pCFzfplo=
 			</data>
 		</dict>
 		<key>www/pages-wallet-detail-wallet-detail-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			h0n+q+WIZwXJ7XF7oAlx4jizwh8M1z/70T56ll00jCs=
+			AqdzPkI6WMpBWHd7ugkwMCxILcsvLt4urvKIWJqC+04=
 			</data>
 		</dict>
 		<key>www/pages-wallet-detail-wallet-detail-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y7veRKVTCSlljFlS67fvyoVomRuS+2Nxbk4c+NQp6gw=
+			VplGdpD6H/NknmwYCp70Nk6Dc12RDnmYkDlfuhM/p7g=
 			</data>
 		</dict>
 		<key>www/pages-wallet-detail-wallet-detail-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+9Q0Ui0i2UoYetmf1islMXr3KpubVn55SznOG/AZ7dM=
+			A8j62BwOnbLcDFu/coL0tzqrcdmem8tBytD11zLRBhs=
 			</data>
 		</dict>
 		<key>www/pages-wallet-detail-wallet-detail-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0z6lYE5GTmvi73LgBlnEbf22UlY3yCau85Tr8AR2V0A=
+			vJBH/WX6k6719/WZhhMByyQjwuOMEdy2anrkj8eDJCc=
 			</data>
 		</dict>
 		<key>www/pages-wallet-import-wallet-import-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KwCebhN2OcZhhh4AwHoqQnobUf26/XKNlod8iRW0Urc=
+			N1OVaO60lYGBJsPPx9jLmCn3mbv5g1Rd6EC48PV5r4k=
 			</data>
 		</dict>
 		<key>www/pages-wallet-import-wallet-import-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			QrQJ8Ic97J4QAZtJ51mzcE7HawOhw2ipNovN7oIPwIk=
+			mLMU9vTzayjw22q3MuVgQD0Q/nzogFod1S3QYJ+bZfk=
 			</data>
 		</dict>
 		<key>www/pages-wallet-import-wallet-import-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D+cEcfA8L0WWKVvTlm4cxD/yyX6Hhb8uA6Mh6/Rg4iw=
+			GntUrRfxTvqMu8JryKxHKptiao6Q+LRbetrTCltGRPY=
 			</data>
 		</dict>
 		<key>www/pages-wallet-import-wallet-import-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Yggm/XYbeLCuoeLsyw51VnIa6vxKWhGBCHSmvXruaZ4=
+			Dwm0/5OSUKDQIoAw/t+1LHhm1Hk+oxNxGFQX3PR18Ks=
 			</data>
 		</dict>
 		<key>www/pages-wallet-name-wallet-name-module-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/3mdczEaJS9+vRZ2c1ws5dqMEMR+3xaxvLpY6raVha0=
+			eD662EgWzMAkBBaykUhucAK0df8d3Akx9AVdn2iHRbU=
 			</data>
 		</dict>
 		<key>www/pages-wallet-name-wallet-name-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kEeUSRz2FMECoigBWhPmwAYY2Af2DWPiCCGqkmCtNQQ=
+			Wc6aeVAEbNqt6QabsXjLvLE8Btg/MoB1CcuzYqRs1hE=
 			</data>
 		</dict>
 		<key>www/pages-wallet-name-wallet-name-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1TOW/B2xDtssmOBAiOXovWGcrdYKbRUO7JjQE7gjLuM=
+			+a96ec3PuAsbMpEGRW1Vj3BMsnCgyz5Uaz/+c6F9TYQ=
 			</data>
 		</dict>
 		<key>www/pages-wallet-name-wallet-name-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			o7Fp5OTJSm81JC6etUZjms2PIpJNhG+0Ob1YLE75u/M=
+			U9CldNPLsloFdESlbNOzUVE4EsNsDOIbDPPtcLiuqmM=
 			</data>
 		</dict>
 		<key>www/password.svg</key>
@@ -9163,6 +9426,314 @@
 			YhTnMD6YwczBVTf4LzAWYrh+iaiXzQdusYZve4HFjJM=
 			</data>
 		</dict>
+		<key>www/plugins/cordova-clipboard/www/clipboard.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			j2624t7prj5sL84eThMRszlincqY0l9xsv3yUF2sVko=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-open-native-settings/www/settings.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YmmKws0wvl+rktes0//aAp/ZlSf/efiDtzt5dUWw8+U=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-advanced-http/www/advanced-http.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			t8a5qSGCvakql3x0IL/x9JlAViFda13Brq6Owl2BdaE=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-advanced-http/www/cookie-handler.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Rf4naep9IIYO3KmnvmTI5aVGGSshGmLru5xdOISml5A=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-advanced-http/www/dependency-validator.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2ePQ/SmjA2Ww3sWlBDWUUUzJV8+rsA5szbmlp2GxnwM=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-advanced-http/www/error-codes.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			O5ZvmRbswKek2etG8eVCuDT7Q6douRhsAfXYjKBQdME=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-advanced-http/www/global-configs.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			S5N1aT0JocjNRPHFTG5EZC543ZE9ozgIQ2M6Po7aBjc=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-advanced-http/www/helpers.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			w9OtcxQY7pu2FtCE89dlOhDdjnQQMPkwUyDQyXGeqc8=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-advanced-http/www/js-util.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+mUeumyy3DaZiBcXz2yh0f0U/rj76e/+WNonXYPyRxE=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-advanced-http/www/local-storage-store.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CXFhYS+oh9eHe3xu2oV6g5/dmOKyr4wvP5QcKyU3H0Y=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-advanced-http/www/lodash.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7lmFGf/NQg1SVWp9V6fWLM9SSPuRGEyxNE6gPcqHFTM=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-advanced-http/www/messages.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			9nASmLhc3W7ns9++aXCDPzyzlGF0Lnd7weh5ALqxx6M=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-advanced-http/www/ponyfills.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HNaNMOjx7lCgpuk2QZnVZ82bksFK918AJPXpEE1qH3s=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-advanced-http/www/public-interface.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			rNB6/pqU7vCFIOiNonUGo6T+6yLQq82CEIPXDL/VGzo=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-advanced-http/www/umd-tough-cookie.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4ORjR7StRhbLN1JUes4piZXx6W85JNIBDMGheyRjZnA=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-advanced-http/www/url-util.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PwOMlqlVzVgIZXZ1SbMCjBbNhPUtIEmbS1IuHC4X+FE=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-app-version/www/AppVersionPlugin.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			hULEK/sXXYA5Q+DEGduyGZlT2gUtMhRcybSoo9TWM+0=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-appminimize/www/AppMinimize.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			H+fVl20javMvjppIG7VDuIFi2FY04qn/FHcqyaWjK3w=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-badge/www/badge.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cqOKJ7Pz5OwV9Lm8SicYvP30MS3yfAz+qsKFTny/sPA=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-device/www/device.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lxEtW0KU6QKkPs5VCr3ZhsLIA3wAu5RMxZ4W4izq3gE=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/DirectoryEntry.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			QAqnXaChiHj3l+lUTDs6saHB8D7J1uDV1Ny8JVnxrjE=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/DirectoryReader.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sCKl8gNHsNgxPznBN92CVBEB2gJwM1HSbOtj97arSCU=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/Entry.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HTqrVkuqo4OmD+ZeuYUV5f25oaXnFnkCMMUt2QeSYiM=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/File.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vbuk8pkY+FlA2QWlncUHsMK6SlX3wWdFBxaRXw99cu8=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/FileEntry.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			aGB7ZIxrb5JelbnW/PXW9xWLEKwva3obGaIKSJvPW4M=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/FileError.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			S7iNf0zl91/UZNbxz8xXINq6StEX+BQBy4/Xhx2Oa2g=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/FileReader.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UpQvww+xh9Gyk8c6o79tBlYZEVaJb8YwQwfHXFkn1Sk=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/FileSystem.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UD5gbb5uPbU7U8ZvxIMWzywAiI09zcMVRv67ASVnlUs=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/FileUploadOptions.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dBe0OI3UlfQusNagAlOcaimQEvK7mUEgtQlqQPKlRHU=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/FileUploadResult.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2GdXwcKcLcDGjnYW4nzK9ydUvbdwAaXsPzhNMA37bsQ=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/FileWriter.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2IvIqYvHv5HQiRa5rhpkHQ9E77jBg0ZIUA2Wu+6/qLk=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/Flags.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NQZ/QSIoIrIJpIx3ZGfpWieK1Ihy2ELrkZUPLTJ6tog=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/LocalFileSystem.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6Myhmkm3/vfKwbMIdFsp/4x/ZbLoYv9Fv1240nW/jr0=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/Metadata.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			LGUbchqLzHcCMK5eiEnZ2iID+NqMJvBkB1MY8fzbqR8=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/ProgressEvent.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			vfs5XhNMkJT6m9AIsuXhDH4zqZhld2d5oGRATraBDJI=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/browser/isChrome.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JX+kksyo2lBMo/8FImj4jweuqWeFteq40JI2sWlePQE=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/fileSystemPaths.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6h/jjda1DuJmHTptgf/l0gFRI2zELCT4Tq/31J8+orI=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/fileSystems-roots.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			b0AuhSLU9xiYa0wPy43NM9OZmEXYWgjzSYIMirqTfY8=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/fileSystems.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			frl3z+W6IW37ZtDP5/vp63ZqUnXqDwRXaOUo8EDiHgU=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/ios/FileSystem.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			M/9OOdeH99vASy+n1QceXphEDEltxCdCRshnX0wRIOk=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/requestFileSystem.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			urkokGlRGZ9dCt1soyOx46MJ2iaKCTHz7c9QUlPxbU4=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-file/www/resolveLocalFileSystemURI.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			2r19nzz0vvRYaDlexf+ZC0go3w4I74oCafncQ2Noe3U=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-inappbrowser/www/inappbrowser.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GNUiqB5K96lsdpjSZzwWkG8RGfCbch0ZG9EzCa+fvx0=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-ionic-keyboard/www/ios/keyboard.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GmNgP2oopN8IFp0rra15qCyr4WER6Yy11VnFlOvZK8c=
+			</data>
+		</dict>
 		<key>www/plugins/cordova-plugin-ionic-webview/src/www/ios/ios-wkwebview-exec.js</key>
 		<dict>
 			<key>hash2</key>
@@ -9177,11 +9748,67 @@
 			MM6zRLVmx4v7j22S+BVbTwg479k7sBbgMCFaUmM9T+U=
 			</data>
 		</dict>
+		<key>www/plugins/cordova-plugin-network-information/www/Connection.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xcTT1VQ1B43gprpg0dBgmDlL2grVMuBeTalDsgusxuE=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-network-information/www/network.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mQIc+Vzy6X9FsCMCY6E19vLl165ea4NWQQFIqEgO5+o=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-splashscreen/www/splashscreen.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			YSn19P0zRIG9MxdesT37iqYB1WqXVOFIXyjmnTn6foU=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-statusbar/www/statusbar.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			JVFddhH/G0jM/7U0DOdpW1CvUNswIGcQB9WylyRtCBM=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-plugin-vibration/www/vibration.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Is7J5KRaIFiGAZ/LmVN+Vzlx+Ng8ljz+iyz2At8lm5I=
+			</data>
+		</dict>
+		<key>www/plugins/cordova-sqlite-storage/www/SQLitePlugin.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZxpH6JKENdm5QSLHzc9CDmLQraPKUzXBrpeENNHlAH0=
+			</data>
+		</dict>
+		<key>www/plugins/onesignal-cordova-plugin/www/OneSignal.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ss3vvlSJSctRaKcQlv5pYAaRgkRB9Ahd1D1vvdnzG0Y=
+			</data>
+		</dict>
+		<key>www/plugins/phonegap-plugin-barcodescanner/www/barcodescanner.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ipGt28hFN1NR8Xi0CUelPM2biucyXPZ5M3iiW/KXQa4=
+			</data>
+		</dict>
 		<key>www/polyfills-es2015.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GEDHXNUYTbQ0Nxn4lvVjpuGE012IFyApgsW7y+CCZak=
+			w85d4NxW05bvIb4czdrbL5EYcw2c/qpiRWs6YJKIDYI=
 			</data>
 		</dict>
 		<key>www/polyfills-es2015.js.map</key>
@@ -9195,7 +9822,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			vdW2JnxdGKGViC27OifZRfW5ny3qiLEOAahutGDEdgw=
+			FOjOPCVwQXzK6G4gYjoV2FytopSiiuHE6EQW4tVIuX0=
 			</data>
 		</dict>
 		<key>www/polyfills-es5.js.map</key>
@@ -9335,28 +9962,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			8jpKKzS4Y7/yFLGe6K28vlA1NGKGyV7V/SNu8NEOnAI=
+			dmFkCL4VyfohqzpN+zXarR0LPX5EbXDiV9WzvDlHP/w=
 			</data>
 		</dict>
 		<key>www/styles-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Y4xuD6Ozx19wv+cRGLSRbCuqnBcDiFV47taciIcrmYI=
+			CdDpvsQJWPrvviLbzy5hT0bPc4GAulAPOdTK3CWTTxM=
 			</data>
 		</dict>
 		<key>www/styles-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XaiRG9dCLz/0wQe1rBRbDuNkX1SVD+OsK/s8hv+Kjt0=
+			jUtx4qqKP4girLoKdnuQovVedndbQHJYAfrsD4dDnD8=
 			</data>
 		</dict>
 		<key>www/styles-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MLpljF6nN2yPwml12LviwIW9N2GhUW76K4itsILxl2s=
+			ep2U4QtzLm6ukyJ4HSKI7VP84KTqEmGCcWblwzaFfzQ=
 			</data>
 		</dict>
 		<key>www/success.svg</key>
@@ -14340,28 +14967,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			V4HbFSP4RMrASj2zv6YyWWQk4lXIOK0d3/hc6ZUhFlA=
+			KDWxmlZElEFvyINFJBmloqFtPxCZVu+OWYL7Sg3YNV8=
 			</data>
 		</dict>
 		<key>www/vendor-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aKPip4Y7L1yJA/edS9lvXdWweHWD3YkPlHL6vQoAALM=
+			jkdv6rcz4w/Zvh9dXXPdNMizekFpgIuJP7PoKfICVrM=
 			</data>
 		</dict>
 		<key>www/vendor-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aPARj+/p53SESEtgqFHm5gIotK+hxHlxBFpYxBKoHpU=
+			SKeULlDY2I4EK50fCFHGubd95PbwN6hcmzJSLHTjAdE=
 			</data>
 		</dict>
 		<key>www/vendor-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xMjKt901ntRd1RwrJ0itSRFxaYbTSqtNpAufyyg/JtY=
+			LzCZYUJmY1WYSlkxYyy4kMQirOea+jYwwLkKgUwv0Sk=
 			</data>
 		</dict>
 		<key>www/wallet-active.svg</key>

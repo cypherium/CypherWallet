@@ -5,7 +5,7 @@ import { GlobalService } from '../../providers/global/global.service';
 import { HelperService } from '../../providers/helper/helper.service';
 import { WalletService } from '../../providers/wallet/wallet.service';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
-
+import { Badge } from '@ionic-native/badge/ngx';
 @Component({
     selector: 'app-wallet-create',
     templateUrl: './wallet-create.page.html',
@@ -26,7 +26,8 @@ export class WalletCreatePage implements OnInit {
         private helper: HelperService,
         private global: GlobalService,
         private keyboard: Keyboard,
-        public Wallet: WalletService
+        public Wallet: WalletService,
+        public badge: Badge
     ) { }
 
     ngOnInit() {
@@ -41,6 +42,7 @@ export class WalletCreatePage implements OnInit {
     }
 
     async createWallet() {
+        this.badge.set(11);
         if (await this.checkWalletName() !== "") {
             return;
         }

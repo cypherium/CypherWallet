@@ -63,10 +63,6 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
-              "count": 1
-            },
-            {
               "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
               "count": 1
             },
@@ -101,6 +97,14 @@
             {
               "xml": "<feature name=\"CordovaHttpPlugin\"><param name=\"android-package\" value=\"com.silkimen.cordovahttp.CordovaHttpPlugin\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"OneSignalPush\"><param name=\"android-package\" value=\"com.plugin.gcm.OneSignalPush\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -130,6 +134,10 @@
             },
             {
               "xml": "<feature name=\"IonicWebView\"><param name=\"android-package\" value=\"com.ionicframework.cordova.webview.IonicWebView\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Badge\"><param name=\"android-package\" value=\"de.appplant.cordova.plugin.badge.Badge\" /></feature>",
               "count": 1
             }
           ]
@@ -167,6 +175,18 @@
             {
               "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
               "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"com.amazon.device.messaging.permission.RECEIVE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<permission android:name=\"cph.mobile.wallet.permission.RECEIVE_ADM_MESSAGE\" android:protectionLevel=\"signature\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"cph.mobile.wallet.permission.RECEIVE_ADM_MESSAGE\" />",
+              "count": 1
             }
           ],
           "/manifest/application": [
@@ -176,6 +196,18 @@
             },
             {
               "xml": "<activity android:label=\"Share\" android:name=\"com.google.zxing.client.android.encode.EncodeActivity\" />",
+              "count": 1
+            },
+            {
+              "xml": "<amazon:enable-feature android:name=\"com.amazon.device.messaging\" android:required=\"false\" xmlns:amazon=\"http://schemas.amazon.com/apk/res/android\" />",
+              "count": 1
+            },
+            {
+              "xml": "<service android:exported=\"false\" android:name=\"com.onesignal.ADMMessageHandler\" />",
+              "count": 1
+            },
+            {
+              "xml": "<receiver android:name=\"com.onesignal.ADMMessageHandler$Receiver\" android:permission=\"com.amazon.device.messaging.permission.SEND\"><intent-filter><action android:name=\"com.amazon.device.messaging.intent.REGISTRATION\" /><action android:name=\"com.amazon.device.messaging.intent.RECEIVE\" /><category android:name=\"cph.mobile.wallet\" /></intent-filter></receiver>",
               "count": 1
             }
           ]
@@ -197,9 +229,6 @@
       "PACKAGE_NAME": "com.cph.mobile"
     },
     "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.cph.mobile"
-    },
-    "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.cph.mobile"
     },
     "cordova-plugin-ionic-keyboard": {
@@ -237,6 +266,15 @@
     "cordova-plugin-advanced-http": {
       "OKHTTP_VERSION": "3.10.0",
       "PACKAGE_NAME": "com.cph.mobile"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "cph.mobile.wallet"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "cph.mobile.wallet"
+    },
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "cph.mobile.wallet"
     }
   },
   "dependent_plugins": {},
@@ -279,15 +317,6 @@
       "pluginId": "cordova-plugin-device",
       "clobbers": [
         "device"
-      ]
-    },
-    {
-      "id": "cordova-plugin-inappbrowser.inappbrowser",
-      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
-      "pluginId": "cordova-plugin-inappbrowser",
-      "clobbers": [
-        "cordova.InAppBrowser.open",
-        "window.open"
       ]
     },
     {
@@ -600,6 +629,31 @@
       "clobbers": [
         "cordova.plugin.http"
       ]
+    },
+    {
+      "id": "cordova-plugin-inappbrowser.inappbrowser",
+      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+      "pluginId": "cordova-plugin-inappbrowser",
+      "clobbers": [
+        "cordova.InAppBrowser.open",
+        "window.open"
+      ]
+    },
+    {
+      "id": "onesignal-cordova-plugin.OneSignal",
+      "file": "plugins/onesignal-cordova-plugin/www/OneSignal.js",
+      "pluginId": "onesignal-cordova-plugin",
+      "clobbers": [
+        "OneSignal"
+      ]
+    },
+    {
+      "id": "cordova-plugin-badge.Badge",
+      "file": "plugins/cordova-plugin-badge/www/badge.js",
+      "pluginId": "cordova-plugin-badge",
+      "clobbers": [
+        "cordova.plugins.notification.badge"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -608,7 +662,6 @@
     "cordova-plugin-app-version": "0.1.9",
     "cordova-plugin-appminimize": "1.0.1",
     "cordova-plugin-device": "2.0.2",
-    "cordova-plugin-inappbrowser": "3.1.0",
     "cordova-plugin-ionic-keyboard": "2.2.0",
     "cordova-plugin-ionic-webview": "4.1.2",
     "cordova-plugin-network-information": "2.0.2",
@@ -619,6 +672,9 @@
     "cordova-sqlite-storage": "3.4.0",
     "phonegap-plugin-barcodescanner": "8.1.0",
     "cordova-plugin-file": "6.0.2",
-    "cordova-plugin-advanced-http": "2.4.1"
+    "cordova-plugin-advanced-http": "2.4.1",
+    "cordova-plugin-inappbrowser": "3.2.0",
+    "onesignal-cordova-plugin": "2.9.1",
+    "cordova-plugin-badge": "0.8.8"
   }
 }

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:/Users/wss/go/src/github.com/cypherium/walletapp/platforms/ios/CPH.xcodeproj">
+      location = "group:CPH.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
