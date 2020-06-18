@@ -3513,16 +3513,16 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
-    /*! @ionic-native/badge/ngx */
-    "./node_modules/@ionic-native/badge/ngx/index.js"); // import { Web3Service } from './providers/web3/web3.service';
+    var _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! @ionic-native/onesignal/ngx */
+    "./node_modules/@ionic-native/onesignal/ngx/index.js"); // import { Web3Service } from './providers/web3/web3.service';
 
 
     var AppComponent =
     /*#__PURE__*/
     function () {
       function AppComponent(platform, splashScreen, statusBar, global, navCtrl, // private web3: Web3Service,
-      storage, keyboard, translate, http, helper, badge) {
+      storage, keyboard, translate, http, helper, oneSignal) {
         var _this = this;
 
         _classCallCheck(this, AppComponent);
@@ -3537,14 +3537,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.translate = translate;
         this.http = http;
         this.helper = helper;
-        this.badge = badge;
+        this.oneSignal = oneSignal;
         this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_9__["environment"].appServerUrl + this.global.api['getProvider']).subscribe(function (res) {
           _this.global.provider = 'http://' + res.providers[0].ip;
         }, function (err) {
           _this.helper.toast('The network is abnormal, please visit later.');
         });
         this.initializeApp();
-        this.badge.set(11);
       }
 
       _createClass(AppComponent, [{
@@ -3555,30 +3554,29 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           var n;
           this.platform.ready().then(function () {
             // this.statusBar.styleDefault();
-            _this2.splashScreen.hide(); //Remove this method to stop OneSignal Debugging 
+            _this2.splashScreen.hide();
 
+            _this2.oneSignal.startInit('181c8c4b-27f8-4445-97c0-1e367c4a88ca', '380226338398');
 
-            window["plugins"].OneSignal.setLogLevel({
-              logLevel: 6,
-              visualLevel: 0
+            _this2.oneSignal.inFocusDisplaying(_this2.oneSignal.OSInFocusDisplayOption.Notification);
+
+            _this2.oneSignal.handleNotificationReceived().subscribe(function (data) {
+              // do something when notification is received
+              console.log('handleNotificationReceived' + JSON.stringify(data));
+
+              _this2.helper.toast('handleNotificationReceived' + JSON.stringify(data)); // this.badge.increase(1);
+
             });
 
-            var notificationOpenedCallback = function notificationOpenedCallback(jsonData) {
-              console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-            }; // Set your iOS Settings
+            _this2.oneSignal.handleNotificationOpened().subscribe(function (data) {
+              // do something when a notification is opened
+              console.log('handleNotificationOpened' + JSON.stringify(data));
 
+              _this2.helper.toast('handleNotificationOpened' + JSON.stringify(data)); // this.badge.clear();
 
-            var iosSettings = {};
-            iosSettings["kOSSettingsKeyAutoPrompt"] = false;
-            iosSettings["kOSSettingsKeyInAppLaunchURL"] = false;
-            window["plugins"].OneSignal.startInit("181c8c4b-27f8-4445-97c0-1e367c4a88ca").handleNotificationOpened(notificationOpenedCallback).iOSSettings(iosSettings).inFocusDisplaying(window["plugins"].OneSignal.OSInFocusDisplayOption.Notification).endInit(); // The promptForPushNotificationsWithUserResponse function will show the iOS push notification prompt. We recommend removing the following code and instead using an In-App Message to prompt for notification permission (See step 6)
-
-            window["plugins"].OneSignal.promptForPushNotificationsWithUserResponse(function (accepted) {
-              console.log("User accepted notifications: " + accepted);
-              n = 1;
             });
 
-            _this2.badge.set(12);
+            _this2.oneSignal.endInit();
 
             _this2.keyboard.onKeyboardWillShow().subscribe(function () {
               //keyboard显示
@@ -3668,7 +3666,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         type: _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_10__["HelperService"]
       }, {
-        type: _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_12__["Badge"]
+        type: _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_12__["OneSignal"]
       }];
     };
 
@@ -3680,7 +3678,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./app.component.scss */
       "./src/app/app.component.scss")).default]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"], _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"], _providers_global_global_service__WEBPACK_IMPORTED_MODULE_6__["GlobalService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"], _ionic_storage__WEBPACK_IMPORTED_MODULE_5__["Storage"], _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_7__["Keyboard"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_8__["TranslateService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClient"], _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_10__["HelperService"], _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_12__["Badge"]])], AppComponent);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"], _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"], _providers_global_global_service__WEBPACK_IMPORTED_MODULE_6__["GlobalService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"], _ionic_storage__WEBPACK_IMPORTED_MODULE_5__["Storage"], _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_7__["Keyboard"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_8__["TranslateService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClient"], _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_10__["HelperService"], _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_12__["OneSignal"]])], AppComponent);
     /***/
   },
 
@@ -3874,9 +3872,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(
-    /*! @ionic-native/badge/ngx */
-    "./node_modules/@ionic-native/badge/ngx/index.js"); // import { PincodeModalPageModule } from './pages/pincode-modal/pincode-modal.module';
+    var _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(
+    /*! @ionic-native/onesignal/ngx */
+    "./node_modules/@ionic-native/onesignal/ngx/index.js"); // import { PincodeModalPageModule } from './pages/pincode-modal/pincode-modal.module';
     // import { KeypadComponent } from './components/keypad/keypad.component';
 
 
@@ -3899,7 +3897,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           deps: [_angular_common_http__WEBPACK_IMPORTED_MODULE_13__["HttpClient"]]
         }
       }), _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_13__["HttpClientModule"], _components_components_module__WEBPACK_IMPORTED_MODULE_9__["ComponentsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _ionic_storage__WEBPACK_IMPORTED_MODULE_10__["IonicStorageModule"].forRoot()],
-      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_11__["Vibration"], _ionic_native_clipboard_ngx__WEBPACK_IMPORTED_MODULE_12__["Clipboard"], _ionic_native_app_version_ngx__WEBPACK_IMPORTED_MODULE_14__["AppVersion"], _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_16__["InAppBrowser"], _ionic_native_app_minimize_ngx__WEBPACK_IMPORTED_MODULE_17__["AppMinimize"], _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_15__["Network"], _providers_auto_guard_auth_guard_service__WEBPACK_IMPORTED_MODULE_18__["AuthGuardService"], _ionic_native_qr_scanner_ngx__WEBPACK_IMPORTED_MODULE_20__["QRScanner"], _ionic_native_open_native_settings_ngx__WEBPACK_IMPORTED_MODULE_21__["OpenNativeSettings"], _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_22__["Keyboard"], _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_23__["BarcodeScanner"], _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_24__["HTTP"], _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_27__["Badge"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_25__["TranslateService"], {
+      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_11__["Vibration"], _ionic_native_clipboard_ngx__WEBPACK_IMPORTED_MODULE_12__["Clipboard"], _ionic_native_app_version_ngx__WEBPACK_IMPORTED_MODULE_14__["AppVersion"], _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_16__["InAppBrowser"], _ionic_native_app_minimize_ngx__WEBPACK_IMPORTED_MODULE_17__["AppMinimize"], _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_15__["Network"], _providers_auto_guard_auth_guard_service__WEBPACK_IMPORTED_MODULE_18__["AuthGuardService"], _ionic_native_qr_scanner_ngx__WEBPACK_IMPORTED_MODULE_20__["QRScanner"], _ionic_native_open_native_settings_ngx__WEBPACK_IMPORTED_MODULE_21__["OpenNativeSettings"], _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_22__["Keyboard"], _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_23__["BarcodeScanner"], _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_24__["HTTP"], _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_27__["OneSignal"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_25__["TranslateService"], {
         provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"],
         useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"]
       }],

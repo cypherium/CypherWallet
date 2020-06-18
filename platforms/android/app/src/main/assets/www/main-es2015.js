@@ -3278,6 +3278,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./providers/helper/helper.service */ "./src/app/providers/helper/helper.service.ts");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
 /* harmony import */ var _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ionic-native/badge/ngx */ "./node_modules/@ionic-native/badge/ngx/index.js");
+/* harmony import */ var _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ionic-native/onesignal/ngx */ "./node_modules/@ionic-native/onesignal/ngx/index.js");
 
 
 
@@ -3292,10 +3293,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 let AppComponent = class AppComponent {
     constructor(platform, splashScreen, statusBar, global, navCtrl, 
     // private web3: Web3Service,
-    storage, keyboard, translate, http, helper, badge) {
+    storage, keyboard, translate, http, helper, badge, oneSignal) {
         this.platform = platform;
         this.splashScreen = splashScreen;
         this.statusBar = statusBar;
@@ -3307,40 +3309,53 @@ let AppComponent = class AppComponent {
         this.http = http;
         this.helper = helper;
         this.badge = badge;
+        this.oneSignal = oneSignal;
         this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_9__["environment"].appServerUrl + this.global.api['getProvider']).subscribe((res) => {
             this.global.provider = 'http://' + res.providers[0].ip;
         }, err => {
             this.helper.toast('The network is abnormal, please visit later.');
         });
         this.initializeApp();
-        this.badge.set(11);
     }
     initializeApp() {
         let n;
         this.platform.ready().then(() => {
             // this.statusBar.styleDefault();
             this.splashScreen.hide();
-            //Remove this method to stop OneSignal Debugging 
-            window["plugins"].OneSignal.setLogLevel({ logLevel: 6, visualLevel: 0 });
-            var notificationOpenedCallback = function (jsonData) {
-                console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-            };
-            // Set your iOS Settings
-            var iosSettings = {};
-            iosSettings["kOSSettingsKeyAutoPrompt"] = false;
-            iosSettings["kOSSettingsKeyInAppLaunchURL"] = false;
-            window["plugins"].OneSignal
-                .startInit("181c8c4b-27f8-4445-97c0-1e367c4a88ca")
-                .handleNotificationOpened(notificationOpenedCallback)
-                .iOSSettings(iosSettings)
-                .inFocusDisplaying(window["plugins"].OneSignal.OSInFocusDisplayOption.Notification)
-                .endInit();
-            // The promptForPushNotificationsWithUserResponse function will show the iOS push notification prompt. We recommend removing the following code and instead using an In-App Message to prompt for notification permission (See step 6)
-            window["plugins"].OneSignal.promptForPushNotificationsWithUserResponse(function (accepted) {
-                console.log("User accepted notifications: " + accepted);
-                n = 1;
+            // //Remove this method to stop OneSignal Debugging 
+            // window["plugins"].OneSignal.setLogLevel({ logLevel: 6, visualLevel: 0 });
+            // var notificationOpenedCallback = function (jsonData) {
+            //     console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
+            // };
+            // // Set your iOS Settings
+            // var iosSettings = {};
+            // iosSettings["kOSSettingsKeyAutoPrompt"] = false;
+            // iosSettings["kOSSettingsKeyInAppLaunchURL"] = false;
+            // window["plugins"].OneSignal
+            //     .startInit("181c8c4b-27f8-4445-97c0-1e367c4a88ca")
+            //     .handleNotificationOpened(notificationOpenedCallback)
+            //     .iOSSettings(iosSettings)
+            //     .inFocusDisplaying(window["plugins"].OneSignal.OSInFocusDisplayOption.Notification)
+            //     .endInit();
+            // // The promptForPushNotificationsWithUserResponse function will show the iOS push notification prompt. We recommend removing the following code and instead using an In-App Message to prompt for notification permission (See step 6)
+            // window["plugins"].OneSignal.promptForPushNotificationsWithUserResponse(function (accepted) {
+            //     console.log("User accepted notifications: " + accepted);
+            //     n = 1;
+            // });
+            //     this.badge.set(12);
+            this.oneSignal.startInit('181c8c4b-27f8-4445-97c0-1e367c4a88ca', '380226338398');
+            this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
+            this.oneSignal.handleNotificationReceived().subscribe(data => {
+                // do something when notification is received
+                console.log('handleNotificationReceived' + JSON.stringify(data));
+                // this.badge.increase(1);
             });
-            this.badge.set(12);
+            this.oneSignal.handleNotificationOpened().subscribe(data => {
+                // do something when a notification is opened
+                console.log('handleNotificationOpened' + JSON.stringify(data));
+                // this.badge.clear();
+            });
+            this.oneSignal.endInit();
             this.keyboard.onKeyboardWillShow().subscribe(() => {
                 //keyboard显示
                 document.body.classList.add('keyboard-is-open');
@@ -3407,7 +3422,8 @@ AppComponent.ctorParameters = () => [
     { type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_8__["TranslateService"] },
     { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClient"] },
     { type: _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_10__["HelperService"] },
-    { type: _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_12__["Badge"] }
+    { type: _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_12__["Badge"] },
+    { type: _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_13__["OneSignal"] }
 ];
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -3425,7 +3441,8 @@ AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         _ngx_translate_core__WEBPACK_IMPORTED_MODULE_8__["TranslateService"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClient"],
         _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_10__["HelperService"],
-        _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_12__["Badge"]])
+        _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_12__["Badge"],
+        _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_13__["OneSignal"]])
 ], AppComponent);
 
 
@@ -3471,6 +3488,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
 /* harmony import */ var _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @ngx-translate/http-loader */ "./node_modules/@ngx-translate/http-loader/fesm2015/ngx-translate-http-loader.js");
 /* harmony import */ var _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! @ionic-native/badge/ngx */ "./node_modules/@ionic-native/badge/ngx/index.js");
+/* harmony import */ var _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @ionic-native/onesignal/ngx */ "./node_modules/@ionic-native/onesignal/ngx/index.js");
 
 
 
@@ -3500,6 +3518,7 @@ __webpack_require__.r(__webpack_exports__);
 
 // import { PincodeModalPageModule } from './pages/pincode-modal/pincode-modal.module';
 // import { KeypadComponent } from './components/keypad/keypad.component';
+
 
 function HttpLoaderFactory(http) {
     return new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_26__["TranslateHttpLoader"](http, './assets/i18n/', '.json');
@@ -3538,6 +3557,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_23__["BarcodeScanner"],
             _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_24__["HTTP"],
             _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_27__["Badge"],
+            _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_28__["OneSignal"],
             _ngx_translate_core__WEBPACK_IMPORTED_MODULE_25__["TranslateService"],
             { provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] }
         ],

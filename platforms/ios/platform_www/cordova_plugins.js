@@ -383,14 +383,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "OneSignal"
       ]
-    },
-    {
-      "id": "cordova-plugin-badge.Badge",
-      "file": "plugins/cordova-plugin-badge/www/badge.js",
-      "pluginId": "cordova-plugin-badge",
-      "clobbers": [
-        "cordova.plugins.notification.badge"
-      ]
     }
   ];
   module.exports.metadata = {
@@ -411,7 +403,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-sqlite-storage": "3.4.0",
     "phonegap-plugin-barcodescanner": "8.1.0",
     "cordova-plugin-inappbrowser": "3.2.0",
-    "onesignal-cordova-plugin": "2.9.1",
-    "cordova-plugin-badge": "0.8.8"
+    "onesignal-cordova-plugin": "2.10.1"
   };
 });

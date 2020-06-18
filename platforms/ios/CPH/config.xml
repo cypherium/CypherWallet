@@ -80,9 +80,6 @@
     <feature name="OneSignalPush">
         <param name="ios-package" value="OneSignalPush" />
     </feature>
-    <feature name="Badge">
-        <param name="ios-package" value="APPBadge" />
-    </feature>
     <name>CPH</name>
     <description>CPH Wallet</description>
     <author email="sky@cypheriumm.io" href="https://cypherium.io/">Cypherium Development Team</author>

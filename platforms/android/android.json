@@ -9,7 +9,7 @@
         "parents": {
           "/manifest/application": [
             {
-              "xml": "<application android:usesCleartextTraffic=\"true\"></application>",
+              "xml": "<application android:networkSecurityConfig=\"@xml/network_security_config\" />",
               "count": 2,
               "mode": "merge",
               "id": "config.xml",
@@ -23,7 +23,7 @@
               }
             },
             {
-              "xml": "<application android:networkSecurityConfig=\"@xml/network_security_config\" />",
+              "xml": "<application android:usesCleartextTraffic=\"true\"></application>",
               "count": 1,
               "mode": "merge",
               "id": "config.xml",
@@ -134,10 +134,6 @@
             },
             {
               "xml": "<feature name=\"IonicWebView\"><param name=\"android-package\" value=\"com.ionicframework.cordova.webview.IonicWebView\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"Badge\"><param name=\"android-package\" value=\"de.appplant.cordova.plugin.badge.Badge\" /></feature>",
               "count": 1
             }
           ]
@@ -271,9 +267,6 @@
       "PACKAGE_NAME": "cph.mobile.wallet"
     },
     "onesignal-cordova-plugin": {
-      "PACKAGE_NAME": "cph.mobile.wallet"
-    },
-    "cordova-plugin-badge": {
       "PACKAGE_NAME": "cph.mobile.wallet"
     }
   },
@@ -646,14 +639,6 @@
       "clobbers": [
         "OneSignal"
       ]
-    },
-    {
-      "id": "cordova-plugin-badge.Badge",
-      "file": "plugins/cordova-plugin-badge/www/badge.js",
-      "pluginId": "cordova-plugin-badge",
-      "clobbers": [
-        "cordova.plugins.notification.badge"
-      ]
     }
   ],
   "plugin_metadata": {
@@ -674,7 +659,6 @@
     "cordova-plugin-file": "6.0.2",
     "cordova-plugin-advanced-http": "2.4.1",
     "cordova-plugin-inappbrowser": "3.2.0",
-    "onesignal-cordova-plugin": "2.9.1",
-    "cordova-plugin-badge": "0.8.8"
+    "onesignal-cordova-plugin": "2.10.1"
   }
 }

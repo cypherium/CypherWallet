@@ -196,17 +196,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
     /*! @ionic-native/keyboard/ngx */
     "./node_modules/@ionic-native/keyboard/ngx/index.js");
-    /* harmony import */
-
-
-    var _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
-    /*! @ionic-native/badge/ngx */
-    "./node_modules/@ionic-native/badge/ngx/index.js");
 
     var WalletCreatePage =
     /*#__PURE__*/
     function () {
-      function WalletCreatePage(router, helper, global, keyboard, Wallet, badge) {
+      function WalletCreatePage(router, helper, global, keyboard, Wallet) {
         _classCallCheck(this, WalletCreatePage);
 
         this.router = router;
@@ -214,7 +208,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.global = global;
         this.keyboard = keyboard;
         this.Wallet = Wallet;
-        this.badge = badge;
         this.password = "";
         this.password1 = "";
         this.walletName = "";
@@ -249,49 +242,48 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               while (1) {
                 switch (_context.prev = _context.next) {
                   case 0:
-                    this.badge.set(11);
-                    _context.next = 3;
+                    _context.next = 2;
                     return this.checkWalletName();
 
-                  case 3:
+                  case 2:
                     _context.t0 = _context.sent;
 
                     if (!(_context.t0 !== "")) {
-                      _context.next = 6;
+                      _context.next = 5;
                       break;
                     }
 
                     return _context.abrupt("return");
 
-                  case 6:
-                    _context.next = 8;
+                  case 5:
+                    _context.next = 7;
                     return this.checkPassword();
 
-                  case 8:
+                  case 7:
                     _context.t1 = _context.sent;
 
                     if (!(_context.t1 !== "")) {
-                      _context.next = 11;
+                      _context.next = 10;
                       break;
                     }
 
                     return _context.abrupt("return");
 
-                  case 11:
-                    _context.next = 13;
+                  case 10:
+                    _context.next = 12;
                     return this.checkPassword1();
 
-                  case 13:
+                  case 12:
                     _context.t2 = _context.sent;
 
                     if (!(_context.t2 !== "")) {
-                      _context.next = 16;
+                      _context.next = 15;
                       break;
                     }
 
                     return _context.abrupt("return");
 
-                  case 16:
+                  case 15:
                     // let wallet = ethers.Wallet.createRandom();
                     wallet = this.Wallet.createRandom();
                     navigationExtras = {
@@ -304,7 +296,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     this.global.paymentPassword = this.password;
                     this.router.navigate(['export-mnemonic'], navigationExtras);
 
-                  case 21:
+                  case 20:
                   case "end":
                     return _context.stop();
                 }
@@ -458,8 +450,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_6__["Keyboard"]
       }, {
         type: _providers_wallet_wallet_service__WEBPACK_IMPORTED_MODULE_5__["WalletService"]
-      }, {
-        type: _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_7__["Badge"]
       }];
     };
 
@@ -471,7 +461,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./wallet-create.page.scss */
       "./src/app/pages/wallet-create/wallet-create.page.scss")).default]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_4__["HelperService"], _providers_global_global_service__WEBPACK_IMPORTED_MODULE_3__["GlobalService"], _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_6__["Keyboard"], _providers_wallet_wallet_service__WEBPACK_IMPORTED_MODULE_5__["WalletService"], _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_7__["Badge"]])], WalletCreatePage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_4__["HelperService"], _providers_global_global_service__WEBPACK_IMPORTED_MODULE_3__["GlobalService"], _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_6__["Keyboard"], _providers_wallet_wallet_service__WEBPACK_IMPORTED_MODULE_5__["WalletService"]])], WalletCreatePage);
     /***/
   }
 }]);

@@ -18,7 +18,7 @@
           "ITSAppUsesNonExemptEncryption": [
             {
               "xml": "<false />",
-              "count": 12
+              "count": 25
             }
           ],
           "UIBackgroundModes": [
@@ -124,10 +124,6 @@
             {
               "xml": "<feature name=\"OneSignalPush\"><param name=\"ios-package\" value=\"OneSignalPush\" /></feature>",
               "count": 1
-            },
-            {
-              "xml": "<feature name=\"Badge\"><param name=\"ios-package\" value=\"APPBadge\" /></feature>",
-              "count": 1
             }
           ]
         }
@@ -217,9 +213,6 @@
       "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     },
     "onesignal-cordova-plugin": {
-      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
-    },
-    "cordova-plugin-badge": {
       "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     }
   },
@@ -608,14 +601,6 @@
       "clobbers": [
         "OneSignal"
       ]
-    },
-    {
-      "id": "cordova-plugin-badge.Badge",
-      "file": "plugins/cordova-plugin-badge/www/badge.js",
-      "pluginId": "cordova-plugin-badge",
-      "clobbers": [
-        "cordova.plugins.notification.badge"
-      ]
     }
   ],
   "plugin_metadata": {
@@ -636,7 +621,6 @@
     "cordova-sqlite-storage": "3.4.0",
     "phonegap-plugin-barcodescanner": "8.1.0",
     "cordova-plugin-inappbrowser": "3.2.0",
-    "onesignal-cordova-plugin": "2.9.1",
-    "cordova-plugin-badge": "0.8.8"
+    "onesignal-cordova-plugin": "2.10.1"
   }
 }

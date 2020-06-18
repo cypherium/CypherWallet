@@ -14,7 +14,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		0+dKLCyuvQjTMRdWYtEAeYwiRjs=
+		yNybSIVorOZDStKoa8WGd7AmdvE=
 		</data>
 		<key>CDVBarcodeScanner.bundle/beep.caf</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		pWdr4J8JuEZvub4WdW8X5igjXBc=
+		0jZSVFjYVIXhDE5kOfqOddlv4Ac=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		APnou3ATCHfJFGwACWktgND6J98=
+		qBX2gnkfRFbFcfPflSQ5C9wcr0c=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -122,23 +122,39 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		8XjOQON24uXtuIorfXSVwQkHhBg=
+		JYP7t62PbESSBKbqtimxhVJGcJM=
 		</data>
 		<key>PkgInfo</key>
 		<data>
 		n57qDP4tZfLD1rCS43W0B4LQjzE=
 		</data>
+		<key>PlugIns/OneSignalNotificationServiceExtension.appex/Info.plist</key>
+		<data>
+		edMLQJKPuHhwmWyKJXCcRH3SfJc=
+		</data>
+		<key>PlugIns/OneSignalNotificationServiceExtension.appex/OneSignalNotificationServiceExtension</key>
+		<data>
+		+L5bStEGDNJX/gJUJB5c/ap4mXM=
+		</data>
+		<key>PlugIns/OneSignalNotificationServiceExtension.appex/_CodeSignature/CodeResources</key>
+		<data>
+		VZ2jnaDkyvdmlDKP1EJ36Ry6aBg=
+		</data>
+		<key>PlugIns/OneSignalNotificationServiceExtension.appex/embedded.mobileprovision</key>
+		<data>
+		PpuOqvGx/fUew5Y6jPd9hTFrDMw=
+		</data>
 		<key>config.xml</key>
 		<data>
-		cSniDFwS5Vpx4Km7q8gABOVpMrc=
+		EaH6uoPDXteiXciQPf6wh0KcqCo=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
-		DPwFkqSSmTXhIqjkh1RsNmMZebY=
+		EBWqLShKiomUvz/fE8vafbNQ4SM=
 		</data>
 		<key>scannerOverlay.nib</key>
 		<data>
-		9q/e4nsQSUM0iNVi9AjVFJAAtao=
+		PT90MYuzys0YcSJKk6q0D34EUt0=
 		</data>
 		<key>www/0-es2015.js</key>
 		<data>
@@ -1618,7 +1634,7 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		Ld+MJJFGNtmkUeb0G5dzk5224PE=
+		TgP6p39dLT761bO8+1MHkbvExh8=
 		</data>
 		<key>www/core-js-js-es2015.js</key>
 		<data>
@@ -1878,19 +1894,19 @@
 		</data>
 		<key>www/main-es2015.js</key>
 		<data>
-		tfy9AlNZCbYqkwBOPOjVh+P95Fw=
+		RPhNZRpeis0I8TCWxnDiirBtuDY=
 		</data>
 		<key>www/main-es2015.js.map</key>
 		<data>
-		QU6mXP1zDj0xjNEZeCGOuXjt80A=
+		1kfvp0CEhGfXu5gXn+qm7D0qWvc=
 		</data>
 		<key>www/main-es5.js</key>
 		<data>
-		bLm3JGaCxXun68Aft4Oas03SLBE=
+		hzbBmoxGYRgtRu5QwiXMR/qaLpM=
 		</data>
 		<key>www/main-es5.js.map</key>
 		<data>
-		hrQF76VPqh/kFEQwc6/C6HDBHSw=
+		qXjtlEKTPklMAQyZBZsDdIKfxm0=
 		</data>
 		<key>www/md-transition-f444ed6d-js-es2015.js</key>
 		<data>
@@ -2190,19 +2206,19 @@
 		</data>
 		<key>www/pages-wallet-create-wallet-create-module-es2015.js</key>
 		<data>
-		ZZtgO5VQtcPEOgqnOFIw07fY7r8=
+		JM6PWhNUtMpK7nUoRLAklBJd+AA=
 		</data>
 		<key>www/pages-wallet-create-wallet-create-module-es2015.js.map</key>
 		<data>
-		TSNew9fRtCcJvhjnfYEvR8Rd+ks=
+		ShNosbJYJaGmvc01q9axVbc48yA=
 		</data>
 		<key>www/pages-wallet-create-wallet-create-module-es5.js</key>
 		<data>
-		THyMq3m7Ix4LQjDLSAPZg5SancQ=
+		oWroCjNto1RH7+hvuub/GKLUNVg=
 		</data>
 		<key>www/pages-wallet-create-wallet-create-module-es5.js.map</key>
 		<data>
-		7JZEGK255bojVmtvisCa76ACjaM=
+		p3UwW+DEBYkk9+giwphgL1UApN8=
 		</data>
 		<key>www/pages-wallet-detail-wallet-detail-module-es2015.js</key>
 		<data>
@@ -2343,10 +2359,6 @@
 		<key>www/plugins/cordova-plugin-appminimize/www/AppMinimize.js</key>
 		<data>
 		K6mDhsAUjG8Z4mfPvbVBKhPFOKE=
-		</data>
-		<key>www/plugins/cordova-plugin-badge/www/badge.js</key>
-		<data>
-		h//6K1YQS+L8Z1BtpfkSQVUFodI=
 		</data>
 		<key>www/plugins/cordova-plugin-device/www/device.js</key>
 		<data>
@@ -5438,19 +5450,19 @@
 		</data>
 		<key>www/vendor-es2015.js</key>
 		<data>
-		RTjbFvY3b1jg0doamOvLfVlpc+Q=
+		d2g71VkR4ng650Q4AB+kA3bprzA=
 		</data>
 		<key>www/vendor-es2015.js.map</key>
 		<data>
-		z73JXKDaNRdEAdDksrgNsHibzi8=
+		PVku9Z38+mqnhaKbpu32n+A8c24=
 		</data>
 		<key>www/vendor-es5.js</key>
 		<data>
-		6/cvufXbslK6NeVTu3kZSYdSz1U=
+		ee5E08Ht1MrB4zK1BZmoBudhP90=
 		</data>
 		<key>www/vendor-es5.js.map</key>
 		<data>
-		KaUPYxvvPzboKq+Hencv/GTKOls=
+		FzOm/DtARHS85zw1SVGxG0SBPmU=
 		</data>
 		<key>www/wallet-active.svg</key>
 		<data>
@@ -5489,7 +5501,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qf+uy8fU+TovfKElHPHe+8Uzuapj4L1Aqt29b6AKk+E=
+			w88yAsxtKqMA/ikBQcWHq8zwOOPbR0N6oHKguC+CDvg=
 			</data>
 		</dict>
 		<key>CDVBarcodeScanner.bundle/beep.caf</key>
@@ -5524,7 +5536,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Xy9U0Dx50GRbQGBwRznor3eIzbSJi+owFObIMlLP4pc=
+			nFJl/5W69J66z7BtoGfczEFoUnpYFDJbj88/Cei9RZI=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -5538,7 +5550,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qYDZd1POKjKOMAcS5t8lf/qATIS/8Ih2srpgeCG/GnQ=
+			zMmei1Tme2cERXhamspUKERxTYXYLM+JPaG3R7CZJC0=
 			</data>
 		</dict>
 		<key>LaunchImage-1100-Landscape-2436h@3x.png</key>
@@ -5671,28 +5683,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			x9elchCmC3XvwD+LOWt8ZVC1WeMJAu6ARq+SXtR6tZ4=
+			1ymDQ+DcXnwR9VxdZlHPnAh1bqTH2dOHZjlohqUxLAA=
+			</data>
+		</dict>
+		<key>PlugIns/OneSignalNotificationServiceExtension.appex/Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+3bNAQ3o2FvEcbeMNADx73O5OUzp2hID/Hv/0iTbmXI=
+			</data>
+		</dict>
+		<key>PlugIns/OneSignalNotificationServiceExtension.appex/OneSignalNotificationServiceExtension</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			GlMKN0QThjKJ/V/jhYn0Icbel3r8gt8VDf3dp9vS7SI=
+			</data>
+		</dict>
+		<key>PlugIns/OneSignalNotificationServiceExtension.appex/_CodeSignature/CodeResources</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3PjAWq0zRBnSDmWxBrxh3VjuU9UbXnlMuGfrsiI04Ts=
+			</data>
+		</dict>
+		<key>PlugIns/OneSignalNotificationServiceExtension.appex/embedded.mobileprovision</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MFjlmYbhTZBWXwXQazP2XxTdziD6HybXSAMLokedCfc=
 			</data>
 		</dict>
 		<key>config.xml</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			n8lJno9rWBOdrhwMNL+FLEx/uOYcrULONIUGCO364jA=
+			cqNST8yWL2V/10yFjIyoJ2SON85VXzceH0aLnvBFJiU=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WiBG44stZD5H3YRzwd7ZcyD/ZrJfwWgTmXfP3RQxoik=
+			DusMDU2aIHRELT5GHpQchNE9Pv2xiT2o3RKfFPX4fv4=
 			</data>
 		</dict>
 		<key>scannerOverlay.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Rax/hRVHq2Hi3nVG5K2H/t+Ei9fD6fMC9du9JJPWZ0Q=
+			Mw/ixD7ZejpMSKL+zm522YR/cWQNkn7jqb96ekh6tJ8=
 			</data>
 		</dict>
 		<key>www/0-es2015.js</key>
@@ -8282,7 +8322,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZhSRExSy4mn0sTm0cpXzdKePh/yv9SwV9/jdqpd15Ow=
+			4eTIMI/37k3CeD58Cm8V0wIwLRBECmIwxrHqdTtILEs=
 			</data>
 		</dict>
 		<key>www/core-js-js-es2015.js</key>
@@ -8737,28 +8777,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			MhFd1h9BvODgQpLtVCKA23Nw3vcgumfIih6/61GCRB4=
+			gmtYwjx23xEcWFVbDLpht0MI2XTAZOztT9aGjyeuxWA=
 			</data>
 		</dict>
 		<key>www/main-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IkJ/gEn0+TtUAX2wxoVPpGkElMsVIHlCD5mMMqpHNXc=
+			3SsYkABlveSc1PgFnWZiJDggL7BVZqzUV7fTbfQCH94=
 			</data>
 		</dict>
 		<key>www/main-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+4nnEJzRKZLKC4Mwo4BY5bkC22XyF3rc9IWcxsOKEoQ=
+			VBl7NWvKCd9ol7vOim7aeq/zu1mJ5tdzo5FxjRS7Hic=
 			</data>
 		</dict>
 		<key>www/main-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			HAapps09+7Iuo5R4bfNuCOngZa9tVGtRJsORmGtruyU=
+			p6HLFTxbyHRDhOIPNks3o5hUdXsSEz/EUx/gz44FS6k=
 			</data>
 		</dict>
 		<key>www/md-transition-f444ed6d-js-es2015.js</key>
@@ -9283,28 +9323,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aPhI5P84yRVo8GTfKT2SUpxdw2TTKQ+uL+T7x+cVyB4=
+			h1ywyHDbwJzq2at20Snw8eujkJUVQw9sPSFgFCZJpys=
 			</data>
 		</dict>
 		<key>www/pages-wallet-create-wallet-create-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ghOfuDHKC3YbRyLulKLKM5HCGYkontPCOl6J/aiBehg=
+			t12EAJzip7b7iVgsOhmaXQCEGJotAFLN9L4VFYVw0Fs=
 			</data>
 		</dict>
 		<key>www/pages-wallet-create-wallet-create-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jjz+DAE3YiHd+pcpIA8yYKhhMqbTnFo0ZPpoDzP+wtI=
+			/jQEZwz9C2pD5/PdogOlP7uo3yAtzveT6Ik37Q8WS2c=
 			</data>
 		</dict>
 		<key>www/pages-wallet-create-wallet-create-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			foxBdt7DgjAExDxF0iWWgnBjE/d0lAW5Mf4pCFzfplo=
+			2ShZAl94byMgnYenRLFm9noLh4JD4ea1l/qhDEF7N5U=
 			</data>
 		</dict>
 		<key>www/pages-wallet-detail-wallet-detail-module-es2015.js</key>
@@ -9550,13 +9590,6 @@
 			<key>hash2</key>
 			<data>
 			H+fVl20javMvjppIG7VDuIFi2FY04qn/FHcqyaWjK3w=
-			</data>
-		</dict>
-		<key>www/plugins/cordova-plugin-badge/www/badge.js</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			cqOKJ7Pz5OwV9Lm8SicYvP30MS3yfAz+qsKFTny/sPA=
 			</data>
 		</dict>
 		<key>www/plugins/cordova-plugin-device/www/device.js</key>
@@ -14967,28 +15000,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			KDWxmlZElEFvyINFJBmloqFtPxCZVu+OWYL7Sg3YNV8=
+			rI00wJSHCFrYfgxaXVvQ+DF0aWVJq2vdnZyh8U9xJxM=
 			</data>
 		</dict>
 		<key>www/vendor-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jkdv6rcz4w/Zvh9dXXPdNMizekFpgIuJP7PoKfICVrM=
+			Qww1ixru37AtOSITYQoO95PLthuFH/lBkin9ysA2uuo=
 			</data>
 		</dict>
 		<key>www/vendor-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SKeULlDY2I4EK50fCFHGubd95PbwN6hcmzJSLHTjAdE=
+			G2yQXOl6kj5/BN+siillUCmrCfqRXRw4QrPR8GyY1oQ=
 			</data>
 		</dict>
 		<key>www/vendor-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LzCZYUJmY1WYSlkxYyy4kMQirOea+jYwwLkKgUwv0Sk=
+			FhJmwakyGH8a0XnhvOVYDiEVI7G6kWN3NJcMHQlNaCE=
 			</data>
 		</dict>
 		<key>www/wallet-active.svg</key>

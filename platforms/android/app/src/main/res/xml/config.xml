@@ -59,9 +59,6 @@
     <feature name="IonicWebView">
         <param name="android-package" value="com.ionicframework.cordova.webview.IonicWebView" />
     </feature>
-    <feature name="Badge">
-        <param name="android-package" value="de.appplant.cordova.plugin.badge.Badge" />
-    </feature>
     <name>CPH</name>
     <description>CPH Wallet</description>
     <author email="sky@cypheriumm.io" href="https://cypherium.io/">Cypherium Development Team</author>

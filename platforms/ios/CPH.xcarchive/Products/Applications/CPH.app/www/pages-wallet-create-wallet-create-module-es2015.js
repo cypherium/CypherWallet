@@ -97,8 +97,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../providers/helper/helper.service */ "./src/app/providers/helper/helper.service.ts");
 /* harmony import */ var _providers_wallet_wallet_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../providers/wallet/wallet.service */ "./src/app/providers/wallet/wallet.service.ts");
 /* harmony import */ var _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/keyboard/ngx */ "./node_modules/@ionic-native/keyboard/ngx/index.js");
-/* harmony import */ var _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic-native/badge/ngx */ "./node_modules/@ionic-native/badge/ngx/index.js");
-
 
 
 
@@ -107,13 +105,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let WalletCreatePage = class WalletCreatePage {
-    constructor(router, helper, global, keyboard, Wallet, badge) {
+    constructor(router, helper, global, keyboard, Wallet) {
         this.router = router;
         this.helper = helper;
         this.global = global;
         this.keyboard = keyboard;
         this.Wallet = Wallet;
-        this.badge = badge;
         this.password = "";
         this.password1 = "";
         this.walletName = "";
@@ -133,7 +130,6 @@ let WalletCreatePage = class WalletCreatePage {
     }
     createWallet() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            this.badge.set(11);
             if ((yield this.checkWalletName()) !== "") {
                 return;
             }
@@ -209,8 +205,7 @@ WalletCreatePage.ctorParameters = () => [
     { type: _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_4__["HelperService"] },
     { type: _providers_global_global_service__WEBPACK_IMPORTED_MODULE_3__["GlobalService"] },
     { type: _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_6__["Keyboard"] },
-    { type: _providers_wallet_wallet_service__WEBPACK_IMPORTED_MODULE_5__["WalletService"] },
-    { type: _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_7__["Badge"] }
+    { type: _providers_wallet_wallet_service__WEBPACK_IMPORTED_MODULE_5__["WalletService"] }
 ];
 WalletCreatePage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -222,8 +217,7 @@ WalletCreatePage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_4__["HelperService"],
         _providers_global_global_service__WEBPACK_IMPORTED_MODULE_3__["GlobalService"],
         _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_6__["Keyboard"],
-        _providers_wallet_wallet_service__WEBPACK_IMPORTED_MODULE_5__["WalletService"],
-        _ionic_native_badge_ngx__WEBPACK_IMPORTED_MODULE_7__["Badge"]])
+        _providers_wallet_wallet_service__WEBPACK_IMPORTED_MODULE_5__["WalletService"]])
 ], WalletCreatePage);
 
 

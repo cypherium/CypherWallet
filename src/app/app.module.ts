@@ -30,7 +30,7 @@ import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-transla
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 // import { PincodeModalPageModule } from './pages/pincode-modal/pincode-modal.module';
 // import { KeypadComponent } from './components/keypad/keypad.component';
-import { Badge } from '@ionic-native/badge/ngx';
+import { OneSignal } from '@ionic-native/onesignal/ngx';
 
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -66,7 +66,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         Keyboard,
         BarcodeScanner,
         HTTP,
-        Badge,
+        OneSignal,
         TranslateService,
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
     ],

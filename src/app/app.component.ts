@@ -11,7 +11,7 @@ import { TranslateService } from "@ngx-translate/core";
 import { environment } from '../environments/environment';
 import { HelperService } from './providers/helper/helper.service';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { Badge } from '@ionic-native/badge/ngx';
+import { OneSignal } from '@ionic-native/onesignal/ngx';
 
 @Component({
     selector: 'app-root',
@@ -31,7 +31,7 @@ export class AppComponent {
         private translate: TranslateService,
         private http: HttpClient,
         private helper: HelperService,
-        public badge: Badge
+        private oneSignal: OneSignal
     ) {
         this.http.get(environment.appServerUrl + this.global.api['getProvider']).subscribe((res: any) => {
             this.global.provider = 'http://' + res.providers[0].ip;
@@ -39,7 +39,6 @@ export class AppComponent {
                 this.helper.toast('The network is abnormal, please visit later.');
         });
         this.initializeApp();
-        this.badge.set(11);
     }
 
     initializeApp() {
@@ -48,32 +47,25 @@ export class AppComponent {
             // this.statusBar.styleDefault();
             this.splashScreen.hide();
 
-            // //Remove this method to stop OneSignal Debugging 
-            // window["plugins"].OneSignal.setLogLevel({ logLevel: 6, visualLevel: 0 });
+this.oneSignal.startInit('181c8c4b-27f8-4445-97c0-1e367c4a88ca', '380226338398');
 
-            // var notificationOpenedCallback = function (jsonData) {
-            //     console.log('notificationOpenedCallback: ' + JSON.stringify(jsonData));
-            // };
+this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
 
-            // // Set your iOS Settings
-            // var iosSettings = {};
-            // iosSettings["kOSSettingsKeyAutoPrompt"] = false;
-            // iosSettings["kOSSettingsKeyInAppLaunchURL"] = false;
+this.oneSignal.handleNotificationReceived().subscribe(data => {
+     // do something when notification is received
+    console.log('handleNotificationReceived'+JSON.stringify(data));
+    this.helper.toast('handleNotificationReceived'+JSON.stringify(data));
+    // this.badge.increase(1);
+});
 
-            // window["plugins"].OneSignal
-            //     .startInit("181c8c4b-27f8-4445-97c0-1e367c4a88ca")
-            //     .handleNotificationOpened(notificationOpenedCallback)
-            //     .iOSSettings(iosSettings)
-            //     .inFocusDisplaying(window["plugins"].OneSignal.OSInFocusDisplayOption.Notification)
-            //     .endInit();
+this.oneSignal.handleNotificationOpened().subscribe(data => {
+      // do something when a notification is opened
+    console.log('handleNotificationOpened'+JSON.stringify(data));
+    this.helper.toast('handleNotificationOpened'+JSON.stringify(data));
+    // this.badge.clear();
+});
 
-            // // The promptForPushNotificationsWithUserResponse function will show the iOS push notification prompt. We recommend removing the following code and instead using an In-App Message to prompt for notification permission (See step 6)
-            // window["plugins"].OneSignal.promptForPushNotificationsWithUserResponse(function (accepted) {
-            //     console.log("User accepted notifications: " + accepted);
-            //     n = 1;
-            // });
-
-            //     this.badge.set(12);
+this.oneSignal.endInit();
     
             this.keyboard.onKeyboardWillShow().subscribe(() => {
                 //keyboard显示
