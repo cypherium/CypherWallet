@@ -30,8 +30,14 @@ import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-transla
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 // import { PincodeModalPageModule } from './pages/pincode-modal/pincode-modal.module';
 // import { KeypadComponent } from './components/keypad/keypad.component';
-import { OneSignal } from '@ionic-native/onesignal/ngx';
 
+import { OneSignal } from '@ionic-native/onesignal/ngx';
+import {APP_INITIALIZER} from '@angular/core';
+import {AppConfig} from './config/app.config';
+
+export function loadConfig(config: AppConfig) {
+    return () => config.load();
+  }
 export function HttpLoaderFactory(http: HttpClient) {
     return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -68,7 +74,9 @@ export function HttpLoaderFactory(http: HttpClient) {
         HTTP,
         OneSignal,
         TranslateService,
-        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+        { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+        AppConfig,
+        {provide: APP_INITIALIZER, useFactory: loadConfig, deps: [AppConfig], multi: true},
     ],
     bootstrap: [AppComponent]
 })

@@ -33,36 +33,28 @@ export class AppComponent {
         private helper: HelperService,
         private oneSignal: OneSignal
     ) {
-        this.http.get(environment.appServerUrl + this.global.api['getProvider']).subscribe((res: any) => {
-            this.global.provider = 'http://' + res.providers[0].ip;
-        }, err => {
-                this.helper.toast('The network is abnormal, please visit later.');
-        });
         this.initializeApp();
     }
-
     initializeApp() {
         let n:number;
         this.platform.ready().then(() => {
             // this.statusBar.styleDefault();
-            this.splashScreen.hide();
+        this.splashScreen.hide();
 
-this.oneSignal.startInit('181c8c4b-27f8-4445-97c0-1e367c4a88ca', '380226338398');
+        this.oneSignal.startInit('181c8c4b-27f8-4445-97c0-1e367c4a88ca', '380226338398');
+        this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
+        this.oneSignal.handleNotificationReceived().subscribe(data => {
+            // do something when notification is received
+            console.log('handleNotificationReceived'+JSON.stringify(data));
+            this.helper.toast('handleNotificationReceived'+JSON.stringify(data));
+            // this.badge.increase(1);
+        });
 
-this.oneSignal.inFocusDisplaying(this.oneSignal.OSInFocusDisplayOption.Notification);
-
-this.oneSignal.handleNotificationReceived().subscribe(data => {
-     // do something when notification is received
-    console.log('handleNotificationReceived'+JSON.stringify(data));
-    this.helper.toast('handleNotificationReceived'+JSON.stringify(data));
-    // this.badge.increase(1);
-});
-
-this.oneSignal.handleNotificationOpened().subscribe(data => {
-      // do something when a notification is opened
-    console.log('handleNotificationOpened'+JSON.stringify(data));
-    this.helper.toast('handleNotificationOpened'+JSON.stringify(data));
-    // this.badge.clear();
+        this.oneSignal.handleNotificationOpened().subscribe(data => {
+        // do something when a notification is opened
+        console.log('handleNotificationOpened'+JSON.stringify(data));
+        this.helper.toast('handleNotificationOpened'+JSON.stringify(data));
+        // this.badge.clear();
 });
 
 this.oneSignal.endInit();
