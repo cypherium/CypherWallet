@@ -361,19 +361,19 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
-      "id": "cordova-plugin-badge.Badge",
-      "file": "plugins/cordova-plugin-badge/www/badge.js",
-      "pluginId": "cordova-plugin-badge",
-      "clobbers": [
-        "cordova.plugins.notification.badge"
-      ]
-    },
-    {
       "id": "onesignal-cordova-plugin.OneSignal",
       "file": "plugins/onesignal-cordova-plugin/www/OneSignal.js",
       "pluginId": "onesignal-cordova-plugin",
       "clobbers": [
         "OneSignal"
+      ]
+    },
+    {
+      "id": "cordova-plugin-fingerprint-aio.Fingerprint",
+      "file": "plugins/cordova-plugin-fingerprint-aio/www/Fingerprint.js",
+      "pluginId": "cordova-plugin-fingerprint-aio",
+      "clobbers": [
+        "Fingerprint"
       ]
     }
   ];
@@ -395,7 +395,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-file": "6.0.2",
     "cordova-plugin-advanced-http": "2.4.1",
     "cordova-plugin-inappbrowser": "3.2.0",
-    "cordova-plugin-badge": "0.8.8",
-    "onesignal-cordova-plugin": "2.10.1"
+    "onesignal-cordova-plugin": "2.10.1",
+    "cordova-plugin-fingerprint-aio": "3.0.1"
   };
 });

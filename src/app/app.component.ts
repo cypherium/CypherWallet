@@ -31,7 +31,7 @@ export class AppComponent {
         private translate: TranslateService,
         private http: HttpClient,
         private helper: HelperService,
-        private oneSignal: OneSignal
+        public oneSignal: OneSignal
     ) {
         this.initializeApp();
     }
@@ -51,13 +51,13 @@ export class AppComponent {
         });
 
         this.oneSignal.handleNotificationOpened().subscribe(data => {
-        // do something when a notification is opened
-        console.log('handleNotificationOpened'+JSON.stringify(data));
-        this.helper.toast('handleNotificationOpened'+JSON.stringify(data));
-        // this.badge.clear();
-});
-
-this.oneSignal.endInit();
+            // do something when a notification is opened
+            console.log('handleNotificationOpened'+JSON.stringify(data));
+            this.helper.toast('handleNotificationOpened'+JSON.stringify(data));
+            // this.badge.clear();
+        });
+        this.global.gOneSignal = this.oneSignal;
+        this.oneSignal.endInit();
     
             this.keyboard.onKeyboardWillShow().subscribe(() => {
                 //keyboard显示
@@ -80,6 +80,7 @@ this.oneSignal.endInit();
                             this.storage.get("localwalletindex").then(res => {
                                 console.log("获取钱包序号：", this.global.gWalletList);
                                 this.global.currentWalletIndex = +res || 0;
+                                this.oneSignal.sendTag('address', this.global.gWalletList[this.global.currentWalletIndex].addr);
                                 this.navCtrl.navigateRoot('wallet');
                                 // this.global.currentWallet = this.global.gWalletList[this.global.currentWalletIndex];
                             })

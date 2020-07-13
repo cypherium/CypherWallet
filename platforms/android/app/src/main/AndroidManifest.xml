@@ -20,6 +20,7 @@
                 <category android:name="cph.mobile.wallet" />
             </intent-filter>
         </receiver>
+        <activity android:exported="true" android:name="de.niklasmerz.cordova.biometric.BiometricActivity" android:theme="@style/TransparentTheme" />
     </application>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -31,4 +32,6 @@
     <uses-permission android:name="com.amazon.device.messaging.permission.RECEIVE" />
     <permission android:name="cph.mobile.wallet.permission.RECEIVE_ADM_MESSAGE" android:protectionLevel="signature" />
     <uses-permission android:name="cph.mobile.wallet.permission.RECEIVE_ADM_MESSAGE" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 </manifest>

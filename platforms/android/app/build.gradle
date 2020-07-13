@@ -100,6 +100,7 @@ ext {
 // PLUGIN GRADLE EXTENSIONS START
 apply from: "../phonegap-plugin-barcodescanner/mobile-barcodescanner.gradle"
 apply from: "../onesignal-cordova-plugin/wallet-build-extras-onesignal.gradle"
+apply from: "../cordova-plugin-fingerprint-aio/wallet-build.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras1 = file('build-extras.gradle').exists()

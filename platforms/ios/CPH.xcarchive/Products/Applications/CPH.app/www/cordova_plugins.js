@@ -383,6 +383,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "OneSignal"
       ]
+    },
+    {
+      "id": "cordova-plugin-fingerprint-aio.Fingerprint",
+      "file": "plugins/cordova-plugin-fingerprint-aio/www/Fingerprint.js",
+      "pluginId": "cordova-plugin-fingerprint-aio",
+      "clobbers": [
+        "Fingerprint"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -403,6 +411,8 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-sqlite-storage": "3.4.0",
     "phonegap-plugin-barcodescanner": "8.1.0",
     "cordova-plugin-inappbrowser": "3.2.0",
-    "onesignal-cordova-plugin": "2.10.1"
+    "onesignal-cordova-plugin": "2.10.1",
+    "cordova-plugin-add-swift-support": "2.0.2",
+    "cordova-plugin-fingerprint-aio": "3.0.1"
   };
 });

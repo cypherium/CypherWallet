@@ -14,7 +14,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		yNybSIVorOZDStKoa8WGd7AmdvE=
+		0RMD2netZbvf58Y/271tFCb+nD8=
 		</data>
 		<key>CDVBarcodeScanner.bundle/beep.caf</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		0jZSVFjYVIXhDE5kOfqOddlv4Ac=
+		2tSD4iNp4IXzSVr6SKYy2skmLJA=
 		</data>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -42,11 +42,39 @@
 		</data>
 		<key>CDVLaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		qBX2gnkfRFbFcfPflSQ5C9wcr0c=
+		28TBmTKWODXupUUkr93T18CMlrs=
+		</data>
+		<key>Frameworks/libswiftCore.dylib</key>
+		<data>
+		MOXxGpPOhitx3jzehp07MGsS0ec=
+		</data>
+		<key>Frameworks/libswiftCoreFoundation.dylib</key>
+		<data>
+		dtm8tFzHI5KmOowTq17gvsUr/Xo=
+		</data>
+		<key>Frameworks/libswiftCoreGraphics.dylib</key>
+		<data>
+		2t0cBFH2GvcAoc/+IuTg1jiwpT0=
+		</data>
+		<key>Frameworks/libswiftDarwin.dylib</key>
+		<data>
+		wLNR5jLbL+5y6Ib61K2u769JgDI=
+		</data>
+		<key>Frameworks/libswiftDispatch.dylib</key>
+		<data>
+		Iw+D8TIm+gB/Rmb2loeL6eXk3+o=
+		</data>
+		<key>Frameworks/libswiftFoundation.dylib</key>
+		<data>
+		Lle+5B/yA1tHRISnaZBzml4lx/s=
+		</data>
+		<key>Frameworks/libswiftObjectiveC.dylib</key>
+		<data>
+		cumZzJiHNQrjjMDVYsw1HtFZ7tk=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		6jAXiFs4QGqk4hkDh4VHVD9jtd4=
+		FEioBsLNkS/RD58P3qwepQeN/RE=
 		</data>
 		<key>LaunchImage-1100-Landscape-2436h@3x.png</key>
 		<data>
@@ -122,7 +150,7 @@
 		</data>
 		<key>MainViewController.nib</key>
 		<data>
-		JYP7t62PbESSBKbqtimxhVJGcJM=
+		73CZDNrfJYjRq7WJS7/dxEJsgtA=
 		</data>
 		<key>PkgInfo</key>
 		<data>
@@ -130,15 +158,15 @@
 		</data>
 		<key>PlugIns/OneSignalNotificationServiceExtension.appex/Info.plist</key>
 		<data>
-		edMLQJKPuHhwmWyKJXCcRH3SfJc=
+		dBPaxMSEg2qnZ9KtNfwZ+twnTLA=
 		</data>
 		<key>PlugIns/OneSignalNotificationServiceExtension.appex/OneSignalNotificationServiceExtension</key>
 		<data>
-		+L5bStEGDNJX/gJUJB5c/ap4mXM=
+		vJiCwbYaJS6NtKyZ6sSNEjAdC7c=
 		</data>
 		<key>PlugIns/OneSignalNotificationServiceExtension.appex/_CodeSignature/CodeResources</key>
 		<data>
-		VZ2jnaDkyvdmlDKP1EJ36Ry6aBg=
+		DuPg8Y7GTDTTYliwnon5sr7G9Gs=
 		</data>
 		<key>PlugIns/OneSignalNotificationServiceExtension.appex/embedded.mobileprovision</key>
 		<data>
@@ -146,7 +174,7 @@
 		</data>
 		<key>config.xml</key>
 		<data>
-		EaH6uoPDXteiXciQPf6wh0KcqCo=
+		PwTVNrjy9z87F49TgTvpcRvKA0s=
 		</data>
 		<key>embedded.mobileprovision</key>
 		<data>
@@ -154,7 +182,7 @@
 		</data>
 		<key>scannerOverlay.nib</key>
 		<data>
-		PT90MYuzys0YcSJKk6q0D34EUt0=
+		BHVP1NL3UESZzZ7BmxFaCsinFjQ=
 		</data>
 		<key>www/0-es2015.js</key>
 		<data>
@@ -1418,7 +1446,7 @@
 		</data>
 		<key>www/assets/i18n/en.json</key>
 		<data>
-		tg11B9r2aG1E2QRE3/6s4jRNUik=
+		YFIcxBZSb4CThe9EI5udz2ulHsU=
 		</data>
 		<key>www/assets/icon/favicon.png</key>
 		<data>
@@ -1634,7 +1662,7 @@
 		</data>
 		<key>www/cordova_plugins.js</key>
 		<data>
-		TgP6p39dLT761bO8+1MHkbvExh8=
+		ocyozRStM6GTxlObCqf0PVMZFjE=
 		</data>
 		<key>www/core-js-js-es2015.js</key>
 		<data>
@@ -1671,22 +1699,6 @@
 		<key>www/cypherium-full-logo.svg</key>
 		<data>
 		vUayLR9Q0Us6/TNkJpnc4XOIa1c=
-		</data>
-		<key>www/default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970-es2015.js</key>
-		<data>
-		TLeq5+tloGTuyMQFWni3UFelYDY=
-		</data>
-		<key>www/default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970-es2015.js.map</key>
-		<data>
-		0ZV0/MFNhuhAsO3QByVHCN+zdas=
-		</data>
-		<key>www/default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970-es5.js</key>
-		<data>
-		ZrAcXfTApqVx1IoIfc2FwzqPu4I=
-		</data>
-		<key>www/default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970-es5.js.map</key>
-		<data>
-		RK3fbJb/mlV0vVok4oyqm4OPnF8=
 		</data>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84-es2015.js</key>
 		<data>
@@ -1894,19 +1906,19 @@
 		</data>
 		<key>www/main-es2015.js</key>
 		<data>
-		RPhNZRpeis0I8TCWxnDiirBtuDY=
+		F7Eraiy0aW3H0up5OiZUJx/4AAQ=
 		</data>
 		<key>www/main-es2015.js.map</key>
 		<data>
-		1kfvp0CEhGfXu5gXn+qm7D0qWvc=
+		2zRO7/3nh/nltY1eSABv4E6C8+Y=
 		</data>
 		<key>www/main-es5.js</key>
 		<data>
-		hzbBmoxGYRgtRu5QwiXMR/qaLpM=
+		7KLlJ0x5CvhIgnJlBlYZpp8tbpY=
 		</data>
 		<key>www/main-es5.js.map</key>
 		<data>
-		qXjtlEKTPklMAQyZBZsDdIKfxm0=
+		N5OY11znb1t0MdN65XpLQyhd2Go=
 		</data>
 		<key>www/md-transition-f444ed6d-js-es2015.js</key>
 		<data>
@@ -1998,19 +2010,19 @@
 		</data>
 		<key>www/pages-cph-send-cph-send-module-es2015.js</key>
 		<data>
-		9y2niAaXcrOzQnp6Zl9Ob7A94QM=
+		cn1PcvVCbd6D9+OLbnkHiDGHVMc=
 		</data>
 		<key>www/pages-cph-send-cph-send-module-es2015.js.map</key>
 		<data>
-		E8+mu4F6xHg4nGsgjS7T5KhqT+4=
+		zWwZszh4h4GEBTFvXBD6MbF65KY=
 		</data>
 		<key>www/pages-cph-send-cph-send-module-es5.js</key>
 		<data>
-		Z1SI1b8WStl4iiUu/CAph17GCNo=
+		uq+mSXxYSlmIr6FrDurAs/teu0k=
 		</data>
 		<key>www/pages-cph-send-cph-send-module-es5.js.map</key>
 		<data>
-		qMFEclPgqXNzuelPAouSDutswuk=
+		i9ziWs2f97Kh0NX54bQ/P2D0eB4=
 		</data>
 		<key>www/pages-export-keystore-export-keystore-module-es2015.js</key>
 		<data>
@@ -2142,19 +2154,19 @@
 		</data>
 		<key>www/pages-tabs-wallet-wallet-module-es2015.js</key>
 		<data>
-		TsYBsQr7hyG58JE7SgOGzGhUjSc=
+		bszj6GjUPbX8tIhOLL3eaSwn0/k=
 		</data>
 		<key>www/pages-tabs-wallet-wallet-module-es2015.js.map</key>
 		<data>
-		nk+gbopX+SYSSZgAX2CqQT9BP9s=
+		1EvvKumCyUouNGrVDFnbY4t7ajU=
 		</data>
 		<key>www/pages-tabs-wallet-wallet-module-es5.js</key>
 		<data>
-		k9IVQFGLxV6GfcgsZRWWGVbNzDA=
+		biOgWrzeIVLpes8SvjupeFvifGQ=
 		</data>
 		<key>www/pages-tabs-wallet-wallet-module-es5.js.map</key>
 		<data>
-		nReXfhxIOQ2cOw2zm4B9yyigPjc=
+		jXU1p6feHpHYdEPYZqD9Bh10Yv4=
 		</data>
 		<key>www/pages-transaction-result-transaction-result-module-es2015.js</key>
 		<data>
@@ -2452,6 +2464,10 @@
 		<data>
 		p7A9a+/7es1E4aKJPkx0j6eQwuw=
 		</data>
+		<key>www/plugins/cordova-plugin-fingerprint-aio/www/Fingerprint.js</key>
+		<data>
+		IbpBye3pegtKUpPYFzWOGi6J668=
+		</data>
 		<key>www/plugins/cordova-plugin-inappbrowser/www/inappbrowser.js</key>
 		<data>
 		TuTJMLkc2Lod8+TvrcfiL0kPCSM=
@@ -2522,19 +2538,19 @@
 		</data>
 		<key>www/runtime-es2015.js</key>
 		<data>
-		FDH004WN4Tsl62io1UvBaWTA9YY=
+		YTqeaZDnvVemZuj1qsJNU7YWsHo=
 		</data>
 		<key>www/runtime-es2015.js.map</key>
 		<data>
-		IlmcyAeFRNCUrEIO5RR3uwuHvCk=
+		78IbUuY3Yfy41G6sdKirkaeyKxE=
 		</data>
 		<key>www/runtime-es5.js</key>
 		<data>
-		NSpt26qAxRxQfOrJ1iVSuxMlEY8=
+		+rrwRKY08H3vNd90yQYfemDGgKQ=
 		</data>
 		<key>www/runtime-es5.js.map</key>
 		<data>
-		01cyjov74/k5IyzKPS0edcdvQHs=
+		FZ0xyPEmgq9lCw1WwA8F84Xsj80=
 		</data>
 		<key>www/scan-white.svg</key>
 		<data>
@@ -5450,19 +5466,19 @@
 		</data>
 		<key>www/vendor-es2015.js</key>
 		<data>
-		d2g71VkR4ng650Q4AB+kA3bprzA=
+		CeWgKjmMLY0L08ovLD6oDnfi220=
 		</data>
 		<key>www/vendor-es2015.js.map</key>
 		<data>
-		PVku9Z38+mqnhaKbpu32n+A8c24=
+		qCSyBvHLVpPql7YkNH7PjUbCfao=
 		</data>
 		<key>www/vendor-es5.js</key>
 		<data>
-		ee5E08Ht1MrB4zK1BZmoBudhP90=
+		hJdoqi2JrdR24nCXeXevfLrmOOs=
 		</data>
 		<key>www/vendor-es5.js.map</key>
 		<data>
-		FzOm/DtARHS85zw1SVGxG0SBPmU=
+		TGcK/66U8OJsNC1D8z4RQz0/e2M=
 		</data>
 		<key>www/wallet-active.svg</key>
 		<data>
@@ -5501,7 +5517,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			w88yAsxtKqMA/ikBQcWHq8zwOOPbR0N6oHKguC+CDvg=
+			gX9lKB1rP2ZUdpRhVajUgz4jAMhh6kURHbEZQBzCTkw=
 			</data>
 		</dict>
 		<key>CDVBarcodeScanner.bundle/beep.caf</key>
@@ -5536,7 +5552,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nFJl/5W69J66z7BtoGfczEFoUnpYFDJbj88/Cei9RZI=
+			bfpY72IA6gvLbGdUlcC3o9Rp9DW7aeDxc0NlfFv96KY=
 			</data>
 		</dict>
 		<key>CDVLaunchScreen.storyboardc/Info.plist</key>
@@ -5550,7 +5566,56 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zMmei1Tme2cERXhamspUKERxTYXYLM+JPaG3R7CZJC0=
+			0ba3JVPE9qvS74dm2v3jNRqa8XcVzCHmhMTYGD7hKWs=
+			</data>
+		</dict>
+		<key>Frameworks/libswiftCore.dylib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			UvNjSG7YP/o9jIG4LDmiO/cJrzTnUsGFfyksoq6kGrg=
+			</data>
+		</dict>
+		<key>Frameworks/libswiftCoreFoundation.dylib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			k7mK+AGx7rbzoMsC8nm5rC9a2u5zzuXM6LbiMi71GnQ=
+			</data>
+		</dict>
+		<key>Frameworks/libswiftCoreGraphics.dylib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			mSV9j2ErApPmEA6QPtC4tQmJhx7Q38t+lfoMVvFnlj4=
+			</data>
+		</dict>
+		<key>Frameworks/libswiftDarwin.dylib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			w0Znls5KqmhZdn6lKyfAcQGDcrzvcW5nl1Tq90xoqHk=
+			</data>
+		</dict>
+		<key>Frameworks/libswiftDispatch.dylib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ui+1f3S42NMlEiD6UiHDtC1wsAuOJI5d5GLpzDh4/60=
+			</data>
+		</dict>
+		<key>Frameworks/libswiftFoundation.dylib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			awRZgnWyNNDrb/8dkR6Omep6DUu/VkWw+BWm1QZOoTI=
+			</data>
+		</dict>
+		<key>Frameworks/libswiftObjectiveC.dylib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			wDaauHrzE2fAJhZVH7hg4vaV8hBFxS/zKJXNxKpkRac=
 			</data>
 		</dict>
 		<key>LaunchImage-1100-Landscape-2436h@3x.png</key>
@@ -5683,28 +5748,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1ymDQ+DcXnwR9VxdZlHPnAh1bqTH2dOHZjlohqUxLAA=
+			HkKINg3rjLMXAw4ZzLc6mQ8YL8+9r1OtH+bi4mg644A=
 			</data>
 		</dict>
 		<key>PlugIns/OneSignalNotificationServiceExtension.appex/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			+3bNAQ3o2FvEcbeMNADx73O5OUzp2hID/Hv/0iTbmXI=
+			KcvEGwYl7ASYIyZBNS2jZIs4YlWOL1IQ7lq2me/7kn4=
 			</data>
 		</dict>
 		<key>PlugIns/OneSignalNotificationServiceExtension.appex/OneSignalNotificationServiceExtension</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GlMKN0QThjKJ/V/jhYn0Icbel3r8gt8VDf3dp9vS7SI=
+			nu1/VcN37dyPsuHD0KQ7JC423q4PPXU4HrFH6aY+sfw=
 			</data>
 		</dict>
 		<key>PlugIns/OneSignalNotificationServiceExtension.appex/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3PjAWq0zRBnSDmWxBrxh3VjuU9UbXnlMuGfrsiI04Ts=
+			7EPP8zjwELpHyEgoHPjsocQh0y2Gukqn3rYpkya0b84=
 			</data>
 		</dict>
 		<key>PlugIns/OneSignalNotificationServiceExtension.appex/embedded.mobileprovision</key>
@@ -5718,7 +5783,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			cqNST8yWL2V/10yFjIyoJ2SON85VXzceH0aLnvBFJiU=
+			Ydt8rCg3CcvH5SgzbBxDDL10ddmJqiz+lPfPqXeQx4s=
 			</data>
 		</dict>
 		<key>embedded.mobileprovision</key>
@@ -5732,7 +5797,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Mw/ixD7ZejpMSKL+zm522YR/cWQNkn7jqb96ekh6tJ8=
+			3pE02+BdkhN5UKgS7kc0dW66bBkAjTdeZ5Er6Sz1/HU=
 			</data>
 		</dict>
 		<key>www/0-es2015.js</key>
@@ -7944,7 +8009,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0tOMi6hg13AkXLMiCq8JlK/jb9xw6EXbcY0KrGYqbEk=
+			wx5/EE8NqGdcIs9/haG9WNyPqic0hJMwhj0Qsz1GWwI=
 			</data>
 		</dict>
 		<key>www/assets/icon/favicon.png</key>
@@ -8322,7 +8387,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			4eTIMI/37k3CeD58Cm8V0wIwLRBECmIwxrHqdTtILEs=
+			TS92tcsCw1M4mnLtGmmHymrhlqEWVOp7AWiVBLROlq4=
 			</data>
 		</dict>
 		<key>www/core-js-js-es2015.js</key>
@@ -8386,34 +8451,6 @@
 			<key>hash2</key>
 			<data>
 			KWFdGY0gQ8gHS8mYjBbOLjBYfi/aDG1phAH8RQgO45s=
-			</data>
-		</dict>
-		<key>www/default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970-es2015.js</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			3bO3n7GftkMC1N+6Obrlrq65Gbd5esvQ3/iCwGhRa4c=
-			</data>
-		</dict>
-		<key>www/default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970-es2015.js.map</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			DFo5rFezCDXmFDyFvo+ccIHyrBdLb2Qavc4LX8gGO38=
-			</data>
-		</dict>
-		<key>www/default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970-es5.js</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ff430Nqjl33Sz5G7ZUti7Jwv1OpX3kgRsk04L5pIfQo=
-			</data>
-		</dict>
-		<key>www/default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970-es5.js.map</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			y+gou6RxjHpcykCuahrio/cwMEOn0YnC8bITflqDCo0=
 			</data>
 		</dict>
 		<key>www/default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84-es2015.js</key>
@@ -8777,28 +8814,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gmtYwjx23xEcWFVbDLpht0MI2XTAZOztT9aGjyeuxWA=
+			o0OyfnExreVUIr5E/Bu6LCgSiC7+bjKpSNFrwj3XOk0=
 			</data>
 		</dict>
 		<key>www/main-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3SsYkABlveSc1PgFnWZiJDggL7BVZqzUV7fTbfQCH94=
+			S7lYcj80hdV1Wj8a/wkkosZu/gu/h4vP4K3HQMsH0W4=
 			</data>
 		</dict>
 		<key>www/main-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VBl7NWvKCd9ol7vOim7aeq/zu1mJ5tdzo5FxjRS7Hic=
+			w1w9Z8Tz5s3AbAlwmEltH8o+yeBOpfmrwBFMy6TwKf8=
 			</data>
 		</dict>
 		<key>www/main-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			p6HLFTxbyHRDhOIPNks3o5hUdXsSEz/EUx/gz44FS6k=
+			zKzUM6pt96qsB5RuJrhNrv5vQm0aEUcTXveWMuEgOgQ=
 			</data>
 		</dict>
 		<key>www/md-transition-f444ed6d-js-es2015.js</key>
@@ -8959,28 +8996,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zLyBpjbAlxaXioqc2mLBRiaP0N5zSzxag9L+NyEZ8bc=
+			NfKCM4JpRLlFLkfl8ilsMEf8nOhPUuL5zniTZ0anfms=
 			</data>
 		</dict>
 		<key>www/pages-cph-send-cph-send-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			shhRX7Me+tvVUyeNpkOkyCbheQ9fV2yGFBCdx9z/UU8=
+			yl+0AzZaPmtOdfUXviE2ljLLNwcFLaMsRl3awq3p3Vc=
 			</data>
 		</dict>
 		<key>www/pages-cph-send-cph-send-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5atANc11Lr+3BHpyi/ZAmPqOLVJu5JpLZlFqQBo9Mp4=
+			4bQl3FiEbRryWL1pJ1mvcP3LuKkPevEJ09CNvwLMg2w=
 			</data>
 		</dict>
 		<key>www/pages-cph-send-cph-send-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			h98yQ1Rgpx9p4lP2t5hshSfN/60bFkY5VWU25T98g2s=
+			/v7GsLnnr1pZ5j+uyc5O2Lmi1hOtJJ9aMJNjlPOnvTQ=
 			</data>
 		</dict>
 		<key>www/pages-export-keystore-export-keystore-module-es2015.js</key>
@@ -9211,28 +9248,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			M67mxJg82tqUe4TzBxH8OceEIGlxup5cTCvWQ3kHOns=
+			sXw4+WBS7QuwyKJY75ZZfXxfGOxB3S7wGJhAp5h5Cxw=
 			</data>
 		</dict>
 		<key>www/pages-tabs-wallet-wallet-module-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sE/CZFOyAL8+W9KslSBfLa9H0FnaMtL9iu+cDyYG/i4=
+			SBfzoYLCXef/45kDefXmu+TZNE7wkUBpw2U4uOqxCtY=
 			</data>
 		</dict>
 		<key>www/pages-tabs-wallet-wallet-module-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2gijF15xTi62TzWNN1HlnHqFzlg+1K9wDRidnXbaDSk=
+			2+2H7VUaZpAnrcHHSlGth+ZB844QuT1XvYGTJ5r8Rbk=
 			</data>
 		</dict>
 		<key>www/pages-tabs-wallet-wallet-module-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			135Fe/RzeAeBNkB7yIInFc3Tl4PEgTnYEiPoyEbuEiQ=
+			CkAsY6UrPvQ9GLaJ5m93oFpVEv61I7iHAMOd3v8Et88=
 			</data>
 		</dict>
 		<key>www/pages-transaction-result-transaction-result-module-es2015.js</key>
@@ -9753,6 +9790,13 @@
 			2r19nzz0vvRYaDlexf+ZC0go3w4I74oCafncQ2Noe3U=
 			</data>
 		</dict>
+		<key>www/plugins/cordova-plugin-fingerprint-aio/www/Fingerprint.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			nl3mhRcniJP493RPbDf9TwmopKFA/MnQBOunR1gxnX4=
+			</data>
+		</dict>
 		<key>www/plugins/cordova-plugin-inappbrowser/www/inappbrowser.js</key>
 		<dict>
 			<key>hash2</key>
@@ -9876,28 +9920,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CwtPBUkQAKlsR6SXGJpf0UrMDYMMeTulsAE5GMFKxgE=
+			1DtebFHqL5UiC/8Arv33Korr14CTl6s3kpZ8yxrGYOE=
 			</data>
 		</dict>
 		<key>www/runtime-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Jsegcemdb4Y8ih7fJGfkf4nZZIP1+cp+YAd+CFj/w7M=
+			RWZiB7JTc8eQEZq+OY5Z7u8izs/UYSUarZ3Me30ttRQ=
 			</data>
 		</dict>
 		<key>www/runtime-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			dPLr4B0mzWDw4UFxKBcoT6zRHodrFgzTYwRovYW6+rM=
+			iA+VGKSCMTrNjnFvmQUj50KnPSpcvCKjALhE9zn9E1U=
 			</data>
 		</dict>
 		<key>www/runtime-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			VRjOVuEl14P3fVIDp4+SvRNxr43V/jNdCKN0KPqhyLQ=
+			/kwKKWrC9zwzbIkhHwA+i+gi+IDRLs8USNRYYPTgMRs=
 			</data>
 		</dict>
 		<key>www/scan-white.svg</key>
@@ -15000,28 +15044,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rI00wJSHCFrYfgxaXVvQ+DF0aWVJq2vdnZyh8U9xJxM=
+			mdKu+m9MIhf2fj4QazEcXJlwkjvb5CIBsK3qadSPaR0=
 			</data>
 		</dict>
 		<key>www/vendor-es2015.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Qww1ixru37AtOSITYQoO95PLthuFH/lBkin9ysA2uuo=
+			GoagGAtgS1t2kAQ4DuxksajoktyA1LFZ+AsvRN2u17I=
 			</data>
 		</dict>
 		<key>www/vendor-es5.js</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			G2yQXOl6kj5/BN+siillUCmrCfqRXRw4QrPR8GyY1oQ=
+			WcmZSTBqTrIZx0yCZkew/M/8kLb7IE7B8hkYPKZe0GE=
 			</data>
 		</dict>
 		<key>www/vendor-es5.js.map</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FhJmwakyGH8a0XnhvOVYDiEVI7G6kWN3NJcMHQlNaCE=
+			9Y/8OWLPuQE/B82GAuQ6ON20ib9nro6RD5B5+4703qI=
 			</data>
 		</dict>
 		<key>www/wallet-active.svg</key>

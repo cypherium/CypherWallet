@@ -9,7 +9,7 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <!-- <ion-buttons slot=\"start\">\n            <ion-button (click)=\"back()\">\n                <ion-icon slot=\"icon-only\" name=\"arrow-back\"></ion-icon>\n            </ion-button>\n        </ion-buttons> -->\n        <ion-title>{{ 'SEND' | translate }}</ion-title>\n        <ion-buttons slot=\"end\">\n            <ion-button tappable (click)=\"scan()\">\n                <ion-icon size=\"small\" slot=\"icon-only\" src=\"assets/imgs/scan.svg\"></ion-icon>\n            </ion-button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div class=\"main\">\n        <div class=\"input-text-wrapper\">\n            <div class=\"label\">\n                <div class=\"desc\">{{ 'SEND_AMOUNT' | translate }}</div>\n                <div class=\"amount\">\n                    <span class=\"tip\">{{ 'BALANCE' | translate }}</span> {{ amount | coinDisplay }} CPH\n                </div>\n            </div>\n            <div class=\"input-wrapper\">\n                <input type=\"number\" inputmode='decimal' (keyup)=\"checkAmount()\" (keypress)= \"hideKeyboard($event)\" [(ngModel)]=\"payAmount\"\n                    placeholder=\"{{ 'INPUT_AMOUNT_TIPS' | translate }}\">\n            </div>\n        </div>\n        <div class=\"error-text\" *ngIf=\"amountError\">{{ amountError }}</div>\n\n        <div class=\"input-text-wrapper\">\n            <div class=\"label\" translate>RECEIVE_ADDRESS</div>\n            <div class=\"input-wrapper\">\n                <input type=\"text\" (keyup)=\"checkAddr()\" (keypress)= \"hideKeyboard($event)\" [(ngModel)]=\"receiveAddress\"\n                    placeholder=\"{{ 'INPUT_ADDR_TIPS' | translate }}\">\n            </div>\n        </div>\n        <div class=\"error-text\" *ngIf=\"addressError\">{{ addressError }}</div>\n\n        <div class=\"range-wrapper\">\n            <div class=\"label\">\n                <div class=\"desc\" translate>MINER_FEE</div>\n                <div class=\"amount\">\n                    <span class=\"tip\">{{ (range * 21000 / 1000000000) | coinDisplay }} CPH</span>\n                </div>\n            </div>\n\n            <div class=\"range\">\n                <ion-range mode=\"ios\" (ionChange)=\"changeRange($event)\" [(ngModel)]=\"range\" [min]=\"min\"\n                    [max]=\"max\"></ion-range>\n                <ion-label class=\"desc\">\n                    <p translate>SLOW</p>\n                    <p translate>QUICK</p>\n                </ion-label>\n            </div>\n\n        </div>\n    </div>\n\n    <div class=\"confirm-button\"\n        [ngClass]=\"(!payAmount || addressError || amountError || !receiveAddress || !amount) ? 'disabled' : ''\"\n        (click)=\"transferConfirm()\" translate=\"\">\n        CONFIRM</div>\n</ion-content>\n\n<app-generate-privatekey *ngIf=\"ifShowPasswordPrompt\" promptDesc=\"{{ 'INPUT_PASSWORD_TIPS' | translate }}\"\n    cancelText=\"{{ 'CANCEL' | translate }}\" confirmText=\"{{ 'CONFIRM' | translate }}\" (cancel)=\"cancelPrompt()\"\n    (confirm)=\"confirmPrompt($event)\"></app-generate-privatekey>\n\n<app-alert [title]=\"alertTitle\" [desc]=\"alertDesc\" *ngIf=\"ifShowAlert\" cancelText=\"{{ 'CANCEL' | translate }}\"\n    (cancel)=\"cancelAlert()\" confirmText=\"{{ 'CONFIRM' | translate }}\" (confirm)=\"confirmAlert()\">\n</app-alert>\n");
+/* harmony default export */ __webpack_exports__["default"] = ("<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <!-- <ion-buttons slot=\"start\">\n            <ion-button (click)=\"back()\">\n                <ion-icon slot=\"icon-only\" name=\"arrow-back\"></ion-icon>\n            </ion-button>\n        </ion-buttons> -->\n        <ion-title>{{ 'SEND' | translate }}</ion-title>\n        <ion-buttons slot=\"end\">\n            <ion-button tappable (click)=\"scan()\">\n                <ion-icon size=\"small\" slot=\"icon-only\" src=\"assets/imgs/scan.svg\"></ion-icon>\n            </ion-button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div class=\"main\">\n        <div class=\"input-text-wrapper\">\n            <div class=\"label\">\n                <div class=\"desc\">{{ 'SEND_AMOUNT' | translate }}</div>\n                <div class=\"amount\">\n                    <span class=\"tip\">{{ 'BALANCE' | translate }}</span> {{ amount | coinDisplay }} CPH\n                </div>\n            </div>\n            <div class=\"input-wrapper\">\n                <input type=\"number\" inputmode='decimal' (keyup)=\"checkAmount()\" (keypress)= \"hideKeyboard($event)\" [(ngModel)]=\"payAmount\"\n                    placeholder=\"{{ 'INPUT_AMOUNT_TIPS' | translate }}\">\n            </div>\n        </div>\n        <div class=\"error-text\" *ngIf=\"amountError\">{{ amountError }}</div>\n\n        <div class=\"input-text-wrapper\">\n            <div class=\"label\" translate>RECEIVE_ADDRESS</div>\n            <div class=\"input-wrapper\">\n                <input type=\"text\" (keyup)=\"checkAddr()\" (keypress)= \"hideKeyboard($event)\" [(ngModel)]=\"receiveAddress\"\n                    placeholder=\"{{ 'INPUT_ADDR_TIPS' | translate }}\">\n            </div>\n        </div>\n        <div class=\"error-text\" *ngIf=\"addressError\">{{ addressError }}</div>\n\n        <div class=\"range-wrapper\">\n            <div class=\"label\">\n                <div class=\"desc\" translate>MINER_FEE</div>\n                <div class=\"amount\">\n                    <span class=\"tip\">{{ (range * 21000 / 1000000000) | coinDisplay }} CPH</span>\n                </div>\n            </div>\n\n            <div class=\"range\">\n                <ion-range mode=\"ios\" (ionChange)=\"changeRange($event)\" [(ngModel)]=\"range\" [min]=\"min\"\n                    [max]=\"max\"></ion-range>\n                <ion-label class=\"desc\">\n                    <p translate>SLOW</p>\n                    <p translate>QUICK</p>\n                </ion-label>\n            </div>\n\n        </div>\n    </div>\n\n    <div class=\"confirm-button\"\n        [ngClass]=\"(!payAmount || addressError || amountError || !receiveAddress || !amount) ? 'disabled' : ''\"\n        (click)=\"transferConfirm()\" translate=\"\">\n        CONFIRM</div>\n        <div>    <ion-button (click)=\"showFingerprintAuthDlg()\">show fingerprint auth dialog  </ion-button>\n        </div>\n</ion-content>\n\n<app-generate-privatekey *ngIf=\"ifShowPasswordPrompt\" promptDesc=\"{{ 'INPUT_PASSWORD_TIPS' | translate }}\"\n    cancelText=\"{{ 'CANCEL' | translate }}\" confirmText=\"{{ 'CONFIRM' | translate }}\" (cancel)=\"cancelPrompt()\"\n    (confirm)=\"confirmPrompt($event)\"></app-generate-privatekey>\n\n<app-alert [title]=\"alertTitle\" [desc]=\"alertDesc\" *ngIf=\"ifShowAlert\" cancelText=\"{{ 'CANCEL' | translate }}\"\n    (cancel)=\"cancelAlert()\" confirmText=\"{{ 'CONFIRM' | translate }}\" (confirm)=\"confirmAlert()\">\n</app-alert>\n");
 
 /***/ }),
 
@@ -120,6 +120,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic-native/keyboard/ngx */ "./node_modules/@ionic-native/keyboard/ngx/index.js");
 /* harmony import */ var _pincode_modal_pincode_modal_page__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../pincode-modal/pincode-modal.page */ "./src/app/pages/pincode-modal/pincode-modal.page.ts");
+/* harmony import */ var _ionic_native_fingerprint_aio_ngx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ionic-native/fingerprint-aio/ngx */ "./node_modules/@ionic-native/fingerprint-aio/ngx/index.js");
+
 
 
 
@@ -135,7 +137,7 @@ __webpack_require__.r(__webpack_exports__);
 let CphSendPage = class CphSendPage {
     constructor(router, 
     // private clipboard: Clipboard,
-    helper, global, storage, web3, nav, platform, keyboard, native, modalController, alertController) {
+    helper, global, storage, web3, nav, platform, keyboard, native, modalController, alertController, fingerAuth) {
         this.router = router;
         this.helper = helper;
         this.global = global;
@@ -147,6 +149,7 @@ let CphSendPage = class CphSendPage {
         this.native = native;
         this.modalController = modalController;
         this.alertController = alertController;
+        this.fingerAuth = fingerAuth;
         this.range = 18; //let price = await this.web3.cph.gasPrice(); price/1e9;
         this.wallet = {};
         this.amount = 0;
@@ -174,6 +177,22 @@ let CphSendPage = class CphSendPage {
         this.interval = setInterval(() => {
             this.updateWalletInfo();
         }, 10000);
+    }
+    showFingerprintAuthDlg() {
+        this.fingerAuth.isAvailable().then(result => {
+            console.log('showFingerprintAuthDlg' + result);
+            this.fingerAuth.show({
+                // clientId: 'fingerprint-Demo',
+                // clientSecret: 'password', //Only necessary for Android
+                // disableBackup:true  //Only for Android(optional)
+                //   title:"face id",
+                //   subtitle:"face id test",
+                description: "Pay with biometric"
+            })
+                .then((result) => console.log('fingerAuth.show' + result))
+                .catch((error) => console.log('fingerAuth.show error' + error.message));
+        }).catch((error) => console.log('showFingerprintAuthDlg error' + error.message));
+        ;
     }
     presentAlertConfirm() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
@@ -418,7 +437,8 @@ CphSendPage.ctorParameters = () => [
     { type: _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_9__["Keyboard"] },
     { type: _providers_native_native_service__WEBPACK_IMPORTED_MODULE_7__["NativeService"] },
     { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["ModalController"] },
-    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["AlertController"] }
+    { type: _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["AlertController"] },
+    { type: _ionic_native_fingerprint_aio_ngx__WEBPACK_IMPORTED_MODULE_11__["FingerprintAIO"] }
 ];
 CphSendPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -436,7 +456,8 @@ CphSendPage = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_9__["Keyboard"],
         _providers_native_native_service__WEBPACK_IMPORTED_MODULE_7__["NativeService"],
         _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["ModalController"],
-        _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["AlertController"]])
+        _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["AlertController"],
+        _ionic_native_fingerprint_aio_ngx__WEBPACK_IMPORTED_MODULE_11__["FingerprintAIO"]])
 ], CphSendPage);
 
 

@@ -34,6 +34,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { OneSignal } from '@ionic-native/onesignal/ngx';
 import {APP_INITIALIZER} from '@angular/core';
 import {AppConfig} from './config/app.config';
+import { FingerprintAIO } from '@ionic-native/fingerprint-aio/ngx';
 
 export function loadConfig(config: AppConfig) {
     return () => config.load();
@@ -73,6 +74,7 @@ export function HttpLoaderFactory(http: HttpClient) {
         BarcodeScanner,
         HTTP,
         OneSignal,
+        FingerprintAIO,
         TranslateService,
         { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
         AppConfig,

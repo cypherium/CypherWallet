@@ -478,7 +478,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (this.wallet.name != wallet.name) {
             this.global.currentWalletIndex = index;
-            this.storage.set('localwalletindex', this.global.currentWalletIndex);
+            this.storage.set('localwalletindex', this.global.currentWalletIndex); //onesignal
+
+            this.global.gOneSignal.sendTag('address', wallet.addr);
             this.wallet = wallet; // this.global.currentWallet = wallet;
 
             this.computeValue();

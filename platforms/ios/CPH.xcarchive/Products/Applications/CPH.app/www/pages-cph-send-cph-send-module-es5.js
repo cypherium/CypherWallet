@@ -21,7 +21,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <!-- <ion-buttons slot=\"start\">\n            <ion-button (click)=\"back()\">\n                <ion-icon slot=\"icon-only\" name=\"arrow-back\"></ion-icon>\n            </ion-button>\n        </ion-buttons> -->\n        <ion-title>{{ 'SEND' | translate }}</ion-title>\n        <ion-buttons slot=\"end\">\n            <ion-button tappable (click)=\"scan()\">\n                <ion-icon size=\"small\" slot=\"icon-only\" src=\"assets/imgs/scan.svg\"></ion-icon>\n            </ion-button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div class=\"main\">\n        <div class=\"input-text-wrapper\">\n            <div class=\"label\">\n                <div class=\"desc\">{{ 'SEND_AMOUNT' | translate }}</div>\n                <div class=\"amount\">\n                    <span class=\"tip\">{{ 'BALANCE' | translate }}</span> {{ amount | coinDisplay }} CPH\n                </div>\n            </div>\n            <div class=\"input-wrapper\">\n                <input type=\"number\" inputmode='decimal' (keyup)=\"checkAmount()\" (keypress)= \"hideKeyboard($event)\" [(ngModel)]=\"payAmount\"\n                    placeholder=\"{{ 'INPUT_AMOUNT_TIPS' | translate }}\">\n            </div>\n        </div>\n        <div class=\"error-text\" *ngIf=\"amountError\">{{ amountError }}</div>\n\n        <div class=\"input-text-wrapper\">\n            <div class=\"label\" translate>RECEIVE_ADDRESS</div>\n            <div class=\"input-wrapper\">\n                <input type=\"text\" (keyup)=\"checkAddr()\" (keypress)= \"hideKeyboard($event)\" [(ngModel)]=\"receiveAddress\"\n                    placeholder=\"{{ 'INPUT_ADDR_TIPS' | translate }}\">\n            </div>\n        </div>\n        <div class=\"error-text\" *ngIf=\"addressError\">{{ addressError }}</div>\n\n        <div class=\"range-wrapper\">\n            <div class=\"label\">\n                <div class=\"desc\" translate>MINER_FEE</div>\n                <div class=\"amount\">\n                    <span class=\"tip\">{{ (range * 21000 / 1000000000) | coinDisplay }} CPH</span>\n                </div>\n            </div>\n\n            <div class=\"range\">\n                <ion-range mode=\"ios\" (ionChange)=\"changeRange($event)\" [(ngModel)]=\"range\" [min]=\"min\"\n                    [max]=\"max\"></ion-range>\n                <ion-label class=\"desc\">\n                    <p translate>SLOW</p>\n                    <p translate>QUICK</p>\n                </ion-label>\n            </div>\n\n        </div>\n    </div>\n\n    <div class=\"confirm-button\"\n        [ngClass]=\"(!payAmount || addressError || amountError || !receiveAddress || !amount) ? 'disabled' : ''\"\n        (click)=\"transferConfirm()\" translate=\"\">\n        CONFIRM</div>\n</ion-content>\n\n<app-generate-privatekey *ngIf=\"ifShowPasswordPrompt\" promptDesc=\"{{ 'INPUT_PASSWORD_TIPS' | translate }}\"\n    cancelText=\"{{ 'CANCEL' | translate }}\" confirmText=\"{{ 'CONFIRM' | translate }}\" (cancel)=\"cancelPrompt()\"\n    (confirm)=\"confirmPrompt($event)\"></app-generate-privatekey>\n\n<app-alert [title]=\"alertTitle\" [desc]=\"alertDesc\" *ngIf=\"ifShowAlert\" cancelText=\"{{ 'CANCEL' | translate }}\"\n    (cancel)=\"cancelAlert()\" confirmText=\"{{ 'CONFIRM' | translate }}\" (confirm)=\"confirmAlert()\">\n</app-alert>\n";
+    __webpack_exports__["default"] = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <!-- <ion-buttons slot=\"start\">\n            <ion-button (click)=\"back()\">\n                <ion-icon slot=\"icon-only\" name=\"arrow-back\"></ion-icon>\n            </ion-button>\n        </ion-buttons> -->\n        <ion-title>{{ 'SEND' | translate }}</ion-title>\n        <ion-buttons slot=\"end\">\n            <ion-button tappable (click)=\"scan()\">\n                <ion-icon size=\"small\" slot=\"icon-only\" src=\"assets/imgs/scan.svg\"></ion-icon>\n            </ion-button>\n        </ion-buttons>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div class=\"main\">\n        <div class=\"input-text-wrapper\">\n            <div class=\"label\">\n                <div class=\"desc\">{{ 'SEND_AMOUNT' | translate }}</div>\n                <div class=\"amount\">\n                    <span class=\"tip\">{{ 'BALANCE' | translate }}</span> {{ amount | coinDisplay }} CPH\n                </div>\n            </div>\n            <div class=\"input-wrapper\">\n                <input type=\"number\" inputmode='decimal' (keyup)=\"checkAmount()\" (keypress)= \"hideKeyboard($event)\" [(ngModel)]=\"payAmount\"\n                    placeholder=\"{{ 'INPUT_AMOUNT_TIPS' | translate }}\">\n            </div>\n        </div>\n        <div class=\"error-text\" *ngIf=\"amountError\">{{ amountError }}</div>\n\n        <div class=\"input-text-wrapper\">\n            <div class=\"label\" translate>RECEIVE_ADDRESS</div>\n            <div class=\"input-wrapper\">\n                <input type=\"text\" (keyup)=\"checkAddr()\" (keypress)= \"hideKeyboard($event)\" [(ngModel)]=\"receiveAddress\"\n                    placeholder=\"{{ 'INPUT_ADDR_TIPS' | translate }}\">\n            </div>\n        </div>\n        <div class=\"error-text\" *ngIf=\"addressError\">{{ addressError }}</div>\n\n        <div class=\"range-wrapper\">\n            <div class=\"label\">\n                <div class=\"desc\" translate>MINER_FEE</div>\n                <div class=\"amount\">\n                    <span class=\"tip\">{{ (range * 21000 / 1000000000) | coinDisplay }} CPH</span>\n                </div>\n            </div>\n\n            <div class=\"range\">\n                <ion-range mode=\"ios\" (ionChange)=\"changeRange($event)\" [(ngModel)]=\"range\" [min]=\"min\"\n                    [max]=\"max\"></ion-range>\n                <ion-label class=\"desc\">\n                    <p translate>SLOW</p>\n                    <p translate>QUICK</p>\n                </ion-label>\n            </div>\n\n        </div>\n    </div>\n\n    <div class=\"confirm-button\"\n        [ngClass]=\"(!payAmount || addressError || amountError || !receiveAddress || !amount) ? 'disabled' : ''\"\n        (click)=\"transferConfirm()\" translate=\"\">\n        CONFIRM</div>\n        <div>    <ion-button (click)=\"showFingerprintAuthDlg()\">show fingerprint auth dialog  </ion-button>\n        </div>\n</ion-content>\n\n<app-generate-privatekey *ngIf=\"ifShowPasswordPrompt\" promptDesc=\"{{ 'INPUT_PASSWORD_TIPS' | translate }}\"\n    cancelText=\"{{ 'CANCEL' | translate }}\" confirmText=\"{{ 'CONFIRM' | translate }}\" (cancel)=\"cancelPrompt()\"\n    (confirm)=\"confirmPrompt($event)\"></app-generate-privatekey>\n\n<app-alert [title]=\"alertTitle\" [desc]=\"alertDesc\" *ngIf=\"ifShowAlert\" cancelText=\"{{ 'CANCEL' | translate }}\"\n    (cancel)=\"cancelAlert()\" confirmText=\"{{ 'CONFIRM' | translate }}\" (confirm)=\"confirmAlert()\">\n</app-alert>\n";
     /***/
   },
 
@@ -252,12 +252,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var _pincode_modal_pincode_modal_page__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! ../pincode-modal/pincode-modal.page */
     "./src/app/pages/pincode-modal/pincode-modal.page.ts");
+    /* harmony import */
+
+
+    var _ionic_native_fingerprint_aio_ngx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    /*! @ionic-native/fingerprint-aio/ngx */
+    "./node_modules/@ionic-native/fingerprint-aio/ngx/index.js");
 
     var CphSendPage =
     /*#__PURE__*/
     function () {
       function CphSendPage(router, // private clipboard: Clipboard,
-      helper, global, storage, web3, nav, platform, keyboard, native, modalController, alertController) {
+      helper, global, storage, web3, nav, platform, keyboard, native, modalController, alertController, fingerAuth) {
         var _this = this;
 
         _classCallCheck(this, CphSendPage);
@@ -273,6 +279,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.native = native;
         this.modalController = modalController;
         this.alertController = alertController;
+        this.fingerAuth = fingerAuth;
         this.range = 18; //let price = await this.web3.cph.gasPrice(); price/1e9;
 
         this.wallet = {};
@@ -308,12 +315,37 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }
 
       _createClass(CphSendPage, [{
+        key: "showFingerprintAuthDlg",
+        value: function showFingerprintAuthDlg() {
+          var _this2 = this;
+
+          this.fingerAuth.isAvailable().then(function (result) {
+            console.log('showFingerprintAuthDlg' + result);
+
+            _this2.fingerAuth.show({
+              // clientId: 'fingerprint-Demo',
+              // clientSecret: 'password', //Only necessary for Android
+              // disableBackup:true  //Only for Android(optional)
+              //   title:"face id",
+              //   subtitle:"face id test",
+              description: "Pay with biometric"
+            }).then(function (result) {
+              return console.log('fingerAuth.show' + result);
+            }).catch(function (error) {
+              return console.log('fingerAuth.show error' + error.message);
+            });
+          }).catch(function (error) {
+            return console.log('showFingerprintAuthDlg error' + error.message);
+          });
+          ;
+        }
+      }, {
         key: "presentAlertConfirm",
         value: function presentAlertConfirm() {
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
           /*#__PURE__*/
           regeneratorRuntime.mark(function _callee() {
-            var _this2 = this;
+            var _this3 = this;
 
             var header, message, comfirm, cancel, alert;
             return regeneratorRuntime.wrap(function _callee$(_context) {
@@ -349,12 +381,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         role: 'cancel',
                         cssClass: 'secondary',
                         handler: function handler() {
-                          _this2.nav.pop();
+                          _this3.nav.pop();
                         }
                       }, {
                         text: comfirm,
                         handler: function handler() {
-                          _this2.router.navigate(['/setting']);
+                          _this3.router.navigate(['/setting']);
                         }
                       }]
                     });
@@ -397,18 +429,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
           /*#__PURE__*/
           regeneratorRuntime.mark(function _callee2() {
-            var _this3 = this;
+            var _this4 = this;
 
             return regeneratorRuntime.wrap(function _callee2$(_context2) {
               while (1) {
                 switch (_context2.prev = _context2.next) {
                   case 0:
                     this.web3.getCphBalance(this.wallet.addr, function (v) {
-                      if (_this3.amount.toString() !== v.toString() && v !== undefined) {
-                        _this3.amount = v;
-                        _this3.global.gWalletList[_this3.global.currentWalletIndex].amount = _this3.amount;
+                      if (_this4.amount.toString() !== v.toString() && v !== undefined) {
+                        _this4.amount = v;
+                        _this4.global.gWalletList[_this4.global.currentWalletIndex].amount = _this4.amount;
 
-                        _this3.helper.saveWallet();
+                        _this4.helper.saveWallet();
                       }
                     });
 
@@ -440,13 +472,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "scan",
         value: function scan() {
-          var _this4 = this;
+          var _this5 = this;
 
           this.native.scan().then(function (res) {
-            return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this4, void 0, void 0,
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this5, void 0, void 0,
             /*#__PURE__*/
             regeneratorRuntime.mark(function _callee5() {
-              var _this5 = this;
+              var _this6 = this;
 
               return regeneratorRuntime.wrap(function _callee5$(_context5) {
                 while (1) {
@@ -454,7 +486,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     case 0:
                       console.log("SCAN RESULT：", res);
                       this.helper.handleText(res.text, function (url, method) {
-                        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this5, void 0, void 0,
+                        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this6, void 0, void 0,
                         /*#__PURE__*/
                         regeneratorRuntime.mark(function _callee4() {
                           var result, message;
@@ -529,7 +561,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
           /*#__PURE__*/
           regeneratorRuntime.mark(function _callee7() {
-            var _this6 = this;
+            var _this7 = this;
 
             var title, modal;
             return regeneratorRuntime.wrap(function _callee7$(_context7) {
@@ -560,7 +592,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       if (typeof s.data !== 'undefined' && s.data.dismissed !== false) {
                         //获取私钥
                         setTimeout(function () {
-                          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this6, void 0, void 0,
+                          return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this7, void 0, void 0,
                           /*#__PURE__*/
                           regeneratorRuntime.mark(function _callee6() {
                             var ret, error;
@@ -807,7 +839,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
           /*#__PURE__*/
           regeneratorRuntime.mark(function _callee12() {
-            var _this7 = this;
+            var _this8 = this;
 
             var address;
             return regeneratorRuntime.wrap(function _callee12$(_context12) {
@@ -816,7 +848,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   case 0:
                     address = this.receiveAddress.toLowerCase().replace('cph', '0x');
                     this.web3.transferCph(this.wallet.addr, address, this.payAmount, this.range, privatekey, function (err, tx) {
-                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this7, void 0, void 0,
+                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this8, void 0, void 0,
                       /*#__PURE__*/
                       regeneratorRuntime.mark(function _callee11() {
                         var navigationExtras, message;
@@ -930,6 +962,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         type: _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["ModalController"]
       }, {
         type: _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["AlertController"]
+      }, {
+        type: _ionic_native_fingerprint_aio_ngx__WEBPACK_IMPORTED_MODULE_11__["FingerprintAIO"]
       }];
     };
 
@@ -941,7 +975,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./cph-send.page.scss */
       "./src/app/pages/cph-send/cph-send.page.scss")).default]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__["HelperService"], _providers_global_global_service__WEBPACK_IMPORTED_MODULE_2__["GlobalService"], _ionic_storage__WEBPACK_IMPORTED_MODULE_4__["Storage"], _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_6__["Web3Service"], _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["NavController"], _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["Platform"], _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_9__["Keyboard"], _providers_native_native_service__WEBPACK_IMPORTED_MODULE_7__["NativeService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["ModalController"], _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["AlertController"]])], CphSendPage);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__["HelperService"], _providers_global_global_service__WEBPACK_IMPORTED_MODULE_2__["GlobalService"], _ionic_storage__WEBPACK_IMPORTED_MODULE_4__["Storage"], _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_6__["Web3Service"], _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["NavController"], _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["Platform"], _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_9__["Keyboard"], _providers_native_native_service__WEBPACK_IMPORTED_MODULE_7__["NativeService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["ModalController"], _ionic_angular__WEBPACK_IMPORTED_MODULE_8__["AlertController"], _ionic_native_fingerprint_aio_ngx__WEBPACK_IMPORTED_MODULE_11__["FingerprintAIO"]])], CphSendPage);
     /***/
   },
 
@@ -1128,25 +1162,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "forgotPinCode",
         value: function forgotPinCode() {
-          var _this8 = this;
+          var _this9 = this;
 
           this.ifShowPasswordPrompt = true;
 
           this.cancelPrompt = function () {
-            _this8.ifShowPasswordPrompt = false;
+            _this9.ifShowPasswordPrompt = false;
           };
 
           this.confirmPrompt = function (prv) {
-            _this8.ifShowPasswordPrompt = false;
+            _this9.ifShowPasswordPrompt = false;
             var navigationExtras = {
               state: {
                 privateKey: prv
               }
             };
 
-            _this8.router.navigate(['payment-password'], navigationExtras);
+            _this9.router.navigate(['payment-password'], navigationExtras);
 
-            _this8.dismiss(false);
+            _this9.dismiss(false);
           };
         }
       }, {

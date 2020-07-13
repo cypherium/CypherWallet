@@ -201,6 +201,8 @@ export class WalletPage implements OnInit {
         if (this.wallet.name != wallet.name) {
             this.global.currentWalletIndex = index;
             this.storage.set('localwalletindex', this.global.currentWalletIndex);
+            //onesignal
+            this.global.gOneSignal.sendTag('address', wallet.addr);
             this.wallet = wallet;
             // this.global.currentWallet = wallet;
             this.computeValue();

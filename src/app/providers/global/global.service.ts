@@ -15,6 +15,7 @@ export class GlobalService {
     maxWalletNum = 20;
     selectedRate: any = {};
     provider = "";
+    public gOneSignal: any;
     
     // currentWallet = {};
 

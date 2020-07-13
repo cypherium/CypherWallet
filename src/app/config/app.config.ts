@@ -3,8 +3,6 @@ import {HttpClient} from '@angular/common/http';
 import {map} from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 import { GlobalService } from '../providers/global/global.service';
-import { catchError } from 'rxjs/operators';
-import { Observable, EMPTY, throwError } from 'rxjs';
 import { HelperService } from '../providers/helper/helper.service';
 import { NativeService } from '../providers/native/native.service';
 @Injectable()

@@ -80,6 +80,9 @@
     <feature name="OneSignalPush">
         <param name="ios-package" value="OneSignalPush" />
     </feature>
+    <feature name="Fingerprint">
+        <param name="ios-package" value="Fingerprint" />
+    </feature>
     <name>CPH</name>
     <description>CPH Wallet</description>
     <author email="sky@cypheriumm.io" href="https://cypherium.io/">Cypherium Development Team</author>
@@ -178,4 +181,5 @@
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
     <preference name="WKWebViewOnly" value="true" />
+    <preference name="UseSwiftLanguageVersion" value="4.0" />
 </widget>

@@ -16,25 +16,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function $$_lazy_route_resourceLazyRecursive(module, exports, __webpack_require__) {
     var map = {
-      "./pages/about/about.module": ["./src/app/pages/about/about.module.ts", "default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970", "pages-about-about-module"],
+      "./pages/about/about.module": ["./src/app/pages/about/about.module.ts", "pages-about-about-module"],
       "./pages/backup-mnemonic/backup-mnemonic.module": ["./src/app/pages/backup-mnemonic/backup-mnemonic.module.ts", "pages-backup-mnemonic-backup-mnemonic-module"],
       "./pages/change-password/change-password.module": ["./src/app/pages/change-password/change-password.module.ts", "pages-change-password-change-password-module"],
       "./pages/cph-receive/cph-receive.module": ["./src/app/pages/cph-receive/cph-receive.module.ts", "pages-cph-receive-cph-receive-module"],
-      "./pages/cph-send/cph-send.module": ["./src/app/pages/cph-send/cph-send.module.ts", "default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~c2b07ca8", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84", "pages-cph-send-cph-send-module"],
-      "./pages/export-keystore/export-keystore.module": ["./src/app/pages/export-keystore/export-keystore.module.ts", "default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970", "default~pages-export-keystore-export-keystore-module~pages-export-privatekey-export-privatekey-modul~7daa9f50", "pages-export-keystore-export-keystore-module"],
-      "./pages/export-mnemonic/export-mnemonic.module": ["./src/app/pages/export-mnemonic/export-mnemonic.module.ts", "default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970", "pages-export-mnemonic-export-mnemonic-module"],
-      "./pages/export-privatekey/export-privatekey.module": ["./src/app/pages/export-privatekey/export-privatekey.module.ts", "default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970", "default~pages-export-keystore-export-keystore-module~pages-export-privatekey-export-privatekey-modul~7daa9f50", "pages-export-privatekey-export-privatekey-module"],
+      "./pages/cph-send/cph-send.module": ["./src/app/pages/cph-send/cph-send.module.ts", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~c2b07ca8", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84", "pages-cph-send-cph-send-module"],
+      "./pages/export-keystore/export-keystore.module": ["./src/app/pages/export-keystore/export-keystore.module.ts", "default~pages-export-keystore-export-keystore-module~pages-export-privatekey-export-privatekey-modul~7daa9f50", "pages-export-keystore-export-keystore-module"],
+      "./pages/export-mnemonic/export-mnemonic.module": ["./src/app/pages/export-mnemonic/export-mnemonic.module.ts", "pages-export-mnemonic-export-mnemonic-module"],
+      "./pages/export-privatekey/export-privatekey.module": ["./src/app/pages/export-privatekey/export-privatekey.module.ts", "default~pages-export-keystore-export-keystore-module~pages-export-privatekey-export-privatekey-modul~7daa9f50", "pages-export-privatekey-export-privatekey-module"],
       "./pages/language-toggle/language-toggle.module": ["./src/app/pages/language-toggle/language-toggle.module.ts", "pages-language-toggle-language-toggle-module"],
       "./pages/payment-password/payment-password.module": ["./src/app/pages/payment-password/payment-password.module.ts", "pages-payment-password-payment-password-module"],
       "./pages/scan/scan.module": ["./src/app/pages/scan/scan.module.ts", "pages-scan-scan-module"],
       "./pages/tabs/pledge/pledge.module": ["./src/app/pages/tabs/pledge/pledge.module.ts", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~c2b07ca8", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84", "pages-tabs-pledge-pledge-module"],
-      "./pages/tabs/setting/setting.module": ["./src/app/pages/tabs/setting/setting.module.ts", "default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970", "default~pages-export-keystore-export-keystore-module~pages-export-privatekey-export-privatekey-modul~7daa9f50", "pages-tabs-setting-setting-module"],
-      "./pages/tabs/wallet/wallet.module": ["./src/app/pages/tabs/wallet/wallet.module.ts", "default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~c2b07ca8", "default~pages-export-keystore-export-keystore-module~pages-export-privatekey-export-privatekey-modul~7daa9f50", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84", "pages-tabs-wallet-wallet-module"],
-      "./pages/transaction-result/transaction-result.module": ["./src/app/pages/transaction-result/transaction-result.module.ts", "default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~c2b07ca8", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84", "pages-transaction-result-transaction-result-module"],
-      "./pages/value-unit/value-unit.module": ["./src/app/pages/value-unit/value-unit.module.ts", "default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970", "default~pages-export-keystore-export-keystore-module~pages-export-privatekey-export-privatekey-modul~7daa9f50", "pages-value-unit-value-unit-module"],
+      "./pages/tabs/setting/setting.module": ["./src/app/pages/tabs/setting/setting.module.ts", "default~pages-export-keystore-export-keystore-module~pages-export-privatekey-export-privatekey-modul~7daa9f50", "pages-tabs-setting-setting-module"],
+      "./pages/tabs/wallet/wallet.module": ["./src/app/pages/tabs/wallet/wallet.module.ts", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~c2b07ca8", "default~pages-export-keystore-export-keystore-module~pages-export-privatekey-export-privatekey-modul~7daa9f50", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84", "pages-tabs-wallet-wallet-module"],
+      "./pages/transaction-result/transaction-result.module": ["./src/app/pages/transaction-result/transaction-result.module.ts", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~c2b07ca8", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84", "pages-transaction-result-transaction-result-module"],
+      "./pages/value-unit/value-unit.module": ["./src/app/pages/value-unit/value-unit.module.ts", "default~pages-export-keystore-export-keystore-module~pages-export-privatekey-export-privatekey-modul~7daa9f50", "pages-value-unit-value-unit-module"],
       "./pages/wallet-admin/wallet-admin.module": ["./src/app/pages/wallet-admin/wallet-admin.module.ts", "pages-wallet-admin-wallet-admin-module"],
       "./pages/wallet-create/wallet-create.module": ["./src/app/pages/wallet-create/wallet-create.module.ts", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~c2b07ca8", "default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module", "pages-wallet-create-wallet-create-module"],
-      "./pages/wallet-detail/wallet-detail.module": ["./src/app/pages/wallet-detail/wallet-detail.module.ts", "default~pages-about-about-module~pages-cph-send-cph-send-module~pages-export-keystore-export-keystor~b6c3c970", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~c2b07ca8", "default~pages-export-keystore-export-keystore-module~pages-export-privatekey-export-privatekey-modul~7daa9f50", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84", "pages-wallet-detail-wallet-detail-module"],
+      "./pages/wallet-detail/wallet-detail.module": ["./src/app/pages/wallet-detail/wallet-detail.module.ts", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~c2b07ca8", "default~pages-export-keystore-export-keystore-module~pages-export-privatekey-export-privatekey-modul~7daa9f50", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~b845ac84", "pages-wallet-detail-wallet-detail-module"],
       "./pages/wallet-import/wallet-import.module": ["./src/app/pages/wallet-import/wallet-import.module.ts", "default~pages-cph-send-cph-send-module~pages-tabs-pledge-pledge-module~pages-tabs-wallet-wallet-modu~c2b07ca8", "default~pages-wallet-create-wallet-create-module~pages-wallet-import-wallet-import-module", "pages-wallet-import-wallet-import-module"],
       "./pages/wallet-name/wallet-name.module": ["./src/app/pages/wallet-name/wallet-name.module.ts", "pages-wallet-name-wallet-name-module"]
     };
@@ -3495,25 +3495,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony import */
 
 
-    var _environments_environment__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
-    /*! ../environments/environment */
-    "./src/environments/environment.ts");
-    /* harmony import */
-
-
-    var _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    var _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
     /*! ./providers/helper/helper.service */
     "./src/app/providers/helper/helper.service.ts");
     /* harmony import */
 
 
-    var _angular_common_http__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
     /*! @angular/common/http */
     "./node_modules/@angular/common/fesm2015/http.js");
     /* harmony import */
 
 
-    var _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    var _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! @ionic-native/onesignal/ngx */
     "./node_modules/@ionic-native/onesignal/ngx/index.js"); // import { Web3Service } from './providers/web3/web3.service';
 
@@ -3523,8 +3517,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     function () {
       function AppComponent(platform, splashScreen, statusBar, global, navCtrl, // private web3: Web3Service,
       storage, keyboard, translate, http, helper, oneSignal) {
-        var _this = this;
-
         _classCallCheck(this, AppComponent);
 
         this.platform = platform;
@@ -3538,102 +3530,101 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.http = http;
         this.helper = helper;
         this.oneSignal = oneSignal;
-        this.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_9__["environment"].appServerUrl + this.global.api['getProvider']).subscribe(function (res) {
-          _this.global.provider = 'http://' + res.providers[0].ip;
-        }, function (err) {
-          _this.helper.toast('The network is abnormal, please visit later.');
-        });
         this.initializeApp();
       }
 
       _createClass(AppComponent, [{
         key: "initializeApp",
         value: function initializeApp() {
-          var _this2 = this;
+          var _this = this;
 
           var n;
           this.platform.ready().then(function () {
             // this.statusBar.styleDefault();
-            _this2.splashScreen.hide();
+            _this.splashScreen.hide();
 
-            _this2.oneSignal.startInit('181c8c4b-27f8-4445-97c0-1e367c4a88ca', '380226338398');
+            _this.oneSignal.startInit('181c8c4b-27f8-4445-97c0-1e367c4a88ca', '380226338398');
 
-            _this2.oneSignal.inFocusDisplaying(_this2.oneSignal.OSInFocusDisplayOption.Notification);
+            _this.oneSignal.inFocusDisplaying(_this.oneSignal.OSInFocusDisplayOption.Notification);
 
-            _this2.oneSignal.handleNotificationReceived().subscribe(function (data) {
+            _this.oneSignal.handleNotificationReceived().subscribe(function (data) {
               // do something when notification is received
               console.log('handleNotificationReceived' + JSON.stringify(data));
 
-              _this2.helper.toast('handleNotificationReceived' + JSON.stringify(data)); // this.badge.increase(1);
+              _this.helper.toast('handleNotificationReceived' + JSON.stringify(data)); // this.badge.increase(1);
 
             });
 
-            _this2.oneSignal.handleNotificationOpened().subscribe(function (data) {
+            _this.oneSignal.handleNotificationOpened().subscribe(function (data) {
               // do something when a notification is opened
               console.log('handleNotificationOpened' + JSON.stringify(data));
 
-              _this2.helper.toast('handleNotificationOpened' + JSON.stringify(data)); // this.badge.clear();
+              _this.helper.toast('handleNotificationOpened' + JSON.stringify(data)); // this.badge.clear();
 
             });
 
-            _this2.oneSignal.endInit();
+            _this.global.gOneSignal = _this.oneSignal;
 
-            _this2.keyboard.onKeyboardWillShow().subscribe(function () {
+            _this.oneSignal.endInit();
+
+            _this.keyboard.onKeyboardWillShow().subscribe(function () {
               //keyboard显示
               document.body.classList.add('keyboard-is-open');
             });
 
-            _this2.keyboard.onKeyboardWillHide().subscribe(function () {
+            _this.keyboard.onKeyboardWillHide().subscribe(function () {
               //keyboard显示
               document.body.classList.remove('keyboard-is-open');
             }); //获取本地存储的钱包，如果没有则前往创建钱包页
 
 
-            _this2.storage.get("localwallet").then(function (res) {
+            _this.storage.get("localwallet").then(function (res) {
               if (res) {
                 try {
-                  _this2.global.gWalletList = JSON.parse(res);
+                  _this.global.gWalletList = JSON.parse(res);
 
-                  if (_this2.global.gWalletList.length == 0) {
-                    _this2.navCtrl.navigateRoot('/wallet-create');
+                  if (_this.global.gWalletList.length == 0) {
+                    _this.navCtrl.navigateRoot('/wallet-create');
                   } else {
-                    _this2.storage.get("localwalletindex").then(function (res) {
-                      console.log("获取钱包序号：", _this2.global.gWalletList);
-                      _this2.global.currentWalletIndex = +res || 0;
+                    _this.storage.get("localwalletindex").then(function (res) {
+                      console.log("获取钱包序号：", _this.global.gWalletList);
+                      _this.global.currentWalletIndex = +res || 0;
 
-                      _this2.navCtrl.navigateRoot('wallet'); // this.global.currentWallet = this.global.gWalletList[this.global.currentWalletIndex];
+                      _this.oneSignal.sendTag('address', _this.global.gWalletList[_this.global.currentWalletIndex].addr);
+
+                      _this.navCtrl.navigateRoot('wallet'); // this.global.currentWallet = this.global.gWalletList[this.global.currentWalletIndex];
 
                     });
                   }
                 } catch (e) {
-                  _this2.global.gWalletList = [];
+                  _this.global.gWalletList = [];
 
-                  _this2.navCtrl.navigateRoot('/wallet-create');
+                  _this.navCtrl.navigateRoot('/wallet-create');
                 }
               } else {
-                _this2.navCtrl.navigateRoot('/wallet-create');
+                _this.navCtrl.navigateRoot('/wallet-create');
               }
             });
 
-            _this2.storage.get("localsetting").then(function (res) {
+            _this.storage.get("localsetting").then(function (res) {
               if (res) {
                 try {
                   var setting = JSON.parse(res);
-                  _this2.global.settings = setting;
+                  _this.global.settings = setting;
                 } catch (e) {
                   console.log("获取配置出错...");
                 }
               }
 
-              var lang = _this2.global.settings.language;
+              var lang = _this.global.settings.language;
 
               if (lang !== 'cn' && lang !== 'en') {
                 lang = 'en';
               }
 
-              _this2.translate.setDefaultLang(lang);
+              _this.translate.setDefaultLang(lang);
 
-              _this2.translate.use(lang);
+              _this.translate.use(lang);
 
               console.log("Setting language as:" + lang);
             });
@@ -3662,11 +3653,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         type: _ngx_translate_core__WEBPACK_IMPORTED_MODULE_8__["TranslateService"]
       }, {
-        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClient"]
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClient"]
       }, {
-        type: _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_10__["HelperService"]
+        type: _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_9__["HelperService"]
       }, {
-        type: _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_12__["OneSignal"]
+        type: _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_11__["OneSignal"]
       }];
     };
 
@@ -3678,7 +3669,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       styles: [tslib__WEBPACK_IMPORTED_MODULE_0__["__importDefault"](__webpack_require__(
       /*! ./app.component.scss */
       "./src/app/app.component.scss")).default]
-    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"], _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"], _providers_global_global_service__WEBPACK_IMPORTED_MODULE_6__["GlobalService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"], _ionic_storage__WEBPACK_IMPORTED_MODULE_5__["Storage"], _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_7__["Keyboard"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_8__["TranslateService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_11__["HttpClient"], _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_10__["HelperService"], _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_12__["OneSignal"]])], AppComponent);
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_2__["Platform"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_3__["SplashScreen"], _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_4__["StatusBar"], _providers_global_global_service__WEBPACK_IMPORTED_MODULE_6__["GlobalService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_2__["NavController"], _ionic_storage__WEBPACK_IMPORTED_MODULE_5__["Storage"], _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_7__["Keyboard"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_8__["TranslateService"], _angular_common_http__WEBPACK_IMPORTED_MODULE_10__["HttpClient"], _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_9__["HelperService"], _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_11__["OneSignal"]])], AppComponent);
     /***/
   },
 
@@ -3688,13 +3679,19 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     !*** ./src/app/app.module.ts ***!
     \*******************************/
 
-  /*! exports provided: HttpLoaderFactory, AppModule */
+  /*! exports provided: loadConfig, HttpLoaderFactory, AppModule */
 
   /***/
   function srcAppAppModuleTs(module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
     __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "loadConfig", function () {
+      return loadConfig;
+    });
     /* harmony export (binding) */
 
 
@@ -3874,9 +3871,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(
     /*! @ionic-native/onesignal/ngx */
-    "./node_modules/@ionic-native/onesignal/ngx/index.js"); // import { PincodeModalPageModule } from './pages/pincode-modal/pincode-modal.module';
+    "./node_modules/@ionic-native/onesignal/ngx/index.js");
+    /* harmony import */
+
+
+    var _config_app_config__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(
+    /*! ./config/app.config */
+    "./src/app/config/app.config.ts");
+    /* harmony import */
+
+
+    var _ionic_native_fingerprint_aio_ngx__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(
+    /*! @ionic-native/fingerprint-aio/ngx */
+    "./node_modules/@ionic-native/fingerprint-aio/ngx/index.js"); // import { PincodeModalPageModule } from './pages/pincode-modal/pincode-modal.module';
     // import { KeypadComponent } from './components/keypad/keypad.component';
 
+
+    function loadConfig(config) {
+      return function () {
+        return config.load();
+      };
+    }
 
     function HttpLoaderFactory(http) {
       return new _ngx_translate_http_loader__WEBPACK_IMPORTED_MODULE_26__["TranslateHttpLoader"](http, './assets/i18n/', '.json');
@@ -3897,9 +3912,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           deps: [_angular_common_http__WEBPACK_IMPORTED_MODULE_13__["HttpClient"]]
         }
       }), _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["BrowserModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_19__["FormsModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_13__["HttpClientModule"], _components_components_module__WEBPACK_IMPORTED_MODULE_9__["ComponentsModule"], _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(), _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"], _ionic_storage__WEBPACK_IMPORTED_MODULE_10__["IonicStorageModule"].forRoot()],
-      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_11__["Vibration"], _ionic_native_clipboard_ngx__WEBPACK_IMPORTED_MODULE_12__["Clipboard"], _ionic_native_app_version_ngx__WEBPACK_IMPORTED_MODULE_14__["AppVersion"], _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_16__["InAppBrowser"], _ionic_native_app_minimize_ngx__WEBPACK_IMPORTED_MODULE_17__["AppMinimize"], _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_15__["Network"], _providers_auto_guard_auth_guard_service__WEBPACK_IMPORTED_MODULE_18__["AuthGuardService"], _ionic_native_qr_scanner_ngx__WEBPACK_IMPORTED_MODULE_20__["QRScanner"], _ionic_native_open_native_settings_ngx__WEBPACK_IMPORTED_MODULE_21__["OpenNativeSettings"], _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_22__["Keyboard"], _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_23__["BarcodeScanner"], _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_24__["HTTP"], _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_27__["OneSignal"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_25__["TranslateService"], {
+      providers: [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"], _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_11__["Vibration"], _ionic_native_clipboard_ngx__WEBPACK_IMPORTED_MODULE_12__["Clipboard"], _ionic_native_app_version_ngx__WEBPACK_IMPORTED_MODULE_14__["AppVersion"], _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_16__["InAppBrowser"], _ionic_native_app_minimize_ngx__WEBPACK_IMPORTED_MODULE_17__["AppMinimize"], _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_15__["Network"], _providers_auto_guard_auth_guard_service__WEBPACK_IMPORTED_MODULE_18__["AuthGuardService"], _ionic_native_qr_scanner_ngx__WEBPACK_IMPORTED_MODULE_20__["QRScanner"], _ionic_native_open_native_settings_ngx__WEBPACK_IMPORTED_MODULE_21__["OpenNativeSettings"], _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_22__["Keyboard"], _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_23__["BarcodeScanner"], _ionic_native_http_ngx__WEBPACK_IMPORTED_MODULE_24__["HTTP"], _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_27__["OneSignal"], _ionic_native_fingerprint_aio_ngx__WEBPACK_IMPORTED_MODULE_29__["FingerprintAIO"], _ngx_translate_core__WEBPACK_IMPORTED_MODULE_25__["TranslateService"], {
         provide: _angular_router__WEBPACK_IMPORTED_MODULE_3__["RouteReuseStrategy"],
         useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"]
+      }, _config_app_config__WEBPACK_IMPORTED_MODULE_28__["AppConfig"], {
+        provide: _angular_core__WEBPACK_IMPORTED_MODULE_1__["APP_INITIALIZER"],
+        useFactory: loadConfig,
+        deps: [_config_app_config__WEBPACK_IMPORTED_MODULE_28__["AppConfig"]],
+        multi: true
       }],
       bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
     })], AppModule);
@@ -4218,7 +4238,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0,
           /*#__PURE__*/
           regeneratorRuntime.mark(function _callee2() {
-            var _this3 = this;
+            var _this2 = this;
 
             var keystore, error;
             return regeneratorRuntime.wrap(function _callee2$(_context2) {
@@ -4249,7 +4269,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   case 8:
                     this.ifShowLoading = true;
                     setTimeout(function () {
-                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this3, void 0, void 0,
+                      return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this2, void 0, void 0,
                       /*#__PURE__*/
                       regeneratorRuntime.mark(function _callee() {
                         var ret, _error;
@@ -4759,6 +4779,128 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /*! ./my-tabs.component.scss */
       "./src/app/components/my-tabs/my-tabs.component.scss")).default]
     }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavController"]])], MyTabsComponent);
+    /***/
+  },
+
+  /***/
+  "./src/app/config/app.config.ts":
+  /*!**************************************!*\
+    !*** ./src/app/config/app.config.ts ***!
+    \**************************************/
+
+  /*! exports provided: AppConfig */
+
+  /***/
+  function srcAppConfigAppConfigTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "AppConfig", function () {
+      return AppConfig;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! @angular/common/http */
+    "./node_modules/@angular/common/fesm2015/http.js");
+    /* harmony import */
+
+
+    var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! rxjs/operators */
+    "./node_modules/rxjs/_esm2015/operators/index.js");
+    /* harmony import */
+
+
+    var _environments_environment__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../../environments/environment */
+    "./src/environments/environment.ts");
+    /* harmony import */
+
+
+    var _providers_global_global_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! ../providers/global/global.service */
+    "./src/app/providers/global/global.service.ts");
+    /* harmony import */
+
+
+    var _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! ../providers/helper/helper.service */
+    "./src/app/providers/helper/helper.service.ts");
+    /* harmony import */
+
+
+    var _providers_native_native_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! ../providers/native/native.service */
+    "./src/app/providers/native/native.service.ts");
+
+    var AppConfig =
+    /*#__PURE__*/
+    function () {
+      function AppConfig(http, global, helper, native) {
+        _classCallCheck(this, AppConfig);
+
+        this.http = http;
+        this.global = global;
+        this.helper = helper;
+        this.native = native;
+      }
+
+      _createClass(AppConfig, [{
+        key: "load",
+        value: function load() {
+          var _this3 = this;
+
+          return new Promise(function (resolve) {
+            _this3.http.get(_environments_environment__WEBPACK_IMPORTED_MODULE_4__["environment"].appServerUrl + _this3.global.api['getProvider']).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["map"])(function (value) {
+              return value;
+            })).subscribe(function (data) {
+              _this3.global.provider = 'http://' + data.providers[0].ip;
+              ;
+              resolve(true);
+            }, function (error) {
+              _this3.helper.toast('Please check the network connection');
+
+              resolve(false);
+            });
+
+            ;
+          });
+        }
+      }]);
+
+      return AppConfig;
+    }();
+
+    AppConfig.ctorParameters = function () {
+      return [{
+        type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]
+      }, {
+        type: _providers_global_global_service__WEBPACK_IMPORTED_MODULE_5__["GlobalService"]
+      }, {
+        type: _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_6__["HelperService"]
+      }, {
+        type: _providers_native_native_service__WEBPACK_IMPORTED_MODULE_7__["NativeService"]
+      }];
+    };
+
+    AppConfig = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])(), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"], _providers_global_global_service__WEBPACK_IMPORTED_MODULE_5__["GlobalService"], _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_6__["HelperService"], _providers_native_native_service__WEBPACK_IMPORTED_MODULE_7__["NativeService"]])], AppConfig);
     /***/
   },
 
@@ -5472,6 +5614,574 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }).call(this, __webpack_require__(
     /*! ./../../../../node_modules/buffer/index.js */
     "./node_modules/buffer/index.js").Buffer);
+    /***/
+  },
+
+  /***/
+  "./src/app/providers/logger/logger.service.ts":
+  /*!****************************************************!*\
+    !*** ./src/app/providers/logger/logger.service.ts ***!
+    \****************************************************/
+
+  /*! exports provided: LoggerService */
+
+  /***/
+  function srcAppProvidersLoggerLoggerServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "LoggerService", function () {
+      return LoggerService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+
+    var LoggerService_1;
+    /**
+     * 帮助类：存放和业务有关的公共方法
+     */
+
+    var LoggerService = LoggerService_1 =
+    /*#__PURE__*/
+    function () {
+      function LoggerService() {
+        _classCallCheck(this, LoggerService);
+      }
+
+      _createClass(LoggerService, null, [{
+        key: "error",
+        value: function error(err, action) {
+          this.log('Logger.error：', '#f04141', action, '\n ' + err);
+        }
+      }, {
+        key: "log",
+        value: function log(text) {
+          var _console;
+
+          var color = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '#989aa2';
+
+          for (var _len = arguments.length, detail = new Array(_len > 2 ? _len - 2 : 0), _key = 2; _key < _len; _key++) {
+            detail[_key - 2] = arguments[_key];
+          }
+
+          (_console = console).log.apply(_console, ["%c".concat(text), "background-color: ".concat(color, "; color:white; padding: 2px 5px; border-radius: 2px")].concat(detail));
+        }
+      }, {
+        key: "http",
+        value: function http(err, data) {
+          console.log(Object.assign({}, data)); // 上报日志
+
+          LoggerService_1.error(err, '请求出错');
+        }
+      }]);
+
+      return LoggerService;
+    }();
+
+    LoggerService = LoggerService_1 = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    })], LoggerService);
+    /***/
+  },
+
+  /***/
+  "./src/app/providers/native/native.service.ts":
+  /*!****************************************************!*\
+    !*** ./src/app/providers/native/native.service.ts ***!
+    \****************************************************/
+
+  /*! exports provided: NativeService */
+
+  /***/
+  function srcAppProvidersNativeNativeServiceTs(module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    __webpack_require__.r(__webpack_exports__);
+    /* harmony export (binding) */
+
+
+    __webpack_require__.d(__webpack_exports__, "NativeService", function () {
+      return NativeService;
+    });
+    /* harmony import */
+
+
+    var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+    /*! tslib */
+    "./node_modules/tslib/tslib.es6.js");
+    /* harmony import */
+
+
+    var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(
+    /*! @angular/core */
+    "./node_modules/@angular/core/fesm2015/core.js");
+    /* harmony import */
+
+
+    var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
+    /*! rxjs */
+    "./node_modules/rxjs/_esm2015/index.js");
+    /* harmony import */
+
+
+    var _logger_logger_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
+    /*! ../logger/logger.service */
+    "./src/app/providers/logger/logger.service.ts");
+    /* harmony import */
+
+
+    var _helper_helper_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
+    /*! ../helper/helper.service */
+    "./src/app/providers/helper/helper.service.ts");
+    /* harmony import */
+
+
+    var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+    /*! @ionic-native/status-bar/ngx */
+    "./node_modules/@ionic-native/status-bar/ngx/index.js");
+    /* harmony import */
+
+
+    var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+    /*! @ionic-native/splash-screen/ngx */
+    "./node_modules/@ionic-native/splash-screen/ngx/index.js");
+    /* harmony import */
+
+
+    var _ionic_native_app_version_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(
+    /*! @ionic-native/app-version/ngx */
+    "./node_modules/@ionic-native/app-version/ngx/index.js");
+    /* harmony import */
+
+
+    var _ionic_native_app_minimize_ngx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(
+    /*! @ionic-native/app-minimize/ngx */
+    "./node_modules/@ionic-native/app-minimize/ngx/index.js");
+    /* harmony import */
+
+
+    var _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(
+    /*! @ionic-native/in-app-browser/ngx */
+    "./node_modules/@ionic-native/in-app-browser/ngx/index.js");
+    /* harmony import */
+
+
+    var _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(
+    /*! @ionic-native/network/ngx */
+    "./node_modules/@ionic-native/network/ngx/index.js");
+    /* harmony import */
+
+
+    var _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
+    /*! @ionic-native/vibration/ngx */
+    "./node_modules/@ionic-native/vibration/ngx/index.js");
+    /* harmony import */
+
+
+    var _global_global_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(
+    /*! ../global/global.service */
+    "./src/app/providers/global/global.service.ts");
+    /* harmony import */
+
+
+    var _ionic_native_qr_scanner_ngx__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(
+    /*! @ionic-native/qr-scanner/ngx */
+    "./node_modules/@ionic-native/qr-scanner/ngx/index.js");
+    /* harmony import */
+
+
+    var _ionic_native_open_native_settings_ngx__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(
+    /*! @ionic-native/open-native-settings/ngx */
+    "./node_modules/@ionic-native/open-native-settings/ngx/index.js");
+    /* harmony import */
+
+
+    var _ionic_native_clipboard_ngx__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(
+    /*! @ionic-native/clipboard/ngx */
+    "./node_modules/@ionic-native/clipboard/ngx/index.js");
+    /* harmony import */
+
+
+    var _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(
+    /*! @ionic-native/barcode-scanner/ngx */
+    "./node_modules/@ionic-native/barcode-scanner/ngx/index.js"); // import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+    // import { PhotoLibrary } from '@ionic-native/photo-library/ngx';
+
+    /**
+     * Cordova插件（手机硬件）调用工具类
+     */
+
+
+    var NativeService =
+    /*#__PURE__*/
+    function () {
+      function NativeService(statusBar, splashScreen, appVersion, // private socialSharing: SocialSharing,
+      minimize, // private photoLibrary: PhotoLibrary,
+      iab, network, vibration, qrScanner, global, clipboard, barcodeScanner, openNativeSettings, helper) {
+        _classCallCheck(this, NativeService);
+
+        this.statusBar = statusBar;
+        this.splashScreen = splashScreen;
+        this.appVersion = appVersion;
+        this.minimize = minimize;
+        this.iab = iab;
+        this.network = network;
+        this.vibration = vibration;
+        this.qrScanner = qrScanner;
+        this.global = global;
+        this.clipboard = clipboard;
+        this.barcodeScanner = barcodeScanner;
+        this.openNativeSettings = openNativeSettings;
+        this.helper = helper;
+        this.AppVersionInfo = null;
+      }
+      /**
+       * 设置状态栏样式
+       * https://ionicframework.com/docs/native/status-bar
+       */
+
+
+      _createClass(NativeService, [{
+        key: "setStatusBarStyle",
+        value: function setStatusBarStyle() {// if (this.helper.isMobile()) {
+          //     // this.statusBar.overlaysWebView(false);
+          //     // this.statusBar.styleLightContent();
+          //     this.statusBar.styleDefault(); // 使用黑色字体
+          //     this.statusBar.backgroundColorByHexString('#fff'); // 设置背景色
+          // }
+        }
+      }, {
+        key: "copy",
+        value: function copy(str) {
+          this.clipboard.copy(str);
+        }
+        /**
+         * 隐藏启动页
+         * https://ionicframework.com/docs/native/splash-screen
+         */
+
+      }, {
+        key: "hideSplashScreen",
+        value: function hideSplashScreen() {
+          if (this.helper.isMobile()) {
+            this.splashScreen.hide();
+          }
+        }
+      }, {
+        key: "openSettings",
+        value: function openSettings(setting) {
+          this.openNativeSettings.open(setting);
+        }
+      }, {
+        key: "scan",
+        value: function scan() {
+          return this.barcodeScanner.scan({
+            showTorchButton: true
+          }).then(function (barcodeData) {
+            console.log('Barcode data', barcodeData);
+            return barcodeData;
+          }).catch(function (err) {
+            console.log('Error', err);
+            return {
+              text: ''
+            };
+          }); // return new Promise((resolve, reject) => {
+          //     // Optionally request the permission early
+          //     this.qrScanner.prepare()
+          //         .then((status: QRScannerStatus) => {
+          //             console.log("权限状态：" + JSON.stringify(status));
+          //             if (status.authorized) {
+          //                 console.log("获取权限成功......");
+          //                 // camera permission was granted
+          //                 // start scanning
+          //                 let scanSub = this.qrScanner.scan().subscribe((text: string) => {
+          //                     console.log('Scanned something', text);
+          //                     this.qrScanner.hide(); // hide camera preview
+          //                     scanSub.unsubscribe(); // stop scanning
+          //                     resolve(text);
+          //                 });
+          //             } else if (status.denied) {
+          //                 reject(1);
+          //                 // camera permission was permanently denied
+          //                 // you must use QRScanner.openSettings() method to guide the user to the settings page
+          //                 // then they can grant the permission from there
+          //             } else {
+          //                 reject(0);
+          //                 // permission was denied, but not permanently. You can ask for permission again at a later time.
+          //             }
+          //         })
+          //         .catch((e: any) => console.log('Error is', () => {
+          //             reject(e);
+          //         }));
+          // })
+        }
+        /**
+         * 最小化app
+         */
+
+      }, {
+        key: "appMinimize",
+        value: function appMinimize() {
+          this.minimize.minimize();
+        }
+        /**
+         * 通过系统浏览器打开url
+         */
+
+      }, {
+        key: "openUrlBySystemBrowser",
+        value: function openUrlBySystemBrowser(url) {
+          this.iab.create(url, '_system');
+        }
+        /**
+         * 获取网络类型 如`unknown`, `ethernet`, `wifi`, `2g`, `3g`, `4g`, `cellular`, `none`
+         */
+
+      }, {
+        key: "getNetworkType",
+        value: function getNetworkType() {
+          this.helper.assertIsMobile();
+          return this.network.type;
+        }
+        /**
+         * 判断是否有网络
+         */
+
+      }, {
+        key: "isConnecting",
+        value: function isConnecting() {
+          return this.getNetworkType() !== 'none';
+        }
+        /**
+         * 获取app名称，包名，版本号
+         * https://ionicframework.com/docs/native/app-version
+         */
+
+      }, {
+        key: "getAppVersionInfo",
+        value: function getAppVersionInfo() {
+          var _this7 = this;
+
+          this.helper.assertIsMobile();
+
+          if (this.AppVersionInfo) {
+            return Object(rxjs__WEBPACK_IMPORTED_MODULE_2__["of"])(this.AppVersionInfo);
+          }
+
+          var appInfo = {
+            appName: '',
+            packageName: '',
+            versionNumber: '',
+            name: '' // ionic2tabs
+
+          };
+          return rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"].create(function (observer) {
+            Promise.all([_this7.appVersion.getAppName(), _this7.appVersion.getPackageName(), _this7.appVersion.getVersionNumber()]).then(function (result) {
+              appInfo.appName = result[0];
+              appInfo.packageName = result[1];
+              appInfo.versionNumber = result[2];
+              appInfo.name = result[1].split('.').pop();
+              _this7.AppVersionInfo = appInfo;
+              observer.next(appInfo);
+            }).catch(function (err) {
+              _logger_logger_service__WEBPACK_IMPORTED_MODULE_3__["LoggerService"].error(err, 'NativeService.getAppVersionInfo');
+
+              observer.error(false);
+            });
+          });
+        }
+        /**
+        * 获得app版本号,如0.01
+        * @description  对应/config.xml中version的值
+        */
+
+      }, {
+        key: "getVersionNumber",
+        value: function getVersionNumber() {
+          var _this8 = this;
+
+          return rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"].create(function (observer) {
+            if (_this8.helper.isMobile()) {
+              _this8.appVersion.getVersionNumber().then(function (value) {
+                observer.next(value);
+              }).catch(function (err) {
+                console.log(err, '获得app版本号失败');
+                observer.error(false);
+              });
+            } else {
+              observer.next('1.0.7');
+            }
+          });
+        }
+        /**
+         * 获得app name,如现场作业
+         * @description  对应/config.xml中name的值
+         */
+
+      }, {
+        key: "getAppName",
+        value: function getAppName() {
+          var _this9 = this;
+
+          return rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"].create(function (observer) {
+            if (_this9.helper.isMobile()) {
+              _this9.appVersion.getAppName().then(function (value) {
+                observer.next(value);
+              }).catch(function (err) {
+                console.log(err, '获得app name失败');
+                observer.error(false);
+              });
+            } else {
+              observer.next('Mobbi');
+            }
+          });
+        }
+        /**
+         * 获得app包名/id,如com.kit.ionic2tabs
+         * @description  对应/config.xml中id的值
+         */
+
+      }, {
+        key: "getPackageName",
+        value: function getPackageName() {
+          var _this10 = this;
+
+          return rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"].create(function (observer) {
+            if (_this10.helper.isMobile()) {
+              _this10.appVersion.getPackageName().then(function (value) {
+                observer.next(value);
+              }).catch(function (err) {
+                console.log(err, '获得app包名失败');
+                observer.error(false);
+              });
+            } else {
+              observer.next('com.mobbi.italy');
+            }
+          });
+        }
+      }, {
+        key: "vibrate",
+        value: function vibrate() {
+          console.log("密码错误");
+          this.vibration.vibrate(this.global.vibrationDuration);
+        }
+        /**
+         * 获取照片 - 风格同微信获取照片
+         * https://github.com/giantss/cordova-plugin-ImagePicker
+         */
+
+      }, {
+        key: "getPictures",
+        value: function getPictures() {
+          var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+          this.helper.assertIsMobile();
+          var ops = Object.assign({
+            maximumImagesCount: 9,
+            width: 1920,
+            height: 1440,
+            quality: 100
+          }, options);
+          return rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"].create(function (observer) {
+            ImagePicker.getPictures(function (result) {
+              observer.next(result.images);
+            }, function (err) {
+              err === '已取消' ? console.log(err) : _logger_logger_service__WEBPACK_IMPORTED_MODULE_3__["LoggerService"].error(err, 'NativeService.getPictures');
+              observer.error(false);
+            }, ops);
+          });
+        }
+        /**
+         * 保存图片到本地相册
+         * @param url 图片url或base64
+         */
+
+      }, {
+        key: "savePicture",
+        value: function savePicture(url) {
+          this.helper.assertIsMobile(); // return Observable.create(observer => {
+          // 	// 请求权限
+          // 	this.photoLibrary.requestAuthorization({ read: true, write: true }).then(() => {
+          // 		// 获取app包名作为相册名称
+          // 		this.getAppVersionInfo().subscribe(appInfo => {
+          // 			// 执行保存操作
+          // 			this.photoLibrary.saveImage(url, appInfo.name).then(res => {
+          // 				observer.next(res);
+          // 			}).catch(err => {
+          // 				Logger.error(err, 'NativeService.savePicture');
+          // 				observer.error(false);
+          // 			});
+          // 		});
+          // 	}).catch(err => {
+          // 		Logger.error(err, 'NativeService.savePicture');
+          // 		observer.error(false);
+          // 	});
+          // });
+        }
+        /**
+         * 调用系统分享功能  https://ionicframework.com/docs/native/social-sharing/
+         * 注意：同时只能分享一种类型
+         * @param message 分享文本
+         * @param file 分享文件，如图片
+         */
+
+      }, {
+        key: "share",
+        value: function share() {
+          var message = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+          var file = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+          this.helper.assertIsMobile(); // this.socialSharing.share(message, null, file);
+        }
+      }]);
+
+      return NativeService;
+    }();
+
+    NativeService.ctorParameters = function () {
+      return [{
+        type: _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_5__["StatusBar"]
+      }, {
+        type: _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_6__["SplashScreen"]
+      }, {
+        type: _ionic_native_app_version_ngx__WEBPACK_IMPORTED_MODULE_7__["AppVersion"]
+      }, {
+        type: _ionic_native_app_minimize_ngx__WEBPACK_IMPORTED_MODULE_8__["AppMinimize"]
+      }, {
+        type: _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_9__["InAppBrowser"]
+      }, {
+        type: _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_10__["Network"]
+      }, {
+        type: _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_11__["Vibration"]
+      }, {
+        type: _ionic_native_qr_scanner_ngx__WEBPACK_IMPORTED_MODULE_13__["QRScanner"]
+      }, {
+        type: _global_global_service__WEBPACK_IMPORTED_MODULE_12__["GlobalService"]
+      }, {
+        type: _ionic_native_clipboard_ngx__WEBPACK_IMPORTED_MODULE_15__["Clipboard"]
+      }, {
+        type: _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_16__["BarcodeScanner"]
+      }, {
+        type: _ionic_native_open_native_settings_ngx__WEBPACK_IMPORTED_MODULE_14__["OpenNativeSettings"]
+      }, {
+        type: _helper_helper_service__WEBPACK_IMPORTED_MODULE_4__["HelperService"]
+      }];
+    };
+
+    NativeService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+      providedIn: 'root'
+    }), tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_5__["StatusBar"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_6__["SplashScreen"], _ionic_native_app_version_ngx__WEBPACK_IMPORTED_MODULE_7__["AppVersion"], _ionic_native_app_minimize_ngx__WEBPACK_IMPORTED_MODULE_8__["AppMinimize"], _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_9__["InAppBrowser"], _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_10__["Network"], _ionic_native_vibration_ngx__WEBPACK_IMPORTED_MODULE_11__["Vibration"], _ionic_native_qr_scanner_ngx__WEBPACK_IMPORTED_MODULE_13__["QRScanner"], _global_global_service__WEBPACK_IMPORTED_MODULE_12__["GlobalService"], _ionic_native_clipboard_ngx__WEBPACK_IMPORTED_MODULE_15__["Clipboard"], _ionic_native_barcode_scanner_ngx__WEBPACK_IMPORTED_MODULE_16__["BarcodeScanner"], _ionic_native_open_native_settings_ngx__WEBPACK_IMPORTED_MODULE_14__["OpenNativeSettings"], _helper_helper_service__WEBPACK_IMPORTED_MODULE_4__["HelperService"]])], NativeService);
     /***/
   },
 

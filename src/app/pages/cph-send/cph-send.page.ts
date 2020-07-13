@@ -9,6 +9,7 @@ import { Platform, NavController, AlertController } from '@ionic/angular';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
 import { ModalController } from '@ionic/angular';
 import { PincodeModalPage } from '../pincode-modal/pincode-modal.page';
+import { FingerprintAIO ,FingerprintOptions} from '@ionic-native/fingerprint-aio/ngx';
 
 @Component({
     selector: 'app-cph-send',
@@ -16,6 +17,7 @@ import { PincodeModalPage } from '../pincode-modal/pincode-modal.page';
     styleUrls: ['./cph-send.page.scss'],
 })
 export class CphSendPage implements OnInit {
+    fingerprintOptions : FingerprintOptions;
     range = 18;     //let price = await this.web3.cph.gasPrice(); price/1e9;
     wallet: any = {};
     amount = 0;
@@ -44,6 +46,7 @@ export class CphSendPage implements OnInit {
         private native: NativeService,
         public modalController: ModalController,
         public alertController: AlertController,
+        private fingerAuth: FingerprintAIO
     ) { 
         let state = this.router.getCurrentNavigation().extras.state;
         if (state) {
@@ -59,7 +62,21 @@ export class CphSendPage implements OnInit {
             this.updateWalletInfo();
         }, 10000);
     }
-
+    public showFingerprintAuthDlg(){
+        this.fingerAuth.isAvailable().then(result =>{
+          console.log('showFingerprintAuthDlg'+result)
+            this.fingerAuth.show({
+              // clientId: 'fingerprint-Demo',
+              // clientSecret: 'password', //Only necessary for Android
+              // disableBackup:true  //Only for Android(optional)
+            //   title:"face id",
+            //   subtitle:"face id test",
+              description: "Pay with biometric"
+          })
+            .then((result: any) => console.log('fingerAuth.show'+result))
+            .catch((error: any) => console.log('fingerAuth.show error'+error.message));
+        }).catch((error: any) => console.log('showFingerprintAuthDlg error'+error.message));;
+    }
     async presentAlertConfirm() {
         let header = await this.helper.getTranslate('PAYMENT_PASSWORD');
         let message = await this.helper.getTranslate('PAYMENT_PASSWORD_M');

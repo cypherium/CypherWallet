@@ -142,7 +142,7 @@
 	"REQUEST_ERROR": "Request error, please contact the admistrator.",
 	"PAASSWORD_EXPIRED": "Password expired, please login again",
 	"TIPS": "Tips",
-	"NETWORK_ERROR": "Please connect to the internet",
+	"NETWORK_ERROR": "Please check the network connection",
 	"NETWORK_TIMEOUT": "Request timeout, please try it later",
 	"BACKEND_ERROR": "The backend service can not be connected",
 	"BACKEND_NOT_EXIST": "The request address can not be found",

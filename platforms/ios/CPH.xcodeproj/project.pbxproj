@@ -33,6 +33,7 @@
 		62B3905F869047EDB4E21B18 /* CDVWKProcessPoolFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F5381A90C8194EC4BFB4A70D /* CDVWKProcessPoolFactory.m */; };
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
 		6E718143567440E3BA68D4AC /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 90A436BEDB664E93B3D80629 /* AFNetworkReachabilityManager.m */; };
+		74865C0389304988BF08CA0D /* Fingerprint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4C256850534ED18D5285B1 /* Fingerprint.swift */; };
 		77AFD28389DD4E228BB76193 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 34C274F1DAB947028C4E2EF8 /* AFHTTPSessionManager.m */; };
 		82AC472E249A2A8E009BD283 /* OneSignal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB6796D2490C9770054756C /* OneSignal.framework */; };
 		82AC4731249A2A93009BD283 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41EA59F7344A4F2194986E66 /* Security.framework */; };
@@ -160,10 +161,12 @@
 		34C274F1DAB947028C4E2EF8 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = "cordova-plugin-advanced-http/AFHTTPSessionManager.m"; sourceTree = "<group>"; };
 		3672136FF26F4004B79CAC0D /* AFNetworking.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = "cordova-plugin-advanced-http/AFNetworking.h"; sourceTree = "<group>"; };
 		375FF31F79D94EC9BA2E8CFD /* CDVConnection.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVConnection.m; path = "cordova-plugin-network-information/CDVConnection.m"; sourceTree = "<group>"; };
+		3D3F40A34DCD42FFA9018E6F /* Bridging-Header.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "cordova-plugin-fingerprint-aio/Bridging-Header.h"; sourceTree = "<group>"; };
 		41C3FC37E8D845D4A8E4BD45 /* CDVClipboard.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVClipboard.h; path = "cordova-clipboard/CDVClipboard.h"; sourceTree = "<group>"; };
 		41EA59F7344A4F2194986E66 /* Security.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		49189080F76A42CCB3E6E881 /* AFURLSessionManager.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = "cordova-plugin-advanced-http/AFURLSessionManager.h"; sourceTree = "<group>"; };
 		492A7C4808364E469D362C95 /* CDVBarcodeScanner.mm */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = CDVBarcodeScanner.mm; path = "phonegap-plugin-barcodescanner/CDVBarcodeScanner.mm"; sourceTree = "<group>"; };
+		4A4C256850534ED18D5285B1 /* Fingerprint.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = Fingerprint.swift; path = "cordova-plugin-fingerprint-aio/Fingerprint.swift"; sourceTree = "<group>"; };
 		4CE3E935ABC2413EB62BC7FE /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = "cordova-plugin-advanced-http/AFURLResponseSerialization.h"; sourceTree = "<group>"; };
 		4EC593B9D3BA452CB0618E5F /* CDVWKProcessPoolFactory.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVWKProcessPoolFactory.h; path = "cordova-plugin-ionic-webview/CDVWKProcessPoolFactory.h"; sourceTree = "<group>"; };
 		51E40E4A00E54F09B2D55B13 /* CDVClipboard.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVClipboard.m; path = "cordova-clipboard/CDVClipboard.m"; sourceTree = "<group>"; };
@@ -487,6 +490,8 @@
 				64A2DBF8F4654C5892713A86 /* CDVWKInAppBrowserUIDelegate.h */,
 				72A4C15F814B4A8CA998DB32 /* OneSignalPush.m */,
 				5C4FFA67FCDC465D9EF8CBE9 /* OneSignalPush.h */,
+				4A4C256850534ED18D5285B1 /* Fingerprint.swift */,
+				3D3F40A34DCD42FFA9018E6F /* Bridging-Header.h */,
 			);
 			name = Plugins;
 			path = CPH/Plugins;
@@ -729,6 +734,7 @@
 				D0883BECAD84438B849E22FB /* CDVWKInAppBrowser.m in Sources */,
 				E5AAEFC72F62451A90FF57BD /* CDVWKInAppBrowserUIDelegate.m in Sources */,
 				C72580112A9E40C59A2175EB /* OneSignalPush.m in Sources */,
+				74865C0389304988BF08CA0D /* Fingerprint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -792,6 +798,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cph.mobile.wallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WK_WEB_VIEW_ONLY = 1;
 			};
@@ -826,6 +835,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = cph.mobile.wallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WK_WEB_VIEW_ONLY = 1;
 			};
@@ -865,12 +876,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = cph.mobile.wallet.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WK_WEB_VIEW_ONLY = 1;
 			};
@@ -905,12 +919,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = OneSignalNotificationServiceExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = cph.mobile.wallet.OneSignalNotificationServiceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				WK_WEB_VIEW_ONLY = 1;
@@ -953,10 +969,14 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = cph.mobile.wallet;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				WK_WEB_VIEW_ONLY = 1;
 			};
 			name = Debug;
@@ -996,9 +1016,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cph.mobile.wallet;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/Bridging-Header.h";
+				SWIFT_VERSION = 4.0;
 				WK_WEB_VIEW_ONLY = 1;
 			};
 			name = Release;

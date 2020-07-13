@@ -18,7 +18,7 @@
           "ITSAppUsesNonExemptEncryption": [
             {
               "xml": "<false />",
-              "count": 25
+              "count": 31
             }
           ],
           "UIBackgroundModes": [
@@ -27,7 +27,13 @@
               "count": 1
             }
           ],
-          "FirebaseAppDelegateProxyEnabled": []
+          "FirebaseAppDelegateProxyEnabled": [],
+          "NSFaceIDUsageDescription": [
+            {
+              "xml": "<string> </string>",
+              "count": 1
+            }
+          ]
         }
       },
       "config.xml": {
@@ -124,6 +130,10 @@
             {
               "xml": "<feature name=\"OneSignalPush\"><param name=\"ios-package\" value=\"OneSignalPush\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"Fingerprint\"><param name=\"ios-package\" value=\"Fingerprint\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -213,6 +223,13 @@
       "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     },
     "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+    },
+    "cordova-plugin-add-swift-support": {
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+    },
+    "cordova-plugin-fingerprint-aio": {
+      "FACEID_USAGE_DESCRIPTION": " ",
       "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     }
   },
@@ -601,6 +618,14 @@
       "clobbers": [
         "OneSignal"
       ]
+    },
+    {
+      "id": "cordova-plugin-fingerprint-aio.Fingerprint",
+      "file": "plugins/cordova-plugin-fingerprint-aio/www/Fingerprint.js",
+      "pluginId": "cordova-plugin-fingerprint-aio",
+      "clobbers": [
+        "Fingerprint"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -621,6 +646,8 @@
     "cordova-sqlite-storage": "3.4.0",
     "phonegap-plugin-barcodescanner": "8.1.0",
     "cordova-plugin-inappbrowser": "3.2.0",
-    "onesignal-cordova-plugin": "2.10.1"
+    "onesignal-cordova-plugin": "2.10.1",
+    "cordova-plugin-add-swift-support": "2.0.2",
+    "cordova-plugin-fingerprint-aio": "3.0.1"
   }
 }
