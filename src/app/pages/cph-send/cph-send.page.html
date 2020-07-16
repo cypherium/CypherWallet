@@ -66,8 +66,8 @@
         [ngClass]="(!payAmount || addressError || amountError || !receiveAddress || !amount) ? 'disabled' : ''"
         (click)="transferConfirm()" translate="">
         CONFIRM</div>
-        <div>    <ion-button (click)="showFingerprintAuthDlg()">show fingerprint auth dialog  </ion-button>
-        </div>
+        <!-- <div>    <ion-button (click)="showFingerprintAuthDlg()">show fingerprint auth dialog  </ion-button>
+        </div> -->
 </ion-content>
 
 <app-generate-privatekey *ngIf="ifShowPasswordPrompt" promptDesc="{{ 'INPUT_PASSWORD_TIPS' | translate }}"

@@ -108,6 +108,7 @@ export class ChangePasswordPage implements OnInit {
                 //计算新的keystore
                 let keystore = this.helper.exportKeystore(privateKey, this.password1);
                 this.wallet.keystore = keystore;
+                this.wallet.privateKey = privateKey;
                 this.helper.saveWallet();
                 setTimeout(async () => {
                     let error = await this.helper.getTranslate('CHANGE_PASSWORD_SUCCEED');

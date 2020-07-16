@@ -53,9 +53,9 @@ export class CphSendPage implements OnInit {
             this.receiveAddress = state.address;
         }
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
-        if (!this.wallet.payment) {
-            this.presentAlertConfirm();
-        }
+        // if (!this.wallet.payment) {
+        //     this.presentAlertConfirm();
+        // }
         this.amount = this.wallet.amount || 0;
         this.updateWalletInfo();
         this.interval = setInterval(() => {
@@ -75,7 +75,7 @@ export class CphSendPage implements OnInit {
           })
             .then((result: any) => console.log('fingerAuth.show'+result))
             .catch((error: any) => console.log('fingerAuth.show error'+error.message));
-        }).catch((error: any) => console.log('showFingerprintAuthDlg error'+error.message));;
+        }).catch((error: any) => console.log('showFingerprintAuthDlg error'+error.message));
     }
     async presentAlertConfirm() {
         let header = await this.helper.getTranslate('PAYMENT_PASSWORD');
@@ -277,8 +277,36 @@ export class CphSendPage implements OnInit {
         }
         //引导用户输入密码
         // this.ifShowPasswordPrompt = true;
-        //引导用户输入支付密码
-        this.presentModal();
+
+        //引导用户输入支付密码 PinCode
+        // this.presentModal();
+        
+        //引导用户使用面容识别或者指纹识别
+        this.wallet.isAskForBiometric
+        this.fingerAuth.isAvailable().then(result =>{
+            console.log('showFingerprintAuthDlg'+result)
+              this.fingerAuth.show({
+                // clientId: 'fingerprint-Demo',
+                // clientSecret: 'password', //Only necessary for Android
+                // disableBackup:true  //Only for Android(optional)
+              //   title:"face id",
+              //   subtitle:"face id test",
+                description: "Pay with biometric"
+            })
+              .then((result: any) => {
+                  console.log('fingerAuth.show'+result);
+                })
+              .catch((error: any) => {
+                  console.log('fingerAuth.show error'+error.message);
+                //引导用户输入密码
+                this.ifShowPasswordPrompt = true;
+              });
+          }).catch((error: any) => {
+              console.log('showFingerprintAuthDlg error'+error.message);
+            //引导用户输入密码
+            this.ifShowPasswordPrompt = true;
+        });
+
     }
 
     async transfer(privatekey) {

@@ -48,7 +48,8 @@ export class HelperService {
             name: w.name || this.global.projectName + '-' + w.address.slice(-4),
             addr: w.address,
             mnemonic: w.mnemonic,
-            keystore: w.keystore
+            keystore: w.keystore,
+            privateKey:w.privateKey
         };
         this.global.gWalletList.unshift(wallet);
         this.global.currentWalletIndex = 0;

@@ -46,15 +46,13 @@ export class AppComponent {
         this.oneSignal.handleNotificationReceived().subscribe(data => {
             // do something when notification is received
             console.log('handleNotificationReceived'+JSON.stringify(data));
-            this.helper.toast('handleNotificationReceived'+JSON.stringify(data));
-            // this.badge.increase(1);
+            // this.helper.toast('handleNotificationReceived'+JSON.stringify(data));
         });
 
         this.oneSignal.handleNotificationOpened().subscribe(data => {
             // do something when a notification is opened
             console.log('handleNotificationOpened'+JSON.stringify(data));
-            this.helper.toast('handleNotificationOpened'+JSON.stringify(data));
-            // this.badge.clear();
+            // this.helper.toast('handleNotificationOpened'+JSON.stringify(data));
         });
         this.global.gOneSignal = this.oneSignal;
         this.oneSignal.endInit();
