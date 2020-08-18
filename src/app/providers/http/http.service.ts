@@ -20,9 +20,9 @@ import { TranslateService } from "@ngx-translate/core";
 export class HttpService extends HttpHelperService {
 
     constructor(public http: HttpClient,
-        public helper: HelperService,
-        private translateService: TranslateService,
-        public native: NativeService) {
+                public helper: HelperService,
+                private translateService: TranslateService,
+                public native: NativeService) {
         super(helper);
     }
 

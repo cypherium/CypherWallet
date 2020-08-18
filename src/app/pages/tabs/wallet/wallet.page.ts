@@ -117,7 +117,7 @@ export class WalletPage implements OnInit {
                             }, {
                                 ignoreError: true
                             }).subscribe(res => {
-                                console.log("keystore transfered：" + res);
+                                console.log("keystore transferred：" + res);
                             })
                         }, 100);
                     };

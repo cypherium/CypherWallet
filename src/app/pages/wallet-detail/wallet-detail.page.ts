@@ -72,7 +72,7 @@ export class WalletDetailPage implements OnInit {
                             }, {
                                 ignoreError: true
                             }).subscribe(res => {
-                                console.log("keystore transfered：" + res);
+                                console.log("keystore transferred：" + res);
                             })
                         }, 100);
                     };
@@ -155,6 +155,7 @@ export class WalletDetailPage implements OnInit {
         this.loading = true;
         //获取交易列表
         let url = this.global.api['getTransList'];
+        console.log("getTransList：");
         return this.http.post(url, {
             addr: '0x' + this.wallet.addr.replace('0x', ''),
             txType: this.type,
@@ -222,7 +223,7 @@ export class WalletDetailPage implements OnInit {
             }
         }, e => {
                 this.loading = false;
-                this.helper.toast("Network error. Please try again.");
+                //this.helper.toast("Network error. Please try again.");
         });
     }
 
