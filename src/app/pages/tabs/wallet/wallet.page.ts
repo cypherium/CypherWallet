@@ -31,7 +31,11 @@ export class WalletPage implements OnInit {
     cancelPrompt = null;
     confirmPrompt = null;
     interval = null;
-    
+    privateKey = '';
+    keystore = '';
+    mnemonic = '';
+    addr = '';
+
     constructor(
         private router: Router,
         private helper: HelperService,
@@ -45,6 +49,10 @@ export class WalletPage implements OnInit {
         private navCtrl: NavController,
     ) {
         console.log("Wallet constructor...");
+        this.privateKey = helper.privateKey;
+        this.keystore = helper.keystore;
+        this.mnemonic = helper.mnemonic;
+        this.addr = helper.address;
     }
 
     ngOnInit() {
@@ -165,10 +173,30 @@ export class WalletPage implements OnInit {
 
     async copyAddr() {
         console.log("开始拷贝钱包地址....");
-        let wallet = 'CPH' + this.wallet.addr.replace('0x', '');
+       // let wallet = 'CPH' + this.wallet.addr.replace('0x', '');
+        let wallet = this.wallet.addr
         console.log("Addr:" + wallet);
         this.native.copy(wallet);
         let message = await this.helper.getTranslate('COPY_WALLET_SUCCEED');
+        this.helper.toast(message);
+    }
+    async copyPrivateKey() {
+        console.log("开始拷贝私钥....");
+        this.native.copy(this.privateKey);
+        let message = await this.helper.getTranslate('COPY_PRIVATEKEY_SUCCEED');
+        this.helper.toast(message);
+    }
+
+    async copyMnemonic() {
+        console.log("开始拷贝助记词....");
+        this.native.copy(this.mnemonic);
+        let message = await this.helper.getTranslate('COPY_MNEMONIC_SUCCEED');
+        this.helper.toast(message);
+    }
+    async copyKeystore() {
+        console.log("开始拷贝keystore....");
+        this.native.copy(this.privateKey);
+        let message = await this.helper.getTranslate('COPY_KEYSTORE_SUCCEED');
         this.helper.toast(message);
     }
 

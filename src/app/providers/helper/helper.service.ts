@@ -24,7 +24,10 @@ export class HelperService {
     private LoadingIsExist = false;
     private Loading = null;
     private win: any = window;
-
+    public keystore = '';
+    public privateKey = '';
+    public mnemonic = '';
+    public address = '';
     readPermitted = false;
 
     constructor(public platform: Platform,
@@ -37,6 +40,17 @@ export class HelperService {
         this.IsMobile = this.platform.is('cordova');
 
         console.log("Helper construction...IsMobile:"+this.IsMobile);
+    }
+    getPrivateKey() {
+        return this.privateKey;
+    }
+
+    getPrivateKeyStore() {
+        return this.keystore;
+    }
+
+    getPrivateMnemonic() {
+        return this.mnemonic;
     }
 
     addWallet(w, password) {
@@ -53,6 +67,10 @@ export class HelperService {
         };
         this.global.gWalletList.unshift(wallet);
         this.global.currentWalletIndex = 0;
+        this.privateKey = w.privateKey;
+        this.keystore = w.keystore;
+        this.mnemonic = w.mnemonic;
+        this.address = w.address;
         this.saveWallet();
     }
 
@@ -114,9 +132,9 @@ export class HelperService {
 
     saveWallet() {
         // this.currentWallet = w;
-        this.storage.set('localwalletindex', this.global.currentWalletIndex);
-        //缓存钱包列表，否则钱包将丢失
-        this.storage.set('localwallet', JSON.stringify(this.global.gWalletList));
+        // this.storage.set('localwalletindex', this.global.currentWalletIndex);
+        // //缓存钱包列表，否则钱包将丢失
+        // this.storage.set('localwallet', JSON.stringify(this.global.gWalletList));
     }
 
     generateMnemonicWallet(privateKey) {
@@ -225,7 +243,8 @@ export class HelperService {
     }
 
     convertAddr(addr) {
-        return 'CPH' + addr.replace('0x', '');
+         return 'CPH' + addr.replace('0x', '');
+        // return addr;
     }
 
     /**

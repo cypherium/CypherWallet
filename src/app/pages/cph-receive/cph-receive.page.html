@@ -8,7 +8,7 @@
             <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
         </ion-button>
     </ion-buttons> -->
-        <ion-title>{{ 'RECEIVE' | translate }}</ion-title>
+        <ion-title>{{ 'YOURACCOUNT' | translate }}</ion-title>
     </ion-toolbar>
 </ion-header>
 
@@ -20,15 +20,15 @@
         </div> -->
 
         <ngx-qrcode [qrc-value]="qrcode" qrc-version="9"></ngx-qrcode>
-
         <div class="address">
-            <div class="label">{{ addr }}</div>
-            <div class="btn" tappable (click)="copyAddr()"></div>
+            <ion-content overflow-scroll='true'>
+                <div class="selectable">{{ addr }}</div>
+            </ion-content>
         </div>
         <div class="tips">
             {{ 'RECEIVE_ADDR' | translate:{value: global.projectName} }}
         </div>
     </div>
-
-    <img class="bottom-logo" src="assets/imgs/cypherium-full-logo.svg">
 </ion-content>
+
+

@@ -53,8 +53,6 @@
                 <div class="confirm-button" (click)="createWallet()" 
                 [ngClass]="(walletNameError || passwordError || passwordError1 || !password1 || !password || !walletName) ? 'disabled' : ''"
                 translate>NEXT</div>
-                <div class="confirm-button" tappable (click)="importWallet()" translate>IMPORT_WALLET
-                </div>
             </div>
         </div>
     </div>

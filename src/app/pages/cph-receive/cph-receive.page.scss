@@ -67,3 +67,17 @@
     font-size: 18px;
     text-indent: 50px;
 }
+
+ion-content{
+  overflow-scroll: true;
+}
+.scroll-content {
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
+  -ms-user-select: auto !important;
+  user-select: auto !important;
+}
+
+.selectable {
+  -webkit-user-select: auto;//控制网页内容选择范围
+}

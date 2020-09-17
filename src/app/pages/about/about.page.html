@@ -3,55 +3,54 @@
         <ion-buttons slot="start">
             <ion-back-button></ion-back-button>
         </ion-buttons>
-        <ion-title>{{ 'ABOUTUS' | translate }}</ion-title>
+        <ion-title>{{ 'Wallet Info'| translate }}</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content class="gray-content">
     <div class="main">
         <div class="title">
-            <div class="logo">
-                <img src="assets/imgs/cypherium-full-logo.svg" alt="">
-                <p class="name">{{ name }}</p>
-                <p class="version">V {{ version }}</p>
-            </div>
+            <div class="content" translate="">COPY_WALLET_TIPS</div>
         </div>
     </div>
 
-    <div class="item-list">
-        <div class="item" (click)="openWebsite()">
-            <div class="label">Website</div>
-            <div class="content">www.cypherium.io</div>
-            <div class="next"></div>
-        </div>
-        <div class="item">
-            <div class="label">Email</div>
-            <!-- <div class="content">contact@cypherium.io</div> -->
-            <div class="content"><a href="mailto:contact@cypherium.io">contact@cypherium.io</a></div>
-            <div class="next"></div>
-        </div>
-        <div class="item" (click)="openTwitter()">
-            <div class="label">Twitter</div>
-            <div class="content">twitter.com/cypheriumchain</div>
-            <div class="next"></div>
-        </div>
-        <div class="item" (click)="openGithub()">
-            <div class="label">Github</div>
-            <div class="content">github.com/cypherium</div>
-            <div class="next"></div>
-        </div>
-        <div class="item" (click)="openFacebook()">
-            <div class="label">Facebook</div>
-            <div class="content">facebook.com/CypheriumChain</div>
-            <div class="next"></div>
-        </div>
-        <div class="item" (click)="openTelegram()">
-            <div class="label">Telegram</div>
-            <div class="content">t.me/cypherium_supergroup</div>
-            <div class="next"></div>
-        </div>        
-        <div class="item" (click)="update()" tappable>
-            <div class="label" translate="">VERSION_UPDATE</div>
-        </div>
+
+
+            <div class="label">Address</div>
+            <div class="input-wrapper">
+                <textarea name="address" rows="4" cols="35" required="required" id="address1" οnblur="textOnBlur();" readonly >
+                address
+                </textarea>
+            </div>
+
+           <script type="text/javascript">
+                document.getElementById("address1").value="adfadfl;;j"
+
+                var mystr="hello";
+                document.write(mystr+"<br>");//输出hello后，输出一个换行符
+                document.write("JavaScript");
+            </script>
+
+    <div class="label">address</div>
+    <div class="content">
+        <div class="address">{{ address }}</div>
+        <div class="Mnemonic">{{ mnemonic }}</div>
     </div>
+
+            <div class="label">Mnemonic</div>
+            <div class="input-wrapper">
+                <textarea rows="4" cols="35" name="mnemonic" οnblur="textOnBlur();" readonly>
+                ${mnemonic}
+                </textarea>
+            </div>
+
+
+            <div class="label">PrivateKey</div>
+            <!-- <div class="content">contact@cypherium.io</div> -->
+            <div class="input-wrapper">
+                <textarea rows="4" cols="35" name="privateKey" οnblur="textOnBlur();" readonly>
+                ${privateKey}
+                </textarea>
+            </div>
+
 </ion-content>

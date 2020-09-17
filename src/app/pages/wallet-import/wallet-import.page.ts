@@ -255,13 +255,14 @@ export class WalletImportPage implements OnInit {
                 return;
             }
             this.helper.addWallet(wallet, this.password);
-            let navigationExtras: NavigationExtras = {
-                state: {
-                    privateKey: wallet.privateKey,
-                    action: 'create'
-                }
-            };
-            this.navCtrl.navigateRoot('wallet', navigationExtras);
+            // let navigationExtras: NavigationExtras = {
+            //     state: {
+            //         privateKey: wallet.privateKey,
+            //         action: 'create'
+            //     }
+            // };
+            // this.navCtrl.navigateRoot('wallet', navigationExtras);
+            this.router.navigate(['cph-receive']);
         })
     }
 

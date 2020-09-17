@@ -6,6 +6,7 @@ import * as RIPEMD160 from 'ripemd160';
 import * as util from 'ethereumjs-util';
 import * as jsSHA from 'jssha';
 import * as ed25519 from '@stablelib/ed25519';
+import csprng from 'secure-random';
 
 const TYPE_ED25519 = '01';
 const PUBKEY_PREFIX = '0120';//0x01   0x20 = 32 
@@ -23,13 +24,17 @@ const ADDRESS_NAME = 'Address';
 @Injectable({
   providedIn: 'root'
 })
+
 export class WalletService {
   createRandom() {
     let mnemonic = this.generateRandomMnemonic();
     let seed = this.generateSeed(mnemonic);
     let keyPair = this.generateKeyPair(seed);
     let address = this.getCPHAddressFromPubKey(keyPair.publicKey);
-
+    console.log("mnemonic",mnemonic);
+    console.log("seed",seed);
+    console.log("privateKey",keyPair.privateKey);
+    console.log("publicKey",keyPair.publicKey);
     return{
       address: address,
       mnemonic: mnemonic,
@@ -65,6 +70,8 @@ export class WalletService {
       publicKey: keyPair.publicKey
     };
   }
+
+
   /**
    *  Create a new instance of this Wallet connected to provider.
    */
@@ -107,6 +114,9 @@ export class WalletService {
   }
 
   generateRandomMnemonic() {
+    let randomResult=csprng(32)
+    console.log("randomResult",randomResult)
+   // return bip39.generateMnemonic(128,randomResult);
     return bip39.generateMnemonic();
   }
 

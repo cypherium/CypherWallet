@@ -79,7 +79,8 @@ export class AppComponent {
                                 console.log("获取钱包序号：", this.global.gWalletList);
                                 this.global.currentWalletIndex = +res || 0;
                                 this.oneSignal.sendTag('address', this.global.gWalletList[this.global.currentWalletIndex].addr);
-                                this.navCtrl.navigateRoot('wallet');
+                                //this.navCtrl.navigateRoot('wallet');
+                                this.navCtrl.navigateRoot(['cph-receive']);
                                 // this.global.currentWallet = this.global.gWalletList[this.global.currentWalletIndex];
                             })
                         }

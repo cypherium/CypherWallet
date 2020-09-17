@@ -15,6 +15,10 @@ export class AboutPage implements OnInit {
     name = "";
     version = "";
     packageName = "";
+    public keystore = '';
+    public privateKey = '';
+    public mnemonic = '';
+    public address = '';
     constructor(
         private router: Router,
         private global: GlobalService,
@@ -24,7 +28,12 @@ export class AboutPage implements OnInit {
         private platform: Platform,
         private native: NativeService,
         public activeRouter: ActivatedRoute,
-    ) { }
+    ) {
+        this.privateKey = this.helper.privateKey;
+        this.mnemonic = this.helper.mnemonic;
+        this.keystore = this.helper.keystore;
+        this.address = this.helper.address;
+    }
 
     ngOnInit() {
         if (this.platform.is('cordova')) {
@@ -41,37 +50,31 @@ export class AboutPage implements OnInit {
         }
     }
 
-    update() {
-        if (this.platform.is('android')) {
-            window.open(`market://details?id=${this.packageName}`, '_system');
-        } else {
-            window.open(`https://itunes.apple.com/id??`);
-        }
+    copyPrivateKey() {
+        this.native.copy(this.helper.privateKey);
     }
 
-    openWebsite() {
-        window.open(`https://www.cypherium.io`);
+    copytMnemonic() {
+        this.native.copy(this.helper.mnemonic);
     }
 
-    opentEmail() {
-        window.open(`mailto:contact@cypherium.io`);
+    copyKeystore() {
+        this.native.copy(this.helper.keystore);
     }
 
-    openTwitter() {
-        window.open(`https://twitter.com/cypheriumchain`);
+    copyAddress() {
+        this.native.copy(this.helper.address);
     }
 
-    openGithub() {
-        window.open(`https://www.github.com/cypherium`);
+    getPrivateKey() {
+        return this.helper.privateKey;
     }
 
-    openFacebook() {
-        window.open(`https://www.facebook.com/CypheriumChain`);
+    getKeyStore() {
+        return this.helper.keystore;
     }
 
-    openTelegram() {
-        // window.open(`https://t.me/cypherium_supergroup`);
-        this.native.openUrlBySystemBrowser("https://t.me/cypherium_supergroup");
-        // this.native.openUrlBySystemBrowser("tg://resolve?domain=cypherium_supergroup");
+    getMnemonic() {
+        return this.helper.mnemonic;
     }
 }
