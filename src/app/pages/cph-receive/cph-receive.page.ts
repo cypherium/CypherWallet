@@ -47,7 +47,7 @@ export class CphReceivePage implements OnInit {
         // var qr = qrcode(16, "L");
         let addr = this.helper.convertAddr(this.wallet.addr);
         this.addr = addr;
-        this.privatekey = this.helper.privateKey
+        this.privatekey =this.helper.privateKey
         this.qrcode = "cph://account/transfer/" + 'cph'+ this.wallet.addr;
         // this.addr = addr;
         // qr.addData(addr);

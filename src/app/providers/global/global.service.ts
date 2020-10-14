@@ -10,6 +10,7 @@ export class GlobalService {
     public gWalletList = [];
     vibrationDuration = 100;
     paymentPassword = "";
+    privateKey = "";
     walletName = "";
     currentWalletIndex = -1;
     maxWalletNum = 20;

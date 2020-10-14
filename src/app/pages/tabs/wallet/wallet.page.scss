@@ -1,91 +1,95 @@
-// ion-header {
-//     overflow: hidden;
-// }
-ion-header ion-toolbar {
-  --background: var(--ion-color-primary);
-  overflow: hidden;
-}
-
-$headerHeight: 44px;
-.header {
-  background: var(--ion-color-primary);
-  border-radius: 0px 0px 15px 15px;
-  height: 200px;
-  // padding-top: 44px;
-  color: #fff;
-
-  .title {
-    display: flex;
-    height: $headerHeight;
-
-    // .menu,
-    // .scan {
-    //     height: var(--header-height);
-    //     width: var(--header-height);
-    //     background: url(../../../../assets/imgs/menu.svg) center center no-repeat;
-    //     background-size: 18px 18px;
+.main {
+    text-align: center;
+    padding-top: 40px;
+    // .logo {
+    //     width: 48px;
+    //     height: 48px;
+    //     background: url(../../../../assets/imgs/logo.svg) center center no-repeat;
+    //     background-size: cover;
+    //     margin: 10px auto;
     // }
 
-    .text {
-      flex: 1;
-      font-size: 17px;
-      line-height: $headerHeight;
-      text-align: center;
-      margin: 0;
+    .qrcode {
+        // width: 240px;
+        // height: 240px;
+        // margin: 0 auto;
     }
 
-    // .scan {
-    //     background-image: url(../../../../assets/imgs/scan-white.svg);
-    // }
-  }
+    .address {
+        background: #F8F8F8;
+        border: 1px solid #E8E8E8;
+        border-radius: 5px;
+        font-size: 14px;
+        line-height: 20px;
+        display: flex;
+        width: 80%;
+        height: 64px;
+        margin: 20px auto 0;
+        align-items: center;
 
-  .info {
-    // margin-top: 18px;
-    padding: 0 var(--page-padding);
+        .label {
+            color: var(--title-color);
+            flex: 1;
+            padding-left: 10px;
+            line-height: 20px;
+            word-break: break-all;
+            text-align: left;
+        }
 
-    .desc {
-      font-size: 14px;
-      line-height: 28px;
-      color: rgba(255, 255, 255, 0.7);
+
     }
 
-    .amount {
-      display: flex;
-      align-items: flex-end;
-      line-height: 1;
-      margin-top: 8px;
+        .privatekey {
+            background: #F8F8F8;
+            border: 1px solid #E8E8E8;
+            border-radius: 5px;
+            font-size: 14px;
+            line-height: 20px;
+            display: flex;
+            width: 80%;
+            height: 64px;
+            margin: 20px auto 0;
+            align-items: center;
 
-      .unit {
-        font-size: 10px;
-      }
 
-      .interger {
-        font-size: 34px;
-        font-weight: bold;
-        margin: 0 2px -2px;
-      }
 
-      .fraction {
-        font-size: 16px;
-        font-weight: bold;
-      }
+
+        }
+
+    .tips {
+        margin: 14px auto;
+        color: var(--title-color);
+        width: 70%;
+        padding: 0;
     }
-
-  }
 }
 
+.bottom-logo {
+    position: absolute;
+    bottom: 40px;
+    margin: 0 auto;
+    // width: 200px;
+    height: 40px;
+    // background: url(../../../../assets/imgs/cypherium-full-logo.svg) left center no-repeat;
+    background-size: auto 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 40px;
+    color: #00b000;
+    font-size: 18px;
+    text-indent: 50px;
+}
 
+ion-content{
+  overflow-scroll: true;
+}
+.scroll-content {
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
+  -ms-user-select: auto !important;
+  user-select: auto !important;
+}
 
-
-
-
-
-
-// @each $track, $value in map-remove($categories) {
-//   ion-item-sliding[track='#{$track}'] ion-label {
-//     border-left: 2px solid $value;
-//     padding-left: 10px;
-//   }
-// }
-
-
+.selectable {
+  -webkit-user-select: auto;//控制网页内容选择范围
+}

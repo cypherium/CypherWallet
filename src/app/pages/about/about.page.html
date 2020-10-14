@@ -3,54 +3,35 @@
         <ion-buttons slot="start">
             <ion-back-button></ion-back-button>
         </ion-buttons>
-        <ion-title>{{ 'Wallet Info'| translate }}</ion-title>
+        <!-- <ion-buttons slot="start">
+            <ion-button (click)="back()">
+                <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons> -->
+        <ion-title>{{ 'YOURACCOUNT' | translate }}</ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content class="gray-content">
+<ion-content>
     <div class="main">
-        <div class="title">
-            <div class="content" translate="">COPY_WALLET_TIPS</div>
+        <!-- <div class="logo"></div> -->
+        <!-- <div class="qrcode" [innerHTML]="qrcode">
+
+        </div> -->
+        <div class="Address">Address</div>
+        <div class="address">
+            <ion-content overflow-scroll='true'>
+                <div class="selectable">{{ address }}</div>
+            </ion-content>
+        </div>
+
+        <div class="Address">Private Key</div>
+        <div class="privateKey">
+            <ion-content overflow-scroll='true'>
+                <div class="selectable">{{ privateKey }}</div>
+            </ion-content>
         </div>
     </div>
-
-
-
-            <div class="label">Address</div>
-            <div class="input-wrapper">
-                <textarea name="address" rows="4" cols="35" required="required" id="address1" οnblur="textOnBlur();" readonly >
-                address
-                </textarea>
-            </div>
-
-           <script type="text/javascript">
-                document.getElementById("address1").value="adfadfl;;j"
-
-                var mystr="hello";
-                document.write(mystr+"<br>");//输出hello后，输出一个换行符
-                document.write("JavaScript");
-            </script>
-
-    <div class="label">address</div>
-    <div class="content">
-        <div class="address">{{ address }}</div>
-        <div class="Mnemonic">{{ mnemonic }}</div>
-    </div>
-
-            <div class="label">Mnemonic</div>
-            <div class="input-wrapper">
-                <textarea rows="4" cols="35" name="mnemonic" οnblur="textOnBlur();" readonly>
-                ${mnemonic}
-                </textarea>
-            </div>
-
-
-            <div class="label">PrivateKey</div>
-            <!-- <div class="content">contact@cypherium.io</div> -->
-            <div class="input-wrapper">
-                <textarea rows="4" cols="35" name="privateKey" οnblur="textOnBlur();" readonly>
-                ${privateKey}
-                </textarea>
-            </div>
-
 </ion-content>
+
+

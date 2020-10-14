@@ -49,10 +49,14 @@ export class WalletPage implements OnInit {
         private navCtrl: NavController,
     ) {
         console.log("Wallet constructor...");
-        this.privateKey = helper.privateKey;
-        this.keystore = helper.keystore;
-        this.mnemonic = helper.mnemonic;
-        this.addr = helper.address;
+        if (this.router.getCurrentNavigation().extras.state) {
+           this.addr = this.router.getCurrentNavigation().extras.state.wallet;
+            this.privateKey = this.router.getCurrentNavigation().extras.state.privateKey;
+            console.log("Wallet wallet", this.addr);
+            console.log("Wallet privateKey", this.privateKey);
+        }
+
+
     }
 
     ngOnInit() {

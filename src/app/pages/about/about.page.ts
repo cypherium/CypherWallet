@@ -29,13 +29,20 @@ export class AboutPage implements OnInit {
         private native: NativeService,
         public activeRouter: ActivatedRoute,
     ) {
-        this.privateKey = this.helper.privateKey;
-        this.mnemonic = this.helper.mnemonic;
-        this.keystore = this.helper.keystore;
-        this.address = this.helper.address;
+        if (this.router.getCurrentNavigation().extras.state) {
+            this.address = this.router.getCurrentNavigation().extras.state.wallet;
+            this.privateKey = this.router.getCurrentNavigation().extras.state.privateKey;
+            console.log("about wallet", this.address);
+            console.log("about privateKey", this.privateKey);
+        }
     }
 
     ngOnInit() {
+        this.activeRouter.queryParams.subscribe((data) => {
+            console.log("activeRouter.returnUrl", data.returnUrl);
+            console.log('%o', data);
+
+        })
         if (this.platform.is('cordova')) {
             this.native.getAppVersionInfo().subscribe(res => {
                 console.log("Get version：" + JSON.stringify(res));
@@ -48,6 +55,8 @@ export class AboutPage implements OnInit {
             this.packageName = "com.cph.www";
             this.name = "light Wallet";
         }
+        this.privateKey = this.global.privateKey;
+        this.address =this.global.gWalletList[this.global.currentWalletIndex || 0] || {};
     }
 
     copyPrivateKey() {

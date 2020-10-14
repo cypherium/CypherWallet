@@ -1,37 +1,43 @@
-<ion-header no-border>
+<ion-header>
     <ion-toolbar>
         <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
         </ion-buttons>
-        <ion-title>
-            {{ wallet.name }}
-        </ion-title>
-        <ion-buttons slot="end">
-
-        </ion-buttons>
+        <!-- <ion-buttons slot="start">
+            <ion-button (click)="back()">
+                <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button>
+        </ion-buttons> -->
+        <ion-title>{{ 'YOURACCOUNT' | translate }}</ion-title>
     </ion-toolbar>
 </ion-header>
+
 <ion-content>
-    <div class="wrapper">
+    <div class="main">
+        <!-- <div class="logo"></div> -->
+        <!-- <div class="qrcode" [innerHTML]="qrcode">
 
+        </div> -->
 
-        <div class="btns">
-            <div class="money receive" (click)="goCphReceive()" tappable>
-                <div class="icon"></div>
-                <p class="text" translate>RECEIVE</p>
-            </div>
+        <div class="label">Aaddress</div>
+        <div class="address">
+            <ion-content overflow-scroll='true'>
+                <div class="selectable">{{ wallet.addr }}</div>
+            </ion-content>
+        </div>
+
+        <div class="label">Private Key</div>
+        <div class="privatekey">
+            <ion-content overflow-scroll='true'>
+                <div class="selectable">{{ privateKey }}</div>
+            </ion-content>
         </div>
 
 
+        <div class="tips">
+            {{ 'RECEIVE_ADDR' | translate:{value: global.projectName} }}
+        </div>
     </div>
 </ion-content>
 
-<app-my-tabs tab="wallet"></app-my-tabs>
 
-
-<app-alert [title]="alertTitle" [desc]="alertDesc" *ngIf="ifShowAlert" cancelText="{{ 'CANCEL' | translate }}"
-    (cancel)="cancelAlert()" confirmText="{{ 'CONFIRM' | translate }}" (confirm)="confirmAlert()">
-</app-alert>
-
-<app-generate-privatekey [needIndex] = "needIndex" *ngIf="ifShowPasswordPrompt" promptDesc="{{ 'INPUT_PASSWORD_TIPS' | translate }}"
-    cancelText="{{ 'CANCEL' | translate }}" confirmText="{{ 'CONFIRM' | translate }}" (cancel)="cancelPrompt()"
-    (confirm)="confirmPrompt($event)"></app-generate-privatekey>

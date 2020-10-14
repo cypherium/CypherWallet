@@ -28,6 +28,7 @@ import { HTTP } from '@ionic-native/http/ngx';
 import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-translate/core';
 
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
 // import { PincodeModalPageModule } from './pages/pincode-modal/pincode-modal.module';
 // import { KeypadComponent } from './components/keypad/keypad.component';
 

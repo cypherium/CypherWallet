@@ -77,14 +77,15 @@ export class BackupMnemonicPage implements OnInit {
             this.helper.addWallet(this.wallet, this.global.paymentPassword);
             this.global.walletName = "";
             // //前往首页
-            // let navigationExtras: NavigationExtras = {
-            //     state: {
-            //         privateKey: this.wallet.privateKey,
-            //         action: 'create'
-            //     }
-            // };
-            // this.navCtrl.navigateRoot('wallet', navigationExtras);
-            this.router.navigate(['cph-receive']);
+            let navigationExtras: NavigationExtras = {
+                state: {
+                    privateKey: this.wallet.privateKey,
+                    wallet: this.wallet,
+                    action: 'create'
+                }
+            };
+            //this.navCtrl.navigateRoot('wallet', navigationExtras);
+            this.router.navigate(['wallet'], navigationExtras);
         } else {
             let error = await this.helper.getTranslate('MNEMONIC_WRONG');
             this.helper.toast(error);

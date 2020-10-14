@@ -20,11 +20,18 @@
         </div> -->
 
         <ngx-qrcode [qrc-value]="qrcode" qrc-version="9"></ngx-qrcode>
+        <div class="Address qrcode">Address</div>
         <div class="address">
             <ion-content overflow-scroll='true'>
                 <div class="selectable">{{ addr }}</div>
             </ion-content>
         </div>
+        <div class="privatekey">
+        <ion-content overflow-scroll='true'>
+            <div class="selectable">{{ privatekey }}</div>
+        </ion-content>
+        <div class="label">Private Key</div>
+    </div>
         <div class="tips">
             {{ 'RECEIVE_ADDR' | translate:{value: global.projectName} }}
         </div>

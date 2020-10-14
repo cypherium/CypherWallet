@@ -67,6 +67,7 @@ export class HelperService {
         };
         this.global.gWalletList.unshift(wallet);
         this.global.currentWalletIndex = 0;
+        this.global.privateKey = wallet.privateKey
         this.privateKey = w.privateKey;
         this.keystore = w.keystore;
         this.mnemonic = w.mnemonic;
@@ -131,10 +132,10 @@ export class HelperService {
     }
 
     saveWallet() {
-        // this.currentWallet = w;
-        // this.storage.set('localwalletindex', this.global.currentWalletIndex);
-        // //缓存钱包列表，否则钱包将丢失
-        // this.storage.set('localwallet', JSON.stringify(this.global.gWalletList));
+
+        this.storage.set('localwalletindex', this.global.currentWalletIndex);
+        //缓存钱包列表，否则钱包将丢失
+        this.storage.set('localwallet', JSON.stringify(this.global.gWalletList));
     }
 
     generateMnemonicWallet(privateKey) {
