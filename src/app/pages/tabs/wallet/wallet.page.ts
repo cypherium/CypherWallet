@@ -50,9 +50,10 @@ export class WalletPage implements OnInit {
     ) {
         console.log("Wallet constructor...");
         if (this.router.getCurrentNavigation().extras.state) {
-           this.addr = this.router.getCurrentNavigation().extras.state.wallet;
+            // this.addr =  this.router.getCurrentNavigation().extras.state.wallet;
+            // this.addr = this.helper.convertAddr(this.addr);
             this.privateKey = this.router.getCurrentNavigation().extras.state.privateKey;
-            console.log("Wallet wallet", this.addr);
+            // console.log("Wallet wallet", this.addr);
             console.log("Wallet privateKey", this.privateKey);
         }
 
@@ -65,8 +66,9 @@ export class WalletPage implements OnInit {
 
     async ionViewDidEnter() {
         console.log("wallet ngoninit +++++++++...");
-        this.wallet = this.global.gWalletList[this.global.currentWalletIndex || 0] || {};
+        this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
         console.log(this.wallet);
+        this.addr = this.helper.convertAddr(this.wallet.addr);
         this.amount = this.wallet.amount || 0;
         this.computeValue();
         this.interval = setInterval(() => {

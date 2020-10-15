@@ -80,7 +80,7 @@ export class AppComponent {
                                 this.global.currentWalletIndex = +res || 0;
                                 this.oneSignal.sendTag('address', this.global.gWalletList[this.global.currentWalletIndex].addr);
                                 //this.navCtrl.navigateRoot('wallet');
-                                this.navCtrl.navigateRoot(['about']);
+                                this.navCtrl.navigateRoot(['wallet']);
                                 // this.global.currentWallet = this.global.gWalletList[this.global.currentWalletIndex];
                             })
                         }

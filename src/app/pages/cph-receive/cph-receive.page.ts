@@ -26,7 +26,12 @@ export class CphReceivePage implements OnInit {
         public global: GlobalService,
         public nav: NavController,
         private storage: Storage,
-    ) { }
+    ) {
+        if (this.router.getCurrentNavigation().extras.state) {
+            this.privatekey = this.router.getCurrentNavigation().extras.state.privateKey;
+            console.log("Wallet privateKey", this.privatekey);
+        }
+    }
 
     // back() {
     //     this.nav.navigateBack('/wallet');
@@ -47,7 +52,6 @@ export class CphReceivePage implements OnInit {
         // var qr = qrcode(16, "L");
         let addr = this.helper.convertAddr(this.wallet.addr);
         this.addr = addr;
-        this.privatekey =this.helper.privateKey
         this.qrcode = "cph://account/transfer/" + 'cph'+ this.wallet.addr;
         // this.addr = addr;
         // qr.addData(addr);

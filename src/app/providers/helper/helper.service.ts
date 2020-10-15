@@ -133,9 +133,9 @@ export class HelperService {
 
     saveWallet() {
 
-        this.storage.set('localwalletindex', this.global.currentWalletIndex);
-        //缓存钱包列表，否则钱包将丢失
-        this.storage.set('localwallet', JSON.stringify(this.global.gWalletList));
+        // this.storage.set('localwalletindex', this.global.currentWalletIndex);
+        // //缓存钱包列表，否则钱包将丢失
+        // this.storage.set('localwallet', JSON.stringify(this.global.gWalletList));
     }
 
     generateMnemonicWallet(privateKey) {
