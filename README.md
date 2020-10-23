@@ -59,6 +59,9 @@ export const environment = {
 
 运行 ionic serve，会自动在浏览器中打开链接，并且所有改动会热更新到浏览器上，无需手动刷新。
 
+```
+编译工程 ionic cordova build browser
+```
 > 由于目前后端接口未配置跨域，因此前端访问需关闭 chrome 的安全设置。具体方式为先彻底退出 chrome，然后用 **_ open -a "Google Chrome" --args --disable-web-security --user-data-dir _** 的命令行方式启动
 
 ## 基于 Android Studio 的调试
