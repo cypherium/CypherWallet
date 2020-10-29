@@ -76,12 +76,14 @@ export class Web3Service {
         console.log('getCphBalance');
         this.web3.cph.getBalance(userAddr, pending ? 'pending' : 'latest', (e,v) => {
             if (!e) {
+                console.log('!e');
                 console.log("调用参数:-----------------------------------", userAddr, v);
                 console.log(`钱包${userAddr}的余额是${v}`);
                 let value = this.web3.fromWei(v, 'cpher');
                 callback(value);
             } else {
                 //读取余额本地缓存
+                console.log('读取余额本地缓存');
                 if (this.global.currentWalletIndex !== undefined) {
                     callback(this.global.gWalletList[this.global.currentWalletIndex].amount);
                 } else {
