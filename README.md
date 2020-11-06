@@ -90,7 +90,7 @@ export const environment = {
     添加工程 ionic cordova platform add ios@latest
     删除工程 ionic cordova platform rm ios
     查看工程 ionic cordova platform ls
-    编译工程 ionic cordova prepare ios --prod
+    编译工程 ionic cordova prepare ios --prod --release
 ```
 
 ios 的发布需要用到 xcode, 包括几种版本：

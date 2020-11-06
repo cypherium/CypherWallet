@@ -221,6 +221,7 @@ export class WalletDetailPage implements OnInit {
 
                 }
             }
+            this.getWalletInfo(this.wallet.addr);
         }, e => {
                 this.loading = false;
                 //this.helper.toast("Network error. Please try again.");

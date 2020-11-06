@@ -25,7 +25,7 @@ export class AppConfig {
                   this.global.provider = 'http://' + data.providers[0].ip;;
                 resolve(true);
               },(error) =>{
-                    this.helper.toast('Please check the network connection');
+                   // this.helper.toast('Please check the network connection');
                     resolve(false);
               });
               ;
