@@ -19,7 +19,7 @@ export class WalletAdminPage implements OnInit {
     }
 
     exportWalletKeystore() {
-        console.log("导出keystore");
+        console.log("export keystore");
         this.router.navigate(['export-keystore']);
     }
 

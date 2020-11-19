@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as ethers from "ethers";
+import * as cyphers from "cyphers";
 import { GlobalService } from '../../providers/global/global.service';
 import { HelperService } from '../../providers/helper/helper.service';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';

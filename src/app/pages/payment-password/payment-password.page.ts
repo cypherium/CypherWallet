@@ -71,7 +71,6 @@ export class PaymentPasswordPage implements OnInit {
       let error = await this.helper.getTranslate('NEW_PASSWORD_EMPTY');
       this.passwordError1 = error;
     } else if (!/^\d{6}$/.test(this.password1)) {
-      //密码格式错误
       let error = await this.helper.getTranslate('PAYMENT_PASSWORD_RULE');
       this.passwordError1 = error;
     }
@@ -106,12 +105,10 @@ export class PaymentPasswordPage implements OnInit {
       return;
     }
 
-    //开始修改密码
     this.ifShowLoading = true;
 
     setTimeout(async () => {
         this.ifShowLoading = false;
-        //计算新的payment-keystore
         if (this.privateKey) {
           let keystore = this.helper.exportKeystore(this.privateKey, this.password1);
           this.wallet.payment = keystore;
@@ -129,7 +126,6 @@ export class PaymentPasswordPage implements OnInit {
 
           }, 1000);
         } else {
-          //密码错误
           this.ifShowLoading = false;
           let error = await this.helper.getTranslate('PASSWORD_ERROR');
           // this.passwordError = error;

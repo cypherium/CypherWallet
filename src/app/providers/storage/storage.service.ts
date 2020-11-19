@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 
 /**
- * 缓存工具类
- * 注：代码中务必使用此方法缓存数据，方便以后切换缓存机制
+ * Cache tool class
+ * Note: Be sure to use this method in your code to cache data so you can switch caching mechanisms later
  */
 @Injectable({
     providedIn: 'root'

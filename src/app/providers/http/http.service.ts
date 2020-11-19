@@ -11,9 +11,7 @@ import { HttpHelperService, RequestSetting } from '../http-helper/http-helper.se
 import { GlobalService } from '../global/global.service';
 import { TranslateService } from "@ngx-translate/core";
 
-/**
- * 封装angular http
- */
+
 @Injectable({
     providedIn: 'root'
 })
@@ -27,7 +25,6 @@ export class HttpService extends HttpHelperService {
     }
 
     public get(url: string, params: any = {}, setting: RequestSetting = {}) {
-        console.log("getgetget", url);
         const options = {
             method: 'GET',
             url: url,
@@ -75,22 +72,18 @@ export class HttpService extends HttpHelperService {
     }
 
     /**
-     * 一个app可能有多个后台接口服务(api),针对主api添加业务处理
+     * An app may have multiple back-end interface services (apis) that add business processing to the main API
      */
     public defaultRequest(options, setting: RequestSetting): Observable<any> {
-        //  使用默认API:APP_SERVE_URL
+        //  Use the default API:APP_SERVE_URL
         if (!options.url.startsWith('http')) {
             options.url = environment.appServerUrl + options.url;
         }
         console.log("defaultRequest:" + options.url);
-        //  添加请求头
-        // if (GlobalService.token) {
-        //     options.headers = options.headers || new HttpHeaders();
-        //     options.headers = options.headers.set('Authorization', `Bearer ${GlobalService.token}`);  // 注：set append返回新的HttpHeaders
-        // }
+
         return Observable.create(observer => {
             this.request(options, setting).subscribe(res => {
-                observer.next(res); // data是主api约定返回的数据
+                observer.next(res); // Data is the data returned by the main API convention
             }, err => {
                 observer.error(err);
             });
@@ -122,9 +115,9 @@ export class HttpService extends HttpHelperService {
         const setting = HttpHelperService.getDefaultSetting(set);
         options.url = UtilService.formatUrl(options.url);
         console.log(JSON.stringify(set));
-        console.log("请求url:" + options.url);
+        console.log("The request url:" + options.url);
         return Observable.create(observer => {
-            // 如果需要缓存，先尝试从sessionStorage中取数据
+
             if (setting.needCache) {
                 const cacheResult = HttpHelperService.getCacheData(options);
                 if (cacheResult) {
@@ -136,8 +129,8 @@ export class HttpService extends HttpHelperService {
             this.http.request(options.method, options.url, options).pipe(
                 timeout(environment.requestTimeout)
             ).subscribe((res: any) => {
-                setting.needCache && HttpHelperService.setCacheData(options, res); // 如果需要缓存，保存数据到sessionStorage中
-                let code = res.err_no; //出错则弹出提示
+                setting.needCache && HttpHelperService.setCacheData(options, res); // If caching is required, save the data to sessionStorage
+                let code = res.err_no; //An error will prompt you
                 if (code && GlobalService.errorCode[code] && !set.ignoreError) {
                     this.helper.toast(GlobalService.errorCode[code]);
                 }
@@ -172,15 +165,15 @@ export class HttpService extends HttpHelperService {
     }
 
     /**
-     * 处理请求失败事件
+     * Handle the failed request event
      */
     private async requestFailedHandle(url: string, err: HttpErrorResponse) { // : Response
         const status = err && err.status;
         let msg = await this.getTranslate('REQUEST_ERROR');
-        // 与后台约定，状态码为400即为业务异常
+        // As agreed with the background, a status code of 400 is a business exception
         if (status === 400) {
             const errData = err.error;
-            //  401 token无效或过期需要重新登录
+            //  Invalid or expired 401 Token requires re-login
             if (errData.code === 401) {
                 let error = await this.getTranslate('PAASSWORD_EXPIRED');
                 this.helper.toast(error);

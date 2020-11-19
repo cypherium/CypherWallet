@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
-import * as ethers from "ethers";
+import * as cyphers from "cyphers";
 import { GlobalService } from '../../providers/global/global.service';
 import { HelperService } from '../../providers/helper/helper.service';
 import { WalletService } from '../../providers/wallet/wallet.service';
@@ -49,7 +49,7 @@ export class WalletCreatePage implements OnInit {
         if (await this.checkPassword1() !== "") {
             return;
         }
-        // let wallet = ethers.Wallet.createRandom();
+        // let wallet = cyphers.Wallet.createRandom();
         let wallet = this.Wallet.createRandom();
         let navigationExtras: NavigationExtras = {
             state: {

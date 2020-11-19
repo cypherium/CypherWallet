@@ -3,7 +3,7 @@ import * as crypto from 'crypto';
 import * as nacl from 'tweetnacl';
 import * as bip39 from 'bip39';
 import * as RIPEMD160 from 'ripemd160';
-import * as util from 'ethereumjs-util';
+import * as util from 'cypheriumjs-util';
 import * as jsSHA from 'jssha';
 import * as ed25519 from '@stablelib/ed25519';
 

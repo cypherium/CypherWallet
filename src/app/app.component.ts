@@ -5,12 +5,10 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Storage } from '@ionic/storage';
 import { GlobalService } from './providers/global/global.service';
-// import { Web3Service } from './providers/web3/web3.service';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
 import { TranslateService } from "@ngx-translate/core";
-import { environment } from '../environments/environment';
 import { HelperService } from './providers/helper/helper.service';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { OneSignal } from '@ionic-native/onesignal/ngx';
 
 @Component({
@@ -58,16 +56,16 @@ export class AppComponent {
         this.oneSignal.endInit();
     
             this.keyboard.onKeyboardWillShow().subscribe(() => {
-                //keyboard显示
+                //keyboard display
                 document.body.classList.add('keyboard-is-open');
             })
 
             this.keyboard.onKeyboardWillHide().subscribe(() => {
-                //keyboard显示
+                //keyboard display
                 document.body.classList.remove('keyboard-is-open');
             })
 
-            //获取本地存储的钱包，如果没有则前往创建钱包页
+            //Gets the wallet stored locally, or if not, goes to the create wallet page
             this.storage.get("localwallet").then(res => {
                 if (res) {
                     try {
@@ -76,7 +74,7 @@ export class AppComponent {
                             this.navCtrl.navigateRoot('/wallet-create');
                         } else {
                             this.storage.get("localwalletindex").then(res => {
-                                console.log("获取钱包序号：", this.global.gWalletList);
+                                console.log("Get the wallet serial number：", this.global.gWalletList);
                                 this.global.currentWalletIndex = +res || 0;
                                 this.oneSignal.sendTag('address', this.global.gWalletList[this.global.currentWalletIndex].addr);
                                 this.navCtrl.navigateRoot('wallet');
@@ -98,7 +96,7 @@ export class AppComponent {
                         let setting = JSON.parse(res);
                         this.global.settings = setting;
                     } catch (e) {
-                        console.log("获取配置出错...");
+                        console.log("Get configuration error...");
                     }
                 }
                 let lang = this.global.settings.language;

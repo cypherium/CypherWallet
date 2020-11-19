@@ -12,7 +12,7 @@ import { environment } from '../../../../environments/environment';
     styleUrls: ['./pledge.page.scss'],
 })
 export class PledgePage implements OnInit {
-    promptDesc = "输入安全密码，确认赎回";
+    promptDesc = "Enter the security password to confirm the redemption";
     businessType = "pledge";
     businessAmount = "";
     ifShowPasswordPrompt = false;
@@ -69,7 +69,7 @@ export class PledgePage implements OnInit {
                 this.helper.saveWallet();
             }
         });
-        //获取抵押余额
+        //Obtain the balance of pledge
         this.pledgeAmount = await this.web3.getMortage(this.wallet.addr);
         this.getTimes();
     }
@@ -127,7 +127,7 @@ export class PledgePage implements OnInit {
     }
 
     async pledge(privateKey) {
-        //执行抵押
+        //exe pledge
         let business = this.businessType == 'pledge' ? 'mortgage' : 'redeem';
         this.web3.pledge(business, this.wallet.addr, +this.businessAmount, privateKey, async (err, result) => {
             this.ifShowLoading = false;
@@ -135,7 +135,7 @@ export class PledgePage implements OnInit {
                 let pledgeSuccess = await this.helper.getTranslate('PLEDGE_SUCCEED'),
                     drawbackSuccess = await this.helper.getTranslate('DRAWBACK_SUCCEED');
                 this.helper.toast(this.businessType == 'pledge' ? pledgeSuccess : drawbackSuccess);
-                //更新账户信息
+                //Update account information
                 this.updateWalletInfo();
             } else {
                 let pledgeFailure = await this.helper.getTranslate('PLEDGE_FAILURE'),

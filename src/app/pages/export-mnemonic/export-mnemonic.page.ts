@@ -37,10 +37,8 @@ export class ExportMnemonicPage implements OnInit {
         if (this.router.getCurrentNavigation().extras.state) {
             this.wallet = this.router.getCurrentNavigation().extras.state.wallet;
             this.action = this.router.getCurrentNavigation().extras.state.action;
-            //获取助记词
             this.mnemonicList = this.wallet.mnemonic.split(" ");
         } else {
-            //导出助记词
             this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
             this.askForPassword = true;
         }
@@ -55,7 +53,6 @@ export class ExportMnemonicPage implements OnInit {
 
         if (this.askForPassword) {
             setTimeout(() => {
-                //需要用户输入密码
                 this.ifShowPasswordPrompt = true;
             }, 500);
         }
@@ -72,7 +69,6 @@ export class ExportMnemonicPage implements OnInit {
                     wallet: this.wallet,
                 }
             };
-            //前往验证页
             this.router.navigate(['backup-mnemonic'], navigationExtras);
         }
     }
@@ -93,12 +89,11 @@ export class ExportMnemonicPage implements OnInit {
         }
         this.ifShowLoading = true;
         setTimeout(async () => {
-            //解码
             let ret = this.helper.decryptPrivateKey(this.wallet.keystore, this.paymentPassword);
             if (ret.flag) {
                 this.ifShowPasswordPrompt = false;
                 this.ifShowLoading = false;
-                //根据私钥生成助记词，暂时从本地缓存取，后续修改ethereumjs-wallet
+                //The mnemonic is generated according to the private key, temporarily cached locally, and modified cypheriumjs-wallet
                 // this.wallet = this.helper.generateMnemonicWallet(ret.privateKey);
                 this.mnemonicList = this.wallet.mnemonic.split(" ");
                 return;

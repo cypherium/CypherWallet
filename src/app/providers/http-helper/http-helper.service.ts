@@ -5,32 +5,18 @@ import { HelperService } from '../helper/helper.service';
 import { GlobalService } from '../global/global.service';
 
 export declare interface RequestSetting {
-    /**
-     * 是否使用默认api
-     */
     useDefaultApi?: boolean;
-    /**
-     * 请求结果是否需要缓存
-     */
     needCache?: boolean;
-    /**
-     * 是否显示loading
-     */
     showLoading?: boolean;
-	/**
-	 * 是否忽略错误
-	 */
     ignoreError?: boolean;
 }
 
-/**
- * http工具类
- */
+
 @Injectable({
     providedIn: 'root'
 })
 export class HttpHelperService {
-    static requestCount = 0; // 记录未完成的请求数量,当请求数为0关闭loading,当不为0显示loading
+    static requestCount = 0; // Record the number of incomplete requests, close the loading when the number of requests is 0, and display the loading when the number is not 0
 
     constructor(public helper: HelperService) {
     }

@@ -137,7 +137,7 @@ export class CphSendPage implements OnInit {
 
     async ngOnInit() {
         // console.log(this.global.gWalletList, this.global.currentWalletIndex);
-        //获取余额
+        // get balance
         // let state = this.router.getCurrentNavigation().extras.state;
         // console.log("state" + state)
         // if (state) {
@@ -163,15 +163,15 @@ export class CphSendPage implements OnInit {
             })
         }, res => {
             // if (res == 1) {
-            //     //临时拒绝
+            //
 
             // } else if (res == 0) {
-            //     //永久拒绝
+            //
             //     this.ifShowAlert = true;
-            //     this.alertTitle = "权限拒绝";
-            //     this.alertDesc = "您已拒绝摄像头权限，请前往应用管理打开";
+            //     this.alertTitle = "permisson deny";
+            //     this.alertDesc = "You have denied camera access, please go to application management open";
             // } else {
-            //     this.helper.toast("扫码失败");
+            //     this.helper.toast("Sweep code failure");
             // }
         })
     }
@@ -192,13 +192,13 @@ export class CphSendPage implements OnInit {
         await modal.present();
         modal.onDidDismiss().then((s) => {
             if (typeof(s.data) !== 'undefined' && s.data.dismissed !== false) {
-                //获取私钥
+                //get private key
                 setTimeout(async () => {
                     let ret = this.helper.decryptPrivateKey(this.wallet.payment, s.data.dismissed);
                     if (ret.flag) {
                         this.transfer(ret.privateKey);
                     } else {
-                        //密码错误
+                        //password error
                         let error = await this.helper.getTranslate('PAYMENT_PASSWORD_ERROR');
                         this.helper.toast(error);
                     }
@@ -275,13 +275,13 @@ export class CphSendPage implements OnInit {
         if (this.addressError) {
             return;
         }
-        //引导用户输入密码
+        //Direct the user to enter a password
         // this.ifShowPasswordPrompt = true;
 
-        //引导用户输入支付密码 PinCode
+        //Direct the user to enter a payment password PinCode
         // this.presentModal();
-        
-        //引导用户使用面容识别或者指纹识别
+
+        //Guide users to use face recognition or fingerprint recognition
         this.wallet.isAskForBiometric
         this.fingerAuth.isAvailable().then(result =>{
             console.log('showFingerprintAuthDlg'+result)
@@ -298,12 +298,12 @@ export class CphSendPage implements OnInit {
                 })
               .catch((error: any) => {
                   console.log('fingerAuth.show error'+error.message);
-                //引导用户输入密码
+                //Direct the user to enter a password
                 this.ifShowPasswordPrompt = true;
               });
           }).catch((error: any) => {
               console.log('showFingerprintAuthDlg error'+error.message);
-            //引导用户输入密码
+            //Direct the user to enter a password
             this.ifShowPasswordPrompt = true;
         });
 
@@ -315,14 +315,14 @@ export class CphSendPage implements OnInit {
             console.log("Transaction callback.......", err, tx);
             if (err === null) {
                 // resolve(tx);
-                // this.helper.toast("交易成功");
+                // this.helper.toast("transaction success");
                 let navigationExtras = {
                     state: {
                         tx: tx,
-                        status: 1 //0-成功，1:打包中，2:失败
+                        status: 1 //0- success, 1: packed, 2: failure
                     }
                 };
-                //前往交易结果页
+                // Go to the transaction results page
                 this.router.navigate(['transaction-result'], navigationExtras);
             } else {
                 let message = await this.helper.getTranslate('TRANSACTION_FAILED');

@@ -1,20 +1,18 @@
 import { Injectable } from '@angular/core';
 
-/**
- * 工具类：存放和业务无关的公共方法
- */
+
 @Injectable({
     providedIn: 'root'
 })
 export class UtilService {
     /**
-     * 日期对象转为日期字符串
-     * @param date 需要格式化的日期对象
-     * @param sFormat 输出格式,默认为yyyy-MM-dd                        年：y，月：M，日：d，时：h，分：m，秒：s
+     * The date object becomes a date string
+     * @param date The date object that needs to be formatted
+     * @param sFormat Output format, default is yyyy-MM-dd
      * @example  dateFormat(new Date())                               "2017-02-28"
      * @example  dateFormat(new Date(),'yyyy-MM-dd')                  "2017-02-28"
-     * @example  dateFormat(new Date(),'yyyy-MM-dd HH:mm:ss')         "2017-02-28 13:24:00"   ps:HH:24小时制
-     * @example  dateFormat(new Date(),'yyyy-MM-dd hh:mm:ss')         "2017-02-28 01:24:00"   ps:hh:12小时制
+     * @example  dateFormat(new Date(),'yyyy-MM-dd HH:mm:ss')         "2017-02-28 13:24:00"   ps:HH:24-hour
+     * @example  dateFormat(new Date(),'yyyy-MM-dd hh:mm:ss')         "2017-02-28 01:24:00"   ps:hh:12-hour
      * @example  dateFormat(new Date(),'hh:mm')                       "09:24"
      * @example  dateFormat(new Date(),'yyyy-MM-ddTHH:mm:ss+08:00')   "2017-02-28T13:24:00+08:00"
      * @example  dateFormat(new Date('2017-02-28 13:24:00'),'yyyy-MM-ddTHH:mm:ss+08:00')   "2017-02-28T13:24:00+08:00"
@@ -72,9 +70,7 @@ export class UtilService {
             .replace(/fff/ig, String(time.Millisecond));
     }
 
-    /**
-     * 返回字符串长度，中文计数为2
-     */
+
     static strLength(str: string): number {
         let len = 0;
         for (let i = 0, length = str.length; i < length; i++) {
@@ -83,28 +79,26 @@ export class UtilService {
         return len;
     }
 
-    /**
-     * 密码强度 返回：low middle high
-     */
+
     static checkPass(pwd) {
         let m = 0;
         if (pwd.length <= 6) {
-            return 'low'; // 密码长度小于等于6
+            return 'low'; //
         }
         if (/\d/.test(pwd)) {
-            m++; // 纯数字密码
+            m++; //
         }
         if (/[a-z]/.test(pwd)) {
-            m++; // 密码包含小写字母
+            m++; //
         }
         if (/[A-Z]/.test(pwd)) {
-            m++; // 密码包含大写字母
+            m++; //
         }
         if (/\W/.test(pwd)) {
-            m++; // 密码包含特殊字符
+            m++; //
         }
         if (pwd.length > 15) {
-            m = 4; // 密码长度大于15
+            m = 4; //
         }
         if (m < 2) {
             return 'low';
@@ -118,8 +112,8 @@ export class UtilService {
     }
 
     /**
-     * 把url中的双斜杠替换为单斜杠
-     * 如:http://localhost:8080//api//demo.替换后http://localhost:8080/api/demo
+     * Replace the double slash in the URL with a single slash
+     * example:http://localhost:8080//api//demo.atfer replacing is http://localhost:8080/api/demo
      */
     static formatUrl(url = ''): string {
         let index = 0;
@@ -130,7 +124,7 @@ export class UtilService {
     }
 
     /**
-     * 产生一个随机的32位长度字符串
+     * Produces a random 32-bit length string
      */
     static uuid() {
         let text = '';
@@ -142,7 +136,7 @@ export class UtilService {
     }
 
     /**
-     * 根据图片路径把图片转为base64字符串格式
+     * Convert the image to base64 string format based on the image path
      */
     static convertImgToBase64(url: string, callback: Function, width: number = null, height: number = null, outputFormat = 'image/jpg') {
         const img = new Image();

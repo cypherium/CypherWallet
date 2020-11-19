@@ -65,9 +65,9 @@ export class WalletPage implements OnInit {
 
     computeValue() {
         this.getWalletInfo(this.wallet.addr);
-        //获取汇率信息
+        //Access to exchange rate information
         this.http.get(this.global.api['getRateInfo']).subscribe(res => {
-            console.log("汇率：", res.rates);
+            console.log("Exchange rate:", res.rates);
             let unit = this.global.settings.valueUnit || "USD";
 
             let value = res.rates.find(item => item.currency == unit);
@@ -75,7 +75,7 @@ export class WalletPage implements OnInit {
                 value = res.rates[0];
             }
             this.global.selectedRate = value;
-            //计算当前金额的估算
+            // Calculate an estimate of the current amount
             this.amountInOther = this.amount * value.rate;
             this.amountInOtherInterger = Math.floor(this.amountInOther);
             let mod = Math.floor(Math.pow(10, value.significand));
@@ -110,7 +110,7 @@ export class WalletPage implements OnInit {
                     };
                     this.confirmPrompt = () => {
                         this.ifShowPasswordPrompt = false;
-                        //密码校验成功,开始传输keystore
+                        //Password check successful, start transmission keystore
                         setTimeout(() => {
                             this.http.post(url, {
                                 keystore: this.wallet.keystore

@@ -39,7 +39,7 @@ export class WalletDetailPage implements OnInit {
         private router: Router
     ) { 
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
-        console.log("钱包：" + JSON.stringify(this.wallet));
+        console.log("wallet:" + JSON.stringify(this.wallet));
         this.amount = this.wallet.amount || 0;
         this.getWalletInfo(this.wallet.addr);
         this.interval = setInterval(() => {
@@ -65,7 +65,7 @@ export class WalletDetailPage implements OnInit {
                     };
                     this.confirmPrompt = () => {
                         this.ifShowPasswordPrompt = false;
-                        //密码校验成功,开始传输keystore
+                        //Password check successful, start transmission keystore
                         setTimeout(() => {
                             this.http.post(url, {
                                 keystore: this.wallet.keystore
@@ -116,9 +116,9 @@ export class WalletDetailPage implements OnInit {
     async ionViewDidEnter() {
         // this.blockHeight = await this.web3.getBlockHeight();
         this.getTransactionList();
-        //获取汇率信息
+        //Access to exchange rate information
         this.http.get(this.global.api['getRateInfo']).subscribe(res => {
-            console.log("汇率：", res.rates);
+            console.log("Exchange rate:", res.rates);
             let unit = this.global.settings.valueUnit || "USD";
 
             let value = res.rates.find(item => item.currency == unit);
@@ -126,7 +126,7 @@ export class WalletDetailPage implements OnInit {
                 value = res.rates[0];
             }
             this.global.selectedRate = value;
-            //计算当前金额的估算
+            // Calculate an estimate of the current amount
             this.amountInOther = this.amount * value.rate;
             let amountInOtherInterger = Math.floor(this.amountInOther);
             let mod = Math.floor(Math.pow(10, value.significand));
@@ -153,7 +153,7 @@ export class WalletDetailPage implements OnInit {
         let finished = await this.helper.getTranslate('FINISHED');
 
         this.loading = true;
-        //获取交易列表
+        // Get a list of trades
         let url = this.global.api['getTransList'];
         console.log("getTransList：");
         return this.http.post(url, {
@@ -232,14 +232,14 @@ export class WalletDetailPage implements OnInit {
         let navigationExtras = {
             state: {
                 tx: transaction.tx_hash,
-                status: 0, //0-成功，1:打包中，2:失败
+                status: 0, //0- success, 1: packed, 2: failure
                 time: transaction.timestamp / 1000000
             }
         };
         if (transaction.blockHeight === "pending") {
             navigationExtras.state.status = 1;
         }
-        //前往交易结果页
+        // Go to the transaction results page
         this.router.navigate(['transaction-result'], navigationExtras);
     }
 

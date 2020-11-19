@@ -1,9 +1,8 @@
 import { Injectable } from '@angular/core';
-import * as Web3 from 'web3-cypher';
+import * as Web3 from 'web3c';
 import * as sha from 'sha.js';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-// import { Buffer } from 'safe-buffer';
-import * as EthereumTx from 'ethereumjs-tx';
+import * as CypheriumTx from 'cypheriumjs-tx';
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { GlobalService } from '../global/global.service';
 // import * as Secp from 'secp256k1';
@@ -23,8 +22,7 @@ export class Web3Service {
     ) {
         this.web3 = new Web3(new Web3.providers.HttpProvider(this.global.provider || environment.cypherium.provider));
         this.http.get('assets/json/pledge.abi.json').subscribe((abi: any) => {
-            console.log("abi文件加载成功" + JSON.stringify(abi));
-            // this.pledgeContract = this.web3.cph.contract(abi).at(environment.cypherium.pledgeContractAddr);
+            console.log("abi File loading successfully" + JSON.stringify(abi));
             this.pledgeContract = new this.web3.cph.contract(abi, environment.cypherium.pledgeContractAddr);
             return this.pledgeContract;
         });
@@ -57,33 +55,23 @@ export class Web3Service {
             return this[name];
         } else {
             this[name] = new this.web3.cph.contract(abi, addr);
-            console.log("合约初始化成功:", name, addr);
+            console.log("Contract initializes successfully:", name, addr);
             return this[name];
         }
     }
-
-    // async getCphBalance(userAddr, pending = false) {
-    //     console.log('getCphBalance');
-    //     let value = await this.web3.cph.getBalance(userAddr, pending ? 'pending' : 'latest');
-    //     console.log("调用参数:-----------------------------------", userAddr, value);
-
-    //     console.log(`钱包${userAddr}的余额是${value}`);
-    //     value = this.web3.fromWei(value, 'cpher');
-    //     return value;
-    // }
 
     getCphBalance(userAddr, callback, pending = false) {
         console.log('getCphBalance');
         this.web3.cph.getBalance(userAddr, pending ? 'pending' : 'latest', (e,v) => {
             if (!e) {
                 console.log('!e');
-                console.log("调用参数:-----------------------------------", userAddr, v);
-                console.log(`钱包${userAddr}的余额是${v}`);
+                console.log("Invoked param:-----------------------------------", userAddr, v);
+                console.log(`wallet${userAddr}'s balance${v}`);
                 let value = this.web3.fromWei(v, 'cpher');
                 callback(value);
             } else {
-                //读取余额本地缓存
-                console.log('读取余额本地缓存');
+
+                console.log('read from local');
                 if (this.global.currentWalletIndex !== undefined) {
                     callback(this.global.gWalletList[this.global.currentWalletIndex].amount);
                 } else {
@@ -105,7 +93,7 @@ export class Web3Service {
                 if (err) {
                     resolve(0);
                 } else {
-                    console.log("抵押", result);
+                    console.log("pledge", result);
                     let value = this.web3.fromWei(result + "", 'cpher');
                     resolve(value);
                 }
@@ -122,20 +110,18 @@ export class Web3Service {
         let params = type == 'mortgage' ? [from, amount] : [amount];
         let tx = await this.generateCphTx(from, environment.cypherium.pledgeContractAddr, '0x0', gasPrice, privateKey, 'pledgeContract', type, params);
         const serializedTx = tx.serialize();
-        this.web3.cph.sendSignedTransaction('0x' + serializedTx.toString('hex'), callback); //调起合约
-        // this.web3.cph.sendSignedTransaction(tx.rawTransaction, callback); //调起合约
+        this.web3.cph.sendSignedTransaction('0x' + serializedTx.toString('hex'), callback); //Call the contract
     }
 
     async transferCph(from, to, value, gasPrice, privateKey, callback) {
-        console.log(`发起转账----from:${from},to:${to},value:${value}`);
+        console.log(`initiate transfer----from:${from},to:${to},value:${value}`);
         value = this.web3.toWei(value, 'cpher');
         gasPrice = this.web3.toWei(gasPrice + "", 'gwei');
         let tx = await this.generateCphTx(from, to, value, gasPrice, privateKey);
-        console.log("交易签名：", tx)
+        console.log("Transaction signature：", tx)
         const serializedTx = tx.serialize();
         this.web3.cph.sendRawTransaction('0x' + serializedTx.toString('hex'), callback);
-        // this.web3.cph.sendSignedTransaction('0x' + serializedTx.toString('hex'), callback); //调起合约
-        // this.web3.cph.sendSignedTransaction(tx.rawTransaction, callback); //调起合约
+
     }
 
     async generateCphTx(
@@ -143,22 +129,21 @@ export class Web3Service {
         to,
         value,
         gasPrice,
-        privateKey, //账户私钥，用于签名
+        privateKey, //Account private key, used for signing
         contractName = "",
         funcname = "",
         params = null
     ) {
         let data = "";
         if (params) {
-            var thisobj = this[contractName].methods[funcname]; //从目标合约对象中提取函数
-            data = thisobj.apply(thisobj, params).encodeABI(); //将参数封装成合约参数形式
+            var thisobj = this[contractName].methods[funcname]; //Extract the function from the target contract object
+            data = thisobj.apply(thisobj, params).encodeABI(); //Encapsulate parameters as contract parameters
         }
 
-        // var nonce = await this.web3.cph.getTransactionCount('0x' + from, 'pending'); //获取用户钱包地址的nonce
         try {
-            var nonce = await this.web3.cph.getTransactionCount('0x' + from, 'pending'); //获取用户钱包地址的nonce
+            var nonce = await this.web3.cph.getTransactionCount('0x' + from, 'pending'); //Get the address of the user's walletnonce
         } catch (error) {
-            var nonce = await this.web3.cph.getTransactionCount('0x' + from); //获取用户钱包地址的nonce 
+            var nonce = await this.web3.cph.getTransactionCount('0x' + from); //Get the address of the user's walletnonce 
         }
         console.log("Nonce为" + nonce);
         // let gasLimit = await this.web3.cph.estimateGas({
@@ -184,10 +169,10 @@ export class Web3Service {
             // chainId: chainId
         };
 
-        console.log("转账参数：" + JSON.stringify(txParams));
+        console.log("Transfer parameters：" + JSON.stringify(txParams));
         // return this.web3.cph.accounts.signTransaction(txParams, privateKey);
 
-        const tx = new EthereumTx.Transaction(txParams, {
+        const tx = new CypheriumTx.Transaction(txParams, {
             // chain: "cphnet"
         });
         // let privateKeyBuffer = Buffer.from(privateKey, 'hex');
@@ -223,7 +208,7 @@ export class Web3Service {
     }
 
     strToBuffer(str, type) {
-        console.log(str + '即将转成buffer对象');
+        console.log(str + 'Is about to be turned into a Buffer object');
         if (type === 'hex') {
             return Buffer.from(str, 'hex');
         } else {

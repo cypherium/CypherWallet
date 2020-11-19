@@ -62,7 +62,7 @@ export class ChangePasswordPage implements OnInit {
             let error = await this.helper.getTranslate('NEW_PASSWORD_EMPTY');
             this.passwordError1 = error;
         } else if (!/^[\da-zA-Z]{6,18}$/.test(this.password1) || /^[\d]+$/.test(this.password1) || /^[a-zA-Z]+$/.test(this.password1)) {
-            //密码格式错误
+            // password formate error
             let error = await this.helper.getTranslate('PASSWORD_RULE');
             this.passwordError1 = error;
         }
@@ -95,17 +95,16 @@ export class ChangePasswordPage implements OnInit {
             return;
         }
 
-        //开始修改密码
+        //start to change password
         this.ifShowLoading = true;
 
         setTimeout(async () => {
-            //获取私钥
+            //get private key
             let ret = this.helper.decryptPrivateKey(this.wallet.keystore, this.password);
             if (ret.flag) {
                 this.ifShowLoading = false;
-                //获取到私钥
                 let privateKey = ret.privateKey;
-                //计算新的keystore
+                //caculate new keystore
                 let keystore = this.helper.exportKeystore(privateKey, this.password1);
                 this.wallet.keystore = keystore;
                 this.wallet.privateKey = privateKey;
@@ -118,7 +117,7 @@ export class ChangePasswordPage implements OnInit {
                     this.navCtrl.pop();
                 }, 1000)
             } else {
-                //密码错误
+                //password error
                 this.ifShowLoading = false;
                 let error = await this.helper.getTranslate('PASSWORD_ERROR');
                 this.passwordError = error;

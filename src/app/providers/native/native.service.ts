@@ -21,7 +21,7 @@ import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
 declare let ImagePicker;
 
 /**
- * Cordova插件（手机硬件）调用工具类
+ * The Cordova plugin (for mobile hardware) calls the toolbar
  */
 @Injectable({
     providedIn: 'root'
@@ -47,15 +47,15 @@ export class NativeService {
     }
 
     /**
-     * 设置状态栏样式
+     * Set the status bar style
      * https://ionicframework.com/docs/native/status-bar
      */
     setStatusBarStyle(): void {
         // if (this.helper.isMobile()) {
         //     // this.statusBar.overlaysWebView(false);
         //     // this.statusBar.styleLightContent();
-        //     this.statusBar.styleDefault(); // 使用黑色字体
-        //     this.statusBar.backgroundColorByHexString('#fff'); // 设置背景色
+        //     this.statusBar.styleDefault(); // use black font
+        //     this.statusBar.backgroundColorByHexString('#fff'); // Set the background color
         // }
     }
 
@@ -64,7 +64,7 @@ export class NativeService {
     }
 
     /**
-     * 隐藏启动页
+     * Hide startup page
      * https://ionicframework.com/docs/native/splash-screen
      */
     hideSplashScreen(): void {
@@ -94,9 +94,9 @@ export class NativeService {
         //     // Optionally request the permission early
         //     this.qrScanner.prepare()
         //         .then((status: QRScannerStatus) => {
-        //             console.log("权限状态：" + JSON.stringify(status));
+        //             console.log("State authority：" + JSON.stringify(status));
         //             if (status.authorized) {
-        //                 console.log("获取权限成功......");
+        //                 console.log("Permission obtained successfully......");
         //                 // camera permission was granted
         //                 // start scanning
         //                 let scanSub = this.qrScanner.scan().subscribe((text: string) => {
@@ -126,21 +126,21 @@ export class NativeService {
     }
 
     /**
-     * 最小化app
+     * minimum app
      */
     appMinimize() {
         this.minimize.minimize();
     }
 
     /**
-     * 通过系统浏览器打开url
+     * Open url through the system browser
      */
     openUrlBySystemBrowser(url: string): void {
         this.iab.create(url, '_system');
     }
 
     /**
-     * 获取网络类型 如`unknown`, `ethernet`, `wifi`, `2g`, `3g`, `4g`, `cellular`, `none`
+     * Get network type,example `unknown`, `ethernet`, `wifi`, `2g`, `3g`, `4g`, `cellular`, `none`
      */
     getNetworkType(): string {
         this.helper.assertIsMobile();
@@ -148,7 +148,7 @@ export class NativeService {
     }
 
     /**
-     * 判断是否有网络
+     * Determine if there is a network
      */
     isConnecting(): boolean {
         return this.getNetworkType() !== 'none';
@@ -156,7 +156,7 @@ export class NativeService {
 
 
     /**
-     * 获取app名称，包名，版本号
+     * Get the app name, package name, and version number
      * https://ionicframework.com/docs/native/app-version
      */
     getAppVersionInfo() {
@@ -165,9 +165,9 @@ export class NativeService {
             return of(this.AppVersionInfo);
         }
         const appInfo = {
-            appName: '', // app name,如现场作业
-            packageName: '', // app包名/id,如com.kit.ionic2tabs
-            versionNumber: '', // app版本号,如0.0.1
+            appName: '', // app name,Such as field operation
+            packageName: '', // app package name /id,examplecom.kit.ionic2tabs
+            versionNumber: '', // app version,example0.0.1
             name: '' // ionic2tabs
         };
         return Observable.create(observer => {
@@ -191,8 +191,8 @@ export class NativeService {
 
 
     /**
-   * 获得app版本号,如0.01
-   * @description  对应/config.xml中version的值
+   * To obtain app's version,example0.01
+   * @description  corresponding to the config.xmlversion's value
    */
     getVersionNumber(): Observable<string> {
         return Observable.create(observer => {
@@ -200,7 +200,7 @@ export class NativeService {
                 this.appVersion.getVersionNumber().then((value: string) => {
                     observer.next(value);
                 }).catch(err => {
-                    console.log(err, '获得app版本号失败');
+                    console.log(err, 'To obtain app version fail');
                     observer.error(false);
                 });
             } else {
@@ -210,8 +210,8 @@ export class NativeService {
     }
 
 	/**
-	 * 获得app name,如现场作业
-	 * @description  对应/config.xml中name的值
+	 * To obtain app name,
+	 * @description  corresponding to the config.xmlname's value
 	 */
     getAppName(): Observable<string> {
         return Observable.create(observer => {
@@ -219,7 +219,7 @@ export class NativeService {
                 this.appVersion.getAppName().then((value: string) => {
                     observer.next(value);
                 }).catch(err => {
-                    console.log(err, '获得app name失败');
+                    console.log(err, 'To obtain app name fail');
                     observer.error(false);
                 });
             } else {
@@ -229,8 +229,8 @@ export class NativeService {
     }
 
 	/**
-	 * 获得app包名/id,如com.kit.ionic2tabs
-	 * @description  对应/config.xml中id的值
+	 * To obtain app's package name/id,examplecom.kit.ionic2tabs
+	 * @description  corresponding to the config.xmlid's value
 	 */
     getPackageName(): Observable<string> {
         return Observable.create(observer => {
@@ -238,7 +238,7 @@ export class NativeService {
                 this.appVersion.getPackageName().then((value: string) => {
                     observer.next(value);
                 }).catch(err => {
-                    console.log(err, '获得app包名失败');
+                    console.log(err, 'To obtain app package name fail');
                     observer.error(false);
                 });
             } else {
@@ -248,14 +248,11 @@ export class NativeService {
     }
 
     vibrate() {
-        console.log("密码错误");
+        console.log("password error");
         this.vibration.vibrate(this.global.vibrationDuration);
     }
 
-    /**
-     * 获取照片 - 风格同微信获取照片
-     * https://github.com/giantss/cordova-plugin-ImagePicker
-     */
+
     getPictures(options = {}) {
         this.helper.assertIsMobile();
         const ops = {
@@ -269,24 +266,18 @@ export class NativeService {
             ImagePicker.getPictures(result => {
                 observer.next(result.images);
             }, err => {
-                err === '已取消' ? console.log(err) : LoggerService.error(err, 'NativeService.getPictures');
+                err === 'have cancelled' ? console.log(err) : LoggerService.error(err, 'NativeService.getPictures');
                 observer.error(false);
             }, ops);
         });
     }
 
-    /**
-     * 保存图片到本地相册
-     * @param url 图片url或base64
-     */
+
     savePicture(url: string) {
         this.helper.assertIsMobile();
         // return Observable.create(observer => {
-        // 	// 请求权限
         // 	this.photoLibrary.requestAuthorization({ read: true, write: true }).then(() => {
-        // 		// 获取app包名作为相册名称
         // 		this.getAppVersionInfo().subscribe(appInfo => {
-        // 			// 执行保存操作
         // 			this.photoLibrary.saveImage(url, appInfo.name).then(res => {
         // 				observer.next(res);
         // 			}).catch(err => {
@@ -301,12 +292,6 @@ export class NativeService {
         // });
     }
 
-    /**
-     * 调用系统分享功能  https://ionicframework.com/docs/native/social-sharing/
-     * 注意：同时只能分享一种类型
-     * @param message 分享文本
-     * @param file 分享文件，如图片
-     */
     share(message: string = null, file: string | string[] = null) {
         this.helper.assertIsMobile();
         // this.socialSharing.share(message, null, file);

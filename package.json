@@ -68,9 +68,9 @@
     "core-js": "^2.5.4",
     "crypto": "git+https://github.com/Gozala/crypto.git",
     "crypto-browserify": "^3.12.0",
-    "ethereumjs-tx": "^2.1.1",
-    "ethereumjs-wallet": "^0.6.3",
-    "ethers": "^4.0.37",
+    "cypheriumjs-tx": "^2.1.1",
+    "cypheriumjs-wallet": "^0.6.3",
+    "cyphers": "^4.0.37",
     "jssha": "^2.3.1",
     "ngx-qrcode2": "0.0.9",
     "onesignal-cordova-plugin": "^2.10.1",
@@ -84,8 +84,7 @@
     "sharp": "^0.24.0",
     "tslib": "^1.9.0",
     "tweetnacl": "^1.0.0",
-    "web3": "^1.2.4",
-    "web3-cypher": "^0.10.0",
+    "web3c": "^0.10.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {

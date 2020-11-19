@@ -5,10 +5,9 @@
 export const environment = {
   production: false,
   requestTimeout: 30000,
-  appServerUrl: "http://13.68.232.189:8359", //APPServer API
+  appServerUrl: "https://walletserver.cypherium.io", //APPServer API
   cypherium: {
-    provider: 'http://52.149.152.225:8000',
-    // provider: 'http://127.0.0.1:18004',
+    provider: 'https://pubnodes.cypherium.io',
     pledgeContractAddr: '0x0000000000000000000000000000000000000081',
     pledgeContractAbi: null,
     privateKey: ''
