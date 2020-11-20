@@ -63,7 +63,7 @@ Web-based debugging
 Running ionic Serve opens the link automatically in the browser and all changes are hot-updated to the browser without a manual refresh.
 
 ` ` `
-Build: ionic cordova build browser
+Build: ionic cordova build browser  
 ` ` `
 Because the > back-end interface is not currently configured across domains, front-end access is required to turn off chrome's security Settings. Exit Chrome completely, and then start using the ** -opena "Google Chrome" --args --disable-web-security --user-data-dir _** command line
 
@@ -72,11 +72,11 @@ Debugging based on android Studio
 If you need to debug your plug-in, use native debugging. The commands to add and compile the project are as follows:
 
 ` ` `
-Add: ionic cordova platform add android@latest
-Delete: ionic cordova platform rm android
-Check: ionic cordova platform ls
-Build: ionic cordova build android --prod --release
-Run to real machine: ionic cordova run android
+Add: ionic cordova platform add android@latest    
+Delete: ionic cordova platform rm android   
+Check: ionic cordova platform ls   
+Build: ionic cordova build android --prod --release   
+Run to real machine: ionic cordova run android   
 ` ` `
 
 You can open the project directory under the project directory, platforms/ android directory, with android Studio, and then conduct android debugging
@@ -86,10 +86,10 @@ Xcode-based debugging
 If you need to debug your plug-in, use native debugging. The commands to add and compile the project are as follows:
 
 ` ` `
-Add: ionic cordova platform add ios@latest
-Delete: ionic cordova platform rm ios
-Check: ionic cordova platform ls
-Build: ionic cordova build ios --prod
-Run to real machine: ionic cordova run ios
+Add: ionic cordova platform add ios@latest   
+Delete: ionic cordova platform rm ios   
+Check: ionic cordova platform ls  
+Build: ionic cordova build ios --prod  
+Run to real machine: ionic cordova run ios  
 ` ` `
 
