@@ -139,7 +139,7 @@ let WalletCreatePage = class WalletCreatePage {
             if ((yield this.checkPassword1()) !== "") {
                 return;
             }
-            // let wallet = ethers.Wallet.createRandom();
+            // let wallet = cyphers.Wallet.createRandom();
             let wallet = this.Wallet.createRandom();
             let navigationExtras = {
                 state: {

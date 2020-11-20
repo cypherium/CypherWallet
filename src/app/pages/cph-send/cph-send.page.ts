@@ -3,7 +3,7 @@ import { GlobalService } from '../../providers/global/global.service';
 import { HelperService } from '../../providers/helper/helper.service';
 import { Storage } from '@ionic/storage';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
-import { Web3Service } from '../../providers/web3/web3.service';
+import { Web3Service } from '../../providers/web3c/web3c.service';
 import { NativeService } from '../../providers/native/native.service';
 import { Platform, NavController, AlertController } from '@ionic/angular';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
@@ -18,7 +18,7 @@ import { FingerprintAIO ,FingerprintOptions} from '@ionic-native/fingerprint-aio
 })
 export class CphSendPage implements OnInit {
     fingerprintOptions : FingerprintOptions;
-    range = 18;     //let price = await this.web3.cph.gasPrice(); price/1e9;
+    range = 18;     //let price = await this.web3c.cph.gasPrice(); price/1e9;
     wallet: any = {};
     amount = 0;
     receiveAddress = "";
@@ -39,7 +39,7 @@ export class CphSendPage implements OnInit {
         private helper: HelperService,
         private global: GlobalService,
         private storage: Storage,
-        private web3: Web3Service,
+        private web3c: Web3Service,
         public nav: NavController,
         private platform: Platform,
         private keyboard: Keyboard,
@@ -126,7 +126,7 @@ export class CphSendPage implements OnInit {
     }
 
     async updateWalletInfo() {
-        this.web3.getCphBalance(this.wallet.addr, (v) => {
+        this.web3c.getCphBalance(this.wallet.addr, (v) => {
             if (this.amount.toString() !== v.toString() && v !== undefined) {
                 this.amount = v;
                 this.global.gWalletList[this.global.currentWalletIndex].amount = this.amount;
@@ -151,7 +151,7 @@ export class CphSendPage implements OnInit {
             console.log("SCAN RESULT：", res);
             this.helper.handleText(res.text, async (url, method) => {
                 if (method == 'transfer') {
-                    let result = await this.web3.isCphAddr(url);
+                    let result = await this.web3c.isCphAddr(url);
                     if (result == 0) {
                         this.receiveAddress = url;
                     } else {
@@ -252,7 +252,7 @@ export class CphSendPage implements OnInit {
     async checkAddr() {
         this.addressError = "";
 
-        let result = await this.web3.isCphAddr(this.receiveAddress.toLowerCase());
+        let result = await this.web3c.isCphAddr(this.receiveAddress.toLowerCase());
         if (result == -1) {
             let message = await this.helper.getTranslate('ADDRESS_EMPTY');
             this.addressError = message;
@@ -311,7 +311,7 @@ export class CphSendPage implements OnInit {
 
     async transfer(privatekey) {
         let address = this.receiveAddress.toLowerCase().replace('cph', '0x');
-        this.web3.transferCph(this.wallet.addr, address, this.payAmount, this.range, privatekey, async (err, tx) => {
+        this.web3c.transferCph(this.wallet.addr, address, this.payAmount, this.range, privatekey, async (err, tx) => {
             console.log("Transaction callback.......", err, tx);
             if (err === null) {
                 // resolve(tx);

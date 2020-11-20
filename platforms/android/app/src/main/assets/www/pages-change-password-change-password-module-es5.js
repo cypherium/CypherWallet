@@ -406,7 +406,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     return _context6.abrupt("return");
 
                   case 12:
-                    //开始修改密码
+                    //start to change password
                     this.ifShowLoading = true;
                     setTimeout(function () {
                       return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0,
@@ -419,7 +419,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                           while (1) {
                             switch (_context5.prev = _context5.next) {
                               case 0:
-                                //获取私钥
+                                //get private key
                                 ret = this.helper.decryptPrivateKey(this.wallet.keystore, this.password);
 
                                 if (!ret.flag) {
@@ -429,7 +429,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                                 this.ifShowLoading = false; //获取到私钥
 
-                                privateKey = ret.privateKey; //计算新的keystore
+                                privateKey = ret.privateKey; //caculate new keystore
 
                                 keystore = this.helper.exportKeystore(privateKey, this.password1);
                                 this.wallet.keystore = keystore;
@@ -465,7 +465,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                                 break;
 
                               case 11:
-                                //密码错误
+                                //password error
                                 this.ifShowLoading = false;
                                 _context5.next = 14;
                                 return this.helper.getTranslate('PASSWORD_ERROR');

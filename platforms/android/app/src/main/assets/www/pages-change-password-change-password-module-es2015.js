@@ -179,16 +179,16 @@ let ChangePasswordPage = class ChangePasswordPage {
             if (this.passwordError2) {
                 return;
             }
-            //开始修改密码
+            //start to change password
             this.ifShowLoading = true;
             setTimeout(() => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-                //获取私钥
+                //get private key
                 let ret = this.helper.decryptPrivateKey(this.wallet.keystore, this.password);
                 if (ret.flag) {
                     this.ifShowLoading = false;
                     //获取到私钥
                     let privateKey = ret.privateKey;
-                    //计算新的keystore
+                    //caculate new keystore
                     let keystore = this.helper.exportKeystore(privateKey, this.password1);
                     this.wallet.keystore = keystore;
                     this.helper.saveWallet();
@@ -201,7 +201,7 @@ let ChangePasswordPage = class ChangePasswordPage {
                     }, 1000);
                 }
                 else {
-                    //密码错误
+                    //password error
                     this.ifShowLoading = false;
                     let error = yield this.helper.getTranslate('PASSWORD_ERROR');
                     this.passwordError = error;

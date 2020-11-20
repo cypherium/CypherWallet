@@ -114,7 +114,7 @@ let BackupMnemonicPage = class BackupMnemonicPage {
         if (this.router.getCurrentNavigation().extras.state) {
             this.wallet = this.router.getCurrentNavigation().extras.state.wallet;
             console.log(this.wallet.mnemonic);
-            //获取助记词
+            //get mnemonic
             let mnemonicList = this.wallet.mnemonic.split(" ");
             this.mnemonicList = this.shuffle(mnemonicList);
         }
@@ -144,7 +144,7 @@ let BackupMnemonicPage = class BackupMnemonicPage {
     }
     verifyNmemonic() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            console.log("开始验证...", this.mnemonicList, this.backupList);
+            console.log("start verify...", this.mnemonicList, this.backupList);
             let flag = true;
             let mnemonicList = this.wallet.mnemonic.split(' ');
             for (let i = 0; i < mnemonicList.length; i++) {
@@ -159,7 +159,7 @@ let BackupMnemonicPage = class BackupMnemonicPage {
                 }
                 this.helper.addWallet(this.wallet, this.global.paymentPassword);
                 this.global.walletName = "";
-                //前往首页
+                //To the home page
                 let navigationExtras = {
                     state: {
                         privateKey: this.wallet.privateKey,

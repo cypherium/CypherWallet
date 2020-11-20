@@ -94,7 +94,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _providers_global_global_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../providers/global/global.service */ "./src/app/providers/global/global.service.ts");
 /* harmony import */ var _providers_http_http_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../providers/http/http.service */ "./src/app/providers/http/http.service.ts");
-/* harmony import */ var _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../providers/web3/web3.service */ "./src/app/providers/web3/web3.service.ts");
+/* harmony import */ var _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../providers/web3c/web3c.service */ "./src/app/providers/web3c/web3c.service.ts");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../providers/helper/helper.service */ "./src/app/providers/helper/helper.service.ts");
 /* harmony import */ var _providers_native_native_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../providers/native/native.service */ "./src/app/providers/native/native.service.ts");
@@ -109,10 +109,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let WalletDetailPage = class WalletDetailPage {
-    constructor(global, http, web3, helper, native, nav, router) {
+    constructor(global, http, web3c, helper, native, nav, router) {
         this.global = global;
         this.http = http;
-        this.web3 = web3;
+        this.web3c = web3c;
         this.helper = helper;
         this.native = native;
         this.nav = nav;
@@ -133,7 +133,7 @@ let WalletDetailPage = class WalletDetailPage {
         this.cancelPrompt = null;
         this.confirmPrompt = null;
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
-        console.log("钱包：" + JSON.stringify(this.wallet));
+        console.log("wallet:" + JSON.stringify(this.wallet));
         this.amount = this.wallet.amount || 0;
         this.getWalletInfo(this.wallet.addr);
         this.interval = setInterval(() => {
@@ -157,7 +157,7 @@ let WalletDetailPage = class WalletDetailPage {
                     };
                     this.confirmPrompt = () => {
                         this.ifShowPasswordPrompt = false;
-                        //密码校验成功,开始传输keystore
+                        //Password check successful, start transmission keystore
                         setTimeout(() => {
                             this.http.post(url, {
                                 keystore: this.wallet.keystore
@@ -182,7 +182,7 @@ let WalletDetailPage = class WalletDetailPage {
         });
     }
     getWalletInfo(addr) {
-        this.web3.getCphBalance(addr, (v) => {
+        this.web3c.getCphBalance(addr, (v) => {
             if (this.amount.toString() !== v.toString() && v !== undefined) {
                 this.amount = v;
                 this.global.gWalletList[this.global.currentWalletIndex].amount = this.amount;
@@ -204,18 +204,18 @@ let WalletDetailPage = class WalletDetailPage {
     }
     ionViewDidEnter() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            // this.blockHeight = await this.web3.getBlockHeight();
+            // this.blockHeight = await this.web3c.getBlockHeight();
             this.getTransactionList();
-            //获取汇率信息
+            //Access to exchange rate information
             this.http.get(this.global.api['getRateInfo']).subscribe(res => {
-                console.log("汇率：", res.rates);
+                console.log("Exchange rate:", res.rates);
                 let unit = this.global.settings.valueUnit || "USD";
                 let value = res.rates.find(item => item.currency == unit);
                 if (!value) {
                     value = res.rates[0];
                 }
                 this.global.selectedRate = value;
-                //计算当前金额的估算
+                // Calculate an estimate of the current amount
                 this.amountInOther = this.amount * value.rate;
                 let amountInOtherInterger = Math.floor(this.amountInOther);
                 let mod = Math.floor(Math.pow(10, value.significand));
@@ -239,7 +239,7 @@ let WalletDetailPage = class WalletDetailPage {
             let pledge = yield this.helper.getTranslate('PLEDGE_CONTRACT_MINING'), drawback = yield this.helper.getTranslate('DRAWBACK_CONTRACT_MINING');
             let finished = yield this.helper.getTranslate('FINISHED');
             this.loading = true;
-            //获取交易列表
+            // Get a list of trades
             let url = this.global.api['getTransList'];
             return this.http.post(url, {
                 addr: '0x' + this.wallet.addr.replace('0x', ''),
@@ -249,14 +249,14 @@ let WalletDetailPage = class WalletDetailPage {
             }).subscribe(res => {
                 this.loading = false;
                 if (res.err_no == 0) {
-                    this.blockHeight = this.web3.getBlockHeight();
+                    this.blockHeight = this.web3c.getBlockHeight();
                     if (res.transactions) {
                         res.transactions.forEach(item => {
                             if (item.tx_type == 1 || item.tx_type == 2) {
-                                item.displayValue = this.web3.web3.fromWei(item.value, 'cpher');
+                                item.displayValue = this.web3c.web3c.fromWei(item.value, 'cpher');
                             }
                             else {
-                                item.displayValue = this.web3.web3.fromWei(item.tx_type_ext, 'cpher');
+                                item.displayValue = this.web3c.web3c.fromWei(item.tx_type_ext, 'cpher');
                             }
                             let height = this.blockHeight - item.block_number;
                             if (item.block_number == -2) {
@@ -330,7 +330,7 @@ let WalletDetailPage = class WalletDetailPage {
         if (transaction.blockHeight === "pending") {
             navigationExtras.state.status = 1;
         }
-        //前往交易结果页
+        // Go to the transaction results page
         this.router.navigate(['transaction-result'], navigationExtras);
     }
     toggleType(type) {

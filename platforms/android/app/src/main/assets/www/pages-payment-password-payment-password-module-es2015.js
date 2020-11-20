@@ -190,7 +190,7 @@ let PaymentPasswordPage = class PaymentPasswordPage {
             if (this.passwordError2) {
                 return;
             }
-            //开始修改密码
+            //start to change password
             this.ifShowLoading = true;
             setTimeout(() => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
                 this.ifShowLoading = false;
@@ -213,7 +213,7 @@ let PaymentPasswordPage = class PaymentPasswordPage {
                     }, 1000);
                 }
                 else {
-                    //密码错误
+                    //password error
                     this.ifShowLoading = false;
                     let error = yield this.helper.getTranslate('PASSWORD_ERROR');
                     // this.passwordError = error;

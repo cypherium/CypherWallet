@@ -208,7 +208,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
         if (this.router.getCurrentNavigation().extras.state) {
           this.wallet = this.router.getCurrentNavigation().extras.state.wallet;
-          console.log(this.wallet.mnemonic); //获取助记词
+          console.log(this.wallet.mnemonic); //get mnemonic
 
           var mnemonicList = this.wallet.mnemonic.split(" ");
           this.mnemonicList = this.shuffle(mnemonicList);
@@ -263,7 +263,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               while (1) {
                 switch (_context.prev = _context.next) {
                   case 0:
-                    console.log("开始验证...", this.mnemonicList, this.backupList);
+                    console.log("start verify...", this.mnemonicList, this.backupList);
                     flag = true;
                     mnemonicList = this.wallet.mnemonic.split(' ');
                     i = 0;
@@ -298,7 +298,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     }
 
                     this.helper.addWallet(this.wallet, this.global.paymentPassword);
-                    this.global.walletName = ""; //前往首页
+                    this.global.walletName = ""; //To the home page
 
                     navigationExtras = {
                       state: {

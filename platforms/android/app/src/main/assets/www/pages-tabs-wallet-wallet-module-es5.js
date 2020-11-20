@@ -188,8 +188,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! ../../../providers/web3/web3.service */
-    "./src/app/providers/web3/web3.service.ts");
+    /*! ../../../providers/web3c/web3c.service */
+    "./src/app/providers/web3c/web3c.service.ts");
     /* harmony import */
 
 
@@ -224,13 +224,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WalletPage =
     /*#__PURE__*/
     function () {
-      function WalletPage(router, helper, global, web3, http, storage, native, events, zone, navCtrl) {
+      function WalletPage(router, helper, global, web3c, http, storage, native, events, zone, navCtrl) {
         _classCallCheck(this, WalletPage);
 
         this.router = router;
         this.helper = helper;
         this.global = global;
-        this.web3 = web3;
+        this.web3c = web3c;
         this.http = http;
         this.storage = storage;
         this.native = native;
@@ -293,10 +293,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function computeValue() {
           var _this2 = this;
 
-          this.getWalletInfo(this.wallet.addr); //获取汇率信息
+          this.getWalletInfo(this.wallet.addr); //Access to exchange rate information
 
           this.http.get(this.global.api['getRateInfo']).subscribe(function (res) {
-            console.log("汇率：", res.rates);
+            console.log("Exchange rate:", res.rates);
             var unit = _this2.global.settings.valueUnit || "USD";
             var value = res.rates.find(function (item) {
               return item.currency == unit;
@@ -306,7 +306,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               value = res.rates[0];
             }
 
-            _this2.global.selectedRate = value; //计算当前金额的估算
+            _this2.global.selectedRate = value; // Calculate an estimate of the current amount
 
             _this2.amountInOther = _this2.amount * value.rate;
             _this2.amountInOtherInterger = Math.floor(_this2.amountInOther);
@@ -350,7 +350,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 };
 
                 _this3.confirmPrompt = function () {
-                  _this3.ifShowPasswordPrompt = false; //密码校验成功,开始传输keystore
+                  _this3.ifShowPasswordPrompt = false; //Password check successful, start transmission keystore
 
                   setTimeout(function () {
                     _this3.http.post(url, {
@@ -446,7 +446,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function getWalletInfo(addr) {
           var _this4 = this;
 
-          this.web3.getCphBalance(addr, function (v) {
+          this.web3c.getCphBalance(addr, function (v) {
             if (_this4.amount.toString() !== v.toString() && v !== undefined) {
               _this4.amount = v;
               _this4.global.gWalletList[_this4.global.currentWalletIndex].amount = _this4.amount;

@@ -182,8 +182,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(
-    /*! ../../providers/web3/web3.service */
-    "./src/app/providers/web3/web3.service.ts");
+    /*! ../../providers/web3c/web3c.service */
+    "./src/app/providers/web3c/web3c.service.ts");
     /* harmony import */
 
 
@@ -212,14 +212,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var WalletDetailPage =
     /*#__PURE__*/
     function () {
-      function WalletDetailPage(global, http, web3, helper, native, nav, router) {
+      function WalletDetailPage(global, http, web3c, helper, native, nav, router) {
         var _this = this;
 
         _classCallCheck(this, WalletDetailPage);
 
         this.global = global;
         this.http = http;
-        this.web3 = web3;
+        this.web3c = web3c;
         this.helper = helper;
         this.native = native;
         this.nav = nav;
@@ -240,7 +240,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.cancelPrompt = null;
         this.confirmPrompt = null;
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
-        console.log("钱包：" + JSON.stringify(this.wallet));
+        console.log("wallet:" + JSON.stringify(this.wallet));
         this.amount = this.wallet.amount || 0;
         this.getWalletInfo(this.wallet.addr);
         this.interval = setInterval(function () {
@@ -271,7 +271,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 };
 
                 _this2.confirmPrompt = function () {
-                  _this2.ifShowPasswordPrompt = false; //密码校验成功,开始传输keystore
+                  _this2.ifShowPasswordPrompt = false; //Password check successful, start transmission keystore
 
                   setTimeout(function () {
                     _this2.http.post(url, {
@@ -301,7 +301,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function getWalletInfo(addr) {
           var _this3 = this;
 
-          this.web3.getCphBalance(addr, function (v) {
+          this.web3c.getCphBalance(addr, function (v) {
             if (_this3.amount.toString() !== v.toString() && v !== undefined) {
               _this3.amount = v;
               _this3.global.gWalletList[_this3.global.currentWalletIndex].amount = _this3.amount;
@@ -338,11 +338,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               while (1) {
                 switch (_context.prev = _context.next) {
                   case 0:
-                    // this.blockHeight = await this.web3.getBlockHeight();
-                    this.getTransactionList(); //获取汇率信息
+                    // this.blockHeight = await this.web3c.getBlockHeight();
+                    this.getTransactionList(); //Access to exchange rate information
 
                     this.http.get(this.global.api['getRateInfo']).subscribe(function (res) {
-                      console.log("汇率：", res.rates);
+                      console.log("Exchange rate:", res.rates);
                       var unit = _this4.global.settings.valueUnit || "USD";
                       var value = res.rates.find(function (item) {
                         return item.currency == unit;
@@ -352,7 +352,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                         value = res.rates[0];
                       }
 
-                      _this4.global.selectedRate = value; //计算当前金额的估算
+                      _this4.global.selectedRate = value; // Calculate an estimate of the current amount
 
                       _this4.amountInOther = _this4.amount * value.rate;
                       var amountInOtherInterger = Math.floor(_this4.amountInOther);
@@ -413,7 +413,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                   case 8:
                     finished = _context2.sent;
-                    this.loading = true; //获取交易列表
+                    this.loading = true; // Get a list of trades
 
                     url = this.global.api['getTransList'];
                     return _context2.abrupt("return", this.http.post(url, {
@@ -425,14 +425,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       _this5.loading = false;
 
                       if (res.err_no == 0) {
-                        _this5.blockHeight = _this5.web3.getBlockHeight();
+                        _this5.blockHeight = _this5.web3c.getBlockHeight();
 
                         if (res.transactions) {
                           res.transactions.forEach(function (item) {
                             if (item.tx_type == 1 || item.tx_type == 2) {
-                              item.displayValue = _this5.web3.web3.fromWei(item.value, 'cpher');
+                              item.displayValue = _this5.web3c.web3c.fromWei(item.value, 'cpher');
                             } else {
-                              item.displayValue = _this5.web3.web3.fromWei(item.tx_type_ext, 'cpher');
+                              item.displayValue = _this5.web3c.web3c.fromWei(item.tx_type_ext, 'cpher');
                             }
 
                             var height = _this5.blockHeight - item.block_number;
@@ -516,7 +516,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           if (transaction.blockHeight === "pending") {
             navigationExtras.state.status = 1;
-          } //前往交易结果页
+          } // Go to the transaction results page
 
 
           this.router.navigate(['transaction-result'], navigationExtras);

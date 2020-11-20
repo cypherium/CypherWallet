@@ -176,8 +176,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(
-    /*! ../../providers/web3/web3.service */
-    "./src/app/providers/web3/web3.service.ts");
+    /*! ../../providers/web3c/web3c.service */
+    "./src/app/providers/web3c/web3c.service.ts");
     /* harmony import */
 
 
@@ -206,12 +206,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var TransactionResultPage =
     /*#__PURE__*/
     function () {
-      function TransactionResultPage(router, activatedRoute, web3, global, helper, nav, native) {
+      function TransactionResultPage(router, activatedRoute, web3c, global, helper, nav, native) {
         _classCallCheck(this, TransactionResultPage);
 
         this.router = router;
         this.activatedRoute = activatedRoute;
-        this.web3 = web3;
+        this.web3c = web3c;
         this.global = global;
         this.helper = helper;
         this.nav = nav;
@@ -248,7 +248,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 switch (_context.prev = _context.next) {
                   case 0:
                     _context.next = 2;
-                    return this.web3.getTxDetail(this.tx);
+                    return this.web3c.getTxDetail(this.tx);
 
                   case 2:
                     this.detail = _context.sent;

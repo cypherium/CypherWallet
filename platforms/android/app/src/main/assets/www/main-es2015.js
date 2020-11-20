@@ -3274,7 +3274,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-// import { Web3Service } from './providers/web3/web3.service';
+// import { Web3Service } from './providers/web3c/web3c.service';
 
 
 
@@ -3282,7 +3282,7 @@ __webpack_require__.r(__webpack_exports__);
 
 let AppComponent = class AppComponent {
     constructor(platform, splashScreen, statusBar, global, navCtrl, 
-    // private web3: Web3Service,
+    // private web3c: Web3Service,
     storage, keyboard, translate, http, helper, oneSignal) {
         this.platform = platform;
         this.splashScreen = splashScreen;
@@ -3318,14 +3318,14 @@ let AppComponent = class AppComponent {
             });
             this.oneSignal.endInit();
             this.keyboard.onKeyboardWillShow().subscribe(() => {
-                //keyboard显示
+                //keyboard display
                 document.body.classList.add('keyboard-is-open');
             });
             this.keyboard.onKeyboardWillHide().subscribe(() => {
-                //keyboard显示
+                //keyboard display
                 document.body.classList.remove('keyboard-is-open');
             });
-            //获取本地存储的钱包，如果没有则前往创建钱包页
+            //Gets the wallet stored locally, or if not, goes to the create wallet page
             this.storage.get("localwallet").then(res => {
                 if (res) {
                     try {
@@ -3335,7 +3335,7 @@ let AppComponent = class AppComponent {
                         }
                         else {
                             this.storage.get("localwalletindex").then(res => {
-                                console.log("获取钱包序号：", this.global.gWalletList);
+                                console.log("Get the wallet serial number：", this.global.gWalletList);
                                 this.global.currentWalletIndex = +res || 0;
                                 this.navCtrl.navigateRoot('wallet');
                                 // this.global.currentWallet = this.global.gWalletList[this.global.currentWalletIndex];
@@ -3358,7 +3358,7 @@ let AppComponent = class AppComponent {
                         this.global.settings = setting;
                     }
                     catch (e) {
-                        console.log("获取配置出错...");
+                        console.log("Get configuration error...");
                     }
                 }
                 let lang = this.global.settings.language;
@@ -3575,7 +3575,7 @@ let AlertComponent = class AlertComponent {
     }
     ngOnInit() { }
     confirmAlert() {
-        console.log("确认...");
+        console.log("confirm...");
         this.confirm.emit();
     }
     cancelAlert() {
@@ -4304,10 +4304,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm2015/ionic-storage.js");
 /* harmony import */ var _global_global_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../global/global.service */ "./src/app/providers/global/global.service.ts");
-/* harmony import */ var ethereumjs_wallet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ethereumjs-wallet */ "./node_modules/ethereumjs-wallet/index.js");
-/* harmony import */ var ethereumjs_wallet__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(ethereumjs_wallet__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ethers */ "./node_modules/ethers/dist/ethers.min.js");
-/* harmony import */ var ethers__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(ethers__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var cypheriumjs_wallet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! cypheriumjs-wallet */ "./node_modules/cypheriumjs-wallet/index.js");
+/* harmony import */ var cypheriumjs_wallet__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(cypheriumjs_wallet__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var cyphers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! cyphers */ "./node_modules/cyphers/dist/cyphers.min.js");
+/* harmony import */ var cyphers__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(cyphers__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _ngx_translate_core__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ngx-translate/core */ "./node_modules/@ngx-translate/core/fesm2015/ngx-translate-core.js");
 
 
@@ -4371,7 +4371,7 @@ let HelperService = class HelperService {
                 return;
             }
             res = res.toLowerCase();
-            //获取scheme, 对象，方法，参数
+            //Gets Scheme, objects, methods, and parameters
             let matches = res.match(/(.+)\:\/\/([^/]+)\/([^/]+)\/([^/]+)/);
             if (!res) {
                 return;
@@ -4411,11 +4411,11 @@ let HelperService = class HelperService {
     saveWallet() {
         // this.currentWallet = w;
         this.storage.set('localwalletindex', this.global.currentWalletIndex);
-        //缓存钱包列表，否则钱包将丢失
+        //Cache the wallet list, otherwise the wallet will be lost
         this.storage.set('localwallet', JSON.stringify(this.global.gWalletList));
     }
     generateMnemonicWallet(privateKey) {
-        let wallet = new ethers__WEBPACK_IMPORTED_MODULE_6__["Wallet"](privateKey);
+        let wallet = new cyphers__WEBPACK_IMPORTED_MODULE_6__["Wallet"](privateKey);
         return wallet;
     }
     exportKeystore(privateKey, password) {
@@ -4424,7 +4424,7 @@ let HelperService = class HelperService {
             privateKey = Buffer.from(privateKey, 'hex');
         }
         console.log(privateKey);
-        let wallet = ethereumjs_wallet__WEBPACK_IMPORTED_MODULE_5__["fromPrivateKey"](privateKey);
+        let wallet = cypheriumjs_wallet__WEBPACK_IMPORTED_MODULE_5__["fromPrivateKey"](privateKey);
         //生成keystore
         let keystore = wallet.toV3(password, {
             n: 1024
@@ -4439,7 +4439,7 @@ let HelperService = class HelperService {
     decryptPrivateKey(keystore, password) {
         let privateKey = null, publicKey = null;
         try {
-            let wallet = ethereumjs_wallet__WEBPACK_IMPORTED_MODULE_5__["fromV3"](keystore, password, true);
+            let wallet = cypheriumjs_wallet__WEBPACK_IMPORTED_MODULE_5__["fromV3"](keystore, password, true);
             privateKey = wallet.getPrivateKey().toString('hex');
             publicKey = wallet.getPublicKey().toString('hex');
             console.log(privateKey, publicKey);
@@ -4467,7 +4467,7 @@ let HelperService = class HelperService {
     }
     validateKeystore(keystore) {
         try {
-            ethereumjs_wallet__WEBPACK_IMPORTED_MODULE_5__["validateKeystore"](keystore, true);
+            cypheriumjs_wallet__WEBPACK_IMPORTED_MODULE_5__["validateKeystore"](keystore, true);
         }
         catch (error) {
             console.log(error);
@@ -4504,8 +4504,8 @@ let HelperService = class HelperService {
      */
     assertIsMobile() {
         if (this.isNotMobile()) {
-            this.toast('请使用真机调试');
-            throw new Error('请使用真机调试');
+            this.toast('Please use real machine debugging');
+            throw new Error('Please use real machine debugging');
         }
     }
     convertAddr(addr) {
@@ -4528,7 +4528,7 @@ let HelperService = class HelperService {
     alert(header = '', message = '', okBackFun = null, cancelBtnFun = null) {
         // alertController.create是异步方法，所以使用AlertIsExist标志是否打开
         if (this.AlertIsExist) {
-            console.log('alert已经存在，禁止重复打开');
+            console.log('alert is already exists. Do not open it again');
             setTimeout(() => {
                 this.AlertIsExist = false;
             }, 10000);
@@ -4536,14 +4536,14 @@ let HelperService = class HelperService {
         }
         this.AlertIsExist = true;
         const buttons = [{
-                text: '确定', handler: () => {
+                text: 'confirm', handler: () => {
                     this.AlertIsExist = false;
                     okBackFun && okBackFun();
                 }
             }];
         if (cancelBtnFun) {
             const cancelBtn = {
-                text: '取消',
+                text: 'cancel',
                 role: 'cancel',
                 handler: () => {
                     this.AlertIsExist = false;
@@ -4569,7 +4569,7 @@ let HelperService = class HelperService {
      * 显示提示信息
      * 建议优先调用 NativeService.toast
      */
-    toast(message = '操作成功', duration = 2500, position = 'bottom') {
+    toast(message = 'operate success', duration = 2500, position = 'bottom') {
         const opts = {
             message, duration,
             color: 'dark',
@@ -4879,8 +4879,8 @@ let NativeService = class NativeService {
         });
     }
     /**
-   * 获得app版本号,如0.01
-   * @description  对应/config.xml中version的值
+   * To obtain app's version,example0.01
+   * @description  corresponding to the config.xmlversion's value
    */
     getVersionNumber() {
         return rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"].create(observer => {
@@ -4888,7 +4888,7 @@ let NativeService = class NativeService {
                 this.appVersion.getVersionNumber().then((value) => {
                     observer.next(value);
                 }).catch(err => {
-                    console.log(err, '获得app版本号失败');
+                    console.log(err, 'To obtain app version fail');
                     observer.error(false);
                 });
             }
@@ -4898,8 +4898,8 @@ let NativeService = class NativeService {
         });
     }
     /**
-     * 获得app name,如现场作业
-     * @description  对应/config.xml中name的值
+     * To obtain app name,
+     * @description  corresponding to the config.xmlname's value
      */
     getAppName() {
         return rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"].create(observer => {
@@ -4907,7 +4907,7 @@ let NativeService = class NativeService {
                 this.appVersion.getAppName().then((value) => {
                     observer.next(value);
                 }).catch(err => {
-                    console.log(err, '获得app name失败');
+                    console.log(err, 'To obtain app name fail');
                     observer.error(false);
                 });
             }
@@ -4917,8 +4917,8 @@ let NativeService = class NativeService {
         });
     }
     /**
-     * 获得app包名/id,如com.kit.ionic2tabs
-     * @description  对应/config.xml中id的值
+     * To obtain app's package name/id,examplecom.kit.ionic2tabs
+     * @description  corresponding to the config.xmlid's value
      */
     getPackageName() {
         return rxjs__WEBPACK_IMPORTED_MODULE_2__["Observable"].create(observer => {
@@ -4926,7 +4926,7 @@ let NativeService = class NativeService {
                 this.appVersion.getPackageName().then((value) => {
                     observer.next(value);
                 }).catch(err => {
-                    console.log(err, '获得app包名失败');
+                    console.log(err, 'To obtain app package name fail');
                     observer.error(false);
                 });
             }
@@ -4936,7 +4936,7 @@ let NativeService = class NativeService {
         });
     }
     vibrate() {
-        console.log("密码错误");
+        console.log("password error");
         this.vibration.vibrate(this.global.vibrationDuration);
     }
     /**
@@ -4964,7 +4964,7 @@ let NativeService = class NativeService {
         // return Observable.create(observer => {
         // 	// 请求权限
         // 	this.photoLibrary.requestAuthorization({ read: true, write: true }).then(() => {
-        // 		// 获取app包名作为相册名称
+        // 		// 获取app's package name作为相册名称
         // 		this.getAppVersionInfo().subscribe(appInfo => {
         // 			// 执行保存操作
         // 			this.photoLibrary.saveImage(url, appInfo.name).then(res => {

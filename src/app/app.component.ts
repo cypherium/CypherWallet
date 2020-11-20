@@ -23,7 +23,7 @@ export class AppComponent {
         private statusBar: StatusBar,
         private global: GlobalService,
         private navCtrl: NavController,
-        // private web3: Web3Service,
+        // private web3c: Web3Service,
         private storage: Storage,
         private keyboard: Keyboard,
         private translate: TranslateService,

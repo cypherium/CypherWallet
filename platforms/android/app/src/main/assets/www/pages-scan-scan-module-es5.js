@@ -196,9 +196,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.events = events;
         this.openSetting = openSetting;
         this.qrScanner = qrScanner;
-        this.light = false; // 判断闪光灯
+        this.light = false; // Judging flash
 
-        this.isShow = false; // 控制显示背景，避免切换页面卡顿
+        this.isShow = false; // Control the display background to avoid page switching
 
         this.showIcon = false;
         this.ifShowAlert = false;
@@ -211,7 +211,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           this.qrScanner.prepare().then(function (status) {
             if (status.authorized) {
-              // 判断是否有摄像头权限
+              // Determine if you have camera access
               var scanSub = _this.qrScanner.scan().subscribe(function (text) {
                 _this.events.publish('qrscanner:result', text);
 
@@ -225,12 +225,12 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
               _this.qrScanner.show();
             } else if (status.denied) {
-              _this.permisionPopUp(); // this.nativeService.alert('没有权限', '没有摄像头权限，请前往设置中开启', () => {
+              _this.permisionPopUp(); // this.nativeService.alert('No permissions ', 'No camera permissions, please go to Settings to open', () => {
               // this.qrScanner.openSettings();
               // });
 
             } else {
-              _this.permisionPopUp(); // this.nativeService.alert('没有权限', '没有摄像头权限，请前往设置中开启', () => {
+              _this.permisionPopUp(); // this.nativeService.alert('No permissions ', 'No camera permissions, please go to Settings to open', () => {
               // this.qrScanner.openSettings();
               // });
 
@@ -246,7 +246,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         value: function permisionPopUp() {
           var _this2 = this;
 
-          this.createAlert("权限申请", "扫码需要获取摄像头权限", "取消", "同意", function () {
+          this.createAlert("权限申请", "Scanning code requires access to the camera", "cancel", "agree", function () {
             _this2.navCtrl.pop();
           }, function () {
             _this2.navCtrl.pop();
@@ -262,10 +262,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           // Promise.all(promises)
           //     .then((text: any) => {
           //         this.createAlert(text[0], text[1], text[2], text[3], () => {
-          //             console.log("用户拒绝授予权限");
+          //             console.log("User refuses to grant permission");
           //             this.navCtrl.pop();
           //         }, () => {
-          //             console.log("用户同意授予权限")
+          //             console.log("User agrees to grant permission")
           //             this.navCtrl.pop();
           //             this.qrScanner.openSettings();
           //             // this.openSetting.open('application_details');

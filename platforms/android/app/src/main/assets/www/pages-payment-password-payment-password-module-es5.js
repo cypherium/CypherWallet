@@ -425,7 +425,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     return _context6.abrupt("return");
 
                   case 13:
-                    //开始修改密码
+                    //start to change password
                     this.ifShowLoading = true;
                     setTimeout(function () {
                       return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this, void 0, void 0,
@@ -483,7 +483,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                                 break;
 
                               case 9:
-                                //密码错误
+                                //password error
                                 this.ifShowLoading = false;
                                 _context5.next = 12;
                                 return this.helper.getTranslate('PASSWORD_ERROR');

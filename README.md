@@ -1,6 +1,6 @@
 # City Charge
 
-This project is a cross-platform App developed based on the Cordova Framework, which can be compiled to Android, ios, Web and other platforms. Cordova is a cross-platform development framework that provides native capabilities through plug-ins, and the UI and logic parts via Typescript.
+This project is a cross-platform App developed based on the cordova Framework, which can be compiled to android, ios, Web and other platforms. cordova is a cross-platform development framework that provides native capabilities through plug-ins, and the UI and logic parts via Typescript.
 
 # Environment Installation
 
@@ -18,11 +18,12 @@ npm -v
 
 To test if the installation is successful, Node must be v10!!
 
-2. Ionic, installation of Cordova
+2. ionic, installation of cordova
 
 ` ` `
 npm install -g ionic@latest
 npm intall -g cordova@latest
+
 ` ` `
 
 After successful installation,
@@ -30,11 +31,13 @@ After successful installation,
 ` ` `
 ionic -v
 cordova -v
+npm i
+npm i @cypherium/web3c
 ` ` `
 
 The version number should display correctly.
 
-3. Installation of Android Studio Please refer to [Android Studio website] (HTTP: / / https://developer.android.com/studio/? & gclid = EAIaIQobChMI4Zegt8nj5QIVjamWCh38FQLjEAAYASAAEgL6Q_D_BwE) download and install, after opening, click on the Tools menu = > the SDK Manager, download and install the Android SDK - 28.
+3. Installation of android Studio Please refer to [android Studio website] (HTTP: / / https://developer.android.com/studio/? & gclid = EAIaIQobChMI4Zegt8nj5QIVjamWCh38FQLjEAAYASAAEgL6Q_D_BwE) download and install, after opening, click on the Tools menu = > the SDK Manager, download and install the android SDK - 28.
 
 4. Xcode installation: search Xcode directly in the app Store.
 5. Modify IP address before debugging, SRC/environments/environment. Prod. Ts.
@@ -53,39 +56,40 @@ privateKey: ''
 
 # Project commissioning
 
-Project debugging including Web, Android, ios.
+Project debugging including Web, android, ios.
 
 Web-based debugging
 
-Running Ionic Serve opens the link automatically in the browser and all changes are hot-updated to the browser without a manual refresh.
+Running ionic Serve opens the link automatically in the browser and all changes are hot-updated to the browser without a manual refresh.
 
 ` ` `
-Compile ionic Cordova build Browser
+Build: ionic cordova build browser
 ` ` `
 Because the > back-end interface is not currently configured across domains, front-end access is required to turn off chrome's security Settings. Exit Chrome completely, and then start using the ** -opena "Google Chrome" --args --disable-web-security --user-data-dir _** command line
 
-Debugging based on Android Studio
+Debugging based on android Studio
 
 If you need to debug your plug-in, use native debugging. The commands to add and compile the project are as follows:
 
 ` ` `
-Ionic Cordova Platform add Android@Latest
-Ionic Cordova Platform RM Android has been deleted
-Check ionic Cordova Platform LS
-Ionic Cordova build Android --prod --release
-Run to device Ionic Cordova Run Android
+Add: ionic cordova platform add android@latest
+Delete: ionic cordova platform rm android
+Check: ionic cordova platform ls
+Build: ionic cordova build android --prod --release
+Run to real machine: ionic cordova run android
 ` ` `
 
-You can open the project directory under the project directory, platforms/ Android directory, with Android Studio, and then conduct Android debugging
+You can open the project directory under the project directory, platforms/ android directory, with android Studio, and then conduct android debugging
 
 Xcode-based debugging
 
 If you need to debug your plug-in, use native debugging. The commands to add and compile the project are as follows:
 
 ` ` `
-Ionic Cordova Platform add ios@Latest project has been added
-Ionic Cordova Platform RM ios has been deleted
-Check ionic Cordova Platform LS
-Ionic Cordova Prepare ios --prod --release
+Add: ionic cordova platform add ios@latest
+Delete: ionic cordova platform rm ios
+Check: ionic cordova platform ls
+Build: ionic cordova build ios --prod
+Run to real machine: ionic cordova run ios
 ` ` `
 

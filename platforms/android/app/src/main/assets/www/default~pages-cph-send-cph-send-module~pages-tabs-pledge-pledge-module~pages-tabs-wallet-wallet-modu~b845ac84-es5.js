@@ -6492,29 +6492,29 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/ethereumjs-common/dist/chains/goerli.json":
+  "./node_modules/cypheriumjs-common/dist/chains/goerli.json":
   /*!****************************************************************!*\
-    !*** ./node_modules/ethereumjs-common/dist/chains/goerli.json ***!
+    !*** ./node_modules/cypheriumjs-common/dist/chains/goerli.json ***!
     \****************************************************************/
 
   /*! exports provided: name, chainId, networkId, comment, url, genesis, hardforks, bootstrapNodes, default */
 
   /***/
-  function node_modulesEthereumjsCommonDistChainsGoerliJson(module) {
+  function node_modulesCypheriumjsCommonDistChainsGoerliJson(module) {
     module.exports = JSON.parse("{\"name\":\"goerli\",\"chainId\":5,\"networkId\":5,\"comment\":\"Cross-client PoA test network\",\"url\":\"https://github.com/goerli/testnet\",\"genesis\":{\"hash\":\"0xbf7e331f7f7c1dd2e05159666b3bf8bc7a8a3a9eb1d518969eab529dd9b88c1a\",\"timestamp\":\"0x5c51a607\",\"gasLimit\":10485760,\"difficulty\":1,\"nonce\":\"0x0000000000000000\",\"extraData\":\"0x22466c6578692069732061207468696e6722202d204166726900000000000000e0a2bd4258d2768837baa26a28fe71dc079f84c70000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\",\"stateRoot\":\"0x5d6cded585e73c4e322c30c2f782a336316f17dd85a4863b9d838d2d4b8b3008\"},\"hardforks\":[{\"name\":\"chainstart\",\"block\":0,\"consensus\":\"poa\",\"finality\":null},{\"name\":\"homestead\",\"block\":0,\"consensus\":\"poa\",\"finality\":null},{\"name\":\"dao\",\"block\":0,\"consensus\":\"poa\",\"finality\":null},{\"name\":\"tangerineWhistle\",\"block\":0,\"consensus\":\"poa\",\"finality\":null},{\"name\":\"spuriousDragon\",\"block\":0,\"consensus\":\"poa\",\"finality\":null},{\"name\":\"byzantium\",\"block\":0,\"consensus\":\"poa\",\"finality\":null},{\"name\":\"constantinople\",\"block\":0,\"consensus\":\"poa\",\"finality\":null},{\"name\":\"petersburg\",\"block\":0,\"consensus\":\"poa\",\"finality\":null},{\"name\":\"istanbul\",\"block\":null,\"consensus\":\"poa\",\"finality\":null}],\"bootstrapNodes\":[{\"ip\":\"51.141.78.53\",\"port\":30303,\"id\":\"011f758e6552d105183b1761c5e2dea0111bc20fd5f6422bc7f91e0fabbec9a6595caf6239b37feb773dddd3f87240d99d859431891e4a642cf2a0a9e6cbb98a\",\"location\":\"\",\"comment\":\"Source: https://github.com/goerli/testnet/blob/master/bootnodes.txt\"},{\"ip\":\"13.93.54.137\",\"port\":30303,\"id\":\"176b9417f511d05b6b2cf3e34b756cf0a7096b3094572a8f6ef4cdcb9d1f9d00683bf0f83347eebdf3b81c3521c2332086d9592802230bf528eaf606a1d9677b\",\"location\":\"\",\"comment\":\"Source: https://github.com/goerli/testnet/blob/master/bootnodes.txt\"},{\"ip\":\"94.237.54.114\",\"port\":30313,\"id\":\"46add44b9f13965f7b9875ac6b85f016f341012d84f975377573800a863526f4da19ae2c620ec73d11591fa9510e992ecc03ad0751f53cc02f7c7ed6d55c7291\",\"location\":\"\",\"comment\":\"Source: https://github.com/goerli/testnet/blob/master/bootnodes.txt\"},{\"ip\":\"52.64.155.147\",\"port\":30303,\"id\":\"c1f8b7c2ac4453271fa07d8e9ecf9a2e8285aa0bd0c07df0131f47153306b0736fd3db8924e7a9bf0bed6b1d8d4f87362a71b033dc7c64547728d953e43e59b2\",\"location\":\"\",\"comment\":\"Source: https://github.com/goerli/testnet/blob/master/bootnodes.txt\"},{\"ip\":\"213.186.16.82\",\"port\":30303,\"id\":\"f4a9c6ee28586009fb5a96c8af13a58ed6d8315a9eee4772212c1d4d9cebe5a8b8a78ea4434f318726317d04a3f531a1ef0420cf9752605a562cfe858c46e263\",\"location\":\"\",\"comment\":\"Source: https://github.com/goerli/testnet/blob/master/bootnodes.txt\"}]}");
     /***/
   },
 
   /***/
-  "./node_modules/ethereumjs-common/dist/chains/index.js":
+  "./node_modules/cypheriumjs-common/dist/chains/index.js":
   /*!*************************************************************!*\
-    !*** ./node_modules/ethereumjs-common/dist/chains/index.js ***!
+    !*** ./node_modules/cypheriumjs-common/dist/chains/index.js ***!
     \*************************************************************/
 
   /*! no static exports found */
 
   /***/
-  function node_modulesEthereumjsCommonDistChainsIndexJs(module, exports, __webpack_require__) {
+  function node_modulesCypheriumjsCommonDistChainsIndexJs(module, exports, __webpack_require__) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
@@ -6530,160 +6530,160 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       },
       mainnet: __webpack_require__(
       /*! ./mainnet.json */
-      "./node_modules/ethereumjs-common/dist/chains/mainnet.json"),
+      "./node_modules/cypheriumjs-common/dist/chains/mainnet.json"),
       ropsten: __webpack_require__(
       /*! ./ropsten.json */
-      "./node_modules/ethereumjs-common/dist/chains/ropsten.json"),
+      "./node_modules/cypheriumjs-common/dist/chains/ropsten.json"),
       rinkeby: __webpack_require__(
       /*! ./rinkeby.json */
-      "./node_modules/ethereumjs-common/dist/chains/rinkeby.json"),
+      "./node_modules/cypheriumjs-common/dist/chains/rinkeby.json"),
       kovan: __webpack_require__(
       /*! ./kovan.json */
-      "./node_modules/ethereumjs-common/dist/chains/kovan.json"),
+      "./node_modules/cypheriumjs-common/dist/chains/kovan.json"),
       goerli: __webpack_require__(
       /*! ./goerli.json */
-      "./node_modules/ethereumjs-common/dist/chains/goerli.json")
+      "./node_modules/cypheriumjs-common/dist/chains/goerli.json")
     }; //# sourceMappingURL=index.js.map
 
     /***/
   },
 
   /***/
-  "./node_modules/ethereumjs-common/dist/chains/kovan.json":
+  "./node_modules/cypheriumjs-common/dist/chains/kovan.json":
   /*!***************************************************************!*\
-    !*** ./node_modules/ethereumjs-common/dist/chains/kovan.json ***!
+    !*** ./node_modules/cypheriumjs-common/dist/chains/kovan.json ***!
     \***************************************************************/
 
   /*! exports provided: name, chainId, networkId, comment, url, genesis, hardforks, bootstrapNodes, default */
 
   /***/
-  function node_modulesEthereumjsCommonDistChainsKovanJson(module) {
+  function node_modulesCypheriumjsCommonDistChainsKovanJson(module) {
     module.exports = JSON.parse("{\"name\":\"kovan\",\"chainId\":42,\"networkId\":42,\"comment\":\"Parity PoA test network\",\"url\":\"https://kovan-testnet.github.io/website/\",\"genesis\":{\"hash\":\"0xa3c565fc15c7478862d50ccd6561e3c06b24cc509bf388941c25ea985ce32cb9\",\"timestamp\":null,\"gasLimit\":6000000,\"difficulty\":131072,\"nonce\":\"0x0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\",\"extraData\":\"0x\",\"stateRoot\":\"0x2480155b48a1cea17d67dbfdfaafe821c1d19cdd478c5358e8ec56dec24502b2\"},\"hardforks\":[],\"bootstrapNodes\":[{\"ip\":\"40.71.221.215\",\"port\":30303,\"id\":\"56abaf065581a5985b8c5f4f88bd202526482761ba10be9bfdcd14846dd01f652ec33fde0f8c0fd1db19b59a4c04465681fcef50e11380ca88d25996191c52de\",\"location\":\"\",\"comment\":\"Parity Bootnode\"},{\"ip\":\"52.166.117.77\",\"port\":30303,\"id\":\"d07827483dc47b368eaf88454fb04b41b7452cf454e194e2bd4c14f98a3278fed5d819dbecd0d010407fc7688d941ee1e58d4f9c6354d3da3be92f55c17d7ce3\",\"location\":\"\",\"comment\":\"Parity Bootnode\"},{\"ip\":\"52.165.239.18\",\"port\":30303,\"id\":\"8fa162563a8e5a05eef3e1cd5abc5828c71344f7277bb788a395cce4a0e30baf2b34b92fe0b2dbbba2313ee40236bae2aab3c9811941b9f5a7e8e90aaa27ecba\",\"location\":\"\",\"comment\":\"Parity Bootnode\"},{\"ip\":\"52.243.47.56\",\"port\":30303,\"id\":\"7e2e7f00784f516939f94e22bdc6cf96153603ca2b5df1c7cc0f90a38e7a2f218ffb1c05b156835e8b49086d11fdd1b3e2965be16baa55204167aa9bf536a4d9\",\"location\":\"\",\"comment\":\"Parity Bootnode\"},{\"ip\":\"40.68.248.100\",\"port\":30303,\"id\":\"0518a3d35d4a7b3e8c433e7ffd2355d84a1304ceb5ef349787b556197f0c87fad09daed760635b97d52179d645d3e6d16a37d2cc0a9945c2ddf585684beb39ac\",\"location\":\"\",\"comment\":\"Parity Bootnode\"}]}");
     /***/
   },
 
   /***/
-  "./node_modules/ethereumjs-common/dist/chains/mainnet.json":
+  "./node_modules/cypheriumjs-common/dist/chains/mainnet.json":
   /*!*****************************************************************!*\
-    !*** ./node_modules/ethereumjs-common/dist/chains/mainnet.json ***!
+    !*** ./node_modules/cypheriumjs-common/dist/chains/mainnet.json ***!
     \*****************************************************************/
 
   /*! exports provided: name, chainId, networkId, comment, url, genesis, hardforks, bootstrapNodes, default */
 
   /***/
-  function node_modulesEthereumjsCommonDistChainsMainnetJson(module) {
-    module.exports = JSON.parse("{\"name\":\"mainnet\",\"chainId\":1,\"networkId\":1,\"comment\":\"The Ethereum main chain\",\"url\":\"https://ethstats.net/\",\"genesis\":{\"hash\":\"0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3\",\"timestamp\":null,\"gasLimit\":5000,\"difficulty\":17179869184,\"nonce\":\"0x0000000000000042\",\"extraData\":\"0x11bbe8db4e347b4e8c937c1c8370e4b5ed33adb3db69cbdb7a38e1e50b1b82fa\",\"stateRoot\":\"0xd7f8974fb5ac78d9ac099b9ad5018bedc2ce0a72dad1827a1709da30580f0544\"},\"hardforks\":[{\"name\":\"chainstart\",\"block\":0,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"homestead\",\"block\":1150000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"dao\",\"block\":1920000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"tangerineWhistle\",\"block\":2463000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"spuriousDragon\",\"block\":2675000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"byzantium\",\"block\":4370000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"constantinople\",\"block\":7280000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"petersburg\",\"block\":7280000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"istanbul\",\"block\":null,\"consensus\":\"pow\",\"finality\":null}],\"bootstrapNodes\":[{\"ip\":\"13.93.211.84\",\"port\":30303,\"id\":\"3f1d12044546b76342d59d4a05532c14b85aa669704bfe1f864fe079415aa2c02d743e03218e57a33fb94523adb54032871a6c51b2cc5514cb7c7e35b3ed0a99\",\"location\":\"US-WEST\",\"comment\":\"Go Bootnode\"},{\"ip\":\"191.235.84.50\",\"port\":30303,\"id\":\"78de8a0916848093c73790ead81d1928bec737d565119932b98c6b100d944b7a95e94f847f689fc723399d2e31129d182f7ef3863f2b4c820abbf3ab2722344d\",\"location\":\"BR\",\"comment\":\"Go Bootnode\"},{\"ip\":\"13.75.154.138\",\"port\":30303,\"id\":\"158f8aab45f6d19c6cbf4a089c2670541a8da11978a2f90dbf6a502a4a3bab80d288afdbeb7ec0ef6d92de563767f3b1ea9e8e334ca711e9f8e2df5a0385e8e6\",\"location\":\"AU\",\"comment\":\"Go Bootnode\"},{\"ip\":\"52.74.57.123\",\"port\":30303,\"id\":\"1118980bf48b0a3640bdba04e0fe78b1add18e1cd99bf22d53daac1fd9972ad650df52176e7c7d89d1114cfef2bc23a2959aa54998a46afcf7d91809f0855082\",\"location\":\"SG\",\"comment\":\"Go Bootnode\"}]}");
+  function node_modulesCypheriumjsCommonDistChainsMainnetJson(module) {
+    module.exports = JSON.parse("{\"name\":\"mainnet\",\"chainId\":1,\"networkId\":1,\"comment\":\"The Cypherium main chain\",\"url\":\"https://ethstats.net/\",\"genesis\":{\"hash\":\"0xd4e56740f876aef8c010b86a40d5f56745a118d0906a34e69aec8c0db1cb8fa3\",\"timestamp\":null,\"gasLimit\":5000,\"difficulty\":17179869184,\"nonce\":\"0x0000000000000042\",\"extraData\":\"0x11bbe8db4e347b4e8c937c1c8370e4b5ed33adb3db69cbdb7a38e1e50b1b82fa\",\"stateRoot\":\"0xd7f8974fb5ac78d9ac099b9ad5018bedc2ce0a72dad1827a1709da30580f0544\"},\"hardforks\":[{\"name\":\"chainstart\",\"block\":0,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"homestead\",\"block\":1150000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"dao\",\"block\":1920000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"tangerineWhistle\",\"block\":2463000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"spuriousDragon\",\"block\":2675000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"byzantium\",\"block\":4370000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"constantinople\",\"block\":7280000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"petersburg\",\"block\":7280000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"istanbul\",\"block\":null,\"consensus\":\"pow\",\"finality\":null}],\"bootstrapNodes\":[{\"ip\":\"13.93.211.84\",\"port\":30303,\"id\":\"3f1d12044546b76342d59d4a05532c14b85aa669704bfe1f864fe079415aa2c02d743e03218e57a33fb94523adb54032871a6c51b2cc5514cb7c7e35b3ed0a99\",\"location\":\"US-WEST\",\"comment\":\"Go Bootnode\"},{\"ip\":\"191.235.84.50\",\"port\":30303,\"id\":\"78de8a0916848093c73790ead81d1928bec737d565119932b98c6b100d944b7a95e94f847f689fc723399d2e31129d182f7ef3863f2b4c820abbf3ab2722344d\",\"location\":\"BR\",\"comment\":\"Go Bootnode\"},{\"ip\":\"13.75.154.138\",\"port\":30303,\"id\":\"158f8aab45f6d19c6cbf4a089c2670541a8da11978a2f90dbf6a502a4a3bab80d288afdbeb7ec0ef6d92de563767f3b1ea9e8e334ca711e9f8e2df5a0385e8e6\",\"location\":\"AU\",\"comment\":\"Go Bootnode\"},{\"ip\":\"52.74.57.123\",\"port\":30303,\"id\":\"1118980bf48b0a3640bdba04e0fe78b1add18e1cd99bf22d53daac1fd9972ad650df52176e7c7d89d1114cfef2bc23a2959aa54998a46afcf7d91809f0855082\",\"location\":\"SG\",\"comment\":\"Go Bootnode\"}]}");
     /***/
   },
 
   /***/
-  "./node_modules/ethereumjs-common/dist/chains/rinkeby.json":
+  "./node_modules/cypheriumjs-common/dist/chains/rinkeby.json":
   /*!*****************************************************************!*\
-    !*** ./node_modules/ethereumjs-common/dist/chains/rinkeby.json ***!
+    !*** ./node_modules/cypheriumjs-common/dist/chains/rinkeby.json ***!
     \*****************************************************************/
 
   /*! exports provided: name, chainId, networkId, comment, url, genesis, hardforks, bootstrapNodes, default */
 
   /***/
-  function node_modulesEthereumjsCommonDistChainsRinkebyJson(module) {
+  function node_modulesCypheriumjsCommonDistChainsRinkebyJson(module) {
     module.exports = JSON.parse("{\"name\":\"rinkeby\",\"chainId\":4,\"networkId\":4,\"comment\":\"PoA test network\",\"url\":\"https://www.rinkeby.io\",\"genesis\":{\"hash\":\"0x6341fd3daf94b748c72ced5a5b26028f2474f5f00d824504e4fa37a75767e177\",\"timestamp\":\"0x58ee40ba\",\"gasLimit\":4700000,\"difficulty\":1,\"nonce\":\"0x0000000000000000\",\"extraData\":\"0x52657370656374206d7920617574686f7269746168207e452e436172746d616e42eb768f2244c8811c63729a21a3569731535f067ffc57839b00206d1ad20c69a1981b489f772031b279182d99e65703f0076e4812653aab85fca0f00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\",\"stateRoot\":\"0x53580584816f617295ea26c0e17641e0120cab2f0a8ffb53a866fd53aa8e8c2d\"},\"hardforks\":[{\"name\":\"chainstart\",\"block\":0,\"consensus\":\"poa\",\"finality\":null},{\"name\":\"homestead\",\"block\":1,\"consensus\":\"poa\",\"finality\":null},{\"name\":\"dao\",\"block\":null,\"consensus\":\"poa\",\"finality\":null},{\"name\":\"tangerineWhistle\",\"block\":2,\"consensus\":\"poa\",\"finality\":null},{\"name\":\"spuriousDragon\",\"block\":3,\"consensus\":\"poa\",\"finality\":null},{\"name\":\"byzantium\",\"block\":1035301,\"consensus\":\"poa\",\"finality\":null},{\"name\":\"constantinople\",\"block\":null,\"consensus\":\"poa\",\"finality\":null},{\"name\":\"istanbul\",\"block\":null,\"consensus\":\"poa\",\"finality\":null}],\"bootstrapNodes\":[{\"ip\":\"52.169.42.101\",\"port\":30303,\"id\":\"a24ac7c5484ef4ed0c5eb2d36620ba4e4aa13b8c84684e1b4aab0cebea2ae45cb4d375b77eab56516d34bfbd3c1a833fc51296ff084b770b94fb9028c4d25ccf\",\"location\":\"IE\",\"comment\":\"\"},{\"ip\":\"52.3.158.184\",\"port\":30303,\"id\":\"343149e4feefa15d882d9fe4ac7d88f885bd05ebb735e547f12e12080a9fa07c8014ca6fd7f373123488102fe5e34111f8509cf0b7de3f5b44339c9f25e87cb8\",\"location\":\"\",\"comment\":\"INFURA\"}]}");
     /***/
   },
 
   /***/
-  "./node_modules/ethereumjs-common/dist/chains/ropsten.json":
+  "./node_modules/cypheriumjs-common/dist/chains/ropsten.json":
   /*!*****************************************************************!*\
-    !*** ./node_modules/ethereumjs-common/dist/chains/ropsten.json ***!
+    !*** ./node_modules/cypheriumjs-common/dist/chains/ropsten.json ***!
     \*****************************************************************/
 
   /*! exports provided: name, chainId, networkId, comment, url, genesis, hardforks, bootstrapNodes, default */
 
   /***/
-  function node_modulesEthereumjsCommonDistChainsRopstenJson(module) {
-    module.exports = JSON.parse("{\"name\":\"ropsten\",\"chainId\":3,\"networkId\":3,\"comment\":\"PoW test network\",\"url\":\"https://github.com/ethereum/ropsten\",\"genesis\":{\"hash\":\"0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d\",\"timestamp\":null,\"gasLimit\":16777216,\"difficulty\":1048576,\"nonce\":\"0x0000000000000042\",\"extraData\":\"0x3535353535353535353535353535353535353535353535353535353535353535\",\"stateRoot\":\"0x217b0bbcfb72e2d57e28f33cb361b9983513177755dc3f33ce3e7022ed62b77b\"},\"hardforks\":[{\"name\":\"chainstart\",\"block\":0,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"homestead\",\"block\":0,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"dao\",\"block\":null,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"tangerineWhistle\",\"block\":0,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"spuriousDragon\",\"block\":10,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"byzantium\",\"block\":1700000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"constantinople\",\"block\":4230000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"petersburg\",\"block\":4939394,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"istanbul\",\"block\":null,\"consensus\":\"pow\",\"finality\":null}],\"bootstrapNodes\":[{\"ip\":\"52.176.7.10\",\"port\":\"30303\",\"id\":\"30b7ab30a01c124a6cceca36863ece12c4f5fa68e3ba9b0b51407ccc002eeed3b3102d20a88f1c1d3c3154e2449317b8ef95090e77b312d5cc39354f86d5d606\",\"network\":\"Ropsten\",\"chainId\":3,\"location\":\"US\",\"comment\":\"US-Azure geth\"},{\"ip\":\"52.176.100.77\",\"port\":\"30303\",\"id\":\"865a63255b3bb68023b6bffd5095118fcc13e79dcf014fe4e47e065c350c7cc72af2e53eff895f11ba1bbb6a2b33271c1116ee870f266618eadfc2e78aa7349c\",\"network\":\"Ropsten\",\"chainId\":3,\"location\":\"US\",\"comment\":\"US-Azure parity\"},{\"ip\":\"52.232.243.152\",\"port\":\"30303\",\"id\":\"6332792c4a00e3e4ee0926ed89e0d27ef985424d97b6a45bf0f23e51f0dcb5e66b875777506458aea7af6f9e4ffb69f43f3778ee73c81ed9d34c51c4b16b0b0f\",\"network\":\"Ropsten\",\"chainId\":3,\"location\":\"US\",\"comment\":\"Parity\"},{\"ip\":\"192.81.208.223\",\"port\":\"30303\",\"id\":\"94c15d1b9e2fe7ce56e458b9a3b672ef11894ddedd0c6f247e0f1d3487f52b66208fb4aeb8179fce6e3a749ea93ed147c37976d67af557508d199d9594c35f09\",\"network\":\"Ropsten\",\"chainId\":3,\"location\":\"US\",\"comment\":\"@gpip\"}]}");
+  function node_modulesCypheriumjsCommonDistChainsRopstenJson(module) {
+    module.exports = JSON.parse("{\"name\":\"ropsten\",\"chainId\":3,\"networkId\":3,\"comment\":\"PoW test network\",\"url\":\"https://github.com/cypherium/ropsten\",\"genesis\":{\"hash\":\"0x41941023680923e0fe4d74a34bdac8141f2540e3ae90623718e47d66d1ca4a2d\",\"timestamp\":null,\"gasLimit\":16777216,\"difficulty\":1048576,\"nonce\":\"0x0000000000000042\",\"extraData\":\"0x3535353535353535353535353535353535353535353535353535353535353535\",\"stateRoot\":\"0x217b0bbcfb72e2d57e28f33cb361b9983513177755dc3f33ce3e7022ed62b77b\"},\"hardforks\":[{\"name\":\"chainstart\",\"block\":0,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"homestead\",\"block\":0,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"dao\",\"block\":null,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"tangerineWhistle\",\"block\":0,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"spuriousDragon\",\"block\":10,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"byzantium\",\"block\":1700000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"constantinople\",\"block\":4230000,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"petersburg\",\"block\":4939394,\"consensus\":\"pow\",\"finality\":null},{\"name\":\"istanbul\",\"block\":null,\"consensus\":\"pow\",\"finality\":null}],\"bootstrapNodes\":[{\"ip\":\"52.176.7.10\",\"port\":\"30303\",\"id\":\"30b7ab30a01c124a6cceca36863ece12c4f5fa68e3ba9b0b51407ccc002eeed3b3102d20a88f1c1d3c3154e2449317b8ef95090e77b312d5cc39354f86d5d606\",\"network\":\"Ropsten\",\"chainId\":3,\"location\":\"US\",\"comment\":\"US-Azure geth\"},{\"ip\":\"52.176.100.77\",\"port\":\"30303\",\"id\":\"865a63255b3bb68023b6bffd5095118fcc13e79dcf014fe4e47e065c350c7cc72af2e53eff895f11ba1bbb6a2b33271c1116ee870f266618eadfc2e78aa7349c\",\"network\":\"Ropsten\",\"chainId\":3,\"location\":\"US\",\"comment\":\"US-Azure parity\"},{\"ip\":\"52.232.243.152\",\"port\":\"30303\",\"id\":\"6332792c4a00e3e4ee0926ed89e0d27ef985424d97b6a45bf0f23e51f0dcb5e66b875777506458aea7af6f9e4ffb69f43f3778ee73c81ed9d34c51c4b16b0b0f\",\"network\":\"Ropsten\",\"chainId\":3,\"location\":\"US\",\"comment\":\"Parity\"},{\"ip\":\"192.81.208.223\",\"port\":\"30303\",\"id\":\"94c15d1b9e2fe7ce56e458b9a3b672ef11894ddedd0c6f247e0f1d3487f52b66208fb4aeb8179fce6e3a749ea93ed147c37976d67af557508d199d9594c35f09\",\"network\":\"Ropsten\",\"chainId\":3,\"location\":\"US\",\"comment\":\"@gpip\"}]}");
     /***/
   },
 
   /***/
-  "./node_modules/ethereumjs-common/dist/hardforks/byzantium.json":
+  "./node_modules/cypheriumjs-common/dist/hardforks/byzantium.json":
   /*!**********************************************************************!*\
-    !*** ./node_modules/ethereumjs-common/dist/hardforks/byzantium.json ***!
+    !*** ./node_modules/cypheriumjs-common/dist/hardforks/byzantium.json ***!
     \**********************************************************************/
 
   /*! exports provided: name, comment, eip, gasConfig, gasPrices, vm, pow, casper, sharding, default */
 
   /***/
-  function node_modulesEthereumjsCommonDistHardforksByzantiumJson(module) {
-    module.exports = JSON.parse("{\"name\":\"byzantium\",\"comment\":\"Hardfork with new precompiles, instructions and other protocol changes\",\"eip\":{\"url\":\"https://eips.ethereum.org/EIPS/eip-609\",\"status\":\"Final\"},\"gasConfig\":{},\"gasPrices\":{\"modexpGquaddivisor\":{\"v\":20,\"d\":\"Gquaddivisor from modexp precompile for gas calculation\"},\"ecAdd\":{\"v\":500,\"d\":\"Gas costs for curve addition precompile\"},\"ecMul\":{\"v\":40000,\"d\":\"Gas costs for curve multiplication precompile\"},\"ecPairing\":{\"v\":100000,\"d\":\"Base gas costs for curve pairing precompile\"},\"ecPairingWord\":{\"v\":80000,\"d\":\"Gas costs regarding curve pairing precompile input length\"}},\"vm\":{},\"pow\":{\"minerReward\":{\"v\":\"3000000000000000000\",\"d\":\"the amount a miner get rewarded for mining a block\"}},\"casper\":{},\"sharding\":{}}");
+  function node_modulesCypheriumjsCommonDistHardforksByzantiumJson(module) {
+    module.exports = JSON.parse("{\"name\":\"byzantium\",\"comment\":\"Hardfork with new precompiles, instructions and other protocol changes\",\"eip\":{\"url\":\"https://eips.cypherium.org/EIPS/eip-609\",\"status\":\"Final\"},\"gasConfig\":{},\"gasPrices\":{\"modexpGquaddivisor\":{\"v\":20,\"d\":\"Gquaddivisor from modexp precompile for gas calculation\"},\"ecAdd\":{\"v\":500,\"d\":\"Gas costs for curve addition precompile\"},\"ecMul\":{\"v\":40000,\"d\":\"Gas costs for curve multiplication precompile\"},\"ecPairing\":{\"v\":100000,\"d\":\"Base gas costs for curve pairing precompile\"},\"ecPairingWord\":{\"v\":80000,\"d\":\"Gas costs regarding curve pairing precompile input length\"}},\"vm\":{},\"pow\":{\"minerReward\":{\"v\":\"3000000000000000000\",\"d\":\"the amount a miner get rewarded for mining a block\"}},\"casper\":{},\"sharding\":{}}");
     /***/
   },
 
   /***/
-  "./node_modules/ethereumjs-common/dist/hardforks/chainstart.json":
+  "./node_modules/cypheriumjs-common/dist/hardforks/chainstart.json":
   /*!***********************************************************************!*\
-    !*** ./node_modules/ethereumjs-common/dist/hardforks/chainstart.json ***!
+    !*** ./node_modules/cypheriumjs-common/dist/hardforks/chainstart.json ***!
     \***********************************************************************/
 
   /*! exports provided: name, comment, eip, status, gasConfig, gasPrices, vm, pow, casper, sharding, default */
 
   /***/
-  function node_modulesEthereumjsCommonDistHardforksChainstartJson(module) {
-    module.exports = JSON.parse("{\"name\":\"chainstart\",\"comment\":\"Start of the Ethereum main chain\",\"eip\":{\"url\":\"\",\"status\":\"\"},\"status\":\"\",\"gasConfig\":{\"minGasLimit\":{\"v\":5000,\"d\":\"Minimum the gas limit may ever be\"},\"gasLimitBoundDivisor\":{\"v\":1024,\"d\":\"The bound divisor of the gas limit, used in update calculations\"}},\"gasPrices\":{\"base\":{\"v\":2,\"d\":\"Gas base cost, used e.g. for ChainID opcode (Istanbul)\"},\"tierStep\":{\"v\":[0,2,3,5,8,10,20],\"d\":\"Once per operation, for a selection of them\"},\"exp\":{\"v\":10,\"d\":\"Once per EXP instuction\"},\"expByte\":{\"v\":10,\"d\":\"Times ceil(log256(exponent)) for the EXP instruction\"},\"sha3\":{\"v\":30,\"d\":\"Once per SHA3 operation\"},\"sha3Word\":{\"v\":6,\"d\":\"Once per word of the SHA3 operation's data\"},\"sload\":{\"v\":50,\"d\":\"Once per SLOAD operation\"},\"sstoreSet\":{\"v\":20000,\"d\":\"Once per SSTORE operation if the zeroness changes from zero\"},\"sstoreReset\":{\"v\":5000,\"d\":\"Once per SSTORE operation if the zeroness does not change from zero\"},\"sstoreRefund\":{\"v\":15000,\"d\":\"Once per SSTORE operation if the zeroness changes to zero\"},\"jumpdest\":{\"v\":1,\"d\":\"Refunded gas, once per SSTORE operation if the zeroness changes to zero\"},\"log\":{\"v\":375,\"d\":\"Per LOG* operation\"},\"logData\":{\"v\":8,\"d\":\"Per byte in a LOG* operation's data\"},\"logTopic\":{\"v\":375,\"d\":\"Multiplied by the * of the LOG*, per LOG transaction. e.g. LOG0 incurs 0 * c_txLogTopicGas, LOG4 incurs 4 * c_txLogTopicGas\"},\"create\":{\"v\":32000,\"d\":\"Once per CREATE operation & contract-creation transaction\"},\"call\":{\"v\":40,\"d\":\"Once per CALL operation & message call transaction\"},\"callStipend\":{\"v\":2300,\"d\":\"Free gas given at beginning of call\"},\"callValueTransfer\":{\"v\":9000,\"d\":\"Paid for CALL when the value transfor is non-zero\"},\"callNewAccount\":{\"v\":25000,\"d\":\"Paid for CALL when the destination address didn't exist prior\"},\"selfdestructRefund\":{\"v\":24000,\"d\":\"Refunded following a selfdestruct operation\"},\"memory\":{\"v\":3,\"d\":\"Times the address of the (highest referenced byte in memory + 1). NOTE: referencing happens on read, write and in instructions such as RETURN and CALL\"},\"quadCoeffDiv\":{\"v\":512,\"d\":\"Divisor for the quadratic particle of the memory cost equation\"},\"createData\":{\"v\":200,\"d\":\"\"},\"tx\":{\"v\":21000,\"d\":\"Per transaction. NOTE: Not payable on data of calls between transactions\"},\"txCreation\":{\"v\":32000,\"d\":\"The cost of creating a contract via tx\"},\"txDataZero\":{\"v\":4,\"d\":\"Per byte of data attached to a transaction that equals zero. NOTE: Not payable on data of calls between transactions\"},\"txDataNonZero\":{\"v\":68,\"d\":\"Per byte of data attached to a transaction that is not equal to zero. NOTE: Not payable on data of calls between transactions\"},\"copy\":{\"v\":3,\"d\":\"Multiplied by the number of 32-byte words that are copied (round up) for any *COPY operation and added\"},\"ecRecover\":{\"v\":3000,\"d\":\"\"},\"sha256\":{\"v\":60,\"d\":\"\"},\"sha256Word\":{\"v\":12,\"d\":\"\"},\"ripemd160\":{\"v\":600,\"d\":\"\"},\"ripemd160Word\":{\"v\":120,\"d\":\"\"},\"identity\":{\"v\":15,\"d\":\"\"},\"identityWord\":{\"v\":3,\"d\":\"\"}},\"vm\":{\"stackLimit\":{\"v\":1024,\"d\":\"Maximum size of VM stack allowed\"},\"callCreateDepth\":{\"v\":1024,\"d\":\"Maximum depth of call/create stack\"},\"maxExtraDataSize\":{\"v\":32,\"d\":\"Maximum size extra data may be after Genesis\"}},\"pow\":{\"minimumDifficulty\":{\"v\":131072,\"d\":\"The minimum that the difficulty may ever be\"},\"difficultyBoundDivisor\":{\"v\":2048,\"d\":\"The bound divisor of the difficulty, used in the update calculations\"},\"durationLimit\":{\"v\":13,\"d\":\"The decision boundary on the blocktime duration used to determine whether difficulty should go up or not\"},\"epochDuration\":{\"v\":30000,\"d\":\"Duration between proof-of-work epochs\"},\"timebombPeriod\":{\"v\":100000,\"d\":\"Exponential difficulty timebomb period\"},\"minerReward\":{\"v\":\"5000000000000000000\",\"d\":\"the amount a miner get rewarded for mining a block\"}},\"casper\":{},\"sharding\":{}}");
+  function node_modulesCypheriumjsCommonDistHardforksChainstartJson(module) {
+    module.exports = JSON.parse("{\"name\":\"chainstart\",\"comment\":\"Start of the Cypherium main chain\",\"eip\":{\"url\":\"\",\"status\":\"\"},\"status\":\"\",\"gasConfig\":{\"minGasLimit\":{\"v\":5000,\"d\":\"Minimum the gas limit may ever be\"},\"gasLimitBoundDivisor\":{\"v\":1024,\"d\":\"The bound divisor of the gas limit, used in update calculations\"}},\"gasPrices\":{\"base\":{\"v\":2,\"d\":\"Gas base cost, used e.g. for ChainID opcode (Istanbul)\"},\"tierStep\":{\"v\":[0,2,3,5,8,10,20],\"d\":\"Once per operation, for a selection of them\"},\"exp\":{\"v\":10,\"d\":\"Once per EXP instuction\"},\"expByte\":{\"v\":10,\"d\":\"Times ceil(log256(exponent)) for the EXP instruction\"},\"sha3\":{\"v\":30,\"d\":\"Once per SHA3 operation\"},\"sha3Word\":{\"v\":6,\"d\":\"Once per word of the SHA3 operation's data\"},\"sload\":{\"v\":50,\"d\":\"Once per SLOAD operation\"},\"sstoreSet\":{\"v\":20000,\"d\":\"Once per SSTORE operation if the zeroness changes from zero\"},\"sstoreReset\":{\"v\":5000,\"d\":\"Once per SSTORE operation if the zeroness does not change from zero\"},\"sstoreRefund\":{\"v\":15000,\"d\":\"Once per SSTORE operation if the zeroness changes to zero\"},\"jumpdest\":{\"v\":1,\"d\":\"Refunded gas, once per SSTORE operation if the zeroness changes to zero\"},\"log\":{\"v\":375,\"d\":\"Per LOG* operation\"},\"logData\":{\"v\":8,\"d\":\"Per byte in a LOG* operation's data\"},\"logTopic\":{\"v\":375,\"d\":\"Multiplied by the * of the LOG*, per LOG transaction. e.g. LOG0 incurs 0 * c_txLogTopicGas, LOG4 incurs 4 * c_txLogTopicGas\"},\"create\":{\"v\":32000,\"d\":\"Once per CREATE operation & contract-creation transaction\"},\"call\":{\"v\":40,\"d\":\"Once per CALL operation & message call transaction\"},\"callStipend\":{\"v\":2300,\"d\":\"Free gas given at beginning of call\"},\"callValueTransfer\":{\"v\":9000,\"d\":\"Paid for CALL when the value transfor is non-zero\"},\"callNewAccount\":{\"v\":25000,\"d\":\"Paid for CALL when the destination address didn't exist prior\"},\"selfdestructRefund\":{\"v\":24000,\"d\":\"Refunded following a selfdestruct operation\"},\"memory\":{\"v\":3,\"d\":\"Times the address of the (highest referenced byte in memory + 1). NOTE: referencing happens on read, write and in instructions such as RETURN and CALL\"},\"quadCoeffDiv\":{\"v\":512,\"d\":\"Divisor for the quadratic particle of the memory cost equation\"},\"createData\":{\"v\":200,\"d\":\"\"},\"tx\":{\"v\":21000,\"d\":\"Per transaction. NOTE: Not payable on data of calls between transactions\"},\"txCreation\":{\"v\":32000,\"d\":\"The cost of creating a contract via tx\"},\"txDataZero\":{\"v\":4,\"d\":\"Per byte of data attached to a transaction that equals zero. NOTE: Not payable on data of calls between transactions\"},\"txDataNonZero\":{\"v\":68,\"d\":\"Per byte of data attached to a transaction that is not equal to zero. NOTE: Not payable on data of calls between transactions\"},\"copy\":{\"v\":3,\"d\":\"Multiplied by the number of 32-byte words that are copied (round up) for any *COPY operation and added\"},\"ecRecover\":{\"v\":3000,\"d\":\"\"},\"sha256\":{\"v\":60,\"d\":\"\"},\"sha256Word\":{\"v\":12,\"d\":\"\"},\"ripemd160\":{\"v\":600,\"d\":\"\"},\"ripemd160Word\":{\"v\":120,\"d\":\"\"},\"identity\":{\"v\":15,\"d\":\"\"},\"identityWord\":{\"v\":3,\"d\":\"\"}},\"vm\":{\"stackLimit\":{\"v\":1024,\"d\":\"Maximum size of VM stack allowed\"},\"callCreateDepth\":{\"v\":1024,\"d\":\"Maximum depth of call/create stack\"},\"maxExtraDataSize\":{\"v\":32,\"d\":\"Maximum size extra data may be after Genesis\"}},\"pow\":{\"minimumDifficulty\":{\"v\":131072,\"d\":\"The minimum that the difficulty may ever be\"},\"difficultyBoundDivisor\":{\"v\":2048,\"d\":\"The bound divisor of the difficulty, used in the update calculations\"},\"durationLimit\":{\"v\":13,\"d\":\"The decision boundary on the blocktime duration used to determine whether difficulty should go up or not\"},\"epochDuration\":{\"v\":30000,\"d\":\"Duration between proof-of-work epochs\"},\"timebombPeriod\":{\"v\":100000,\"d\":\"Exponential difficulty timebomb period\"},\"minerReward\":{\"v\":\"5000000000000000000\",\"d\":\"the amount a miner get rewarded for mining a block\"}},\"casper\":{},\"sharding\":{}}");
     /***/
   },
 
   /***/
-  "./node_modules/ethereumjs-common/dist/hardforks/constantinople.json":
+  "./node_modules/cypheriumjs-common/dist/hardforks/constantinople.json":
   /*!***************************************************************************!*\
-    !*** ./node_modules/ethereumjs-common/dist/hardforks/constantinople.json ***!
+    !*** ./node_modules/cypheriumjs-common/dist/hardforks/constantinople.json ***!
     \***************************************************************************/
 
   /*! exports provided: name, comment, eip, gasConfig, gasPrices, vm, pow, casper, sharding, default */
 
   /***/
-  function node_modulesEthereumjsCommonDistHardforksConstantinopleJson(module) {
-    module.exports = JSON.parse("{\"name\":\"constantinople\",\"comment\":\"Postponed hardfork including EIP-1283 (SSTORE gas metering changes)\",\"eip\":{\"url\":\"https://eips.ethereum.org/EIPS/eip-1013\",\"status\":\"Final\"},\"gasConfig\":{},\"gasPrices\":{\"netSstoreNoopGas\":{\"v\":200,\"d\":\"Once per SSTORE operation if the value doesn't change\"},\"netSstoreInitGas\":{\"v\":20000,\"d\":\"Once per SSTORE operation from clean zero\"},\"netSstoreCleanGas\":{\"v\":5000,\"d\":\"Once per SSTORE operation from clean non-zero\"},\"netSstoreDirtyGas\":{\"v\":200,\"d\":\"Once per SSTORE operation from dirty\"},\"netSstoreClearRefund\":{\"v\":15000,\"d\":\"Once per SSTORE operation for clearing an originally existing storage slot\"},\"netSstoreResetRefund\":{\"v\":4800,\"d\":\"Once per SSTORE operation for resetting to the original non-zero value\"},\"netSstoreResetClearRefund\":{\"v\":19800,\"d\":\"Once per SSTORE operation for resetting to the original zero value\"}},\"vm\":{},\"pow\":{\"minerReward\":{\"v\":\"2000000000000000000\",\"d\":\"The amount a miner gets rewarded for mining a block\"}},\"casper\":{},\"sharding\":{}}");
+  function node_modulesCypheriumjsCommonDistHardforksConstantinopleJson(module) {
+    module.exports = JSON.parse("{\"name\":\"constantinople\",\"comment\":\"Postponed hardfork including EIP-1283 (SSTORE gas metering changes)\",\"eip\":{\"url\":\"https://eips.cypherium.org/EIPS/eip-1013\",\"status\":\"Final\"},\"gasConfig\":{},\"gasPrices\":{\"netSstoreNoopGas\":{\"v\":200,\"d\":\"Once per SSTORE operation if the value doesn't change\"},\"netSstoreInitGas\":{\"v\":20000,\"d\":\"Once per SSTORE operation from clean zero\"},\"netSstoreCleanGas\":{\"v\":5000,\"d\":\"Once per SSTORE operation from clean non-zero\"},\"netSstoreDirtyGas\":{\"v\":200,\"d\":\"Once per SSTORE operation from dirty\"},\"netSstoreClearRefund\":{\"v\":15000,\"d\":\"Once per SSTORE operation for clearing an originally existing storage slot\"},\"netSstoreResetRefund\":{\"v\":4800,\"d\":\"Once per SSTORE operation for resetting to the original non-zero value\"},\"netSstoreResetClearRefund\":{\"v\":19800,\"d\":\"Once per SSTORE operation for resetting to the original zero value\"}},\"vm\":{},\"pow\":{\"minerReward\":{\"v\":\"2000000000000000000\",\"d\":\"The amount a miner gets rewarded for mining a block\"}},\"casper\":{},\"sharding\":{}}");
     /***/
   },
 
   /***/
-  "./node_modules/ethereumjs-common/dist/hardforks/dao.json":
+  "./node_modules/cypheriumjs-common/dist/hardforks/dao.json":
   /*!****************************************************************!*\
-    !*** ./node_modules/ethereumjs-common/dist/hardforks/dao.json ***!
+    !*** ./node_modules/cypheriumjs-common/dist/hardforks/dao.json ***!
     \****************************************************************/
 
   /*! exports provided: name, comment, eip, gasConfig, gasPrices, vm, pow, casper, sharding, default */
 
   /***/
-  function node_modulesEthereumjsCommonDistHardforksDaoJson(module) {
-    module.exports = JSON.parse("{\"name\":\"dao\",\"comment\":\"DAO rescue hardfork\",\"eip\":{\"url\":\"https://eips.ethereum.org/EIPS/eip-779\",\"status\":\"Final\"},\"gasConfig\":{},\"gasPrices\":{},\"vm\":{},\"pow\":{},\"casper\":{},\"sharding\":{}}");
+  function node_modulesCypheriumjsCommonDistHardforksDaoJson(module) {
+    module.exports = JSON.parse("{\"name\":\"dao\",\"comment\":\"DAO rescue hardfork\",\"eip\":{\"url\":\"https://eips.cypherium.org/EIPS/eip-779\",\"status\":\"Final\"},\"gasConfig\":{},\"gasPrices\":{},\"vm\":{},\"pow\":{},\"casper\":{},\"sharding\":{}}");
     /***/
   },
 
   /***/
-  "./node_modules/ethereumjs-common/dist/hardforks/homestead.json":
+  "./node_modules/cypheriumjs-common/dist/hardforks/homestead.json":
   /*!**********************************************************************!*\
-    !*** ./node_modules/ethereumjs-common/dist/hardforks/homestead.json ***!
+    !*** ./node_modules/cypheriumjs-common/dist/hardforks/homestead.json ***!
     \**********************************************************************/
 
   /*! exports provided: name, comment, eip, gasConfig, gasPrices, vm, pow, casper, sharding, default */
 
   /***/
-  function node_modulesEthereumjsCommonDistHardforksHomesteadJson(module) {
-    module.exports = JSON.parse("{\"name\":\"homestead\",\"comment\":\"Homestead hardfork with protocol and network changes\",\"eip\":{\"url\":\"https://eips.ethereum.org/EIPS/eip-606\",\"status\":\"Final\"},\"gasConfig\":{},\"gasPrices\":{},\"vm\":{},\"pow\":{},\"casper\":{},\"sharding\":{}}");
+  function node_modulesCypheriumjsCommonDistHardforksHomesteadJson(module) {
+    module.exports = JSON.parse("{\"name\":\"homestead\",\"comment\":\"Homestead hardfork with protocol and network changes\",\"eip\":{\"url\":\"https://eips.cypherium.org/EIPS/eip-606\",\"status\":\"Final\"},\"gasConfig\":{},\"gasPrices\":{},\"vm\":{},\"pow\":{},\"casper\":{},\"sharding\":{}}");
     /***/
   },
 
   /***/
-  "./node_modules/ethereumjs-common/dist/hardforks/index.js":
+  "./node_modules/cypheriumjs-common/dist/hardforks/index.js":
   /*!****************************************************************!*\
-    !*** ./node_modules/ethereumjs-common/dist/hardforks/index.js ***!
+    !*** ./node_modules/cypheriumjs-common/dist/hardforks/index.js ***!
     \****************************************************************/
 
   /*! no static exports found */
 
   /***/
-  function node_modulesEthereumjsCommonDistHardforksIndexJs(module, exports, __webpack_require__) {
+  function node_modulesCypheriumjsCommonDistHardforksIndexJs(module, exports, __webpack_require__) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
@@ -6691,93 +6691,93 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     });
     exports.hardforks = [['chainstart', __webpack_require__(
     /*! ./chainstart.json */
-    "./node_modules/ethereumjs-common/dist/hardforks/chainstart.json")], ['homestead', __webpack_require__(
+    "./node_modules/cypheriumjs-common/dist/hardforks/chainstart.json")], ['homestead', __webpack_require__(
     /*! ./homestead.json */
-    "./node_modules/ethereumjs-common/dist/hardforks/homestead.json")], ['dao', __webpack_require__(
+    "./node_modules/cypheriumjs-common/dist/hardforks/homestead.json")], ['dao', __webpack_require__(
     /*! ./dao.json */
-    "./node_modules/ethereumjs-common/dist/hardforks/dao.json")], ['tangerineWhistle', __webpack_require__(
+    "./node_modules/cypheriumjs-common/dist/hardforks/dao.json")], ['tangerineWhistle', __webpack_require__(
     /*! ./tangerineWhistle.json */
-    "./node_modules/ethereumjs-common/dist/hardforks/tangerineWhistle.json")], ['spuriousDragon', __webpack_require__(
+    "./node_modules/cypheriumjs-common/dist/hardforks/tangerineWhistle.json")], ['spuriousDragon', __webpack_require__(
     /*! ./spuriousDragon.json */
-    "./node_modules/ethereumjs-common/dist/hardforks/spuriousDragon.json")], ['byzantium', __webpack_require__(
+    "./node_modules/cypheriumjs-common/dist/hardforks/spuriousDragon.json")], ['byzantium', __webpack_require__(
     /*! ./byzantium.json */
-    "./node_modules/ethereumjs-common/dist/hardforks/byzantium.json")], ['constantinople', __webpack_require__(
+    "./node_modules/cypheriumjs-common/dist/hardforks/byzantium.json")], ['constantinople', __webpack_require__(
     /*! ./constantinople.json */
-    "./node_modules/ethereumjs-common/dist/hardforks/constantinople.json")], ['petersburg', __webpack_require__(
+    "./node_modules/cypheriumjs-common/dist/hardforks/constantinople.json")], ['petersburg', __webpack_require__(
     /*! ./petersburg.json */
-    "./node_modules/ethereumjs-common/dist/hardforks/petersburg.json")], ['istanbul', __webpack_require__(
+    "./node_modules/cypheriumjs-common/dist/hardforks/petersburg.json")], ['istanbul', __webpack_require__(
     /*! ./istanbul.json */
-    "./node_modules/ethereumjs-common/dist/hardforks/istanbul.json")]]; //# sourceMappingURL=index.js.map
+    "./node_modules/cypheriumjs-common/dist/hardforks/istanbul.json")]]; //# sourceMappingURL=index.js.map
 
     /***/
   },
 
   /***/
-  "./node_modules/ethereumjs-common/dist/hardforks/istanbul.json":
+  "./node_modules/cypheriumjs-common/dist/hardforks/istanbul.json":
   /*!*********************************************************************!*\
-    !*** ./node_modules/ethereumjs-common/dist/hardforks/istanbul.json ***!
+    !*** ./node_modules/cypheriumjs-common/dist/hardforks/istanbul.json ***!
     \*********************************************************************/
 
   /*! exports provided: name, comment, eip, gasConfig, gasPrices, vm, pow, casper, sharding, default */
 
   /***/
-  function node_modulesEthereumjsCommonDistHardforksIstanbulJson(module) {
-    module.exports = JSON.parse("{\"name\":\"istanbul\",\"comment\":\"HF targeted for October 2019 following the Constantinople/Petersburg HF\",\"eip\":{\"url\":\"https://eips.ethereum.org/EIPS/eip-1679\",\"status\":\"Draft\"},\"gasConfig\":{},\"gasPrices\":{\"blake2Round\":{\"v\":1,\"d\":\"Gas cost per round for the Blake2 F precompile\"},\"ecAdd\":{\"v\":150,\"d\":\"Gas costs for curve addition precompile\"},\"ecMul\":{\"v\":6000,\"d\":\"Gas costs for curve multiplication precompile\"},\"ecPairing\":{\"v\":45000,\"d\":\"Base gas costs for curve pairing precompile\"},\"ecPairingWord\":{\"v\":34000,\"d\":\"Gas costs regarding curve pairing precompile input length\"},\"txDataNonZero\":{\"v\":16,\"d\":\"Per byte of data attached to a transaction that is not equal to zero. NOTE: Not payable on data of calls between transactions\"},\"sstoreSentryGasEIP2200\":{\"v\":2300,\"d\":\"Minimum gas required to be present for an SSTORE call, not consumed\"},\"sstoreNoopGasEIP2200\":{\"v\":800,\"d\":\"Once per SSTORE operation if the value doesn't change\"},\"sstoreDirtyGasEIP2200\":{\"v\":800,\"d\":\"Once per SSTORE operation if a dirty value is changed\"},\"sstoreInitGasEIP2200\":{\"v\":20000,\"d\":\"Once per SSTORE operation from clean zero to non-zero\"},\"sstoreInitRefundEIP2200\":{\"v\":19200,\"d\":\"Once per SSTORE operation for resetting to the original zero value\"},\"sstoreCleanGasEIP2200\":{\"v\":5000,\"d\":\"Once per SSTORE operation from clean non-zero to something else\"},\"sstoreCleanRefundEIP2200\":{\"v\":4200,\"d\":\"Once per SSTORE operation for resetting to the original non-zero value\"},\"sstoreClearRefundEIP2200\":{\"v\":15000,\"d\":\"Once per SSTORE operation for clearing an originally existing storage slot\"}},\"vm\":{},\"pow\":{},\"casper\":{},\"sharding\":{}}");
+  function node_modulesCypheriumjsCommonDistHardforksIstanbulJson(module) {
+    module.exports = JSON.parse("{\"name\":\"istanbul\",\"comment\":\"HF targeted for October 2019 following the Constantinople/Petersburg HF\",\"eip\":{\"url\":\"https://eips.cypherium.org/EIPS/eip-1679\",\"status\":\"Draft\"},\"gasConfig\":{},\"gasPrices\":{\"blake2Round\":{\"v\":1,\"d\":\"Gas cost per round for the Blake2 F precompile\"},\"ecAdd\":{\"v\":150,\"d\":\"Gas costs for curve addition precompile\"},\"ecMul\":{\"v\":6000,\"d\":\"Gas costs for curve multiplication precompile\"},\"ecPairing\":{\"v\":45000,\"d\":\"Base gas costs for curve pairing precompile\"},\"ecPairingWord\":{\"v\":34000,\"d\":\"Gas costs regarding curve pairing precompile input length\"},\"txDataNonZero\":{\"v\":16,\"d\":\"Per byte of data attached to a transaction that is not equal to zero. NOTE: Not payable on data of calls between transactions\"},\"sstoreSentryGasEIP2200\":{\"v\":2300,\"d\":\"Minimum gas required to be present for an SSTORE call, not consumed\"},\"sstoreNoopGasEIP2200\":{\"v\":800,\"d\":\"Once per SSTORE operation if the value doesn't change\"},\"sstoreDirtyGasEIP2200\":{\"v\":800,\"d\":\"Once per SSTORE operation if a dirty value is changed\"},\"sstoreInitGasEIP2200\":{\"v\":20000,\"d\":\"Once per SSTORE operation from clean zero to non-zero\"},\"sstoreInitRefundEIP2200\":{\"v\":19200,\"d\":\"Once per SSTORE operation for resetting to the original zero value\"},\"sstoreCleanGasEIP2200\":{\"v\":5000,\"d\":\"Once per SSTORE operation from clean non-zero to something else\"},\"sstoreCleanRefundEIP2200\":{\"v\":4200,\"d\":\"Once per SSTORE operation for resetting to the original non-zero value\"},\"sstoreClearRefundEIP2200\":{\"v\":15000,\"d\":\"Once per SSTORE operation for clearing an originally existing storage slot\"}},\"vm\":{},\"pow\":{},\"casper\":{},\"sharding\":{}}");
     /***/
   },
 
   /***/
-  "./node_modules/ethereumjs-common/dist/hardforks/petersburg.json":
+  "./node_modules/cypheriumjs-common/dist/hardforks/petersburg.json":
   /*!***********************************************************************!*\
-    !*** ./node_modules/ethereumjs-common/dist/hardforks/petersburg.json ***!
+    !*** ./node_modules/cypheriumjs-common/dist/hardforks/petersburg.json ***!
     \***********************************************************************/
 
   /*! exports provided: name, comment, eip, gasConfig, gasPrices, vm, pow, casper, sharding, default */
 
   /***/
-  function node_modulesEthereumjsCommonDistHardforksPetersburgJson(module) {
-    module.exports = JSON.parse("{\"name\":\"petersburg\",\"comment\":\"Aka constantinopleFix, removes EIP-1283, activate together with or after constantinople\",\"eip\":{\"url\":\"https://github.com/ethereum/EIPs/pull/1716\",\"status\":\"Draft\"},\"gasConfig\":{},\"gasPrices\":{\"netSstoreNoopGas\":{\"v\":null,\"d\":\"Removed along EIP-1283\"},\"netSstoreInitGas\":{\"v\":null,\"d\":\"Removed along EIP-1283\"},\"netSstoreCleanGas\":{\"v\":null,\"d\":\"Removed along EIP-1283\"},\"netSstoreDirtyGas\":{\"v\":null,\"d\":\"Removed along EIP-1283\"},\"netSstoreClearRefund\":{\"v\":null,\"d\":\"Removed along EIP-1283\"},\"netSstoreResetRefund\":{\"v\":null,\"d\":\"Removed along EIP-1283\"},\"netSstoreResetClearRefund\":{\"v\":null,\"d\":\"Removed along EIP-1283\"}},\"vm\":{},\"pow\":{},\"casper\":{},\"sharding\":{}}");
+  function node_modulesCypheriumjsCommonDistHardforksPetersburgJson(module) {
+    module.exports = JSON.parse("{\"name\":\"petersburg\",\"comment\":\"Aka constantinopleFix, removes EIP-1283, activate together with or after constantinople\",\"eip\":{\"url\":\"https://github.com/cypherium/EIPs/pull/1716\",\"status\":\"Draft\"},\"gasConfig\":{},\"gasPrices\":{\"netSstoreNoopGas\":{\"v\":null,\"d\":\"Removed along EIP-1283\"},\"netSstoreInitGas\":{\"v\":null,\"d\":\"Removed along EIP-1283\"},\"netSstoreCleanGas\":{\"v\":null,\"d\":\"Removed along EIP-1283\"},\"netSstoreDirtyGas\":{\"v\":null,\"d\":\"Removed along EIP-1283\"},\"netSstoreClearRefund\":{\"v\":null,\"d\":\"Removed along EIP-1283\"},\"netSstoreResetRefund\":{\"v\":null,\"d\":\"Removed along EIP-1283\"},\"netSstoreResetClearRefund\":{\"v\":null,\"d\":\"Removed along EIP-1283\"}},\"vm\":{},\"pow\":{},\"casper\":{},\"sharding\":{}}");
     /***/
   },
 
   /***/
-  "./node_modules/ethereumjs-common/dist/hardforks/spuriousDragon.json":
+  "./node_modules/cypheriumjs-common/dist/hardforks/spuriousDragon.json":
   /*!***************************************************************************!*\
-    !*** ./node_modules/ethereumjs-common/dist/hardforks/spuriousDragon.json ***!
+    !*** ./node_modules/cypheriumjs-common/dist/hardforks/spuriousDragon.json ***!
     \***************************************************************************/
 
   /*! exports provided: name, comment, eip, gasConfig, gasPrices, vm, pow, casper, sharding, default */
 
   /***/
-  function node_modulesEthereumjsCommonDistHardforksSpuriousDragonJson(module) {
-    module.exports = JSON.parse("{\"name\":\"spuriousDragon\",\"comment\":\"HF with EIPs for simple replay attack protection, EXP cost increase, state trie clearing, contract code size limit\",\"eip\":{\"url\":\"https://eips.ethereum.org/EIPS/eip-607\",\"status\":\"Final\"},\"gasConfig\":{},\"gasPrices\":{\"expByte\":{\"v\":50,\"d\":\"Times ceil(log256(exponent)) for the EXP instruction\"}},\"vm\":{\"maxCodeSize\":{\"v\":24576,\"d\":\"Maximum length of contract code\"}},\"pow\":{},\"casper\":{},\"sharding\":{}}");
+  function node_modulesCypheriumjsCommonDistHardforksSpuriousDragonJson(module) {
+    module.exports = JSON.parse("{\"name\":\"spuriousDragon\",\"comment\":\"HF with EIPs for simple replay attack protection, EXP cost increase, state trie clearing, contract code size limit\",\"eip\":{\"url\":\"https://eips.cypherium.org/EIPS/eip-607\",\"status\":\"Final\"},\"gasConfig\":{},\"gasPrices\":{\"expByte\":{\"v\":50,\"d\":\"Times ceil(log256(exponent)) for the EXP instruction\"}},\"vm\":{\"maxCodeSize\":{\"v\":24576,\"d\":\"Maximum length of contract code\"}},\"pow\":{},\"casper\":{},\"sharding\":{}}");
     /***/
   },
 
   /***/
-  "./node_modules/ethereumjs-common/dist/hardforks/tangerineWhistle.json":
+  "./node_modules/cypheriumjs-common/dist/hardforks/tangerineWhistle.json":
   /*!*****************************************************************************!*\
-    !*** ./node_modules/ethereumjs-common/dist/hardforks/tangerineWhistle.json ***!
+    !*** ./node_modules/cypheriumjs-common/dist/hardforks/tangerineWhistle.json ***!
     \*****************************************************************************/
 
   /*! exports provided: name, comment, eip, gasConfig, gasPrices, vm, pow, casper, sharding, default */
 
   /***/
-  function node_modulesEthereumjsCommonDistHardforksTangerineWhistleJson(module) {
-    module.exports = JSON.parse("{\"name\":\"tangerineWhistle\",\"comment\":\"Hardfork with gas cost changes for IO-heavy operations\",\"eip\":{\"url\":\"https://eips.ethereum.org/EIPS/eip-608\",\"status\":\"Final\"},\"gasConfig\":{},\"gasPrices\":{\"sload\":{\"v\":200,\"d\":\"Once per SLOAD operation\"},\"call\":{\"v\":700,\"d\":\"Once per CALL operation & message call transaction\"}},\"vm\":{},\"pow\":{},\"casper\":{},\"sharding\":{}}");
+  function node_modulesCypheriumjsCommonDistHardforksTangerineWhistleJson(module) {
+    module.exports = JSON.parse("{\"name\":\"tangerineWhistle\",\"comment\":\"Hardfork with gas cost changes for IO-heavy operations\",\"eip\":{\"url\":\"https://eips.cypherium.org/EIPS/eip-608\",\"status\":\"Final\"},\"gasConfig\":{},\"gasPrices\":{\"sload\":{\"v\":200,\"d\":\"Once per SLOAD operation\"},\"call\":{\"v\":700,\"d\":\"Once per CALL operation & message call transaction\"}},\"vm\":{},\"pow\":{},\"casper\":{},\"sharding\":{}}");
     /***/
   },
 
   /***/
-  "./node_modules/ethereumjs-common/dist/index.js":
+  "./node_modules/cypheriumjs-common/dist/index.js":
   /*!******************************************************!*\
-    !*** ./node_modules/ethereumjs-common/dist/index.js ***!
+    !*** ./node_modules/cypheriumjs-common/dist/index.js ***!
     \******************************************************/
 
   /*! no static exports found */
 
   /***/
-  function node_modulesEthereumjsCommonDistIndexJs(module, exports, __webpack_require__) {
+  function node_modulesCypheriumjsCommonDistIndexJs(module, exports, __webpack_require__) {
     "use strict";
 
     var __assign = this && this.__assign || function () {
@@ -6802,11 +6802,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     var chains_1 = __webpack_require__(
     /*! ./chains */
-    "./node_modules/ethereumjs-common/dist/chains/index.js");
+    "./node_modules/cypheriumjs-common/dist/chains/index.js");
 
     var hardforks_1 = __webpack_require__(
     /*! ./hardforks */
-    "./node_modules/ethereumjs-common/dist/hardforks/index.js");
+    "./node_modules/cypheriumjs-common/dist/hardforks/index.js");
     /**
      * Common class to access chain and hardfork parameters
      */
@@ -7278,15 +7278,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/ethereumjs-tx/dist/fake.js":
+  "./node_modules/cypheriumjs-tx/dist/fake.js":
   /*!*************************************************!*\
-    !*** ./node_modules/ethereumjs-tx/dist/fake.js ***!
+    !*** ./node_modules/cypheriumjs-tx/dist/fake.js ***!
     \*************************************************/
 
   /*! no static exports found */
 
   /***/
-  function node_modulesEthereumjsTxDistFakeJs(module, exports, __webpack_require__) {
+  function node_modulesCypheriumjsTxDistFakeJs(module, exports, __webpack_require__) {
     "use strict";
 
     var __extends = this && this.__extends || function () {
@@ -7319,9 +7319,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       value: true
     });
 
-    var ethereumjs_util_1 = __webpack_require__(
-    /*! ethereumjs-util */
-    "./node_modules/ethereumjs-util/dist/index.js");
+    var cypheriumjs_util_1 = __webpack_require__(
+    /*! cypheriumjs-util */
+    "./node_modules/cypheriumjs-util/dist/index.js");
 
     var buffer_1 = __webpack_require__(
     /*! buffer */
@@ -7329,7 +7329,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     var transaction_1 = __webpack_require__(
     /*! ./transaction */
-    "./node_modules/ethereumjs-tx/dist/transaction.js");
+    "./node_modules/cypheriumjs-tx/dist/transaction.js");
     /**
      * Creates a new transaction object that doesn't need to be signed.
      *
@@ -7367,14 +7367,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           },
           set: function set(val) {
             if (val) {
-              _this._from = ethereumjs_util_1.toBuffer(val);
+              _this._from = cypheriumjs_util_1.toBuffer(val);
             }
           }
         });
         var txData = data;
 
         if (txData.from) {
-          _this.from = ethereumjs_util_1.toBuffer(txData.from);
+          _this.from = cypheriumjs_util_1.toBuffer(txData.from);
         }
 
         return _this;
@@ -7410,15 +7410,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/ethereumjs-tx/dist/index.js":
+  "./node_modules/cypheriumjs-tx/dist/index.js":
   /*!**************************************************!*\
-    !*** ./node_modules/ethereumjs-tx/dist/index.js ***!
+    !*** ./node_modules/cypheriumjs-tx/dist/index.js ***!
     \**************************************************/
 
   /*! no static exports found */
 
   /***/
-  function node_modulesEthereumjsTxDistIndexJs(module, exports, __webpack_require__) {
+  function node_modulesCypheriumjsTxDistIndexJs(module, exports, __webpack_require__) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {
@@ -7427,13 +7427,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     var transaction_1 = __webpack_require__(
     /*! ./transaction */
-    "./node_modules/ethereumjs-tx/dist/transaction.js");
+    "./node_modules/cypheriumjs-tx/dist/transaction.js");
 
     exports.Transaction = transaction_1.default;
 
     var fake_1 = __webpack_require__(
     /*! ./fake */
-    "./node_modules/ethereumjs-tx/dist/fake.js");
+    "./node_modules/cypheriumjs-tx/dist/fake.js");
 
     exports.FakeTransaction = fake_1.default; //# sourceMappingURL=index.js.map
 
@@ -7441,15 +7441,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/ethereumjs-tx/dist/transaction.js":
+  "./node_modules/cypheriumjs-tx/dist/transaction.js":
   /*!********************************************************!*\
-    !*** ./node_modules/ethereumjs-tx/dist/transaction.js ***!
+    !*** ./node_modules/cypheriumjs-tx/dist/transaction.js ***!
     \********************************************************/
 
   /*! no static exports found */
 
   /***/
-  function node_modulesEthereumjsTxDistTransactionJs(module, exports, __webpack_require__) {
+  function node_modulesCypheriumjsTxDistTransactionJs(module, exports, __webpack_require__) {
     "use strict";
 
     var __assign = this && this.__assign || function () {
@@ -7472,13 +7472,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       value: true
     });
 
-    var ethereumjs_util_1 = __webpack_require__(
-    /*! ethereumjs-util */
-    "./node_modules/ethereumjs-util/dist/index.js");
+    var cypheriumjs_util_1 = __webpack_require__(
+    /*! cypheriumjs-util */
+    "./node_modules/cypheriumjs-util/dist/index.js");
 
-    var ethereumjs_common_1 = __webpack_require__(
-    /*! ethereumjs-common */
-    "./node_modules/ethereumjs-common/dist/index.js");
+    var cypheriumjs_common_1 = __webpack_require__(
+    /*! cypheriumjs-common */
+    "./node_modules/cypheriumjs-common/dist/index.js");
 
     var buffer_1 = __webpack_require__(
     /*! buffer */
@@ -7489,9 +7489,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     "./node_modules/@stablelib/ed25519/lib/ed25519.js"); // secp256k1n/2
 
 
-    var N_DIV_2 = new ethereumjs_util_1.BN('7fffffffffffffffffffffffffffffff5d576e7357a4501ddfe92f46681b20a0', 16);
+    var N_DIV_2 = new cypheriumjs_util_1.BN('7fffffffffffffffffffffffffffffff5d576e7357a4501ddfe92f46681b20a0', 16);
     /**
-     * An Ethereum transaction.
+     * An Cypherium transaction.
      */
 
     var Transaction =
@@ -7545,7 +7545,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         } else {
           var chain = opts.chain ? opts.chain : 'mainnet';
           var hardfork = opts.hardfork ? opts.hardfork : 'petersburg';
-          this._common = new ethereumjs_common_1.default(chain, hardfork);
+          this._common = new cypheriumjs_common_1.default(chain, hardfork);
         } // Define Properties
 
 
@@ -7608,7 +7608,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           default: new buffer_1.Buffer([])
         }]; // attached serialize
 
-        ethereumjs_util_1.defineProperties(this, fields, data);
+        cypheriumjs_util_1.defineProperties(this, fields, data);
         /**
          * @property {Buffer} from (read only) sender address of this transaction, mathematically derived from other parameters.
          * @name from
@@ -7650,15 +7650,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           items = this.raw;
         } else {
           if (this._implementsEIP155()) {
-            items = this.raw.slice(0, 6).concat([ethereumjs_util_1.toBuffer(this.getChainId()), // TODO: stripping zeros should probably be a responsibility of the rlp module
-            ethereumjs_util_1.stripZeros(ethereumjs_util_1.toBuffer(0)), ethereumjs_util_1.stripZeros(ethereumjs_util_1.toBuffer(0))]);
+            items = this.raw.slice(0, 6).concat([cypheriumjs_util_1.toBuffer(this.getChainId()), // TODO: stripping zeros should probably be a responsibility of the rlp module
+            cypheriumjs_util_1.stripZeros(cypheriumjs_util_1.toBuffer(0)), cypheriumjs_util_1.stripZeros(cypheriumjs_util_1.toBuffer(0))]);
           } else {
             items = this.raw.slice(0, 6);
           }
         } // create hash
 
 
-        return ethereumjs_util_1.rlphash(items);
+        return cypheriumjs_util_1.rlphash(items);
       };
       /**
        * returns chain ID
@@ -7679,7 +7679,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }
 
         var pubkey = this.getSenderPublicKey();
-        this._from = ethereumjs_util_1.publicToAddress(pubkey);
+        this._from = cypheriumjs_util_1.publicToAddress(pubkey);
         return this._from;
       };
       /**
@@ -7703,16 +7703,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       Transaction.prototype.verifySignature = function () {
         var msgHash = this.hash(false); // All transaction signatures whose s-value is greater than secp256k1n/2 are considered invalid.
 
-        if (this._common.gteHardfork('homestead') && new ethereumjs_util_1.BN(this.s).cmp(N_DIV_2) === 1) {
+        if (this._common.gteHardfork('homestead') && new cypheriumjs_util_1.BN(this.s).cmp(N_DIV_2) === 1) {
           return false;
         }
 
         try {
-          var v = ethereumjs_util_1.bufferToInt(this.v);
+          var v = cypheriumjs_util_1.bufferToInt(this.v);
 
           var useChainIdWhileRecoveringPubKey = v >= this.getChainId() * 2 + 35 && this._common.gteHardfork('spuriousDragon');
 
-          this._senderPubKey = ethereumjs_util_1.ecrecover(msgHash, v, this.r, this.s, useChainIdWhileRecoveringPubKey ? this.getChainId() : undefined);
+          this._senderPubKey = cypheriumjs_util_1.ecrecover(msgHash, v, this.r, this.s, useChainIdWhileRecoveringPubKey ? this.getChainId() : undefined);
         } catch (e) {
           return false;
         }
@@ -7732,7 +7732,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.s = new buffer_1.Buffer([]);
         this.r = new buffer_1.Buffer([]);
         var msgHash = this.hash(false);
-        var sig = ethereumjs_util_1.ecsign(msgHash, privateKey);
+        var sig = cypheriumjs_util_1.ecsign(msgHash, privateKey);
 
         if (this._implementsEIP155()) {
           sig.v += this.getChainId() * 2 + 8;
@@ -7753,7 +7753,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         this.s = new buffer_1.Buffer([]);
         this.r = new buffer_1.Buffer([]); // var msgHash = this.hash(false);
 
-        var msgHash = ethereumjs_util_1.rlphash([this.raw[0], this.raw[2], this.raw[3], this.raw[4], this.raw[5], this.raw[6], this.raw[7]]); // var seed = ethereumjs_util_1.toBuffer('0x7892FD9E627CFFA0F0AC8400A3CED340E845F90087E4D59E9725D455534B9700');
+        var msgHash = cypheriumjs_util_1.rlphash([this.raw[0], this.raw[2], this.raw[3], this.raw[4], this.raw[5], this.raw[6], this.raw[7]]); // var seed = cypheriumjs_util_1.toBuffer('0x7892FD9E627CFFA0F0AC8400A3CED340E845F90087E4D59E9725D455534B9700');
         // var pk = ed25519.generateKeyPairFromSeed(seed);
         // var sig255191 =  ed25519.sign(pk.secretKey, [1,2,3]);
         // let ok1 = ed25519.verify(pk.publicKey, [1,2,3], sig255191);
@@ -7780,7 +7780,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
       Transaction.prototype.getDataFee = function () {
         var data = this.raw[5];
-        var cost = new ethereumjs_util_1.BN(0);
+        var cost = new cypheriumjs_util_1.BN(0);
 
         for (var i = 0; i < data.length; i++) {
           data[i] === 0 ? cost.iaddn(this._common.param('gasPrices', 'txDataZero')) : cost.iaddn(this._common.param('gasPrices', 'txDataNonZero'));
@@ -7808,7 +7808,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
       Transaction.prototype.getUpfrontCost = function () {
-        return new ethereumjs_util_1.BN(this.gasLimit).imul(new ethereumjs_util_1.BN(this.gasPrice)).iadd(new ethereumjs_util_1.BN(this.value));
+        return new cypheriumjs_util_1.BN(this.gasLimit).imul(new cypheriumjs_util_1.BN(this.gasPrice)).iadd(new cypheriumjs_util_1.BN(this.value));
       };
 
       Transaction.prototype.validate = function (stringError) {
@@ -7822,7 +7822,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           errors.push('Invalid Signature');
         }
 
-        if (this.getBaseFee().cmp(new ethereumjs_util_1.BN(this.gasLimit)) > 0) {
+        if (this.getBaseFee().cmp(new cypheriumjs_util_1.BN(this.gasLimit)) > 0) {
           errors.push(["gas limit is too low. Need at least " + this.getBaseFee()]);
         }
 
@@ -7839,11 +7839,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
       Transaction.prototype.serialize = function () {
         // Note: This never gets executed, defineProperties overwrites it.
-        return ethereumjs_util_1.rlp.encode(this.raw);
+        return cypheriumjs_util_1.rlp.encode(this.raw);
       };
       /**
        * Returns the transaction in JSON format
-       * @see {@link https://github.com/ethereumjs/ethereumjs-util/blob/master/docs/index.md#defineproperties|ethereumjs-util}
+       * @see {@link https://github.com/cypheriumjs/cypheriumjs-util/blob/master/docs/index.md#defineproperties|cypheriumjs-util}
        */
 
 
@@ -7865,7 +7865,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           return;
         }
 
-        var vInt = ethereumjs_util_1.bufferToInt(v);
+        var vInt = cypheriumjs_util_1.bufferToInt(v);
 
         if (vInt === 27 || vInt === 28) {
           return;
@@ -7889,7 +7889,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         Object.defineProperty(this, 'v', __assign({}, vDescriptor, {
           set: function set(v) {
             if (v !== undefined) {
-              _this._validateV(ethereumjs_util_1.toBuffer(v));
+              _this._validateV(cypheriumjs_util_1.toBuffer(v));
             }
 
             vDescriptor.set(v);
@@ -7910,7 +7910,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         // CHAIN_ID, r = 0 and s = 0.
 
 
-        var v = ethereumjs_util_1.bufferToInt(this.v);
+        var v = cypheriumjs_util_1.bufferToInt(this.v);
         var vAndChainIdMeetEIP155Conditions = v === this.getChainId() * 2 + 35 || v === this.getChainId() * 2 + 36;
         return vAndChainIdMeetEIP155Conditions && onEIP155BlockOrLater;
       };
@@ -7924,32 +7924,32 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/index.js":
+  "./node_modules/web3c-cypher/index.js":
   /*!*******************************************!*\
-    !*** ./node_modules/web3-cypher/index.js ***!
+    !*** ./node_modules/web3c-cypher/index.js ***!
     \*******************************************/
 
   /*! no static exports found */
 
   /***/
   function node_modulesWeb3CypherIndexJs(module, exports, __webpack_require__) {
-    var Web3 = __webpack_require__(
-    /*! ./lib/web3 */
-    "./node_modules/web3-cypher/lib/web3.js"); // dont override global variable
+    var Web3c = __webpack_require__(
+    /*! ./lib/web3c */
+    "./node_modules/web3c-cypher/lib/web3c.js"); // dont override global variable
 
 
-    if (typeof window !== 'undefined' && typeof window.Web3 === 'undefined') {
-      window.Web3 = Web3;
+    if (typeof window !== 'undefined' && typeof window.Web3c === 'undefined') {
+      window.Web3c = Web3c;
     }
 
-    module.exports = Web3;
+    module.exports = Web3c;
     /***/
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/contracts/GlobalRegistrar.json":
+  "./node_modules/web3c-cypher/lib/contracts/GlobalRegistrar.json":
   /*!*********************************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/contracts/GlobalRegistrar.json ***!
+    !*** ./node_modules/web3c-cypher/lib/contracts/GlobalRegistrar.json ***!
     \*********************************************************************/
 
   /*! exports provided: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, default */
@@ -7961,9 +7961,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/contracts/ICAPRegistrar.json":
+  "./node_modules/web3c-cypher/lib/contracts/ICAPRegistrar.json":
   /*!*******************************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/contracts/ICAPRegistrar.json ***!
+    !*** ./node_modules/web3c-cypher/lib/contracts/ICAPRegistrar.json ***!
     \*******************************************************************/
 
   /*! exports provided: 0, 1, 2, 3, 4, 5, 6, default */
@@ -7975,9 +7975,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/contracts/SmartExchange.json":
+  "./node_modules/web3c-cypher/lib/contracts/SmartExchange.json":
   /*!*******************************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/contracts/SmartExchange.json ***!
+    !*** ./node_modules/web3c-cypher/lib/contracts/SmartExchange.json ***!
     \*******************************************************************/
 
   /*! exports provided: 0, 1, 2, 3, 4, 5, 6, default */
@@ -7989,9 +7989,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/solidity/address.js":
+  "./node_modules/web3c-cypher/lib/solidity/address.js":
   /*!**********************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/solidity/address.js ***!
+    !*** ./node_modules/web3c-cypher/lib/solidity/address.js ***!
     \**********************************************************/
 
   /*! no static exports found */
@@ -8000,11 +8000,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   function node_modulesWeb3CypherLibSolidityAddressJs(module, exports, __webpack_require__) {
     var f = __webpack_require__(
     /*! ./formatters */
-    "./node_modules/web3-cypher/lib/solidity/formatters.js");
+    "./node_modules/web3c-cypher/lib/solidity/formatters.js");
 
     var SolidityType = __webpack_require__(
     /*! ./type */
-    "./node_modules/web3-cypher/lib/solidity/type.js");
+    "./node_modules/web3c-cypher/lib/solidity/type.js");
     /**
      * SolidityTypeAddress is a prootype that represents address type
      * It matches:
@@ -8034,9 +8034,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/solidity/bool.js":
+  "./node_modules/web3c-cypher/lib/solidity/bool.js":
   /*!*******************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/solidity/bool.js ***!
+    !*** ./node_modules/web3c-cypher/lib/solidity/bool.js ***!
     \*******************************************************/
 
   /*! no static exports found */
@@ -8045,11 +8045,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   function node_modulesWeb3CypherLibSolidityBoolJs(module, exports, __webpack_require__) {
     var f = __webpack_require__(
     /*! ./formatters */
-    "./node_modules/web3-cypher/lib/solidity/formatters.js");
+    "./node_modules/web3c-cypher/lib/solidity/formatters.js");
 
     var SolidityType = __webpack_require__(
     /*! ./type */
-    "./node_modules/web3-cypher/lib/solidity/type.js");
+    "./node_modules/web3c-cypher/lib/solidity/type.js");
     /**
      * SolidityTypeBool is a prootype that represents bool type
      * It matches:
@@ -8079,9 +8079,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/solidity/bytes.js":
+  "./node_modules/web3c-cypher/lib/solidity/bytes.js":
   /*!********************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/solidity/bytes.js ***!
+    !*** ./node_modules/web3c-cypher/lib/solidity/bytes.js ***!
     \********************************************************/
 
   /*! no static exports found */
@@ -8090,11 +8090,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   function node_modulesWeb3CypherLibSolidityBytesJs(module, exports, __webpack_require__) {
     var f = __webpack_require__(
     /*! ./formatters */
-    "./node_modules/web3-cypher/lib/solidity/formatters.js");
+    "./node_modules/web3c-cypher/lib/solidity/formatters.js");
 
     var SolidityType = __webpack_require__(
     /*! ./type */
-    "./node_modules/web3-cypher/lib/solidity/type.js");
+    "./node_modules/web3c-cypher/lib/solidity/type.js");
     /**
      * SolidityTypeBytes is a prototype that represents the bytes type.
      * It matches:
@@ -8127,9 +8127,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/solidity/coder.js":
+  "./node_modules/web3c-cypher/lib/solidity/coder.js":
   /*!********************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/solidity/coder.js ***!
+    !*** ./node_modules/web3c-cypher/lib/solidity/coder.js ***!
     \********************************************************/
 
   /*! no static exports found */
@@ -8137,20 +8137,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibSolidityCoderJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /**
@@ -8160,43 +8160,43 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var f = __webpack_require__(
     /*! ./formatters */
-    "./node_modules/web3-cypher/lib/solidity/formatters.js");
+    "./node_modules/web3c-cypher/lib/solidity/formatters.js");
 
     var SolidityTypeAddress = __webpack_require__(
     /*! ./address */
-    "./node_modules/web3-cypher/lib/solidity/address.js");
+    "./node_modules/web3c-cypher/lib/solidity/address.js");
 
     var SolidityTypeBool = __webpack_require__(
     /*! ./bool */
-    "./node_modules/web3-cypher/lib/solidity/bool.js");
+    "./node_modules/web3c-cypher/lib/solidity/bool.js");
 
     var SolidityTypeInt = __webpack_require__(
     /*! ./int */
-    "./node_modules/web3-cypher/lib/solidity/int.js");
+    "./node_modules/web3c-cypher/lib/solidity/int.js");
 
     var SolidityTypeUInt = __webpack_require__(
     /*! ./uint */
-    "./node_modules/web3-cypher/lib/solidity/uint.js");
+    "./node_modules/web3c-cypher/lib/solidity/uint.js");
 
     var SolidityTypeDynamicBytes = __webpack_require__(
     /*! ./dynamicbytes */
-    "./node_modules/web3-cypher/lib/solidity/dynamicbytes.js");
+    "./node_modules/web3c-cypher/lib/solidity/dynamicbytes.js");
 
     var SolidityTypeString = __webpack_require__(
     /*! ./string */
-    "./node_modules/web3-cypher/lib/solidity/string.js");
+    "./node_modules/web3c-cypher/lib/solidity/string.js");
 
     var SolidityTypeReal = __webpack_require__(
     /*! ./real */
-    "./node_modules/web3-cypher/lib/solidity/real.js");
+    "./node_modules/web3c-cypher/lib/solidity/real.js");
 
     var SolidityTypeUReal = __webpack_require__(
     /*! ./ureal */
-    "./node_modules/web3-cypher/lib/solidity/ureal.js");
+    "./node_modules/web3c-cypher/lib/solidity/ureal.js");
 
     var SolidityTypeBytes = __webpack_require__(
     /*! ./bytes */
-    "./node_modules/web3-cypher/lib/solidity/bytes.js");
+    "./node_modules/web3c-cypher/lib/solidity/bytes.js");
 
     var isDynamic = function isDynamic(solidityType, type) {
       return solidityType.isDynamicType(type) || solidityType.isDynamicArray(type);
@@ -8401,9 +8401,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/solidity/dynamicbytes.js":
+  "./node_modules/web3c-cypher/lib/solidity/dynamicbytes.js":
   /*!***************************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/solidity/dynamicbytes.js ***!
+    !*** ./node_modules/web3c-cypher/lib/solidity/dynamicbytes.js ***!
     \***************************************************************/
 
   /*! no static exports found */
@@ -8412,11 +8412,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   function node_modulesWeb3CypherLibSolidityDynamicbytesJs(module, exports, __webpack_require__) {
     var f = __webpack_require__(
     /*! ./formatters */
-    "./node_modules/web3-cypher/lib/solidity/formatters.js");
+    "./node_modules/web3c-cypher/lib/solidity/formatters.js");
 
     var SolidityType = __webpack_require__(
     /*! ./type */
-    "./node_modules/web3-cypher/lib/solidity/type.js");
+    "./node_modules/web3c-cypher/lib/solidity/type.js");
 
     var SolidityTypeDynamicBytes = function SolidityTypeDynamicBytes() {
       this._inputFormatter = f.formatInputDynamicBytes;
@@ -8439,9 +8439,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/solidity/formatters.js":
+  "./node_modules/web3c-cypher/lib/solidity/formatters.js":
   /*!*************************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/solidity/formatters.js ***!
+    !*** ./node_modules/web3c-cypher/lib/solidity/formatters.js ***!
     \*************************************************************/
 
   /*! no static exports found */
@@ -8449,20 +8449,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibSolidityFormattersJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /**
@@ -8472,19 +8472,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var BigNumber = __webpack_require__(
     /*! bignumber.js */
-    "./node_modules/web3-cypher/node_modules/bignumber.js/bignumber.js");
+    "./node_modules/web3c-cypher/node_modules/bignumber.js/bignumber.js");
 
     var utils = __webpack_require__(
     /*! ../utils/utils */
-    "./node_modules/web3-cypher/lib/utils/utils.js");
+    "./node_modules/web3c-cypher/lib/utils/utils.js");
 
     var c = __webpack_require__(
     /*! ../utils/config */
-    "./node_modules/web3-cypher/lib/utils/config.js");
+    "./node_modules/web3c-cypher/lib/utils/config.js");
 
     var SolidityParam = __webpack_require__(
     /*! ./param */
-    "./node_modules/web3-cypher/lib/solidity/param.js");
+    "./node_modules/web3c-cypher/lib/solidity/param.js");
     /**
      * Formats input value to byte representation of int
      * If value is negative, return it's two's complement
@@ -8730,9 +8730,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/solidity/int.js":
+  "./node_modules/web3c-cypher/lib/solidity/int.js":
   /*!******************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/solidity/int.js ***!
+    !*** ./node_modules/web3c-cypher/lib/solidity/int.js ***!
     \******************************************************/
 
   /*! no static exports found */
@@ -8741,11 +8741,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   function node_modulesWeb3CypherLibSolidityIntJs(module, exports, __webpack_require__) {
     var f = __webpack_require__(
     /*! ./formatters */
-    "./node_modules/web3-cypher/lib/solidity/formatters.js");
+    "./node_modules/web3c-cypher/lib/solidity/formatters.js");
 
     var SolidityType = __webpack_require__(
     /*! ./type */
-    "./node_modules/web3-cypher/lib/solidity/type.js");
+    "./node_modules/web3c-cypher/lib/solidity/type.js");
     /**
      * SolidityTypeInt is a prootype that represents int type
      * It matches:
@@ -8781,9 +8781,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/solidity/param.js":
+  "./node_modules/web3c-cypher/lib/solidity/param.js":
   /*!********************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/solidity/param.js ***!
+    !*** ./node_modules/web3c-cypher/lib/solidity/param.js ***!
     \********************************************************/
 
   /*! no static exports found */
@@ -8791,20 +8791,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibSolidityParamJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /** 
@@ -8814,7 +8814,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var utils = __webpack_require__(
     /*! ../utils/utils */
-    "./node_modules/web3-cypher/lib/utils/utils.js");
+    "./node_modules/web3c-cypher/lib/utils/utils.js");
     /**
      * SolidityParam object prototype.
      * Should be used when encoding, decoding solidity bytes
@@ -8955,9 +8955,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/solidity/real.js":
+  "./node_modules/web3c-cypher/lib/solidity/real.js":
   /*!*******************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/solidity/real.js ***!
+    !*** ./node_modules/web3c-cypher/lib/solidity/real.js ***!
     \*******************************************************/
 
   /*! no static exports found */
@@ -8966,11 +8966,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   function node_modulesWeb3CypherLibSolidityRealJs(module, exports, __webpack_require__) {
     var f = __webpack_require__(
     /*! ./formatters */
-    "./node_modules/web3-cypher/lib/solidity/formatters.js");
+    "./node_modules/web3c-cypher/lib/solidity/formatters.js");
 
     var SolidityType = __webpack_require__(
     /*! ./type */
-    "./node_modules/web3-cypher/lib/solidity/type.js");
+    "./node_modules/web3c-cypher/lib/solidity/type.js");
     /**
      * SolidityTypeReal is a prootype that represents real type
      * It matches:
@@ -9006,9 +9006,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/solidity/string.js":
+  "./node_modules/web3c-cypher/lib/solidity/string.js":
   /*!*********************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/solidity/string.js ***!
+    !*** ./node_modules/web3c-cypher/lib/solidity/string.js ***!
     \*********************************************************/
 
   /*! no static exports found */
@@ -9017,11 +9017,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   function node_modulesWeb3CypherLibSolidityStringJs(module, exports, __webpack_require__) {
     var f = __webpack_require__(
     /*! ./formatters */
-    "./node_modules/web3-cypher/lib/solidity/formatters.js");
+    "./node_modules/web3c-cypher/lib/solidity/formatters.js");
 
     var SolidityType = __webpack_require__(
     /*! ./type */
-    "./node_modules/web3-cypher/lib/solidity/type.js");
+    "./node_modules/web3c-cypher/lib/solidity/type.js");
 
     var SolidityTypeString = function SolidityTypeString() {
       this._inputFormatter = f.formatInputString;
@@ -9044,9 +9044,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/solidity/type.js":
+  "./node_modules/web3c-cypher/lib/solidity/type.js":
   /*!*******************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/solidity/type.js ***!
+    !*** ./node_modules/web3c-cypher/lib/solidity/type.js ***!
     \*******************************************************/
 
   /*! no static exports found */
@@ -9055,11 +9055,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   function node_modulesWeb3CypherLibSolidityTypeJs(module, exports, __webpack_require__) {
     var f = __webpack_require__(
     /*! ./formatters */
-    "./node_modules/web3-cypher/lib/solidity/formatters.js");
+    "./node_modules/web3c-cypher/lib/solidity/formatters.js");
 
     var SolidityParam = __webpack_require__(
     /*! ./param */
-    "./node_modules/web3-cypher/lib/solidity/param.js");
+    "./node_modules/web3c-cypher/lib/solidity/param.js");
     /**
      * SolidityType prototype is used to encode/decode solidity params of certain type
      */
@@ -9328,9 +9328,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/solidity/uint.js":
+  "./node_modules/web3c-cypher/lib/solidity/uint.js":
   /*!*******************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/solidity/uint.js ***!
+    !*** ./node_modules/web3c-cypher/lib/solidity/uint.js ***!
     \*******************************************************/
 
   /*! no static exports found */
@@ -9339,11 +9339,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   function node_modulesWeb3CypherLibSolidityUintJs(module, exports, __webpack_require__) {
     var f = __webpack_require__(
     /*! ./formatters */
-    "./node_modules/web3-cypher/lib/solidity/formatters.js");
+    "./node_modules/web3c-cypher/lib/solidity/formatters.js");
 
     var SolidityType = __webpack_require__(
     /*! ./type */
-    "./node_modules/web3-cypher/lib/solidity/type.js");
+    "./node_modules/web3c-cypher/lib/solidity/type.js");
     /**
      * SolidityTypeUInt is a prootype that represents uint type
      * It matches:
@@ -9379,9 +9379,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/solidity/ureal.js":
+  "./node_modules/web3c-cypher/lib/solidity/ureal.js":
   /*!********************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/solidity/ureal.js ***!
+    !*** ./node_modules/web3c-cypher/lib/solidity/ureal.js ***!
     \********************************************************/
 
   /*! no static exports found */
@@ -9390,11 +9390,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   function node_modulesWeb3CypherLibSolidityUrealJs(module, exports, __webpack_require__) {
     var f = __webpack_require__(
     /*! ./formatters */
-    "./node_modules/web3-cypher/lib/solidity/formatters.js");
+    "./node_modules/web3c-cypher/lib/solidity/formatters.js");
 
     var SolidityType = __webpack_require__(
     /*! ./type */
-    "./node_modules/web3-cypher/lib/solidity/type.js");
+    "./node_modules/web3c-cypher/lib/solidity/type.js");
     /**
      * SolidityTypeUReal is a prootype that represents ureal type
      * It matches:
@@ -9430,9 +9430,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/utils/browser-xhr.js":
+  "./node_modules/web3c-cypher/lib/utils/browser-xhr.js":
   /*!***********************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/utils/browser-xhr.js ***!
+    !*** ./node_modules/web3c-cypher/lib/utils/browser-xhr.js ***!
     \***********************************************************/
 
   /*! no static exports found */
@@ -9451,9 +9451,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/utils/config.js":
+  "./node_modules/web3c-cypher/lib/utils/config.js":
   /*!******************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/utils/config.js ***!
+    !*** ./node_modules/web3c-cypher/lib/utils/config.js ***!
     \******************************************************/
 
   /*! no static exports found */
@@ -9461,20 +9461,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibUtilsConfigJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /** @file config.js
@@ -9498,7 +9498,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /// required to define CPH_BIGNUMBER_ROUNDING_MODE
     var BigNumber = __webpack_require__(
     /*! bignumber.js */
-    "./node_modules/web3-cypher/node_modules/bignumber.js/bignumber.js");
+    "./node_modules/web3c-cypher/node_modules/bignumber.js/bignumber.js");
 
     var CPH_UNITS = ['wei', 'kwei', 'Mwei', 'Gwei', 'szabo', 'finney', 'femtocpher', 'picocpher', 'nanocpher', 'microcpher', 'millicpher', 'nano', 'micro', 'milli', 'cpher', 'grand', 'Mcpher', 'Gcpher', 'Tcpher', 'Pcpher', 'Ecpher', 'Zcpher', 'Ycpher', 'Ncpher', 'Dcpher', 'Vcpher', 'Ucpher'];
     module.exports = {
@@ -9516,9 +9516,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/utils/sha3.js":
+  "./node_modules/web3c-cypher/lib/utils/sha3.js":
   /*!****************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/utils/sha3.js ***!
+    !*** ./node_modules/web3c-cypher/lib/utils/sha3.js ***!
     \****************************************************/
 
   /*! no static exports found */
@@ -9526,20 +9526,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibUtilsSha3Js(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /** 
@@ -9573,9 +9573,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/utils/utils.js":
+  "./node_modules/web3c-cypher/lib/utils/utils.js":
   /*!*****************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/utils/utils.js ***!
+    !*** ./node_modules/web3c-cypher/lib/utils/utils.js ***!
     \*****************************************************/
 
   /*! no static exports found */
@@ -9583,20 +9583,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibUtilsUtilsJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /**
@@ -9619,15 +9619,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var BigNumber = __webpack_require__(
     /*! bignumber.js */
-    "./node_modules/web3-cypher/node_modules/bignumber.js/bignumber.js");
+    "./node_modules/web3c-cypher/node_modules/bignumber.js/bignumber.js");
 
     var sha3 = __webpack_require__(
     /*! ./sha3.js */
-    "./node_modules/web3-cypher/lib/utils/sha3.js");
+    "./node_modules/web3c-cypher/lib/utils/sha3.js");
 
     var utf8 = __webpack_require__(
     /*! utf8 */
-    "./node_modules/web3-cypher/node_modules/utf8/utf8.js");
+    "./node_modules/web3c-cypher/node_modules/utf8/utf8.js");
 
     var unitMap = {
       'nocpher': '0',
@@ -10261,9 +10261,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/version.json":
+  "./node_modules/web3c-cypher/lib/version.json":
   /*!***************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/version.json ***!
+    !*** ./node_modules/web3c-cypher/lib/version.json ***!
     \***************************************************/
 
   /*! exports provided: version, default */
@@ -10275,9 +10275,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3.js":
+  "./node_modules/web3c-cypher/lib/web3c.js":
   /*!**********************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c.js ***!
     \**********************************************/
 
   /*! no static exports found */
@@ -10285,24 +10285,24 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3Js(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /**
-     * @file web3.js
+     * @file web3c.js
      * @authors:
      *   Jeffrey Wilcke <jeff@cphdev.com>
      *   Marek Kotewicz <marek@cphdev.com>
@@ -10312,78 +10312,78 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      * @date 2014
      */
     var RequestManager = __webpack_require__(
-    /*! ./web3/requestmanager */
-    "./node_modules/web3-cypher/lib/web3/requestmanager.js");
+    /*! ./web3c/requestmanager */
+    "./node_modules/web3c-cypher/lib/web3c/requestmanager.js");
 
     var Iban = __webpack_require__(
-    /*! ./web3/iban */
-    "./node_modules/web3-cypher/lib/web3/iban.js");
+    /*! ./web3c/iban */
+    "./node_modules/web3c-cypher/lib/web3c/iban.js");
 
     var Cph = __webpack_require__(
-    /*! ./web3/methods/cph */
-    "./node_modules/web3-cypher/lib/web3/methods/cph.js");
+    /*! ./web3c/methods/cph */
+    "./node_modules/web3c-cypher/lib/web3c/methods/cph.js");
 
     var DB = __webpack_require__(
-    /*! ./web3/methods/db */
-    "./node_modules/web3-cypher/lib/web3/methods/db.js");
+    /*! ./web3c/methods/db */
+    "./node_modules/web3c-cypher/lib/web3c/methods/db.js");
 
     var Shh = __webpack_require__(
-    /*! ./web3/methods/shh */
-    "./node_modules/web3-cypher/lib/web3/methods/shh.js");
+    /*! ./web3c/methods/shh */
+    "./node_modules/web3c-cypher/lib/web3c/methods/shh.js");
 
     var Net = __webpack_require__(
-    /*! ./web3/methods/net */
-    "./node_modules/web3-cypher/lib/web3/methods/net.js");
+    /*! ./web3c/methods/net */
+    "./node_modules/web3c-cypher/lib/web3c/methods/net.js");
 
     var Personal = __webpack_require__(
-    /*! ./web3/methods/personal */
-    "./node_modules/web3-cypher/lib/web3/methods/personal.js");
+    /*! ./web3c/methods/personal */
+    "./node_modules/web3c-cypher/lib/web3c/methods/personal.js");
 
     var Swarm = __webpack_require__(
-    /*! ./web3/methods/swarm */
-    "./node_modules/web3-cypher/lib/web3/methods/swarm.js");
+    /*! ./web3c/methods/swarm */
+    "./node_modules/web3c-cypher/lib/web3c/methods/swarm.js");
 
     var Settings = __webpack_require__(
-    /*! ./web3/settings */
-    "./node_modules/web3-cypher/lib/web3/settings.js");
+    /*! ./web3c/settings */
+    "./node_modules/web3c-cypher/lib/web3c/settings.js");
 
     var version = __webpack_require__(
     /*! ./version.json */
-    "./node_modules/web3-cypher/lib/version.json");
+    "./node_modules/web3c-cypher/lib/version.json");
 
     var utils = __webpack_require__(
     /*! ./utils/utils */
-    "./node_modules/web3-cypher/lib/utils/utils.js");
+    "./node_modules/web3c-cypher/lib/utils/utils.js");
 
     var sha3 = __webpack_require__(
     /*! ./utils/sha3 */
-    "./node_modules/web3-cypher/lib/utils/sha3.js");
+    "./node_modules/web3c-cypher/lib/utils/sha3.js");
 
     var extend = __webpack_require__(
-    /*! ./web3/extend */
-    "./node_modules/web3-cypher/lib/web3/extend.js");
+    /*! ./web3c/extend */
+    "./node_modules/web3c-cypher/lib/web3c/extend.js");
 
     var Batch = __webpack_require__(
-    /*! ./web3/batch */
-    "./node_modules/web3-cypher/lib/web3/batch.js");
+    /*! ./web3c/batch */
+    "./node_modules/web3c-cypher/lib/web3c/batch.js");
 
     var Property = __webpack_require__(
-    /*! ./web3/property */
-    "./node_modules/web3-cypher/lib/web3/property.js");
+    /*! ./web3c/property */
+    "./node_modules/web3c-cypher/lib/web3c/property.js");
 
     var HttpProvider = __webpack_require__(
-    /*! ./web3/httpprovider */
-    "./node_modules/web3-cypher/lib/web3/httpprovider.js");
+    /*! ./web3c/httpprovider */
+    "./node_modules/web3c-cypher/lib/web3c/httpprovider.js");
 
     var IpcProvider = __webpack_require__(
-    /*! ./web3/ipcprovider */
-    "./node_modules/web3-cypher/lib/web3/ipcprovider.js");
+    /*! ./web3c/ipcprovider */
+    "./node_modules/web3c-cypher/lib/web3c/ipcprovider.js");
 
     var BigNumber = __webpack_require__(
     /*! bignumber.js */
-    "./node_modules/web3-cypher/node_modules/bignumber.js/bignumber.js");
+    "./node_modules/web3c-cypher/node_modules/bignumber.js/bignumber.js");
 
-    function Web3(provider) {
+    function Web3c(provider) {
       this._requestManager = new RequestManager(provider);
       this.currentProvider = provider;
       this.cph = new Cph(this);
@@ -10408,42 +10408,42 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     } // expose providers on the class
 
 
-    Web3.providers = {
+    Web3c.providers = {
       HttpProvider: HttpProvider,
       IpcProvider: IpcProvider
     };
 
-    Web3.prototype.setProvider = function (provider) {
+    Web3c.prototype.setProvider = function (provider) {
       this._requestManager.setProvider(provider);
 
       this.currentProvider = provider;
     };
 
-    Web3.prototype.reset = function (keepIsSyncing) {
+    Web3c.prototype.reset = function (keepIsSyncing) {
       this._requestManager.reset(keepIsSyncing);
 
       this.settings = new Settings();
     };
 
-    Web3.prototype.BigNumber = BigNumber;
-    Web3.prototype.toHex = utils.toHex;
-    Web3.prototype.toAscii = utils.toAscii;
-    Web3.prototype.toUtf8 = utils.toUtf8;
-    Web3.prototype.fromAscii = utils.fromAscii;
-    Web3.prototype.fromUtf8 = utils.fromUtf8;
-    Web3.prototype.toDecimal = utils.toDecimal;
-    Web3.prototype.fromDecimal = utils.fromDecimal;
-    Web3.prototype.toBigNumber = utils.toBigNumber;
-    Web3.prototype.toWei = utils.toWei;
-    Web3.prototype.fromWei = utils.fromWei;
-    Web3.prototype.isAddress = utils.isAddress;
-    Web3.prototype.isChecksumAddress = utils.isChecksumAddress;
-    Web3.prototype.toChecksumAddress = utils.toChecksumAddress;
-    Web3.prototype.isIBAN = utils.isIBAN;
-    Web3.prototype.padLeft = utils.padLeft;
-    Web3.prototype.padRight = utils.padRight;
+    Web3c.prototype.BigNumber = BigNumber;
+    Web3c.prototype.toHex = utils.toHex;
+    Web3c.prototype.toAscii = utils.toAscii;
+    Web3c.prototype.toUtf8 = utils.toUtf8;
+    Web3c.prototype.fromAscii = utils.fromAscii;
+    Web3c.prototype.fromUtf8 = utils.fromUtf8;
+    Web3c.prototype.toDecimal = utils.toDecimal;
+    Web3c.prototype.fromDecimal = utils.fromDecimal;
+    Web3c.prototype.toBigNumber = utils.toBigNumber;
+    Web3c.prototype.toWei = utils.toWei;
+    Web3c.prototype.fromWei = utils.fromWei;
+    Web3c.prototype.isAddress = utils.isAddress;
+    Web3c.prototype.isChecksumAddress = utils.isChecksumAddress;
+    Web3c.prototype.toChecksumAddress = utils.toChecksumAddress;
+    Web3c.prototype.isIBAN = utils.isIBAN;
+    Web3c.prototype.padLeft = utils.padLeft;
+    Web3c.prototype.padRight = utils.padRight;
 
-    Web3.prototype.sha3 = function (string, options) {
+    Web3c.prototype.sha3 = function (string, options) {
       return '0x' + sha3(string, options);
     };
     /**
@@ -10451,7 +10451,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
 
 
-    Web3.prototype.fromICAP = function (icap) {
+    Web3c.prototype.fromICAP = function (icap) {
       var iban = new Iban(icap);
       return iban.address();
     };
@@ -10475,22 +10475,22 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       })];
     };
 
-    Web3.prototype.isConnected = function () {
+    Web3c.prototype.isConnected = function () {
       return this.currentProvider && this.currentProvider.isConnected();
     };
 
-    Web3.prototype.createBatch = function () {
+    Web3c.prototype.createBatch = function () {
       return new Batch(this);
     };
 
-    module.exports = Web3;
+    module.exports = Web3c;
     /***/
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/allevents.js":
+  "./node_modules/web3c-cypher/lib/web3c/allevents.js":
   /*!********************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/allevents.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/allevents.js ***!
     \********************************************************/
 
   /*! no static exports found */
@@ -10498,20 +10498,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3AlleventsJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /**
@@ -10521,27 +10521,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var sha3 = __webpack_require__(
     /*! ../utils/sha3 */
-    "./node_modules/web3-cypher/lib/utils/sha3.js");
+    "./node_modules/web3c-cypher/lib/utils/sha3.js");
 
     var SolidityEvent = __webpack_require__(
     /*! ./event */
-    "./node_modules/web3-cypher/lib/web3/event.js");
+    "./node_modules/web3c-cypher/lib/web3c/event.js");
 
     var formatters = __webpack_require__(
     /*! ./formatters */
-    "./node_modules/web3-cypher/lib/web3/formatters.js");
+    "./node_modules/web3c-cypher/lib/web3c/formatters.js");
 
     var utils = __webpack_require__(
     /*! ../utils/utils */
-    "./node_modules/web3-cypher/lib/utils/utils.js");
+    "./node_modules/web3c-cypher/lib/utils/utils.js");
 
     var Filter = __webpack_require__(
     /*! ./filter */
-    "./node_modules/web3-cypher/lib/web3/filter.js");
+    "./node_modules/web3c-cypher/lib/web3c/filter.js");
 
     var watches = __webpack_require__(
     /*! ./methods/watches */
-    "./node_modules/web3-cypher/lib/web3/methods/watches.js");
+    "./node_modules/web3c-cypher/lib/web3c/methods/watches.js");
 
     var AllSolidityEvents = function AllSolidityEvents(requestManager, json, address) {
       this._requestManager = requestManager;
@@ -10599,9 +10599,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/batch.js":
+  "./node_modules/web3c-cypher/lib/web3c/batch.js":
   /*!****************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/batch.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/batch.js ***!
     \****************************************************/
 
   /*! no static exports found */
@@ -10609,20 +10609,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3BatchJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /** 
@@ -10632,14 +10632,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var Jsonrpc = __webpack_require__(
     /*! ./jsonrpc */
-    "./node_modules/web3-cypher/lib/web3/jsonrpc.js");
+    "./node_modules/web3c-cypher/lib/web3c/jsonrpc.js");
 
     var errors = __webpack_require__(
     /*! ./errors */
-    "./node_modules/web3-cypher/lib/web3/errors.js");
+    "./node_modules/web3c-cypher/lib/web3c/errors.js");
 
-    var Batch = function Batch(web3) {
-      this.requestManager = web3._requestManager;
+    var Batch = function Batch(web3c) {
+      this.requestManager = web3c._requestManager;
       this.requests = [];
     };
     /**
@@ -10683,9 +10683,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/contract.js":
+  "./node_modules/web3c-cypher/lib/web3c/contract.js":
   /*!*******************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/contract.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/contract.js ***!
     \*******************************************************/
 
   /*! no static exports found */
@@ -10693,20 +10693,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3ContractJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /**
@@ -10716,23 +10716,23 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var utils = __webpack_require__(
     /*! ../utils/utils */
-    "./node_modules/web3-cypher/lib/utils/utils.js");
+    "./node_modules/web3c-cypher/lib/utils/utils.js");
 
     var coder = __webpack_require__(
     /*! ../solidity/coder */
-    "./node_modules/web3-cypher/lib/solidity/coder.js");
+    "./node_modules/web3c-cypher/lib/solidity/coder.js");
 
     var SolidityEvent = __webpack_require__(
     /*! ./event */
-    "./node_modules/web3-cypher/lib/web3/event.js");
+    "./node_modules/web3c-cypher/lib/web3c/event.js");
 
     var SolidityFunction = __webpack_require__(
     /*! ./function */
-    "./node_modules/web3-cypher/lib/web3/function.js");
+    "./node_modules/web3c-cypher/lib/web3c/function.js");
 
     var AllEvents = __webpack_require__(
     /*! ./allevents */
-    "./node_modules/web3-cypher/lib/web3/allevents.js");
+    "./node_modules/web3c-cypher/lib/web3c/allevents.js");
     /**
      * Should be called to encode constructor params
      *
@@ -10997,9 +10997,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/errors.js":
+  "./node_modules/web3c-cypher/lib/web3c/errors.js":
   /*!*****************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/errors.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/errors.js ***!
     \*****************************************************/
 
   /*! no static exports found */
@@ -11007,20 +11007,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3ErrorsJs(module, exports) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /** 
@@ -11053,9 +11053,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/event.js":
+  "./node_modules/web3c-cypher/lib/web3c/event.js":
   /*!****************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/event.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/event.js ***!
     \****************************************************/
 
   /*! no static exports found */
@@ -11063,20 +11063,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3EventJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /**
@@ -11086,27 +11086,27 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var utils = __webpack_require__(
     /*! ../utils/utils */
-    "./node_modules/web3-cypher/lib/utils/utils.js");
+    "./node_modules/web3c-cypher/lib/utils/utils.js");
 
     var coder = __webpack_require__(
     /*! ../solidity/coder */
-    "./node_modules/web3-cypher/lib/solidity/coder.js");
+    "./node_modules/web3c-cypher/lib/solidity/coder.js");
 
     var formatters = __webpack_require__(
     /*! ./formatters */
-    "./node_modules/web3-cypher/lib/web3/formatters.js");
+    "./node_modules/web3c-cypher/lib/web3c/formatters.js");
 
     var sha3 = __webpack_require__(
     /*! ../utils/sha3 */
-    "./node_modules/web3-cypher/lib/utils/sha3.js");
+    "./node_modules/web3c-cypher/lib/utils/sha3.js");
 
     var Filter = __webpack_require__(
     /*! ./filter */
-    "./node_modules/web3-cypher/lib/web3/filter.js");
+    "./node_modules/web3c-cypher/lib/web3c/filter.js");
 
     var watches = __webpack_require__(
     /*! ./methods/watches */
-    "./node_modules/web3-cypher/lib/web3/methods/watches.js");
+    "./node_modules/web3c-cypher/lib/web3c/methods/watches.js");
     /**
      * This prototype should be used to create event filters
      */
@@ -11294,9 +11294,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/extend.js":
+  "./node_modules/web3c-cypher/lib/web3c/extend.js":
   /*!*****************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/extend.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/extend.js ***!
     \*****************************************************/
 
   /*! no static exports found */
@@ -11305,48 +11305,48 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   function node_modulesWeb3CypherLibWeb3ExtendJs(module, exports, __webpack_require__) {
     var formatters = __webpack_require__(
     /*! ./formatters */
-    "./node_modules/web3-cypher/lib/web3/formatters.js");
+    "./node_modules/web3c-cypher/lib/web3c/formatters.js");
 
     var utils = __webpack_require__(
     /*! ./../utils/utils */
-    "./node_modules/web3-cypher/lib/utils/utils.js");
+    "./node_modules/web3c-cypher/lib/utils/utils.js");
 
     var Method = __webpack_require__(
     /*! ./method */
-    "./node_modules/web3-cypher/lib/web3/method.js");
+    "./node_modules/web3c-cypher/lib/web3c/method.js");
 
     var Property = __webpack_require__(
     /*! ./property */
-    "./node_modules/web3-cypher/lib/web3/property.js"); // TODO: refactor, so the input params are not altered.
+    "./node_modules/web3c-cypher/lib/web3c/property.js"); // TODO: refactor, so the input params are not altered.
     // it's necessary to make same 'extension' work with multiple providers
 
 
-    var extend = function extend(web3) {
+    var extend = function extend(web3c) {
       /* jshint maxcomplexity:5 */
       var ex = function ex(extension) {
         var extendedObject;
 
         if (extension.property) {
-          if (!web3[extension.property]) {
-            web3[extension.property] = {};
+          if (!web3c[extension.property]) {
+            web3c[extension.property] = {};
           }
 
-          extendedObject = web3[extension.property];
+          extendedObject = web3c[extension.property];
         } else {
-          extendedObject = web3;
+          extendedObject = web3c;
         }
 
         if (extension.methods) {
           extension.methods.forEach(function (method) {
             method.attachToObject(extendedObject);
-            method.setRequestManager(web3._requestManager);
+            method.setRequestManager(web3c._requestManager);
           });
         }
 
         if (extension.properties) {
           extension.properties.forEach(function (property) {
             property.attachToObject(extendedObject);
-            property.setRequestManager(web3._requestManager);
+            property.setRequestManager(web3c._requestManager);
           });
         }
       };
@@ -11363,9 +11363,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/filter.js":
+  "./node_modules/web3c-cypher/lib/web3c/filter.js":
   /*!*****************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/filter.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/filter.js ***!
     \*****************************************************/
 
   /*! no static exports found */
@@ -11373,20 +11373,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3FilterJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /** @file filter.js
@@ -11400,11 +11400,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var formatters = __webpack_require__(
     /*! ./formatters */
-    "./node_modules/web3-cypher/lib/web3/formatters.js");
+    "./node_modules/web3c-cypher/lib/web3c/formatters.js");
 
     var utils = __webpack_require__(
     /*! ../utils/utils */
-    "./node_modules/web3-cypher/lib/utils/utils.js");
+    "./node_modules/web3c-cypher/lib/utils/utils.js");
     /**
     * Converts a given topic to a hex string, but also allows null values.
     *
@@ -11614,9 +11614,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/formatters.js":
+  "./node_modules/web3c-cypher/lib/web3c/formatters.js":
   /*!*********************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/formatters.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/formatters.js ***!
     \*********************************************************/
 
   /*! no static exports found */
@@ -11625,20 +11625,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   function node_modulesWeb3CypherLibWeb3FormattersJs(module, exports, __webpack_require__) {
     "use strict";
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /**
@@ -11650,15 +11650,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     var utils = __webpack_require__(
     /*! ../utils/utils */
-    "./node_modules/web3-cypher/lib/utils/utils.js");
+    "./node_modules/web3c-cypher/lib/utils/utils.js");
 
     var config = __webpack_require__(
     /*! ../utils/config */
-    "./node_modules/web3-cypher/lib/utils/config.js");
+    "./node_modules/web3c-cypher/lib/utils/config.js");
 
     var Iban = __webpack_require__(
     /*! ./iban */
-    "./node_modules/web3-cypher/lib/web3/iban.js");
+    "./node_modules/web3c-cypher/lib/web3c/iban.js");
     /**
      * Should the format output to a big number
      *
@@ -11979,9 +11979,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/function.js":
+  "./node_modules/web3c-cypher/lib/web3c/function.js":
   /*!*******************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/function.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/function.js ***!
     \*******************************************************/
 
   /*! no static exports found */
@@ -11989,20 +11989,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3FunctionJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /**
@@ -12012,23 +12012,23 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var coder = __webpack_require__(
     /*! ../solidity/coder */
-    "./node_modules/web3-cypher/lib/solidity/coder.js");
+    "./node_modules/web3c-cypher/lib/solidity/coder.js");
 
     var utils = __webpack_require__(
     /*! ../utils/utils */
-    "./node_modules/web3-cypher/lib/utils/utils.js");
+    "./node_modules/web3c-cypher/lib/utils/utils.js");
 
     var errors = __webpack_require__(
     /*! ./errors */
-    "./node_modules/web3-cypher/lib/web3/errors.js");
+    "./node_modules/web3c-cypher/lib/web3c/errors.js");
 
     var formatters = __webpack_require__(
     /*! ./formatters */
-    "./node_modules/web3-cypher/lib/web3/formatters.js");
+    "./node_modules/web3c-cypher/lib/web3c/formatters.js");
 
     var sha3 = __webpack_require__(
     /*! ../utils/sha3 */
-    "./node_modules/web3-cypher/lib/utils/sha3.js");
+    "./node_modules/web3c-cypher/lib/utils/sha3.js");
     /**
      * This prototype should be used to call/sendTransaction to solidity functions
      */
@@ -12304,9 +12304,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/httpprovider.js":
+  "./node_modules/web3c-cypher/lib/web3c/httpprovider.js":
   /*!***********************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/httpprovider.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/httpprovider.js ***!
     \***********************************************************/
 
   /*! no static exports found */
@@ -12316,17 +12316,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
     /* WEBPACK VAR INJECTION */
     (function (Buffer) {
       /*
-      This file is part of web3.js.
-      web3.js is free software: you can redistribute it and/or modify
+      This file is part of web3c.js.
+      web3c.js is free software: you can redistribute it and/or modify
       it under the terms of the GNU Lesser General Public License as published by
       the Free Software Foundation, either version 3 of the License, or
       (at your option) any later version.
-      web3.js is distributed in the hope that it will be useful,
+      web3c.js is distributed in the hope that it will be useful,
       but WITHOUT ANY WARRANTY; without even the implied warranty of
       MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
       GNU Lesser General Public License for more details.
       You should have received a copy of the GNU Lesser General Public License
-      along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+      along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
       */
 
       /** @file httpprovider.js
@@ -12338,7 +12338,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
        */
       var errors = __webpack_require__(
       /*! ./errors */
-      "./node_modules/web3-cypher/lib/web3/errors.js"); // workaround to use httpprovider in different envs
+      "./node_modules/web3c-cypher/lib/web3c/errors.js"); // workaround to use httpprovider in different envs
       // browser
 
 
@@ -12348,7 +12348,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       } else {
         XMLHttpRequest = __webpack_require__(
         /*! xmlhttprequest */
-        "./node_modules/web3-cypher/lib/utils/browser-xhr.js").XMLHttpRequest; // jshint ignore: line
+        "./node_modules/web3c-cypher/lib/utils/browser-xhr.js").XMLHttpRequest; // jshint ignore: line
       }
 
       var XHR2 = __webpack_require__(
@@ -12499,9 +12499,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/iban.js":
+  "./node_modules/web3c-cypher/lib/web3c/iban.js":
   /*!***************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/iban.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/iban.js ***!
     \***************************************************/
 
   /*! no static exports found */
@@ -12509,20 +12509,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3IbanJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /** 
@@ -12532,7 +12532,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var BigNumber = __webpack_require__(
     /*! bignumber.js */
-    "./node_modules/web3-cypher/node_modules/bignumber.js/bignumber.js");
+    "./node_modules/web3c-cypher/node_modules/bignumber.js/bignumber.js");
 
     var padLeft = function padLeft(string, bytes) {
       var result = string;
@@ -12753,9 +12753,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/ipcprovider.js":
+  "./node_modules/web3c-cypher/lib/web3c/ipcprovider.js":
   /*!**********************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/ipcprovider.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/ipcprovider.js ***!
     \**********************************************************/
 
   /*! no static exports found */
@@ -12764,20 +12764,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   function node_modulesWeb3CypherLibWeb3IpcproviderJs(module, exports, __webpack_require__) {
     "use strict";
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /** @file ipcprovider.js
@@ -12788,11 +12788,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     var utils = __webpack_require__(
     /*! ../utils/utils */
-    "./node_modules/web3-cypher/lib/utils/utils.js");
+    "./node_modules/web3c-cypher/lib/utils/utils.js");
 
     var errors = __webpack_require__(
     /*! ./errors */
-    "./node_modules/web3-cypher/lib/web3/errors.js");
+    "./node_modules/web3c-cypher/lib/web3c/errors.js");
 
     var IpcProvider = function IpcProvider(path, net) {
       var _this = this;
@@ -12959,9 +12959,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/jsonrpc.js":
+  "./node_modules/web3c-cypher/lib/web3c/jsonrpc.js":
   /*!******************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/jsonrpc.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/jsonrpc.js ***!
     \******************************************************/
 
   /*! no static exports found */
@@ -12969,20 +12969,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3JsonrpcJs(module, exports) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /** @file jsonrpc.js
@@ -13051,9 +13051,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/method.js":
+  "./node_modules/web3c-cypher/lib/web3c/method.js":
   /*!*****************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/method.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/method.js ***!
     \*****************************************************/
 
   /*! no static exports found */
@@ -13061,20 +13061,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3MethodJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /**
@@ -13084,11 +13084,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var utils = __webpack_require__(
     /*! ../utils/utils */
-    "./node_modules/web3-cypher/lib/utils/utils.js");
+    "./node_modules/web3c-cypher/lib/utils/utils.js");
 
     var errors = __webpack_require__(
     /*! ./errors */
-    "./node_modules/web3-cypher/lib/web3/errors.js");
+    "./node_modules/web3c-cypher/lib/web3c/errors.js");
 
     var Method = function Method(options) {
       this.name = options.name;
@@ -13245,9 +13245,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/methods/cph.js":
+  "./node_modules/web3c-cypher/lib/web3c/methods/cph.js":
   /*!**********************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/methods/cph.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/methods/cph.js ***!
     \**********************************************************/
 
   /*! no static exports found */
@@ -13256,20 +13256,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   function node_modulesWeb3CypherLibWeb3MethodsCphJs(module, exports, __webpack_require__) {
     "use strict";
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /**
@@ -13281,51 +13281,51 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     var formatters = __webpack_require__(
     /*! ../formatters */
-    "./node_modules/web3-cypher/lib/web3/formatters.js");
+    "./node_modules/web3c-cypher/lib/web3c/formatters.js");
 
     var utils = __webpack_require__(
     /*! ../../utils/utils */
-    "./node_modules/web3-cypher/lib/utils/utils.js");
+    "./node_modules/web3c-cypher/lib/utils/utils.js");
 
     var Method = __webpack_require__(
     /*! ../method */
-    "./node_modules/web3-cypher/lib/web3/method.js");
+    "./node_modules/web3c-cypher/lib/web3c/method.js");
 
     var Property = __webpack_require__(
     /*! ../property */
-    "./node_modules/web3-cypher/lib/web3/property.js");
+    "./node_modules/web3c-cypher/lib/web3c/property.js");
 
     var c = __webpack_require__(
     /*! ../../utils/config */
-    "./node_modules/web3-cypher/lib/utils/config.js");
+    "./node_modules/web3c-cypher/lib/utils/config.js");
 
     var Contract = __webpack_require__(
     /*! ../contract */
-    "./node_modules/web3-cypher/lib/web3/contract.js");
+    "./node_modules/web3c-cypher/lib/web3c/contract.js");
 
     var watches = __webpack_require__(
     /*! ./watches */
-    "./node_modules/web3-cypher/lib/web3/methods/watches.js");
+    "./node_modules/web3c-cypher/lib/web3c/methods/watches.js");
 
     var Filter = __webpack_require__(
     /*! ../filter */
-    "./node_modules/web3-cypher/lib/web3/filter.js");
+    "./node_modules/web3c-cypher/lib/web3c/filter.js");
 
     var IsSyncing = __webpack_require__(
     /*! ../syncing */
-    "./node_modules/web3-cypher/lib/web3/syncing.js");
+    "./node_modules/web3c-cypher/lib/web3c/syncing.js");
 
     var namereg = __webpack_require__(
     /*! ../namereg */
-    "./node_modules/web3-cypher/lib/web3/namereg.js");
+    "./node_modules/web3c-cypher/lib/web3c/namereg.js");
 
     var Iban = __webpack_require__(
     /*! ../iban */
-    "./node_modules/web3-cypher/lib/web3/iban.js");
+    "./node_modules/web3c-cypher/lib/web3c/iban.js");
 
     var transfer = __webpack_require__(
     /*! ../transfer */
-    "./node_modules/web3-cypher/lib/web3/transfer.js");
+    "./node_modules/web3c-cypher/lib/web3c/transfer.js");
 
     var blockCall = function blockCall(args) {
       return utils.isString(args[0]) && args[0].indexOf('0x') === 0 ? "cph_getTxBlockByHash" : "cph_getTxBlockByNumber";
@@ -13347,8 +13347,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       return utils.isString(args[0]) && args[0].indexOf('0x') === 0 ? 'cph_getUncleCountByBlockHash' : 'cph_getUncleCountByBlockNumber';
     };
 
-    function Cph(web3) {
-      this._requestManager = web3._requestManager;
+    function Cph(web3c) {
+      this._requestManager = web3c._requestManager;
       var self = this;
       methods().forEach(function (method) {
         method.attachToObject(self);
@@ -13621,9 +13621,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/methods/db.js":
+  "./node_modules/web3c-cypher/lib/web3c/methods/db.js":
   /*!*********************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/methods/db.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/methods/db.js ***!
     \*********************************************************/
 
   /*! no static exports found */
@@ -13631,20 +13631,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3MethodsDbJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /** @file db.js
@@ -13654,14 +13654,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var Method = __webpack_require__(
     /*! ../method */
-    "./node_modules/web3-cypher/lib/web3/method.js");
+    "./node_modules/web3c-cypher/lib/web3c/method.js");
 
-    var DB = function DB(web3) {
-      this._requestManager = web3._requestManager;
+    var DB = function DB(web3c) {
+      this._requestManager = web3c._requestManager;
       var self = this;
       methods().forEach(function (method) {
         method.attachToObject(self);
-        method.setRequestManager(web3._requestManager);
+        method.setRequestManager(web3c._requestManager);
       });
     };
 
@@ -13694,9 +13694,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/methods/net.js":
+  "./node_modules/web3c-cypher/lib/web3c/methods/net.js":
   /*!**********************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/methods/net.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/methods/net.js ***!
     \**********************************************************/
 
   /*! no static exports found */
@@ -13704,20 +13704,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3MethodsNetJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /** @file cph.js
@@ -13727,20 +13727,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var utils = __webpack_require__(
     /*! ../../utils/utils */
-    "./node_modules/web3-cypher/lib/utils/utils.js");
+    "./node_modules/web3c-cypher/lib/utils/utils.js");
 
     var Property = __webpack_require__(
     /*! ../property */
-    "./node_modules/web3-cypher/lib/web3/property.js");
+    "./node_modules/web3c-cypher/lib/web3c/property.js");
 
-    var Net = function Net(web3) {
-      this._requestManager = web3._requestManager;
+    var Net = function Net(web3c) {
+      this._requestManager = web3c._requestManager;
       var self = this;
       properties().forEach(function (p) {
         p.attachToObject(self);
-        p.setRequestManager(web3._requestManager);
+        p.setRequestManager(web3c._requestManager);
       });
-    }; /// @returns an array of objects describing web3.cph api properties
+    }; /// @returns an array of objects describing web3c.cph api properties
 
 
     var properties = function properties() {
@@ -13759,9 +13759,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/methods/personal.js":
+  "./node_modules/web3c-cypher/lib/web3c/methods/personal.js":
   /*!***************************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/methods/personal.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/methods/personal.js ***!
     \***************************************************************/
 
   /*! no static exports found */
@@ -13770,20 +13770,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   function node_modulesWeb3CypherLibWeb3MethodsPersonalJs(module, exports, __webpack_require__) {
     "use strict";
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /**
@@ -13795,18 +13795,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     var Method = __webpack_require__(
     /*! ../method */
-    "./node_modules/web3-cypher/lib/web3/method.js");
+    "./node_modules/web3c-cypher/lib/web3c/method.js");
 
     var Property = __webpack_require__(
     /*! ../property */
-    "./node_modules/web3-cypher/lib/web3/property.js");
+    "./node_modules/web3c-cypher/lib/web3c/property.js");
 
     var formatters = __webpack_require__(
     /*! ../formatters */
-    "./node_modules/web3-cypher/lib/web3/formatters.js");
+    "./node_modules/web3c-cypher/lib/web3c/formatters.js");
 
-    function Personal(web3) {
-      this._requestManager = web3._requestManager;
+    function Personal(web3c) {
+      this._requestManager = web3c._requestManager;
       var self = this;
       methods().forEach(function (method) {
         method.attachToObject(self);
@@ -13880,9 +13880,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/methods/shh.js":
+  "./node_modules/web3c-cypher/lib/web3c/methods/shh.js":
   /*!**********************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/methods/shh.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/methods/shh.js ***!
     \**********************************************************/
 
   /*! no static exports found */
@@ -13890,20 +13890,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3MethodsShhJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /** @file shh.js
@@ -13914,18 +13914,18 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var Method = __webpack_require__(
     /*! ../method */
-    "./node_modules/web3-cypher/lib/web3/method.js");
+    "./node_modules/web3c-cypher/lib/web3c/method.js");
 
     var Filter = __webpack_require__(
     /*! ../filter */
-    "./node_modules/web3-cypher/lib/web3/filter.js");
+    "./node_modules/web3c-cypher/lib/web3c/filter.js");
 
     var watches = __webpack_require__(
     /*! ./watches */
-    "./node_modules/web3-cypher/lib/web3/methods/watches.js");
+    "./node_modules/web3c-cypher/lib/web3c/methods/watches.js");
 
-    var Shh = function Shh(web3) {
-      this._requestManager = web3._requestManager;
+    var Shh = function Shh(web3c) {
+      this._requestManager = web3c._requestManager;
       var self = this;
       methods().forEach(function (method) {
         method.attachToObject(self);
@@ -14020,9 +14020,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/methods/swarm.js":
+  "./node_modules/web3c-cypher/lib/web3c/methods/swarm.js":
   /*!************************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/methods/swarm.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/methods/swarm.js ***!
     \************************************************************/
 
   /*! no static exports found */
@@ -14031,20 +14031,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   function node_modulesWeb3CypherLibWeb3MethodsSwarmJs(module, exports, __webpack_require__) {
     "use strict";
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /**
@@ -14057,14 +14057,14 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
     var Method = __webpack_require__(
     /*! ../method */
-    "./node_modules/web3-cypher/lib/web3/method.js");
+    "./node_modules/web3c-cypher/lib/web3c/method.js");
 
     var Property = __webpack_require__(
     /*! ../property */
-    "./node_modules/web3-cypher/lib/web3/property.js");
+    "./node_modules/web3c-cypher/lib/web3c/property.js");
 
-    function Swarm(web3) {
-      this._requestManager = web3._requestManager;
+    function Swarm(web3c) {
+      this._requestManager = web3c._requestManager;
       var self = this;
       methods().forEach(function (method) {
         method.attachToObject(self);
@@ -14155,9 +14155,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/methods/watches.js":
+  "./node_modules/web3c-cypher/lib/web3c/methods/watches.js":
   /*!**************************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/methods/watches.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/methods/watches.js ***!
     \**************************************************************/
 
   /*! no static exports found */
@@ -14165,20 +14165,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3MethodsWatchesJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /** @file watches.js
@@ -14188,7 +14188,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var Method = __webpack_require__(
     /*! ../method */
-    "./node_modules/web3-cypher/lib/web3/method.js"); /// @returns an array of objects describing web3.cph.filter api methods
+    "./node_modules/web3c-cypher/lib/web3c/method.js"); /// @returns an array of objects describing web3c.cph.filter api methods
 
 
     var cph = function cph() {
@@ -14232,7 +14232,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         params: 1
       });
       return [newFilter, uninstallFilter, getLogs, poll];
-    }; /// @returns an array of objects describing web3.shh.watch api methods
+    }; /// @returns an array of objects describing web3c.shh.watch api methods
 
 
     var shh = function shh() {
@@ -14263,9 +14263,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/namereg.js":
+  "./node_modules/web3c-cypher/lib/web3c/namereg.js":
   /*!******************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/namereg.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/namereg.js ***!
     \******************************************************/
 
   /*! no static exports found */
@@ -14273,20 +14273,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3NameregJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /** 
@@ -14296,11 +14296,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var globalRegistrarAbi = __webpack_require__(
     /*! ../contracts/GlobalRegistrar.json */
-    "./node_modules/web3-cypher/lib/contracts/GlobalRegistrar.json");
+    "./node_modules/web3c-cypher/lib/contracts/GlobalRegistrar.json");
 
     var icapRegistrarAbi = __webpack_require__(
     /*! ../contracts/ICAPRegistrar.json */
-    "./node_modules/web3-cypher/lib/contracts/ICAPRegistrar.json");
+    "./node_modules/web3c-cypher/lib/contracts/ICAPRegistrar.json");
 
     var globalNameregAddress = '0xc6d9d2cd449a754c494264e1809c50e34d64562b';
     var icapNameregAddress = '0xa1a111bc074c9cfa781f0c38e63bd51c91b8af00';
@@ -14318,9 +14318,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/property.js":
+  "./node_modules/web3c-cypher/lib/web3c/property.js":
   /*!*******************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/property.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/property.js ***!
     \*******************************************************/
 
   /*! no static exports found */
@@ -14328,20 +14328,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3PropertyJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /**
@@ -14352,7 +14352,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var utils = __webpack_require__(
     /*! ../utils/utils */
-    "./node_modules/web3-cypher/lib/utils/utils.js");
+    "./node_modules/web3c-cypher/lib/utils/utils.js");
 
     var Property = function Property(options) {
       this.name = options.name;
@@ -14482,9 +14482,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/requestmanager.js":
+  "./node_modules/web3c-cypher/lib/web3c/requestmanager.js":
   /*!*************************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/requestmanager.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/requestmanager.js ***!
     \*************************************************************/
 
   /*! no static exports found */
@@ -14492,20 +14492,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3RequestmanagerJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /** 
@@ -14519,19 +14519,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var Jsonrpc = __webpack_require__(
     /*! ./jsonrpc */
-    "./node_modules/web3-cypher/lib/web3/jsonrpc.js");
+    "./node_modules/web3c-cypher/lib/web3c/jsonrpc.js");
 
     var utils = __webpack_require__(
     /*! ../utils/utils */
-    "./node_modules/web3-cypher/lib/utils/utils.js");
+    "./node_modules/web3c-cypher/lib/utils/utils.js");
 
     var c = __webpack_require__(
     /*! ../utils/config */
-    "./node_modules/web3-cypher/lib/utils/config.js");
+    "./node_modules/web3c-cypher/lib/utils/config.js");
 
     var errors = __webpack_require__(
     /*! ./errors */
-    "./node_modules/web3-cypher/lib/web3/errors.js");
+    "./node_modules/web3c-cypher/lib/web3c/errors.js");
     /**
      * It's responsible for passing messages to providers
      * It's also responsible for polling the cypherium node for incoming messages
@@ -14776,9 +14776,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/settings.js":
+  "./node_modules/web3c-cypher/lib/web3c/settings.js":
   /*!*******************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/settings.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/settings.js ***!
     \*******************************************************/
 
   /*! no static exports found */
@@ -14795,9 +14795,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/syncing.js":
+  "./node_modules/web3c-cypher/lib/web3c/syncing.js":
   /*!******************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/syncing.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/syncing.js ***!
     \******************************************************/
 
   /*! no static exports found */
@@ -14805,20 +14805,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3SyncingJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /** @file syncing.js
@@ -14828,11 +14828,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var formatters = __webpack_require__(
     /*! ./formatters */
-    "./node_modules/web3-cypher/lib/web3/formatters.js");
+    "./node_modules/web3c-cypher/lib/web3c/formatters.js");
 
     var utils = __webpack_require__(
     /*! ../utils/utils */
-    "./node_modules/web3-cypher/lib/utils/utils.js");
+    "./node_modules/web3c-cypher/lib/utils/utils.js");
 
     var count = 1;
     /**
@@ -14895,9 +14895,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/lib/web3/transfer.js":
+  "./node_modules/web3c-cypher/lib/web3c/transfer.js":
   /*!*******************************************************!*\
-    !*** ./node_modules/web3-cypher/lib/web3/transfer.js ***!
+    !*** ./node_modules/web3c-cypher/lib/web3c/transfer.js ***!
     \*******************************************************/
 
   /*! no static exports found */
@@ -14905,20 +14905,20 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   /***/
   function node_modulesWeb3CypherLibWeb3TransferJs(module, exports, __webpack_require__) {
     /*
-        This file is part of web3.js.
+        This file is part of web3c.js.
     
-        web3.js is free software: you can redistribute it and/or modify
+        web3c.js is free software: you can redistribute it and/or modify
         it under the terms of the GNU Lesser General Public License as published by
         the Free Software Foundation, either version 3 of the License, or
         (at your option) any later version.
     
-        web3.js is distributed in the hope that it will be useful,
+        web3c.js is distributed in the hope that it will be useful,
         but WITHOUT ANY WARRANTY; without even the implied warranty of
         MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
         GNU Lesser General Public License for more details.
     
         You should have received a copy of the GNU Lesser General Public License
-        along with web3.js.  If not, see <http://www.gnu.org/licenses/>.
+        along with web3c.js.  If not, see <http://www.gnu.org/licenses/>.
     */
 
     /** 
@@ -14928,11 +14928,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
      */
     var Iban = __webpack_require__(
     /*! ./iban */
-    "./node_modules/web3-cypher/lib/web3/iban.js");
+    "./node_modules/web3c-cypher/lib/web3c/iban.js");
 
     var exchangeAbi = __webpack_require__(
     /*! ../contracts/SmartExchange.json */
-    "./node_modules/web3-cypher/lib/contracts/SmartExchange.json");
+    "./node_modules/web3c-cypher/lib/contracts/SmartExchange.json");
     /**
      * Should be used to make Iban transfer
      *
@@ -15007,9 +15007,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/node_modules/bignumber.js/bignumber.js":
+  "./node_modules/web3c-cypher/node_modules/bignumber.js/bignumber.js":
   /*!*************************************************************************!*\
-    !*** ./node_modules/web3-cypher/node_modules/bignumber.js/bignumber.js ***!
+    !*** ./node_modules/web3c-cypher/node_modules/bignumber.js/bignumber.js ***!
     \*************************************************************************/
 
   /*! no static exports found */
@@ -17597,9 +17597,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./node_modules/web3-cypher/node_modules/utf8/utf8.js":
+  "./node_modules/web3c-cypher/node_modules/utf8/utf8.js":
   /*!************************************************************!*\
-    !*** ./node_modules/web3-cypher/node_modules/utf8/utf8.js ***!
+    !*** ./node_modules/web3c-cypher/node_modules/utf8/utf8.js ***!
     \************************************************************/
 
   /*! no static exports found */
@@ -18130,9 +18130,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
   },
 
   /***/
-  "./src/app/providers/web3/web3.service.ts":
+  "./src/app/providers/web3c/web3c.service.ts":
   /*!************************************************!*\
-    !*** ./src/app/providers/web3/web3.service.ts ***!
+    !*** ./src/app/providers/web3c/web3c.service.ts ***!
     \************************************************/
 
   /*! exports provided: Web3Service */
@@ -18166,8 +18166,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
       var web3_cypher__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(
-      /*! web3-cypher */
-      "./node_modules/web3-cypher/index.js");
+      /*! web3c-cypher */
+      "./node_modules/web3c-cypher/index.js");
       /* harmony import */
 
 
@@ -18195,15 +18195,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
       /* harmony import */
 
 
-      var ethereumjs_tx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! ethereumjs-tx */
-      "./node_modules/ethereumjs-tx/dist/index.js");
+      var cypheriumjs_tx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! cypheriumjs-tx */
+      "./node_modules/cypheriumjs-tx/dist/index.js");
       /* harmony import */
 
 
-      var ethereumjs_tx__WEBPACK_IMPORTED_MODULE_5___default =
+      var cypheriumjs_tx__WEBPACK_IMPORTED_MODULE_5___default =
       /*#__PURE__*/
-      __webpack_require__.n(ethereumjs_tx__WEBPACK_IMPORTED_MODULE_5__);
+      __webpack_require__.n(cypheriumjs_tx__WEBPACK_IMPORTED_MODULE_5__);
       /* harmony import */
 
 
@@ -18229,11 +18229,11 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           this.http = http;
           this.global = global;
-          this.web3 = new web3_cypher__WEBPACK_IMPORTED_MODULE_2__(new web3_cypher__WEBPACK_IMPORTED_MODULE_2__["providers"].HttpProvider(this.global.provider || _environments_environment__WEBPACK_IMPORTED_MODULE_7__["environment"].cypherium.provider));
+          this.web3c = new web3_cypher__WEBPACK_IMPORTED_MODULE_2__(new web3_cypher__WEBPACK_IMPORTED_MODULE_2__["providers"].HttpProvider(this.global.provider || _environments_environment__WEBPACK_IMPORTED_MODULE_7__["environment"].cypherium.provider));
           this.http.get('assets/json/pledge.abi.json').subscribe(function (abi) {
-            console.log("abi文件加载成功" + JSON.stringify(abi)); // this.pledgeContract = this.web3.cph.contract(abi).at(environment.cypherium.pledgeContractAddr);
+            console.log("abiFile loading successfully" + JSON.stringify(abi)); // this.pledgeContract = this.web3c.cph.contract(abi).at(environment.cypherium.pledgeContractAddr);
 
-            _this2.pledgeContract = new _this2.web3.cph.contract(abi, _environments_environment__WEBPACK_IMPORTED_MODULE_7__["environment"].cypherium.pledgeContractAddr);
+            _this2.pledgeContract = new _this2.web3c.cph.contract(abi, _environments_environment__WEBPACK_IMPORTED_MODULE_7__["environment"].cypherium.pledgeContractAddr);
             return _this2.pledgeContract;
           });
         }
@@ -18268,7 +18268,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
                     case 5:
                       _context.next = 7;
-                      return this.web3.isAddress('0x' + addr.slice(3));
+                      return this.web3c.isAddress('0x' + addr.slice(3));
 
                     case 7:
                       result = _context.sent;
@@ -18294,7 +18294,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                   switch (_context2.prev = _context2.next) {
                     case 0:
                       _context2.next = 2;
-                      return this.web3.cph.txBlockNumber;
+                      return this.web3c.cph.txBlockNumber;
 
                     case 2:
                       height = _context2.sent;
@@ -18320,7 +18320,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                   switch (_context3.prev = _context3.next) {
                     case 0:
                       _context3.next = 2;
-                      return this.web3.cph.keyBlockNumber;
+                      return this.web3c.cph.keyBlockNumber;
 
                     case 2:
                       height = _context3.sent;
@@ -18340,16 +18340,16 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             if (this[name]) {
               return this[name];
             } else {
-              this[name] = new this.web3.cph.contract(abi, addr);
-              console.log("合约初始化成功:", name, addr);
+              this[name] = new this.web3c.cph.contract(abi, addr);
+              console.log("Contract initializes successfully:", name, addr);
               return this[name];
             }
           } // async getCphBalance(userAddr, pending = false) {
           //     console.log('getCphBalance');
-          //     let value = await this.web3.cph.getBalance(userAddr, pending ? 'pending' : 'latest');
-          //     console.log("调用参数:-----------------------------------", userAddr, value);
+          //     let value = await this.web3c.cph.getBalance(userAddr, pending ? 'pending' : 'latest');
+          //     console.log("Invoked param:-----------------------------------", userAddr, value);
           //     console.log(`钱包${userAddr}的余额是${value}`);
-          //     value = this.web3.fromWei(value, 'cpher');
+          //     value = this.web3c.fromWei(value, 'cpher');
           //     return value;
           // }
 
@@ -18360,12 +18360,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
             var pending = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
             console.log('getCphBalance');
-            this.web3.cph.getBalance(userAddr, pending ? 'pending' : 'latest', function (e, v) {
+            this.web3c.cph.getBalance(userAddr, pending ? 'pending' : 'latest', function (e, v) {
               if (!e) {
-                console.log("调用参数:-----------------------------------", userAddr, v);
+                console.log("Invoked param:-----------------------------------", userAddr, v);
                 console.log("\u94B1\u5305".concat(userAddr, "\u7684\u4F59\u989D\u662F").concat(v));
 
-                var value = _this3.web3.fromWei(v, 'cpher');
+                var value = _this3.web3c.fromWei(v, 'cpher');
 
                 callback(value);
               } else {
@@ -18386,7 +18386,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             var _this4 = this;
 
             // let value = await this.pledgeContract.methods.mortgageOf(from).call({ from: from });
-            // value = this.web3.fromWei(value + "", 'cpher');
+            // value = this.web3c.fromWei(value + "", 'cpher');
             // return value;
             return new Promise(function (resolve, reject) {
               _this4.pledgeContract.methods.mortgageOf(from).call({
@@ -18395,9 +18395,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                 if (err) {
                   resolve(0);
                 } else {
-                  console.log("抵押", result);
+                  console.log("pledge", result);
 
-                  var value = _this4.web3.fromWei(result + "", 'cpher');
+                  var value = _this4.web3c.fromWei(result + "", 'cpher');
 
                   resolve(value);
                 }
@@ -18415,15 +18415,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                 while (1) {
                   switch (_context4.prev = _context4.next) {
                     case 0:
-                      amount = this.web3.toWei(amount + "", 'cpher');
+                      amount = this.web3c.toWei(amount + "", 'cpher');
                       _context4.next = 3;
-                      return this.web3.cph.getGasPrice();
+                      return this.web3c.cph.getGasPrice();
 
                     case 3:
                       gasPrice = _context4.sent;
 
                       if (!gasPrice || gasPrice == '0') {
-                        gasPrice = this.web3.toWei(20, 'gwei');
+                        gasPrice = this.web3c.toWei(20, 'gwei');
                       }
 
                       params = type == 'mortgage' ? [from, amount] : [amount];
@@ -18433,8 +18433,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                     case 8:
                       tx = _context4.sent;
                       serializedTx = tx.serialize();
-                      this.web3.cph.sendSignedTransaction('0x' + serializedTx.toString('hex'), callback); //调起合约
-                      // this.web3.cph.sendSignedTransaction(tx.rawTransaction, callback); //调起合约
+                      this.web3c.cph.sendSignedTransaction('0x' + serializedTx.toString('hex'), callback); //Call the contract
+                      // this.web3c.cph.sendSignedTransaction(tx.rawTransaction, callback); //Call the contract
 
                     case 11:
                     case "end":
@@ -18456,17 +18456,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                   switch (_context5.prev = _context5.next) {
                     case 0:
                       console.log("\u53D1\u8D77\u8F6C\u8D26----from:".concat(from, ",to:").concat(to, ",value:").concat(value));
-                      value = this.web3.toWei(value, 'cpher');
-                      gasPrice = this.web3.toWei(gasPrice + "", 'gwei');
+                      value = this.web3c.toWei(value, 'cpher');
+                      gasPrice = this.web3c.toWei(gasPrice + "", 'gwei');
                       _context5.next = 5;
                       return this.generateCphTx(from, to, value, gasPrice, privateKey);
 
                     case 5:
                       tx = _context5.sent;
-                      console.log("交易签名：", tx);
+                      console.log("Transaction signature：", tx);
                       serializedTx = tx.serialize();
-                      this.web3.cph.sendRawTransaction('0x' + serializedTx.toString('hex'), callback); // this.web3.cph.sendSignedTransaction('0x' + serializedTx.toString('hex'), callback); //调起合约
-                      // this.web3.cph.sendSignedTransaction(tx.rawTransaction, callback); //调起合约
+                      this.web3c.cph.sendRawTransaction('0x' + serializedTx.toString('hex'), callback); // this.web3c.cph.sendSignedTransaction('0x' + serializedTx.toString('hex'), callback); //Call the contract
+                      // this.web3c.cph.sendSignedTransaction(tx.rawTransaction, callback); //Call the contract
 
                     case 9:
                     case "end":
@@ -18493,15 +18493,15 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       data = "";
 
                       if (params) {
-                        thisobj = this[contractName].methods[funcname]; //从目标合约对象中提取函数
+                        thisobj = this[contractName].methods[funcname]; //Extract the function from the target contract object
 
-                        data = thisobj.apply(thisobj, params).encodeABI(); //将参数封装成合约参数形式
-                      } // var nonce = await this.web3.cph.getTransactionCount('0x' + from, 'pending'); //获取用户钱包地址的nonce
+                        data = thisobj.apply(thisobj, params).encodeABI(); //Encapsulate parameters as contract parameters
+                      } // var nonce = await this.web3c.cph.getTransactionCount('0x' + from, 'pending'); //Get the address of the user's walletnonce
 
 
                       _context6.prev = 2;
                       _context6.next = 5;
-                      return this.web3.cph.getTransactionCount('0x' + from, 'pending');
+                      return this.web3c.cph.getTransactionCount('0x' + from, 'pending');
 
                     case 5:
                       nonce = _context6.sent;
@@ -18512,19 +18512,19 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       _context6.prev = 8;
                       _context6.t0 = _context6["catch"](2);
                       _context6.next = 12;
-                      return this.web3.cph.getTransactionCount('0x' + from);
+                      return this.web3c.cph.getTransactionCount('0x' + from);
 
                     case 12:
                       nonce = _context6.sent;
 
                     case 13:
-                      console.log("Nonce为" + nonce); // let gasLimit = await this.web3.cph.estimateGas({
+                      console.log("Nonce为" + nonce); // let gasLimit = await this.web3c.cph.estimateGas({
                       //     "from": '0x'+from,
                       //     "nonce": nonce,
                       //     "to": to,
                       //     "data": data
                       // })
-                      // let chainId = await this.web3.cph.net.getId();
+                      // let chainId = await this.web3c.cph.net.getId();
                       // console.log("chainId:", chainId);
 
                       txParams = {
@@ -18540,9 +18540,9 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                         value: this.convert10to16(value) // chainId: chainId
 
                       };
-                      console.log("转账参数：" + JSON.stringify(txParams)); // return this.web3.cph.accounts.signTransaction(txParams, privateKey);
+                      console.log("Transfer parameters：" + JSON.stringify(txParams)); // return this.web3c.cph.accounts.signTransaction(txParams, privateKey);
 
-                      tx = new ethereumjs_tx__WEBPACK_IMPORTED_MODULE_5__["Transaction"](txParams, {// chain: "cphnet"
+                      tx = new cypheriumjs_tx__WEBPACK_IMPORTED_MODULE_5__["Transaction"](txParams, {// chain: "cphnet"
                       }); // let privateKeyBuffer = Buffer.from(privateKey, 'hex');
                       // tx.sign(privateKeyBuffer);
 
@@ -18571,12 +18571,12 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                   switch (_context7.prev = _context7.next) {
                     case 0:
                       _context7.next = 2;
-                      return this.web3.cph.getTransaction(tx);
+                      return this.web3c.cph.getTransaction(tx);
 
                     case 2:
                       result = _context7.sent;
-                      result.value = this.web3.fromWei(result.value, 'cpher');
-                      result.gasPrice = this.web3.fromWei(result.gasPrice, 'cpher');
+                      result.value = this.web3c.fromWei(result.value, 'cpher');
+                      result.gasPrice = this.web3c.fromWei(result.gasPrice, 'cpher');
                       return _context7.abrupt("return", result);
 
                     case 6:
@@ -18609,7 +18609,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }, {
           key: "strToBuffer",
           value: function strToBuffer(str, type) {
-            console.log(str + '即将转成buffer对象');
+            console.log(str + 'Is about to be turned into a Buffer object');
 
             if (type === 'hex') {
               return Buffer.from(str, 'hex');
@@ -18620,8 +18620,8 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
         }, {
           key: "floatMultiple",
           value: function floatMultiple(f1, f2) {
-            var m1 = new this.web3.BigNumber(f1),
-                m2 = new this.web3.BigNumber(f2);
+            var m1 = new this.web3c.BigNumber(f1),
+                m2 = new this.web3c.BigNumber(f2);
             return m1.mul(m2);
           }
         }, {
@@ -18644,7 +18644,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
               return n;
             }
 
-            return this.web3.toHex(n);
+            return this.web3c.toHex(n);
           }
         }, {
           key: "_hexStringToBytes",

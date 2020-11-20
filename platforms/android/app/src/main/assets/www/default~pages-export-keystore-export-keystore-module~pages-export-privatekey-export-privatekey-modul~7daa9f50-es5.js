@@ -413,7 +413,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
           options.url = _util_util_service__WEBPACK_IMPORTED_MODULE_5__["UtilService"].formatUrl(options.url);
           console.log(JSON.stringify(set));
-          console.log("请求url:" + options.url);
+          console.log("The request url:" + options.url);
           return rxjs__WEBPACK_IMPORTED_MODULE_3__["Observable"].create(function (observer) {
             // 如果需要缓存，先尝试从sessionStorage中取数据
             if (setting.needCache) {
@@ -430,7 +430,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             _this3.http.request(options.method, options.url, options).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["timeout"])(_environments_environment__WEBPACK_IMPORTED_MODULE_7__["environment"].requestTimeout)).subscribe(function (res) {
               setting.needCache && _http_helper_http_helper_service__WEBPACK_IMPORTED_MODULE_10__["HttpHelperService"].setCacheData(options, res); // 如果需要缓存，保存数据到sessionStorage中
 
-              var code = res.err_no; //出错则弹出提示
+              var code = res.err_no; //An error will prompt you
 
               if (code && _global_global_service__WEBPACK_IMPORTED_MODULE_11__["GlobalService"].errorCode[code] && !set.ignoreError) {
                 _this3.helper.toast(_global_global_service__WEBPACK_IMPORTED_MODULE_11__["GlobalService"].errorCode[code]);
@@ -493,7 +493,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           }));
         }
         /**
-         * 处理请求失败事件
+         * Handle the failed request event
          */
 
       }, {
@@ -520,7 +520,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
                       break;
                     }
 
-                    errData = err.error; //  401 token无效或过期需要重新登录
+                    errData = err.error; //  Invalid or expired 401 Token requires re-login
 
                     if (!(errData.code === 401)) {
                       _context2.next = 13;
@@ -918,7 +918,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           return url.substring(0, index) + url.substring(index).replace(/\/\/*/g, '/');
         }
         /**
-         * 产生一个随机的32位长度字符串
+         * Produces a random 32-bit length string
          */
 
       }, {
@@ -934,7 +934,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           return text + new Date().getTime();
         }
         /**
-         * 根据图片路径把图片转为base64字符串格式
+         * Convert the image to base64 string format based on the image path
          */
 
       }, {

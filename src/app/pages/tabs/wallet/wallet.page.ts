@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalService } from '../../../providers/global/global.service';
 import { HelperService } from '../../../providers/helper/helper.service';
-import { Web3Service } from '../../../providers/web3/web3.service';
+import { Web3Service } from '../../../providers/web3c/web3c.service';
 import { Storage } from '@ionic/storage';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { HttpService } from "../../../providers/http/http.service";
@@ -36,7 +36,7 @@ export class WalletPage implements OnInit {
         private router: Router,
         private helper: HelperService,
         public global: GlobalService,
-        private web3: Web3Service,
+        private web3c: Web3Service,
         private http: HttpService,
         private storage: Storage,
         private native: NativeService,
@@ -173,7 +173,7 @@ export class WalletPage implements OnInit {
     }
 
     getWalletInfo(addr) {
-        this.web3.getCphBalance(addr, (v) => {
+        this.web3c.getCphBalance(addr, (v) => {
             if (this.amount.toString() !== v.toString() && v !== undefined) {
                 this.amount = v;
                 this.global.gWalletList[this.global.currentWalletIndex].amount = this.amount;

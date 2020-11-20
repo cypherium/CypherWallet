@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalService } from '../../providers/global/global.service';
 import { HttpService } from '../../providers/http/http.service';
-import { Web3Service } from '../../providers/web3/web3.service';
+import { Web3Service } from '../../providers/web3c/web3c.service';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { HelperService } from '../../providers/helper/helper.service';
 import { NativeService } from '../../providers/native/native.service';
@@ -32,7 +32,7 @@ export class WalletDetailPage implements OnInit {
     constructor(
         private global: GlobalService,
         private http: HttpService,
-        private web3: Web3Service,
+        private web3c: Web3Service,
         private helper: HelperService,
         private native: NativeService,
         public nav: NavController,
@@ -90,7 +90,7 @@ export class WalletDetailPage implements OnInit {
     }
 
     getWalletInfo(addr) {
-        this.web3.getCphBalance(addr, (v) => {
+        this.web3c.getCphBalance(addr, (v) => {
             if (this.amount.toString() !== v.toString() && v !== undefined) {
                 this.amount = v;
                 this.global.gWalletList[this.global.currentWalletIndex].amount = this.amount;
@@ -114,7 +114,7 @@ export class WalletDetailPage implements OnInit {
     }
 
     async ionViewDidEnter() {
-        // this.blockHeight = await this.web3.getBlockHeight();
+        // this.blockHeight = await this.web3c.getBlockHeight();
         this.getTransactionList();
         //Access to exchange rate information
         this.http.get(this.global.api['getRateInfo']).subscribe(res => {
@@ -164,13 +164,13 @@ export class WalletDetailPage implements OnInit {
         }).subscribe(res => {
             this.loading = false;
             if (res.err_no == 0) {
-                this.blockHeight = this.web3.getBlockHeight();
+                this.blockHeight = this.web3c.getBlockHeight();
                 if (res.transactions) {
                     res.transactions.forEach(item => {
                         if (item.tx_type == 1 || item.tx_type == 2) {
-                            item.displayValue = this.web3.web3.fromWei(item.value, 'cpher');
+                            item.displayValue = this.web3c.web3c.fromWei(item.value, 'cpher');
                         } else {
-                            item.displayValue = this.web3.web3.fromWei(item.tx_type_ext, 'cpher');
+                            item.displayValue = this.web3c.web3c.fromWei(item.tx_type_ext, 'cpher');
                         }
                         let height = this.blockHeight - item.block_number;
                         if (item.block_number == -2) {

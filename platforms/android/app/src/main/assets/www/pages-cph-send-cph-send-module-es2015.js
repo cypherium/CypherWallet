@@ -115,7 +115,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../providers/helper/helper.service */ "./src/app/providers/helper/helper.service.ts");
 /* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm2015/ionic-storage.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../providers/web3/web3.service */ "./src/app/providers/web3/web3.service.ts");
+/* harmony import */ var _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../providers/web3c/web3c.service */ "./src/app/providers/web3c/web3c.service.ts");
 /* harmony import */ var _providers_native_native_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../providers/native/native.service */ "./src/app/providers/native/native.service.ts");
 /* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 /* harmony import */ var _ionic_native_keyboard_ngx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic-native/keyboard/ngx */ "./node_modules/@ionic-native/keyboard/ngx/index.js");
@@ -137,12 +137,12 @@ __webpack_require__.r(__webpack_exports__);
 let CphSendPage = class CphSendPage {
     constructor(router, 
     // private clipboard: Clipboard,
-    helper, global, storage, web3, nav, platform, keyboard, native, modalController, alertController, fingerAuth) {
+    helper, global, storage, web3c, nav, platform, keyboard, native, modalController, alertController, fingerAuth) {
         this.router = router;
         this.helper = helper;
         this.global = global;
         this.storage = storage;
-        this.web3 = web3;
+        this.web3c = web3c;
         this.nav = nav;
         this.platform = platform;
         this.keyboard = keyboard;
@@ -150,7 +150,7 @@ let CphSendPage = class CphSendPage {
         this.modalController = modalController;
         this.alertController = alertController;
         this.fingerAuth = fingerAuth;
-        this.range = 18; //let price = await this.web3.cph.gasPrice(); price/1e9;
+        this.range = 18; //let price = await this.web3c.cph.gasPrice(); price/1e9;
         this.wallet = {};
         this.amount = 0;
         this.receiveAddress = "";
@@ -240,7 +240,7 @@ let CphSendPage = class CphSendPage {
     }
     updateWalletInfo() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            this.web3.getCphBalance(this.wallet.addr, (v) => {
+            this.web3c.getCphBalance(this.wallet.addr, (v) => {
                 if (this.amount.toString() !== v.toString() && v !== undefined) {
                     this.amount = v;
                     this.global.gWalletList[this.global.currentWalletIndex].amount = this.amount;
@@ -266,7 +266,7 @@ let CphSendPage = class CphSendPage {
             console.log("SCAN RESULT：", res);
             this.helper.handleText(res.text, (url, method) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
                 if (method == 'transfer') {
-                    let result = yield this.web3.isCphAddr(url);
+                    let result = yield this.web3c.isCphAddr(url);
                     if (result == 0) {
                         this.receiveAddress = url;
                     }
@@ -305,14 +305,14 @@ let CphSendPage = class CphSendPage {
             yield modal.present();
             modal.onDidDismiss().then((s) => {
                 if (typeof (s.data) !== 'undefined' && s.data.dismissed !== false) {
-                    //获取私钥
+                    //get private key
                     setTimeout(() => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
                         let ret = this.helper.decryptPrivateKey(this.wallet.payment, s.data.dismissed);
                         if (ret.flag) {
                             this.transfer(ret.privateKey);
                         }
                         else {
-                            //密码错误
+                            //password error
                             let error = yield this.helper.getTranslate('PAYMENT_PASSWORD_ERROR');
                             this.helper.toast(error);
                         }
@@ -363,7 +363,7 @@ let CphSendPage = class CphSendPage {
     checkAddr() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
             this.addressError = "";
-            let result = yield this.web3.isCphAddr(this.receiveAddress.toLowerCase());
+            let result = yield this.web3c.isCphAddr(this.receiveAddress.toLowerCase());
             if (result == -1) {
                 let message = yield this.helper.getTranslate('ADDRESS_EMPTY');
                 this.addressError = message;
@@ -395,7 +395,7 @@ let CphSendPage = class CphSendPage {
     transfer(privatekey) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
             let address = this.receiveAddress.toLowerCase().replace('cph', '0x');
-            this.web3.transferCph(this.wallet.addr, address, this.payAmount, this.range, privatekey, (err, tx) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            this.web3c.transferCph(this.wallet.addr, address, this.payAmount, this.range, privatekey, (err, tx) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
                 console.log("Transaction callback.......", err, tx);
                 if (err === null) {
                     // resolve(tx);
@@ -403,10 +403,10 @@ let CphSendPage = class CphSendPage {
                     let navigationExtras = {
                         state: {
                             tx: tx,
-                            status: 1 //0-成功，1:打包中，2:失败
+                            status: 1 //0- success, 1: packed, 2: failure
                         }
                     };
-                    //前往交易结果页
+                    // Go to the transaction results page
                     this.router.navigate(['transaction-result'], navigationExtras);
                 }
                 else {

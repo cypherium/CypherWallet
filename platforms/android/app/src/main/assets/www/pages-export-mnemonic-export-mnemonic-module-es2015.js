@@ -125,7 +125,7 @@ let ExportMnemonicPage = class ExportMnemonicPage {
         if (this.router.getCurrentNavigation().extras.state) {
             this.wallet = this.router.getCurrentNavigation().extras.state.wallet;
             this.action = this.router.getCurrentNavigation().extras.state.action;
-            //获取助记词
+            //get mnemonic
             this.mnemonicList = this.wallet.mnemonic.split(" ");
         }
         else {
@@ -184,7 +184,7 @@ let ExportMnemonicPage = class ExportMnemonicPage {
                 if (ret.flag) {
                     this.ifShowPasswordPrompt = false;
                     this.ifShowLoading = false;
-                    //根据私钥生成助记词，暂时从本地缓存取，后续修改ethereumjs-wallet
+                    //根据私钥生成助记词，暂时从本地缓存取，后续修改cypheriumjs-wallet
                     // this.wallet = this.helper.generateMnemonicWallet(ret.privateKey);
                     this.mnemonicList = this.wallet.mnemonic.split(" ");
                     return;

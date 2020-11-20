@@ -97,7 +97,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _providers_global_global_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../providers/global/global.service */ "./src/app/providers/global/global.service.ts");
 /* harmony import */ var _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../providers/helper/helper.service */ "./src/app/providers/helper/helper.service.ts");
-/* harmony import */ var _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../providers/web3/web3.service */ "./src/app/providers/web3/web3.service.ts");
+/* harmony import */ var _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../providers/web3c/web3c.service */ "./src/app/providers/web3c/web3c.service.ts");
 /* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm2015/ionic-storage.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
 /* harmony import */ var _providers_http_http_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../providers/http/http.service */ "./src/app/providers/http/http.service.ts");
@@ -115,11 +115,11 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let WalletPage = class WalletPage {
-    constructor(router, helper, global, web3, http, storage, native, events, zone, navCtrl) {
+    constructor(router, helper, global, web3c, http, storage, native, events, zone, navCtrl) {
         this.router = router;
         this.helper = helper;
         this.global = global;
-        this.web3 = web3;
+        this.web3c = web3c;
         this.http = http;
         this.storage = storage;
         this.native = native;
@@ -159,16 +159,16 @@ let WalletPage = class WalletPage {
     }
     computeValue() {
         this.getWalletInfo(this.wallet.addr);
-        //获取汇率信息
+        //Access to exchange rate information
         this.http.get(this.global.api['getRateInfo']).subscribe(res => {
-            console.log("汇率：", res.rates);
+            console.log("Exchange rate:", res.rates);
             let unit = this.global.settings.valueUnit || "USD";
             let value = res.rates.find(item => item.currency == unit);
             if (!value) {
                 value = res.rates[0];
             }
             this.global.selectedRate = value;
-            //计算当前金额的估算
+            // Calculate an estimate of the current amount
             this.amountInOther = this.amount * value.rate;
             this.amountInOtherInterger = Math.floor(this.amountInOther);
             let mod = Math.floor(Math.pow(10, value.significand));
@@ -200,7 +200,7 @@ let WalletPage = class WalletPage {
                     };
                     this.confirmPrompt = () => {
                         this.ifShowPasswordPrompt = false;
-                        //密码校验成功,开始传输keystore
+                        //Password check successful, start transmission keystore
                         setTimeout(() => {
                             this.http.post(url, {
                                 keystore: this.wallet.keystore
@@ -257,7 +257,7 @@ let WalletPage = class WalletPage {
         });
     }
     getWalletInfo(addr) {
-        this.web3.getCphBalance(addr, (v) => {
+        this.web3c.getCphBalance(addr, (v) => {
             if (this.amount.toString() !== v.toString() && v !== undefined) {
                 this.amount = v;
                 this.global.gWalletList[this.global.currentWalletIndex].amount = this.amount;

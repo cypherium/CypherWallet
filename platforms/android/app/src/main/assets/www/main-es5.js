@@ -3509,13 +3509,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
     var _ionic_native_onesignal_ngx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(
     /*! @ionic-native/onesignal/ngx */
-    "./node_modules/@ionic-native/onesignal/ngx/index.js"); // import { Web3Service } from './providers/web3/web3.service';
+    "./node_modules/@ionic-native/onesignal/ngx/index.js"); // import { Web3Service } from './providers/web3c/web3c.service';
 
 
     var AppComponent =
     /*#__PURE__*/
     function () {
-      function AppComponent(platform, splashScreen, statusBar, global, navCtrl, // private web3: Web3Service,
+      function AppComponent(platform, splashScreen, statusBar, global, navCtrl, // private web3c: Web3Service,
       storage, keyboard, translate, http, helper, oneSignal) {
         _classCallCheck(this, AppComponent);
 
@@ -3566,14 +3566,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             _this.oneSignal.endInit();
 
             _this.keyboard.onKeyboardWillShow().subscribe(function () {
-              //keyboard显示
+              //keyboard display
               document.body.classList.add('keyboard-is-open');
             });
 
             _this.keyboard.onKeyboardWillHide().subscribe(function () {
-              //keyboard显示
+              //keyboard display
               document.body.classList.remove('keyboard-is-open');
-            }); //获取本地存储的钱包，如果没有则前往创建钱包页
+            }); //Gets the wallet stored locally, or if not, goes to the create wallet page
 
 
             _this.storage.get("localwallet").then(function (res) {
@@ -3585,7 +3585,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     _this.navCtrl.navigateRoot('/wallet-create');
                   } else {
                     _this.storage.get("localwalletindex").then(function (res) {
-                      console.log("获取钱包序号：", _this.global.gWalletList);
+                      console.log("Get the wallet serial number：", _this.global.gWalletList);
                       _this.global.currentWalletIndex = +res || 0;
 
                       _this.navCtrl.navigateRoot('wallet'); // this.global.currentWallet = this.global.gWalletList[this.global.currentWalletIndex];
@@ -3608,7 +3608,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   var setting = JSON.parse(res);
                   _this.global.settings = setting;
                 } catch (e) {
-                  console.log("获取配置出错...");
+                  console.log("Get configuration error...");
                 }
               }
 
@@ -3994,7 +3994,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "confirmAlert",
         value: function confirmAlert() {
-          console.log("确认...");
+          console.log("confirm...");
           this.confirm.emit();
         }
       }, {
@@ -5126,27 +5126,27 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       /* harmony import */
 
 
-      var ethereumjs_wallet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
-      /*! ethereumjs-wallet */
-      "./node_modules/ethereumjs-wallet/index.js");
+      var cypheriumjs_wallet__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(
+      /*! cypheriumjs-wallet */
+      "./node_modules/cypheriumjs-wallet/index.js");
       /* harmony import */
 
 
-      var ethereumjs_wallet__WEBPACK_IMPORTED_MODULE_5___default =
+      var cypheriumjs_wallet__WEBPACK_IMPORTED_MODULE_5___default =
       /*#__PURE__*/
-      __webpack_require__.n(ethereumjs_wallet__WEBPACK_IMPORTED_MODULE_5__);
+      __webpack_require__.n(cypheriumjs_wallet__WEBPACK_IMPORTED_MODULE_5__);
       /* harmony import */
 
 
-      var ethers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-      /*! ethers */
-      "./node_modules/ethers/dist/ethers.min.js");
+      var cyphers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
+      /*! cyphers */
+      "./node_modules/cyphers/dist/cyphers.min.js");
       /* harmony import */
 
 
-      var ethers__WEBPACK_IMPORTED_MODULE_6___default =
+      var cyphers__WEBPACK_IMPORTED_MODULE_6___default =
       /*#__PURE__*/
-      __webpack_require__.n(ethers__WEBPACK_IMPORTED_MODULE_6__);
+      __webpack_require__.n(cyphers__WEBPACK_IMPORTED_MODULE_6__);
       /* harmony import */
 
 
@@ -5254,7 +5254,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                       return _context4.abrupt("return");
 
                     case 3:
-                      res = res.toLowerCase(); //获取scheme, 对象，方法，参数
+                      res = res.toLowerCase(); //Gets Scheme, objects, methods, and parameters
 
                       matches = res.match(/(.+)\:\/\/([^/]+)\/([^/]+)\/([^/]+)/);
 
@@ -5309,14 +5309,14 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           key: "saveWallet",
           value: function saveWallet() {
             // this.currentWallet = w;
-            this.storage.set('localwalletindex', this.global.currentWalletIndex); //缓存钱包列表，否则钱包将丢失
+            this.storage.set('localwalletindex', this.global.currentWalletIndex); //Cache the wallet list, otherwise the wallet will be lost
 
             this.storage.set('localwallet', JSON.stringify(this.global.gWalletList));
           }
         }, {
           key: "generateMnemonicWallet",
           value: function generateMnemonicWallet(privateKey) {
-            var wallet = new ethers__WEBPACK_IMPORTED_MODULE_6__["Wallet"](privateKey);
+            var wallet = new cyphers__WEBPACK_IMPORTED_MODULE_6__["Wallet"](privateKey);
             return wallet;
           }
         }, {
@@ -5329,7 +5329,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
             }
 
             console.log(privateKey);
-            var wallet = ethereumjs_wallet__WEBPACK_IMPORTED_MODULE_5__["fromPrivateKey"](privateKey); //生成keystore
+            var wallet = cypheriumjs_wallet__WEBPACK_IMPORTED_MODULE_5__["fromPrivateKey"](privateKey); //生成keystore
 
             var keystore = wallet.toV3(password, {
               n: 1024
@@ -5349,7 +5349,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 publicKey = null;
 
             try {
-              var wallet = ethereumjs_wallet__WEBPACK_IMPORTED_MODULE_5__["fromV3"](keystore, password, true);
+              var wallet = cypheriumjs_wallet__WEBPACK_IMPORTED_MODULE_5__["fromV3"](keystore, password, true);
               privateKey = wallet.getPrivateKey().toString('hex');
               publicKey = wallet.getPublicKey().toString('hex');
               console.log(privateKey, publicKey);
@@ -5378,7 +5378,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           key: "validateKeystore",
           value: function validateKeystore(keystore) {
             try {
-              ethereumjs_wallet__WEBPACK_IMPORTED_MODULE_5__["validateKeystore"](keystore, true);
+              cypheriumjs_wallet__WEBPACK_IMPORTED_MODULE_5__["validateKeystore"](keystore, true);
             } catch (error) {
               console.log(error);
               return false;
@@ -5430,8 +5430,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           key: "assertIsMobile",
           value: function assertIsMobile() {
             if (this.isNotMobile()) {
-              this.toast('请使用真机调试');
-              throw new Error('请使用真机调试');
+              this.toast('Please use real machine debugging');
+              throw new Error('Please use real machine debugging');
             }
           }
         }, {
@@ -5469,7 +5469,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             // alertController.create是异步方法，所以使用AlertIsExist标志是否打开
             if (this.AlertIsExist) {
-              console.log('alert已经存在，禁止重复打开');
+              console.log('alert is already exists. Do not open it again');
               setTimeout(function () {
                 _this5.AlertIsExist = false;
               }, 10000);
@@ -5478,7 +5478,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             this.AlertIsExist = true;
             var buttons = [{
-              text: '确定',
+              text: 'confirm',
               handler: function handler() {
                 _this5.AlertIsExist = false;
                 okBackFun && okBackFun();
@@ -5487,7 +5487,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
             if (cancelBtnFun) {
               var cancelBtn = {
-                text: '取消',
+                text: 'cancel',
                 role: 'cancel',
                 handler: function handler() {
                   _this5.AlertIsExist = false;
@@ -5520,7 +5520,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         }, {
           key: "toast",
           value: function toast() {
-            var message = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : '操作成功';
+            var message = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'operate success';
             var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2500;
             var position = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'bottom';
             var opts = {
@@ -6000,8 +6000,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
         /**
-        * 获得app版本号,如0.01
-        * @description  对应/config.xml中version的值
+        * To obtain app's version,example0.01
+        * @description  corresponding to the config.xmlversion's value
         */
 
       }, {
@@ -6014,7 +6014,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _this8.appVersion.getVersionNumber().then(function (value) {
                 observer.next(value);
               }).catch(function (err) {
-                console.log(err, '获得app版本号失败');
+                console.log(err, 'To obtain app version fail');
                 observer.error(false);
               });
             } else {
@@ -6023,8 +6023,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
         /**
-         * 获得app name,如现场作业
-         * @description  对应/config.xml中name的值
+         * To obtain app name,
+         * @description  corresponding to the config.xmlname's value
          */
 
       }, {
@@ -6037,7 +6037,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _this9.appVersion.getAppName().then(function (value) {
                 observer.next(value);
               }).catch(function (err) {
-                console.log(err, '获得app name失败');
+                console.log(err, 'To obtain app name fail');
                 observer.error(false);
               });
             } else {
@@ -6046,8 +6046,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           });
         }
         /**
-         * 获得app包名/id,如com.kit.ionic2tabs
-         * @description  对应/config.xml中id的值
+         * To obtain app's package name/id,examplecom.kit.ionic2tabs
+         * @description  corresponding to the config.xmlid's value
          */
 
       }, {
@@ -6060,7 +6060,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               _this10.appVersion.getPackageName().then(function (value) {
                 observer.next(value);
               }).catch(function (err) {
-                console.log(err, '获得app包名失败');
+                console.log(err, 'To obtain app package name fail');
                 observer.error(false);
               });
             } else {
@@ -6071,7 +6071,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
       }, {
         key: "vibrate",
         value: function vibrate() {
-          console.log("密码错误");
+          console.log("password error");
           this.vibration.vibrate(this.global.vibrationDuration);
         }
         /**
@@ -6110,7 +6110,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           this.helper.assertIsMobile(); // return Observable.create(observer => {
           // 	// 请求权限
           // 	this.photoLibrary.requestAuthorization({ read: true, write: true }).then(() => {
-          // 		// 获取app包名作为相册名称
+          // 		// 获取app's package name作为相册名称
           // 		this.getAppVersionInfo().subscribe(appInfo => {
           // 			// 执行保存操作
           // 			this.photoLibrary.saveImage(url, appInfo.name).then(res => {

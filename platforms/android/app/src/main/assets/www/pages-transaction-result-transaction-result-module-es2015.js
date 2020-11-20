@@ -93,7 +93,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../providers/web3/web3.service */ "./src/app/providers/web3/web3.service.ts");
+/* harmony import */ var _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../providers/web3c/web3c.service */ "./src/app/providers/web3c/web3c.service.ts");
 /* harmony import */ var _providers_native_native_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../providers/native/native.service */ "./src/app/providers/native/native.service.ts");
 /* harmony import */ var _providers_global_global_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../providers/global/global.service */ "./src/app/providers/global/global.service.ts");
 /* harmony import */ var _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../providers/helper/helper.service */ "./src/app/providers/helper/helper.service.ts");
@@ -107,10 +107,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 let TransactionResultPage = class TransactionResultPage {
-    constructor(router, activatedRoute, web3, global, helper, nav, native) {
+    constructor(router, activatedRoute, web3c, global, helper, nav, native) {
         this.router = router;
         this.activatedRoute = activatedRoute;
-        this.web3 = web3;
+        this.web3c = web3c;
         this.global = global;
         this.helper = helper;
         this.nav = nav;
@@ -135,7 +135,7 @@ let TransactionResultPage = class TransactionResultPage {
     getDetailByTx() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
             //查询交易信息
-            this.detail = yield this.web3.getTxDetail(this.tx);
+            this.detail = yield this.web3c.getTxDetail(this.tx);
             console.log("Transaction detail：" + JSON.stringify(this.detail));
             this.miningFee = this.detail.gas * this.detail.gasPrice;
             this.detail.from = this.detail.from;

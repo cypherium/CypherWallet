@@ -228,7 +228,7 @@ let HttpService = class HttpService extends _http_helper_http_helper_service__WE
         const setting = _http_helper_http_helper_service__WEBPACK_IMPORTED_MODULE_10__["HttpHelperService"].getDefaultSetting(set);
         options.url = _util_util_service__WEBPACK_IMPORTED_MODULE_5__["UtilService"].formatUrl(options.url);
         console.log(JSON.stringify(set));
-        console.log("请求url:" + options.url);
+        console.log("The request url:" + options.url);
         return rxjs__WEBPACK_IMPORTED_MODULE_3__["Observable"].create(observer => {
             // 如果需要缓存，先尝试从sessionStorage中取数据
             if (setting.needCache) {
@@ -241,7 +241,7 @@ let HttpService = class HttpService extends _http_helper_http_helper_service__WE
             this.requestBefore(options, setting);
             this.http.request(options.method, options.url, options).pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["timeout"])(_environments_environment__WEBPACK_IMPORTED_MODULE_7__["environment"].requestTimeout)).subscribe((res) => {
                 setting.needCache && _http_helper_http_helper_service__WEBPACK_IMPORTED_MODULE_10__["HttpHelperService"].setCacheData(options, res); // 如果需要缓存，保存数据到sessionStorage中
-                let code = res.err_no; //出错则弹出提示
+                let code = res.err_no; //An error will prompt you
                 if (code && _global_global_service__WEBPACK_IMPORTED_MODULE_11__["GlobalService"].errorCode[code] && !set.ignoreError) {
                     this.helper.toast(_global_global_service__WEBPACK_IMPORTED_MODULE_11__["GlobalService"].errorCode[code]);
                 }
@@ -278,16 +278,16 @@ let HttpService = class HttpService extends _http_helper_http_helper_service__WE
         });
     }
     /**
-     * 处理请求失败事件
+     * Handle the failed request event
      */
     requestFailedHandle(url, err) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
             const status = err && err.status;
             let msg = yield this.getTranslate('REQUEST_ERROR');
-            // 与后台约定，状态码为400即为业务异常
+            // As agreed with the background, a status code of 400 is a business exception
             if (status === 400) {
                 const errData = err.error;
-                //  401 token无效或过期需要重新登录
+                //  Invalid or expired 401 Token requires re-login
                 if (errData.code === 401) {
                     let error = yield this.getTranslate('PAASSWORD_EXPIRED');
                     this.helper.toast(error);
@@ -544,7 +544,7 @@ let UtilService = class UtilService {
         return url.substring(0, index) + url.substring(index).replace(/\/\/*/g, '/');
     }
     /**
-     * 产生一个随机的32位长度字符串
+     * Produces a random 32-bit length string
      */
     static uuid() {
         let text = '';
@@ -555,7 +555,7 @@ let UtilService = class UtilService {
         return text + new Date().getTime();
     }
     /**
-     * 根据图片路径把图片转为base64字符串格式
+     * Convert the image to base64 string format based on the image path
      */
     static convertImgToBase64(url, callback, width = null, height = null, outputFormat = 'image/jpg') {
         const img = new Image();

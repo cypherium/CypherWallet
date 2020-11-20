@@ -99,7 +99,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _providers_helper_helper_service__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../providers/helper/helper.service */ "./src/app/providers/helper/helper.service.ts");
 /* harmony import */ var _ionic_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/storage */ "./node_modules/@ionic/storage/fesm2015/ionic-storage.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../providers/web3/web3.service */ "./src/app/providers/web3/web3.service.ts");
+/* harmony import */ var _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../providers/web3c/web3c.service */ "./src/app/providers/web3c/web3c.service.ts");
 /* harmony import */ var _environments_environment__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../../environments/environment */ "./src/environments/environment.ts");
 
 
@@ -112,13 +112,13 @@ __webpack_require__.r(__webpack_exports__);
 let PledgePage = class PledgePage {
     constructor(router, 
     // private clipboard: Clipboard,
-    helper, global, storage, web3) {
+    helper, global, storage, web3c) {
         this.router = router;
         this.helper = helper;
         this.global = global;
         this.storage = storage;
-        this.web3 = web3;
-        this.promptDesc = "输入安全密码，确认赎回";
+        this.web3c = web3c;
+        this.promptDesc = "Enter the security password to confirm the redemption";
         this.businessType = "pledge";
         this.businessAmount = "";
         this.ifShowPasswordPrompt = false;
@@ -155,16 +155,16 @@ let PledgePage = class PledgePage {
     }
     updateWalletInfo() {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            // this.walletAmount = await this.web3.getCphBalance(this.wallet.addr);
-            this.web3.getCphBalance(this.wallet.addr, (v) => {
+            // this.walletAmount = await this.web3c.getCphBalance(this.wallet.addr);
+            this.web3c.getCphBalance(this.wallet.addr, (v) => {
                 if (this.walletAmount.toString() !== v.toString() && v !== undefined) {
                     this.walletAmount = v;
                     this.global.gWalletList[this.global.currentWalletIndex].amount = this.walletAmount;
                     this.helper.saveWallet();
                 }
             });
-            //获取抵押余额
-            this.pledgeAmount = yield this.web3.getMortage(this.wallet.addr);
+            //Obtain the balance of pledge
+            this.pledgeAmount = yield this.web3c.getMortage(this.wallet.addr);
             this.getTimes();
         });
     }
@@ -218,14 +218,14 @@ let PledgePage = class PledgePage {
     }
     pledge(privateKey) {
         return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
-            //执行抵押
+            //exe pledge
             let business = this.businessType == 'pledge' ? 'mortgage' : 'redeem';
-            this.web3.pledge(business, this.wallet.addr, +this.businessAmount, privateKey, (err, result) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
+            this.web3c.pledge(business, this.wallet.addr, +this.businessAmount, privateKey, (err, result) => tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function* () {
                 this.ifShowLoading = false;
                 if (!err) {
                     let pledgeSuccess = yield this.helper.getTranslate('PLEDGE_SUCCEED'), drawbackSuccess = yield this.helper.getTranslate('DRAWBACK_SUCCEED');
                     this.helper.toast(this.businessType == 'pledge' ? pledgeSuccess : drawbackSuccess);
-                    //更新账户信息
+                    //Update account information
                     this.updateWalletInfo();
                 }
                 else {

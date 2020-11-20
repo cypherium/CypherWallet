@@ -226,8 +226,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! ../../providers/web3/web3.service */
-    "./src/app/providers/web3/web3.service.ts");
+    /*! ../../providers/web3c/web3c.service */
+    "./src/app/providers/web3c/web3c.service.ts");
     /* harmony import */
 
 
@@ -263,7 +263,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*#__PURE__*/
     function () {
       function CphSendPage(router, // private clipboard: Clipboard,
-      helper, global, storage, web3, nav, platform, keyboard, native, modalController, alertController, fingerAuth) {
+      helper, global, storage, web3c, nav, platform, keyboard, native, modalController, alertController, fingerAuth) {
         var _this = this;
 
         _classCallCheck(this, CphSendPage);
@@ -272,7 +272,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.helper = helper;
         this.global = global;
         this.storage = storage;
-        this.web3 = web3;
+        this.web3c = web3c;
         this.nav = nav;
         this.platform = platform;
         this.keyboard = keyboard;
@@ -280,7 +280,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         this.modalController = modalController;
         this.alertController = alertController;
         this.fingerAuth = fingerAuth;
-        this.range = 18; //let price = await this.web3.cph.gasPrice(); price/1e9;
+        this.range = 18; //let price = await this.web3c.cph.gasPrice(); price/1e9;
 
         this.wallet = {};
         this.amount = 0;
@@ -435,7 +435,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               while (1) {
                 switch (_context2.prev = _context2.next) {
                   case 0:
-                    this.web3.getCphBalance(this.wallet.addr, function (v) {
+                    this.web3c.getCphBalance(this.wallet.addr, function (v) {
                       if (_this4.amount.toString() !== v.toString() && v !== undefined) {
                         _this4.amount = v;
                         _this4.global.gWalletList[_this4.global.currentWalletIndex].amount = _this4.amount;
@@ -500,7 +500,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                                   }
 
                                   _context4.next = 3;
-                                  return this.web3.isCphAddr(url);
+                                  return this.web3c.isCphAddr(url);
 
                                 case 3:
                                   result = _context4.sent;
@@ -590,7 +590,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   case 8:
                     modal.onDidDismiss().then(function (s) {
                       if (typeof s.data !== 'undefined' && s.data.dismissed !== false) {
-                        //获取私钥
+                        //get private key
                         setTimeout(function () {
                           return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this7, void 0, void 0,
                           /*#__PURE__*/
@@ -743,7 +743,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                   case 0:
                     this.addressError = "";
                     _context9.next = 3;
-                    return this.web3.isCphAddr(this.receiveAddress.toLowerCase());
+                    return this.web3c.isCphAddr(this.receiveAddress.toLowerCase());
 
                   case 3:
                     result = _context9.sent;
@@ -847,7 +847,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                 switch (_context12.prev = _context12.next) {
                   case 0:
                     address = this.receiveAddress.toLowerCase().replace('cph', '0x');
-                    this.web3.transferCph(this.wallet.addr, address, this.payAmount, this.range, privatekey, function (err, tx) {
+                    this.web3c.transferCph(this.wallet.addr, address, this.payAmount, this.range, privatekey, function (err, tx) {
                       return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this8, void 0, void 0,
                       /*#__PURE__*/
                       regeneratorRuntime.mark(function _callee11() {
@@ -868,10 +868,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                                 navigationExtras = {
                                   state: {
                                     tx: tx,
-                                    status: 1 //0-成功，1:打包中，2:失败
+                                    status: 1 //0- success, 1: packed, 2: failure
 
                                   }
-                                }; //前往交易结果页
+                                }; // Go to the transaction results page
 
                                 this.router.navigate(['transaction-result'], navigationExtras);
                                 _context11.next = 23;

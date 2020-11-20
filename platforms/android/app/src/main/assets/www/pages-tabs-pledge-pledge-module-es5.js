@@ -200,8 +200,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 
     var _providers_web3_web3_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(
-    /*! ../../../providers/web3/web3.service */
-    "./src/app/providers/web3/web3.service.ts");
+    /*! ../../../providers/web3c/web3c.service */
+    "./src/app/providers/web3c/web3c.service.ts");
     /* harmony import */
 
 
@@ -213,15 +213,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /*#__PURE__*/
     function () {
       function PledgePage(router, // private clipboard: Clipboard,
-      helper, global, storage, web3) {
+      helper, global, storage, web3c) {
         _classCallCheck(this, PledgePage);
 
         this.router = router;
         this.helper = helper;
         this.global = global;
         this.storage = storage;
-        this.web3 = web3;
-        this.promptDesc = "输入安全密码，确认赎回";
+        this.web3c = web3c;
+        this.promptDesc = "Enter the security password to confirm the redemption";
         this.businessType = "pledge";
         this.businessAmount = "";
         this.ifShowPasswordPrompt = false;
@@ -277,18 +277,18 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               while (1) {
                 switch (_context.prev = _context.next) {
                   case 0:
-                    // this.walletAmount = await this.web3.getCphBalance(this.wallet.addr);
-                    this.web3.getCphBalance(this.wallet.addr, function (v) {
+                    // this.walletAmount = await this.web3c.getCphBalance(this.wallet.addr);
+                    this.web3c.getCphBalance(this.wallet.addr, function (v) {
                       if (_this2.walletAmount.toString() !== v.toString() && v !== undefined) {
                         _this2.walletAmount = v;
                         _this2.global.gWalletList[_this2.global.currentWalletIndex].amount = _this2.walletAmount;
 
                         _this2.helper.saveWallet();
                       }
-                    }); //获取抵押余额
+                    }); //Obtain the balance of pledge
 
                     _context.next = 3;
-                    return this.web3.getMortage(this.wallet.addr);
+                    return this.web3c.getMortage(this.wallet.addr);
 
                   case 3:
                     this.pledgeAmount = _context.sent;
@@ -429,9 +429,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               while (1) {
                 switch (_context4.prev = _context4.next) {
                   case 0:
-                    //执行抵押
+                    //exe pledge
                     business = this.businessType == 'pledge' ? 'mortgage' : 'redeem';
-                    this.web3.pledge(business, this.wallet.addr, +this.businessAmount, privateKey, function (err, result) {
+                    this.web3c.pledge(business, this.wallet.addr, +this.businessAmount, privateKey, function (err, result) {
                       return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](_this3, void 0, void 0,
                       /*#__PURE__*/
                       regeneratorRuntime.mark(function _callee3() {
@@ -458,7 +458,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
                               case 7:
                                 drawbackSuccess = _context3.sent;
-                                this.helper.toast(this.businessType == 'pledge' ? pledgeSuccess : drawbackSuccess); //更新账户信息
+                                this.helper.toast(this.businessType == 'pledge' ? pledgeSuccess : drawbackSuccess); //Update account information
 
                                 this.updateWalletInfo();
                                 _context3.next = 35;

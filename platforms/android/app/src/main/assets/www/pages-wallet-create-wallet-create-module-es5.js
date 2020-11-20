@@ -284,7 +284,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
                     return _context.abrupt("return");
 
                   case 15:
-                    // let wallet = ethers.Wallet.createRandom();
+                    // let wallet = cyphers.Wallet.createRandom();
                     wallet = this.Wallet.createRandom();
                     navigationExtras = {
                       state: {

@@ -3,7 +3,7 @@ import { GlobalService } from '../../../providers/global/global.service';
 import { HelperService } from '../../../providers/helper/helper.service';
 import { Storage } from '@ionic/storage';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
-import { Web3Service } from '../../../providers/web3/web3.service';
+import { Web3Service } from '../../../providers/web3c/web3c.service';
 import { environment } from '../../../../environments/environment';
 
 @Component({
@@ -34,7 +34,7 @@ export class PledgePage implements OnInit {
         private helper: HelperService,
         private global: GlobalService,
         private storage: Storage,
-        private web3: Web3Service
+        private web3c: Web3Service
     ) { }
 
     ngOnInit() {
@@ -61,8 +61,8 @@ export class PledgePage implements OnInit {
     }
 
     async updateWalletInfo() {
-        // this.walletAmount = await this.web3.getCphBalance(this.wallet.addr);
-        this.web3.getCphBalance(this.wallet.addr, (v) => {
+        // this.walletAmount = await this.web3c.getCphBalance(this.wallet.addr);
+        this.web3c.getCphBalance(this.wallet.addr, (v) => {
             if (this.walletAmount.toString() !== v.toString() && v !== undefined) {
                 this.walletAmount = v;
                 this.global.gWalletList[this.global.currentWalletIndex].amount = this.walletAmount;
@@ -70,7 +70,7 @@ export class PledgePage implements OnInit {
             }
         });
         //Obtain the balance of pledge
-        this.pledgeAmount = await this.web3.getMortage(this.wallet.addr);
+        this.pledgeAmount = await this.web3c.getMortage(this.wallet.addr);
         this.getTimes();
     }
 
@@ -129,7 +129,7 @@ export class PledgePage implements OnInit {
     async pledge(privateKey) {
         //exe pledge
         let business = this.businessType == 'pledge' ? 'mortgage' : 'redeem';
-        this.web3.pledge(business, this.wallet.addr, +this.businessAmount, privateKey, async (err, result) => {
+        this.web3c.pledge(business, this.wallet.addr, +this.businessAmount, privateKey, async (err, result) => {
             this.ifShowLoading = false;
             if (!err) {
                 let pledgeSuccess = await this.helper.getTranslate('PLEDGE_SUCCEED'),
