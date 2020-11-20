@@ -9,31 +9,31 @@ The following is an example of a MAC computer to introduce the environment insta
 1. The node. Directly to/Node's official website (https://nodejs.org/en/download/), please download the installation package to corresponding.
 When the installation is complete, it can be run in the terminal
 
-` ` `
+```
 node -v
 v10.18.1
 npm -v
 6.13.4
-` ` `
+```
 
 To test if the installation is successful, Node must be v10!!
 
 2. ionic, installation of cordova
 
-` ` `
+```
 npm install -g ionic@latest
 npm intall -g cordova@latest
 
-` ` `
+```
 
 After successful installation,
 
-` ` `
+```
 ionic -v
 cordova -v
 npm i
 npm i @cypherium/web3c
-` ` `
+```
 
 The version number should display correctly.
 
@@ -62,22 +62,22 @@ Web-based debugging
 
 Running ionic Serve opens the link automatically in the browser and all changes are hot-updated to the browser without a manual refresh.
 
-` ` `
+```
 Build: ionic cordova build browser  
-` ` `
+```
 Because the > back-end interface is not currently configured across domains, front-end access is required to turn off chrome's security Settings. Exit Chrome completely, and then start using the ** -opena "Google Chrome" --args --disable-web-security --user-data-dir _** command line
 
 Debugging based on android Studio
 
 If you need to debug your plug-in, use native debugging. The commands to add and compile the project are as follows:
 
-` ` `
+```
 Add: ionic cordova platform add android@latest    
 Delete: ionic cordova platform rm android   
 Check: ionic cordova platform ls   
 Build: ionic cordova build android --prod --release   
 Run to real machine: ionic cordova run android   
-` ` `
+```
 
 You can open the project directory under the project directory, platforms/ android directory, with android Studio, and then conduct android debugging
 
@@ -85,11 +85,11 @@ Xcode-based debugging
 
 If you need to debug your plug-in, use native debugging. The commands to add and compile the project are as follows:
 
-` ` `
+```
 Add: ionic cordova platform add ios@latest   
 Delete: ionic cordova platform rm ios   
 Check: ionic cordova platform ls  
 Build: ionic cordova build ios --prod  
 Run to real machine: ionic cordova run ios  
-` ` `
+```
 
