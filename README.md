@@ -1,101 +1,95 @@
 # City Charge
 
-本项目是基于 cordova 框架开发的跨平台 App，可编译至 android, ios, web 等平台。cordova 是一个跨平台开发框架，通过插件来提供原生能力，ui 和逻辑部分通过 typescript 实现。
+This project is a cross-platform App developed based on the cordova Framework, which can be compiled to android, ios, Web and other platforms. cordova is a cross-platform development framework that provides native capabilities through plug-ins, and the UI and logic parts via Typescript.
 
-# 环境安装
+# Environment Installation
 
-以下以 mac 电脑为例，介绍本项目的环境安装过程。如果是其他系统，请上网查询相关软件的安装方式
+The following is an example of a MAC computer to introduce the environment installation process of this project. If it is another system, please check the installation method of relevant software online
 
-1. node。请直接前往[Node 官网](https://nodejs.org/en/download/)下载对应的安装包来安装。
-   安装完成以后，可在终端运行
-
-```
-	node -v
-    v10.18.1
-	npm -v
-    6.13.4
-```
-
-来测试是否安装成功,node 必须v10版本！！
-
-2. ionic, cordova 的安装
+1. The node. Directly to/Node's official website (https://nodejs.org/en/download/), please download the installation package to corresponding.
+When the installation is complete, it can be run in the terminal
 
 ```
-    npm install -g ionic@latest
-    npm intall -g cordova@latest
+node -v
+v10.18.1
+npm -v
+6.13.4
 ```
 
-安装成功后，
+To test if the installation is successful, Node must be v10!!
+
+2. ionic, installation of cordova
 
 ```
-    ionic -v
-    cordova -v
+npm install -g ionic@latest
+npm intall -g cordova@latest
+
 ```
 
-应当可以正确显示版本号。
+After successful installation,
 
-3. Android Studio 的安装。请前往[Android Studio 官网](https://developer.android.com/studio/?&gclid=EAIaIQobChMI4Zegt8nj5QIVjamWCh38FQLjEAAYASAAEgL6Q_D_BwE)下载并安装，打开后，点击菜单 Tools => SDK Manager，下载并安装 Android-28 的 SDK。
+```
+ionic -v
+cordova -v
+npm i
+npm i @cypherium/web3c
+```
 
-4. Xcode 的安装，直接在应用商店搜索 xcode 即可。
-5. 调试前修改IP地址，src/environments/environment.prod.ts。
+The version number should display correctly.
+
+3. Installation of android Studio Please refer to [android Studio website] (HTTP: / / https://developer.android.com/studio/? & gclid = EAIaIQobChMI4Zegt8nj5QIVjamWCh38FQLjEAAYASAAEgL6Q_D_BwE) download and install, after opening, click on the Tools menu = > the SDK Manager, download and install the android SDK - 28.
+
+4. Xcode installation: search Xcode directly in the app Store.
+5. Modify IP address before debugging, SRC/environments/environment. Prod. Ts.
 export const environment = {
-  production: true,
-  requestTimeout: 15000,
-  appServerUrl: "", //APPServer API。
-  cypherium: {
-    provider: 'http://127.0.0.1:18002',//改为blockchain服务器地址和端口号
-    pledgeContractAddr: '0x0000000000000000000000000000000000000081',
-    pledgeContractAbi: null,
-    privateKey: ''
-  }
+production: true,
+requestTimeout: 15000,
+AppServerUrl: "", //APPServer API.
+cypherium: {
+Provider: 'http://127.0.0.1:18004',// change to blockchain server address and port number
+pledgeContractAddr: '0x0000000000000000000000000000000000000081',
+pledgeContractAbi: null,
+privateKey: ''
+}
 };
 
 
-# 工程调试
+# Project commissioning
 
-工程调试包括 web, android, ios。
+Project debugging including Web, android, ios.
 
-## 基于 web 的调试
+Web-based debugging
 
-运行 ionic serve，会自动在浏览器中打开链接，并且所有改动会热更新到浏览器上，无需手动刷新。
-
-```
-编译工程 ionic cordova build browser
-```
-> 由于目前后端接口未配置跨域，因此前端访问需关闭 chrome 的安全设置。具体方式为先彻底退出 chrome，然后用 **_ open -a "Google Chrome" --args --disable-web-security --user-data-dir _** 的命令行方式启动
-
-## 基于 Android Studio 的调试
-
-如果需要调试插件，则要使用原生调试。工程添加和编译的命令如下：
+Running ionic Serve opens the link automatically in the browser and all changes are hot-updated to the browser without a manual refresh.
 
 ```
-    添加工程 ionic cordova platform add android@latest
-    删除工程 ionic cordova platform rm android
-    查看工程 ionic cordova platform ls
-    编译工程 ionic cordova build android --prod --release
-    运行到设备 ionic cordova run android
+Build: ionic cordova build browser  
 ```
+Because the > back-end interface is not currently configured across domains, front-end access is required to turn off chrome's security Settings. Exit Chrome completely, and then start using the ** -opena "Google Chrome" --args --disable-web-security --user-data-dir _** command line
 
-> 一般来说，发布工程的 release 版本需要自动签名，目前已经包含了自动签名的信息，如果删除了工程后重新添加，无比把主工程目录下的 release-signing.properties 和 gmobbi.keystore 拷贝到 platforms/android 下
+Debugging based on android Studio
 
-> 目前最新发布，谷歌要求 Android-28 以上，所以这里用 latest，或者直接指定 android@8.0.0 也可以
-
-然后用 Android studio 打开项目目录下的工程目录，即 platforms/android 目录，即可进行 android 调试
-
-## 基于 xcode 的调试
-
-如果需要调试插件，则要使用原生调试。工程添加和编译的命令如下：
+If you need to debug your plug-in, use native debugging. The commands to add and compile the project are as follows:
 
 ```
-    添加工程 ionic cordova platform add ios@latest
-    删除工程 ionic cordova platform rm ios
-    查看工程 ionic cordova platform ls
-    编译工程 ionic cordova prepare ios --prod
+Add: ionic cordova platform add android@latest    
+Delete: ionic cordova platform rm android   
+Check: ionic cordova platform ls   
+Build: ionic cordova build android --prod --release   
+Run to real machine: ionic cordova run android   
 ```
 
-ios 的发布需要用到 xcode, 包括几种版本：
+You can open the project directory under the project directory, platforms/ android directory, with android Studio, and then conduct android debugging
 
-1. dev
-   如果只是在本地调试，则直接用 xcode 打开工程，然后 run 到手机上即可。
-2. 发布 ad-hoc。这时需要点击 xcode 的菜单 product->archieve，打包以后选择发布到 ad-hoc
-3. 发布 appstore。2 生成的 archieve 在发布的时候选择 appstore 即可。
+Xcode-based debugging
+
+If you need to debug your plug-in, use native debugging. The commands to add and compile the project are as follows:
+
+```
+Add: ionic cordova platform add ios@latest   
+Delete: ionic cordova platform rm ios   
+Check: ionic cordova platform ls  
+Build: ionic cordova build ios --prod  
+Run to real machine: ionic cordova run ios  
+```
+
