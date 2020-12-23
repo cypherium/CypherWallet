@@ -4,7 +4,7 @@ import { Storage } from "@ionic/storage";
 import { GlobalService } from "../global/global.service";
 
 import { Observable } from 'rxjs';
-import * as Wallet from 'ethereumjs-wallet';
+import * as Wallet from 'cypheriumjs-wallet';
 import * as cyphers from 'ethers';
 import { TranslateService } from "@ngx-translate/core";
 
@@ -38,9 +38,11 @@ export class HelperService {
     }
 
     addWallet(w, password) {
+        console.log("addWallet1");
         if (!w.keystore) {
             w.keystore = JSON.stringify(this.exportKeystore(w.privateKey, password));
         }
+        console.log("addWallet2");
         let wallet = {
             // name: w.walletName || this.global.projectName + '-wallet-' + w.address.slice(-4),
             name: w.name || this.global.projectName + '-' + w.address.slice(-4),
@@ -49,9 +51,13 @@ export class HelperService {
             keystore: w.keystore,
             privateKey:w.privateKey
         };
+        console.log("addWallet3");
         this.global.gWalletList.unshift(wallet);
+        console.log("addWallet4");
         this.global.currentWalletIndex = 0;
+        console.log("addWallet5");
         this.saveWallet();
+        console.log("addWallet6");
     }
 
     async getTranslate(key) {
@@ -108,23 +114,29 @@ export class HelperService {
     }
 
     exportKeystore(privateKey, password) {
+        console.log("exportKeystore1");
         privateKey = privateKey.replace('0x', '');
         if (typeof privateKey == 'string') {
             privateKey = Buffer.from(privateKey, 'hex');
         }
+        console.log("exportKeystore2");
         console.log(privateKey)
+        console.log("exportKeystore3");
         let wallet = Wallet.fromPrivateKey(privateKey);
+        Wallet.privateKey = privateKey;
+        console.log("exportKeystore4");
         //生成keystore
         let keystore = wallet.toV3(password, {
             n: 1024
         });
+        console.log("exportKeystore5");
         return keystore;
     }
 
     /**
      * decryptPrivateKey: Restore the wallet according to the keystore and password
-     * @param keystore 
-     * @param password 
+     * @param keystore
+     * @param password
      */
     decryptPrivateKey(keystore, password) {
         let privateKey = null, publicKey = null;
