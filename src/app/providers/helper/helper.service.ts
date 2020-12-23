@@ -4,17 +4,15 @@ import { Storage } from "@ionic/storage";
 import { GlobalService } from "../global/global.service";
 
 import { Observable } from 'rxjs';
-import * as Wallet from 'ethereumjs-wallet';
-import * as ethers from 'ethers';
+import * as Wallet from 'cypheriumjs-wallet';
+import * as cyphers from 'ethers';
 import { TranslateService } from "@ngx-translate/core";
 
 // import { Buffer } from 'safe-buffer';
 
 declare var cordova;
 declare var window;
-/**
- * 帮助类：存放和业务有关的公共方法
- */
+
 @Injectable({
     providedIn: 'root'
 })
@@ -40,19 +38,26 @@ export class HelperService {
     }
 
     addWallet(w, password) {
+        console.log("addWallet1");
         if (!w.keystore) {
             w.keystore = JSON.stringify(this.exportKeystore(w.privateKey, password));
         }
+        console.log("addWallet2");
         let wallet = {
             // name: w.walletName || this.global.projectName + '-wallet-' + w.address.slice(-4),
             name: w.name || this.global.projectName + '-' + w.address.slice(-4),
             addr: w.address,
             mnemonic: w.mnemonic,
-            keystore: w.keystore
+            keystore: w.keystore,
+            privateKey:w.privateKey
         };
+        console.log("addWallet3");
         this.global.gWalletList.unshift(wallet);
+        console.log("addWallet4");
         this.global.currentWalletIndex = 0;
+        console.log("addWallet5");
         this.saveWallet();
+        console.log("addWallet6");
     }
 
     async getTranslate(key) {
@@ -66,12 +71,12 @@ export class HelperService {
 
     async handleText(res, callback) {
         // this.native.scan().then((res: any) => {
-        console.log("扫描结果：" + res);
+        console.log("scan result：" + res);
         if (!res) {
             return;
         }
         res = res.toLowerCase();
-        //获取scheme, 对象，方法，参数
+        //Gets Scheme, objects, methods, and parameters
         let matches = res.match(/(.+)\:\/\/([^/]+)\/([^/]+)\/([^/]+)/);
         if (!res) {
             return;
@@ -93,54 +98,45 @@ export class HelperService {
                 }
             }
         }
-        // let addr = "";
-        // let str = res.slice('transfer://'.length);
-        // //转账
-        // let index = str.indexOf('?');
-        // if (index == -1) {
-        //     addr = str.toLowerCase();
-        // } else {
-        //     addr = "cph" + str.toLowerCase().slice(0, index);
-        // }
-        // let params: NavigationExtras = {
-        //     state: {
-        //         address: addr
-        //     }
-        // };
-        // this.router.navigate(['cph-send'], params);
 
     }
 
     saveWallet() {
         // this.currentWallet = w;
         this.storage.set('localwalletindex', this.global.currentWalletIndex);
-        //缓存钱包列表，否则钱包将丢失
+        //Cache the wallet list, otherwise the wallet will be lost
         this.storage.set('localwallet', JSON.stringify(this.global.gWalletList));
     }
 
     generateMnemonicWallet(privateKey) {
-        let wallet = new ethers.Wallet(privateKey);
+        let wallet = new cyphers.Wallet(privateKey);
         return wallet;
     }
 
     exportKeystore(privateKey, password) {
+        console.log("exportKeystore1");
         privateKey = privateKey.replace('0x', '');
         if (typeof privateKey == 'string') {
             privateKey = Buffer.from(privateKey, 'hex');
         }
+        console.log("exportKeystore2");
         console.log(privateKey)
+        console.log("exportKeystore3");
         let wallet = Wallet.fromPrivateKey(privateKey);
+        Wallet.privateKey = privateKey;
+        console.log("exportKeystore4");
         //生成keystore
         let keystore = wallet.toV3(password, {
             n: 1024
         });
+        console.log("exportKeystore5");
         return keystore;
     }
 
     /**
-     * decryptPrivateKey: 根据keystore和密码，还原钱包
-     * @param keystore 
-     * @param password 
+     * decryptPrivateKey: Restore the wallet according to the keystore and password
+     * @param keystore
+     * @param password
      */
     decryptPrivateKey(keystore, password) {
         let privateKey = null, publicKey = null;
@@ -183,43 +179,30 @@ export class HelperService {
 
 
 
-    /**
-     * 是否真机环境
-     */
+
     isMobile(): boolean {
         return this.IsMobile;
     }
 
-    /**
-     * 是否真机环境
-     */
+
     isNotMobile(): boolean {
         return !this.isMobile();
     }
 
 
-    /**
-     * 是否android真机环境
-     */
     isAndroid(): boolean {
         return this.isMobile() && this.platform.is('android');
     }
 
-    /**
-     * 是否ios真机环境
-     */
     isIos(): boolean {
         return this.isMobile() && (this.platform.is('ios') || this.platform.is('ipad') || this.platform.is('iphone'));
     }
 
 
-    /**
-     * 断言是否真机环境
-     */
     assertIsMobile(): void {
         if (this.isNotMobile()) {
-            this.toast('请使用真机调试');
-            throw new Error('请使用真机调试');
+            this.toast('Please use real machine debugging');
+            throw new Error('Please use real machine debugging');
         }
     }
 
@@ -228,39 +211,32 @@ export class HelperService {
     }
 
     /**
-     * tip 开发中
+     * tip in development
      */
     tipDev() {
-        this.toast('开发中');
+        this.toast('in development');
     }
 
-    /**
-     * alert弹框，默认只有确定按钮，当存在取消回调函数则会显示取消按钮
-     * 注：如果存在打开的alert则不再打开
-     * @param header 需要显示的title
-     * @param message 需要显示的内容
-     * @param okBackFun 成功回调
-     * @param cancelBtnFun 失败回调
-     */
+
     alert(header = '', message = '', okBackFun = null, cancelBtnFun = null): void {
-        // alertController.create是异步方法，所以使用AlertIsExist标志是否打开
+        // alertController.create is an asynchronous method, so use AlertIsExist to alert if the flag is turned on
         if (this.AlertIsExist) {
-            console.log('alert已经存在，禁止重复打开');
-            setTimeout(() => { // alert关闭的可能性比较多，不止点击确定或取消按钮
+            console.log('alert is already exists. Do not open it again');
+            setTimeout(() => { // alert is more likely to close than click ok or cancel
                 this.AlertIsExist = false;
             }, 10000);
             return;
         }
         this.AlertIsExist = true;
         const buttons = [{
-            text: '确定', handler: () => {
+            text: 'confirm', handler: () => {
                 this.AlertIsExist = false;
                 okBackFun && okBackFun();
             }
         }];
         if (cancelBtnFun) {
             const cancelBtn = {
-                text: '取消',
+                text: 'cancel',
                 role: 'cancel',
                 handler: () => {
                     this.AlertIsExist = false;
@@ -269,13 +245,7 @@ export class HelperService {
             };
             buttons.unshift(cancelBtn);
         }
-        //暂时忽略http请求失败
-        // this.alertController.create({
-        //     header: header,
-        //     message: message,
-        //     backdropDismiss: false,
-        //     buttons: buttons
-        // }).then(alert => alert.present());
+
         console.log('http requset error:' + message);
     }
 
@@ -284,11 +254,11 @@ export class HelperService {
         this.AlertIsExist = false;
     }
 
-    /**
-     * 显示提示信息
-     * 建议优先调用 NativeService.toast
-     */
-    toast(message: string = '操作成功', duration: number = 2500, position: 'top' | 'bottom' | 'middle' = 'bottom'): void {
+       /**
+        * Display the prompt message
+        * It is recommended to call Nativeservice. toast first
+        */
+    toast(message: string = 'operate success', duration: number = 2500, position: 'top' | 'bottom' | 'middle' = 'bottom'): void {
         const opts = {
             message, duration,
             color: 'dark',
@@ -300,9 +270,7 @@ export class HelperService {
         this.toastController.create(opts).then(toast => toast.present());
     }
 
-    /**
-     * 统一调用此方法显示loading
-     */
+
     showLoading(message: string = ''): void {
         if (this.LoadingIsExist) {
             return;
@@ -313,7 +281,7 @@ export class HelperService {
             duration: 50000,
             message
         }).then(loading => {
-            // loadingController.create异步方法，调用loading.present()前有可能已经调用hideLoading方法
+            // loadingController.create,It is possible that the hideLoading method has been called before calling load.present ()
             if (this.LoadingIsExist) {
                 loading.present();
                 this.Loading = loading;
@@ -323,9 +291,7 @@ export class HelperService {
         });
     }
 
-    /**
-     * 关闭loading
-     */
+
     hideLoading(): void {
         this.LoadingIsExist = false;
         if (this.Loading) {

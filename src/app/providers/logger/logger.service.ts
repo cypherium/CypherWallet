@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 
-/**
- * 帮助类：存放和业务有关的公共方法
- */
+
 @Injectable({
   providedIn: 'root'
 })
@@ -16,8 +14,8 @@ export class LoggerService {
   }
 
   static http(err: any, data) {
-    console.log({ ...data }); // 上报日志
-    LoggerService.error(err, '请求出错');
+    console.log({ ...data }); // upload log
+    LoggerService.error(err, 'request error');
   }
 
 }

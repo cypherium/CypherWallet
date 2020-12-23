@@ -3,12 +3,13 @@ import { GlobalService } from '../../providers/global/global.service';
 import { HelperService } from '../../providers/helper/helper.service';
 import { Storage } from '@ionic/storage';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
-import { Web3Service } from '../../providers/web3/web3.service';
+import { Web3Service } from '../../providers/web3c/web3c.service';
 import { NativeService } from '../../providers/native/native.service';
 import { Platform, NavController, AlertController } from '@ionic/angular';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
 import { ModalController } from '@ionic/angular';
 import { PincodeModalPage } from '../pincode-modal/pincode-modal.page';
+import { FingerprintAIO ,FingerprintOptions} from '@ionic-native/fingerprint-aio/ngx';
 
 @Component({
     selector: 'app-cph-send',
@@ -16,7 +17,8 @@ import { PincodeModalPage } from '../pincode-modal/pincode-modal.page';
     styleUrls: ['./cph-send.page.scss'],
 })
 export class CphSendPage implements OnInit {
-    range = 18;     //let price = await this.web3.cph.gasPrice(); price/1e9;
+    fingerprintOptions : FingerprintOptions;
+    range = 18;     //let price = await this.web3c.cph.gasPrice(); price/1e9;
     wallet: any = {};
     amount = 0;
     receiveAddress = "";
@@ -37,29 +39,44 @@ export class CphSendPage implements OnInit {
         private helper: HelperService,
         private global: GlobalService,
         private storage: Storage,
-        private web3: Web3Service,
+        private web3c: Web3Service,
         public nav: NavController,
         private platform: Platform,
         private keyboard: Keyboard,
         private native: NativeService,
         public modalController: ModalController,
         public alertController: AlertController,
+        private fingerAuth: FingerprintAIO
     ) { 
         let state = this.router.getCurrentNavigation().extras.state;
         if (state) {
             this.receiveAddress = state.address;
         }
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
-        if (!this.wallet.payment) {
-            this.presentAlertConfirm();
-        }
+        // if (!this.wallet.payment) {
+        //     this.presentAlertConfirm();
+        // }
         this.amount = this.wallet.amount || 0;
         this.updateWalletInfo();
         this.interval = setInterval(() => {
             this.updateWalletInfo();
         }, 10000);
     }
-
+    public showFingerprintAuthDlg(){
+        this.fingerAuth.isAvailable().then(result =>{
+          console.log('showFingerprintAuthDlg'+result)
+            this.fingerAuth.show({
+              // clientId: 'fingerprint-Demo',
+              // clientSecret: 'password', //Only necessary for Android
+              // disableBackup:true  //Only for Android(optional)
+            //   title:"face id",
+            //   subtitle:"face id test",
+              description: "Pay with biometric"
+          })
+            .then((result: any) => console.log('fingerAuth.show'+result))
+            .catch((error: any) => console.log('fingerAuth.show error'+error.message));
+        }).catch((error: any) => console.log('showFingerprintAuthDlg error'+error.message));
+    }
     async presentAlertConfirm() {
         let header = await this.helper.getTranslate('PAYMENT_PASSWORD');
         let message = await this.helper.getTranslate('PAYMENT_PASSWORD_M');
@@ -90,9 +107,9 @@ export class CphSendPage implements OnInit {
         await alert.present();
     }
 
-    back() {
-        this.nav.navigateBack('/wallet');
-    }
+    // back() {
+    //     this.nav.navigateBack('/wallet');
+    // }
 
     ngOnDestroy() {
         if (this.interval) {
@@ -109,7 +126,7 @@ export class CphSendPage implements OnInit {
     }
 
     async updateWalletInfo() {
-        this.web3.getCphBalance(this.wallet.addr, (v) => {
+        this.web3c.getCphBalance(this.wallet.addr, (v) => {
             if (this.amount.toString() !== v.toString() && v !== undefined) {
                 this.amount = v;
                 this.global.gWalletList[this.global.currentWalletIndex].amount = this.amount;
@@ -120,7 +137,7 @@ export class CphSendPage implements OnInit {
 
     async ngOnInit() {
         // console.log(this.global.gWalletList, this.global.currentWalletIndex);
-        //获取余额
+        // get balance
         // let state = this.router.getCurrentNavigation().extras.state;
         // console.log("state" + state)
         // if (state) {
@@ -134,7 +151,7 @@ export class CphSendPage implements OnInit {
             console.log("SCAN RESULT：", res);
             this.helper.handleText(res.text, async (url, method) => {
                 if (method == 'transfer') {
-                    let result = await this.web3.isCphAddr(url);
+                    let result = await this.web3c.isCphAddr(url);
                     if (result == 0) {
                         this.receiveAddress = url;
                     } else {
@@ -146,15 +163,15 @@ export class CphSendPage implements OnInit {
             })
         }, res => {
             // if (res == 1) {
-            //     //临时拒绝
+            //
 
             // } else if (res == 0) {
-            //     //永久拒绝
+            //
             //     this.ifShowAlert = true;
-            //     this.alertTitle = "权限拒绝";
-            //     this.alertDesc = "您已拒绝摄像头权限，请前往应用管理打开";
+            //     this.alertTitle = "permisson deny";
+            //     this.alertDesc = "You have denied camera access, please go to application management open";
             // } else {
-            //     this.helper.toast("扫码失败");
+            //     this.helper.toast("Sweep code failure");
             // }
         })
     }
@@ -175,13 +192,13 @@ export class CphSendPage implements OnInit {
         await modal.present();
         modal.onDidDismiss().then((s) => {
             if (typeof(s.data) !== 'undefined' && s.data.dismissed !== false) {
-                //获取私钥
+                //get private key
                 setTimeout(async () => {
                     let ret = this.helper.decryptPrivateKey(this.wallet.payment, s.data.dismissed);
                     if (ret.flag) {
                         this.transfer(ret.privateKey);
                     } else {
-                        //密码错误
+                        //password error
                         let error = await this.helper.getTranslate('PAYMENT_PASSWORD_ERROR');
                         this.helper.toast(error);
                     }
@@ -235,7 +252,7 @@ export class CphSendPage implements OnInit {
     async checkAddr() {
         this.addressError = "";
 
-        let result = await this.web3.isCphAddr(this.receiveAddress.toLowerCase());
+        let result = await this.web3c.isCphAddr(this.receiveAddress.toLowerCase());
         if (result == -1) {
             let message = await this.helper.getTranslate('ADDRESS_EMPTY');
             this.addressError = message;
@@ -258,26 +275,54 @@ export class CphSendPage implements OnInit {
         if (this.addressError) {
             return;
         }
-        //引导用户输入密码
+        //Direct the user to enter a password
         // this.ifShowPasswordPrompt = true;
-        //引导用户输入支付密码
-        this.presentModal();
+
+        //Direct the user to enter a payment password PinCode
+        // this.presentModal();
+
+        //Guide users to use face recognition or fingerprint recognition
+        // this.wallet.isAskForBiometric
+        // this.fingerAuth.isAvailable().then(result =>{
+        //     console.log('showFingerprintAuthDlg'+result)
+        //       this.fingerAuth.show({
+        //         // clientId: 'fingerprint-Demo',
+        //         // clientSecret: 'password', //Only necessary for Android
+        //         // disableBackup:true  //Only for Android(optional)
+        //       //   title:"face id",
+        //       //   subtitle:"face id test",
+        //         description: "Pay with biometric"
+        //     })
+        //       .then((result: any) => {
+        //           console.log('fingerAuth.show'+result);
+        //         })
+        //       .catch((error: any) => {
+        //           console.log('fingerAuth.show error'+error.message);
+        //         //Direct the user to enter a password
+        //         this.ifShowPasswordPrompt = true;
+        //       });
+        //   }).catch((error: any) => {
+        //       console.log('showFingerprintAuthDlg error'+error.message);
+        //     //Direct the user to enter a password
+        //     this.ifShowPasswordPrompt = true;
+        // });
+
     }
 
     async transfer(privatekey) {
         let address = this.receiveAddress.toLowerCase().replace('cph', '0x');
-        this.web3.transferCph(this.wallet.addr, address, this.payAmount, this.range, privatekey, async (err, tx) => {
+        this.web3c.transferCph(this.wallet.addr, address, this.payAmount, this.range, privatekey, async (err, tx) => {
             console.log("Transaction callback.......", err, tx);
             if (err === null) {
                 // resolve(tx);
-                // this.helper.toast("交易成功");
+                // this.helper.toast("transaction success");
                 let navigationExtras = {
                     state: {
                         tx: tx,
-                        status: 1 //0-成功，1:打包中，2:失败
+                        status: 1 //0- success, 1: packed, 2: failure
                     }
                 };
-                //前往交易结果页
+                // Go to the transaction results page
                 this.router.navigate(['transaction-result'], navigationExtras);
             } else {
                 let message = await this.helper.getTranslate('TRANSACTION_FAILED');

@@ -27,7 +27,7 @@
                 </div>
             </div>
             <div class="input-wrapper">
-                <input type="number" (keyup)="checkAmount()" (keypress)= "hideKeyboard($event)" [(ngModel)]="payAmount"
+                <input type="number" inputmode='decimal' (keyup)="checkAmount()" (keypress)= "hideKeyboard($event)" [(ngModel)]="payAmount"
                     placeholder="{{ 'INPUT_AMOUNT_TIPS' | translate }}">
             </div>
         </div>
@@ -66,6 +66,8 @@
         [ngClass]="(!payAmount || addressError || amountError || !receiveAddress || !amount) ? 'disabled' : ''"
         (click)="transferConfirm()" translate="">
         CONFIRM</div>
+        <!-- <div>    <ion-button (click)="showFingerprintAuthDlg()">show fingerprint auth dialog  </ion-button>
+        </div> -->
 </ion-content>
 
 <app-generate-privatekey *ngIf="ifShowPasswordPrompt" promptDesc="{{ 'INPUT_PASSWORD_TIPS' | translate }}"

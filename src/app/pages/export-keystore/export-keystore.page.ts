@@ -41,13 +41,11 @@ export class ExportKeystorePage implements OnInit {
 
     cancelPrompt() {
         this.ifShowPasswordPrompt = false;
-
         this.navCtrl.pop();
     }
 
     confirmPrompt(privateKey) {
         this.ifShowPasswordPrompt = false;
-
         this.keystore = this.wallet.keystore;
     }
 
@@ -55,7 +53,6 @@ export class ExportKeystorePage implements OnInit {
     exportKeystoreToMiner() {
         this.ifShowPasswordPrompt = false;
 
-        // console.log("导出keystore到挖矿应用...");
         this.native.scan().then((res: any) => {
             console.log("Scan over...。。。" + JSON.stringify(res));
             // this.handleText(res.text);

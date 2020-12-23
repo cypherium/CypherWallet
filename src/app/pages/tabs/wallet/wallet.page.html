@@ -17,11 +17,9 @@
     <div class="wrapper">
         <div class="header">
             <div class="info">
-                <p class="desc" translate>WALLET_ASSET</p>
+                <p class="desc" translate>BALANCE</p>
                 <div class="amount">
-                    <div class="unit">{{ global.selectedRate.symbol }}</div>
-                    <div class="interger">{{ amountInOtherInterger }}</div>
-                    <div class="fraction">{{ amountInOtherFraction }}</div>
+                    <p class="value">{{ amount | coinDisplay }}</p>
                 </div>
                 <div class="wallet">
                     <p class="text">{{ wallet.addr | addCphEllipsis }}</p>
@@ -47,7 +45,6 @@
                 <div class="name">CPH</div>
                 <div class="amount">
                     <p class="value">{{ amount | coinDisplay }}</p>
-                    <p class="money-amount">≈{{ amountInOtherDisplay }}</p>
                 </div>
             </div>
         </div>

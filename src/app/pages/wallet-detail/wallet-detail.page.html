@@ -1,9 +1,17 @@
 <ion-header no-border>
     <ion-toolbar>
         <ion-buttons slot="start">
-            <ion-back-button color="white"></ion-back-button>
+            <ion-back-button color="white" defaultHref="wallet"></ion-back-button>
+            <!-- <ion-button  (click)="back()">
+                <ion-icon slot="icon-only" name="arrow-back"></ion-icon>
+            </ion-button> -->
         </ion-buttons>
         <ion-title>{{ wallet.name }}</ion-title>
+        <ion-buttons slot="end">
+            <ion-button tappable (click)="scan()">
+                <ion-icon size="small" slot="icon-only" src="assets/imgs/scan.svg"></ion-icon>
+            </ion-button>
+        </ion-buttons>
     </ion-toolbar>
 </ion-header>
 
@@ -12,7 +20,6 @@
     <div class="header">
         <div class="info">
             <div class="amount">{{ amount | coinDisplay }}</div>
-            <div class="money">≈ {{ amountInOtherDisplay }}</div>
         </div>
     </div>
 

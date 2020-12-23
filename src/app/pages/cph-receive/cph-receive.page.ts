@@ -26,9 +26,9 @@ export class CphReceivePage implements OnInit {
         private storage: Storage,
     ) { }
 
-    back() {
-        this.nav.navigateBack('/wallet');
-    }
+    // back() {
+    //     this.nav.navigateBack('/wallet');
+    // }
 
     ngOnInit() {
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex];

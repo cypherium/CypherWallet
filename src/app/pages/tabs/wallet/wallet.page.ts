@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalService } from '../../../providers/global/global.service';
 import { HelperService } from '../../../providers/helper/helper.service';
-import { Web3Service } from '../../../providers/web3/web3.service';
+import { Web3Service } from '../../../providers/web3c/web3c.service';
 import { Storage } from '@ionic/storage';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { HttpService } from "../../../providers/http/http.service";
@@ -36,7 +36,7 @@ export class WalletPage implements OnInit {
         private router: Router,
         private helper: HelperService,
         public global: GlobalService,
-        private web3: Web3Service,
+        private web3c: Web3Service,
         private http: HttpService,
         private storage: Storage,
         private native: NativeService,
@@ -65,9 +65,9 @@ export class WalletPage implements OnInit {
 
     computeValue() {
         this.getWalletInfo(this.wallet.addr);
-        //获取汇率信息
+        //Access to exchange rate information
         this.http.get(this.global.api['getRateInfo']).subscribe(res => {
-            console.log("汇率：", res.rates);
+            console.log("Exchange rate:", res.rates);
             let unit = this.global.settings.valueUnit || "USD";
 
             let value = res.rates.find(item => item.currency == unit);
@@ -75,7 +75,7 @@ export class WalletPage implements OnInit {
                 value = res.rates[0];
             }
             this.global.selectedRate = value;
-            //计算当前金额的估算
+            // Calculate an estimate of the current amount
             this.amountInOther = this.amount * value.rate;
             this.amountInOtherInterger = Math.floor(this.amountInOther);
             let mod = Math.floor(Math.pow(10, value.significand));
@@ -110,14 +110,14 @@ export class WalletPage implements OnInit {
                     };
                     this.confirmPrompt = () => {
                         this.ifShowPasswordPrompt = false;
-                        //密码校验成功,开始传输keystore
+                        //Password check successful, start transmission keystore
                         setTimeout(() => {
                             this.http.post(url, {
                                 keystore: this.wallet.keystore
                             }, {
                                 ignoreError: true
                             }).subscribe(res => {
-                                console.log("keystore transfered：" + res);
+                                console.log("keystore transferred：" + res);
                             })
                         }, 100);
                     };
@@ -173,7 +173,7 @@ export class WalletPage implements OnInit {
     }
 
     getWalletInfo(addr) {
-        this.web3.getCphBalance(addr, (v) => {
+        this.web3c.getCphBalance(addr, (v) => {
             if (this.amount.toString() !== v.toString() && v !== undefined) {
                 this.amount = v;
                 this.global.gWalletList[this.global.currentWalletIndex].amount = this.amount;
@@ -201,6 +201,8 @@ export class WalletPage implements OnInit {
         if (this.wallet.name != wallet.name) {
             this.global.currentWalletIndex = index;
             this.storage.set('localwalletindex', this.global.currentWalletIndex);
+            //onesignal
+            this.global.gOneSignal.sendTag('address', wallet.addr);
             this.wallet = wallet;
             // this.global.currentWallet = wallet;
             this.computeValue();

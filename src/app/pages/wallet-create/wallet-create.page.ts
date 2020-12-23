@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
-import * as ethers from "ethers";
+import * as cyphers from "ethers";
 import { GlobalService } from '../../providers/global/global.service';
 import { HelperService } from '../../providers/helper/helper.service';
 import { WalletService } from '../../providers/wallet/wallet.service';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
-
 @Component({
     selector: 'app-wallet-create',
     templateUrl: './wallet-create.page.html',
@@ -26,7 +25,7 @@ export class WalletCreatePage implements OnInit {
         private helper: HelperService,
         private global: GlobalService,
         private keyboard: Keyboard,
-        public Wallet: WalletService
+        public Wallet: WalletService,
     ) { }
 
     ngOnInit() {
@@ -50,7 +49,7 @@ export class WalletCreatePage implements OnInit {
         if (await this.checkPassword1() !== "") {
             return;
         }
-        // let wallet = ethers.Wallet.createRandom();
+        //let wallet = cyphers.Wallet.createRandom();
         let wallet = this.Wallet.createRandom();
         let navigationExtras: NavigationExtras = {
             state: {

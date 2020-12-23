@@ -27,7 +27,7 @@ export class BackupMnemonicPage implements OnInit {
             this.wallet = this.router.getCurrentNavigation().extras.state.wallet;
 
             console.log(this.wallet.mnemonic)
-            //获取助记词
+            //get mnemonic
             let mnemonicList = this.wallet.mnemonic.split(" ");
             this.mnemonicList = this.shuffle(mnemonicList);
         }
@@ -60,7 +60,7 @@ export class BackupMnemonicPage implements OnInit {
     }
 
     async verifyNmemonic() {
-        console.log("开始验证...", this.mnemonicList, this.backupList);
+        console.log("start verify...", this.mnemonicList, this.backupList);
         let flag = true;
         let mnemonicList = this.wallet.mnemonic.split(' ');
         for (let i = 0; i < mnemonicList.length; i++) {
@@ -76,14 +76,14 @@ export class BackupMnemonicPage implements OnInit {
             }
             this.helper.addWallet(this.wallet, this.global.paymentPassword);
             this.global.walletName = "";
-            //前往首页
+            //To the home page
             let navigationExtras: NavigationExtras = {
                 state: {
                     privateKey: this.wallet.privateKey,
                     action: 'create'
                 }
             };
-            this.navCtrl.navigateRoot('payment-password', navigationExtras);
+            this.navCtrl.navigateRoot('wallet', navigationExtras);
         } else {
             let error = await this.helper.getTranslate('MNEMONIC_WRONG');
             this.helper.toast(error);

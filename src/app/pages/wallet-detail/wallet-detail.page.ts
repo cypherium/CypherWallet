@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { GlobalService } from '../../providers/global/global.service';
 import { HttpService } from '../../providers/http/http.service';
-import { Web3Service } from '../../providers/web3/web3.service';
+import { Web3Service } from '../../providers/web3c/web3c.service';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { HelperService } from '../../providers/helper/helper.service';
+import { NativeService } from '../../providers/native/native.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
     selector: 'app-wallet-detail',
@@ -23,16 +25,21 @@ export class WalletDetailPage implements OnInit {
     more = true;
     loading = false;
     interval = null;
+    ifShowPasswordPrompt = false;
+    cancelPrompt = null;
+    confirmPrompt = null;
 
     constructor(
         private global: GlobalService,
         private http: HttpService,
-        private web3: Web3Service,
+        private web3c: Web3Service,
         private helper: HelperService,
+        private native: NativeService,
+        public nav: NavController,
         private router: Router
     ) { 
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex];
-        console.log("钱包：" + JSON.stringify(this.wallet));
+        console.log("wallet:" + JSON.stringify(this.wallet));
         this.amount = this.wallet.amount || 0;
         this.getWalletInfo(this.wallet.addr);
         this.interval = setInterval(() => {
@@ -43,9 +50,47 @@ export class WalletDetailPage implements OnInit {
     ngOnInit() {
 
     }
+    // back() {
+    //     this.nav.navigateBack('/wallet');
+    // }
+    scan() {
+        this.native.scan().then((res: any) => {
+            console.log("scan succeed。。。" + JSON.stringify(res));
+            // this.handleText(res.text);
+            this.helper.handleText(res.text, (url, method) => {
+                if (method == 'import') {
+                    this.ifShowPasswordPrompt = true;
+                    this.cancelPrompt = () => {
+                        this.ifShowPasswordPrompt = false;
+                    };
+                    this.confirmPrompt = () => {
+                        this.ifShowPasswordPrompt = false;
+                        //Password check successful, start transmission keystore
+                        setTimeout(() => {
+                            this.http.post(url, {
+                                keystore: this.wallet.keystore
+                            }, {
+                                ignoreError: true
+                            }).subscribe(res => {
+                                console.log("keystore transferred：" + res);
+                            })
+                        }, 100);
+                    };
+                } else if (method == 'transfer') {
+                    let navigationExtras: NavigationExtras = {
+                        state: {
+                            address: url,
+                        }
+                    };
+                    console.log("navigationExtras" + navigationExtras.state.address);
+                    this.router.navigate(['cph-send'], navigationExtras);
+                }
+            })
+        })
+    }
 
     getWalletInfo(addr) {
-        this.web3.getCphBalance(addr, (v) => {
+        this.web3c.getCphBalance(addr, (v) => {
             if (this.amount.toString() !== v.toString() && v !== undefined) {
                 this.amount = v;
                 this.global.gWalletList[this.global.currentWalletIndex].amount = this.amount;
@@ -69,11 +114,11 @@ export class WalletDetailPage implements OnInit {
     }
 
     async ionViewDidEnter() {
-        // this.blockHeight = await this.web3.getBlockHeight();
+        // this.blockHeight = await this.web3c.getBlockHeight();
         this.getTransactionList();
-        //获取汇率信息
+        //Access to exchange rate information
         this.http.get(this.global.api['getRateInfo']).subscribe(res => {
-            console.log("汇率：", res.rates);
+            console.log("Exchange rate:", res.rates);
             let unit = this.global.settings.valueUnit || "USD";
 
             let value = res.rates.find(item => item.currency == unit);
@@ -81,7 +126,7 @@ export class WalletDetailPage implements OnInit {
                 value = res.rates[0];
             }
             this.global.selectedRate = value;
-            //计算当前金额的估算
+            // Calculate an estimate of the current amount
             this.amountInOther = this.amount * value.rate;
             let amountInOtherInterger = Math.floor(this.amountInOther);
             let mod = Math.floor(Math.pow(10, value.significand));
@@ -108,8 +153,9 @@ export class WalletDetailPage implements OnInit {
         let finished = await this.helper.getTranslate('FINISHED');
 
         this.loading = true;
-        //获取交易列表
+        // Get a list of trades
         let url = this.global.api['getTransList'];
+        console.log("getTransList：");
         return this.http.post(url, {
             addr: '0x' + this.wallet.addr.replace('0x', ''),
             txType: this.type,
@@ -118,13 +164,13 @@ export class WalletDetailPage implements OnInit {
         }).subscribe(res => {
             this.loading = false;
             if (res.err_no == 0) {
-                this.blockHeight = this.web3.getBlockHeight();
+                this.blockHeight = this.web3c.getBlockHeight();
                 if (res.transactions) {
                     res.transactions.forEach(item => {
                         if (item.tx_type == 1 || item.tx_type == 2) {
-                            item.displayValue = this.web3.web3.fromWei(item.value, 'cpher');
+                            item.displayValue = this.web3c.web3c.fromWei(item.value, 'cpher');
                         } else {
-                            item.displayValue = this.web3.web3.fromWei(item.tx_type_ext, 'cpher');
+                            item.displayValue = this.web3c.web3c.fromWei(item.tx_type_ext, 'cpher');
                         }
                         let height = this.blockHeight - item.block_number;
                         if (item.block_number == -2) {
@@ -175,21 +221,25 @@ export class WalletDetailPage implements OnInit {
 
                 }
             }
-        })
+            this.getWalletInfo(this.wallet.addr);
+        }, e => {
+                this.loading = false;
+                //this.helper.toast("Network error. Please try again.");
+        });
     }
 
     goResultPage(transaction) {
         let navigationExtras = {
             state: {
                 tx: transaction.tx_hash,
-                status: 0, //0-成功，1:打包中，2:失败
+                status: 0, //0- success, 1: packed, 2: failure
                 time: transaction.timestamp / 1000000
             }
         };
         if (transaction.blockHeight === "pending") {
             navigationExtras.state.status = 1;
         }
-        //前往交易结果页
+        // Go to the transaction results page
         this.router.navigate(['transaction-result'], navigationExtras);
     }
 

@@ -9,18 +9,18 @@
 		<key>CFBundleIdentifier</key>
 		<string>cph.mobile.wallet</string>
 		<key>CFBundleShortVersionString</key>
-		<string>1.0.0</string>
+		<string>1.0.6</string>
 		<key>CFBundleVersion</key>
-		<string>1.0.0</string>
+		<string>1.0.6</string>
 		<key>SigningIdentity</key>
-		<string>Apple Development: sky@cypherium.io (6VSVULH6N2)</string>
+		<string>Apple Development: Yangrui Guo (6VSVULH6N2)</string>
 		<key>Team</key>
 		<string>8XNA5B8LAP</string>
 	</dict>
 	<key>ArchiveVersion</key>
 	<integer>2</integer>
 	<key>CreationDate</key>
-	<date>2020-04-22T04:35:29Z</date>
+	<date>2020-07-10T07:58:03Z</date>
 	<key>Name</key>
 	<string>CPH</string>
 	<key>SchemeName</key>

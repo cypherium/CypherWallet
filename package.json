@@ -1,5 +1,5 @@
 {
-  "name": "cph",
+  "name": "Cypherium Wallet",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
@@ -20,15 +20,18 @@
     "@angular/platform-browser": "~8.1.2",
     "@angular/platform-browser-dynamic": "~8.1.2",
     "@angular/router": "~8.1.2",
+    "@cypherium/web3c": "^0.10.0",
     "@ionic-native/app-minimize": "^5.15.0",
     "@ionic-native/app-version": "^5.15.0",
     "@ionic-native/barcode-scanner": "^5.15.1",
     "@ionic-native/clipboard": "^5.15.0",
     "@ionic-native/core": "^5.0.0",
+    "@ionic-native/fingerprint-aio": "^5.27.0",
     "@ionic-native/http": "^5.23.0",
     "@ionic-native/in-app-browser": "^5.15.0",
     "@ionic-native/keyboard": "^5.23.0",
     "@ionic-native/network": "^5.15.0",
+    "@ionic-native/onesignal": "^5.26.0",
     "@ionic-native/open-native-settings": "^5.15.0",
     "@ionic-native/qr-scanner": "^5.15.0",
     "@ionic-native/splash-screen": "^5.0.0",
@@ -43,8 +46,8 @@
     "@types/bn.js": "^4.11.5",
     "bip39": "2.5.0",
     "cordova-android": "^8.1.0",
+    "cordova-browser": "6.0.0",
     "cordova-clipboard": "1.3.0",
-    "cordova-ios": "^5.1.1",
     "cordova-open-native-settings": "1.5.2",
     "cordova-plugin-add-swift-support": "^2.0.2",
     "cordova-plugin-advanced-http": "^2.4.1",
@@ -52,7 +55,8 @@
     "cordova-plugin-appminimize": "1.0.1",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-file": "^6.0.2",
-    "cordova-plugin-inappbrowser": "3.1.0",
+    "cordova-plugin-fingerprint-aio": "^3.0.1",
+    "cordova-plugin-inappbrowser": "^3.2.0",
     "cordova-plugin-ionic-keyboard": "^2.2.0",
     "cordova-plugin-ionic-webview": "^4.1.2",
     "cordova-plugin-network-information": "2.0.2",
@@ -64,23 +68,25 @@
     "core-js": "^2.5.4",
     "crypto": "git+https://github.com/Gozala/crypto.git",
     "crypto-browserify": "^3.12.0",
-    "ethereumjs-tx": "^2.1.1",
-    "ethereumjs-wallet": "^0.6.3",
+    "cypheriumjs-tx": "^0.10.1",
+    "ethereumjs-common": "^1.3.1",
+    "cypheriumjs-wallet": "^0.10.1",
     "ethers": "^4.0.37",
+    "ethereumjs-util": "^6.0.0",
     "jssha": "^2.3.1",
     "ngx-qrcode2": "0.0.9",
+    "onesignal-cordova-plugin": "^2.10.1",
     "phonegap-plugin-barcodescanner": "8.1.0",
     "qrcode-generator": "^1.4.4",
     "ripemd160": "2.0.2",
     "rxjs": "^6.5.3",
     "safe-buffer": "^5.2.0",
     "salty-keys": "git+https://github.com/ankurdaharwal/salty-keys.git",
+    "scrypt.js": "^0.3.0",
     "secp256k1": "^3.7.1",
     "sharp": "^0.24.0",
     "tslib": "^1.9.0",
     "tweetnacl": "^1.0.0",
-    "web3": "^1.2.4",
-    "web3-cypher": "^0.10.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
@@ -93,10 +99,12 @@
     "@angular/compiler-cli": "~8.1.2",
     "@angular/language-service": "~8.1.2",
     "@ionic/angular-toolkit": "~2.0.0",
+    "@ionic/lab": "^3.1.6",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^8.9.5",
     "codelyzer": "^5.0.0",
+    "cordova-ios": "^6.1.1",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~4.1.0",
@@ -116,15 +124,12 @@
       "cordova-plugin-statusbar": {},
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-ionic-webview": {
-        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
-      },
+      "cordova-plugin-ionic-webview": {},
       "cordova-plugin-ionic-keyboard": {},
       "cordova-sqlite-storage": {},
       "cordova-plugin-vibration": {},
       "cordova-clipboard": {},
       "cordova-plugin-app-version": {},
-      "cordova-plugin-inappbrowser": {},
       "cordova-plugin-network-information": {},
       "cordova-plugin-appminimize": {},
       "cordova-open-native-settings": {},
@@ -133,11 +138,18 @@
       },
       "cordova-plugin-advanced-http": {
         "OKHTTP_VERSION": "3.10.0"
-      }
+      },
+      "cordova-plugin-inappbrowser": {},
+      "onesignal-cordova-plugin": {},
+      "cordova-plugin-fingerprint-aio": {
+        "FACEID_USAGE_DESCRIPTION": " "
+      },
+      "cordova-plugin-badge": {}
     },
     "platforms": [
-      "ios",
-      "android"
+      "android",
+      "browser",
+      "ios"
     ]
   }
 }

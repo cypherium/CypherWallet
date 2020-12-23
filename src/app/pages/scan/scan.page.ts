@@ -11,8 +11,8 @@ import { OpenNativeSettings } from '@ionic-native/open-native-settings/ngx';
 })
 
 export class ScanPage implements OnInit {
-    light: boolean = false; // 判断闪光灯
-    isShow: boolean = false; // 控制显示背景，避免切换页面卡顿
+    light: boolean = false; // Judging flash
+    isShow: boolean = false; // Control the display background to avoid page switching
     showIcon = false;
 
     ifShowAlert = false;
@@ -33,7 +33,7 @@ export class ScanPage implements OnInit {
 
     ngOnInit() {
         this.qrScanner.prepare().then((status: QRScannerStatus) => {
-            if (status.authorized) { // 判断是否有摄像头权限
+            if (status.authorized) { // Determine if you have camera access
                 let scanSub = this.qrScanner.scan().subscribe((text: string) => {
                     this.events.publish('qrscanner:result', text);
                     scanSub.unsubscribe();
@@ -42,16 +42,16 @@ export class ScanPage implements OnInit {
                         this.navCtrl.pop();
                     }, 100);
                 });
-                // 打开摄像头
+                // open camera
                 this.qrScanner.show();
             } else if (status.denied) {
                 this.permisionPopUp();
-                // this.nativeService.alert('没有权限', '没有摄像头权限，请前往设置中开启', () => {
+                // this.nativeService.alert('No permissions ', 'No camera permissions, please go to Settings to open', () => {
                 // this.qrScanner.openSettings();
                 // });
             } else {
                 this.permisionPopUp();
-                // this.nativeService.alert('没有权限', '没有摄像头权限，请前往设置中开启', () => {
+                // this.nativeService.alert('No permissions ', 'No camera permissions, please go to Settings to open', () => {
                 // this.qrScanner.openSettings();
                 // });
             }
@@ -62,7 +62,7 @@ export class ScanPage implements OnInit {
     }
 
     permisionPopUp() {
-        this.createAlert("权限申请", "扫码需要获取摄像头权限", "取消", "同意", () => {
+        this.createAlert("Permission to apply for", "Scanning code requires access to the camera", "cancel", "agree", () => {
             this.navCtrl.pop();
         }, () => {
             this.navCtrl.pop();
@@ -78,10 +78,10 @@ export class ScanPage implements OnInit {
         // Promise.all(promises)
         //     .then((text: any) => {
         //         this.createAlert(text[0], text[1], text[2], text[3], () => {
-        //             console.log("用户拒绝授予权限");
+        //             console.log("User refuses to grant permission");
         //             this.navCtrl.pop();
         //         }, () => {
-        //             console.log("用户同意授予权限")
+        //             console.log("User agrees to grant permission")
         //             this.navCtrl.pop();
         //             this.qrScanner.openSettings();
         //             // this.openSetting.open('application_details');
@@ -111,25 +111,25 @@ export class ScanPage implements OnInit {
 
     ionViewWillEnter() {
         (window.document.querySelector('ion-app') as HTMLElement).classList.add('cameraView'); // tslint:disable-line
-        this.isShow = true; // 显示背景
+        this.isShow = true;
         this.showIcon = true;
     }
 
     ionViewWillLeave() {
         (window.document.querySelector('ion-app') as HTMLElement).classList.remove('cameraView'); // tslint:disable-line
-        this.qrScanner.hide(); // 需要关闭扫描，否则相机一直开着
-        this.qrScanner.destroy(); // 关闭
+        this.qrScanner.hide();
+        this.qrScanner.destroy();
         this.showIcon = false;
-        this.events.unsubscribe('qrscanner:result'); // 退出页面取消所有订阅，进入页面前需订阅
+        this.events.unsubscribe('qrscanner:result'); // Exit page unsubscribe all subscriptions. Subscribe before entering page
     }
 
-    // 开关手电筒
+
     toggleLight() {
         this.light ? this.qrScanner.disableLight() : this.qrScanner.enableLight();
         this.light = !this.light;
     }
 
-    // 取消扫描
+
     close() {
         this.navCtrl.pop();
     }

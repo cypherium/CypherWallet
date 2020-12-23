@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as ethers from "ethers";
 import { GlobalService } from '../../providers/global/global.service';
 import { HelperService } from '../../providers/helper/helper.service';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
@@ -254,14 +253,17 @@ export class WalletImportPage implements OnInit {
                 }
                 return;
             }
+            console.log("Wallet import succeed1");
             this.helper.addWallet(wallet, this.password);
+            console.log("Wallet import succeed2");
             let navigationExtras: NavigationExtras = {
                 state: {
                     privateKey: wallet.privateKey,
                     action: 'create'
                 }
             };
-            this.navCtrl.navigateRoot('payment-password', navigationExtras);
+            console.log("Wallet import succeed3");
+            this.navCtrl.navigateRoot('wallet', navigationExtras);
         })
     }
 

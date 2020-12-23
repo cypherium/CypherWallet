@@ -27,9 +27,12 @@ export class ValueUnitPage implements OnInit {
     ) { }
 
     ngOnInit() {
+        this.helper.getTranslate('COMING_SOON').then(msg => {
+            this.helper.toast(msg);
+        });
         this.http.get(this.global.api['getRateInfo']).subscribe(res => {
             this.rateList = res.rates;
-        })
+        });
         // this.httpn.get(environment.appServerUrl + this.global.api['getRateInfo'], {}, {})
         //     .then(data => {
 

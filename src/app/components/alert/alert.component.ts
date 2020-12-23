@@ -18,7 +18,7 @@ export class AlertComponent implements OnInit {
     ngOnInit() { }
 
     confirmAlert() {
-        console.log("确认...");
+        console.log("confirm...");
         this.confirm.emit();
     }
 

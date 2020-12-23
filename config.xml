@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="100" id="com.cph.mobile" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-versionCode="100" id="cph.mobile.wallet" version="1.0.6" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>CPH</name>
     <description>CPH Wallet</description>
     <author email="sky@cypheriumm.io" href="https://cypherium.io/">Cypherium Development Team</author>
@@ -26,6 +26,13 @@
     <preference name="orientation" value="portrait" />
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarStyle" value="lightContent" />
+    <feature name="CDVWKWebViewEngine">
+        <param name="ios-package" value="CDVWKWebViewEngine" />
+    </feature>
+    <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+    <preference name="WKWebViewOnly" value="true" />
+    <preference name="WKWebViewOnly" value="true" />
+    <preference name="UseSwiftLanguageVersion" value="4.0" />
     <platform name="android">
         <edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application" xmlns:android="http://schemas.android.com/apk/res/android">
             <application android:networkSecurityConfig="@xml/network_security_config" />
@@ -51,6 +58,9 @@
         <edit-config file="*-Info.plist" mode="merge" target="NSCameraUsageDescription">
             <string>Scan QR code</string>
         </edit-config>
+        <config-file mode="add" parent="ITSAppUsesNonExemptEncryption" target="*-Info.plist">
+            <false />
+        </config-file>
         <access launch-external="yes" origin="tel:*" />
         <access launch-external="yes" origin="mailto:*" />
         <allow-intent href="itms:*" />
@@ -115,7 +125,6 @@
     <plugin name="cordova-plugin-vibration" spec="3.1.1" />
     <plugin name="cordova-clipboard" spec="1.3.0" />
     <plugin name="cordova-plugin-network-information" spec="2.0.2" />
-    <plugin name="cordova-plugin-inappbrowser" spec="3.1.0" />
     <plugin name="cordova-plugin-appminimize" spec="1.0.1" />
     <plugin name="cordova-plugin-app-version" spec="0.1.9" />
     <plugin name="cordova-open-native-settings" spec="1.5.2" />

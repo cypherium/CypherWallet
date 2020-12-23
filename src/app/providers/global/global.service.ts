@@ -14,7 +14,9 @@ export class GlobalService {
     currentWalletIndex = -1;
     maxWalletNum = 20;
     selectedRate: any = {};
-
+    provider = "";
+    public gOneSignal: any;
+    
     // currentWallet = {};
 
     static errorCode = {};
@@ -30,6 +32,7 @@ export class GlobalService {
 
     api = {
         'getRateInfo': `/${GlobalService.projectName.toLowerCase()}/get_exchange_rate`,
+        'getProvider': `/${GlobalService.projectName.toLowerCase()}/get_provider`,
         "getTransList": "/transaction/get_by_addr_and_type",
     }
 

@@ -35,7 +35,7 @@ export class SettingPage implements OnInit {
         this.http.get(this.global.api['getRateInfo']).subscribe(res => {
             let unit = this.global.settings.valueUnit;
             this.rateList = res.rates;
-        })
+        });
         // this.httpn.get(environment.appServerUrl + this.global.api['getRateInfo'], {}, {})
         //     .then(data => {
 

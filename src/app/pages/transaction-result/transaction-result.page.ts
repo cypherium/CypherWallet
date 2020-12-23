@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
-import { Web3Service } from "../../providers/web3/web3.service";
+import { Web3Service } from "../../providers/web3c/web3c.service";
 import { NativeService } from "../../providers/native/native.service";
 import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 import { GlobalService } from '../../providers/global/global.service';
@@ -23,7 +23,7 @@ export class TransactionResultPage implements OnInit {
     constructor(
         private router: Router,
         private activatedRoute: ActivatedRoute,
-        private web3: Web3Service,
+        private web3c: Web3Service,
         public global: GlobalService,
         private helper: HelperService,
         public nav: NavController,
@@ -44,7 +44,7 @@ export class TransactionResultPage implements OnInit {
 
     async getDetailByTx() {
         //查询交易信息
-        this.detail = await this.web3.getTxDetail(this.tx);
+        this.detail = await this.web3c.getTxDetail(this.tx);
         console.log("Transaction detail：" + JSON.stringify(this.detail));
         this.miningFee = this.detail.gas * this.detail.gasPrice;
         this.detail.from = this.detail.from;
@@ -65,6 +65,7 @@ export class TransactionResultPage implements OnInit {
 
     back() {
         this.nav.navigateBack('/wallet-detail');
+        // this.nav.pop().then(() => this.nav.pop());
     }
 
     goHash(hash) {

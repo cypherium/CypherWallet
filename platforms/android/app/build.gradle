@@ -16,7 +16,7 @@
        specific language governing permissions and limitations
        under the License.
 */
-
+//apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
 apply plugin: 'com.android.application'
 
 buildscript {
@@ -27,7 +27,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.5.3'
+        classpath 'com.android.tools.build:gradle:4.0.0'
     }
 }
 
@@ -99,6 +99,8 @@ ext {
 
 // PLUGIN GRADLE EXTENSIONS START
 apply from: "../phonegap-plugin-barcodescanner/mobile-barcodescanner.gradle"
+apply from: "../onesignal-cordova-plugin/wallet-build-extras-onesignal.gradle"
+apply from: "../cordova-plugin-fingerprint-aio/wallet-build.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras1 = file('build-extras.gradle').exists()
@@ -297,6 +299,7 @@ dependencies {
     implementation "com.android.support:support-annotations:27.+"
     implementation "com.android.support:support-v4:27.+"
     implementation "com.squareup.okhttp3:okhttp-urlconnection:3.10.0"
+    implementation "com.onesignal:OneSignal:3.14.1"
     // SUB-PROJECT DEPENDENCIES END
 }
 
