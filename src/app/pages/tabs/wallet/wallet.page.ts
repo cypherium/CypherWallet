@@ -217,14 +217,14 @@ export class WalletPage implements OnInit {
         };
         this.confirmPrompt = () => {
             this.ifShowPasswordPrompt = false;
-            // 如果账号只有一个或为空，直接删除，然后跳转到创建新账号
+            // If there is only one account or it is empty, delete it directly and jump to create a new account
             if (this.global.gWalletList.length < 2) {
                 this.global.gWalletList.splice(index, 1);
                 this.storage.remove('localwallet');
                 this.storage.remove('localwalletindex');
                 this.navCtrl.navigateRoot('/wallet-create');
             } else {
-                // 1.删除列表
+                // 1. Delete the list
                 this.global.gWalletList.splice(index, 1);
                 this.storage.set('localwallet', JSON.stringify(this.global.gWalletList));
                 if (this.wallet.name != wallet.name) {
