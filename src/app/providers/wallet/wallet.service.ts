@@ -7,6 +7,8 @@ import * as util from 'ethereumjs-util';
 import * as jsSHA from 'jssha';
 import * as ed25519 from '@stablelib/ed25519';
 
+var aes256 = require('aes256');
+
 const TYPE_ED25519 = '01';
 const PUBKEY_PREFIX = '0120';//0x01   0x20 = 32 
 
@@ -216,4 +218,60 @@ export class WalletService {
       return ('0' + (byte & 0xFF).toString(16)).slice(-2);
     }).join('');
   }
+
+  checksum(str, algorithm, encoding) {
+    return crypto
+        .createHash(algorithm || 'md5')
+        .update(str, 'utf8')
+        .digest(encoding || 'base64')
+  }
+
+  createHashFromKey(key) {
+    return crypto.createHash('sha512').update(key).digest('base64');
+  }
+
+  encryptData(password, plaintext) {
+    return aes256.encrypt(password, plaintext);
+  }
+
+  decryptData(password, encrypted) {
+    // user entered password and encrypted data
+    return aes256.decrypt(password, encrypted);
+  }
+
+//   async createNewWallet(data) {
+//     return await new Promise((resolve, reject) => {
+//       const hash = this.createHashFromKey(data.credentials.password);
+//       const encrypted = this.encryptData(data);
+//       let walletName = data.credentials.wallet;
+//       if (!walletName) {
+//         var randomNumber = Math.ceil(Math.random() * (10000 - 1) + 1);
+//         walletName = "CPH-" + randomNumber;
+//       }
+//
+//       var walletData = {
+//         name: walletName,
+//         password: hash,
+//         address: data.account.address,
+//         publicKey: data.account.publicKey,
+//         privateKey: encrypted
+//       }
+//
+//       var walletList = store.get("walletList");
+//
+//       if (walletList) {
+//         store.set("walletList", walletList.concat(walletData));
+//       } else {
+//         store.set("walletList", [walletData]);
+//       }
+//       data = null;
+//       //console.log("walletList: ", store.get("walletList"));
+//       resolve();
+//     }, (stderr) => {
+//       reject(stderr);
+//     });
+//   }
+// }
+//
 }
+

@@ -76,13 +76,14 @@ export class BackupMnemonicPage implements OnInit {
             }
             this.helper.addWallet(this.wallet, this.global.paymentPassword);
             this.global.walletName = "";
+            //To the home page
             let navigationExtras: NavigationExtras = {
                 state: {
                     privateKey: this.wallet.privateKey,
                     action: 'create'
                 }
             };
-            this.navCtrl.navigateRoot('payment-password', navigationExtras);
+            this.navCtrl.navigateRoot('wallet', navigationExtras);
         } else {
             let error = await this.helper.getTranslate('MNEMONIC_WRONG');
             this.helper.toast(error);
