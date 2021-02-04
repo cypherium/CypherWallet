@@ -5,6 +5,7 @@ import { Router, ActivatedRoute, NavigationExtras } from '@angular/router';
 import { Platform, NavController } from '@ionic/angular';
 import { WalletService } from '../../providers/wallet/wallet.service';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
+import {util} from 'cypheriumjs-crypto';
 
 @Component({
     selector: 'app-wallet-import',
@@ -95,7 +96,7 @@ export class WalletImportPage implements OnInit {
             this.privateError = error;
             return false;
         }
-        if (!this.Wallet.validatePrivate(this.private.replace(/^\s+|\s+$/, ''))) {
+        if (!util.verify(this.private.replace(/^\s+|\s+$/, ''))) {
             let error = await this.helper.getTranslate('PRIVATE_ERROR');
             this.privateError = error;
             return false;

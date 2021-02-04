@@ -157,7 +157,7 @@ export class WalletDetailPage implements OnInit {
         let url = this.global.api['getTransList'];
         console.log("getTransList：");
         return this.http.post(url, {
-            addr: '0x' + this.wallet.addr.replace('0x', ''),
+            addr:  this.wallet.h,
             txType: this.type,
             pageIndex: this.pageno,
             pageSize: this.pageSize

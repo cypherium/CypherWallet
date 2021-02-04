@@ -8,6 +8,7 @@ import { HttpService } from "../../../providers/http/http.service";
 import { NativeService } from '../../../providers/native/native.service';
 import { Events, NavController } from '@ionic/angular';
 import { NgZone } from "@angular/core";
+import { bech32 } from 'cypheriumjs-crypto';
 
 @Component({
     selector: 'app-wallet',
@@ -54,6 +55,9 @@ export class WalletPage implements OnInit {
     async ionViewDidEnter() {
         console.log("wallet ngoninit +++++++++...");
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex || 0] || {};
+        if ( this.wallet.bech32address === undefined ) {
+            this.wallet.bech32address = bech32.toBech32Address(this.wallet.addr);
+        }
         console.log(this.wallet);
         this.amount = this.wallet.amount || 0;
         this.computeValue();
@@ -164,10 +168,8 @@ export class WalletPage implements OnInit {
     }
 
     async copyAddr() {
-        console.log("开始拷贝钱包地址....");
-        let wallet = 'CPH' + this.wallet.addr.replace('0x', '');
-        console.log("Addr:" + wallet);
-        this.native.copy(wallet);
+        console.log("Addr:" + this.wallet.address);
+        this.native.copy(this.wallet.bech32address);
         let message = await this.helper.getTranslate('COPY_WALLET_SUCCEED');
         this.helper.toast(message);
     }

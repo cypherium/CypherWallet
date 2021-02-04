@@ -64,7 +64,7 @@
 	"DISPLAY_LANGUAGE": "显示语言",
 	"RECEIVE": "收款",
 	"SEND": "转账",
-	"RECEIVE_ADDR": "注意：该地址仅支持{{value}}收款，请勿用于其他币种！",
+	"RECEIVE_ADDR": "注意：这个地址是基于bech32算法的，可以检查源地址和目标地址是否有效。兼容旧十六进制地址，该地址仅支持{{value}}收款，请勿用于其他币种！",
 	"COPY_WALLET_SUCCEED": "您的钱包地址已经复制到剪贴板",
 	"SEND_AMOUNT": "转账金额",
 	"BALANCE": "余额",

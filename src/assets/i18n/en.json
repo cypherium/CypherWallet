@@ -65,7 +65,7 @@
 	"DISPLAY_LANGUAGE": "Language",
 	"RECEIVE": "Receive",
 	"SEND": "Send",
-	"RECEIVE_ADDR": "Warning: This address supports {{value}} only, any other assets transferred may get lost！",
+	"RECEIVE_ADDR": "Warning: This address is base on bech32 algorithm,can check the source address and target address is valid or not.Compatible with old hex address, supports {{value}} only, any other assets transferred may get lost！",
 	"COPY_WALLET_SUCCEED": "Wallet address copyied to clipboard successfully!",
 	"SEND_AMOUNT": "Amount To Send",
 	"BALANCE": "Your Balance",

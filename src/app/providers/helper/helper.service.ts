@@ -195,11 +195,6 @@ export class HelperService {
             throw new Error('Please use real machine debugging');
         }
     }
-
-    convertAddr(addr) {
-        return 'CPH' + addr.replace('0x', '');
-    }
-
     /**
      * tip in development
      */

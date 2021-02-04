@@ -7,7 +7,7 @@ export const environment = {
     requestTimeout: 30000,
     appServerUrl: "https://walletsvrcdn.cypherium.io", //APPServer API
     cypherium: {
-        provider: 'https://pubnodescdn.cypherium.io',
+        provider: 'https://pubnodes.cypherium.io',
         pledgeContractAddr: '0x0000000000000000000000000000000000000081',
         pledgeContractAbi: null,
         privateKey: ''
