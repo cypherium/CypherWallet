@@ -150,7 +150,6 @@ export class Web3Service {
         } catch (error) {
             var nonce = await this.web3c.cph.getTransactionCount('0x' + from); //Get the address of the user's walletnonce
         }
-        console.log("Nonce为" + nonce);
         // let gasLimit = await this.web3c.cph.estimateGas({
         //     "from": '0x'+from,
         //     "nonce": nonce,

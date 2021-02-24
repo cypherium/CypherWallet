@@ -55,9 +55,7 @@ export class WalletPage implements OnInit {
     async ionViewDidEnter() {
         console.log("wallet ngoninit +++++++++...");
         this.wallet = this.global.gWalletList[this.global.currentWalletIndex || 0] || {};
-        if ( this.wallet.bech32address === undefined ) {
-            this.wallet.bech32address = bech32.toBech32Address(this.wallet.addr);
-        }
+        this.wallet.bech32address = bech32.toBech32Address(this.wallet.addr);
         console.log(this.wallet);
         this.amount = this.wallet.amount || 0;
         this.computeValue();

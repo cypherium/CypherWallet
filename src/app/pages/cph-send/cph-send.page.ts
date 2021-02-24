@@ -270,15 +270,16 @@ export class CphSendPage implements OnInit {
         if (this.amountError) {
             return;
         }
-
         await this.checkAddr();
         if (this.addressError) {
             return;
         }
+        //Direct the user to enter a password
+        this.ifShowPasswordPrompt = true;
     }
 
     async transfer(privatekey) {
-        const sourcehexaddress = this.wallet.addr;
+        const sourcehexaddress = this.wallet.addr.toLowerCase();
         const targethexaddress = bech32.fromBech32Address(this.receiveAddress);
         console.log('sourcehexaddress', sourcehexaddress);
         console.log('targetaddress', targethexaddress);

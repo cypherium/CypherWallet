@@ -48,9 +48,7 @@ export class CphReceivePage implements OnInit {
 
     makeQrcode() {
         console.log("addr", this.wallet.addr)
-       if ( this.wallet.bech32address === undefined ) {
-            this.wallet.bech32address = bech32.toBech32Address(this.wallet.addr);
-        }
+        this.wallet.bech32address = bech32.toBech32Address(this.wallet.addr);
         console.log("bech32address", this.wallet.bech32address)
         this.qrcode = "cph://account/transfer/" + this.wallet.bech32address;
     }

@@ -155,9 +155,9 @@ export class WalletDetailPage implements OnInit {
         this.loading = true;
         // Get a list of trades
         let url = this.global.api['getTransList'];
-        console.log("getTransList：");
+        console.log("getTransList：",this.wallet.addr);
         return this.http.post(url, {
-            addr:  this.wallet.h,
+            addr:  this.wallet.addr,
             txType: this.type,
             pageIndex: this.pageno,
             pageSize: this.pageSize
