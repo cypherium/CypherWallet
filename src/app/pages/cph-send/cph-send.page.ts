@@ -279,8 +279,8 @@ export class CphSendPage implements OnInit {
     }
 
     async transfer(privatekey) {
-        const sourcehexaddress = this.wallet.addr.toLowerCase();
-        const targethexaddress = bech32.fromBech32Address(this.receiveAddress);
+        const sourcehexaddress = '0x'+ this.wallet.addr.toLowerCase().replace('0x', '');
+        const targethexaddress = '0x'+ bech32.fromBech32Address(this.receiveAddress).replace('0x', '');
         console.log('sourcehexaddress', sourcehexaddress);
         console.log('targetaddress', targethexaddress);
         this.web3c.transferCph(sourcehexaddress, targethexaddress, this.payAmount, this.range, privatekey, async (err, tx) => {

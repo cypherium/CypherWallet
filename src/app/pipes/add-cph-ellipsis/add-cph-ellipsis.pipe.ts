@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-
+import {bech32} from 'cypheriumjs-crypto';
 @Pipe({
     name: 'addCphEllipsis'
 })
@@ -11,7 +11,10 @@ export class AddCphEllipsisPipe implements PipeTransform {
             return '';
         }
         value = value.replace('0x', '');
-        return 'CPH' + value.slice(0, 8).toUpperCase() + '...' + value.slice(-8).toUpperCase();
+        console.log(value)
+        const bech32addr = bech32.toBech32Address(value)
+        console.log(bech32addr)
+        return bech32addr.slice(0, 10) + '...' + bech32addr.slice(-10);
     }
 
 }
