@@ -68,8 +68,8 @@ export class TransactionResultPage implements OnInit {
     }
 
     goHash(hash) {
-        hash = hash.replace('0x', '');
-        this.helper.toast('CPH' + hash.toUpperCase());
+        console.log('hash',hash)
+        this.helper.toast('0x' + hash.replace('0x', ''));
         // this.helper.getTranslate('COMING_SOON').then(msg => {
         //     this.helper.toast(msg);
         // });
@@ -80,7 +80,6 @@ export class TransactionResultPage implements OnInit {
     }
 
     goAddress(addr) {
-        addr = addr.replace('0x', '');
         this.helper.toast(bech32.toBech32Address(addr));
         // this.helper.getTranslate('COMING_SOON').then(msg => {
         //     this.helper.toast(msg);

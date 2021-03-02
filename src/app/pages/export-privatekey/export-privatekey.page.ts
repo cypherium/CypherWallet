@@ -65,13 +65,12 @@ export class ExportPrivatekeyPage implements OnInit {
         this.ifShowPasswordPrompt = false;
         this.privateKey = privateKey;
         console.log('privateKey len', privateKey.length)
-        const addressWithout0x =  util.getAddressFromPrivateKey(privateKey);
-        console.log('addressWithout0x', addressWithout0x)
-        const bech32Without0x =   bech32.toBech32Address(addressWithout0x);
-        //console.log('addressWithout0x', addressWithout0x)
-        console.log('bech32Without0x', bech32Without0x);
+        const address =  util.getAddressFromPrivateKey(privateKey);
+        console.log('addressWithout0x', address)
+        const bech32addr =   bech32.toBech32Address(address);
+        console.log('bech32Without0x', bech32addr);
 
-        const decaddress = bech32.fromBech32Address(bech32Without0x);
+        const decaddress = bech32.fromBech32Address(bech32addr);
         console.log("fromBech32Address decaddress",decaddress);
         if (!validation.isValidHexAddress(decaddress)) {
             throw new Error('Invalid address format.');
